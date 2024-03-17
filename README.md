@@ -1,2 +1,3 @@
-# next-portfolio
-This is my portfolio that showcase my experience and work as a software engineer. Built with nextjs, tailwind and framer motion.
+# My Nextjs Portfolio
+
+This is my portfolio that showcases my work experience as a Full-stack Software Engineer. Built it with Nextjs, Tailwind and Framer Motion.
