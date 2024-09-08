@@ -1,7 +1,12 @@
 {
     "name": "me-portfolio",
     "version": "0.1.0",
-    "private": true,
+    "private": false,
+    "description": "This is my portfolio that showcases my work experience as a Full-stack Software Engineer. Built it with Nextjs, TailwindCSS, Aceternity UI, and Framer Motion.",
+    "main": "index.js",
+    "repository": "git@github.com:coolbeatz71/next-portfolio.git",
+    "author": "coolbeatz71 <sigmacool@gmail.com>",
+    "license": "MIT",
     "scripts": {
         "dev": "next dev",
         "build": "next build",
@@ -9,19 +14,33 @@
         "lint": "next lint"
     },
     "dependencies": {
+        "next": "^14.2.8",
         "react": "^18",
-        "react-dom": "^18",
-        "next": "14.1.3"
+        "react-dom": "^18"
     },
     "devDependencies": {
-        "typescript": "^5",
-        "@types/node": "^20",
+        "@types/node": "^22.5.4",
         "@types/react": "^18",
         "@types/react-dom": "^18",
         "autoprefixer": "^10.0.1",
+        "eslint": "^9.10.0",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-config-prettier-react": "^0.0.24",
+        "eslint-config-react-app": "^7.0.1",
+        "eslint-config-standard": "^17.1.0",
+        "eslint-config-standard-react": "^13.0.0",
+        "eslint-import-resolver-node": "^0.3.4",
+        "eslint-import-resolver-typescript": "^3.6.3",
+        "eslint-plugin-flowtype": "^8.0.3",
+        "eslint-plugin-import": "^2.22.1",
+        "eslint-plugin-jest": "^28.8.3",
+        "eslint-plugin-jsx-a11y": "^6.4.1",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-prettier": "^5.2.1",
+        "eslint-plugin-react": "^7.23.2",
+        "eslint-plugin-react-hooks": "^4.2.0",
         "postcss": "^8",
-        "tailwindcss": "^3.3.0",
-        "eslint": "^8",
-        "eslint-config-next": "14.1.3"
+        "tailwindcss": "^3.4.10",
+        "typescript": "^5"
     }
 }
