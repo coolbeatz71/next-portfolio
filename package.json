@@ -7,6 +7,7 @@
     "repository": "git@github.com:coolbeatz71/next-portfolio.git",
     "author": "coolbeatz71 <sigmacool@gmail.com>",
     "license": "MIT",
+    "type": "module",
     "scripts": {
         "dev": "next dev -p 8070",
         "build": "next build",
@@ -22,9 +23,11 @@
         "prepare": "husky"
     },
     "dependencies": {
+        "i18next": "^23.14.0",
         "next": "^14.2.8",
         "react": "^18",
-        "react-dom": "^18"
+        "react-dom": "^18",
+        "react-i18next": "^15.0.1"
     },
     "devDependencies": {
         "@types/node": "^22.5.4",
@@ -53,13 +56,5 @@
         "postcss": "^8",
         "tailwindcss": "^3.4.10",
         "typescript": "^5"
-    },
-    "lint-staged": {
-        "*.+(jsx|js|json|css|scss|md|tsx|ts)": [
-            "prettier --write"
-        ],
-        "*.+(js|jsx|tsx|ts)": [
-            "eslint --fix"
-        ]
     }
 }

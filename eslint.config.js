@@ -6,7 +6,7 @@ module.exports = {
     },
     parser: '@typescript-eslint/parser',
     parserOptions: { ecmaVersion: 8, warnOnUnsupportedTypeScriptVersion: false },
-    ignorePatterns: ['node_modules/*', '.next/*', '.out/*', '!.prettierrc.js'],
+    ignores: ['node_modules/', '.next/', '.out/', '!.prettierrc.js'],
     overrides: [
         {
             globals: {
