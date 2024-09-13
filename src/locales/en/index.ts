@@ -1,5 +1,5 @@
-import { general } from "./general";
-import { navigation } from "./navigation";
+import { general } from "@/locales/en/general";
+import { navigation } from "@/locales/en/navigation";
 
 export default {
     ...navigation,
