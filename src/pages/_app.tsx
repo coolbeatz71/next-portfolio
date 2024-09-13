@@ -8,6 +8,7 @@ import { getLanguage } from "@/helpers/getLanguage";
 import locales from "@/locales";
 import relativeTime from "dayjs/plugin/relativeTime";
 import { useMemo } from "react";
+import { ThemeProvider } from "next-themes";
 
 import "@/styles/global.scss";
 
@@ -38,17 +39,26 @@ const MyApp = ({
 }: AppPropsWithError): JSX.Element => {
     const userLang = getLanguage();
 
-    const initLanguage = (lang: string): void => {
-        locales.changeLanguage(lang);
-        dayjs.locale(lang);
-    };
-
     useMemo(() => {
+        const initLanguage = (lang: string): void => {
+            locales.changeLanguage(lang);
+            dayjs.locale(lang);
+        };
+
         dayjs.extend(relativeTime);
         initLanguage(userLang as string);
     }, [userLang]);
 
-    return <Component {...pageProps} serverProps={serverProps} />;
+    return (
+        <ThemeProvider
+            enableSystem
+            attribute="class"
+            defaultTheme="light"
+            themes={["light", "dark"]}
+        >
+            <Component {...pageProps} serverProps={serverProps} />
+        </ThemeProvider>
+    );
 };
 
 export default MyApp;
