@@ -1,4 +1,5 @@
-import ThemeToggle from "../../shared/theme-toggle/ThemeToggle";
+import Logo from "@/components/shared/logo/Logo";
+import ThemeToggle from "@/components/shared/theme-toggle/ThemeToggle";
 
 export const Navigation = (): JSX.Element => {
     return (
@@ -45,14 +46,7 @@ export const Navigation = (): JSX.Element => {
                         </button>
                     </div>
                     <div className="flex items-center justify-center sm:items-stretch sm:justify-start w-full">
-                        <div className="flex flex-shrink-0 items-center cursor-pointer">
-                            <h1 className="sm:text-3xl text-2xl font-bold text-white">
-                                MJV
-                            </h1>
-                            <h1 className="sm:text-3xl text-2xl font-bold text-red-600">
-                                .
-                            </h1>
-                        </div>
+                        <Logo />
                         <div className="hidden sm:ml-6 sm:flex justify-center w-full">
                             <div className="flex space-x-2">
                                 <a
