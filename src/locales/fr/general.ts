@@ -1,3 +1,3 @@
 export const general = {
-    viewMore: 'Voir Plus',
+    viewMore: "Voir Plus"
 };

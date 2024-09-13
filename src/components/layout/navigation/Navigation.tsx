@@ -10,7 +10,7 @@ export const Navigation = (): JSX.Element => {
                             aria-controls="mobile-menu"
                             aria-expanded="false"
                         >
-                            <span className="absolute -inset-0.5"></span>
+                            <span className="absolute -inset-0.5" />
                             <span className="sr-only">Open main menu</span>
                             <svg
                                 className="block h-8 w-8"
@@ -34,14 +34,22 @@ export const Navigation = (): JSX.Element => {
                                 stroke="currentColor"
                                 aria-hidden="true"
                             >
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M6 18L18 6M6 6l12 12"
+                                />
                             </svg>
                         </button>
                     </div>
                     <div className="flex items-center justify-center sm:items-stretch sm:justify-start w-full">
                         <div className="flex flex-shrink-0 items-center cursor-pointer">
-                            <h1 className="sm:text-3xl text-2xl font-bold text-white">MJV</h1>
-                            <h1 className="sm:text-3xl text-2xl font-bold text-red-600">.</h1>
+                            <h1 className="sm:text-3xl text-2xl font-bold text-white">
+                                MJV
+                            </h1>
+                            <h1 className="sm:text-3xl text-2xl font-bold text-red-600">
+                                .
+                            </h1>
                         </div>
                         <div className="hidden sm:ml-6 sm:flex justify-center w-full">
                             <div className="flex space-x-2">
@@ -90,7 +98,7 @@ export const Navigation = (): JSX.Element => {
                             type="button"
                             className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                         >
-                            <span className="absolute -inset-1.5"></span>
+                            <span className="absolute -inset-1.5" />
                             <span className="sr-only">View notifications</span>
                             <svg
                                 className="h-6 w-6"
@@ -108,7 +116,7 @@ export const Navigation = (): JSX.Element => {
                             </svg>
                         </button>
 
-                        <div className="relative ml-3"></div>
+                        <div className="relative ml-3" />
                     </div>
                 </div>
             </div>

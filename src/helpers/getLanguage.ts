@@ -1,9 +1,9 @@
-import { USER_LANG } from '@/constants/app';
+import { USER_LANG } from "@/constants/app";
 
 export const getLanguage = (): string => {
-    if (typeof window !== 'undefined') {
-        return localStorage.getItem(USER_LANG) || 'fr';
+    if (typeof window !== "undefined") {
+        return localStorage.getItem(USER_LANG) || "fr";
     }
 
-    return 'fr';
+    return "fr";
 };

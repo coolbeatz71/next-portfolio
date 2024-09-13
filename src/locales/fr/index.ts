@@ -1,7 +1,7 @@
-import { navigation } from './navigation';
-import { general } from './general';
+import { general } from "./general";
+import { navigation } from "./navigation";
 
 export default {
     ...navigation,
-    ...general,
+    ...general
 };

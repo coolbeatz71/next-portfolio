@@ -1,4 +1,4 @@
-import { Navigation } from '@/components/layout/navigation/Navigation';
+import { Navigation } from "@/components/layout/navigation/Navigation";
 
 const IndexPage = (): JSX.Element => {
     return <Navigation />;

@@ -1,1 +1,1 @@
-export const USER_LANG = 'portfolio-lang';
+export const USER_LANG = "portfolio-lang";

@@ -2,18 +2,18 @@
 const nextConfig = {
     reactStrictMode: true,
     experimental: {
-        esmExternals: false,
+        esmExternals: false
     },
     swcMinify: true,
     compiler: {
-        styledComponents: true,
+        styledComponents: true
     },
     eslint: {
-        ignoreDuringBuilds: true,
+        ignoreDuringBuilds: true
     },
     typescript: {
-        ignoreBuildErrors: true,
-    },
+        ignoreBuildErrors: true
+    }
 };
 
 export default nextConfig;

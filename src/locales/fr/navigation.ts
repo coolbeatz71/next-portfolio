@@ -1,3 +1,3 @@
 export const navigation = {
-    home: 'accueil',
+    home: "accueil"
 };

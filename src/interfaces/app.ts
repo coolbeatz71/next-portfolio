@@ -1,4 +1,1 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-export interface IUnknownObject {
-    [key: string]: any;
-}
+export type IUnknownObject = Record<string, unknown>;
