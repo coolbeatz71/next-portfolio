@@ -1,14 +1,14 @@
-import type { IUnknownObject } from "@/interfaces/app";
+import { useMemo } from "react";
 import dayjs from "dayjs";
+import { ThemeProvider } from "next-themes";
+import type { IUnknownObject } from "@/interfaces/app";
 import type { AppProps } from "next/app";
 import { Router } from "next/router";
 import NProgress from "nprogress";
-
+import { Montserrat } from "next/font/google";
 import { getLanguage } from "@/helpers/getLanguage";
 import locales from "@/locales";
 import relativeTime from "dayjs/plugin/relativeTime";
-import { useMemo } from "react";
-import { ThemeProvider } from "next-themes";
 
 import "@/styles/global.scss";
 
@@ -31,6 +31,8 @@ Router.events.on("routeChangeComplete", () => {
     nProgress.done();
 });
 Router.events.on("routeChangeError", () => nProgress.done());
+
+const font = Montserrat({ subsets: ["latin"], preload: true });
 
 const MyApp = ({
     Component,
@@ -56,7 +58,9 @@ const MyApp = ({
             defaultTheme="light"
             themes={["light", "dark"]}
         >
-            <Component {...pageProps} serverProps={serverProps} />
+            <main className={font.className}>
+                <Component {...pageProps} serverProps={serverProps} />
+            </main>
         </ThemeProvider>
     );
 };
