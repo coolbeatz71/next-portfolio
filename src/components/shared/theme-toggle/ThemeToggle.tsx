@@ -1,7 +1,7 @@
 import { useTheme } from "next-themes";
-import { FaCloudSun, FaCloudMoon } from "react-icons/fa";
+import { FaCloudMoon, FaCloudSun } from "react-icons/fa";
 
-export default function ThemeToggle() {
+export default function ThemeToggle(): JSX.Element {
     const { theme, setTheme } = useTheme();
 
     const onToggle = () => {
