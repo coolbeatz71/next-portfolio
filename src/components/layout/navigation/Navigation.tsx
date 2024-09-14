@@ -3,7 +3,7 @@ import ThemeToggle from "@/components/shared/theme-toggle/ThemeToggle";
 import HamburgerMenuButton from "@/components/shared/hamburger-menu/HamburgerMenu.Button";
 import NavigationMenu from "@/components/layout/navigation/Navigation.Menu";
 
-export const Navigation = (): JSX.Element => {
+export default function Navigation(): JSX.Element {
     return (
         <nav className="bg-gray-800">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -26,4 +26,4 @@ export const Navigation = (): JSX.Element => {
             </div>
         </nav>
     );
-};
+}
