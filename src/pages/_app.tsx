@@ -9,6 +9,7 @@ import { Montserrat } from "next/font/google";
 import { getLanguage } from "@/helpers/getLanguage";
 import locales from "@/locales";
 import relativeTime from "dayjs/plugin/relativeTime";
+import { cn } from "@/helpers/mergeClassName";
 
 import "@/styles/global.scss";
 
@@ -58,7 +59,12 @@ const MyApp = ({
             defaultTheme="light"
             themes={["light", "dark"]}
         >
-            <main className={font.className}>
+            <main
+                className={cn(
+                    "bg-pattern_light dark:bg-pattern_dark bg-no-repeat bg-fixed bg-cover",
+                    font.className
+                )}
+            >
                 <Component {...pageProps} serverProps={serverProps} />
             </main>
         </ThemeProvider>
