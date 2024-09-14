@@ -65,7 +65,7 @@ export default function FlipWords({
             >
                 {currentWord.split(" ").map((word, wordIndex) => (
                     <motion.span
-                        key={word + wordIndex}
+                        key={word}
                         initial={{ opacity: 0, y: 10, filter: "blur(8px)" }}
                         animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                         transition={{
@@ -76,7 +76,7 @@ export default function FlipWords({
                     >
                         {word.split("").map((letter, letterIndex) => (
                             <motion.span
-                                key={word + letterIndex}
+                                key={word + letter}
                                 initial={{
                                     opacity: 0,
                                     y: 10,
