@@ -1,17 +1,35 @@
 import { FcBriefcase, FcGlobe } from "react-icons/fc";
 
 import Badge from "@/components/shared/badge/Badge";
-import FlipWords from "@/components/shared/filp-words/FlipWords";
-import HeroImage from "@/components/shared/dev-image/DevImage";
 import BadgeDevTools from "@/components/shared/badge/Badge.DevTools";
+import HeroImage from "@/components/shared/dev-image/DevImage";
+import FlipWords from "@/components/shared/filp-words/FlipWords";
 
 const devToolsLogoList = [
-    { top: "0", right: "10rem", iconName: "bg-icon_node" },
-    { top: "20%", right: "6rem", iconName: "bg-icon_react" },
-    { top: "40%", right: "4rem", iconName: "bg-icon_angular" },
-    { top: "60%", right: "4rem", iconName: "bg-icon_flutter" },
-    { top: "80%", right: "8rem", iconName: "bg-icon_vue" },
-    { top: "100%", right: "10rem", iconName: "bg-icon_laravel" }
+    {
+        className: "absolute top-[0%] right-[10rem]",
+        iconName: "bg-icon_node"
+    },
+    {
+        className: "absolute top-[20%] right-[6rem]",
+        iconName: "bg-icon_react"
+    },
+    {
+        className: "absolute top-[40%] right-[4rem]",
+        iconName: "bg-icon_angular"
+    },
+    {
+        className: "absolute top-[60%] right-[4rem]",
+        iconName: "bg-icon_flutter"
+    },
+    {
+        className: "absolute top-[80%] right-[8rem]",
+        iconName: "bg-icon_vue"
+    },
+    {
+        className: "absolute top-[100%] right-[10rem]",
+        iconName: "bg-icon_laravel"
+    }
 ];
 
 const badgeList = [
@@ -71,7 +89,7 @@ export default function Hero(): JSX.Element {
                     {devToolsLogoList.map((badge) => (
                         <BadgeDevTools
                             key={badge.iconName}
-                            className={`absolute top-[${badge.top}] right-[${badge.right}]`}
+                            className={badge.className}
                             iconName={badge.iconName}
                         />
                     ))}
