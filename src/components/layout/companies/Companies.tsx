@@ -2,45 +2,53 @@ import CompaniesGrid from "./Companies.Grid";
 
 export const companyLogoList = [
     {
-        title: "Alfatier",
-        icon: "bg-logo_alfatier"
-    },
-    {
         title: "Andela",
-        icon: "bg-logo_andela"
-    },
-    {
-        title: "Code of Africa",
-        icon: "bg-logo_codeofafrica"
-    },
-    {
-        title: "Exuus",
-        icon: "bg-logo_exuus"
+        icon: "bg-logo_andela_light dark:bg-logo_andela_dark"
     },
     {
         title: "EzyAgric",
         icon: "bg-logo_ezyagric"
     },
     {
+        title: "Exuus",
+        icon: "bg-logo_exuus_light dark:bg-logo_exuus_dark"
+    },
+    {
+        title: "Alfatier",
+        icon: "bg-logo_alfatier_light dark:bg-logo_alfatier_dark"
+    },
+    {
+        title: "Code of Africa",
+        icon: "bg-logo_codeofafrica_light dark:bg-logo_codeofafrica_dark"
+    },
+    {
         title: "Reconstruction",
-        icon: "bg-logo_reconstruction"
+        icon: "bg-logo_reconstruction_light dark:bg-logo_reconstruction_dark"
+    },
+    {
+        title: "The Room",
+        icon: "bg-logo_theroom_light dark:bg-logo_theroom_dark"
     },
     {
         title: "Bestseller",
-        icon: "bg-logo_bestseller"
+        icon: "bg-logo_bestseller_light dark:bg-logo_bestseller_dark"
     }
 ];
 export default function Companies(): JSX.Element {
     return (
         <div className="mx-auto max-w-7xl max-h-7xl px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 xl:grid-cols-2 items-center py-12">
-                <p className="max-w-xl mb-4 text-1xl tracking-tight !leading-loose md:text-2xl xl:text-2xl text-white dark:text-black">
-                    I've collaborated with over 8 companies worldwide, from
-                    startups to large organizations, across a wide range of
-                    industries and domains.
-                </p>
+            <div className="grid grid-cols-1 xl:grid-cols-[2fr,3fr] items-center py-12">
+                <div>
+                    <h2 className="mb-4 text-2xl font-bold tracking-tight !leading-tight md:text-2xl xl:text-4xl text-white dark:text-black">
+                        Collaborated with 8+ companies worldwide
+                    </h2>
+                    <p className="text-lg font-light text-gray-400 !leading-8">
+                        From startups to large organizations, across a wide
+                        range of industries and domains.
+                    </p>
+                </div>
 
-                <div className="hidden xl:flex relative max-w-xl">
+                <div className="hidden xl:flex relative max-w-3xl">
                     <CompaniesGrid items={companyLogoList} className="w-full" />
                 </div>
             </div>

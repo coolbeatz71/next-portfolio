@@ -28,13 +28,28 @@ const config: Config = {
                 icon_flutter: "url('/dev-tools/flutter.svg')",
                 icon_laravel: "url('/dev-tools/laravel.svg')",
                 // COMPANIES
-                logo_alfatier: "url('/company-logo/alfatier.png')",
-                logo_andela: "url('/company-logo/andela.png')",
-                logo_codeofafrica: "url('/company-logo/codeofafrica.png')",
-                logo_exuus: "url('/company-logo/exuus.png')",
+                // LIGHT
+                logo_andela_light: "url('/company-logo/andela_light.png')",
                 logo_ezyagric: "url('/company-logo/ezyagric.png')",
-                logo_reconstruction: "url('/company-logo/reconstruction.png')",
-                logo_bestseller: "url('/company-logo/bestseller.png')"
+                logo_exuus_light: "url('/company-logo/exuus_light.png')",
+                logo_codeofafrica_light:
+                    "url('/company-logo/codeofafrica_light.png')",
+                logo_alfatier_light: "url('/company-logo/alfatier_light.png')",
+                logo_reconstruction_light:
+                    "url('/company-logo/reconstruction_light.png')",
+                logo_theroom_light: "url('/company-logo/theroom_light.png')",
+                logo_bestseller_light:
+                    "url('/company-logo/bestseller_light.png')",
+                // DARK
+                logo_andela_dark: "url('/company-logo/andela_dark.png')",
+                logo_exuus_dark: "url('/company-logo/exuus_dark.png')",
+                logo_codeofafrica_dark:
+                    "url('/company-logo/codeofafrica_dark.png')",
+                logo_alfatier_dark: "url('/company-logo/alfatier_dark.png')",
+                logo_reconstruction_dark:
+                    "url('/company-logo/reconstruction_dark.png')",
+                logo_theroom_dark: "url('/company-logo/theroom_dark.png')",
+                logo_bestseller_dark: "url('/company-logo/bestseller_dark.png')"
             }
         }
     },

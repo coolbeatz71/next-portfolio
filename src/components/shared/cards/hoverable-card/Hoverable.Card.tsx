@@ -21,14 +21,14 @@ export default function HoverableCard({
     return (
         <div
             key={title}
-            className="relative group block p-2 h-[5rem] w-full"
+            className="relative group block p-2 h-[6rem] w-full"
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
         >
             <AnimatePresence>
                 {hoveredIndex === currentIndex && (
                     <motion.span
-                        className="absolute inset-0 h-full w-full bg-neutral-200 dark:bg-slate-800/[0.8] block  rounded-md"
+                        className="absolute inset-0 h-full w-full bg-neutral-200/[0.2] dark:bg-slate-800/[0.8] block rounded-md"
                         layoutId="hoverBackground"
                         initial={{ opacity: 0 }}
                         animate={{
@@ -42,7 +42,7 @@ export default function HoverableCard({
                     />
                 )}
             </AnimatePresence>
-            <Card className={cn("bg-no-repeat bg-center bg-contain", icon)} />
+            <Card className={cn("bg-no-repeat bg-contain bg-center", icon)} />
         </div>
     );
 }
@@ -54,7 +54,7 @@ const Card = ({ className }: CardProps): JSX.Element => {
     return (
         <div
             className={cn(
-                "rounded-md h-full w-full p-4 overflow-hidden border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
+                "rounded-md h-full w-full p-4 overflow-hidden border border-transparent relative z-20",
                 className
             )}
         />
