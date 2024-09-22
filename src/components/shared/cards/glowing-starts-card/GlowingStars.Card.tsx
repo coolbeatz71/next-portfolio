@@ -1,6 +1,6 @@
-import { type ReactNode, useState, useRef, useEffect } from "react";
-import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "@/helpers/mergeClassName";
+import { AnimatePresence, motion } from "framer-motion";
+import { type ReactNode, useEffect, useRef, useState } from "react";
 
 export interface GlowingStarsCardProps {
     className?: string;

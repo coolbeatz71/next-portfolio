@@ -1,5 +1,5 @@
-import GlowingStarsCard from "@/components/shared/cards/glowing-starts-card/GlowingStars";
-import { cn } from "../../../helpers/mergeClassName";
+import GlowingStarsCard from "@/components/shared/cards/glowing-starts-card/GlowingStars.Card";
+import { cn } from "@/helpers/mergeClassName";
 
 export interface BadgeDevToolsProps {
     className?: string;
