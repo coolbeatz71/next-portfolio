@@ -1,4 +1,4 @@
-import { USER_LANG } from "@/constants/app";
+import { USER_LANG } from "@/config/UserLanguage";
 
 export const getLanguage = (): string => {
     if (typeof window !== "undefined") {
