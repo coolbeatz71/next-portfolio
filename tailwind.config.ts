@@ -12,7 +12,6 @@ function addVariablesForColors({ addBase, theme }) {
     });
 }
 
-/** @type {import('tailwindcss').Config} */
 const config: Config = {
     darkMode: ["selector"],
     content: [
@@ -21,9 +20,29 @@ const config: Config = {
         "./src/**/*.{js,ts,jsx,tsx,mdx}"
     ],
     theme: {
+        animation: {
+            shimmer: "shimmer 2s linear infinite"
+        },
+        keyframes: {
+            shimmer: {
+                from: {
+                    backgroundPosition: "0 0"
+                },
+                to: {
+                    backgroundPosition: "-200% 0"
+                }
+            }
+        },
         extend: {
             fontFamily: {
                 sans: ['"Montserrat"', ...fontFamily.sans]
+            },
+            colors: {
+                medium: "#000000",
+                medium_dark: "#ffffff",
+                github: "#2b3137",
+                github_dark: "#fafbfc",
+                linkedin: "#0077B5"
             },
             backgroundImage: {
                 // PATTERNS and SHAPES

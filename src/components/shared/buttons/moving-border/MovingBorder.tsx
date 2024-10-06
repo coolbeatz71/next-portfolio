@@ -5,7 +5,7 @@ import {
     useMotionValue,
     useTransform
 } from "framer-motion";
-import { type SVGProps, useRef } from "react";
+import { Fragment, type SVGProps, useRef } from "react";
 
 interface MovingBorder extends SVGProps<SVGSVGElement> {
     children: React.ReactNode;
@@ -43,7 +43,7 @@ export const MovingBorder = ({
     const transform = useMotionTemplate`translateX(${x}px) translateY(${y}px) translateX(-50%) translateY(-50%)`;
 
     return (
-        <>
+        <Fragment>
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 preserveAspectRatio="none"
@@ -73,6 +73,6 @@ export const MovingBorder = ({
             >
                 {children}
             </motion.div>
-        </>
+        </Fragment>
     );
 };

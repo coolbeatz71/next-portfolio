@@ -1,4 +1,4 @@
-import { MovingBorder } from "@/components/shared/buttons/MovingBorder";
+import { MovingBorder } from "@/components/shared/buttons/moving-border/MovingBorder";
 import { cn } from "@/helpers/mergeClassName";
 import type { ElementType, HTMLAttributes } from "react";
 
