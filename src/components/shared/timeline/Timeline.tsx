@@ -1,11 +1,7 @@
+import type { TimelineEntry } from "@/config/WorkExperience";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-
-interface TimelineEntry {
-    title: string;
-    subtitle: string;
-    content: React.ReactNode;
-}
+import { FcGlobe } from "react-icons/fc";
 
 export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
     const ref = useRef<HTMLDivElement>(null);
@@ -38,7 +34,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                 </h2>
             </div>
 
-            <div ref={ref} className="relative pb-20 pt-10">
+            <div ref={ref} className="relative pt-10">
                 {data.map((item) => (
                     <div
                         key={item.title}
@@ -48,10 +44,13 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                             <div className="h-10 absolute w-10 rounded-full bg-white dark:bg-black flex items-center justify-center">
                                 <div className="h-4 w-4 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 p-2" />
                             </div>
-                            <h3 className="hidden md:block text-2xl md:pl-20 md:text-3xl font-bold text-neutral-500 dark:text-neutral-500 ">
+                            <h3 className="hidden md:block text-2xl md:pl-20 md:text-3xl font-bold text-neutral-500 dark:text-neutral-500 !leading-loose">
                                 {item.title}
                                 <p className="hidden md:block !text-sm !font-normal text-neutral-500 dark:text-neutral-500 ">
                                     {item.subtitle}
+                                </p>
+                                <p className="hidden md:flex items-center gap-1 !text-base text-neutral-500 dark:text-neutral-500">
+                                    <FcGlobe /> {item.location}
                                 </p>
                             </h3>
                         </div>
