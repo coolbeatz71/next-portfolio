@@ -15,10 +15,10 @@ export default function AboutMe(): JSX.Element {
                         I build high-performance web and mobile applications,
                         focusing on scalability and user experience
                     </h2>
-                    <h3 className="text-xl font-thin !leading-tight md:text-xl xl:text-2xl text-white dark:text-black">
+                    <p className="text-lg font-light text-gray-400 !leading-8">
                         I'm also passionate about open-source work, contributing
                         to projects that advance modern development.
-                    </h3>
+                    </p>
                     <hr className="h-px my-8 bg-gray-200/[0.1] border-0 dark:bg-gray-700/[0.1]" />
                     <h2 className="mb-4 text-xl font-bold !leading-tight md:text-xl xl:text-2xl text-white dark:text-black">
                         A little bit about myself
