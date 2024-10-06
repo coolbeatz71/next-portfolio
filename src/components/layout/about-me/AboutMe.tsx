@@ -4,7 +4,7 @@ import SmoothScroll from "@/components/shared/smooth-scroll/SmoothScroll";
 export default function AboutMe(): JSX.Element {
     return (
         <div className="mx-auto max-w-7xl max-h-7xl px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 xl:grid-cols-[3fr,2.5fr] py-12 gap-12">
+            <div className="grid grid-cols-1 xl:grid-cols-[3fr,2.5fr] gap-12">
                 <div className="flex flex-col w-full items-center justify-center">
                     <SmoothScroll>
                         <AboutMeImages />
@@ -15,10 +15,10 @@ export default function AboutMe(): JSX.Element {
                         I build high-performance web and mobile applications,
                         focusing on scalability and user experience
                     </h2>
-                    <h3 className="text-xl font-thin !leading-tight md:text-xl xl:text-2xl text-white dark:text-black">
+                    <p className="text-lg font-light text-gray-400 !leading-8">
                         I'm also passionate about open-source work, contributing
                         to projects that advance modern development.
-                    </h3>
+                    </p>
                     <hr className="h-px my-8 bg-gray-200/[0.1] border-0 dark:bg-gray-700/[0.1]" />
                     <h2 className="mb-4 text-xl font-bold !leading-tight md:text-xl xl:text-2xl text-white dark:text-black">
                         A little bit about myself
