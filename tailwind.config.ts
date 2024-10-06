@@ -1,12 +1,24 @@
 import type { Config } from "tailwindcss";
 import { fontFamily } from "tailwindcss/defaultTheme";
+import { flattenColorPalette } from "tailwindcss/lib/util/flattenColorPalette";
 
+function addVariablesForColors({ addBase, theme }) {
+    const allColors = flattenColorPalette(theme("colors"));
+    const newVars = Object.fromEntries(
+        Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+    );
+    addBase({
+        ":root": newVars
+    });
+}
+
+/** @type {import('tailwindcss').Config} */
 const config: Config = {
     darkMode: ["selector"],
     content: [
         "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
         "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-        "./src/app/**/*.{js,ts,jsx,tsx,mdx}"
+        "./src/**/*.{js,ts,jsx,tsx,mdx}"
     ],
     theme: {
         extend: {
@@ -53,6 +65,7 @@ const config: Config = {
             }
         }
     },
-    plugins: []
+    plugins: [addVariablesForColors]
 };
+
 export default config;
