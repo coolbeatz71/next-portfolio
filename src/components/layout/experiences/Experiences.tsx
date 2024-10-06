@@ -1,4 +1,4 @@
-import { MovingBorderButton } from "@/components/shared/buttons/MovingBorder.Button";
+import { MovingBorderButton } from "@/components/shared/buttons/moving-border/MovingBorder.Button";
 import { Timeline } from "@/components/shared/timeline/Timeline";
 import { experienceTimeline } from "@/config/WorkExperience";
 

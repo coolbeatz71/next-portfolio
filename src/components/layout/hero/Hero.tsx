@@ -1,57 +1,18 @@
-import { FcBriefcase, FcGlobe } from "react-icons/fc";
-
 import Badge from "@/components/shared/badge/Badge";
 import BadgeDevTools from "@/components/shared/badge/Badge.DevTools";
 import HeroImage from "@/components/shared/dev-image/DevImage";
 import FlipWords from "@/components/shared/filp-words/FlipWords";
+import SocialLinks from "@/components/shared/social-links/SocialLinks";
 
-const devToolsLogoList = [
-    {
-        className: "absolute top-[0%] right-[10rem]",
-        iconName: "bg-icon_node"
-    },
-    {
-        className: "absolute top-[20%] right-[6rem]",
-        iconName: "bg-icon_react"
-    },
-    {
-        className: "absolute top-[40%] right-[4rem]",
-        iconName: "bg-icon_angular"
-    },
-    {
-        className: "absolute top-[60%] right-[4rem]",
-        iconName: "bg-icon_flutter"
-    },
-    {
-        className: "absolute top-[80%] right-[8rem]",
-        iconName: "bg-icon_vue"
-    },
-    {
-        className: "absolute top-[100%] right-[10rem]",
-        iconName: "bg-icon_laravel"
-    }
-];
-
-const badgeList = [
-    {
-        icon: <FcBriefcase />,
-        className: "absolute top-[24%] -left-[5rem]",
-        count: 7,
-        text: "Years of Experience"
-    },
-    {
-        icon: <FcGlobe />,
-        className: "absolute top-[80%] -left-[1rem]",
-        count: 25,
-        text: "Live Projects"
-    }
-];
+import { creditBadgeList } from "@/config/CreditBadge";
+import { devToolsLogoList } from "@/config/DevTools";
 
 export default function Hero(): JSX.Element {
     return (
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 xl:grid-cols-2 items-center py-12">
                 <div className="flex flex-col items-start xl:px-0 px-8">
+                    <br />
                     <h1 className="max-w-xl mb-4 text-2xl font-bold tracking-tight !leading-loose md:text-3xl xl:text-3xl text-white dark:text-black">
                         Hi 👋🏽, <br />
                         <span className="xl:text-4xl">I am Jean-Vincent </span>
@@ -68,9 +29,12 @@ export default function Hero(): JSX.Element {
                     <p className="max-w-2xl mb-6 font-light text-gray-400 lg:mb-8 md:text-md lg:text-md dark:text-gray-200">
                         FullStack - PREN/MEAN - PHP/Laravel - Dart/Flutter
                     </p>
+                    <div className="flex flex-row gap-4">
+                        <SocialLinks />
+                    </div>
                 </div>
                 <div className="hidden xl:flex relative">
-                    {badgeList.map((badge) => (
+                    {creditBadgeList.map((badge) => (
                         <Badge
                             key={badge.text}
                             className={badge.className}
