@@ -1,6 +1,6 @@
-import { useCallback, useEffect, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "@/helpers/mergeClassName";
+import { AnimatePresence, motion } from "framer-motion";
+import { useCallback, useEffect, useState } from "react";
 
 export interface FlipWordsProps {
     words: string[];
@@ -65,7 +65,8 @@ export default function FlipWords({
             >
                 {currentWord.split(" ").map((word, wordIndex) => (
                     <motion.span
-                        key={word}
+                        // biome-ignore lint/suspicious/noArrayIndexKey: need to use index as key
+                        key={word + wordIndex}
                         initial={{ opacity: 0, y: 10, filter: "blur(8px)" }}
                         animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                         transition={{
@@ -76,7 +77,8 @@ export default function FlipWords({
                     >
                         {word.split("").map((letter, letterIndex) => (
                             <motion.span
-                                key={word + letter}
+                                // biome-ignore lint/suspicious/noArrayIndexKey: need to use index as key
+                                key={word + letterIndex}
                                 initial={{
                                     opacity: 0,
                                     y: 10,

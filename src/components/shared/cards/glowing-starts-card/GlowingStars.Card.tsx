@@ -68,7 +68,10 @@ export const Illustration = ({ mouseEnter }: { mouseEnter: boolean }) => {
                 const staticDelay = starIdx * 0.01;
                 return (
                     <div
-                        key={`matrix-col-${star}}`}
+                        key={`matrix-col-${star}-${
+                            // biome-ignore lint/suspicious/noArrayIndexKey: need to use index as key
+                            starIdx
+                        }`}
                         className="relative flex items-center justify-center"
                     >
                         <Star
