@@ -12,7 +12,7 @@ export const projectsTabs: Tabs[] = [
         context: "full-stack",
         content: (
             <div>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                1 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Officiis et, provident ab officia quibusdam at nulla hic libero,
                 itaque aperiam harum eius ex sint unde! Libero quas dolores
                 quasi consectetur.
@@ -24,7 +24,7 @@ export const projectsTabs: Tabs[] = [
         context: "front-end",
         content: (
             <div>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                2 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Officiis et, provident ab officia quibusdam at nulla hic libero,
                 itaque aperiam harum eius ex sint unde! Libero quas dolores
                 quasi consectetur.
@@ -36,7 +36,7 @@ export const projectsTabs: Tabs[] = [
         context: "mobile-apps",
         content: (
             <div>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                3 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Officiis et, provident ab officia quibusdam at nulla hic libero,
                 itaque aperiam harum eius ex sint unde! Libero quas dolores
                 quasi consectetur.
@@ -48,7 +48,7 @@ export const projectsTabs: Tabs[] = [
         context: "open-source",
         content: (
             <div>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                4 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Officiis et, provident ab officia quibusdam at nulla hic libero,
                 itaque aperiam harum eius ex sint unde! Libero quas dolores
                 quasi consectetur.
