@@ -1,4 +1,4 @@
-import { useAnimation } from "framer-motion";
+import { type Variants, motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
@@ -21,20 +21,33 @@ export default function ProjectSection({ projects }: ProjectSectionProps) {
         }
     }, [controls, inView]);
 
+    const variants: Variants = {
+        hidden: { opacity: 0, y: 50 },
+        visible: {
+            y: 0,
+            opacity: 1,
+            transition: { duration: 0.5, ease: "backInOut", delay: 0.1 }
+        }
+    };
+
     return (
         <section ref={ref}>
-            <div className="container mx-auto px-4">
-                <div className="grid md:grid-cols-2 gap-8">
+            <motion.div
+                initial="hidden"
+                animate={controls}
+                variants={variants}
+                className="py-8"
+            >
+                <div className="grid md:grid-cols-2 gap-4">
                     {projects.map((project, index) => (
                         <ProjectCard
                             index={index}
                             key={project.name}
                             project={project}
-                            controls={controls}
                         />
                     ))}
                 </div>
-            </div>
+            </motion.div>
         </section>
     );
 }
