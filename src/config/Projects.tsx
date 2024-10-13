@@ -1,9 +1,11 @@
 import type { ReactNode } from "react";
 
-import ProjectsFullStack from "@/components/layout/projects/Projects.FullStack";
-import ProjectsMobile from "@/components/layout/projects/Projects.Mobile";
-import ProjectsOpenSource from "@/components/layout/projects/Projects.OpenSource";
-import ProjectsFrontend from "@/components/layout/projects/Projects.Frontend";
+import ProjectSection from "@/components/layout/projects/Projects.Section";
+
+import { projectsFrontend } from "@/config/Projects.Frontend";
+import { projectsFullStack } from "@/config/Projects.FullStack";
+import { projectsMobile } from "@/config/Projects.Mobile";
+import { projectsOpenSource } from "@/config/Projects.OpenSource";
 
 export interface Tabs {
     title: string;
@@ -24,21 +26,21 @@ export const projectsTabs: Tabs[] = [
     {
         title: "Full-Stack",
         context: "full-stack",
-        content: <ProjectsFullStack />
+        content: <ProjectSection projects={projectsFullStack} />
     },
     {
         title: "Front-End",
         context: "front-end",
-        content: <ProjectsFrontend />
+        content: <ProjectSection projects={projectsFrontend} />
     },
     {
         title: "Mobile Apps",
         context: "mobile-apps",
-        content: <ProjectsMobile />
+        content: <ProjectSection projects={projectsMobile} />
     },
     {
         title: "Open-Source",
         context: "open-source",
-        content: <ProjectsOpenSource />
+        content: <ProjectSection projects={projectsOpenSource} />
     }
 ];
