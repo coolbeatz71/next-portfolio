@@ -36,7 +36,7 @@ export const projectsFullStack: ProjectByStack[] = [
     {
         name: "Motory",
         description:
-            "A German platform vehicle marketplace with a community-driven environment. It allows users to buy and sell vehicles, access detailed automotive information, and participate in discussions. The platform offers documentation for vehicle transactions and serves as a hub for automotive enthusiasts.",
+            "A German vehicle's marketplace with a community-driven environment. It allows users to buy and sell vehicles, access detailed automotive information, and participate in discussions. The platform offers documentation for vehicle transactions and serves as a hub for automotive enthusiasts.",
         stack: [
             "PHP",
             "Bootstrap",
