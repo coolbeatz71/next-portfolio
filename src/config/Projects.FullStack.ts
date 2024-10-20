@@ -13,7 +13,7 @@ export const projectsFullStack: ProjectByStack[] = [
             "Nginx",
             "Modernizr"
         ],
-        images: ["/placeholder.svg?height=300&width=400"],
+        images: ["/projects/codeofafrica/codeofafrica_preview.jpg"],
         link: "https://www.codeofafrica.com/EN",
         hasLink: true
     },
@@ -29,7 +29,7 @@ export const projectsFullStack: ProjectByStack[] = [
             "ChartJS",
             "Eloquent ORM"
         ],
-        images: ["/placeholder.svg?height=300&width=400"],
+        images: ["/projects/ezyagric/ezyagric_preview.jpg"],
         link: "https://ezyagric.com/",
         hasLink: true
     },
@@ -45,7 +45,7 @@ export const projectsFullStack: ProjectByStack[] = [
             "ElasticSearch",
             "Doctrine"
         ],
-        images: ["/placeholder.svg?height=300&width=400"],
+        images: ["/projects/motory/motory_preview.jpg"],
         link: "https://www.motory.de/",
         hasLink: true
     },

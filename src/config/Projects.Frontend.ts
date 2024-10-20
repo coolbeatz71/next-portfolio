@@ -13,7 +13,7 @@ export const projectsFrontend: ProjectByStack[] = [
             "Redux",
             "ExpressJs"
         ],
-        images: ["/placeholder.svg?height=300&width=400"],
+        images: ["/projects/saveplus/saveplus_preview.jpg"],
         link: "https://saveplus.io/",
         hasLink: true
     },
@@ -29,7 +29,7 @@ export const projectsFrontend: ProjectByStack[] = [
             "GraphQL/Apollo",
             "Hasura"
         ],
-        images: ["/placeholder.svg?height=300&width=400"],
+        images: ["/projects/reconstruction/reconstruction_preview.jpg"],
         link: "https://reconstruction.us/",
         hasLink: true
     },
@@ -45,7 +45,7 @@ export const projectsFrontend: ProjectByStack[] = [
             "Firebase",
             "Hubspot"
         ],
-        images: ["/placeholder.svg?height=300&width=400"],
+        images: ["/projects/alfatier/alfatier_preview.jpg"],
         link: "https://alfatier.io/",
         hasLink: true
     },
@@ -61,7 +61,7 @@ export const projectsFrontend: ProjectByStack[] = [
             "InstantSearchJs",
             "Storybook"
         ],
-        images: ["/placeholder.svg?height=300&width=400"],
+        images: ["/projects/storm/storm_preview.jpg"],
         link: "https://storm.bestseller.com/",
         hasLink: true
     },
@@ -76,7 +76,7 @@ export const projectsFrontend: ProjectByStack[] = [
             "Flutter Hooks",
             "Seo"
         ],
-        images: ["/placeholder.svg?height=300&width=400"],
+        images: ["/projects/meet/meet_preview.jpg"],
         link: "https://coolbeatz71.github.io/meet/#/",
         hasLink: true
     }

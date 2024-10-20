@@ -1,6 +1,7 @@
 import type { ProjectByStack } from "@/config/Projects";
 import { cn } from "@/helpers/mergeClassName";
 import { type Variants, motion } from "framer-motion";
+import Image from "next/image";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 
 export interface ProjectCardProps {
@@ -28,10 +29,12 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
             <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 group-hover:shadow-xl">
                 <div className="flex flex-col md:flex-row">
                     <div className="md:w-1/2 relative overflow-hidden">
-                        <img
+                        <Image
+                            fill
+                            quality={55}
                             alt={project.name}
                             src={project.images[0]}
-                            className="w-full h-full md:h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                            className="object-cover transition-transform duration-300 group-hover:scale-110"
                         />
                         <div
                             className={cn(
