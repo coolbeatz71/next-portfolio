@@ -1,9 +1,9 @@
-import type { ReactNode } from "react";
 import numeral from "numeral";
+import type { ReactNode } from "react";
 import CountUp from "react-countup";
 
-import { cn } from "@/helpers/mergeClassName";
 import GridBackground from "@/components/shared/grid-background/GridBackground";
+import { cn } from "@/helpers/mergeClassName";
 
 export interface BadgeProps {
     icon: ReactNode;
@@ -23,7 +23,7 @@ export default function Badge({
     return (
         <div
             className={cn(
-                "relative bg-gradient-to-b dark:from-neutral-900 from-neutral-100 dark:to-neutral-950 to-white p-4 rounded-xl overflow-hidden z-50 shadow-2xl flex justify-around items-center",
+                "relative bg-gradient-to-b dark:from-neutral-900 from-neutral-100 dark:to-neutral-950 to-white p-4 rounded-xl overflow-hidden z-10 shadow-2xl flex justify-around items-center",
                 className
             )}
         >
