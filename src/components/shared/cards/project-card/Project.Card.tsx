@@ -1,3 +1,4 @@
+import LitUpBorderButton from "@/components/shared/buttons/litup-border/LitUpBorder.Button";
 import type { ProjectByStack } from "@/config/Projects";
 import { cn } from "@/helpers/mergeClassName";
 import { type Variants, motion } from "framer-motion";
@@ -26,7 +27,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
             animate="visible"
             variants={variants}
         >
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 group-hover:shadow-xl">
+            <div className="bg-gray-800 dark:bg-gray-200 rounded-lg shadow-lg overflow-hidden transition-all duration-300 group-hover:shadow-xl">
                 <div className="flex flex-col md:flex-row">
                     <div className="md:w-1/2 relative overflow-hidden">
                         <Image
@@ -45,10 +46,10 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                     </div>
                     <div className="md:w-1/2 p-4 flex flex-col justify-between">
                         <div>
-                            <h3 className="text-xl font-semibold mb-2 group-hover:text-blue-600 transition-colors duration-300">
+                            <h3 className="text-xl font-semibold mb-2 dark:text-black transition-colors duration-300">
                                 {project.name}
                             </h3>
-                            <p className="text-gray-600 mb-4 line-clamp-4 text-sm">
+                            <p className="text-gray-400 dark:text-gray-600 mb-4 line-clamp-4 text-sm">
                                 {project.description}
                             </p>
                             <div className="flex flex-wrap gap-1 mb-4">
@@ -66,13 +67,14 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                             target="_blank"
                             href={project.link}
                             rel="noopener noreferrer"
-                            className={cn(
-                                "inline-flex items-center justify-center p-2 w-32 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition-colors duration-300 ease-in-out",
-                                !project.hasLink && "invisible"
-                            )}
+                            className={cn(!project.hasLink && "invisible")}
                         >
-                            Visit
-                            <FaArrowUpRightFromSquare className="ml-2 h-4 w-4" />
+                            <LitUpBorderButton className="w-32 p-[3px]">
+                                <div className="flex justify-center items-center g">
+                                    Visit
+                                    <FaArrowUpRightFromSquare className="ml-2 h-4 w-4" />
+                                </div>
+                            </LitUpBorderButton>
                         </a>
                     </div>
                 </div>
