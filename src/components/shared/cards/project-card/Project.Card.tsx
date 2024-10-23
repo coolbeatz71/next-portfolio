@@ -69,10 +69,10 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                             rel="noopener noreferrer"
                             className={cn(!project.hasLink && "invisible")}
                         >
-                            <LitUpBorderButton className="w-32 p-[3px]">
-                                <div className="flex justify-center items-center g">
+                            <LitUpBorderButton className="w-32 p-[2px]">
+                                <div className="flex justify-center items-center text-sm">
                                     Visit
-                                    <FaArrowUpRightFromSquare className="ml-2 h-4 w-4" />
+                                    <FaArrowUpRightFromSquare className="ml-2 h-3 w-3" />
                                 </div>
                             </LitUpBorderButton>
                         </a>
