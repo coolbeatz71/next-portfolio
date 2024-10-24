@@ -56,7 +56,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                                 {project.stack.map((tech) => (
                                     <span
                                         key={tech}
-                                        className="bg-blue-100 text-blue-800 text-[8pt] font-semibold px-2.5 py-0.5 rounded transition-colors duration-300 group-hover:bg-blue-200 group-hover:text-blue-900"
+                                        className="cursor-pointer bg-indigo-100 dark:bg-indigo-800 text-indigo-800 dark:text-indigo-100 text-[8pt] font-semibold px-2.5 py-0.5 rounded transition-colors duration-200 hover:bg-indigo-200 hover:text-indigo-900 dark:hover:bg-indigo-600 dark:hover:text-indigo-200"
                                     >
                                         {tech}
                                     </span>
