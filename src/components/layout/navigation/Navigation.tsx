@@ -6,7 +6,7 @@ import ThemeToggle from "@/components/shared/theme-toggle/ThemeToggle";
 export default function Navigation(): JSX.Element {
     return (
         <nav className="bg-gray-800/80 sticky top-0 shadow-md z-50 backdrop-blur-lg">
-            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-7xl">
                 <div className="relative flex sm:h-24 h-20  items-center justify-between">
                     <div className="inset-y-0 left-0 flex items-center sm:hidden">
                         <HamburgerMenuButton />
