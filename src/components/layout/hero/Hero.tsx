@@ -23,7 +23,7 @@ export default function Hero(): JSX.Element {
                                 "Frontend Engineer",
                                 "Mobile Engineer"
                             ]}
-                            className="pl-0 text-indigo-500 dark:text-indigo-500 xl:text-5xl"
+                            className="pl-0 text-indigo-500 xl:text-5xl"
                         />
                     </h1>
                     <p className="max-w-2xl mb-6 font-light text-gray-400 lg:mb-8 md:text-md lg:text-md dark:text-gray-200">

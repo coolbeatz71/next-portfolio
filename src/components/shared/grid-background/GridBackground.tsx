@@ -56,10 +56,14 @@ export function GridPattern({ width, height, x, y, squares, ...props }) {
             {squares && (
                 <svg x={x} y={y} className="overflow-visible">
                     <title>squares</title>
-                    {squares.map(([x, y]: number[]) => (
+                    {squares.map(([x, y]: number[], idx) => (
                         <rect
+                            suppressHydrationWarning
                             strokeWidth="0"
-                            key={`${x}-${y}`}
+                            key={`${x}-${y}-${
+                                // biome-ignore lint/suspicious/noArrayIndexKey: need to use index as key
+                                idx
+                            }`}
                             width={width + 1}
                             height={height + 1}
                             x={x * width}

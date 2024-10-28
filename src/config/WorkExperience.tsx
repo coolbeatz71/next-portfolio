@@ -1,4 +1,5 @@
 export interface TimelineEntry {
+    id: string;
     title: string;
     href?: string;
     location: string;
@@ -8,6 +9,7 @@ export interface TimelineEntry {
 
 export const experienceTimeline: TimelineEntry[] = [
     {
+        id: "senior-frontend-engineer-1",
         title: "Senior Frontend Engineer",
         location: "Aarhus, Denmark",
         href: "http://bestseller.com/",
@@ -48,6 +50,7 @@ export const experienceTimeline: TimelineEntry[] = [
         )
     },
     {
+        id: "servicenow-developer",
         title: "ServiceNow Developer",
         location: "Brande, Denmark",
         href: "http://bestseller.com/",
@@ -83,6 +86,7 @@ export const experienceTimeline: TimelineEntry[] = [
         )
     },
     {
+        id: "senior-software-engineer",
         title: "Senior Software Engineer",
         location: "Kigali, Rwanda",
         href: "https://codeofafrica.com/EN",
@@ -124,6 +128,7 @@ export const experienceTimeline: TimelineEntry[] = [
         )
     },
     {
+        id: "senior-frontend-engineer-2",
         title: "Senior Frontend Engineer",
         href: "https://alfatier.io/",
         location: "Hamburg, Germany",
@@ -168,6 +173,7 @@ export const experienceTimeline: TimelineEntry[] = [
         )
     },
     {
+        id: "senior-frontend-engineer-3",
         title: "Senior Frontend Engineer",
         location: "Memphis, USA",
         href: "https://org.reconstruction.us/",
