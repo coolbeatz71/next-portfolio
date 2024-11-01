@@ -24,10 +24,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
     const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
     return (
-        <div
-            className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 "
-            ref={containerRef}
-        >
+        <div className="mx-auto max-w-7xl" ref={containerRef}>
             <div className="max-w-7xl mx-auto">
                 <h2 className="mb-4 text-2xl font-bold !leading-tight md:text-2xl xl:text-3xl text-white dark:text-black">
                     My Work Experience
@@ -74,7 +71,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                             height: heightTransform,
                             opacity: opacityTransform
                         }}
-                        className="absolute inset-x-0 top-0  w-[2px] bg-gradient-to-t from-purple-500 via-blue-500 to-transparent from-[0%] via-[10%] rounded-full"
+                        className="absolute inset-x-0 top-0  w-[2px] bg-gradient-to-t from-indigo-500 via-blue-500 to-transparent from-[0%] via-[10%] rounded-full"
                     />
                 </div>
             </div>

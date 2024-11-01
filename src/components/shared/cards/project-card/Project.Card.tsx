@@ -29,13 +29,15 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         >
             <div className="bg-gray-800 dark:bg-gray-200 rounded-lg shadow-lg overflow-hidden transition-all duration-300 group-hover:shadow-xl">
                 <div className="flex flex-col md:flex-row">
-                    <div className="md:w-1/2 relative overflow-hidden">
+                    <div className="md:w-1/2 relative overflow-hidden cursor-pointer">
                         <Image
                             fill
                             quality={55}
+                            placeholder="blur"
                             alt={project.name}
                             src={project.images[0]}
-                            className="object-cover transition-transform duration-300 group-hover:scale-110"
+                            blurDataURL={project.blurURL}
+                            className="object-cover transition-all duration-300 group-hover:scale-110"
                         />
                         <div
                             className={cn(
@@ -44,19 +46,19 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                             )}
                         />
                     </div>
-                    <div className="md:w-1/2 p-4 flex flex-col justify-between">
+                    <div className="md:w-1/2 p-4 flex flex-col justify-between cursor-pointer">
                         <div>
-                            <h3 className="text-xl font-semibold mb-2 dark:text-black transition-colors duration-300">
+                            <h3 className="cursor-text text-xl font-semibold mb-2 dark:text-black transition-colors duration-300">
                                 {project.name}
                             </h3>
-                            <p className="text-gray-400 dark:text-gray-600 mb-4 line-clamp-4 text-sm">
+                            <p className="cursor-text text-gray-400 dark:text-gray-600 mb-4 line-clamp-4 text-sm">
                                 {project.description}
                             </p>
                             <div className="flex flex-wrap gap-1 mb-4">
                                 {project.stack.map((tech) => (
                                     <span
                                         key={tech}
-                                        className="bg-blue-100 text-blue-800 text-[8pt] font-semibold px-2.5 py-0.5 rounded transition-colors duration-300 group-hover:bg-blue-200 group-hover:text-blue-900"
+                                        className="cursor-pointer bg-indigo-100 dark:bg-indigo-800 text-indigo-800 dark:text-indigo-100 text-[8pt] font-semibold px-2.5 py-0.5 rounded transition-colors duration-200 hover:bg-indigo-200 hover:text-indigo-900 dark:hover:bg-indigo-600 dark:hover:text-indigo-200"
                                     >
                                         {tech}
                                     </span>

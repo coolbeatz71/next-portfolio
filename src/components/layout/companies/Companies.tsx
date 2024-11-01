@@ -36,7 +36,7 @@ export const companyLogoList = [
 ];
 export default function Companies(): JSX.Element {
     return (
-        <div className="mx-auto max-w-7xl max-h-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl max-h-7xl">
             <div className="grid grid-cols-1 xl:grid-cols-[2fr,3fr] items-center py-12">
                 <div>
                     <h2 className="mb-4 text-2xl font-bold tracking-tight !leading-tight md:text-2xl xl:text-4xl text-white dark:text-black">
