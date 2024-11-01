@@ -18,6 +18,7 @@ export interface ProjectByStack {
     description: string;
     stack: string[];
     images: string[];
+    blurURL: string;
     hasLink: boolean;
     link: string;
 }
