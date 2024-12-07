@@ -10,7 +10,7 @@ import { devToolsLogoList } from "@/config/DevTools";
 export default function Hero(): JSX.Element {
     return (
         <div className="mx-auto max-w-7xl">
-            <div className="grid grid-cols-1 xl:grid-cols-2 items-center py-12">
+            <div className="grid grid-cols-1 xl:grid-cols-2 items-center py-10">
                 <div className="flex flex-col items-start xl:px-0 px-8">
                     <br />
                     <h1 className="max-w-xl mb-4 text-2xl font-bold tracking-tight !leading-loose md:text-3xl xl:text-3xl text-white dark:text-black">

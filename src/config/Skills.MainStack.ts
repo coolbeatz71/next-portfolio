@@ -10,5 +10,5 @@ export const mainStackList = [
     { name: "PHP", src: "/dev-tools/php.svg" },
     { name: "Angular", src: "/dev-tools/angular.svg" },
     { name: "Vue", src: "/dev-tools/vue.svg" },
-    { name: "DotNet", src: "/dev-tools/dotnet.svg" }
+    { name: ".Net", src: "/dev-tools/dotnet.svg" }
 ];
