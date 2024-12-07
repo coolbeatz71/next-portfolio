@@ -40,11 +40,12 @@ export default function Companies(): JSX.Element {
             <div className="grid grid-cols-1 xl:grid-cols-[2fr,3fr] items-center py-12">
                 <div>
                     <h2 className="mb-4 text-2xl font-bold tracking-tight !leading-tight md:text-2xl xl:text-4xl text-white dark:text-black">
-                        Collaborated with 10+ companies worldwide
+                        Collaborated with amazing organizations worldwide
                     </h2>
                     <p className="text-lg font-light text-gray-400 !leading-8">
-                        From startups to large organizations, across a wide
-                        range of industries and domains.
+                        Over the last 7 years, from startups to large
+                        organizations, across a wide range of industries and
+                        domains.
                     </p>
                 </div>
 
