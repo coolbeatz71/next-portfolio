@@ -6,6 +6,7 @@ import Experiences from "@/components/layout/experiences/Experiences";
 import Hero from "@/components/layout/hero/Hero";
 import Navigation from "@/components/layout/navigation/Navigation";
 import Projects from "@/components/layout/projects/Projects";
+import Skills from "@/components/layout/skills/Skills";
 
 export default function HomeContainer(): JSX.Element {
     return (
@@ -18,6 +19,7 @@ export default function HomeContainer(): JSX.Element {
             <AboutMe />
             <Experiences />
             <Projects />
+            <Skills />
         </Fragment>
     );
 }

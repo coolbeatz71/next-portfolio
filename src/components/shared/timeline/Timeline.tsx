@@ -25,10 +25,17 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
     return (
         <div className="mx-auto max-w-7xl" ref={containerRef}>
-            <div className="max-w-7xl mx-auto">
-                <h2 className="mb-4 text-2xl font-bold !leading-tight md:text-2xl xl:text-3xl text-white dark:text-black">
-                    My Work Experience
-                </h2>
+            <div className="grid grid-cols-1 xl:grid-cols-[2fr,3fr] items-center py-12">
+                <div>
+                    <h2 className="mb-4 text-2xl font-bold !leading-tight md:text-2xl xl:text-3xl text-white dark:text-black">
+                        My Work Experience
+                    </h2>
+                    <p className="text-lg font-light text-gray-400 !leading-8">
+                        I’ve had a blast tinkering with some pretty cool tech.
+                        Here are the ones that have significantly shaped my
+                        expertise.
+                    </p>
+                </div>
             </div>
 
             <div ref={ref} className="relative pt-10">
