@@ -1,4 +1,4 @@
-import { useCallback, useLayoutEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 interface TooltipProps {
     children: React.ReactNode;
@@ -46,7 +46,7 @@ export default function Tooltip({ children, text }: TooltipProps): JSX.Element {
         [handlePosition]
     );
 
-    useLayoutEffect(() => {
+    useEffect(() => {
         handlePosition();
         window.addEventListener("resize", debouncedHandlePosition);
         return () =>
