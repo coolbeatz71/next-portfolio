@@ -1,8 +1,8 @@
-import Image from "next/image";
 import SectionHeader from "@/components/shared/section-header/SectionHeader";
-import { mainStackList } from "@/config/DevStack.Main";
 import TabBar from "@/components/shared/tab-bar/TabBar";
 import { devStackTabs } from "@/config/DevStack";
+import { mainStackList } from "@/config/DevStack.Main";
+import Image from "next/image";
 
 export default function Skills(): JSX.Element {
     return (
@@ -13,8 +13,8 @@ export default function Skills(): JSX.Element {
                         Here are the ones that have significantly shaped my
                         expertise."
             />
-            <div className="relative py-10">
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-y-6 lg:px-24 md:px-24">
+            <div className="relative">
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 lg:px-24 md:px-24">
                     {mainStackList.map((skill) => (
                         <div
                             key={skill.title}
