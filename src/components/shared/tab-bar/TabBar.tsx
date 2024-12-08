@@ -5,17 +5,25 @@ import { useState } from "react";
 
 interface TabBarProps {
     tabs: Tabs[];
-    className?: string;
+    tabBarClassName?: string;
+    containerClassName?: string;
 }
 
-export default function TabBar({ tabs, className }: TabBarProps) {
+export default function TabBar({
+    tabs,
+    containerClassName,
+    tabBarClassName
+}: TabBarProps) {
     const [activeTabIndex, setActiveTabIndex] = useState(0);
 
     return (
-        <div className={cn("w-full", className)}>
+        <div className={cn("w-full", containerClassName)}>
             <div className="relative flex flex-col items-center">
                 <ul
-                    className="relative flex flex-wrap px-1.5 py-1.5 list-none bg-gray-200 dark:bg-gray-800 rounded-xl gap-1 min-w-[50%]"
+                    className={cn(
+                        "relative flex flex-wrap px-1.5 py-1.5 list-none bg-gray-200 dark:bg-gray-800 rounded-xl gap-1 min-w-[50%]",
+                        tabBarClassName
+                    )}
                     data-tabs="tabs"
                 >
                     {tabs.map((tab, idx) => (
@@ -51,7 +59,9 @@ export default function TabBar({ tabs, className }: TabBarProps) {
                     ))}
                 </ul>
 
-                <div className="py-4">{tabs[activeTabIndex].content}</div>
+                <div className="w-full py-4">
+                    {tabs[activeTabIndex].content}
+                </div>
             </div>
         </div>
     );

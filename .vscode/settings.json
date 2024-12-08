@@ -15,7 +15,15 @@
     "editor.defaultFormatter": "biomejs.biome",
     "editor.wordWrap": "off",
     "cSpell.words": [
+        "Actix",
+        "Couchbase",
+        "expressjs",
+        "Firestore",
         "gsap",
-        "Hoverable"
+        "Hoverable",
+        "laravel",
+        "nextjs",
+        "opentelemetry",
+        "progressbar"
     ]
 }
