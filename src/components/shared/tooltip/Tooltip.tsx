@@ -16,6 +16,7 @@ function debounce<T extends (...args: unknown[]) => void>(
     };
 }
 
+// TODO: this animation is not working. It should fade in and out.
 export default function Tooltip({ children, text }: TooltipProps): JSX.Element {
     const [position, setPosition] = useState("top");
     const tooltipRef = useRef<HTMLSpanElement>(null);

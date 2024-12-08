@@ -33,16 +33,18 @@ const config: Config = {
                 }
             }
         },
+        fontFamily: {
+            sans: ['"Montserrat"', ...fontFamily.sans]
+        },
         extend: {
-            fontFamily: {
-                sans: ['"Montserrat"', ...fontFamily.sans]
-            },
             colors: {
                 medium: "#000000",
                 medium_dark: "#ffffff",
                 github: "#2b3137",
                 github_dark: "#fafbfc",
-                linkedin: "#0077B5"
+                linkedin: "#0077B5",
+                light: "rgb(226 232 240)",
+                dark: "rgb(30 41 59)"
             },
             backgroundImage: {
                 // PATTERNS and SHAPES

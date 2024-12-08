@@ -16,14 +16,21 @@
     "editor.wordWrap": "off",
     "cSpell.words": [
         "Actix",
+        "alfatier",
+        "andela",
+        "codeofafrica",
         "Couchbase",
         "expressjs",
+        "exuus",
+        "ezyagric",
         "Firestore",
         "gsap",
         "Hoverable",
         "laravel",
         "nextjs",
         "opentelemetry",
-        "progressbar"
+        "progressbar",
+        "tailwindcss",
+        "theroom"
     ]
 }
