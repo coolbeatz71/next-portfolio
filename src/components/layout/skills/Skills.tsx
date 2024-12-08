@@ -1,6 +1,6 @@
 import Image from "next/image";
 import SectionHeader from "@/components/shared/section-header/SectionHeader";
-import { mainStackList } from "@/config/Skills.MainStack";
+import { mainStackList } from "@/config/DevStack.Main";
 import TabBar from "@/components/shared/tab-bar/TabBar";
 import { devStackTabs } from "@/config/DevStack";
 
@@ -23,7 +23,7 @@ export default function Skills(): JSX.Element {
                             <div className="relative h-16 w-16 lg:h-24 lg:w-24">
                                 <Image
                                     src={skill.src}
-                                    alt={`${skill.name} logo`}
+                                    alt={skill.name}
                                     layout="fill"
                                     objectFit="contain"
                                     className="transition-all duration-200 ease-in-out filter grayscale opacity-70 group-hover:filter-none group-hover:opacity-100"
@@ -36,7 +36,11 @@ export default function Skills(): JSX.Element {
                     ))}
                 </div>
             </div>
-            <TabBar tabs={devStackTabs} className="py-4" />
+            <TabBar
+                tabs={devStackTabs}
+                containerClassName="py-4"
+                tabBarClassName="min-w-[60%]"
+            />
         </div>
     );
 }

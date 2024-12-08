@@ -1,12 +1,6 @@
-import NextImage from "next/image";
 import { Fragment } from "react";
-
-export interface SkillsByStack {
-    progress: number;
-    title: string;
-    lightImage: string;
-    darkImage: string;
-}
+import NextImage from "next/image";
+import type { SkillsByStack } from "@/config/DevStack";
 
 export default function ProgressBar({
     title,

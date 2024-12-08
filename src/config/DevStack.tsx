@@ -17,8 +17,8 @@ export interface SkillsByStack {
 
 export const devStackTabs: Tabs[] = [
     {
-        title: "Programming Language",
-        context: "programming-language",
+        title: "Language",
+        context: "language",
         content: <SkillSection stack={devStackLanguages} />
     },
     {
