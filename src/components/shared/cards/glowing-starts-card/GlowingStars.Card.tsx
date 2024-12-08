@@ -22,14 +22,16 @@ export default function GlowingStarsCard({
                 setMouseEnter(false);
             }}
             className={cn(
-                "bg-[linear-gradient(110deg,#333_0.6%,#222)] max-w-[5rem] max-h-[5rem] h-full w-full rounded-xl border-[1px] box-shadow-xl border-[#747070] dark:border-neutral-600 relative flex items-center justify-center",
+                "bg-[linear-gradient(110deg,#fff_0.6%,#ccc)] dark:bg-[linear-gradient(110deg,#444_0.6%,#333)] max-w-[5rem] max-h-[5rem] h-full w-full rounded-xl box-shadow-xl border-4 border-slate-300 dark:border-slate-500 relative flex items-center justify-center",
                 className
             )}
         >
             <div className="absolute inset-0 z-0">
                 <Illustration mouseEnter={mouseEnter} />
             </div>
-            <div className="relative z-10">{children}</div>
+            <div className="relative z-10 flex justify-center items-center">
+                {children}
+            </div>
         </div>
     );
 }

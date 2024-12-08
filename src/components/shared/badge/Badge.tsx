@@ -23,14 +23,14 @@ export default function Badge({
     return (
         <div
             className={cn(
-                "relative bg-gradient-to-b dark:from-neutral-900 from-neutral-100 dark:to-neutral-950 to-white p-4 rounded-xl overflow-hidden z-10 shadow-2xl flex justify-around items-center",
+                "relative bg-gradient-to-b from-neutral-100 to-neutral-200 dark:from-neutral-700 dark:to-neutral-800 p-4 rounded-xl overflow-hidden z-10 shadow-2xl flex justify-around items-center",
                 className
             )}
         >
             <GridBackground size={20} />
             <div className="text-4xl mr-2">{icon}</div>
             <div className="flex items-center gap-x-2">
-                <div className="text-4xl leading-none font-bold text-indigo-600">
+                <div className="text-4xl leading-none font-bold text-indigo-700 dark:text-indigo-500">
                     <CountUp
                         end={endCountNumber}
                         delay={1}
@@ -41,7 +41,7 @@ export default function Badge({
                     />
                     {endCountText}
                 </div>
-                <div className="max-w-[90px] leading-none text-[11pt] font-medium text-black">
+                <div className="max-w-[90px] leading-none text-[11pt] font-medium text-black dark:text-white">
                     {badgeText}
                 </div>
             </div>
