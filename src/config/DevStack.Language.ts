@@ -27,8 +27,8 @@ export const devStackLanguages: SkillsByStack[] = [
     },
     {
         title: "C#",
-        lightImage: "/images/stack/csharp.svg",
-        darkImage: "/images/stack/csharp.svg",
+        lightImage: "/dev-tools/csharp.svg",
+        darkImage: "/dev-tools/csharp.svg",
         progress: 30
     }
 ];
