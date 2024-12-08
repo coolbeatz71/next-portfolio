@@ -1,11 +1,24 @@
+import ProgressBar from "@/components/shared/progressbar/ProgressBar";
 import type { SkillsByStack } from "@/config/DevStack";
 
 export interface SkillSectionProps {
-    stack: SkillsByStack[];
+    stacks: SkillsByStack[];
 }
 
 export default function SkillSection({
-    stack
+    stacks
 }: SkillSectionProps): JSX.Element {
-    return <>lol</>;
+    return (
+        <div className="flex flex-col w-full">
+            {stacks.map((stack) => (
+                <ProgressBar
+                    key={stack.title}
+                    progress={stack.progress}
+                    title={stack.title}
+                    lightImage={stack.lightImage}
+                    darkImage={stack.darkImage}
+                />
+            ))}
+        </div>
+    );
 }

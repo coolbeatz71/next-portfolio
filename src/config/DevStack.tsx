@@ -1,12 +1,12 @@
-import type { Tabs } from "@/config/Projects";
 import SkillSection from "@/components/layout/skills/Skills.Section";
+import type { Tabs } from "@/config/Projects";
 
-import { devStackLanguages } from "@/config/DevStack.Language";
-import { devStackFrontend } from "@/config/DevStack.Frontend";
 import { devStackBackend } from "@/config/DevStack.Backend";
-import { devStackInfrastructure } from "@/config/DevStack.Infrastructure";
-import { devStackOthers } from "@/config/DevStack.Other";
 import { devStackDatabase } from "@/config/DevStack.Database";
+import { devStackFrontend } from "@/config/DevStack.Frontend";
+import { devStackInfrastructure } from "@/config/DevStack.Infrastructure";
+import { devStackLanguages } from "@/config/DevStack.Language";
+import { devStackOthers } from "@/config/DevStack.Other";
 
 export interface SkillsByStack {
     progress: number;
@@ -19,31 +19,31 @@ export const devStackTabs: Tabs[] = [
     {
         title: "Language",
         context: "language",
-        content: <SkillSection stack={devStackLanguages} />
+        content: <SkillSection stacks={devStackLanguages} />
     },
     {
         title: "Front-End",
         context: "front-end",
-        content: <SkillSection stack={devStackFrontend} />
+        content: <SkillSection stacks={devStackFrontend} />
     },
     {
         title: "Backend-End",
         context: "backend-end",
-        content: <SkillSection stack={devStackBackend} />
+        content: <SkillSection stacks={devStackBackend} />
     },
     {
         title: "Infrastructure",
         context: "infrastructure",
-        content: <SkillSection stack={devStackInfrastructure} />
+        content: <SkillSection stacks={devStackInfrastructure} />
     },
     {
         title: "Database",
         context: "database",
-        content: <SkillSection stack={devStackDatabase} />
+        content: <SkillSection stacks={devStackDatabase} />
     },
     {
         title: "Other interests",
         context: "other-interests",
-        content: <SkillSection stack={devStackOthers} />
+        content: <SkillSection stacks={devStackOthers} />
     }
 ];

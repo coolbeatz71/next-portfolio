@@ -59,7 +59,9 @@ export default function TabBar({
                     ))}
                 </ul>
 
-                <div className="py-4">{tabs[activeTabIndex].content}</div>
+                <div className="w-full py-4">
+                    {tabs[activeTabIndex].content}
+                </div>
             </div>
         </div>
     );
