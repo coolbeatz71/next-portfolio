@@ -1,6 +1,8 @@
+import Image from "next/image";
 import SectionHeader from "@/components/shared/section-header/SectionHeader";
 import { mainStackList } from "@/config/Skills.MainStack";
-import Image from "next/image";
+import TabBar from "@/components/shared/tab-bar/TabBar";
+import { devStackTabs } from "@/config/DevStack";
 
 export default function Skills(): JSX.Element {
     return (
@@ -34,6 +36,7 @@ export default function Skills(): JSX.Element {
                     ))}
                 </div>
             </div>
+            <TabBar tabs={devStackTabs} className="py-4" />
         </div>
     );
 }

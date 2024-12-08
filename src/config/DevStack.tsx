@@ -1,36 +1,49 @@
 import type { Tabs } from "@/config/Projects";
+import SkillSection from "@/components/layout/skills/Skills.Section";
+
+import { devStackLanguages } from "@/config/DevStack.Language";
+import { devStackFrontend } from "@/config/DevStack.Frontend";
+import { devStackBackend } from "@/config/DevStack.Backend";
+import { devStackInfrastructure } from "@/config/DevStack.Infrastructure";
+import { devStackOthers } from "@/config/DevStack.Other";
+import { devStackDatabase } from "@/config/DevStack.Database";
+
+export interface SkillsByStack {
+    progress: number;
+    title: string;
+    lightImage: string;
+    darkImage: string;
+}
 
 export const devStackTabs: Tabs[] = [
     {
         title: "Programming Language",
         context: "programming-language",
-        content: <ProjectSection projects={projectsFullStack} />
+        content: <SkillSection stack={devStackLanguages} />
     },
     {
         title: "Front-End",
         context: "front-end",
-        content: <ProjectSection projects={projectsFrontend} />
+        content: <SkillSection stack={devStackFrontend} />
     },
     {
         title: "Backend-End",
         context: "backend-end",
-        content: <ProjectSection projects={projectsMobile} />
+        content: <SkillSection stack={devStackBackend} />
     },
     {
         title: "Infrastructure",
         context: "infrastructure",
-        content: <ProjectSection projects={projectsOpenSource} />
+        content: <SkillSection stack={devStackInfrastructure} />
     },
     {
-        title: "Data Store",
-        context: "data-store",
-        content: <ProjectSection projects={projectsOpenSource} />
+        title: "Database",
+        context: "database",
+        content: <SkillSection stack={devStackDatabase} />
+    },
+    {
+        title: "Other interests",
+        context: "other-interests",
+        content: <SkillSection stack={devStackOthers} />
     }
 ];
-
-// Laravel, expressjs, nestjs, Actix Web, .net
-// Docker, Kubernetes, Github Actions, Azure, GCP
-// Postgres, Mysql, MongoDB, Couchbase, Firestore
-// NextJS, ReactJS, Angular, Vue, Flutter
-// Javascript, Rust, Dart, PHP, C#
-// CircleCI, ServiceNow, GraphQL, Firebase, OpenTelemetry

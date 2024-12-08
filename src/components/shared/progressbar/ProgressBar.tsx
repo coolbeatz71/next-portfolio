@@ -1,7 +1,7 @@
 import NextImage from "next/image";
 import { Fragment } from "react";
 
-export interface ProgressBarProps {
+export interface SkillsByStack {
     progress: number;
     title: string;
     lightImage: string;
@@ -13,7 +13,7 @@ export default function ProgressBar({
     lightImage,
     darkImage,
     progress
-}: ProgressBarProps): JSX.Element {
+}: SkillsByStack): JSX.Element {
     return (
         <Fragment>
             <div className="flex items-center justify-between">
