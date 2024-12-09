@@ -37,8 +37,8 @@ export default function GlowingStarsCard({
 }
 
 export const Illustration = ({ mouseEnter }: { mouseEnter: boolean }) => {
-    const stars = 25;
-    const columns = 5;
+    const stars = 16;
+    const columns = 4;
 
     const [glowingStars, setGlowingStars] = useState<number[]>([]);
 
@@ -57,11 +57,10 @@ export const Illustration = ({ mouseEnter }: { mouseEnter: boolean }) => {
 
     return (
         <div
-            className="h-20 p-1 w-full"
+            className="h-full w-full"
             style={{
                 display: "grid",
-                gridTemplateColumns: `repeat(${columns}, 1fr)`,
-                gap: "1px"
+                gridTemplateColumns: `repeat(${columns}, 1fr)`
             }}
         >
             {[...Array(stars)].map((star, starIdx) => {
@@ -134,7 +133,7 @@ function Glow({ delay }: { delay: number }): JSX.Element {
             exit={{
                 opacity: 0
             }}
-            className="absolute  left-1/2 -translate-x-1/2 z-10 h-[4px] w-[4px] rounded-full bg-blue-500 blur-[1px] shadow-2xl shadow-blue-400"
+            className="absolute left-1/2 translate-x-1/2 z-10 h-[1.5px] w-[1.5px] rounded-full bg-blue-500 blur-[1px] shadow-lg shadow-red-500"
         />
     );
 }
