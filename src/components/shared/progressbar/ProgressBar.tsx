@@ -22,18 +22,16 @@ export default function ProgressBar({
                 </span>
                 <span className="h-8 w-8 rounded relative">
                     <NextImage
-                        layout="fill"
-                        className="hidden dark:block"
-                        src={darkImage}
-                        objectFit="contain"
+                        fill
                         alt={title}
+                        src={darkImage}
+                        className="object-contain hidden dark:block"
                     />
                     <NextImage
-                        layout="fill"
-                        className="block dark:hidden"
-                        src={lightImage}
-                        objectFit="contain"
+                        fill
                         alt={title}
+                        src={lightImage}
+                        className="object-contain block dark:hidden"
                     />
                 </span>
             </div>

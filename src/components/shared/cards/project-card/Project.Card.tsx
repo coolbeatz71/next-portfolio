@@ -2,7 +2,7 @@ import LitUpBorderButton from "@/components/shared/buttons/litup-border/LitUpBor
 import type { ProjectByStack } from "@/config/Projects";
 import { cn } from "@/helpers/mergeClassName";
 import { type Variants, motion } from "framer-motion";
-import Image from "next/image";
+import NextImage from "next/image";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 
 export interface ProjectCardProps {
@@ -30,7 +30,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
             <div className="bg-gray-800 dark:bg-gray-200 rounded-lg shadow-lg overflow-hidden transition-all duration-300 group-hover:shadow-xl">
                 <div className="flex flex-col md:flex-row">
                     <div className="md:w-1/2 relative overflow-hidden cursor-pointer">
-                        <Image
+                        <NextImage
                             fill
                             quality={55}
                             placeholder="blur"

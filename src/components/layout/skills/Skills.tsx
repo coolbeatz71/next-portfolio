@@ -2,7 +2,7 @@ import SectionHeader from "@/components/shared/section-header/SectionHeader";
 import TabBar from "@/components/shared/tab-bar/TabBar";
 import { devStackTabs } from "@/config/DevStack";
 import { mainStackList } from "@/config/DevStack.Main";
-import Image from "next/image";
+import NextImage from "next/image";
 
 export default function Skills(): JSX.Element {
     return (
@@ -22,20 +22,18 @@ export default function Skills(): JSX.Element {
                         >
                             <div className="relative h-16 w-16 lg:h-24 lg:w-24">
                                 {/* light image */}
-                                <Image
+                                <NextImage
+                                    fill
                                     src={skill.lightImage}
                                     alt={skill.title}
-                                    layout="fill"
-                                    objectFit="contain"
-                                    className="transition-all duration-200 ease-in-out filter grayscale opacity-70 group-hover:filter-none group-hover:opacity-100 hidden dark:block"
+                                    className="object-contain transition-all duration-200 ease-in-out filter grayscale opacity-70 group-hover:filter-none group-hover:opacity-100 hidden dark:block"
                                 />
                                 {/* dark image */}
-                                <Image
+                                <NextImage
+                                    fill
                                     src={skill.darkImage}
                                     alt={skill.title}
-                                    layout="fill"
-                                    objectFit="contain"
-                                    className="transition-all duration-200 ease-in-out filter grayscale opacity-70 group-hover:filter-none group-hover:opacity-100 block dark:hidden"
+                                    className="object-contain transition-all duration-200 ease-in-out filter grayscale opacity-70 group-hover:filter-none group-hover:opacity-100 block dark:hidden"
                                 />
                             </div>
                             <span className="text-sm text-center text-black dark:text-white">
