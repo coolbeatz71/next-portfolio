@@ -35,7 +35,7 @@ export default function TabBar({
                                 role="tab"
                                 type="button"
                                 onClick={() => setActiveTabIndex(idx)}
-                                className={`py-2 cursor-pointer w-full   text-sm font-semibold transition-colors duration-200
+                                className={`py-2 cursor-pointer w-full text-sm font-semibold transition-colors duration-200
                                 ${idx === activeTabIndex ? "text-white" : "text-gray-500 dark:text-gray-400"}`}
                                 style={{
                                     transformStyle: "preserve-3d"
@@ -45,7 +45,7 @@ export default function TabBar({
 
                                 {idx === activeTabIndex && (
                                     <motion.span
-                                        className="bg-indigo-500 shadow-lg rounded-xl absolute inset-0 -z-10"
+                                        className="bg-indigo-700 dark:bg-indigo-500 shadow-lg rounded-xl absolute inset-0 -z-10"
                                         layoutId="activeSection"
                                         transition={{
                                             type: "spring",
