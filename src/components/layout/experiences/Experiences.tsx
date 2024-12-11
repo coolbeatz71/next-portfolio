@@ -14,7 +14,7 @@ export default function Experiences(): JSX.Element {
                 <Timeline data={experienceTimeline} />
                 <div className="flex justify-center w-full">
                     <MovingBorderButton
-                        className="w-full py-4 px-10 flex justify-center"
+                        className="py-4 px-10"
                         onClick={() => console.log("clicked")}
                     >
                         View more experiences
