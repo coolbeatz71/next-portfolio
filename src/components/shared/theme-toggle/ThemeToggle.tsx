@@ -1,7 +1,11 @@
-import Tooltip from "@/components/shared/tooltip/Tooltip";
 import { useTheme } from "next-themes";
+import dynamic from "next/dynamic";
 import { useCallback, useMemo } from "react";
 import { FaCloudMoon, FaCloudSun } from "react-icons/fa";
+
+const DynamicTooltip = dynamic(() => import("./../tooltip/Tooltip"), {
+    ssr: false
+});
 
 export default function ThemeToggle(): JSX.Element {
     const { theme, setTheme } = useTheme();
@@ -20,7 +24,7 @@ export default function ThemeToggle(): JSX.Element {
     );
 
     return (
-        <Tooltip text={tooltipText}>
+        <DynamicTooltip text={tooltipText}>
             <button
                 type="button"
                 onClick={onToggle}
@@ -28,6 +32,6 @@ export default function ThemeToggle(): JSX.Element {
             >
                 {icon}
             </button>
-        </Tooltip>
+        </DynamicTooltip>
     );
 }
