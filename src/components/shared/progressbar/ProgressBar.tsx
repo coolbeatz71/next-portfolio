@@ -20,12 +20,14 @@ export default function ProgressBar({
             <div className="flex items-end justify-between">
                 <BadgeSpan text={title} />
                 <span className="h-8 w-8 rounded relative">
+                    {/* dark image */}
                     <NextImage
                         fill
                         alt={title}
                         src={darkImage}
                         className="object-contain hidden dark:block"
                     />
+                    {/* light image */}
                     <NextImage
                         fill
                         alt={title}

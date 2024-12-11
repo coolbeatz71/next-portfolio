@@ -21,22 +21,22 @@ export default function Skills(): JSX.Element {
                             className="flex flex-col items-center group cursor-pointer p-8"
                         >
                             <div className="relative h-16 w-16 lg:h-24 lg:w-24">
-                                {/* light image */}
-                                <NextImage
-                                    fill
-                                    src={skill.lightImage}
-                                    alt={skill.title}
-                                    className="object-contain transition-all duration-200 ease-in-out filter grayscale opacity-70 group-hover:filter-none group-hover:opacity-100 hidden dark:block"
-                                />
                                 {/* dark image */}
                                 <NextImage
                                     fill
-                                    src={skill.darkImage}
                                     alt={skill.title}
+                                    src={skill.darkImage}
+                                    className="object-contain transition-all duration-200 ease-in-out filter grayscale opacity-70 group-hover:filter-none group-hover:opacity-100 hidden dark:block"
+                                />
+                                {/* light image */}
+                                <NextImage
+                                    fill
+                                    alt={skill.title}
+                                    src={skill.lightImage}
                                     className="object-contain transition-all duration-200 ease-in-out filter grayscale opacity-70 group-hover:filter-none group-hover:opacity-100 block dark:hidden"
                                 />
                             </div>
-                            <span className="text-sm text-center text-black dark:text-white">
+                            <span className="text-sm text-center font-medium text-black/50 dark:text-white/50">
                                 {skill.title}
                             </span>
                         </div>
