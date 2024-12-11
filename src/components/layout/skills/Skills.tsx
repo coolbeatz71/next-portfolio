@@ -2,7 +2,7 @@ import SectionHeader from "@/components/shared/section-header/SectionHeader";
 import TabBar from "@/components/shared/tab-bar/TabBar";
 import { devStackTabs } from "@/config/DevStack";
 import { mainStackList } from "@/config/DevStack.Main";
-import Image from "next/image";
+import NextImage from "next/image";
 
 export default function Skills(): JSX.Element {
     return (
@@ -21,24 +21,22 @@ export default function Skills(): JSX.Element {
                             className="flex flex-col items-center group cursor-pointer p-8"
                         >
                             <div className="relative h-16 w-16 lg:h-24 lg:w-24">
-                                {/* light image */}
-                                <Image
-                                    src={skill.lightImage}
-                                    alt={skill.title}
-                                    layout="fill"
-                                    objectFit="contain"
-                                    className="transition-all duration-200 ease-in-out filter grayscale opacity-70 group-hover:filter-none group-hover:opacity-100 hidden dark:block"
-                                />
                                 {/* dark image */}
-                                <Image
-                                    src={skill.darkImage}
+                                <NextImage
+                                    fill
                                     alt={skill.title}
-                                    layout="fill"
-                                    objectFit="contain"
-                                    className="transition-all duration-200 ease-in-out filter grayscale opacity-70 group-hover:filter-none group-hover:opacity-100 block dark:hidden"
+                                    src={skill.darkImage}
+                                    className="object-contain transition-all duration-200 ease-in-out filter grayscale opacity-70 group-hover:filter-none group-hover:opacity-100 hidden dark:block"
+                                />
+                                {/* light image */}
+                                <NextImage
+                                    fill
+                                    alt={skill.title}
+                                    src={skill.lightImage}
+                                    className="object-contain transition-all duration-200 ease-in-out filter grayscale opacity-70 group-hover:filter-none group-hover:opacity-100 block dark:hidden"
                                 />
                             </div>
-                            <span className="text-sm text-center text-black dark:text-white">
+                            <span className="text-sm text-center font-medium text-black/50 dark:text-white/50">
                                 {skill.title}
                             </span>
                         </div>

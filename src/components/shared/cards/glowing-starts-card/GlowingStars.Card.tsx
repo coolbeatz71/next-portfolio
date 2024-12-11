@@ -22,21 +22,23 @@ export default function GlowingStarsCard({
                 setMouseEnter(false);
             }}
             className={cn(
-                "bg-[linear-gradient(110deg,#333_0.6%,#222)] max-w-[5rem] max-h-[5rem] h-full w-full rounded-xl border-[1px] box-shadow-xl border-[#747070] dark:border-neutral-600 relative flex items-center justify-center",
+                "bg-[linear-gradient(110deg,#fff_0.6%,#ccc)] dark:bg-[linear-gradient(110deg,#444_0.6%,#333)] max-w-[5rem] max-h-[5rem] h-full w-full rounded-xl box-shadow-xl border-4 border-slate-300 dark:border-slate-500 relative flex items-center justify-center",
                 className
             )}
         >
             <div className="absolute inset-0 z-0">
                 <Illustration mouseEnter={mouseEnter} />
             </div>
-            <div className="relative z-10">{children}</div>
+            <div className="relative z-10 flex justify-center items-center">
+                {children}
+            </div>
         </div>
     );
 }
 
 export const Illustration = ({ mouseEnter }: { mouseEnter: boolean }) => {
-    const stars = 25;
-    const columns = 5;
+    const stars = 16;
+    const columns = 4;
 
     const [glowingStars, setGlowingStars] = useState<number[]>([]);
 
@@ -55,11 +57,10 @@ export const Illustration = ({ mouseEnter }: { mouseEnter: boolean }) => {
 
     return (
         <div
-            className="h-20 p-1 w-full"
+            className="h-full w-full"
             style={{
                 display: "grid",
-                gridTemplateColumns: `repeat(${columns}, 1fr)`,
-                gap: "1px"
+                gridTemplateColumns: `repeat(${columns}, 1fr)`
             }}
         >
             {[...Array(stars)].map((star, starIdx) => {
@@ -132,7 +133,7 @@ function Glow({ delay }: { delay: number }): JSX.Element {
             exit={{
                 opacity: 0
             }}
-            className="absolute  left-1/2 -translate-x-1/2 z-10 h-[4px] w-[4px] rounded-full bg-blue-500 blur-[1px] shadow-2xl shadow-blue-400"
+            className="absolute left-1/2 translate-x-1/2 z-10 h-[1.5px] w-[1.5px] rounded-full bg-blue-500 blur-[1px] shadow-lg shadow-red-500"
         />
     );
 }

@@ -1,3 +1,4 @@
+import BadgeSpan from "@/components/shared/badge/Badge.Span";
 import type { SkillsByStack } from "@/config/DevStack";
 import { motion } from "framer-motion";
 import NextImage from "next/image";
@@ -17,30 +18,28 @@ export default function ProgressBar({
     return (
         <section ref={ref}>
             <div className="flex items-end justify-between">
-                <span className="cursor-pointer bg-indigo-100 dark:bg-indigo-800 text-indigo-800 dark:text-indigo-100 text-[8pt] font-semibold px-2.5 py-0.5 rounded transition-colors duration-200 hover:bg-indigo-200 hover:text-indigo-900 dark:hover:bg-indigo-600 dark:hover:text-indigo-200">
-                    {title}
-                </span>
+                <BadgeSpan text={title} />
                 <span className="h-8 w-8 rounded relative">
+                    {/* dark image */}
                     <NextImage
-                        layout="fill"
-                        className="hidden dark:block"
+                        fill
+                        alt={title}
                         src={darkImage}
-                        objectFit="contain"
-                        alt={title}
+                        className="object-contain hidden dark:block"
                     />
+                    {/* light image */}
                     <NextImage
-                        layout="fill"
-                        className="block dark:hidden"
-                        src={lightImage}
-                        objectFit="contain"
+                        fill
                         alt={title}
+                        src={lightImage}
+                        className="object-contain block dark:hidden"
                     />
                 </span>
             </div>
 
-            <div className="w-full bg-indigo-300/20 h-6 mb-6 mt-2 rounded-md">
+            <div className="w-full bg-indigo-300/20 h-6 mb-6 mt-1.5 rounded-md">
                 <motion.div
-                    className="bg-indigo-700 h-6 rounded-md"
+                    className="bg-indigo-700 dark:bg-indigo-500 h-6 rounded-md"
                     initial={{ width: 0 }}
                     animate={{ width: inView ? `${progress}%` : 0 }}
                     transition={{ duration: 0.5 }}

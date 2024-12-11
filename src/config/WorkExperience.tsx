@@ -16,13 +16,13 @@ export const experienceTimeline: TimelineEntry[] = [
         subtitle: "BESTSELLER A/S - Nov 2023 - Present",
         content: (
             <div>
-                <p className="text-neutral-400 italic dark:text-neutral-200 text-xs md:text-sm font-normal mb-8 !leading-loose">
+                <p className="text-neutral-500 dark:text-neutral-400 italic text-xs md:text-sm font-normal mb-8 !leading-loose">
                     BESTSELLER is an international fashion multi brand company
                     consisting of 20+ individual brands. BESTSELLER sells
                     clothes and accessories for all ages, genders and occasions.
                 </p>
                 <div className="gap-4">
-                    <ul className="list-disc space-y-2 pl-5 leading-relaxed">
+                    <ul className="list-disc space-y-2 pl-5 leading-relaxed text-neutral-600 dark:text-neutral-300">
                         <li>
                             Developed and maintained Digital Media & Marketing
                             web app, slashing pages load time by 30% with
@@ -58,7 +58,7 @@ export const experienceTimeline: TimelineEntry[] = [
         content: (
             <div>
                 <div className="gap-4">
-                    <ul className="list-disc space-y-2 pl-5 leading-relaxed">
+                    <ul className="list-disc space-y-2 pl-5 leading-relaxed text-neutral-600 dark:text-neutral-300">
                         <li>
                             Implemented custom ServiceNow applications
                             leveraging advanced features such as Flow Designer,
@@ -93,14 +93,14 @@ export const experienceTimeline: TimelineEntry[] = [
         subtitle: "CODE OF AFRICA LTD - June 2021 - Aug 2022",
         content: (
             <div>
-                <p className="text-neutral-400 italic dark:text-neutral-200 text-xs md:text-sm font-normal mb-8 !leading-loose">
+                <p className="text-neutral-500 dark:text-neutral-400 italic text-xs md:text-sm font-normal mb-8 !leading-loose">
                     CODE OF AFRICA is a German based outsourcing hub connecting
                     European businesses with East African top software
                     engineers, prioritizing job creation, education, and
                     changing perceptions in Europe.
                 </p>
                 <div className="gap-4">
-                    <ul className="list-disc space-y-2 pl-5 leading-relaxed">
+                    <ul className="list-disc space-y-2 pl-5 leading-relaxed text-neutral-600 dark:text-neutral-300">
                         <li>
                             Boosted SEO and Google search rankings for the
                             flagship Code of Africa website, elevating organic
@@ -135,14 +135,14 @@ export const experienceTimeline: TimelineEntry[] = [
         subtitle: "ALFATIER GmbH - Nov 2021 – Aug 2022",
         content: (
             <div>
-                <p className="text-neutral-400 italic dark:text-neutral-200 text-xs md:text-sm font-normal mb-8 !leading-loose">
+                <p className="text-neutral-500 dark:text-neutral-400 italic text-xs md:text-sm font-normal mb-8 !leading-loose">
                     Headquartered in Hamburg, Germany, ALFATIER is renowned for
                     its expertise in cloud optimization and transformation.
                     Specializing in architecture reviews and cost management,
                     they ensure efficiency and reliability for businesses.
                 </p>
                 <div className="gap-4">
-                    <ul className="list-disc space-y-2 pl-5 leading-relaxed">
+                    <ul className="list-disc space-y-2 pl-5 leading-relaxed text-neutral-600 dark:text-neutral-300 ">
                         <li>
                             Led as an early-stage frontend engineer, the
                             development of our flagship product, collaborating
@@ -180,7 +180,7 @@ export const experienceTimeline: TimelineEntry[] = [
         subtitle: "RECONSTRUCTION - June 2021 – Nov 2021",
         content: (
             <div>
-                <p className="text-neutral-400 italic dark:text-neutral-200 text-xs md:text-sm font-normal mb-8 !leading-loose">
+                <p className="text-neutral-500 dark:text-neutral-400 italic text-xs md:text-sm font-normal mb-8 !leading-loose">
                     RECONSTRUCTION is an educational platform created to reshape
                     traditional cultural teachings, prioritizing portrayal of
                     African descent in a negative light, aiming instead to
@@ -188,7 +188,7 @@ export const experienceTimeline: TimelineEntry[] = [
                     community.
                 </p>
                 <div className="gap-4">
-                    <ul className="list-disc space-y-2 pl-5 leading-relaxed">
+                    <ul className="list-disc space-y-2 pl-5 leading-relaxed text-neutral-600 dark:text-neutral-300">
                         <li>
                             Integrated frontend interfaces displaying Thinkific
                             courses, modules, and lessons, ensuring seamless

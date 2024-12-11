@@ -33,16 +33,18 @@ const config: Config = {
                 }
             }
         },
+        fontFamily: {
+            sans: ['"Montserrat"', ...fontFamily.sans]
+        },
         extend: {
-            fontFamily: {
-                sans: ['"Montserrat"', ...fontFamily.sans]
-            },
             colors: {
                 medium: "#000000",
-                medium_dark: "#ffffff",
-                github: "#2b3137",
-                github_dark: "#fafbfc",
-                linkedin: "#0077B5"
+                medium_dark: "#ffc21e",
+                github: "#000000",
+                github_dark: "#ffffff",
+                linkedin: "#0077B5",
+                light: "rgb(226 232 240)",
+                dark: "rgb(30 41 59)"
             },
             backgroundImage: {
                 // PATTERNS and SHAPES
@@ -50,7 +52,7 @@ const config: Config = {
                 hero_shape_dark: "url('/hero/shape-dark.svg')",
                 hero_shape_light: "url('/hero/shape-light.svg')",
                 pattern_dark: "url('/background/bg-pattern-dark.svg')",
-                pattern_light: "url('/background/bg-pattern-dark.svg')",
+                pattern_light: "url('/background/bg-pattern-light.svg')",
                 // DEV TOOLS
                 icon_react: "url('/dev-tools/react.svg')",
                 icon_vue: "url('/dev-tools/vue.svg')",

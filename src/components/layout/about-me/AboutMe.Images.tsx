@@ -1,6 +1,6 @@
 import Parallax from "@/components/shared/parallax/Parallax";
 import { imageFirstList } from "@/config/ImageSwiper";
-import Image from "next/image";
+import NextImage from "next/image";
 import { Fragment } from "react";
 
 export default function AboutMeImages(): JSX.Element {
@@ -10,8 +10,8 @@ export default function AboutMeImages(): JSX.Element {
                 <Parallax key={img.alt} className={img.className}>
                     <div className="relative">
                         <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-blue-400 to-teal-500 transform scale-[0.75] rounded-full blur-3xl" />
-                        <div className="relative shadow-xl bg-indigo-400/[0.3] border border-gray-800/[0.1] p-1 overflow-hidden rounded-xl flex flex-col justify-end items-start">
-                            <Image
+                        <div className="relative shadow-xl bg-indigo-500/[0.2] border border-gray-800/[0.1] p-1 overflow-hidden rounded-xl flex flex-col justify-end items-start">
+                            <NextImage
                                 priority
                                 width={250}
                                 height={350}

@@ -13,7 +13,7 @@ export default function Hero(): JSX.Element {
             <div className="grid grid-cols-1 xl:grid-cols-2 items-center py-10">
                 <div className="flex flex-col items-start xl:px-0 px-8">
                     <br />
-                    <h1 className="max-w-xl mb-4 text-2xl font-bold tracking-tight !leading-loose md:text-3xl xl:text-3xl text-white dark:text-black">
+                    <h1 className="max-w-xl mb-4 text-2xl font-bold tracking-tight !leading-loose md:text-3xl xl:text-3xl dark:text-white text-black">
                         Hi 👋🏽, <br />
                         <span className="xl:text-4xl">I am Jean-Vincent </span>
                         <br />
@@ -23,10 +23,10 @@ export default function Hero(): JSX.Element {
                                 "Frontend Engineer",
                                 "Mobile Engineer"
                             ]}
-                            className="pl-0 text-indigo-500 xl:text-5xl"
+                            className="pl-0 text-indigo-700 dark:text-indigo-500 xl:text-5xl"
                         />
                     </h1>
-                    <p className="max-w-2xl mb-6 font-light text-gray-400 lg:mb-8 md:text-md lg:text-md dark:text-gray-200">
+                    <p className="max-w-2xl mb-6 font-semibold lg:mb-8 md:text-md lg:text-md text-slate-600 dark:text-slate-400">
                         FullStack - PREN/MEAN - PHP/Laravel - Dart/Flutter
                     </p>
                     <div className="flex flex-row gap-4">

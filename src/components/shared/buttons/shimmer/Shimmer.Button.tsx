@@ -27,7 +27,7 @@ export default function ShimmerButton({
                 borderRadius: borderRadius
             }}
             className={cn(
-                "inline-flex animate-shimmer items-center justify-center border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400/[0.5]",
+                "inline-flex animate-shimmer items-center justify-center border-4 border-slate-300 dark:border-slate-700 bg-[linear-gradient(120deg,#bbc9de,45%,#afbacb,55%,#bbc9de)] dark:bg-[linear-gradient(120deg,#1d222a,45%,#29323f,55%,#1d222a)] bg-[length:200%_100%] px-6 font-medium dark:text-slate-300 text-slate-700 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400/[0.5]",
                 className
             )}
             {...otherProps}
