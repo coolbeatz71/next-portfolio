@@ -1,3 +1,4 @@
+import BadgeSpan from "@/components/shared/badge/Badge.Span";
 import LitUpBorderButton from "@/components/shared/buttons/litup-border/LitUpBorder.Button";
 import type { ProjectByStack } from "@/config/Projects";
 import { cn } from "@/helpers/mergeClassName";
@@ -56,12 +57,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                             </p>
                             <div className="flex flex-wrap gap-1 mb-4">
                                 {project.stack.map((tech) => (
-                                    <span
-                                        key={tech}
-                                        className="cursor-pointer bg-indigo-100 text-indigo-800 dark:bg-gray-700 dark:text-indigo-400 border border-indigo-400 text-[8pt] font-semibold px-2.5 py-0.5 rounded transition-colors duration-100"
-                                    >
-                                        {tech}
-                                    </span>
+                                    <BadgeSpan key={tech} text={tech} />
                                 ))}
                             </div>
                         </div>
