@@ -39,7 +39,7 @@ export default function Companies(): JSX.Element {
         <div className="mx-auto max-w-7xl max-h-7xl">
             <div className="grid grid-cols-1 xl:grid-cols-[2fr,3fr] items-center py-10">
                 <div>
-                    <h2 className="mb-4 text-2xl font-bold tracking-tight !leading-tight md:text-2xl xl:text-4xl text-black dark:text-white">
+                    <h2 className="mb-4 text-2xl font-bold tracking-tight !leading-tight md:text-2xl xl:text-4xl text-slate-700 dark:text-slate-300">
                         Collaborated with amazing organizations worldwide
                     </h2>
                     <p className="text-lg text-gray-500 !leading-8">

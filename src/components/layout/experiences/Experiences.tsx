@@ -6,7 +6,7 @@ import { experienceTimeline } from "@/config/WorkExperience";
 export default function Experiences(): JSX.Element {
     return (
         <div className="mx-auto max-w-7xl max-h-7xl">
-            <div className="py-10">
+            <div className="pb-10">
                 <SectionHeader
                     title="My Work Experience"
                     subtitle="A snapshot of my professional journey, showcasing the roles, projects, and achievements that define my career as a software engineer"
