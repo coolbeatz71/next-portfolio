@@ -56,24 +56,6 @@ export const projectsFrontend: ProjectByStack[] = [
         hasLink: true
     },
     {
-        name: "StorM",
-        description:
-            "A Digital Asset Management (DAM) system designed to replace Bestseller DAM. It helps to manage images, videos, and 3D assets for all the brands, collection, etc. focusing on speed, stability, and user satisfaction",
-        stack: [
-            "ReactJs",
-            "NextJs",
-            "Typescript",
-            "Chakra-UI",
-            "InstantSearchJs",
-            "Storybook"
-        ],
-        images: ["/projects/storm/storm_preview.jpg"],
-        blurURL:
-            "data:image/webp;base64,UklGRiIFAABXRUJQVlA4WAoAAAAgAAAARAEAwAAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggNAMAABAiAJ0BKkUBwQA+7XCuUrOyLiel8kwScB2JaW7gPDpkMerEZDnxtec8A//4c3H9N3XjH0AbYwZVVxb5NHLLb7SLa9EkN+bOATjW+hgpXwr0d9ObX0TSjpuNh7u/xOWPGVMHsKv86KJzq6pUxQMO+70BgCBQz3sAbOKGlEevrgcngBWl4Wc6B2Ose/L2u75JQjhx/ztfelWNwgW25ePK1hRU03VM7N00gLnIvmeQkoaIHQzj6c2bQGJrVredUp20hdPH59LwjqXCjWtAIRk2n5QJ4FNJTzNYQbBk4tPgzhqDPZ5lSkb7nPflVVxec0TprinQsbHcGbBxzfXkGezrqrrkpd3ly/egKnyGyGqyUbZ3sxq5z/EWFo8YAP7puPfCcLYc4Y5ox2BXzbIPJPCPcs1QftiZIIiZ4qGKMwZ2brLrMVoyrgFG7fuVTgq+VQpdJBUF2IY8gF2g922eFGtetDOL/suvQUdZ7FI7l45hVAn5j2WBXQA3I8BK2QBscBRtbM+tUWUAHGw26xcU5uP+36bE6ZDKAPkGhd9wbO3HjvYzNVWzINv2utE//5m+d+QUoF049QE3DXtfTtWDSPg54Crx81Asds93528zML1e6WvbinJbCwF1nneCcxaxB5633cETLyXb8VT+x9rWej646mCxYFx6WGL0nN1tU4kYEyGlH9heAMnSN9riCv2czcoosNRXHSjtyyu7CnJpueU1HS+EOD2eJAYEtEoQE2wjCuSpO2LJBjHIP9LxXsnsAIMtY0bg5C+4e64g3Do7BlblLVZJXsWrY5l0DmGLcAfdIf0oL7KhbfFKKX6D4loQvXxNMqLnyrFxqEt9aWX2zWYOsf5r0WyECV+t1I6vsJ5nGI+MDwvHLLCHWnOalHoOgTmNnio6eH3KYxEJTX1vBxF7+HoEV8xP7p7wXTZttgNqE97ubFFybgvGFTubOTbIp4uyyNY1jZo4DOAlUVYPqdcUbPSCMYQHbV5E65inkeGZ+Qh1yujX33dzBiWEFA0ruvI1HdNab4Tc/wVS1RjXAR6xr5GXe34udQLvWwmpPZP7jjy93gmS8GgdQXdRmYXP5hWVcnLNQAA=",
-        link: "https://storm.bestseller.com/",
-        hasLink: true
-    },
-    {
         name: "Meet v1",
         description:
             "A sleek portfolio web app designed to showcase creative work effortlessly. With a user-friendly interface and customizable templates, it highlights projects, skills, and experiences in a visually stunning format.",
