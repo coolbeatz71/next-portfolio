@@ -4,7 +4,7 @@ import { FcGlobe } from "react-icons/fc";
 export const TimelineFull = ({ data }: { data: TimelineEntry[] }) => {
     return (
         <div className="mx-auto max-w-7xl">
-            <div className="relative overflow-y-scroll max-h-[calc(100vh-theme(space.12))] pr-4">
+            <div className="relative overflow-y-scroll max-h-[calc(100vh-theme(space.24))] pr-4">
                 {data.map((item) => (
                     <div key={item.id} className="flex justify-start mb-6">
                         <div className="relative w-full border border-gray-300 rounded bg-slate-100 dark:bg-slate-700 dark:border-gray-600 p-4">
