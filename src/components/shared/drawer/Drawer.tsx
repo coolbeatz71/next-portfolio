@@ -1,8 +1,8 @@
 import { TimelineFull } from "@/components/shared/timeline/Timeline.Full";
 import type { TimelineEntry } from "@/config/WorkExperience";
-import { clearAllBodyScrollLocks, disableBodyScroll } from "body-scroll-lock";
-import { Fragment, useEffect, useRef } from "react";
+import { Fragment } from "react";
 import { IoMdCloseCircle } from "react-icons/io";
+import { useLockBodyScroll } from "react-use";
 
 export interface DrawerProps {
     title: string;
@@ -20,16 +20,7 @@ export default function Drawer({
     const bodyClassName = "!text-sm mt-4";
     const timeline = data(headerClassName, bodyClassName);
 
-    const drawerRef = useRef<HTMLDivElement>(null);
-
-    useEffect(() => {
-        if (isOpen && drawerRef.current) disableBodyScroll(drawerRef.current);
-        else clearAllBodyScrollLocks();
-
-        return () => {
-            clearAllBodyScrollLocks();
-        };
-    }, [isOpen]);
+    useLockBodyScroll(isOpen);
 
     return (
         <Fragment>
@@ -42,7 +33,6 @@ export default function Drawer({
                 />
             )}
             <div
-                ref={drawerRef}
                 className={`fixed top-0 right-0 z-50 w-[50%] h-full bg-light dark:bg-dark shadow-lg
                 transition-transform transform ${
                     isOpen ? "translate-x-0" : "translate-x-full"
