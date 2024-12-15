@@ -1,27 +1,48 @@
-import { Fragment } from "react";
+import { TimelineFull } from "@/components/shared/timeline/Timeline.Full";
+import type { TimelineEntry } from "@/config/WorkExperience";
+import { clearAllBodyScrollLocks, disableBodyScroll } from "body-scroll-lock";
+import { Fragment, useEffect, useRef } from "react";
 import { IoMdCloseCircle } from "react-icons/io";
 
 export interface DrawerProps {
     title: string;
     isOpen: boolean;
     onToggle: () => void;
+    data: (headerClassName?: string, bodyClassName?: string) => TimelineEntry[];
 }
 export default function Drawer({
+    data,
     title,
     isOpen,
     onToggle
 }: DrawerProps): JSX.Element {
+    const headerClassName = "mt-4 !text-sm mb-0";
+    const bodyClassName = "!text-sm mt-4";
+    const timeline = data(headerClassName, bodyClassName);
+
+    const drawerRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        if (isOpen && drawerRef.current) disableBodyScroll(drawerRef.current);
+        else clearAllBodyScrollLocks();
+
+        return () => {
+            clearAllBodyScrollLocks();
+        };
+    }, [isOpen]);
+
     return (
         <Fragment>
             {isOpen && (
                 <div
                     pointer-events-none
-                    className="fixed top-0 inset-0 z-40 bg-black bg-opacity-65 backdrop-blur-sm"
                     onClick={onToggle}
                     onKeyDown={onToggle}
+                    className="fixed top-0 bottom-0 inset-0 z-40 bg-black bg-opacity-65 backdrop-blur-sm"
                 />
             )}
             <div
+                ref={drawerRef}
                 className={`fixed top-0 right-0 z-50 w-[50%] h-full bg-light dark:bg-dark shadow-lg
                 transition-transform transform ${
                     isOpen ? "translate-x-0" : "translate-x-full"
@@ -29,21 +50,23 @@ export default function Drawer({
             >
                 <div className="p-4">
                     {/* HEADER */}
-                    <div className="border border-b-slate-300">
-                        <h2 className="text-xl font-semibold mb-4">{title}</h2>
+                    <div className="border border-t-0 border-x-0 border-b-1 border-slate-300 dark:border-slate-700">
+                        <h2 className="text-2xl font-semibold mb-4">{title}</h2>
                     </div>
 
                     {/* CLOSE-BUTTON */}
                     <button
                         type="button"
                         onClick={onToggle}
-                        className="absolute top-4 right-4 group text-3xl bg-foreground text-background rounded size-7 flex justify-center items-center text-slate-500  hover:text-red-500 hover:bg-red-300/10"
+                        className="absolute top-4 right-3 group text-3xl text-background rounded size-7 flex justify-center items-center text-slate-500 hover:text-red-500"
                     >
                         <IoMdCloseCircle />
                     </button>
 
                     {/* BODY */}
-                    <div className="py-4"></div>
+                    <div className="py-4">
+                        <TimelineFull data={timeline} />
+                    </div>
                 </div>
             </div>
         </Fragment>
