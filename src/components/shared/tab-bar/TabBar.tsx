@@ -29,7 +29,7 @@ export default function TabBar({
                     {tabs.map((tab, idx) => (
                         <li
                             key={tab.context}
-                            className="z-30 flex-auto text-center"
+                            className="z-10 flex-auto text-center"
                         >
                             <button
                                 role="tab"

@@ -49,7 +49,7 @@ export default function Companies(): JSX.Element {
                     </p>
                 </div>
 
-                <div className="hidden xl:flex relative max-w-3xl">
+                <div className="hidden xl:flex relative max-w-3xl z-10">
                     <CompaniesGrid items={companyLogoList} className="w-full" />
                 </div>
             </div>
