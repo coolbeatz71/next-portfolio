@@ -13,8 +13,7 @@ const nextConfig = {
     },
     typescript: {
         ignoreBuildErrors: true
-    },
-    transpilePackages: ["gsap"]
+    }
 };
 
 export default nextConfig;

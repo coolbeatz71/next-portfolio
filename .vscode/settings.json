@@ -16,6 +16,7 @@
     "editor.wordWrap": "off",
     "cSpell.words": [
         "Actix",
+        "AKORION",
         "alfatier",
         "andela",
         "architecting",
@@ -30,8 +31,10 @@
         "exuus",
         "ezyagric",
         "Firestore",
+        "Goma",
         "gsap",
         "Hoverable",
+        "JKSS",
         "laravel",
         "litup",
         "nextjs",
@@ -40,7 +43,10 @@
         "PREN",
         "progressbar",
         "tailwindcss",
+        "Tembea",
+        "Tembea's",
         "theroom",
-        "Thinkific"
+        "Thinkific",
+        "Zuckerberg"
     ]
 }

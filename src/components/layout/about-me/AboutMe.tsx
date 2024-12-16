@@ -1,14 +1,24 @@
 import AboutMeImages from "@/components/layout/about-me/AboutMe.Images";
-import SmoothScroll from "@/components/shared/smooth-scroll/SmoothScroll";
+
+interface HighlightProps {
+    children: React.ReactNode;
+}
+
+function Highlight({ children }: HighlightProps): JSX.Element {
+    return (
+        <span className="text-slate-700 dark:text-slate-300 font-semibold">
+            {" "}
+            {children}
+        </span>
+    );
+}
 
 export default function AboutMe(): JSX.Element {
     return (
         <div className="mx-auto max-w-7xl max-h-7xl">
-            <div className="grid grid-cols-1 xl:grid-cols-[3fr,2.5fr] gap-12">
+            <div className="grid grid-cols-1 xl:grid-cols-[3fr,3.5fr] gap-12">
                 <div className="flex flex-col w-full items-center justify-center">
-                    <SmoothScroll>
-                        <AboutMeImages />
-                    </SmoothScroll>
+                    <AboutMeImages />
                 </div>
                 <div className="xl:flex flex-col relative max-w-3xl">
                     <h2 className="mb-4 text-2xl font-bold !leading-tight md:text-2xl xl:text-3xl text-slate-700 dark:text-slate-300">
@@ -28,45 +38,15 @@ export default function AboutMe(): JSX.Element {
                         Jean-vincent is an Accomplished Senior Software Engineer
                         with 7+ years of hands-on experience spanning both
                         frontend and backend development. Proficient in
-                        <b className="text-slate-700 dark:text-slate-300">
-                            {" "}
-                            JavaScript
-                        </b>
-                        ,{" "}
-                        <b className="text-slate-700 dark:text-slate-300">
-                            {" "}
-                            HTML/CSS
-                        </b>
-                        , with advanced expertise in{" "}
-                        <b className="text-slate-700 dark:text-slate-300">
-                            {" "}
-                            ReactJS
-                        </b>
-                        ,{" "}
-                        <b className="text-slate-700 dark:text-slate-300">
-                            {" "}
-                            NodeJS
-                        </b>
-                        ,
-                        <b className="text-slate-700 dark:text-slate-300">
-                            {" "}
-                            Typescript
-                        </b>
-                        ,{" "}
-                        <b className="text-slate-700 dark:text-slate-300">
-                            {" "}
-                            Angular
-                        </b>
-                        ,{" "}
-                        <b className="text-slate-700 dark:text-slate-300">
-                            {" "}
-                            PHP
-                        </b>
-                        , and{" "}
-                        <b className="text-slate-700 dark:text-slate-300">
-                            {" "}
-                            Flutter
-                        </b>{" "}
+                        <Highlight>JavaScript</Highlight>,
+                        <Highlight>HTML/CSS</Highlight>, with advanced expertise
+                        in
+                        <Highlight>ReactJS</Highlight>,
+                        <Highlight>NodeJS</Highlight>,
+                        <Highlight>Typescript</Highlight>,
+                        <Highlight>Angular</Highlight>,
+                        <Highlight>PHP</Highlight>, and
+                        <Highlight>Flutter </Highlight>
                         for mobile development. A dedicated problem-solver and
                         continuous learner, committed to driving innovation and
                         delivering exceptional results in every project.

@@ -7,12 +7,14 @@ interface TabBarProps {
     tabs: Tabs[];
     tabBarClassName?: string;
     containerClassName?: string;
+    context: "skills" | "projects";
 }
 
 export default function TabBar({
     tabs,
-    containerClassName,
-    tabBarClassName
+    context,
+    tabBarClassName,
+    containerClassName
 }: TabBarProps) {
     const [activeTabIndex, setActiveTabIndex] = useState(0);
 
@@ -20,16 +22,16 @@ export default function TabBar({
         <div className={cn("w-full", containerClassName)}>
             <div className="relative flex flex-col items-center">
                 <ul
+                    data-tabs="tabs"
                     className={cn(
-                        "relative flex flex-wrap px-1.5 py-1.5 list-none bg-white dark:bg-gray-900 rounded-xl gap-1 min-w-[50%]",
+                        "relative flex flex-wrap px-1.5 py-1.5 list-none bg-white dark:bg-gray-900 rounded-lg gap-1 min-w-[50%]",
                         tabBarClassName
                     )}
-                    data-tabs="tabs"
                 >
                     {tabs.map((tab, idx) => (
                         <li
                             key={tab.context}
-                            className="z-30 flex-auto text-center"
+                            className="z-10 flex-auto text-center"
                         >
                             <button
                                 role="tab"
@@ -42,15 +44,14 @@ export default function TabBar({
                                 }}
                             >
                                 {tab.title}
-
                                 {idx === activeTabIndex && (
                                     <motion.span
-                                        className="bg-indigo-700 dark:bg-indigo-500 shadow-lg rounded-xl absolute inset-0 -z-10"
-                                        layoutId="activeSection"
+                                        className="bg-indigo-700 dark:bg-indigo-500 shadow-lg rounded-lg absolute inset-0 -z-10"
+                                        layoutId={`${context}-active`}
                                         transition={{
+                                            damping: 30,
                                             type: "spring",
-                                            stiffness: 380,
-                                            damping: 30
+                                            stiffness: 380
                                         }}
                                     />
                                 )}

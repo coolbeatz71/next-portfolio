@@ -22,7 +22,7 @@ export default function GlowingStarsCard({
                 setMouseEnter(false);
             }}
             className={cn(
-                "bg-[linear-gradient(110deg,#fff_0.6%,#ccc)] dark:bg-[linear-gradient(110deg,#444_0.6%,#333)] max-w-[5rem] max-h-[5rem] h-full w-full rounded-xl box-shadow-xl border-4 border-slate-300 dark:border-slate-500 relative flex items-center justify-center",
+                "bg-[linear-gradient(110deg,#fff_0.6%,#ccc)] dark:bg-[linear-gradient(110deg,#444_0.6%,#333)] max-w-[5rem] max-h-[5rem] h-full w-full rounded-lg box-shadow-xl border-4 border-slate-300 dark:border-slate-500 relative flex items-center justify-center",
                 className
             )}
         >

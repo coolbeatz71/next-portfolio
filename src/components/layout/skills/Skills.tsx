@@ -44,6 +44,7 @@ export default function Skills(): JSX.Element {
                 </div>
             </div>
             <TabBar
+                context="skills"
                 tabs={devStackTabs}
                 containerClassName="py-4"
                 tabBarClassName="min-w-[60%]"

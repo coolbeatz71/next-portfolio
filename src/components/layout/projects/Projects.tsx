@@ -9,7 +9,11 @@ export default function Projects(): JSX.Element {
                 title="My Contribution"
                 subtitle="A collection of impactful and innovative projects that highlight my skills, creativity, and passion for solving real-world challenges through technology"
             />
-            <TabBar tabs={projectsTabs} containerClassName="py-4" />
+            <TabBar
+                context="projects"
+                tabs={projectsTabs}
+                containerClassName="py-4"
+            />
         </div>
     );
 }
