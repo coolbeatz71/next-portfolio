@@ -24,14 +24,11 @@ export const projectsFullStack: ProjectByStack[] = [
         description:
             "Multiple applications leveraging Flow Designer, Service Catalog, SLAs, ACLs, and Mobile Agent. Configured Email Notifications with SMTP and POP3 protocols to notify users about system activities. Collaborated with Departments and Business stakeholders to translate business requirements into functional requirements. Developed various UI Actions, Policies, Client Scripts, Business Rules, Catalog Client Scripts, Scheduled Jobs, Critical Reports, and Gauges.",
         stack: [
-            "ServiceNow",
+            "Business Rules",
+            "Scheduled Job",
             "Flow Designer",
-            "Service Catalog",
-            "SLAs",
-            "ACLs",
-            "Mobile Agent",
-            "SMTP",
-            "REST APIs"
+            "GlideScript",
+            "SMTP"
         ],
         images: ["/projects/servicenow/servicenow_preview.jpg"],
         blurURL:
