@@ -13,7 +13,7 @@ interface MovingBorderButton extends HTMLAttributes<HTMLButtonElement> {
 }
 
 export function MovingBorderButton({
-    borderRadius = "1rem",
+    borderRadius = "0.65rem",
     children,
     as: Component = "button",
     containerClassName,

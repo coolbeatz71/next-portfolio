@@ -21,7 +21,7 @@ export default function TabBar({
             <div className="relative flex flex-col items-center">
                 <ul
                     className={cn(
-                        "relative flex flex-wrap px-1.5 py-1.5 list-none bg-white dark:bg-gray-900 rounded-xl gap-1 min-w-[50%]",
+                        "relative flex flex-wrap px-1.5 py-1.5 list-none bg-white dark:bg-gray-900 rounded-lg gap-1 min-w-[50%]",
                         tabBarClassName
                     )}
                     data-tabs="tabs"
@@ -45,7 +45,7 @@ export default function TabBar({
 
                                 {idx === activeTabIndex && (
                                     <motion.span
-                                        className="bg-indigo-700 dark:bg-indigo-500 shadow-lg rounded-xl absolute inset-0 -z-10"
+                                        className="bg-indigo-700 dark:bg-indigo-500 shadow-lg rounded-lg absolute inset-0 -z-10"
                                         layoutId="activeSection"
                                         transition={{
                                             type: "spring",
