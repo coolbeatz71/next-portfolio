@@ -59,7 +59,7 @@ const Card = ({ className }: CardProps): JSX.Element => {
     return (
         <div
             className={cn(
-                "rounded-md h-full w-full p-4 overflow-hidden border border-transparent relative z-20 opacity-70 filter grayscale",
+                "rounded-md h-full w-full p-4 overflow-hidden border border-transparent relative z-20 opacity-70 filter grayscale dark:brightness-900",
                 className
             )}
         />

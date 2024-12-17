@@ -76,6 +76,10 @@ const config: Config = {
             sans: ['"Montserrat"', ...fontFamily.sans]
         },
         extend: {
+            brightness: {
+                25: ".25",
+                900: "9"
+            },
             colors: {
                 medium: "#000000",
                 medium_dark: "#ffc21e",
