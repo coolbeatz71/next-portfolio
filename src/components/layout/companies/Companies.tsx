@@ -1,3 +1,4 @@
+import DotBackground from "@/components/shared/background/Dot.Background";
 import CompaniesGrid from "./Companies.Grid";
 
 export const companyLogoList = [
@@ -39,6 +40,7 @@ export default function Companies(): JSX.Element {
         <div className="mx-auto max-w-7xl max-h-7xl">
             <div className="grid grid-cols-1 xl:grid-cols-[3fr,3.5fr] items-center mt-12 py-20 gap-4">
                 <div>
+                    <DotBackground className="h-20" />
                     <h2 className="mb-4 text-2xl font-bold tracking-tight !leading-tight md:text-2xl xl:text-4xl text-slate-700 dark:text-slate-300">
                         Collaborated with amazing organizations worldwide
                     </h2>

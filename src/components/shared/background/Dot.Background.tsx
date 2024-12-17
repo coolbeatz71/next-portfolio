@@ -3,7 +3,7 @@ import { cn } from "@/helpers/mergeClassName";
 export interface DotBackgroundProps {
     className?: string;
 }
-export function DotBackground({
+export default function DotBackground({
     className = "h-[50rem]"
 }: DotBackgroundProps): JSX.Element {
     return (
