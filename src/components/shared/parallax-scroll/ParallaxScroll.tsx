@@ -80,7 +80,7 @@ export default function ParallaxScroll({
                             style={{ y: translateFirst }}
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
-                            transition={{ duration: 1 }}
+                            transition={{ duration: 5 }}
                         >
                             <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-indigo-400 to-indigo-900 transform scale-[0.75] rounded-full blur-2xl" />
                             <div className="h-[16rem] relative shadow-xl bg-indigo-500/[0.2] border border-gray-800/[0.1] p-1 overflow-hidden rounded-lg flex flex-col justify-end items-start">
@@ -103,7 +103,7 @@ export default function ParallaxScroll({
                             style={{ y: translateSecond }}
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
-                            transition={{ duration: 1 }}
+                            transition={{ duration: 5 }}
                         >
                             <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-indigo-400 to-indigo-900 transform scale-[0.75] rounded-full blur-2xl" />
                             <div className="h-[16rem] relative shadow-xl bg-indigo-500/[0.2] border border-gray-800/[0.1] p-1 overflow-hidden rounded-lg flex flex-col justify-end items-start">
