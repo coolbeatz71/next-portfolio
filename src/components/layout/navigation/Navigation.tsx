@@ -10,7 +10,7 @@ export default function Navigation(): JSX.Element {
 
     return (
         <nav
-            className={`sticky top-0 shadow-md z-20 transition-colors duration-300 ${y > 20 ? "dark:bg-slate-800/70 bg-slate-200/70 backdrop-blur-xl" : ""}`}
+            className={`sticky top-0 z-20 transition-colors duration-300 ${y > 20 ? "dark:bg-slate-800/70 bg-slate-200/70 backdrop-blur-xl shadow-md" : ""}`}
         >
             <div className="mx-auto max-w-7xl">
                 <div className="relative flex sm:h-24 h-20  items-center justify-between">
