@@ -18,7 +18,7 @@ export interface ParallaxScrollProps {
     }[];
 }
 
-export function ParallaxScroll({
+export default function ParallaxScroll({
     images,
     className
 }: ParallaxScrollProps): JSX.Element {
