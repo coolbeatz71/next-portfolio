@@ -20,7 +20,7 @@ export const experienceTimeline: (
         headerClassName
     );
     const _bodyClassName = cn(
-        "list-disc space-y-2 pl-5 leading-relaxed text-neutral-600 dark:text-neutral-300",
+        "list-disc space-y-2 pl-5 leading-relaxed font-medium text-neutral-500 dark:text-neutral-300",
         bodyClassName
     );
 
