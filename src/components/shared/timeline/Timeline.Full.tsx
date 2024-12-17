@@ -1,5 +1,6 @@
 import type { TimelineEntry } from "@/config/WorkExperience";
 import { FcGlobe } from "react-icons/fc";
+import GridBackground from "../grid-background/GridBackground";
 
 export const TimelineFull = ({ data }: { data: TimelineEntry[] }) => {
     return (
@@ -8,7 +9,10 @@ export const TimelineFull = ({ data }: { data: TimelineEntry[] }) => {
                 {data.map((item) => (
                     <div key={item.id} className="flex justify-start mb-6">
                         <div className="relative w-full border border-gray-300 rounded bg-slate-100 dark:bg-slate-700 dark:border-gray-600 p-4 pb-6">
-                            <h3 className="hidden md:block text-lg font-bold text-neutral-600 dark:text-neutral-300 !leading-loose">
+                            <div className="absolute top-0 bottom-0 w-[70%] opacity-50">
+                                <GridBackground size={20} />
+                            </div>
+                            <h3 className="block text-lg font-bold text-neutral-600 dark:text-neutral-300 !leading-loose">
                                 <div className="flex justify-between items-center">
                                     {item.title}
                                     <p className="flex items-center gap-1 !text-sm font-medium text-neutral-400 dark:text-neutral-500">
