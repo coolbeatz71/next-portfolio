@@ -1,12 +1,12 @@
 import { useId } from "react";
 
-export interface GridBackgroundProps {
+export interface GridPatternBackgroundProps {
     size?: number;
 }
 
-export default function GridBackground({
+export default function GridPatternBackground({
     size
-}: GridBackgroundProps): JSX.Element {
+}: GridPatternBackgroundProps): JSX.Element {
     const pattern = [
         [Math.floor(Math.random() * 4) + 7, Math.floor(Math.random() * 6) + 1],
         [Math.floor(Math.random() * 4) + 7, Math.floor(Math.random() * 6) + 1],

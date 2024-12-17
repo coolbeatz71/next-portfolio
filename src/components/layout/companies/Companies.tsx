@@ -37,7 +37,7 @@ export const companyLogoList = [
 export default function Companies(): JSX.Element {
     return (
         <div className="mx-auto max-w-7xl max-h-7xl">
-            <div className="grid grid-cols-1 xl:grid-cols-[3fr,3.5fr] items-center py-10 gap-4">
+            <div className="grid grid-cols-1 xl:grid-cols-[3fr,3.5fr] items-center mt-12 py-20 gap-4">
                 <div>
                     <h2 className="mb-4 text-2xl font-bold tracking-tight !leading-tight md:text-2xl xl:text-4xl text-slate-700 dark:text-slate-300">
                         Collaborated with amazing organizations worldwide

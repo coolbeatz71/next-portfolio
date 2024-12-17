@@ -1,9 +1,10 @@
+import { useState } from "react";
+
 import { MovingBorderButton } from "@/components/shared/buttons/moving-border/MovingBorder.Button";
 import Drawer from "@/components/shared/drawer/Drawer";
 import SectionHeader from "@/components/shared/section-header/SectionHeader";
 import { Timeline } from "@/components/shared/timeline/Timeline";
 import { experienceTimeline } from "@/config/WorkExperience";
-import { useState } from "react";
 
 export default function Experiences(): JSX.Element {
     const [isOpen, setIsOpen] = useState(false);

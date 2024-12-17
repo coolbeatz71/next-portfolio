@@ -7,15 +7,15 @@ import Hero from "@/components/layout/hero/Hero";
 import Navigation from "@/components/layout/navigation/Navigation";
 import Projects from "@/components/layout/projects/Projects";
 import Skills from "@/components/layout/skills/Skills";
+import GridBackground from "../../shared/background/Grid.Background";
 
 export default function HomeContainer(): JSX.Element {
     return (
         <Fragment>
+            <GridBackground className="top-0 h-[38rem]" />
             <Navigation />
             <Hero />
-            <div className="mt-24">
-                <Companies />
-            </div>
+            <Companies />
             <AboutMe />
             <Experiences />
             <Projects />

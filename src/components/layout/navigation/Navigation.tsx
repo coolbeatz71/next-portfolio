@@ -1,11 +1,17 @@
+import { useWindowScroll } from "react-use";
+
 import NavigationMenu from "@/components/layout/navigation/Navigation.Menu";
 import HamburgerMenuButton from "@/components/shared/hamburger-menu/HamburgerMenu.Button";
 import Logo from "@/components/shared/logo/Logo";
 import ThemeToggle from "@/components/shared/theme-toggle/ThemeToggle";
 
 export default function Navigation(): JSX.Element {
+    const { y } = useWindowScroll();
+
     return (
-        <nav className="dark:bg-slate-800/70 bg-slate-200/70 sticky top-0 shadow-md z-20 backdrop-blur-lg">
+        <nav
+            className={`sticky top-0 shadow-md z-20 transition-colors duration-300 ${y > 20 ? "dark:bg-slate-800/70 bg-slate-200/70 backdrop-blur-xl" : ""}`}
+        >
             <div className="mx-auto max-w-7xl">
                 <div className="relative flex sm:h-24 h-20  items-center justify-between">
                     <div className="inset-y-0 left-0 flex items-center sm:hidden">
