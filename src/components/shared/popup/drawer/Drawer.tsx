@@ -1,6 +1,5 @@
-import { TimelineFull } from "@/components/shared/timeline/Timeline.Full";
-import type { TimelineEntry } from "@/config/WorkExperience";
 import { Fragment } from "react";
+import type { ReactNode } from "react";
 import { useLockBodyScroll } from "react-use";
 
 import PopupBackdrop from "../Popup.Backdrop";
@@ -11,19 +10,15 @@ export interface DrawerProps {
     title: string;
     isOpen: boolean;
     onToggle: () => void;
-    data: (headerClassName?: string, bodyClassName?: string) => TimelineEntry[];
+    children: ReactNode;
 }
 
 export default function Drawer({
-    data,
     title,
     isOpen,
-    onToggle
+    onToggle,
+    children
 }: DrawerProps): JSX.Element {
-    const headerClassName = "mt-4 !text-sm mb-0";
-    const bodyClassName = "!text-sm mt-4";
-    const timeline = data(headerClassName, bodyClassName);
-
     useLockBodyScroll(isOpen);
 
     return (
@@ -41,9 +36,7 @@ export default function Drawer({
 
                     <PopupCloseButton onClick={onToggle} />
 
-                    <div className="py-4">
-                        <TimelineFull data={timeline} />
-                    </div>
+                    <div className="py-4">{children}</div>
                 </div>
             </div>
         </Fragment>

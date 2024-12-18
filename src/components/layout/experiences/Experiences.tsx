@@ -4,10 +4,14 @@ import { MovingBorderButton } from "@/components/shared/buttons/moving-border/Mo
 import Drawer from "@/components/shared/popup/drawer/Drawer";
 import SectionHeader from "@/components/shared/section-header/SectionHeader";
 import { Timeline } from "@/components/shared/timeline/Timeline";
+import { TimelineFull } from "@/components/shared/timeline/Timeline.Full";
 import { experienceTimeline } from "@/config/WorkExperience";
 
 export default function Experiences(): JSX.Element {
     const [isOpen, setIsOpen] = useState(false);
+
+    const headerClassName = "mt-4 !text-sm mb-0";
+    const bodyClassName = "!text-sm mt-4";
 
     const toggleDrawer = () => {
         setIsOpen(!isOpen);
@@ -35,8 +39,11 @@ export default function Experiences(): JSX.Element {
                 isOpen={isOpen}
                 title="Work Experience"
                 onToggle={toggleDrawer}
-                data={experienceTimeline}
-            />
+            >
+                <TimelineFull
+                    data={experienceTimeline(headerClassName, bodyClassName)}
+                />
+            </Drawer>
         </div>
     );
 }
