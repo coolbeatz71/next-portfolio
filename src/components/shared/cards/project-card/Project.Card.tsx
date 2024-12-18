@@ -1,14 +1,14 @@
-import { Fragment, useState } from "react";
 import BadgeSpan from "@/components/shared/badge/Badge.Span";
 import LitUpBorderButton from "@/components/shared/buttons/litup-border/LitUpBorder.Button";
 import type { ProjectByStack } from "@/config/Projects";
 import { cn } from "@/helpers/mergeClassName";
 import { type Variants, motion } from "framer-motion";
-import NextImage from "next/image";
-import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import dynamic from "next/dynamic";
+import NextImage from "next/image";
+import { Fragment, useState } from "react";
+import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 
-const DynamicModal = dynamic(() => import("./../../modal/Modal"), {
+const DynamicModal = dynamic(() => import("../../popup/modal/Modal"), {
     ssr: false
 });
 
