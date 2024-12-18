@@ -1,9 +1,10 @@
-import { createPortal } from "react-dom";
 import { Fragment } from "react";
 import type { ReactNode } from "react";
-
+import { createPortal } from "react-dom";
 import { IoMdCloseCircle } from "react-icons/io";
 import { useLockBodyScroll } from "react-use";
+
+import Backdrop from "@/components/shared/backdrop/Backdrop";
 
 export interface ModalProps {
     title: string;
@@ -15,23 +16,16 @@ export interface ModalProps {
 export default function Modal({
     title,
     isOpen,
-    onToggle
+    onToggle,
+    children
 }: ModalProps): JSX.Element | null {
-    if (!isOpen) return null;
-
     useLockBodyScroll(isOpen);
+
+    if (!isOpen) return null;
 
     return createPortal(
         <Fragment>
-            {/* Backdrop */}
-            {isOpen && (
-                <div
-                    pointer-events-none
-                    onClick={onToggle}
-                    onKeyDown={onToggle}
-                    className="fixed top-0 bottom-0 inset-0 z-40 bg-black bg-opacity-70 backdrop-blur"
-                />
-            )}
+            {isOpen && <Backdrop onClick={onToggle} />}
 
             {/* Modal Container */}
             <div

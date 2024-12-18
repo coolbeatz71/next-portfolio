@@ -4,6 +4,8 @@ import { Fragment } from "react";
 import { IoMdCloseCircle } from "react-icons/io";
 import { useLockBodyScroll } from "react-use";
 
+import Backdrop from "@/components/shared/backdrop/Backdrop";
+
 export interface DrawerProps {
     title: string;
     isOpen: boolean;
@@ -24,14 +26,7 @@ export default function Drawer({
 
     return (
         <Fragment>
-            {isOpen && (
-                <div
-                    pointer-events-none
-                    onClick={onToggle}
-                    onKeyDown={onToggle}
-                    className="fixed top-0 bottom-0 inset-0 z-40 bg-black bg-opacity-70 backdrop-blur"
-                />
-            )}
+            {isOpen && <Backdrop onClick={onToggle} />}
             <div
                 className={`fixed top-0 right-0 z-50 w-[50%] h-full bg-light dark:bg-dark shadow-lg
                 transition-transform transform ${
