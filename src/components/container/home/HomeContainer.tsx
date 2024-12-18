@@ -14,9 +14,12 @@ import GridBackground from "@/components/shared/background/Grid.Background";
 export default function HomeContainer(): JSX.Element {
     return (
         <Fragment>
-            <BackgroundBeams />
-            <BackgroundGradient />
-            <GridBackground className="top-0 h-[38rem]" />
+            <Fragment>
+                <BackgroundBeams />
+                <BackgroundGradient />
+                <GridBackground className="top-0 h-[38rem]" />
+            </Fragment>
+
             <Navigation />
             <Hero />
             <Companies />
