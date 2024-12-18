@@ -29,7 +29,7 @@ export default function Drawer({
                     pointer-events-none
                     onClick={onToggle}
                     onKeyDown={onToggle}
-                    className="fixed top-0 bottom-0 inset-0 z-40 bg-black bg-opacity-65 backdrop-blur-sm"
+                    className="fixed top-0 bottom-0 inset-0 z-40 bg-black bg-opacity-70 backdrop-blur"
                 />
             )}
             <div

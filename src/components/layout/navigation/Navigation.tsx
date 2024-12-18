@@ -4,13 +4,19 @@ import NavigationMenu from "@/components/layout/navigation/Navigation.Menu";
 import HamburgerMenuButton from "@/components/shared/hamburger-menu/HamburgerMenu.Button";
 import Logo from "@/components/shared/logo/Logo";
 import ThemeToggle from "@/components/shared/theme-toggle/ThemeToggle";
+import { useEffect, useState } from "react";
 
 export default function Navigation(): JSX.Element {
     const { y } = useWindowScroll();
+    const [scrollY, setScrollY] = useState(0);
+
+    useEffect(() => {
+        setScrollY(y);
+    }, [y]);
 
     return (
         <nav
-            className={`sticky top-0 z-20 transition duration-300 ${y > 20 ? "dark:bg-slate-800/70 bg-slate-200/70 backdrop-blur-xl shadow" : ""}`}
+            className={`sticky top-0 z-20 transition duration-100 ${scrollY > 20 ? "dark:bg-slate-800/70 bg-slate-200/70 backdrop-blur-xl shadow" : ""}`}
         >
             <div className="mx-auto max-w-7xl">
                 <div className="relative flex sm:h-24 h-20  items-center justify-between">
