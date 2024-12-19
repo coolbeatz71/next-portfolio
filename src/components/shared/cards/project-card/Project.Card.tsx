@@ -40,7 +40,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                 <DynamicModal
                     isOpen={isOpen}
                     title={project.name}
-                    className="max-w-3xl"
+                    className="max-w-2xl"
                     onToggle={toggleModal}
                     key={`${index}-modal`}
                 >
