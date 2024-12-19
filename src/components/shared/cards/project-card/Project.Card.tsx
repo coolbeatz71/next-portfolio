@@ -39,7 +39,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                 <DynamicModal
                     key={`${index}-modal`}
                     isOpen={isOpen}
-                    title="My Project"
+                    title={project.name}
                     onToggle={toggleModal}
                 >
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
