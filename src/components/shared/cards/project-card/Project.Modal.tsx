@@ -13,6 +13,11 @@ export default function ProjectModal({
     return (
         <Fragment>
             <ProjectImageSlider images={project.images} />
+            <div className="py-4">
+                <p className="font-medium text-neutral-500 dark:text-neutral-300">
+                    {project.description}
+                </p>
+            </div>
         </Fragment>
     );
 }

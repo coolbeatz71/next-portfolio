@@ -14,8 +14,8 @@ const DynamicModal = dynamic(() => import("../../popup/modal/Modal"), {
 });
 
 export interface ProjectCardProps {
-    project: ProjectByStack;
     index: number;
+    project: ProjectByStack;
 }
 
 export function ProjectCard({ project, index }: ProjectCardProps) {
@@ -38,10 +38,11 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         <Fragment>
             {isOpen && (
                 <DynamicModal
-                    key={`${index}-modal`}
                     isOpen={isOpen}
                     title={project.name}
+                    className="max-w-3xl"
                     onToggle={toggleModal}
+                    key={`${index}-modal`}
                 >
                     <ProjectModal project={project} />
                 </DynamicModal>
@@ -68,12 +69,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                                 blurDataURL={project.blurURL}
                                 className="object-cover transition-all duration-300 group-hover:scale-110"
                             />
-                            <div
-                                className={cn(
-                                    "absolute inset-0 bg-gradient-to-t from-black/50 dark:from-white/50 to-transparent",
-                                    "opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                                )}
-                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/50 dark:from-white/50 to-transparent, opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                         </div>
                         <div className="md:w-1/2 p-4 flex flex-col justify-between cursor-pointer">
                             <div onClick={toggleModal} onKeyDown={toggleModal}>

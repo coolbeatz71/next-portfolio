@@ -2,6 +2,7 @@ import { Fragment } from "react";
 import type { ReactNode } from "react";
 import { useLockBodyScroll } from "react-use";
 
+import { cn } from "@/helpers/mergeClassName";
 import PopupBackdrop from "../Popup.Backdrop";
 import PopupCloseButton from "../Popup.Close.Button";
 import PopupHeader from "../Popup.Header";
@@ -11,13 +12,15 @@ export interface DrawerProps {
     isOpen: boolean;
     onToggle: () => void;
     children: ReactNode;
+    className?: string;
 }
 
 export default function Drawer({
     title,
     isOpen,
     onToggle,
-    children
+    children,
+    className
 }: DrawerProps): JSX.Element {
     useLockBodyScroll(isOpen);
 
@@ -26,10 +29,13 @@ export default function Drawer({
             {isOpen && <PopupBackdrop onClick={onToggle} />}
 
             <div
-                className={`fixed top-0 right-0 z-50 w-[50%] h-full bg-light dark:bg-dark shadow-lg
+                className={cn(
+                    `fixed top-0 right-0 z-50 w-[50%] h-full bg-light dark:bg-dark shadow-lg
                 transition-transform transform ${
                     isOpen ? "translate-x-0" : "translate-x-full"
-                }`}
+                }`,
+                    className
+                )}
             >
                 <div className="p-4">
                     <PopupHeader>{title}</PopupHeader>
