@@ -13,11 +13,17 @@ export interface Tabs {
     content: ReactNode;
 }
 
+export interface Image {
+    alt: string;
+    src: string;
+    description?: string;
+}
+
 export interface ProjectByStack {
     name: string;
     description: string;
     stack: string[];
-    images: string[];
+    images: Image[];
     blurURL: string;
     hasLink: boolean;
     link: string;

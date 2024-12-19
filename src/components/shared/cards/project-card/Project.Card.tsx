@@ -7,6 +7,7 @@ import dynamic from "next/dynamic";
 import NextImage from "next/image";
 import { Fragment, useState } from "react";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
+import ProjectModal from "./Project.Modal";
 
 const DynamicModal = dynamic(() => import("../../popup/modal/Modal"), {
     ssr: false
@@ -42,10 +43,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                     title={project.name}
                     onToggle={toggleModal}
                 >
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Neque quis soluta explicabo sequi eligendi ad, sit non at
-                    dolore dolorum excepturi quasi accusamus praesentium rerum
-                    nemo veritatis doloribus ducimus provident.
+                    <ProjectModal project={project} />
                 </DynamicModal>
             )}
             <motion.div
@@ -66,7 +64,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                                 quality={55}
                                 placeholder="blur"
                                 alt={project.name}
-                                src={project.images[0]}
+                                src={project.images[0].src}
                                 blurDataURL={project.blurURL}
                                 className="object-cover transition-all duration-300 group-hover:scale-110"
                             />

@@ -1,19 +1,15 @@
-import { useState, useEffect, useCallback } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import NextImage from "next/image";
+import { useCallback, useEffect, useState } from "react";
+
+import type { Image } from "@/config/Projects";
 
 import {
-    FaPauseCircle,
-    FaPlayCircle,
     FaChevronCircleLeft,
-    FaChevronCircleRight
+    FaChevronCircleRight,
+    FaPauseCircle,
+    FaPlayCircle
 } from "react-icons/fa";
-
-interface Image {
-    alt: string;
-    src: string;
-    description: string;
-}
 
 export interface ProjectImageSliderProps {
     images: Image[];
@@ -52,9 +48,9 @@ export default function ProjectImageSlider({
     const getSlideStyle = (index: number) => {
         const position = (index - currentIndex + images.length) % images.length;
         const isActive = position === 0;
-        const baseWidth = 400; // Base width for the active img
-        const minWidth = 100; // Minimum width for the last visible img
-        const widthReduction = 75; // Width reduction for each step
+        const baseWidth = 400;
+        const minWidth = 100;
+        const widthReduction = 75;
 
         const width = isActive
             ? baseWidth
@@ -63,7 +59,7 @@ export default function ProjectImageSlider({
 
         if (position > 0) {
             for (let i = 0; i < position; i++) {
-                left += Math.max(baseWidth - i * widthReduction, minWidth) + 20; // 20px gap
+                left += Math.max(baseWidth - i * widthReduction, minWidth) + 10;
             }
         }
 
@@ -71,21 +67,21 @@ export default function ProjectImageSlider({
             width,
             left,
             zIndex: images.length - position,
-            opacity: position < 4 ? 1 : 0 // Show only 4 imgs
+            opacity: position < 4 ? 1 : 0
         };
     };
 
     return (
-        <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">
-            <div className="w-full max-w-6xl px-4">
-                <div className="relative h-[600px] overflow-hidden">
+        <div className="bg-gray-900 text-white flex items-center justify-center">
+            <div className="w-full max-w-6xl p-4">
+                <div className="relative h-[200px] overflow-hidden">
                     <AnimatePresence initial={false}>
                         {images.map((img, index) => (
                             <motion.div
                                 key={img.alt}
-                                className="absolute top-0 rounded-3xl overflow-hidden shadow-lg"
+                                className="absolute top-0 rounded-lg overflow-hidden shadow-lg"
                                 style={{
-                                    height: 600
+                                    height: 200
                                 }}
                                 initial={false}
                                 animate={getSlideStyle(index)}
@@ -117,7 +113,6 @@ export default function ProjectImageSlider({
                     </AnimatePresence>
                 </div>
 
-                {/* Navigation and Control Buttons */}
                 <div className="flex justify-between items-center mt-8">
                     <button
                         type="button"
