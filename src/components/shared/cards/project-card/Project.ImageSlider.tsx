@@ -74,15 +74,12 @@ export default function ProjectImageSlider({
     return (
         <div className="bg-gray-900 text-white flex items-center justify-center">
             <div className="w-full max-w-6xl p-4">
-                <div className="relative h-[200px] overflow-hidden">
+                <div className="relative h-[240px] overflow-hidden">
                     <AnimatePresence initial={false}>
                         {images.map((img, index) => (
                             <motion.div
                                 key={img.alt}
-                                className="absolute top-0 rounded-lg overflow-hidden shadow-lg"
-                                style={{
-                                    height: 200
-                                }}
+                                className="absolute top-0 rounded overflow-hidden shadow-lg h-full"
                                 initial={false}
                                 animate={getSlideStyle(index)}
                                 transition={{
@@ -94,7 +91,7 @@ export default function ProjectImageSlider({
                                     fill
                                     src={img.src}
                                     alt={img.alt}
-                                    className="w-full h-full object-cover"
+                                    className="object-cover"
                                 />
                                 {index === currentIndex && (
                                     <motion.div
@@ -113,7 +110,7 @@ export default function ProjectImageSlider({
                     </AnimatePresence>
                 </div>
 
-                <div className="flex justify-between items-center mt-8">
+                {/* <div className="flex justify-between items-center mt-8">
                     <button
                         type="button"
                         onClick={handlePrev}
@@ -144,7 +141,7 @@ export default function ProjectImageSlider({
                     >
                         <FaChevronCircleRight className="w-6 h-6" />
                     </button>
-                </div>
+                </div> */}
             </div>
         </div>
     );
