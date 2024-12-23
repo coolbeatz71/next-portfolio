@@ -11,7 +11,7 @@ export default function PopupCloseButton({
         <button
             type="button"
             onClick={onClick}
-            className="absolute top-4 right-4 text-gray-500 hover:text-red-500 transition-colors"
+            className="absolute top-5 right-4 text-gray-500 hover:text-red-500 transition-colors"
         >
             <IoMdCloseCircle size={24} />
         </button>
