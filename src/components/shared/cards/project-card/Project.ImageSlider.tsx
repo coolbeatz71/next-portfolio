@@ -72,14 +72,23 @@ export default function ProjectImageSlider({
     };
 
     return (
-        <div className="bg-gray-900 text-white flex items-center justify-center">
-            <div className="w-full max-w-6xl p-4">
-                <div className="relative h-[240px] overflow-hidden">
+        <div className="flex items-center justify-center">
+            <div className="relative w-full max-w-6xl px-4 py-16 pr-0 h-[350px]">
+                <div className="absolute top-0 left-0 w-full h-full z-0">
+                    <div className="absolute z-20 w-full h-full bg-slate-700/[0.7] backdrop-blur-lg rounded-md" />
+                    <NextImage
+                        fill
+                        src={images[0].src}
+                        alt={images[0].alt}
+                        className="object-cover rounded-md"
+                    />
+                </div>
+                <div className="w-full h-full relative overflow-hidden">
                     <AnimatePresence initial={false}>
                         {images.map((img, index) => (
                             <motion.div
                                 key={img.alt}
-                                className="absolute top-0 rounded overflow-hidden shadow-lg h-full"
+                                className="absolute top-0 overflow-hidden shadow-lg h-full"
                                 initial={false}
                                 animate={getSlideStyle(index)}
                                 transition={{
@@ -91,57 +100,12 @@ export default function ProjectImageSlider({
                                     fill
                                     src={img.src}
                                     alt={img.alt}
-                                    className="object-cover"
+                                    className="object-contain"
                                 />
-                                {index === currentIndex && (
-                                    <motion.div
-                                        className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/60 to-transparent"
-                                        initial={{ opacity: 0, y: 20 }}
-                                        animate={{ opacity: 1, y: 0 }}
-                                        exit={{ opacity: 0, y: 20 }}
-                                    >
-                                        <p className="mt-2">
-                                            {img.description}
-                                        </p>
-                                    </motion.div>
-                                )}
                             </motion.div>
                         ))}
                     </AnimatePresence>
                 </div>
-
-                {/* <div className="flex justify-between items-center mt-8">
-                    <button
-                        type="button"
-                        onClick={handlePrev}
-                        className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors"
-                        aria-label="Previous img"
-                    >
-                        <FaChevronCircleLeft className="w-6 h-6" />
-                    </button>
-                    <button
-                        type="button"
-                        onClick={togglePlayPause}
-                        className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors"
-                        aria-label={
-                            isPlaying ? "Pause autoplay" : "Resume autoplay"
-                        }
-                    >
-                        {isPlaying ? (
-                            <FaPauseCircle className="w-6 h-6" />
-                        ) : (
-                            <FaPlayCircle className="w-6 h-6" />
-                        )}
-                    </button>
-                    <button
-                        type="button"
-                        onClick={handleNext}
-                        className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors"
-                        aria-label="Next img"
-                    >
-                        <FaChevronCircleRight className="w-6 h-6" />
-                    </button>
-                </div> */}
             </div>
         </div>
     );
