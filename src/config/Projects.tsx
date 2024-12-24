@@ -21,12 +21,16 @@ export interface Image {
 
 export interface ProjectByStack {
     name: string;
+    role: string;
     description: string;
     stack: string[];
     images: Image[];
     blurURL: string;
-    hasLink: boolean;
-    link: string;
+    hasPreviewImage: boolean;
+    hasLiveLink: boolean;
+    liveLink?: string;
+    hasSourceCode: boolean;
+    sourceCodeLink?: string;
 }
 
 export const projectsTabs: Tabs[] = [
