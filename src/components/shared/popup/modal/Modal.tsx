@@ -47,7 +47,7 @@ export default function Modal({
 
                     <PopupCloseButton onClick={onToggle} />
 
-                    <div className="py-4">{children}</div>
+                    <div className="pt-4">{children}</div>
                 </div>
             </div>
         </Fragment>,

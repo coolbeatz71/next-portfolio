@@ -87,14 +87,16 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                             </div>
                             <a
                                 target="_blank"
-                                href={project.link}
+                                href={project.liveLink}
                                 rel="noopener noreferrer"
-                                className={cn(!project.hasLink && "invisible")}
+                                className={cn(
+                                    !project.hasLiveLink && "invisible"
+                                )}
                             >
-                                <LitUpBorderButton className="w-32 p-[2.5px]">
-                                    <div className="flex justify-center items-center text-sm">
+                                <LitUpBorderButton className="w-32 p-0.5">
+                                    <div className="flex justify-center items-center text-sm font-medium">
+                                        <FaArrowUpRightFromSquare className="mr-2 h-3 w-3" />
                                         Visit
-                                        <FaArrowUpRightFromSquare className="ml-2 h-3 w-3" />
                                     </div>
                                 </LitUpBorderButton>
                             </a>
