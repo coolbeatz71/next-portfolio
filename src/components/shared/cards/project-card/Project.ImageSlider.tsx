@@ -26,17 +26,18 @@ export default function ProjectImageSlider({
     const handleNext = useCallback(() => {
         setSliderState((state) => ({
             ...state,
-            currentIndex: (state.currentIndex + 1) % images.length
+            currentIndex: (state.currentIndex + 1) % images.slice(1).length
         }));
-    }, [images.length]);
+    }, [images]);
 
     const handlePrev = useCallback(() => {
         setSliderState((state) => ({
             ...state,
             currentIndex:
-                (state.currentIndex - 1 + images.length) % images.length
+                (state.currentIndex - 1 + images.slice(1).length) %
+                images.slice(1).length
         }));
-    }, [images.length]);
+    }, [images]);
 
     useInterval(() => handleNext(), isPlaying ? 5000 : null);
 
@@ -59,9 +60,10 @@ export default function ProjectImageSlider({
 
     const slideStyles = useMemo(
         () =>
-            images.map((_, index) => {
+            images.slice(1).map((_, index) => {
                 const position =
-                    (index - currentIndex + images.length) % images.length;
+                    (index - currentIndex + images.slice(1).length) %
+                    images.slice(1).length;
                 const isActive = position === 0;
                 const baseWidth = 400;
                 const minWidth = 100;
@@ -83,7 +85,7 @@ export default function ProjectImageSlider({
                 return {
                     width,
                     left,
-                    zIndex: images.length - position,
+                    zIndex: images.slice(1).length - position,
                     opacity: position < 4 ? 1 : 0
                 };
             }),
@@ -101,7 +103,7 @@ export default function ProjectImageSlider({
                 className="relative w-full max-w-6xl px-4 py-16 pr-0 h-[350px] cursor-grab"
             >
                 <div className="absolute top-0 left-0 w-full h-full z-0">
-                    <div className="absolute z-20 w-full h-full bg-slate-700/[0.7] backdrop-blur-lg rounded-md" />
+                    <div className="absolute z-20 w-full h-full bg-slate-200/[0.7] dark:bg-slate-700/[0.7] backdrop-blur-lg rounded-md" />
                     <NextImage
                         fill
                         src={images[0].src}
@@ -112,7 +114,7 @@ export default function ProjectImageSlider({
                 </div>
                 <div className="w-full h-full relative overflow-hidden">
                     <AnimatePresence initial={false}>
-                        {images.map((img, index) => {
+                        {images.slice(1).map((img, index) => {
                             const style = slideStyles[index];
                             if (style.opacity === 0) return null;
                             return (
