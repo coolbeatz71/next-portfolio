@@ -7,10 +7,12 @@ import type { Image } from "@/config/Projects";
 
 export interface ProjectImageSliderProps {
     images: Image[];
+    imagePlaceholder: string;
 }
 
 export default function ProjectImageSlider({
-    images
+    images,
+    imagePlaceholder
 }: ProjectImageSliderProps): JSX.Element {
     const imageWithoutPreview = images.slice(1);
 
@@ -118,6 +120,8 @@ export default function ProjectImageSlider({
                         src={images[0].src}
                         alt={images[0].alt}
                         className={`object-cover transition-all duration-300 ${isZoomed ? "rounded-none" : "rounded"}`}
+                        blurDataURL={imagePlaceholder}
+                        placeholder="blur"
                         loading="lazy"
                     />
                 </div>

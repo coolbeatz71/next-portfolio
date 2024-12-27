@@ -51,7 +51,10 @@ export default function ProjectModal({
         <Fragment>
             <div>
                 {project.hasPreviewImage ? (
-                    <ProjectImageSlider images={project.images} />
+                    <ProjectImageSlider
+                        images={project.images}
+                        imagePlaceholder={project.blurURL}
+                    />
                 ) : (
                     <NextImage
                         width={300}
