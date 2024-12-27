@@ -1,8 +1,9 @@
 import Badge from "@/components/shared/badge/Badge";
 import BadgeDevTools from "@/components/shared/badge/Badge.DevTools";
 import HeroImage from "@/components/shared/dev-image/DevImage";
-import FlipWords from "@/components/shared/filp-words/FlipWords";
+import FlipWords from "@/components/shared/flip-words/FlipWords";
 import SocialLinks from "@/components/shared/social-links/SocialLinks";
+import Spotlight from "@/components/shared/spotlight/Spotlight";
 
 import { creditBadgeList } from "@/config/CreditBadge";
 import { devToolsLogoList } from "@/config/DevTools";
@@ -10,6 +11,7 @@ import { devToolsLogoList } from "@/config/DevTools";
 export default function Hero(): JSX.Element {
     return (
         <div className="mx-auto max-w-7xl">
+            <Spotlight />
             <div className="grid grid-cols-1 xl:grid-cols-2 items-center py-10">
                 <div className="flex flex-col items-start xl:px-0 px-8">
                     <br />

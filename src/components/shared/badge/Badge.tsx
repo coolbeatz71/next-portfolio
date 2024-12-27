@@ -2,7 +2,7 @@ import numeral from "numeral";
 import type { ReactNode } from "react";
 import CountUp from "react-countup";
 
-import GridBackground from "@/components/shared/grid-background/GridBackground";
+import GridPatternBackground from "@/components/shared/background/GridPattern.Background";
 import { cn } from "@/helpers/mergeClassName";
 
 export interface BadgeProps {
@@ -27,7 +27,7 @@ export default function Badge({
                 className
             )}
         >
-            <GridBackground size={20} />
+            <GridPatternBackground size={20} />
             <div className="text-4xl mr-2">{icon}</div>
             <div className="flex items-center gap-x-2">
                 <div className="text-4xl leading-none font-bold text-indigo-700 dark:text-indigo-500">
