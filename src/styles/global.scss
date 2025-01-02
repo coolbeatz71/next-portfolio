@@ -12,5 +12,26 @@
 @layer utilities {
     .text-balance {
         text-wrap: balance;
-    }    
+    }
+    
+    @layer utilities {
+        .scrollbar::-webkit-scrollbar {
+            width: 12px;
+            height: 20px;
+        }
+
+        .scrollbar::-webkit-scrollbar-track {
+            border-radius: 100vh;
+           background: #edf7f410;
+        }
+
+        .scrollbar::-webkit-scrollbar-thumb {
+            background: #6366F1;
+            border-radius: 100vh;
+        }
+
+        .scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #4338CA;
+        }
+    }
 }
