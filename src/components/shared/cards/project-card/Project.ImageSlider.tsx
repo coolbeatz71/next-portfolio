@@ -154,7 +154,7 @@ export default function ProjectImageSlider({
                                         ease: "easeInOut"
                                     }}
                                     className="absolute top-0 overflow-hidden"
-                                    onMouseEnter={() => handleMouseEnter(index)}
+                                    onClick={() => handleMouseEnter(index)}
                                     onMouseLeave={handleMouseLeave}
                                 >
                                     <div
@@ -162,7 +162,7 @@ export default function ProjectImageSlider({
                                         style={{
                                             transform:
                                                 isCurrent && isZoomed
-                                                    ? `scale(1.2) translate(${(0.5 - mousePosition.x) * 100}%, ${(0.5 - mousePosition.y) * 100}%)`
+                                                    ? `scale(1.5) translate(${(0.5 - mousePosition.x) * 100}%, ${(0.5 - mousePosition.y) * 100}%)`
                                                     : "scale(1) translate(0%, 0%)"
                                         }}
                                     >
