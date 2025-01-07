@@ -107,7 +107,8 @@ export default function ProjectImageSlider({
                 onKeyDown={togglePlayPause}
                 onClick={togglePlayPause}
                 onMouseMove={handleMouseMove}
-                className={`relative w-full max-w-6xl h-[380px] transition-all duration-300 ${isZoomed ? "p-0" : "px-4 py-4 pr-0"}`}
+                // TODO: should implement a better height calculation for laptop and desktop
+                className={`relative w-full max-w-6xl h-[280px] transition-all duration-300 ${isZoomed ? "p-0" : "px-4 py-4 pr-0"}`}
             >
                 <div
                     className={`absolute top-0 left-0 w-full h-full z-0 transition-all duration-300 ${isZoomed ? "rounded-none" : "rounded"}`}
