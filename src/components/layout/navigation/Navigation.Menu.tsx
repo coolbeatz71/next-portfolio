@@ -1,5 +1,5 @@
 import NextLink from "next/link";
-import { Fragment, useEffect, useState } from "react";
+import { Fragment, useCallback, useEffect, useState } from "react";
 
 const menuItems = [
     { label: "Introduction", href: "" },
@@ -8,17 +8,18 @@ const menuItems = [
     { label: "Contribution", href: "#contribution" },
     { label: "Skill", href: "#skill" }
     //TODO: add articles when medium and dev.to APIs are integrated
-    // { label: "Article", href: "#",  }
+    // { label: "Article", href: "#" }
 ];
 
 export default function NavigationMenu(): JSX.Element {
     const [currentItem, setCurrentItem] = useState("");
 
-    useEffect(() => {
-        const handleHashChange = () => {
-            setCurrentItem(window.location.hash);
-        };
+    const handleHashChange = useCallback(() => {
+        const newHash = window.location.hash;
+        if (newHash !== currentItem) setCurrentItem(newHash);
+    }, [currentItem]);
 
+    useEffect(() => {
         window.addEventListener("hashchange", handleHashChange);
 
         handleHashChange();
@@ -26,7 +27,7 @@ export default function NavigationMenu(): JSX.Element {
         return () => {
             window.removeEventListener("hashchange", handleHashChange);
         };
-    }, []);
+    }, [handleHashChange]);
 
     return (
         <Fragment>
