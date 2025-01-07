@@ -16,6 +16,7 @@ export default function Navigation(): JSX.Element {
 
     return (
         <nav
+            id=""
             className={`sticky top-0 z-20 transition duration-100 ${scrollY > 20 ? "dark:bg-slate-800/70 bg-slate-200/70 backdrop-blur-xl shadow" : ""}`}
         >
             <div className="mx-auto max-w-7xl">

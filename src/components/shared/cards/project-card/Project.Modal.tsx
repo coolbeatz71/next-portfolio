@@ -36,7 +36,7 @@ const Link = ({ href, isVisible, children }: LinkProps): JSX.Element => (
         target="_blank"
         rel="noopener noreferrer"
         href={href}
-        className={cn(!isVisible && "invisible")}
+        className={cn(!isVisible && "hidden")}
     >
         <div>{children}</div>
     </a>
@@ -51,7 +51,10 @@ export default function ProjectModal({
         <Fragment>
             <div>
                 {project.hasPreviewImage ? (
-                    <ProjectImageSlider images={project.images} />
+                    <ProjectImageSlider
+                        images={project.images}
+                        imagePlaceholder={project.blurURL}
+                    />
                 ) : (
                     <NextImage
                         width={300}

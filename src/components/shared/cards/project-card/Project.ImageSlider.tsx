@@ -7,10 +7,12 @@ import type { Image } from "@/config/Projects";
 
 export interface ProjectImageSliderProps {
     images: Image[];
+    imagePlaceholder: string;
 }
 
 export default function ProjectImageSlider({
-    images
+    images,
+    imagePlaceholder
 }: ProjectImageSliderProps): JSX.Element {
     const imageWithoutPreview = images.slice(1);
 
@@ -105,7 +107,8 @@ export default function ProjectImageSlider({
                 onKeyDown={togglePlayPause}
                 onClick={togglePlayPause}
                 onMouseMove={handleMouseMove}
-                className={`relative w-full max-w-6xl h-[380px] transition-all duration-300 ${isZoomed ? "p-0" : "px-4 py-4 pr-0"}`}
+                // TODO: should implement a better height calculation for laptop and desktop
+                className={`relative w-full max-w-6xl h-[280px] transition-all duration-300 ${isZoomed ? "p-0" : "px-4 py-4 pr-0"}`}
             >
                 <div
                     className={`absolute top-0 left-0 w-full h-full z-0 transition-all duration-300 ${isZoomed ? "rounded-none" : "rounded"}`}
@@ -118,6 +121,8 @@ export default function ProjectImageSlider({
                         src={images[0].src}
                         alt={images[0].alt}
                         className={`object-cover transition-all duration-300 ${isZoomed ? "rounded-none" : "rounded"}`}
+                        blurDataURL={imagePlaceholder}
+                        placeholder="blur"
                         loading="lazy"
                     />
                 </div>
@@ -150,7 +155,7 @@ export default function ProjectImageSlider({
                                         ease: "easeInOut"
                                     }}
                                     className="absolute top-0 overflow-hidden"
-                                    onMouseEnter={() => handleMouseEnter(index)}
+                                    onClick={() => handleMouseEnter(index)}
                                     onMouseLeave={handleMouseLeave}
                                 >
                                     <div
@@ -158,7 +163,7 @@ export default function ProjectImageSlider({
                                         style={{
                                             transform:
                                                 isCurrent && isZoomed
-                                                    ? `scale(1.2) translate(${(0.5 - mousePosition.x) * 100}%, ${(0.5 - mousePosition.y) * 100}%)`
+                                                    ? `scale(1.5) translate(${(0.5 - mousePosition.x) * 100}%, ${(0.5 - mousePosition.y) * 100}%)`
                                                     : "scale(1) translate(0%, 0%)"
                                         }}
                                     >
