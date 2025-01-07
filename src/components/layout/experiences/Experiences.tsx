@@ -18,7 +18,10 @@ export default function Experiences(): JSX.Element {
     };
 
     return (
-        <div className="mx-auto max-w-7xl max-h-7xl">
+        <section
+            id="experience"
+            className="mx-auto max-w-7xl max-h-7xl scroll-mt-36"
+        >
             <div className="pb-10">
                 <SectionHeader
                     title="My Work Experience"
@@ -44,6 +47,6 @@ export default function Experiences(): JSX.Element {
                     data={experienceTimeline(headerClassName, bodyClassName)}
                 />
             </Drawer>
-        </div>
+        </section>
     );
 }

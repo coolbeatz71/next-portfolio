@@ -6,7 +6,10 @@ import NextImage from "next/image";
 
 export default function Skills(): JSX.Element {
     return (
-        <div className="mx-auto max-w-7xl max-h-7xl">
+        <section
+            id="skill"
+            className="mx-auto max-w-7xl max-h-7xl scroll-mt-36"
+        >
             <SectionHeader
                 title="My Tech Stack"
                 subtitle="I’ve had a blast tinkering with some pretty cool tech.
@@ -49,6 +52,6 @@ export default function Skills(): JSX.Element {
                 containerClassName="py-4"
                 tabBarClassName="min-w-[60%]"
             />
-        </div>
+        </section>
     );
 }

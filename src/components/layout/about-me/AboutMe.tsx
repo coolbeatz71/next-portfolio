@@ -15,7 +15,7 @@ function Highlight({ children }: HighlightProps): JSX.Element {
 
 export default function AboutMe(): JSX.Element {
     return (
-        <div className="mx-auto max-w-7xl h-xl">
+        <section id="about" className="mx-auto max-w-7xl h-xl scroll-mt-48">
             <div className="grid grid-cols-1 xl:grid-cols-[3fr,3.5fr] gap-12">
                 <div className="flex flex-col w-full items-center justify-center">
                     <AboutMeImages />
@@ -68,6 +68,6 @@ export default function AboutMe(): JSX.Element {
                     </p>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
