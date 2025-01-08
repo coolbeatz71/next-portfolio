@@ -1,6 +1,11 @@
+import type { ReactNode } from "react";
 import { GiCheckMark } from "react-icons/gi";
-
-export default function ExperienceItem({ children }): JSX.Element {
+export interface ExperienceItemProps {
+    children: ReactNode;
+}
+export default function ExperienceItem({
+    children
+}: ExperienceItemProps): JSX.Element {
     return (
         <span className="flex flex-row space-x-2 my-2">
             <GiCheckMark

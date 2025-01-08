@@ -3,10 +3,10 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { LuChevronsUpDown } from "react-icons/lu";
 
-import locales from "@/locales";
-import { languageList, USER_LANG } from "@/config/Language";
+import { USER_LANG, languageList } from "@/config/Language";
 import { getLanguage } from "@/helpers/getLanguage";
 import { isServer } from "@/helpers/isServer";
+import locales from "@/locales";
 
 export default function LanguageDropDown(): JSX.Element {
     const { i18n } = useTranslation();
@@ -49,11 +49,7 @@ export default function LanguageDropDown(): JSX.Element {
 
             {isOpen && (
                 <div className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
-                    <div
-                        className="py-1"
-                        role="menu"
-                        aria-labelledby="options-menu"
-                    >
+                    <div className="py-1" aria-labelledby="options-menu">
                         {languageList.map((lang) => (
                             <button
                                 type="button"

@@ -27,7 +27,7 @@ const Section = ({ title, children }: SectionProps): JSX.Element => (
 );
 
 interface LinkProps {
-    href: string;
+    href?: string;
     isVisible: boolean;
     children: ReactNode;
 }
@@ -35,7 +35,7 @@ const Link = ({ href, isVisible, children }: LinkProps): JSX.Element => (
     <a
         target="_blank"
         rel="noopener noreferrer"
-        href={href}
+        href={href || ""}
         className={cn(!isVisible && "hidden")}
     >
         <div>{children}</div>

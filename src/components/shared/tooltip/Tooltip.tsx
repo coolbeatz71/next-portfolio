@@ -5,6 +5,8 @@ interface TooltipProps {
     text: string;
 }
 
+type Position = "top" | "bottom" | "left" | "right";
+
 function debounce<T extends (...args: unknown[]) => void>(
     func: T,
     wait: number
@@ -18,7 +20,7 @@ function debounce<T extends (...args: unknown[]) => void>(
 
 // TODO: this animation is not working. It should fade in and out.
 export default function Tooltip({ children, text }: TooltipProps): JSX.Element {
-    const [position, setPosition] = useState("top");
+    const [position, setPosition] = useState<Position>("top");
     const tooltipRef = useRef<HTMLSpanElement>(null);
 
     const handlePosition = useCallback(() => {
@@ -37,7 +39,7 @@ export default function Tooltip({ children, text }: TooltipProps): JSX.Element {
 
             const newPosition =
                 positions.find((pos) => pos.condition)?.value || "top";
-            setPosition(newPosition);
+            setPosition(newPosition as Position);
         }
     }, []);
 
