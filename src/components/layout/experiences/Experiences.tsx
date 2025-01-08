@@ -6,8 +6,10 @@ import SectionHeader from "@/components/shared/section-header/SectionHeader";
 import { Timeline } from "@/components/shared/timeline/Timeline";
 import { TimelineFull } from "@/components/shared/timeline/Timeline.Full";
 import { experienceTimeline } from "@/config/WorkExperience";
+import { useTranslation } from "react-i18next";
 
 export default function Experiences(): JSX.Element {
+    const { t } = useTranslation();
     const [isOpen, setIsOpen] = useState(false);
 
     const headerClassName = "mt-4 !text-sm mb-0";
@@ -33,7 +35,7 @@ export default function Experiences(): JSX.Element {
                         className="py-4 px-10"
                         onClick={toggleDrawer}
                     >
-                        View more experiences
+                        {t("viewMore")}
                     </MovingBorderButton>
                 </div>
             </div>

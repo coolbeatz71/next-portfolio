@@ -35,13 +35,15 @@ export default function LanguageDropDown(): JSX.Element {
             <div>
                 <button
                     type="button"
-                    className="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                    className="flex items-center justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50"
                     onClick={toggleDropdown}
                 >
-                    <span className="mr-2">{currentLanguage.flag}</span>
-                    {currentLanguage.name}
+                    <span className="mr-2 h-4 w-4 flex items-center justify-center flex-shrink-0">
+                        {currentLanguage.flag}
+                    </span>
+                    {currentLanguage.code.toUpperCase()}
                     <LuChevronsUpDown
-                        className="-mr-1 ml-2 h-5 w-5"
+                        className="-mr-1 ml-2 h-4 w-4"
                         aria-hidden="true"
                     />
                 </button>
@@ -58,7 +60,9 @@ export default function LanguageDropDown(): JSX.Element {
                                 className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 w-full text-left"
                                 role="menuitem"
                             >
-                                <span className="mr-2">{lang.flag}</span>
+                                <span className="mr-2 h-4 w-4 flex items-center justify-center flex-shrink-0">
+                                    {lang.flag}
+                                </span>
                                 {lang.name}
                             </button>
                         ))}
