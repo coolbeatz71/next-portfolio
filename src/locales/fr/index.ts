@@ -1,3 +1,4 @@
+import { aboutme } from "@/locales/fr/aboutme";
 import { companies } from "@/locales/fr/companies";
 import { general } from "@/locales/fr/general";
 import { hero } from "@/locales/fr/hero";
@@ -7,5 +8,6 @@ export default {
     ...navigation,
     ...general,
     ...hero,
-    ...companies
+    ...companies,
+    ...aboutme
 };
