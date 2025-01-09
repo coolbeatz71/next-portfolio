@@ -2,10 +2,10 @@ import { useWindowScroll } from "react-use";
 
 import NavigationMenu from "@/components/layout/navigation/Navigation.Menu";
 import HamburgerMenuButton from "@/components/shared/hamburger-menu/HamburgerMenu.Button";
+import LanguageDropDown from "@/components/shared/language-dropdown/LanguageDropDown";
 import Logo from "@/components/shared/logo/Logo";
 import ThemeToggle from "@/components/shared/theme-toggle/ThemeToggle";
 import { useEffect, useState } from "react";
-import LanguageDropDown from "@/components/shared/language-dropdown/LanguageDropDown";
 
 export default function Navigation(): JSX.Element {
     const { y } = useWindowScroll();
@@ -33,7 +33,7 @@ export default function Navigation(): JSX.Element {
                             </div>
                         </div>
                     </div>
-                    <div className="inset-y-0 right-0 flex items-center sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                    <div className="inset-y-0 right-0 flex items-center sm:static sm:inset-auto sm:ml-6 sm:pr-0 gap-2">
                         <ThemeToggle />
                         <LanguageDropDown />
                     </div>
