@@ -10,7 +10,7 @@ export default function GridBackground({
     return (
         <div
             className={cn(
-                "absolute left-0 right-0 w-full dark:bg-grid-white/[0.010] bg-grid-black/[0.025] flex items-center justify-center",
+                "absolute z-10 left-0 right-0 w-full dark:bg-grid-white/[0.010] bg-grid-black/[0.025] flex items-center justify-center",
                 className
             )}
         >

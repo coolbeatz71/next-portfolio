@@ -25,7 +25,7 @@ const gradients = paths.map(() => ({
 
 function BackgroundBeams(): JSX.Element {
     return (
-        <div className="absolute h-full w-full inset-0 [mask-size:40px] [mask-repeat:no-repeat] flex items-center justify-center">
+        <div className="absolute z-10 h-full w-full inset-0 [mask-size:40px] [mask-repeat:no-repeat] flex items-center justify-center">
             <svg
                 aria-hidden="true"
                 className="z-0 h-full w-full pointer-events-none absolute"
