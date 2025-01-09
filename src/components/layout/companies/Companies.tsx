@@ -1,4 +1,5 @@
 import DotBackground from "@/components/shared/background/Dot.Background";
+import { useTranslation } from "react-i18next";
 import CompaniesGrid from "./Companies.Grid";
 
 export const companyLogoList = [
@@ -36,18 +37,18 @@ export const companyLogoList = [
     }
 ];
 export default function Companies(): JSX.Element {
+    const { t } = useTranslation();
+
     return (
         <div className="mx-auto max-w-7xl max-h-7xl">
             <div className="grid grid-cols-1 xl:grid-cols-[3fr,3.5fr] items-center mt-12 py-20 gap-4">
                 <div>
                     <DotBackground className="h-20" />
                     <h2 className="mb-4 text-2xl font-bold tracking-tight !leading-tight md:text-2xl xl:text-4xl text-slate-700 dark:text-slate-300">
-                        Collaborated with amazing organizations worldwide
+                        {t("companies_title")}
                     </h2>
                     <p className="text-lg text-gray-500 !leading-8">
-                        Over the last 7 years, from startups to large
-                        organizations, across a wide range of industries and
-                        domains.
+                        {t("companies_subtitle")}
                     </p>
                 </div>
 
