@@ -35,7 +35,7 @@ export default function Hero(): JSX.Element {
                     <p className="max-w-2xl mb-6 font-semibold lg:mb-8 md:text-md lg:text-md text-slate-600 dark:text-slate-400">
                         FullStack - PREN/MEAN - PHP/Laravel - Dart/Flutter
                     </p>
-                    <div className="flex flex-row gap-4 z-20">
+                    <div className="flex flex-row gap-4 z-10">
                         <SocialLinks />
                     </div>
                 </div>
