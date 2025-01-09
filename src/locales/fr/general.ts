@@ -1,3 +1,5 @@
 export const general = {
-    viewMore: "Voir Plus"
+    viewMore: "Voir Plus",
+    light_mode: "Mode Clair",
+    dark_mode: "Mode Sombre"
 };

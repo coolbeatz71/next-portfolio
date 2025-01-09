@@ -1,3 +1,7 @@
 export const navigation = {
-    home: "accueil"
+    introduction: "Introduction",
+    about: "À Propos",
+    experience: "Expérience",
+    contribution: "Contribution",
+    skill: "Compétence"
 };
