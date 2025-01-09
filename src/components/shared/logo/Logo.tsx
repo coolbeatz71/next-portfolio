@@ -4,7 +4,9 @@ export default function Logo(): JSX.Element {
             <h1 className="sm:text-3xl text-2xl font-bold dark:text-white text-black">
                 MJV
             </h1>
-            <h1 className="sm:text-3xl text-2xl font-bold text-red-600">.</h1>
+            <span className="sm:text-3xl text-3xl font-bold text-indigo-600">
+                .
+            </span>
         </div>
     );
 }
