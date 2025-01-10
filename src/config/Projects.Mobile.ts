@@ -3,9 +3,8 @@ import type { ProjectByStack } from "@/config/Projects";
 export const projectsMobile: ProjectByStack[] = [
     {
         name: "Film Fan",
-        role: "Flutter Engineer",
-        description:
-            "A mobile app that focuses on delivering a seamless movie discovery experience, with future plans to integrate cinema booking, making it the ultimate solution for moviegoers in Rwanda. It helps users discover now-playing movies in Rwanda, offering details like ratings, synopses, and recommendations.",
+        role: "flutter_engineer",
+        description: "projects_description.filmfan",
         stack: ["Flutter", "Dart", "SQLite", "Bloc", "Android Studio", "Dio"],
         images: [
             {
@@ -30,9 +29,8 @@ export const projectsMobile: ProjectByStack[] = [
     },
     {
         name: "Click Mart",
-        role: "Ionic Mobile Engineer",
-        description:
-            "A mobile app that bridges urban markets and rural buyers, offering a seamless e-commerce experience. The app empowers rural communities by providing direct access to a wide range of quality goods sourced from urban hubs. It promotes economic inclusion by enabling secure payments, and delivering products to remote areas with ease.",
+        role: "ionic_mobile_engineer",
+        description: "projects_description.clickmart",
         stack: [
             "Ionic 2",
             "Angular",
@@ -67,9 +65,8 @@ export const projectsMobile: ProjectByStack[] = [
     },
     {
         name: "Task Manager",
-        role: "Flutter Engineer",
-        description:
-            "A fancy mobile app designed for effortless task organization. Whether managing daily errands, planning projects, or juggling work and personal commitments, this intuitive task manager ensures everything stays on track.",
+        role: "flutter_engineer",
+        description: "projects_description.taskmanager",
         stack: [
             "Flutter",
             "Dart",

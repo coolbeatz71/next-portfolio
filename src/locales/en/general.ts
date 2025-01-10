@@ -9,7 +9,14 @@ export const general = {
     senior_software_engineer: "Senior Software Engineer",
     senior_frontend_engineer: "Senior Frontend Engineer",
     servicenow_developer: "ServiceNow Developer",
-    fullstack_engineer: "Full-Stack PHP/MEAN Engineer",
+    fullstack_engineer: "Full-Stack Engineer",
+    fullstack_engineer_php: "Full-Stack PHP, MEAN Engineer",
     fullstack_associate_engineer: "Full-Stack Associate Engineer",
-    freelance_engineer: "Freelance Engineer"
+    freelance_engineer: "Freelance Engineer",
+    lamp_stack_engineer: "LAMP-Stack Engineer",
+    fullstack_pean_engineer: "Full-Stack, PEAN Engineer",
+    flutter_engineer: "Flutter Engineer",
+    flutter_web_engineer: "Flutter Web Engineer",
+    ionic_mobile_engineer: "Ionic Mobile Engineer",
+    open: "Open"
 };

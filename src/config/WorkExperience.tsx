@@ -220,7 +220,7 @@ export const experienceTimeline: (
         },
         {
             id: "fullstack-engineer",
-            title: t("fullstack_engineer"),
+            title: t("fullstack_engineer_php"),
             location: "Kampala, Uganda",
             href: "https://akorion.com/",
             subtitle: "AKORION LTD - Aug 2019 - Jan 2020",

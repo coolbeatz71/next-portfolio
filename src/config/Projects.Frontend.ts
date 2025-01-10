@@ -3,9 +3,8 @@ import type { ProjectByStack } from "@/config/Projects";
 export const projectsFrontend: ProjectByStack[] = [
     {
         name: "SavePlus",
-        role: "Frontend Engineer",
-        description:
-            "A for-profit crowdfunding web application that allows people to raise money for events ranging from life events such as celebrations and graduations to challenging circumstances like accidents and illnesses.",
+        role: "frontend_engineer",
+        description: "projects_description.saveplus",
         stack: [
             "ReactJs",
             "NextJs",
@@ -57,9 +56,8 @@ export const projectsFrontend: ProjectByStack[] = [
     },
     {
         name: "Reconstruction",
-        role: "Frontend Engineer",
-        description:
-            "A Black-culture educational web application that highlights the rich legacy of African descendants through engaging content. The app reshapes traditional narratives, celebrating the significant global contributions of the Black community.",
+        role: "frontend_engineer",
+        description: "projects_description.reconstruction",
         stack: [
             "ReactJs",
             "Typescript",
@@ -107,9 +105,8 @@ export const projectsFrontend: ProjectByStack[] = [
     },
     {
         name: "Alfatier",
-        role: "Senior Frontend Engineer",
-        description:
-            "The platform offers cloud tasking, optimization, and development services for businesses to manage their public cloud infrastructure. It focuses on enhancing security, reducing costs, and enabling quick digital transformation using platforms like Microsoft Azure and Google Cloud.",
+        role: "senior_frontend_engineer",
+        description: "projects_description.alfatier",
         stack: [
             "ReactJs",
             "NextJs",
@@ -157,9 +154,8 @@ export const projectsFrontend: ProjectByStack[] = [
     },
     {
         name: "Meet v1",
-        role: "Flutter Web Engineer",
-        description:
-            "A sleek portfolio web app designed to showcase creative work effortlessly. With a user-friendly interface and customizable templates, it highlights projects, skills, and experiences in a visually stunning format.",
+        role: "flutter_web_engineer",
+        description: "projects_description.meet",
         stack: ["Flutter Web", "Riverpod", "Dart", "Flutter Hooks", "Seo"],
         images: [
             {
@@ -180,7 +176,7 @@ export const projectsFrontend: ProjectByStack[] = [
             },
             {
                 alt: "meet-projects",
-                src: "/projects/meet/meet_projects.png"
+                src: "/projects/meet/meet_projects_description.png"
             },
             {
                 alt: "meet-skills",

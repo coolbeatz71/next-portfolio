@@ -35,22 +35,22 @@ export interface ProjectByStack {
 
 export const projectsTabs: Tabs[] = [
     {
-        title: "Full-Stack",
+        title: "projects.fullstack",
         context: "full-stack",
         content: <ProjectSection projects={projectsFullStack} />
     },
     {
-        title: "Front-End",
+        title: "projects.frontend",
         context: "front-end",
         content: <ProjectSection projects={projectsFrontend} />
     },
     {
-        title: "Mobile Apps",
+        title: "projects.mobile_apps",
         context: "mobile-apps",
         content: <ProjectSection projects={projectsMobile} />
     },
     {
-        title: "Open-Source",
+        title: "projects.open_source",
         context: "open-source",
         content: <ProjectSection projects={projectsOpenSource} />
     }

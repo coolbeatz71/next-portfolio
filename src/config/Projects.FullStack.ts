@@ -3,9 +3,8 @@ import type { ProjectByStack } from "@/config/Projects";
 export const projectsFullStack: ProjectByStack[] = [
     {
         name: "StorM",
-        role: "Full-Stack Engineer",
-        description:
-            "A Digital Asset Management (DAM) system designed to replace Bestseller DAM. It helps to manage images, videos, and 3D assets for all the brands, styles, collections, etc. focusing on speed, stability, and user satisfaction.",
+        role: "fullstack_engineer",
+        description: "projects_description.storm",
         stack: [
             "C#",
             ".NET",
@@ -50,9 +49,8 @@ export const projectsFullStack: ProjectByStack[] = [
     },
     {
         name: "ServiceNow",
-        role: "ServiceNow Developer",
-        description:
-            "Multiple applications leveraging Flow Designer, Service Catalog, SLAs, ACLs, and Mobile Agent. Configured Email Notifications with SMTP and POP3 protocols to notify users about system activities. Collaborated with Departments and Business stakeholders to translate business requirements into functional requirements. Developed various UI Actions, Policies, Client Scripts, Business Rules, Catalog Client Scripts, Scheduled Jobs, Critical Reports, and Gauges.",
+        role: "servicenow_developer",
+        description: "projects_description.servicenow",
         stack: [
             "Business Rules",
             "Scheduled Job",
@@ -95,9 +93,8 @@ export const projectsFullStack: ProjectByStack[] = [
     },
     {
         name: "Code of Africa",
-        role: "Senior Software Engineer",
-        description:
-            "The company landing web app, which is a German based outsourcing hub connecting European businesses with East African top software engineers, prioritizing job creation, education, and changing perceptions in Europe.",
+        role: "senior_software_engineer",
+        description: "projects_description.codeofafrica",
         stack: [
             "ExpressJs",
             "EJS",
@@ -145,9 +142,8 @@ export const projectsFullStack: ProjectByStack[] = [
     },
     {
         name: "EzyAgric",
-        role: "Full-Stack, MEAN Engineer",
-        description:
-            "An on-demand web and mobile platform offering inclusive, data-driven access to production, marketing, and finance services for Ugandan farmers and agribusinesses, helping them to map gardens, access inputs, services, records, and markets that pay for quality.",
+        role: "fullstack_engineer_php",
+        description: "projects_description.ezyagric",
         stack: [
             "Angular",
             "PHP",
@@ -199,9 +195,8 @@ export const projectsFullStack: ProjectByStack[] = [
     },
     {
         name: "Motory",
-        role: "LAMP-Stack Engineer",
-        description:
-            "A German vehicle's marketplace with a community-driven environment. It allows users to buy and sell vehicles, access detailed automotive information, and participate in discussions. The platform offers documentation for vehicle transactions and serves as a hub for automotive enthusiasts.",
+        role: "lamp_stack_engineer",
+        description: "projects_description.motory",
         stack: [
             "PHP",
             "Bootstrap",
@@ -253,9 +248,8 @@ export const projectsFullStack: ProjectByStack[] = [
     },
     {
         name: "Tembea",
-        role: "Full-Stack, PEAN Engineer",
-        description:
-            "A platform through which Andela automates all processes with regards to cab requests, routes management and reconciliation, employing a Slack and web application. It solves the needs of Operations Department and the Travel Team with tools to aid trip management and data collection for visiting Andelans to other institutions.",
+        role: "fullstack_pean_engineer",
+        description: "projects_description.tembea",
         stack: [
             "Angular",
             "NodeJs",
