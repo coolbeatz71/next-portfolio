@@ -3,18 +3,18 @@ import TabBar from "@/components/shared/tab-bar/TabBar";
 import { devStackTabs } from "@/config/DevStack";
 import { mainStackList } from "@/config/DevStack.Main";
 import NextImage from "next/image";
+import { useTranslation } from "react-i18next";
 
 export default function Skills(): JSX.Element {
+    const { t } = useTranslation();
     return (
         <section
             id="skill"
             className="mx-auto max-w-7xl max-h-7xl scroll-mt-36"
         >
             <SectionHeader
-                title="My Tech Stack"
-                subtitle="I’ve had a blast tinkering with some pretty cool tech.
-                        Here are the ones that have significantly shaped my
-                        expertise."
+                title={t("skills_title")}
+                subtitle={t("skills_subtitle")}
             />
             <div className="relative">
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 lg:px-24 md:px-24">

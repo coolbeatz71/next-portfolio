@@ -5,6 +5,7 @@ import { general } from "@/locales/fr/general";
 import { hero } from "@/locales/fr/hero";
 import { navigation } from "@/locales/fr/navigation";
 import { projects } from "@/locales/fr/projects";
+import { skills } from "@/locales/fr/skills";
 import { tabs } from "@/locales/fr/tabs";
 
 export default {
@@ -15,5 +16,6 @@ export default {
     ...aboutme,
     ...experience,
     ...projects,
-    ...tabs
+    ...tabs,
+    ...skills
 };

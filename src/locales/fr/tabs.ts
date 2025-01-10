@@ -5,5 +5,12 @@ export const tabs = {
         mobile_apps: "App Mobiles",
         open_source: "Open-Source"
     },
-    skills: {}
+    skills: {
+        language: "Langage",
+        frontend: "Front-End",
+        backend: "Back-End",
+        infrastructure: "Infrastructure",
+        database: "Bases de Données",
+        other_interests: "Autres Intérêts"
+    }
 };
