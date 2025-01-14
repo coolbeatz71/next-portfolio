@@ -1,6 +1,5 @@
 import Badge from "@/components/shared/badge/Badge";
 import BadgeDevTools from "@/components/shared/badge/Badge.DevTools";
-import HeroImage from "@/components/shared/dev-image/DevImage";
 import FlipWords from "@/components/shared/flip-words/FlipWords";
 import SocialLinks from "@/components/shared/social-links/SocialLinks";
 import Spotlight from "@/components/shared/spotlight/Spotlight";
@@ -8,6 +7,7 @@ import Spotlight from "@/components/shared/spotlight/Spotlight";
 import { creditBadgeList } from "@/config/CreditBadge";
 import { devToolsLogoList } from "@/config/DevTools";
 import { useTranslation } from "react-i18next";
+import HeroImage from "./hero-image/Hero.Image";
 
 export default function Hero(): JSX.Element {
     const { t } = useTranslation();
@@ -39,7 +39,7 @@ export default function Hero(): JSX.Element {
                         <SocialLinks />
                     </div>
                 </div>
-                <div className="hidden xl:flex relative">
+                <div className="flex justify-center relative">
                     {creditBadgeList.map((badge) => (
                         <Badge
                             key={badge.text}
@@ -50,11 +50,7 @@ export default function Hero(): JSX.Element {
                         />
                     ))}
 
-                    <div className="w-[500px] h-[500px] bg-no-repeat absolute -top-1 -right-2" />
-                    <HeroImage
-                        src="/hero/me.png"
-                        className="w-[510px] h-[462px] bg-no-repeat relative bg-bottom -bottom-2 -right-3"
-                    />
+                    <HeroImage className="bg-no-repeat relative -bottom-2" />
 
                     {devToolsLogoList.map((badge) => (
                         <BadgeDevTools
