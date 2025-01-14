@@ -47,6 +47,7 @@ export default function NavigationMenu(): JSX.Element {
                         }`}
                         aria-current={isCurrent ? "page" : undefined}
                         onClick={() => setCurrentItem(item.href)}
+                        suppressHydrationWarning
                     >
                         {t(item.label)}
                     </NextLink>
