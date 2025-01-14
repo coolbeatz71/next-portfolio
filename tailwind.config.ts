@@ -92,9 +92,6 @@ const config: Config = {
                 dark: "rgb(30 41 59)"
             },
             backgroundImage: {
-                hero_shape: "url('/hero/shape.svg')",
-                hero_shape_dark: "url('/hero/shape-dark.svg')",
-                hero_shape_light: "url('/hero/shape-light.svg')",
                 pattern_dark: "url('/background/bg-pattern-dark.svg')",
                 pattern_light: "url('/background/bg-pattern-light.svg')",
                 icon_react: "url('/dev-tools/react.svg')",
