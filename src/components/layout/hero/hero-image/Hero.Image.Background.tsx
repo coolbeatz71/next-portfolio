@@ -8,7 +8,7 @@ export function HeroImageBackground({ className }: HeroImageBackgroundProps) {
     return (
         <div
             className={cn(
-                "absolute m-auto bg-gradient-to-br from-indigo-500 via-rose-700 to-indigo-700 rounded-md opacity-20",
+                "absolute m-auto bg-gradient-to-br from-indigo-500/30 via-pink-500/60 to-indigo-500 rounded-md",
                 className
             )}
             style={{

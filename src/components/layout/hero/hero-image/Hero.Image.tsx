@@ -30,7 +30,7 @@ export default function HeroImage({ className }: HeroImageProps): JSX.Element {
 
     return (
         <div className="relative flex items-center justify-end">
-            <HeroImageBackground className="w-[480px] h-[360px] left-12" />
+            <HeroImageBackground className="w-[480px] h-[360px] right-0" />
 
             <div className={cn(className, "w-[480px] h-[480px] left-12")}>
                 <NextImage

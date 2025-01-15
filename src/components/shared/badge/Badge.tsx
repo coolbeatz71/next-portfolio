@@ -23,7 +23,7 @@ export default function Badge({
     return (
         <div
             className={cn(
-                "relative bg-gradient-to-b from-neutral-100 to-neutral-300 dark:from-neutral-700 dark:to-neutral-800 p-4 rounded-lg overflow-hidden z-10 shadow-2xl flex justify-around items-center",
+                "relative backdrop-blur bg-gradient-to-b from-neutral-100 to-slate-300/50 dark:from-neutral-600 dark:to-slate-800/50 p-4 rounded-lg overflow-hidden z-10 shadow-2xl flex justify-around items-center",
                 className
             )}
         >
