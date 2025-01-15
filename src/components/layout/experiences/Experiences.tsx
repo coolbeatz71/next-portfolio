@@ -6,8 +6,10 @@ import SectionHeader from "@/components/shared/section-header/SectionHeader";
 import { Timeline } from "@/components/shared/timeline/Timeline";
 import { TimelineFull } from "@/components/shared/timeline/Timeline.Full";
 import { experienceTimeline } from "@/config/WorkExperience";
+import { useTranslation } from "react-i18next";
 
 export default function Experiences(): JSX.Element {
+    const { t } = useTranslation();
     const [isOpen, setIsOpen] = useState(false);
 
     const headerClassName = "mt-4 !text-sm mb-0";
@@ -24,8 +26,8 @@ export default function Experiences(): JSX.Element {
         >
             <div className="pb-10">
                 <SectionHeader
-                    title="My Work Experience"
-                    subtitle="A snapshot of my professional journey, showcasing the roles, projects, and achievements that define my career as a software engineer"
+                    title={t("experience_title")}
+                    subtitle={t("experience_subtitle")}
                 />
                 <Timeline data={experienceTimeline().slice(0, 5)} />
                 <div className="flex justify-center w-full">
@@ -33,14 +35,14 @@ export default function Experiences(): JSX.Element {
                         className="py-4 px-10"
                         onClick={toggleDrawer}
                     >
-                        View more experiences
+                        {t("viewMore")}
                     </MovingBorderButton>
                 </div>
             </div>
 
             <Drawer
                 isOpen={isOpen}
-                title="Work Experience"
+                title={t("work_experience")}
                 onToggle={toggleDrawer}
             >
                 <TimelineFull

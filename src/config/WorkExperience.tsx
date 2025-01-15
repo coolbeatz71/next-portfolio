@@ -1,6 +1,7 @@
 import ExperienceItem from "@/components/layout/experiences/Experiences.Item";
 import { cn } from "@/helpers/mergeClassName";
 import type { ReactNode } from "react";
+import { useTranslation } from "react-i18next";
 
 export interface TimelineEntry {
     id: string;
@@ -15,6 +16,7 @@ export const experienceTimeline: (
     headerClassName?: string,
     bodyClassName?: string
 ) => TimelineEntry[] = (headerClassName, bodyClassName) => {
+    const { t } = useTranslation();
     const _headerClassName = cn(
         "text-neutral-500 dark:text-neutral-400 italic font-normal !mb-4 !leading-loose",
         headerClassName
@@ -27,43 +29,30 @@ export const experienceTimeline: (
     return [
         {
             id: "senior-software-engineer-1",
-            title: "Senior Software Engineer",
+            title: t("senior_software_engineer"),
             location: "Aarhus, Denmark",
             href: "http://bestseller.com/",
             subtitle: "BESTSELLER A/S - Nov 2023 - Present",
             content: (
                 <div>
                     <p className={_headerClassName}>
-                        BESTSELLER is an international fashion multi brand
-                        company consisting of 20+ individual brands. BESTSELLER
-                        sells clothes and accessories for all ages, genders and
-                        occasions.
+                        {t("companies.bestseller")}
                     </p>
                     <div className="gap-4">
                         <ul className={_bodyClassName}>
                             <ExperienceItem>
-                                Developed and maintained Digital Media &
-                                Marketing web app, slashing pages load time by
-                                30% with React.js, prioritizing UX and
-                                accessibility.
+                                {t("experience_details.developed_maintained")}
                             </ExperienceItem>
                             <ExperienceItem>
-                                Implemented daily usage and performance metrics
-                                using OpenTelemetry, integrated with Datadog for
-                                monitoring, yielding a 25% performance
-                                improvement.
+                                {t("experience_details.implemented_metrics")}
                             </ExperienceItem>
                             <ExperienceItem>
-                                Authored reusable unit-test foundation, boosting
-                                quality control efficiency by over 30% and
-                                identifying bugs and web accessibility issues.
+                                {t("experience_details.authored_unit_tests")}
                             </ExperienceItem>
                             <ExperienceItem>
-                                Engaged closely with Software Architect and
-                                Backend engineers to oversee APIs and streamline
-                                software workflow with Scrum, resulting in a 25%
-                                decrease in delivery time and improve success
-                                rate.
+                                {t(
+                                    "experience_details.engaged_with_architects"
+                                )}
                             </ExperienceItem>
                         </ul>
                     </div>
@@ -72,7 +61,7 @@ export const experienceTimeline: (
         },
         {
             id: "servicenow-developer",
-            title: "ServiceNow Developer",
+            title: t("servicenow_developer"),
             location: "Brande, Denmark",
             href: "http://bestseller.com/",
             subtitle: "BESTSELLER A/S - Nov 2022 - Dec 2023",
@@ -81,27 +70,18 @@ export const experienceTimeline: (
                     <div className="gap-4">
                         <ul className={_bodyClassName}>
                             <ExperienceItem>
-                                Implemented custom ServiceNow applications
-                                leveraging advanced features such as Flow
-                                Designer, Service Catalog, SLAs, ACLs and Mobile
-                                Agent.
+                                {t("experience_details.implemented_servicenow")}
                             </ExperienceItem>
                             <ExperienceItem>
-                                Configured Email Notifications with SMTP, POP3
-                                protocols to notify users about specific
-                                activities in the system.
+                                {t("experience_details.configured_email")}
                             </ExperienceItem>
                             <ExperienceItem>
-                                Collaborated with Departments and Business
-                                stakeholders to translate business requirements
-                                into functional requirements within ServiceNow.
+                                {t(
+                                    "experience_details.collaborated_departments"
+                                )}
                             </ExperienceItem>
                             <ExperienceItem>
-                                Developed various UI Actions, and Policies,
-                                Client Scripts, Business Rules, Inbound and
-                                Outbound Email, Catalog Client Scripts, and
-                                created Scheduled Job, Critical Reports, Gauges
-                                as per the Business needs.
+                                {t("experience_details.developed_ui_actions")}
                             </ExperienceItem>
                         </ul>
                     </div>
@@ -110,40 +90,25 @@ export const experienceTimeline: (
         },
         {
             id: "senior-software-engineer-2",
-            title: "Senior Software Engineer",
+            title: t("senior_software_engineer"),
             location: "Kigali, Rwanda",
             href: "https://codeofafrica.com/EN",
             subtitle: "CODE OF AFRICA LTD - June 2021 - Aug 2022",
             content: (
                 <div>
                     <p className={_headerClassName}>
-                        CODE OF AFRICA is a German based outsourcing hub
-                        connecting European businesses with East African top
-                        software engineers, prioritizing job creation,
-                        education, and changing perceptions in Europe.
+                        {t("companies.codeofafrica")}
                     </p>
                     <div className="gap-4">
                         <ul className={_bodyClassName}>
                             <ExperienceItem>
-                                Boosted SEO and Google search rankings for the
-                                flagship Code of Africa website, elevating
-                                organic traffic by an impressive 40%, driving
-                                greater user engagement and brand recognition.
+                                {t("experience_details.boosted_seo")}
                             </ExperienceItem>
                             <ExperienceItem>
-                                Led the frontend team, steering them towards
-                                excellence while delivering constructive
-                                feedback, resulting in a 30% improvement in code
-                                quality. Acted as a mentor to junior developers,
-                                fostering a collaborative, growth-oriented
-                                atmosphere within the company.
+                                {t("experience_details.led_frontend_team")}
                             </ExperienceItem>
                             <ExperienceItem>
-                                Masterminded the evolution of an 8+ year-old
-                                white-label system, meticulously maintaining and
-                                enhancing its functionalities with PHP and
-                                ElasticSearch, achieving a 20% increase in
-                                system efficiency and user satisfaction.
+                                {t("experience_details.masterminded_evolution")}
                             </ExperienceItem>
                         </ul>
                     </div>
@@ -152,46 +117,30 @@ export const experienceTimeline: (
         },
         {
             id: "senior-frontend-engineer-1",
-            title: "Senior Frontend Engineer",
+            title: t("senior_frontend_engineer"),
             href: "https://alfatier.io/",
             location: "Hamburg, Germany",
             subtitle: "ALFATIER GmbH - Nov 2021 – Aug 2022",
             content: (
                 <div>
                     <p className={_headerClassName}>
-                        Headquartered in Hamburg, Germany, ALFATIER is renowned
-                        for its expertise in cloud optimization and
-                        transformation. Specializing in architecture reviews and
-                        cost management, they ensure efficiency and reliability
-                        for businesses.
+                        {t("companies.alfatier")}
                     </p>
                     <div className="gap-4">
                         <ul className={_bodyClassName}>
                             <ExperienceItem>
-                                Led as an early-stage frontend engineer, the
-                                development of our flagship product,
-                                collaborating closely with the UI/UX designer to
-                                transform mockups into responsive flawless
-                                interfaces, prioritizing user delight.
+                                {t("experience_details.led_early_stage")}
                             </ExperienceItem>
                             <ExperienceItem>
-                                Developed frontend features for the MVP version
-                                of the product, focusing on performance,
-                                scalability, and maintainability.
+                                {t(
+                                    "experience_details.developed_frontend_features"
+                                )}
                             </ExperienceItem>
                             <ExperienceItem>
-                                Integrated monitoring and analytics tools such
-                                as LogRocket and NewRelic to gather insights
-                                into user interactions, performance metrics, and
-                                application errors, increasing the product
-                                efficiency by 40%.
+                                {t("experience_details.integrated_monitoring")}
                             </ExperienceItem>
                             <ExperienceItem>
-                                Implemented HubSpot tracking codes and forms to
-                                capture user data and behavior, enabling
-                                automated and personalized marketing campaigns,
-                                customer engagement, and targeted
-                                communications.
+                                {t("experience_details.implemented_hubspot")}
                             </ExperienceItem>
                         </ul>
                     </div>
@@ -200,49 +149,30 @@ export const experienceTimeline: (
         },
         {
             id: "frontend-engineer-1",
-            title: "Frontend Engineer",
+            title: t("frontend_engineer"),
             location: "Memphis, USA",
             href: "https://org.reconstruction.us/",
             subtitle: "RECONSTRUCTION - June 2021 – Nov 2021",
             content: (
                 <div>
                     <p className={_headerClassName}>
-                        RECONSTRUCTION is an educational platform created to
-                        reshape traditional cultural teachings, prioritizing
-                        portrayal of African descent in a negative light, aiming
-                        instead to celebrate the rich legacy and contributions
-                        of the community.
+                        {t("companies.reconstruction")}
                     </p>
                     <div className="gap-4">
                         <ul className={_bodyClassName}>
                             <ExperienceItem>
-                                Integrated frontend interfaces displaying
-                                Thinkific courses, modules, and lessons,
-                                ensuring seamless user experience. Configured
-                                Thinkific APIs for authentication, enrolment,
-                                and progress tracking directly within the
-                                frontend.
+                                {t("experience_details.integrated_thinkific")}
                             </ExperienceItem>
                             <ExperienceItem>
-                                Maintained an intuitive admin dashboard to
-                                facilitate efficient management of platform
-                                content, courses, user data, and system
-                                settings.
+                                {t("experience_details.maintained_dashboard")}
                             </ExperienceItem>
                             <ExperienceItem>
-                                Achieved a 30% improvement in application
-                                performance and maintainability through
-                                successfully re-architecting the entire
-                                customer-facing frontend application,
-                                integrating Clean Code and Domain-Driven Design
-                                principles.
+                                {t("experience_details.improved_performance")}
                             </ExperienceItem>
                             <ExperienceItem>
-                                Introduced forking/rebasing Git workflow, easing
-                                collaboration and enhancing code integration,
-                                alleviating previous workflow challenges, thus
-                                improving development efficiency and code
-                                delivery by 70%.
+                                {t(
+                                    "experience_details.introduced_git_workflow"
+                                )}
                             </ExperienceItem>
                         </ul>
                     </div>
@@ -251,52 +181,37 @@ export const experienceTimeline: (
         },
         {
             id: "frontend-engineer-2",
-            title: "Frontend Engineer",
+            title: t("frontend_engineer"),
             location: "Kigali, Rwanda",
             href: "https://exuus.rw/",
             subtitle: "EXUUS LTD - May 2020 - June 2021",
             content: (
                 <div>
-                    <p className={_headerClassName}>
-                        Exuus, a leading FinTech firm in Rwanda, empowers
-                        communities with collective saving schemes and digital
-                        solutions, while fostering resilience and promoting an
-                        eco-conscious future.
-                    </p>
+                    <p className={_headerClassName}>{t("companies.exuus")}</p>
                     <div className="gap-4">
                         <ul className={_bodyClassName}>
                             <ExperienceItem>
-                                Spearheaded the development and maintenance of
-                                SavePlus, a for-profit crowdfunding web
-                                application, as the sole frontend engineer
-                                within the team. Took the ownership of the
-                                frontend development process, ensuring high-
-                                quality code and seamless user experience.
+                                {t(
+                                    "experience_details.spearheaded_development"
+                                )}
                             </ExperienceItem>
                             <ExperienceItem>
-                                Actively participated in code reviews and
-                                debugging, to maintain the stability and
-                                performance of the application, and contributed
-                                to the continuous improvement of SavePlus by
-                                providing insights and suggestions for
-                                optimizations and new features.
+                                {t(
+                                    "experience_details.participated_code_reviews"
+                                )}
                             </ExperienceItem>
                             <ExperienceItem>
-                                Implemented automated end-to-end tests using
-                                CypressJS to ensure the reliability and quality
-                                of the application across different browsers and
-                                devices.
+                                {t("experience_details.implemented_e2e_tests")}
                             </ExperienceItem>
                             <ExperienceItem>
-                                Worked on Payment integration with various
-                                Mobile Money channels, Visa & MasterCard, and
-                                PayPal, ensuring secure and seamless transaction
-                                processes for users.
+                                {t(
+                                    "experience_details.worked_payment_integration"
+                                )}
                             </ExperienceItem>
                             <ExperienceItem>
-                                Implemented multi-language support for the
-                                application, enhancing accessibility and user
-                                experience by 45%.
+                                {t(
+                                    "experience_details.implemented_multi_language"
+                                )}
                             </ExperienceItem>
                         </ul>
                     </div>
@@ -305,49 +220,26 @@ export const experienceTimeline: (
         },
         {
             id: "fullstack-engineer",
-            title: "Full-Stack PHP/MEAN Engineer",
+            title: t("fullstack_engineer_php"),
             location: "Kampala, Uganda",
             href: "https://akorion.com/",
             subtitle: "AKORION LTD - Aug 2019 - Jan 2020",
             content: (
                 <div>
-                    <p className={_headerClassName}>
-                        AKORION revolutionizes agriculture through EzyAgric,
-                        empowering farmers with finance, inputs, and markets.
-                        Utilizing village agents and technology, the
-                        organization streamlines the supply chain for 60,000
-                        farmers across Uganda.
-                    </p>
+                    <p className={_headerClassName}>{t("companies.akorion")}</p>
                     <div className="gap-4">
                         <ul className={_bodyClassName}>
                             <ExperienceItem>
-                                Used PHP/Lumen, and Angular 7 on the admin
-                                dashboard to enhance EzyAgric's capabilities to
-                                enable accurate mapping of gardens, facilitating
-                                access to genuine services, farm records,
-                                finance, and quality-paying markets, increasing
-                                the product efficiency by 25%, while empowering
-                                farmers effortless accessibility to vital
-                                resources.
+                                {t("experience_details.used_php_lumen")}
                             </ExperienceItem>
                             <ExperienceItem>
-                                Implemented optimized data storage solutions
-                                using CouchBase, improving database performance
-                                and reliability, easing data access, potentially
-                                increasing user satisfaction by 35%.
+                                {t("experience_details.implemented_couchbase")}
                             </ExperienceItem>
                             <ExperienceItem>
-                                Pioneered and implemented a highly reusable
-                                PHPUnit testing architecture and backbone,
-                                accelerating the testing process and optimizing
-                                development cycles by 45%.
+                                {t("experience_details.pioneered_phpunit")}
                             </ExperienceItem>
                             <ExperienceItem>
-                                Crafted responsive interfaces with Angular 7,
-                                elevating user experience. Additionally, I
-                                collaborate across teams to innovate features,
-                                ensuring EzyAgric stays ahead in agricultural
-                                technology.
+                                {t("experience_details.crafted_interfaces")}
                             </ExperienceItem>
                         </ul>
                     </div>
@@ -356,46 +248,26 @@ export const experienceTimeline: (
         },
         {
             id: "associate-engineer",
-            title: "Full-Stack Associate Engineer",
+            title: t("fullstack_associate_engineer"),
             location: "Kigali, Rwanda",
             href: "https://andela.com/",
             subtitle: "ANDELA LTD - Mar 2019 - Apr 2020",
             content: (
                 <div>
-                    <p className={_headerClassName}>
-                        ANDELA is a global tech talent solutions, shaping
-                        Africa's top developers into leaders. With key
-                        partnerships, ANDELA empowers engineering teams
-                        globally. The organization is supported by prestigious
-                        investors like the Chan Zuckerberg Initiative.
-                    </p>
+                    <p className={_headerClassName}>{t("companies.andela")}</p>
                     <div className="gap-4">
                         <ul className={_bodyClassName}>
                             <ExperienceItem>
-                                Successfully completed the technical leadership
-                                training program in the first six months and was
-                                able to learn and gain hands-on experience with
-                                engineering best practices and soft skills.
+                                {t("experience_details.completed_training")}
                             </ExperienceItem>
                             <ExperienceItem>
-                                Worked closely with Technical Team Leads to
-                                transition me from my Zone of Proximal
-                                Development (ZPD) to Nirvana - where I became a
-                                highly skilled and sought-after engineer.
+                                {t("experience_details.worked_with_leads")}
                             </ExperienceItem>
                             <ExperienceItem>
-                                Implemented backend solutions with
-                                Node/ExpressJS and PostgreSQL for Tembea,
-                                streamlining cab requests and route management,
-                                boosting operational efficiency by 30% for
-                                Andela's Operations Department and
-                                Partner-placed fellows.
+                                {t("experience_details.implemented_backend")}
                             </ExperienceItem>
                             <ExperienceItem>
-                                Integrated Slack API into Tembea's web app,
-                                enabling real-time updates and notifications.
-                                Reduced response time by 20% for trip management
-                                and data collection, empowering the Travel Team.
+                                {t("experience_details.integrated_slack")}
                             </ExperienceItem>
                         </ul>
                     </div>
@@ -404,50 +276,28 @@ export const experienceTimeline: (
         },
         {
             id: "engineer-freelance",
-            title: "Freelance Engineer",
+            title: t("freelance_engineer"),
             location: "Goma, DR Congo",
             href: "https://jkss-connect.com/",
             subtitle: "JKSS CONNECT - Sept 2017 - Feb 2019",
             content: (
                 <div>
-                    <p className={_headerClassName}>
-                        JKSS Connect is an e-commerce organization facilitating
-                        transactions between urban markets and rural buyers with
-                        smartphone access. It empowers rural communities with
-                        direct access to a diverse range of quality goods
-                        sourced from urban hubs, fostering economic inclusion
-                        and convenience.
-                    </p>
+                    <p className={_headerClassName}>{t("companies.jkss")}</p>
                     <div className="gap-4">
                         <ul className={_bodyClassName}>
                             <ExperienceItem>
-                                Innovated real-time data synchronization
-                                mechanisms within the Ionic Mobile application,
-                                prioritizing ease of use and accessibility,
-                                particularly for users with low-speed internet
-                                connections, resulting in a 50% decrease in page
-                                load times while increasing browsing experience.
+                                {t("experience_details.innovated_sync")}
                             </ExperienceItem>
                             <ExperienceItem>
-                                Integrated a QR code-based payment mechanism
-                                within the app, revolutionizing transaction
-                                speed and convenience for both delivery
-                                personnel and customers, resulting in a 30%
-                                reduction in checkout time.
+                                {t("experience_details.integrated_qr")}
                             </ExperienceItem>
                             <ExperienceItem>
-                                Led the Agile development process using project
-                                management tools like PivotalTracker, ensuring
-                                efficient task allocation and progress tracking,
-                                resulting in a 20% increase in development
-                                velocity.
+                                {t("experience_details.led_agile")}
                             </ExperienceItem>
                             <ExperienceItem>
-                                Successfully deployed cross-platform
-                                applications built with Ionic 3 to multiple
-                                mobile platforms including Android, iOS, and
-                                Windows Phone, ensuring compatibility across
-                                diverse operating systems.
+                                {t(
+                                    "experience_details.deployed_cross_platform"
+                                )}
                             </ExperienceItem>
                         </ul>
                     </div>

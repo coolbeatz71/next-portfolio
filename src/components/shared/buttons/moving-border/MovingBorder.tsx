@@ -20,7 +20,7 @@ export const MovingBorder = ({
     ry,
     ...otherProps
 }: MovingBorder) => {
-    const pathRef = useRef<SVGRectElement | null>();
+    const pathRef = useRef<SVGRectElement>(null);
     const progress = useMotionValue<number>(0);
 
     useAnimationFrame((time) => {

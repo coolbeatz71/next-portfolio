@@ -25,7 +25,7 @@ export default function Modal({
 }: ModalProps): JSX.Element {
     useLockBodyScroll(isOpen);
 
-    if (!isOpen) return null;
+    if (!isOpen) return <></>;
 
     return createPortal(
         <Fragment>

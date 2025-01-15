@@ -17,32 +17,32 @@ export interface SkillsByStack {
 
 export const devStackTabs: Tabs[] = [
     {
-        title: "Language",
+        title: "skills.language",
         context: "language",
         content: <SkillSection stacks={devStackLanguages} />
     },
     {
-        title: "Front-End",
+        title: "skills.frontend",
         context: "front-end",
         content: <SkillSection stacks={devStackFrontend} />
     },
     {
-        title: "Backend-End",
+        title: "skills.backend",
         context: "backend-end",
         content: <SkillSection stacks={devStackBackend} />
     },
     {
-        title: "Infrastructure",
+        title: "skills.infrastructure",
         context: "infrastructure",
         content: <SkillSection stacks={devStackInfrastructure} />
     },
     {
-        title: "Database",
+        title: "skills.database",
         context: "database",
         content: <SkillSection stacks={devStackDatabase} />
     },
     {
-        title: "Other interests",
+        title: "skills.other_interests",
         context: "other-interests",
         content: <SkillSection stacks={devStackOthers} />
     }

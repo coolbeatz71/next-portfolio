@@ -6,6 +6,7 @@ import { type Variants, motion } from "framer-motion";
 import dynamic from "next/dynamic";
 import NextImage from "next/image";
 import { Fragment, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import ProjectModal from "./Project.Modal";
 
@@ -19,6 +20,7 @@ export interface ProjectCardProps {
 }
 
 export function ProjectCard({ project, index }: ProjectCardProps) {
+    const { t } = useTranslation();
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleModal = () => {
@@ -77,7 +79,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                                     {project.name}
                                 </h3>
                                 <p className="cursor-text text-gray-500 dark:text-gray-400 mb-4 line-clamp-4 text-[10pt]">
-                                    {project.description}
+                                    {t(project.description)}
                                 </p>
                                 <div className="flex flex-wrap gap-1 mb-4">
                                     {project.stack.map((tech) => (
@@ -96,7 +98,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                                 <LitUpBorderButton className="w-32 p-0.5">
                                     <div className="flex justify-center items-center text-sm font-medium">
                                         <FaArrowUpRightFromSquare className="mr-2 h-3 w-3" />
-                                        Visit
+                                        {t("open")}
                                     </div>
                                 </LitUpBorderButton>
                             </a>

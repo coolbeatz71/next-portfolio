@@ -1,4 +1,5 @@
 import { useId } from "react";
+import type { SVGProps } from "react";
 
 export interface GridPatternBackgroundProps {
     size?: number;
@@ -7,7 +8,7 @@ export interface GridPatternBackgroundProps {
 export default function GridPatternBackground({
     size
 }: GridPatternBackgroundProps): JSX.Element {
-    const pattern = [
+    const pattern: Array<[number, number]> = [
         [Math.floor(Math.random() * 4) + 7, Math.floor(Math.random() * 6) + 1],
         [Math.floor(Math.random() * 4) + 7, Math.floor(Math.random() * 6) + 1],
         [Math.floor(Math.random() * 4) + 7, Math.floor(Math.random() * 6) + 1],
@@ -30,7 +31,22 @@ export default function GridPatternBackground({
     );
 }
 
-export function GridPattern({ width, height, x, y, squares, ...props }) {
+interface GridPatternProps extends SVGProps<SVGSVGElement> {
+    width: number;
+    height: number;
+    x: string | number;
+    y: string | number;
+    squares?: Array<[number, number]>;
+}
+
+export function GridPattern({
+    width,
+    height,
+    x,
+    y,
+    squares,
+    ...props
+}: GridPatternProps) {
     const patternId = useId();
 
     return (

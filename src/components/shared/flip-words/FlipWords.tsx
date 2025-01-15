@@ -46,7 +46,7 @@ export default function FlipWords({
                 }}
                 transition={{
                     type: "spring",
-                    stiffness: 100,
+                    stiffness: 150,
                     damping: 10
                 }}
                 exit={{
@@ -82,7 +82,7 @@ export default function FlipWords({
                                 initial={{
                                     opacity: 0,
                                     y: 10,
-                                    filter: "blur(8px)"
+                                    filter: "blur(250px)"
                                 }}
                                 animate={{
                                     opacity: 1,
@@ -91,7 +91,7 @@ export default function FlipWords({
                                 }}
                                 transition={{
                                     delay: wordIndex * 0.3 + letterIndex * 0.05,
-                                    duration: 0.2
+                                    duration: 0.5
                                 }}
                                 className="inline-block"
                             >

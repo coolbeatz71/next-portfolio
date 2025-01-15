@@ -3,9 +3,8 @@ import type { ProjectByStack } from "@/config/Projects";
 export const projectsOpenSource: ProjectByStack[] = [
     {
         name: "Coolest Dark",
-        role: "Software Engineer",
-        description:
-            "A Visual Studio Code theme inspired by One Dark Pro and Bear themes. It offers a sleek color palette for optimal readability and reduced eye strain, perfect for Dart/Flutter developers. It's fully customizable and open-source",
+        role: "software_engineer",
+        description: "projects_description.coolestdark",
         stack: ["JSON", "Color Scheme", "Vsce", "Npm"],
         images: [
             {
@@ -24,9 +23,8 @@ export const projectsOpenSource: ProjectByStack[] = [
     },
     {
         name: "React Excel Grid Export",
-        role: "Software Engineer",
-        description:
-            "A data exporter library built with and for ReactJs. It allows users to export data from a Grid to Excel formats such as Xlsx or Csv, with support for customizing appearance and data structure.",
+        role: "software_engineer",
+        description: "projects_description.rege",
         stack: ["ReactJs", "JavaScript", "NodeJs", "Npm"],
         images: [
             {

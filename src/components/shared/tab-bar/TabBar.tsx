@@ -2,6 +2,7 @@ import type { Tabs } from "@/config/Projects";
 import { cn } from "@/helpers/mergeClassName";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 interface TabBarProps {
     tabs: Tabs[];
@@ -16,6 +17,7 @@ export default function TabBar({
     tabBarClassName,
     containerClassName
 }: TabBarProps) {
+    const { t } = useTranslation();
     const [activeTabIndex, setActiveTabIndex] = useState(0);
 
     return (
@@ -43,7 +45,7 @@ export default function TabBar({
                                     transformStyle: "preserve-3d"
                                 }}
                             >
-                                {tab.title}
+                                {t(tab.title)}
                                 {idx === activeTabIndex && (
                                     <motion.span
                                         className="bg-indigo-700 dark:bg-indigo-500 shadow-lg rounded-lg absolute inset-0 -z-10"

@@ -1,17 +1,19 @@
 import NextLink from "next/link";
 import { Fragment, useCallback, useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const menuItems = [
-    { label: "Introduction", href: "" },
-    { label: "About", href: "#about" },
-    { label: "Experience", href: "#experience" },
-    { label: "Contribution", href: "#contribution" },
-    { label: "Skill", href: "#skill" }
+    { label: "introduction", href: "" },
+    { label: "about", href: "#about" },
+    { label: "experience", href: "#experience" },
+    { label: "contribution", href: "#contribution" },
+    { label: "skill", href: "#skill" }
     //TODO: add articles when medium and dev.to APIs are integrated
     // { label: "Article", href: "#" }
 ];
 
 export default function NavigationMenu(): JSX.Element {
+    const { t } = useTranslation();
     const [currentItem, setCurrentItem] = useState("");
 
     const handleHashChange = useCallback(() => {
@@ -45,8 +47,9 @@ export default function NavigationMenu(): JSX.Element {
                         }`}
                         aria-current={isCurrent ? "page" : undefined}
                         onClick={() => setCurrentItem(item.href)}
+                        suppressHydrationWarning
                     >
-                        {item.label}
+                        {t(item.label)}
                     </NextLink>
                 );
             })}

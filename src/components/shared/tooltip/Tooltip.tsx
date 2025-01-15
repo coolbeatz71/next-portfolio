@@ -5,6 +5,8 @@ interface TooltipProps {
     text: string;
 }
 
+type Position = "top" | "bottom" | "left" | "right";
+
 function debounce<T extends (...args: unknown[]) => void>(
     func: T,
     wait: number
@@ -18,7 +20,7 @@ function debounce<T extends (...args: unknown[]) => void>(
 
 // TODO: this animation is not working. It should fade in and out.
 export default function Tooltip({ children, text }: TooltipProps): JSX.Element {
-    const [position, setPosition] = useState("top");
+    const [position, setPosition] = useState<Position>("top");
     const tooltipRef = useRef<HTMLSpanElement>(null);
 
     const handlePosition = useCallback(() => {
@@ -37,7 +39,7 @@ export default function Tooltip({ children, text }: TooltipProps): JSX.Element {
 
             const newPosition =
                 positions.find((pos) => pos.condition)?.value || "top";
-            setPosition(newPosition);
+            setPosition(newPosition as Position);
         }
     }, []);
 
@@ -72,7 +74,7 @@ export default function Tooltip({ children, text }: TooltipProps): JSX.Element {
             {children}
             <span
                 ref={tooltipRef}
-                className={`absolute ${positionClasses[position]} hidden group-hover:block w-max bg-gray-700 bg-opacity-70 text-white text-xs rounded py-1 px-2 transition-opacity duration-500 delay-300 opacity-0 group-hover:opacity-100`}
+                className={`absolute z-50 ${positionClasses[position]} hidden group-hover:block w-max bg-gray-700 bg-opacity-70 text-white text-xs rounded py-1 px-2 transition-opacity duration-500 delay-300 opacity-0 group-hover:opacity-100`}
             >
                 {text}
                 <span className={`absolute ${arrowClasses[position]}`} />

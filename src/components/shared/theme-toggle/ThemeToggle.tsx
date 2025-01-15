@@ -1,6 +1,7 @@
 import { useTheme } from "next-themes";
 import dynamic from "next/dynamic";
 import { useCallback, useMemo } from "react";
+import { useTranslation } from "react-i18next";
 import { FaCloudMoon, FaCloudSun } from "react-icons/fa";
 
 const DynamicTooltip = dynamic(() => import("./../tooltip/Tooltip"), {
@@ -8,6 +9,7 @@ const DynamicTooltip = dynamic(() => import("./../tooltip/Tooltip"), {
 });
 
 export default function ThemeToggle(): JSX.Element {
+    const { t } = useTranslation();
     const { theme, setTheme } = useTheme();
 
     const onToggle = useCallback(() => {
@@ -19,16 +21,16 @@ export default function ThemeToggle(): JSX.Element {
         [theme]
     );
     const tooltipText = useMemo(
-        () => (theme === "dark" ? "Light mode" : "Dark mode"),
+        () => (theme === "dark" ? "light_mode" : "dark_mode"),
         [theme]
     );
 
     return (
-        <DynamicTooltip text={tooltipText}>
+        <DynamicTooltip text={t(tooltipText)}>
             <button
                 type="button"
                 onClick={onToggle}
-                className="group relative text-2xl bg-foreground text-background rounded size-12 flex justify-center items-center dark:text-indigo-500 text-indigo-700  hover:bg-slate-300 dark:hover:bg-slate-700"
+                className="group relative text-2xl bg-foreground text-background rounded size-12 flex justify-center items-center dark:text-indigo-500 text-indigo-700 hover:bg-slate-300 dark:hover:bg-slate-700"
             >
                 {icon}
             </button>
