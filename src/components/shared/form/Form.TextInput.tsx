@@ -1,23 +1,38 @@
+import { cn } from "@/helpers/mergeClassName";
 import type { HTMLInputTypeAttribute } from "react";
+import { useFormContext } from "react-hook-form";
 
 export interface FormTextInputProps {
     id: string;
     label: string;
     type: HTMLInputTypeAttribute;
+    className?: string;
 }
 
 export function FormTextInput({
     id,
     type,
-    label
+    label,
+    className
 }: FormTextInputProps): JSX.Element {
+    const {
+        register,
+        formState: { errors }
+    } = useFormContext();
+
+    const isError = errors[id];
+
     return (
         <div className="relative">
             <input
                 id={id}
                 type={type}
                 placeholder=""
-                className="peer block border border-zinc-300 dark:border-zinc-400 rounded px-4 pb-2 pt-6 w-full focus:outline-none focus:ring-4 focus:border-indigo-700 focus:ring-indigo-300 dark:focus:ring-indigo-800 dark:focus:border-indigo-500 bg-white dark:bg-slate-600"
+                {...register(id)}
+                className={cn(
+                    `${isError ? "border-red-400 focus:ring-red-300 dark:focus:ring-indigo-800 dark:focus:border-indigo-500" : "border-zinc-300 dark:border-zinc-400 focus:border-indigo-700 focus:ring-indigo-300 dark:focus:ring-indigo-800 dark:focus:border-indigo-500"} peer block border  rounded px-4 pb-2 pt-6 w-full resize-none focus:outline-none focus:ring-4 bg-white dark:bg-slate-600`,
+                    className
+                )}
             />
             <label
                 htmlFor="email"
@@ -25,6 +40,11 @@ export function FormTextInput({
             >
                 {label}
             </label>
+            {errors[id] && (
+                <p className="text-red-500 text-sm mt-1 first-letter:uppercase">
+                    {String(errors[id]?.message)}
+                </p>
+            )}
         </div>
     );
 }
