@@ -28,7 +28,7 @@ export default function Footer(): JSX.Element {
                     <span className="font-light">
                         {" "}
                         Designed with Love{" "}
-                        <span className="text-pink-500">&hearts;</span> and{" "}
+                        <span className="text-pink-500">❤️</span> and{" "}
                         <a
                             href="https://tailwindcss.com"
                             className="text-indigo-500 hover:underline"
