@@ -10,8 +10,8 @@ export default function SectionHeader({
 }: SectionHeaderProps): JSX.Element {
     return (
         <div className="flex flex-col items-center justify-center pb-12">
-            <DotBackground className="h-20" />
-            <div className="text-center lg:px-64">
+            <DotBackground className="h-20 z-0" />
+            <div className="text-center lg:px-64 z-10">
                 <h2 className="mb-4 text-2xl font-bold !leading-tight md:text-2xl xl:text-3xl text-slate-700 dark:text-slate-300">
                     {title}
                 </h2>
