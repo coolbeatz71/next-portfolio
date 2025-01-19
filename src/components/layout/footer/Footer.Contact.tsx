@@ -19,9 +19,9 @@ export default function FooterContact(): JSX.Element {
                 target="_blank"
                 rel="noopener noreferrer"
                 href="mailto:jeanvincent.mutombo@gmail.com"
-                className="hover:underline hover:font-medium"
+                className="hover:font-medium"
             >
-                <span className="text-gray-500 dark:text-gray-400 hover:text-indigo-700 hover:dark:text-indigo-500 flex justify-between items-center gap-2">
+                <span className="hover:underline text-gray-500 dark:text-gray-400 hover:text-indigo-700 hover:dark:text-indigo-500 flex justify-between items-center gap-2">
                     <MdEmail />
                     jeanvincent.mutombo@gmail.com
                 </span>
@@ -29,9 +29,9 @@ export default function FooterContact(): JSX.Element {
             <a
                 href="tel:(+250) 078 071 2761"
                 rel="noopener noreferrer"
-                className="hover:underline hover:font-medium"
+                className="hover:font-medium"
             >
-                <span className="text-gray-500 dark:text-gray-400 hover:text-indigo-700 hover:dark:text-indigo-500 flex justify-between items-center gap-2">
+                <span className="hover:underline text-gray-500 dark:text-gray-400 hover:text-indigo-700 hover:dark:text-indigo-500 flex justify-between items-center gap-2">
                     <FaPhoneSquare />
                     (+250) 78 071 2761
                 </span>
