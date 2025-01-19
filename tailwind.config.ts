@@ -88,6 +88,8 @@ const config: Config = {
                 github: "#000000",
                 github_dark: "#ffffff",
                 linkedin: "#0077B5",
+                youtube: "#CD201F",
+                instagram: "#C7507C",
                 light: "rgb(226 232 240)",
                 dark: "rgb(30 41 59)"
             },

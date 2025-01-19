@@ -1,16 +1,16 @@
 import ShimmerButton from "@/components/shared/buttons/shimmer/Shimmer.Button";
-import { socialLink } from "@/config/SocialLink";
+import { socialLinksList } from "@/config/SocialLink";
 import NextLink from "next/link";
 import { Fragment } from "react";
 
 export default function SocialLinks(): JSX.Element {
     return (
         <Fragment>
-            {socialLink.map((social) => (
+            {socialLinksList.slice(0, 3).map((social) => (
                 <NextLink
+                    target="_blank"
                     href={social.href}
                     key={social.platform}
-                    target="_blank"
                 >
                     <ShimmerButton
                         borderRadius="100%"

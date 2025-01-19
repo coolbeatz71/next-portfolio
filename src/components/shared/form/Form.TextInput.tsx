@@ -17,7 +17,7 @@ export function FormTextInput({
                 id={id}
                 type={type}
                 placeholder=""
-                className="peer block border border-zinc-300 dark:border-zinc-400 rounded px-4 pb-2 pt-6 w-full focus:outline-none focus:ring-4 focus:border-indigo-700 dark:focus:border-indigo-300 bg-white dark:bg-slate-600"
+                className="peer block border border-zinc-300 dark:border-zinc-400 rounded px-4 pb-2 pt-6 w-full focus:outline-none focus:ring-4 focus:border-indigo-700 focus:ring-indigo-300 dark:focus:ring-indigo-800 dark:focus:border-indigo-500 bg-white dark:bg-slate-600"
             />
             <label
                 htmlFor="email"

@@ -1,6 +1,7 @@
 import { aboutme } from "@/locales/en/aboutme";
 import { companies } from "@/locales/en/companies";
 import { experience } from "@/locales/en/experience";
+import { footer } from "@/locales/en/footer";
 import { general } from "@/locales/en/general";
 import { hero } from "@/locales/en/hero";
 import { navigation } from "@/locales/en/navigation";
@@ -17,5 +18,6 @@ export default {
     ...experience,
     ...projects,
     ...tabs,
-    ...skills
+    ...skills,
+    ...footer
 };

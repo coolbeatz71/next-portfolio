@@ -18,6 +18,5 @@ export const general = {
     flutter_engineer: "Flutter Engineer",
     flutter_web_engineer: "Flutter Web Engineer",
     ionic_mobile_engineer: "Ionic Mobile Engineer",
-    open: "Open",
-    designed_with: "Designed with"
+    open: "Open"
 };
