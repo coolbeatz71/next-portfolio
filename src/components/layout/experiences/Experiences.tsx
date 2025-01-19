@@ -35,7 +35,7 @@ export default function Experiences(): JSX.Element {
                         className="py-4 px-10"
                         onClick={toggleDrawer}
                     >
-                        {t("viewMore")}
+                        {t("read_more")}
                     </MovingBorderButton>
                 </div>
             </div>

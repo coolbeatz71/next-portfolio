@@ -1,5 +1,5 @@
 export const general = {
-    viewMore: "Voir Plus",
+    read_more: "Lire Plus",
     light_mode: "Mode Clair",
     dark_mode: "Mode Sombre",
     and: "et",
