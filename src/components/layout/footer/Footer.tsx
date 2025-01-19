@@ -1,5 +1,6 @@
 import Spotlight from "@/components/shared/spotlight/Spotlight";
 import FooterContact from "./Footer.Contact";
+import FooterCopyright from "./Footer.Copyright";
 
 export default function Footer(): JSX.Element {
     return (
@@ -21,24 +22,7 @@ export default function Footer(): JSX.Element {
             </div>
             <div className="bg-white dark:bg-slate-800 w-full py-4 relative bottom-0">
                 <p className="text-sm text-center">
-                    <span className="font-semibold">
-                        &copy; {new Date().getFullYear()} Mutombo Jean-Vincent.
-                    </span>{" "}
-                    All Rights Reserved.
-                    <span className="font-light">
-                        {" "}
-                        Designed with Love{" "}
-                        <span className="text-pink-500">❤️</span> and{" "}
-                        <a
-                            href="https://tailwindcss.com"
-                            className="text-indigo-500 hover:underline"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Tailwind CSS
-                        </a>
-                        .
-                    </span>
+                    <FooterCopyright />
                 </p>
             </div>
         </footer>
