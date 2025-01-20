@@ -35,8 +35,8 @@ export function FormTextInput({
                 )}
             />
             <label
-                htmlFor="email"
-                className="text-slate-400 dark:text-slate-100 absolute left-4 top-4 origin-[0] -translate-y-3 scale-75 duration-150 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-90 peer-focus:-translate-y-3 peer-focus:scale-75"
+                htmlFor={id}
+                className={`${isError ? "text-red-500" : "text-slate-400 dark:text-slate-100"} absolute left-4 top-4 origin-[0] -translate-y-3 scale-75 duration-150 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-90 peer-focus:-translate-y-3 peer-focus:scale-75`}
             >
                 {label}
             </label>

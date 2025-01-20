@@ -51,10 +51,19 @@ const config: Config = {
     ],
     theme: {
         animation: {
+            spin: "spin 1s linear infinite",
             shimmer: "shimmer 2s linear infinite",
             spotlight: "spotlight 2s ease .75s 1 forwards"
         },
         keyframes: {
+            spin: {
+                from: {
+                    transform: "rotate(0deg)"
+                },
+                to: {
+                    transform: "rotate(360deg)"
+                }
+            },
             shimmer: {
                 from: {
                     backgroundPosition: "0 0"

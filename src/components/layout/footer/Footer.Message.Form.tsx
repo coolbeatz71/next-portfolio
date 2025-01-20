@@ -32,7 +32,7 @@ export default function FooterMessageForm(): JSX.Element {
     const {
         handleSubmit,
 
-        formState: { isSubmitted, isDirty }
+        formState: { isSubmitted }
     } = form;
 
     const onSave = async (formData: MessageFormData) => {
@@ -59,7 +59,6 @@ export default function FooterMessageForm(): JSX.Element {
 
                     <button
                         type="submit"
-                        disabled={!isDirty || isSubmitted}
                         className="cursor-pointer w-[30%] focus:outline-none text-white bg-indigo-700 hover:bg-indigo-800 focus:ring-4 focus:ring-indigo-300 dark:focus:ring-indigo-800 font-medium rounded text-sm p-4 dark:bg-indigo-500 dark:hover:bg-indigo-700"
                     >
                         {isSubmitted && <SpinnerIcon />}
