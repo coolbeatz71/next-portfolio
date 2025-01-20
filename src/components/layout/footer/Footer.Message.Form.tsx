@@ -1,10 +1,12 @@
 import { FormTextArea } from "@/components/shared/form/Form.TextArea";
 import { FormTextInput } from "@/components/shared/form/Form.TextInput";
-import { SpinnerIcon } from "@/components/shared/icon/Spinner.Icon";
+import emailjs from "@emailjs/browser";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { useRef, useState } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import * as yup from "yup";
+import { SpinnerIcon } from "../../shared/icon/Spinner.Icon";
 
 const schema = yup.object().shape({
     name: yup.string().required("validation.required"),
@@ -22,9 +24,10 @@ export interface MessageFormData {
 }
 
 export default function FooterMessageForm(): JSX.Element {
+    const formRef = useRef<HTMLFormElement>(null);
+    const [isLoading, setIsLoading] = useState(false);
     const { t } = useTranslation();
     const form = useForm<MessageFormData>({
-        mode: "onBlur",
         defaultValues: {
             name: "",
             email: "",
@@ -32,15 +35,30 @@ export default function FooterMessageForm(): JSX.Element {
         },
         resolver: yupResolver(schema)
     });
-    const {
-        handleSubmit,
+    const { handleSubmit, reset } = form;
 
-        formState: { isSubmitted }
-    } = form;
-
-    const onSave = async (formData: MessageFormData) => {
-        console.log("isSubmitted", isSubmitted);
-        console.log("formData", formData);
+    const onSave = async () => {
+        setIsLoading(true);
+        emailjs
+            .sendForm(
+                process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string,
+                process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string,
+                formRef.current as HTMLFormElement,
+                {
+                    publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+                }
+            )
+            .then(
+                () => {
+                    reset();
+                    setIsLoading(false);
+                    console.log("SUCCESS!", formRef.current);
+                },
+                (error) => {
+                    setIsLoading(false);
+                    console.log("FAILED...", error.text);
+                }
+            );
     };
 
     return (
@@ -53,18 +71,34 @@ export default function FooterMessageForm(): JSX.Element {
             </p>
             <FormProvider {...form}>
                 <form
+                    ref={formRef}
                     onSubmit={handleSubmit(onSave)}
                     className="pt-6 w-full flex flex-col gap-4"
                 >
-                    <FormTextInput id="name" type="text" label={t("name")} />
-                    <FormTextInput id="email" type="email" label={t("email")} />
-                    <FormTextArea id="message" label={t("message")} />
+                    <FormTextInput
+                        id="name"
+                        type="text"
+                        label={t("name")}
+                        name="name"
+                    />
+                    <FormTextInput
+                        id="email"
+                        type="email"
+                        label={t("email")}
+                        name="email"
+                    />
+                    <FormTextArea
+                        id="message"
+                        label={t("message")}
+                        name="message"
+                    />
 
                     <button
                         type="submit"
-                        className="cursor-pointer w-[30%] focus:outline-none text-white bg-indigo-700 hover:bg-indigo-800 focus:ring-4 focus:ring-indigo-300 dark:focus:ring-indigo-800 font-medium rounded text-sm p-4 dark:bg-indigo-500 dark:hover:bg-indigo-700"
+                        disabled={isLoading}
+                        className="disabled:cursor-not-allowed disabled:bg-gray-400 disabled:hover:bg-gray-400 cursor-pointer w-[30%] focus:outline-none text-white bg-indigo-700 hover:bg-indigo-800 focus:ring-4 focus:ring-indigo-300 dark:focus:ring-indigo-800 font-medium rounded text-sm p-4 dark:bg-indigo-500 dark:hover:bg-indigo-700"
                     >
-                        {isSubmitted && <SpinnerIcon />}
+                        {isLoading && <SpinnerIcon />}
                         {t("send_message")}
                     </button>
                 </form>

@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 
 export interface FormTextAreaProps {
     id: string;
+    name: string;
     label: string;
     rows?: number;
     className?: string;

@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 
 export interface FormTextInputProps {
     id: string;
+    name: string;
     label: string;
     type: HTMLInputTypeAttribute;
     className?: string;
