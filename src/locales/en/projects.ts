@@ -2,6 +2,7 @@ export const projects = {
     contribution_title: "My Contributions",
     contribution_subtitle:
         "A collection of impactful and innovative projects that highlight my skills, creativity, and passion for solving real-world challenges through technology.",
+    source_code: "Source Code",
     projects_description: {
         storm: "A Digital Asset Management (DAM) system designed to replace Bestseller DAM. It helps to manage images, videos, and 3D assets for all the brands, styles, collections, etc. focusing on speed, stability, and user satisfaction.",
         servicenow:

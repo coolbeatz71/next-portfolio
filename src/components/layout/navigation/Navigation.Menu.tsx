@@ -1,16 +1,7 @@
+import { navigationList } from "@/config/Navigation";
 import NextLink from "next/link";
 import { Fragment, useCallback, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-
-const menuItems = [
-    { label: "introduction", href: "" },
-    { label: "about", href: "#about" },
-    { label: "experience", href: "#experience" },
-    { label: "contribution", href: "#contribution" },
-    { label: "skill", href: "#skill" }
-    //TODO: add articles when medium and dev.to APIs are integrated
-    // { label: "Article", href: "#" }
-];
 
 export default function NavigationMenu(): JSX.Element {
     const { t } = useTranslation();
@@ -33,7 +24,7 @@ export default function NavigationMenu(): JSX.Element {
 
     return (
         <Fragment>
-            {menuItems.map((item) => {
+            {navigationList.map((item) => {
                 const isCurrent = currentItem === item.href;
 
                 return (

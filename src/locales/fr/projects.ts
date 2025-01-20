@@ -2,6 +2,7 @@ export const projects = {
     contribution_title: "Mes contributions",
     contribution_subtitle:
         "Une compilation de projets stylés et impactants, démontrant mon expertise, mon esprit créatif et ma passion pour la résolution de problèmes grâce à la tech.",
+    source_code: "Code Source",
     projects_description: {
         storm: `Un système de gestion des actifs/médias numériques (DAM) conçu pour remplacer le DAM de Bestseller. Il permet de gérer les images, vidéos et ressources 3D pour toutes les marques, styles, collections, etc., en mettant l'accent sur la rapidité, la stabilité et la satisfaction des utilisateurs.`,
         servicenow:

@@ -7,6 +7,7 @@ import BadgeSpan from "@/components/shared/badge/Badge.Span";
 import LitUpBorderButton from "@/components/shared/buttons/litup-border/LitUpBorder.Button";
 import type { ProjectByStack } from "@/config/Projects";
 import { cn } from "@/helpers/mergeClassName";
+import { useTranslation } from "react-i18next";
 import ProjectImageSlider from "./Project.ImageSlider";
 
 export interface ProjectModalProps {
@@ -45,6 +46,7 @@ const Link = ({ href, isVisible, children }: LinkProps): JSX.Element => (
 export default function ProjectModal({
     project
 }: ProjectModalProps): JSX.Element {
+    const { t } = useTranslation();
     const hasLinks = project.hasLiveLink || project.hasSourceCode;
 
     return (
@@ -68,8 +70,8 @@ export default function ProjectModal({
                 )}
             </div>
 
-            <Section title="Role">{project.role}</Section>
-            <Section title="Description">{project.description}</Section>
+            <Section title="Role">{t(project.role)}</Section>
+            <Section title="Description">{t(project.description)}</Section>
 
             <div
                 className={`flex flex-wrap gap-1 pt-4 ${hasLinks ? "pb-8" : ""}`}
@@ -91,8 +93,8 @@ export default function ProjectModal({
                                 className="py-2 text-sm font-medium text-gray-500 focus:outline-none rounded hover:text-slate-900 dark:text-gray-400 dark:hover:text-white"
                             >
                                 <div className="flex justify-center items-center text-sm font-medium">
-                                    <FaCodeBranch className="mr-2 h-3 w-3" />
-                                    View Source
+                                    <FaCodeBranch className="mr-1 h-3 w-3" />
+                                    {t("source_code")}
                                 </div>
                             </button>
                         </Link>
@@ -104,7 +106,7 @@ export default function ProjectModal({
                             <LitUpBorderButton className="w-32 p-0.5">
                                 <div className="flex justify-center items-center text-sm font-medium">
                                     <FaArrowUpRightFromSquare className="mr-2 h-3 w-3" />
-                                    Visit
+                                    {t("open")}
                                 </div>
                             </LitUpBorderButton>
                         </Link>

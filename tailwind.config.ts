@@ -51,10 +51,19 @@ const config: Config = {
     ],
     theme: {
         animation: {
+            spin: "spin 1s linear infinite",
             shimmer: "shimmer 2s linear infinite",
             spotlight: "spotlight 2s ease .75s 1 forwards"
         },
         keyframes: {
+            spin: {
+                from: {
+                    transform: "rotate(0deg)"
+                },
+                to: {
+                    transform: "rotate(360deg)"
+                }
+            },
             shimmer: {
                 from: {
                     backgroundPosition: "0 0"
@@ -88,6 +97,8 @@ const config: Config = {
                 github: "#000000",
                 github_dark: "#ffffff",
                 linkedin: "#0077B5",
+                youtube: "#CD201F",
+                instagram: "#C7507C",
                 light: "rgb(226 232 240)",
                 dark: "rgb(30 41 59)"
             },
