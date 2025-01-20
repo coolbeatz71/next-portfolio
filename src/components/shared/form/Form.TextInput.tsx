@@ -43,7 +43,7 @@ export function FormTextInput({
                 {label}
             </label>
             {errors[name] && (
-                <p className="text-pink-500 text-sm mt-1">
+                <p className="text-pink-500 text-sm my-1">
                     {t(errorMessage, { label })}
                 </p>
             )}

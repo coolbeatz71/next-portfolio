@@ -7,7 +7,7 @@ export default function FooterContact(): JSX.Element {
     const { t } = useTranslation();
     return (
         <div className="flex flex-col items-start gap-2">
-            <h3 className="text-xl font-bold text-slate-700 dark:text-slate-300">
+            <h3 className="text-2xl font-bold text-slate-700 dark:text-slate-300">
                 {t("address")}
             </h3>
             <span className="text-gray-500 dark:text-gray-400 flex justify-between items-center gap-2">

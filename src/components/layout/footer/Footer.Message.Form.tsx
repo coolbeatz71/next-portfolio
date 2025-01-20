@@ -76,7 +76,7 @@ export default function FooterMessageForm(): JSX.Element {
                 <form
                     ref={formRef}
                     onSubmit={handleSubmit(onSave)}
-                    className="pt-6 w-full flex flex-col gap-4"
+                    className="pt-6 w-full flex flex-col gap-3"
                 >
                     <FormTextInput type="text" label={t("name")} name="name" />
                     <FormTextInput
