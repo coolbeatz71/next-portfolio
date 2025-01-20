@@ -14,5 +14,9 @@ export const footer = {
     validation: {
         required: "{{label}} is a required field",
         invalid_email: "{{label}} has an invalid format"
+    },
+    toast: {
+        success: "Your message has been sent successfully! 🎉",
+        error: "Failed to send message. Please try again later! 😞"
     }
 };

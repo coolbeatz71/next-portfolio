@@ -1,6 +1,6 @@
 import { FormTextArea } from "@/components/shared/form/Form.TextArea";
 import { FormTextInput } from "@/components/shared/form/Form.TextInput";
-import emailjs, { type EmailJSResponseStatus } from "@emailjs/browser";
+import emailjs from "@emailjs/browser";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useRef, useState } from "react";
 import { FormProvider, useForm } from "react-hook-form";
@@ -18,6 +18,13 @@ const schema = yup.object().shape({
         .email("validation.invalid_email")
         .required("validation.required"),
     message: yup.string().required("validation.required")
+});
+
+const getToastStyle = (background: string) => ({
+    background,
+    color: "white",
+    maxWidth: "40rem",
+    borderRadius: "0.35rem"
 });
 
 export interface MessageFormData {
@@ -53,10 +60,10 @@ export default function FooterMessageForm(): JSX.Element {
                 }
             );
             reset();
-            toast.success("Your message has been sent successfully! 🎉");
-        } catch (error: unknown) {
-            toast.error("Failed to send message. Please try again later! 😞");
-            console.log("FAILED...", (error as EmailJSResponseStatus).text);
+            toast.success(t("toast.success"));
+        } catch (error) {
+            toast.error(t("toast.error"));
+            console.log("FAILED...", error);
         } finally {
             setIsLoading(false);
         }
@@ -78,29 +85,19 @@ export default function FooterMessageForm(): JSX.Element {
                         name="email"
                     />
                     <FormTextArea label={t("message")} name="message" />
-
                     <FormSubmitButton isLoading={isLoading} />
                 </form>
             </FormProvider>
             <Toaster
                 toastOptions={{
-                    duration: 500000,
-                    removeDelay: 500000,
+                    duration: 3000,
+                    removeDelay: 3000,
                     position: "bottom-center",
                     success: {
-                        style: {
-                            color: "white",
-                            background: "#0f766e",
-                            maxWidth: "30rem",
-                            borderRadius: "0.35rem"
-                        }
+                        style: getToastStyle("#0f766e")
                     },
                     error: {
-                        style: {
-                            color: "white",
-                            background: "#be185d",
-                            maxWidth: "30rem"
-                        }
+                        style: getToastStyle("#be185d")
                     }
                 }}
             />
