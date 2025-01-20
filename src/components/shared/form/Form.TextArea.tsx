@@ -1,5 +1,6 @@
 import { cn } from "@/helpers/mergeClassName";
 import { useFormContext } from "react-hook-form";
+import { useTranslation } from "react-i18next";
 
 export interface FormTextAreaProps {
     id: string;
@@ -14,12 +15,14 @@ export function FormTextArea({
     rows = 4,
     className
 }: FormTextAreaProps): JSX.Element {
+    const { t } = useTranslation();
     const {
         register,
         formState: { errors }
     } = useFormContext();
 
     const isError = errors[id];
+    const errorMessage = String(errors[id]?.message);
 
     return (
         <div className="relative">
@@ -35,13 +38,13 @@ export function FormTextArea({
             />
             <label
                 htmlFor={id}
-                className={`${isError ? "text-pink-500" : "text-slate-400 dark:text-slate-100"} absolute left-4 top-4 origin-[0] -translate-y-3 scale-75 duration-150 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-90 peer-focus:-translate-y-3 peer-focus:scale-75`}
+                className={`${isError ? "text-pink-500" : "text-slate-400 dark:text-slate-100"} absolute left-4 top-4 origin-[0] -translate-y-3 scale-75 duration-150 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-90 peer-focus:-translate-y-3 peer-focus:scale-75 first-letter:uppercase`}
             >
                 {label}
             </label>
             {errors[id] && (
-                <p className="text-pink-500 text-sm mt-1 first-letter:uppercase">
-                    {String(errors[id]?.message)}
+                <p className="text-pink-500 text-sm mt-1">
+                    {t(errorMessage, { label })}
                 </p>
             )}
         </div>

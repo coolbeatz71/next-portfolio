@@ -7,9 +7,12 @@ import { useTranslation } from "react-i18next";
 import * as yup from "yup";
 
 const schema = yup.object().shape({
-    name: yup.string().required(),
-    email: yup.string().email().required(),
-    message: yup.string().required()
+    name: yup.string().required("validation.required"),
+    email: yup
+        .string()
+        .email("validation.invalid_email")
+        .required("validation.required"),
+    message: yup.string().required("validation.required")
 });
 
 export interface MessageFormData {
@@ -53,9 +56,9 @@ export default function FooterMessageForm(): JSX.Element {
                     onSubmit={handleSubmit(onSave)}
                     className="pt-6 w-full flex flex-col gap-4"
                 >
-                    <FormTextInput id="name" type="text" label="Name" />
-                    <FormTextInput id="email" type="email" label="Email" />
-                    <FormTextArea id="message" label="Message" />
+                    <FormTextInput id="name" type="text" label={t("name")} />
+                    <FormTextInput id="email" type="email" label={t("email")} />
+                    <FormTextArea id="message" label={t("message")} />
 
                     <button
                         type="submit"
