@@ -6,7 +6,10 @@ import FooterSocialLink from "./Footer.SocialLink";
 
 export default function Footer(): JSX.Element {
     return (
-        <footer className="bg-slate-100 dark:bg-slate-700 relative">
+        <footer
+            id="contact"
+            className="bg-slate-100 dark:bg-slate-700 relative scroll-mt-24"
+        >
             <div className="mx-auto max-w-7xl relative bottom-0">
                 <div className="grid grid-cols-1 xl:grid-cols-2 items-start py-24 gap-12">
                     <div className="flex flex-col gap-8 border-r border-slate-200 dark:border-slate-600">
@@ -21,9 +24,7 @@ export default function Footer(): JSX.Element {
                 </div>
             </div>
             <div className="bg-white dark:bg-slate-800 w-full py-4 relative bottom-0">
-                <p className="text-sm text-center">
-                    <FooterCopyright />
-                </p>
+                <FooterCopyright />
             </div>
         </footer>
     );

@@ -6,7 +6,6 @@ import { FaArrowUpRightFromSquare, FaCodeBranch } from "react-icons/fa6";
 import BadgeSpan from "@/components/shared/badge/Badge.Span";
 import LitUpBorderButton from "@/components/shared/buttons/litup-border/LitUpBorder.Button";
 import type { ProjectByStack } from "@/config/Projects";
-import { cn } from "@/helpers/mergeClassName";
 import { useTranslation } from "react-i18next";
 import ProjectImageSlider from "./Project.ImageSlider";
 
@@ -32,16 +31,14 @@ interface LinkProps {
     isVisible: boolean;
     children: ReactNode;
 }
-const Link = ({ href, isVisible, children }: LinkProps): JSX.Element => (
-    <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href={href || ""}
-        className={cn(!isVisible && "hidden")}
-    >
-        <div>{children}</div>
-    </a>
-);
+const Link = ({ href, isVisible, children }: LinkProps): JSX.Element =>
+    isVisible ? (
+        <a target="_blank" rel="noopener noreferrer" href={href || ""}>
+            <div>{children}</div>
+        </a>
+    ) : (
+        <div className="hidden" />
+    );
 
 export default function ProjectModal({
     project

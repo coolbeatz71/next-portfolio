@@ -1,7 +1,6 @@
 import BadgeSpan from "@/components/shared/badge/Badge.Span";
 import LitUpBorderButton from "@/components/shared/buttons/litup-border/LitUpBorder.Button";
 import type { ProjectByStack } from "@/config/Projects";
-import { cn } from "@/helpers/mergeClassName";
 import { type Variants, motion } from "framer-motion";
 import dynamic from "next/dynamic";
 import NextImage from "next/image";
@@ -87,21 +86,22 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                                     ))}
                                 </div>
                             </div>
-                            <a
-                                target="_blank"
-                                href={project.liveLink}
-                                rel="noopener noreferrer"
-                                className={cn(
-                                    !project.hasLiveLink && "invisible"
-                                )}
-                            >
-                                <LitUpBorderButton className="w-32 p-0.5">
-                                    <div className="flex justify-center items-center text-sm font-medium">
-                                        <FaArrowUpRightFromSquare className="mr-2 h-3 w-3" />
-                                        {t("open")}
-                                    </div>
-                                </LitUpBorderButton>
-                            </a>
+                            {project.hasLiveLink ? (
+                                <a
+                                    target="_blank"
+                                    href={project.liveLink}
+                                    rel="noopener noreferrer"
+                                >
+                                    <LitUpBorderButton className="w-32 p-0.5">
+                                        <div className="flex justify-center items-center text-sm font-medium">
+                                            <FaArrowUpRightFromSquare className="mr-2 h-3 w-3" />
+                                            {t("open")}
+                                        </div>
+                                    </LitUpBorderButton>
+                                </a>
+                            ) : (
+                                <div className="invisible p-[1.1rem]" />
+                            )}
                         </div>
                     </div>
                 </div>

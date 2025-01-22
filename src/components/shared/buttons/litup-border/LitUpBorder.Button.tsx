@@ -1,7 +1,8 @@
 import { cn } from "@/helpers/mergeClassName";
+import type { ReactNode } from "react";
 
 export interface LitUpBorderButtonProps {
-    children: React.ReactNode;
+    children: ReactNode;
     className?: string;
 }
 export default function LitUpBorderButton({
