@@ -12,7 +12,7 @@ export default function Document() {
                 />
                 <meta
                     name="description"
-                    content="Meet Mutombo Jean-vincent"
+                    content="Discover the professional journey and achievements of Mutombo Jean-vincent. Explore his portfolio, projects, and career highlights."
                     key="description"
                 />
 
