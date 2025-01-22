@@ -21,9 +21,7 @@ export default function Footer(): JSX.Element {
                 </div>
             </div>
             <div className="bg-white dark:bg-slate-800 w-full py-4 relative bottom-0">
-                <p className="text-sm text-center">
-                    <FooterCopyright />
-                </p>
+                <FooterCopyright />
             </div>
         </footer>
     );
