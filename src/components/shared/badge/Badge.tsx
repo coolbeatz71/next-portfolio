@@ -41,7 +41,7 @@ export default function Badge({
                     />
                     {endCountText}
                 </div>
-                <div className="max-w-[100px] leading-none text-[11pt] font-medium text-slate-700 dark:text-slate-300">
+                <div className="max-w-[100px] leading-none text-[10pt] font-medium text-slate-700 dark:text-slate-300">
                     {badgeText}
                 </div>
             </div>
