@@ -50,7 +50,7 @@ export default function Hero(): JSX.Element {
                         />
                     ))}
 
-                    <HeroImage className="bg-no-repeat relative -bottom-2" />
+                    <HeroImage className="bg-no-repeat relative" />
 
                     {devToolsLogoList.map((badge) => (
                         <BadgeDevTools

@@ -30,14 +30,15 @@ export default function HeroImage({ className }: HeroImageProps): JSX.Element {
 
     return (
         <div className="relative flex items-center justify-end">
-            <HeroImageBackground className="w-[480px] h-[360px] right-0" />
+            <HeroImageBackground className="w-[480px] h-[320px] right-0" />
 
-            <div className={cn(className, "w-[480px] h-[480px] left-12")}>
+            <div className={cn(className, "w-[480px] h-[480px] left-20")}>
                 <NextImage
-                    priority
-                    width={450}
+                    quality={90}
+                    width={400}
                     height={100}
                     alt="profile"
+                    loading="lazy"
                     src="/hero/me.png"
                 />
             </div>
