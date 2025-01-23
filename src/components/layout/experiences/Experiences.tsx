@@ -6,14 +6,19 @@ import SectionHeader from "@/components/shared/section-header/SectionHeader";
 import { Timeline } from "@/components/shared/timeline/Timeline";
 import { TimelineFull } from "@/components/shared/timeline/Timeline.Full";
 import { experienceTimeline } from "@/config/WorkExperience";
+import dynamic from "next/dynamic";
 import { useTranslation } from "react-i18next";
+
+const DynamicTooltip = dynamic(() => import("./../../shared/tooltip/Tooltip"), {
+    ssr: false
+});
 
 export default function Experiences(): JSX.Element {
     const { t } = useTranslation();
     const [isOpen, setIsOpen] = useState(false);
 
-    const headerClassName = "mt-4 !text-sm mb-0";
     const bodyClassName = "!text-sm mt-4";
+    const headerClassName = "mt-4 !text-sm mb-0";
 
     const toggleDrawer = () => {
         setIsOpen(!isOpen);
@@ -31,12 +36,14 @@ export default function Experiences(): JSX.Element {
                 />
                 <Timeline data={experienceTimeline().slice(0, 5)} />
                 <div className="flex justify-center w-full">
-                    <MovingBorderButton
-                        className="py-4 px-10"
-                        onClick={toggleDrawer}
-                    >
-                        {t("read_more")}
-                    </MovingBorderButton>
+                    <DynamicTooltip text={t("view_more_experience")}>
+                        <MovingBorderButton
+                            className="py-4 px-10"
+                            onClick={toggleDrawer}
+                        >
+                            {t("read_more")}
+                        </MovingBorderButton>
+                    </DynamicTooltip>
                 </div>
             </div>
 

@@ -1,5 +1,6 @@
 export const general = {
     read_more: "Read More",
+    view_more_experience: "View More Experience",
     light_mode: "Light Mode",
     dark_mode: "Dark Mode",
     and: "and",
