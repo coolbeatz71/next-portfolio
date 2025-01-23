@@ -1,5 +1,5 @@
+import TabBar from "@/components/layout/tab-bar/TabBar";
 import SectionHeader from "@/components/shared/section-header/SectionHeader";
-import TabBar from "@/components/shared/tab-bar/TabBar";
 import { devStackTabs } from "@/config/DevStack";
 import { mainStackList } from "@/config/DevStack.Main";
 import NextImage from "next/image";
