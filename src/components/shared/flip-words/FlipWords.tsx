@@ -53,7 +53,7 @@ export default function FlipWords({
                     opacity: 0,
                     y: -40,
                     x: 40,
-                    filter: "blur(8px)",
+                    filter: "blur(240px)",
                     scale: 2,
                     position: "absolute"
                 }}
@@ -67,8 +67,8 @@ export default function FlipWords({
                     <motion.span
                         // biome-ignore lint/suspicious/noArrayIndexKey: need to use index as key
                         key={word + wordIndex}
-                        initial={{ opacity: 0, y: 10, filter: "blur(8px)" }}
-                        animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
                         transition={{
                             delay: wordIndex * 0.3,
                             duration: 0.3
@@ -81,13 +81,11 @@ export default function FlipWords({
                                 key={word + letterIndex}
                                 initial={{
                                     opacity: 0,
-                                    y: 10,
-                                    filter: "blur(250px)"
+                                    y: 10
                                 }}
                                 animate={{
                                     opacity: 1,
-                                    y: 0,
-                                    filter: "blur(0px)"
+                                    y: 0
                                 }}
                                 transition={{
                                     delay: wordIndex * 0.3 + letterIndex * 0.05,
