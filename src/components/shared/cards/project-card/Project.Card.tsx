@@ -92,8 +92,8 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                                     href={project.liveLink}
                                     rel="noopener noreferrer"
                                 >
-                                    <LitUpBorderButton className="w-32 p-0.5">
-                                        <div className="flex justify-center items-center text-sm font-medium">
+                                    <LitUpBorderButton className="w-32 p-[3.5px]">
+                                        <div className="flex justify-center items-center text-[10pt] font-medium">
                                             <FaArrowUpRightFromSquare className="mr-2 h-3 w-3" />
                                             {t("open")}
                                         </div>
