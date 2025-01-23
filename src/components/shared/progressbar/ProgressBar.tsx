@@ -19,7 +19,7 @@ export default function ProgressBar({
         <section ref={ref}>
             <div className="flex items-end justify-between">
                 <BadgeSpan text={title} />
-                <span className="h-8 w-8 rounded relative">
+                <span className="h-8 w-8 rounded-lg relative">
                     {/* dark image */}
                     <NextImage
                         fill
@@ -37,9 +37,9 @@ export default function ProgressBar({
                 </span>
             </div>
 
-            <div className="w-full bg-indigo-300/20 h-6 mb-6 mt-1.5 rounded-md">
+            <div className="w-full bg-indigo-300/20 h-6 mb-6 mt-1.5 rounded-lg">
                 <motion.div
-                    className="bg-indigo-700 dark:bg-indigo-500 h-6 rounded-md"
+                    className="bg-indigo-700 dark:bg-indigo-500 h-6 rounded-lg"
                     initial={{ width: 0 }}
                     animate={{ width: inView ? `${progress}%` : 0 }}
                     transition={{ duration: 0.5 }}

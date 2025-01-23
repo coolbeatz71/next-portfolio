@@ -41,7 +41,7 @@ export default function LanguageDropDown(): JSX.Element {
             <div>
                 <button
                     type="button"
-                    className="rounded-md flex items-center justify-center p-[0.85rem] text-gray-900 bg-white border border-gray-300 hover:bg-gray-100 text-sm dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+                    className="rounded-lg flex items-center justify-center p-[0.85rem] text-gray-900 bg-white border border-gray-300 hover:bg-gray-100 text-sm dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
                     onClick={toggleDropdown}
                 >
                     <span className="mr-2 h-5 w-5 flex items-center justify-center flex-shrink-0">
@@ -58,14 +58,14 @@ export default function LanguageDropDown(): JSX.Element {
             </div>
 
             {isOpen && (
-                <div className=" z-10 origin-top-right absolute p-1 right-0 mt-1 w-40 rounded-md shadow-xl bg-white dark:bg-slate-600">
+                <div className=" z-10 origin-top-right absolute p-1 right-0 mt-1 w-40 rounded-lg shadow-xl bg-white dark:bg-slate-600">
                     <div className="py-1" aria-labelledby="options-menu">
                         {languageList.map((lang) => (
                             <button
                                 type="button"
                                 key={lang.code}
                                 onClick={() => updateLanguage(lang.code)}
-                                className="rounded-md flex items-center px-3 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-slate-200 dark:hover:bg-slate-700 w-full text-left"
+                                className="rounded-lg flex items-center px-3 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-slate-200 dark:hover:bg-slate-700 w-full text-left"
                                 role="menuitem"
                             >
                                 <span className="mr-2 h-5 w-5 flex items-center justify-center flex-shrink-0">

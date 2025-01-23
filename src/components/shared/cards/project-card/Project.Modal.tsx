@@ -60,7 +60,7 @@ export default function ProjectModal({
                         height={300}
                         src={project.images[0].src}
                         alt={project.images[0].alt}
-                        className="object-cover rounded-md w-full h-72"
+                        className="object-cover rounded-lg w-full h-72"
                         loading="lazy"
                         unoptimized
                     />
@@ -87,7 +87,7 @@ export default function ProjectModal({
                         >
                             <button
                                 type="button"
-                                className="py-2 text-sm font-medium text-gray-500 focus:outline-none rounded hover:text-slate-900 dark:text-gray-400 dark:hover:text-white"
+                                className="py-2 text-sm font-medium text-gray-500 focus:outline-none rounded-lg hover:text-slate-900 dark:text-gray-400 dark:hover:text-white"
                             >
                                 <div className="flex justify-center items-center text-sm font-medium">
                                     <FaCodeBranch className="mr-1 h-3 w-3" />
