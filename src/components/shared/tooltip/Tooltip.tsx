@@ -73,7 +73,7 @@ export default function Tooltip({ children, text }: TooltipProps): JSX.Element {
             {children}
             <span
                 ref={tooltipRef}
-                className={`absolute z-50 ${positionClasses[position]} group-hover:inline-block w-max bg-gray-700 bg-opacity-70 text-white text-xs rounded py-1 px-2 transition-opacity duration-500 delay-100 opacity-0 group-hover:opacity-100`}
+                className={`absolute z-50 ${positionClasses[position]} group-hover:inline-block w-max bg-gray-700 bg-opacity-70 text-white text-xs rounded py-1 px-2 transition-opacity duration-500 delay-100 opacity-0 group-hover:opacity-100 backdrop-blur-sm`}
             >
                 {text}
                 <span className={`absolute ${arrowClasses[position]}`} />
