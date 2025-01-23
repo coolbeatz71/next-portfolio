@@ -1,5 +1,6 @@
 import HomeContainer from "@/components/container/home/HomeContainer";
-import { useEffect, useState } from "react";
+import Head from "next/head";
+import { Fragment, useEffect, useState } from "react";
 
 const IndexPage = (): JSX.Element => {
     const [isClient, setIsClient] = useState(false);
@@ -8,7 +9,15 @@ const IndexPage = (): JSX.Element => {
         setIsClient(true);
     }, []);
 
-    return <>{isClient && <HomeContainer />}</>;
+    return (
+        <Fragment>
+            <Head>
+                <title>Meet | Mutombo Jean-vincent</title>
+            </Head>
+
+            {isClient && <HomeContainer />}
+        </Fragment>
+    );
 };
 
 export default IndexPage;

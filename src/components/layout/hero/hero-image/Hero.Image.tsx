@@ -34,12 +34,13 @@ export default function HeroImage({ className }: HeroImageProps): JSX.Element {
 
             <div className={cn(className, "w-[480px] h-[480px] left-20")}>
                 <NextImage
+                    priority
                     quality={90}
-                    width={400}
+                    width={380}
                     height={100}
                     alt="profile"
-                    loading="lazy"
                     src="/hero/me.png"
+                    className="w-auto h-auto"
                 />
             </div>
 
