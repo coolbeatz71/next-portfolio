@@ -13,7 +13,7 @@ import HeroImage from "./hero-image/Hero.Image";
 export default function Hero(): JSX.Element {
     const { t } = useTranslation();
     return (
-        <div className="mx-auto max-w-7xl">
+        <div className="mx-auto max-w-7xl" id="hero">
             <Spotlight />
             <div className="grid grid-cols-1 xl:grid-cols-2 items-center py-10">
                 <div className="flex flex-col items-start xl:px-0 px-8">
