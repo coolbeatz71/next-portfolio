@@ -17,11 +17,10 @@ export default function Navigation(): JSX.Element {
 
     return (
         <nav
-            id=""
             className={`sticky top-0 z-20 transition duration-100 ${scrollY > 20 ? "dark:bg-slate-800/70 bg-slate-200/70 backdrop-blur-lg shadow" : ""}`}
         >
-            <div className="mx-auto max-w-7xl">
-                <div className="relative flex sm:h-24 h-20  items-center justify-between">
+            <div className="mx-auto max-w-sm sm:max-w-sm lg:max-w-7xl">
+                <div className="relative flex py-3 items-center justify-between">
                     <div className="inset-y-0 left-0 flex items-center sm:hidden">
                         <HamburgerMenuButton />
                     </div>
@@ -34,8 +33,8 @@ export default function Navigation(): JSX.Element {
                         </div>
                     </div>
                     <div className="inset-y-0 right-0 flex items-center sm:static sm:inset-auto sm:ml-6 sm:pr-0 gap-2">
-                        <ThemeToggle />
                         <LanguageDropDown />
+                        <ThemeToggle />
                     </div>
                 </div>
             </div>
