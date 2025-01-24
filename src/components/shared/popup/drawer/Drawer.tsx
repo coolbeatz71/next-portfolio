@@ -13,6 +13,7 @@ export interface DrawerProps {
     onToggle: () => void;
     children: ReactNode;
     className?: string;
+    position?: "right" | "left";
 }
 
 export default function Drawer({
@@ -20,9 +21,16 @@ export default function Drawer({
     isOpen,
     onToggle,
     children,
-    className
+    className,
+    position = "right"
 }: DrawerProps): JSX.Element {
     useLockBodyScroll(isOpen);
+    const getTranslateValue = (): string => {
+        if (isOpen) {
+            return position === "right" ? "translate-x-0" : "-translate-x-0";
+        }
+        return position === "right" ? "translate-x-full" : "-translate-x-full";
+    };
 
     return (
         <Fragment>
@@ -30,10 +38,8 @@ export default function Drawer({
 
             <div
                 className={cn(
-                    `fixed top-0 right-0 z-50 w-[50%] h-full bg-light dark:bg-dark shadow-lg
-                transition-transform transform ${
-                    isOpen ? "translate-x-0" : "translate-x-full"
-                }`,
+                    `fixed top-0 ${position}-0 z-50 w-[50%] h-full bg-light dark:bg-dark shadow-lg
+                transition-transform transform ${getTranslateValue()}`,
                     className
                 )}
             >
