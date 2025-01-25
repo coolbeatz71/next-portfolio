@@ -25,11 +25,10 @@ export default function Drawer({
     position = "right"
 }: DrawerProps): JSX.Element {
     useLockBodyScroll(isOpen);
+
     const getTranslateValue = (): string => {
-        if (isOpen) {
-            return position === "right" ? "translate-x-0" : "-translate-x-0";
-        }
-        return position === "right" ? "translate-x-full" : "-translate-x-full";
+        const base = position === "right" ? "translate-x" : "-translate-x";
+        return `${base}${isOpen ? "-0" : "-full"}`;
     };
 
     return (
