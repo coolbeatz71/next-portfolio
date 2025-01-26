@@ -8,7 +8,7 @@ import PopupCloseButton from "../Popup.Close.Button";
 import PopupHeader from "../Popup.Header";
 
 export interface DrawerProps {
-    title: string;
+    header: ReactNode;
     isOpen: boolean;
     onToggle: () => void;
     children: ReactNode;
@@ -17,7 +17,7 @@ export interface DrawerProps {
 }
 
 export default function Drawer({
-    title,
+    header,
     isOpen,
     onToggle,
     children,
@@ -27,8 +27,11 @@ export default function Drawer({
     useLockBodyScroll(isOpen);
 
     const getTranslateValue = (): string => {
-        const base = position === "right" ? "translate-x" : "-translate-x";
-        return `${base}${isOpen ? "-0" : "-full"}`;
+        const toggle = {
+            open: { right: "translate-x-0", left: "-translate-x-0" },
+            closed: { right: "translate-x-full", left: "-translate-x-full" }
+        };
+        return isOpen ? toggle.open[position] : toggle.closed[position];
     };
 
     return (
@@ -43,7 +46,7 @@ export default function Drawer({
                 )}
             >
                 <div className="p-4">
-                    <PopupHeader>{title}</PopupHeader>
+                    <PopupHeader>{header}</PopupHeader>
 
                     <PopupCloseButton onClick={onToggle} />
 

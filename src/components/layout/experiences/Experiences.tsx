@@ -13,6 +13,14 @@ const DynamicTooltip = dynamic(() => import("./../../shared/tooltip/Tooltip"), {
     ssr: false
 });
 
+function HeaderDrawer(): JSX.Element {
+    const { t } = useTranslation();
+
+    return (
+        <h2 className="text-xl font-semibold mb-4">{t("work_experience")}</h2>
+    );
+}
+
 export default function Experiences(): JSX.Element {
     const { t } = useTranslation();
     const [isOpen, setIsOpen] = useState(false);
@@ -49,7 +57,7 @@ export default function Experiences(): JSX.Element {
 
             <Drawer
                 isOpen={isOpen}
-                title={t("work_experience")}
+                header={<HeaderDrawer />}
                 onToggle={toggleDrawer}
             >
                 <TimelineFull
