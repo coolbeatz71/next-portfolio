@@ -16,13 +16,13 @@ export default function SideMenu({
         <Drawer
             isOpen={isOpen}
             position="left"
-            className="w-[80%]"
+            className="w-[90%] sm:w-[60%] md:w-[40%]"
             onToggle={toggleDrawer}
             header={<SideMenuHeader />}
             footer={<SideMenuFooter />}
         >
             <div className="flex flex-col items-start gap-1">
-                <NavigationMenu onClick={toggleDrawer} className="w-full p-4" />
+                <NavigationMenu onClick={toggleDrawer} className="w-full p-3" />
             </div>
         </Drawer>
     );
