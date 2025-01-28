@@ -33,7 +33,7 @@ export default function Navigation(): JSX.Element {
                         </div>
                     </div>
                     <div className="inset-y-0 right-0 flex items-center justify-center gap-3">
-                        <LanguageDropDown />
+                        <LanguageDropDown placement="bottom" />
                         <ThemeToggle />
                     </div>
                 </div>

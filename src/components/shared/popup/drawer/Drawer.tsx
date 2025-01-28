@@ -5,10 +5,12 @@ import { useLockBodyScroll } from "react-use";
 import { cn } from "@/helpers/mergeClassName";
 import PopupBackdrop from "../Popup.Backdrop";
 import PopupCloseButton from "../Popup.Close.Button";
+import PopupFooter from "../Popup.Footer";
 import PopupHeader from "../Popup.Header";
 
 export interface DrawerProps {
     header: ReactNode;
+    footer?: ReactNode;
     isOpen: boolean;
     onToggle: () => void;
     children: ReactNode;
@@ -18,6 +20,7 @@ export interface DrawerProps {
 
 export default function Drawer({
     header,
+    footer,
     isOpen,
     onToggle,
     children,
@@ -40,17 +43,19 @@ export default function Drawer({
 
             <div
                 className={cn(
-                    `fixed top-0 ${position}-0 z-50 w-[50%] h-full bg-light dark:bg-dark shadow-lg
+                    `fixed top-0 ${position}-0 z-50 w-[50%] h-full bg-light dark:bg-dark
                 transition-transform transform ${getTranslateValue()}`,
                     className
                 )}
             >
-                <div className="p-4">
+                <div className="p-4 flex flex-col justify-between h-full">
                     <PopupHeader>{header}</PopupHeader>
 
                     <PopupCloseButton onClick={onToggle} />
 
-                    <div className="py-4">{children}</div>
+                    <div>{children}</div>
+
+                    {footer && <PopupFooter>{footer}</PopupFooter>}
                 </div>
             </div>
         </Fragment>
