@@ -5,6 +5,7 @@ import HamburgerMenuButton from "@/components/shared/hamburger-menu/HamburgerMen
 import LanguageDropDown from "@/components/shared/language-dropdown/LanguageDropDown";
 import Logo from "@/components/shared/logo/Logo";
 import ThemeToggle from "@/components/shared/theme-toggle/ThemeToggle";
+import { RESPONSIVE_CLASSNAME } from "@/config/ThemeStyle";
 import { useEffect, useState } from "react";
 
 export default function Navigation(): JSX.Element {
@@ -19,8 +20,8 @@ export default function Navigation(): JSX.Element {
         <nav
             className={`sticky top-0 z-20 transition duration-100 ${scrollY > 20 ? "dark:bg-slate-800/70 bg-slate-200/70 backdrop-blur-lg shadow" : ""}`}
         >
-            <div className="mx-auto px-2 sm:px-2 md:px-4 lg:px-24 xl:px-32 2xl:px-32">
-                <div className="relative flex py-3 items-center justify-between gap-3">
+            <div className={RESPONSIVE_CLASSNAME}>
+                <div className="relative flex py-3 lg:py-5 items-center justify-between gap-3">
                     <div className="inset-y-0 left-0 flex items-center lg:hidden">
                         <HamburgerMenuButton />
                     </div>

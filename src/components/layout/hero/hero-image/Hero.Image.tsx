@@ -30,9 +30,14 @@ export default function HeroImage({ className }: HeroImageProps): JSX.Element {
 
     return (
         <div className="relative flex items-center justify-end">
-            <HeroImageBackground className="w-[480px] h-[320px] right-0" />
+            <HeroImageBackground className="w-[360px] h-[320px] xl:w-[480px] xl:h-[320px] right-0" />
 
-            <div className={cn(className, "w-[480px] h-[480px] left-20")}>
+            <div
+                className={cn(
+                    className,
+                    "w-[320px] h-[380px] xl:w-[480px] xl:h-[480px] left-0 lg:left-20"
+                )}
+            >
                 <NextImage
                     priority
                     quality={90}
@@ -41,11 +46,12 @@ export default function HeroImage({ className }: HeroImageProps): JSX.Element {
                     alt="profile"
                     src="/hero/me.png"
                     className="w-auto h-auto"
+                    sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, (max-width: 1024px) 100vw, 480px"
                 />
             </div>
 
             <AnimatedShape
-                className="absolute top-0 left-0 w-32 h-32 rounded-full bg-gradient-to-r from-amber-500/80 to-orange-500/50"
+                className="absolute top-0 left-0 w-24 h-24 lg:w-32 lg:h-32 rounded-full bg-gradient-to-r from-amber-500/80 to-orange-500/50"
                 animate={floatAnimation}
                 transition={transition}
             />

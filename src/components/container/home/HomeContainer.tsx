@@ -1,3 +1,4 @@
+import Hero from "@/components/layout/hero/Hero";
 import Navigation from "@/components/layout/navigation/Navigation";
 import { Fragment } from "react";
 
@@ -11,7 +12,8 @@ export default function HomeContainer(): JSX.Element {
             </Fragment> */}
 
             <Navigation />
-            {/* <Hero />
+            <Hero />
+            {/*
             <Companies />
             <AboutMe />
             <Experiences />
