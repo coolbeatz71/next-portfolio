@@ -9,7 +9,13 @@ import { isServer } from "@/helpers/isServer";
 import locales from "@/locales";
 import { useClickAway } from "react-use";
 
-export default function LanguageDropDown(): JSX.Element {
+export interface LanguageDropDownProps {
+    placement: "top" | "bottom";
+}
+
+export default function LanguageDropDown({
+    placement
+}: LanguageDropDownProps): JSX.Element {
     const ref = useRef(null);
     const { i18n } = useTranslation();
     const [isOpen, setIsOpen] = useState(false);
@@ -36,6 +42,11 @@ export default function LanguageDropDown(): JSX.Element {
         languageList.find((lang) => lang.code === i18n.language) ||
         languageList[0];
 
+    const getPlacement = (): string => {
+        if (placement === "bottom") return "top-12";
+        return "bottom-12";
+    };
+
     return (
         <div className="relative inline-block text-left" ref={ref}>
             <div>
@@ -58,8 +69,11 @@ export default function LanguageDropDown(): JSX.Element {
             </div>
 
             {isOpen && (
-                <div className=" z-10 origin-top-right absolute px-1 right-0 mt-1 w-40 rounded-lg shadow-xl bg-white dark:bg-slate-600">
-                    <div className="py-1" aria-labelledby="options-menu">
+                <div
+                    id="dropdown"
+                    className={`z-10 origin-top-right absolute ${getPlacement()} left-0 right-0 px-1 mt-1 w-40 rounded-lg shadow-xl bg-white dark:bg-slate-600`}
+                >
+                    <div className="py-1" aria-labelledby="dropdown-menu">
                         {languageList.map((lang) => (
                             <button
                                 type="button"
