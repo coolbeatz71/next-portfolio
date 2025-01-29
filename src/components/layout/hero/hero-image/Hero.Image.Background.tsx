@@ -8,7 +8,7 @@ export function HeroImageBackground({ className }: HeroImageBackgroundProps) {
     return (
         <div
             className={cn(
-                "absolute m-auto flex items-center justify-center text-indigo-500",
+                "absolute m-auto flex items-center justify-center my-12",
                 className
             )}
         >
@@ -22,12 +22,15 @@ export function HeroImageBackground({ className }: HeroImageBackgroundProps) {
                         id="gradient"
                         gradientTransform="rotate(45)"
                     >
-                        <stop offset="0%" stopColor="rgba(99, 102, 241, 0.3)" />
+                        <stop offset="0%" stopColor="rgba(99, 102, 241, 0.5)" />
                         <stop
                             offset="50%"
-                            stopColor="rgba(236, 72, 153, 0.6)"
+                            stopColor="rgba(236, 72, 153, 0.5)"
                         />
-                        <stop offset="100%" stopColor="rgba(99, 102, 241, 1)" />
+                        <stop
+                            offset="100%"
+                            stopColor="rgba(99, 102, 241, 0.5)"
+                        />
                     </linearGradient>
                 </defs>
                 <path
