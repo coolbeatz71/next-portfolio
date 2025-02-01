@@ -12,11 +12,11 @@ export default function Hero(): JSX.Element {
             id="hero"
         >
             <Spotlight />
-            <div className="grid grid-cols-1 xl:grid-cols-2 items-center py-10 gap-32 md:gap-0">
-                <div className="flex flex-col items-center md:items-start order-last md:order-first">
+            <div className="grid grid-cols-1 xl:grid-cols-2 items-center py-4 md:py-10 gap-16 md:gap-0">
+                <div className="flex flex-col items-center md:items-start">
                     <HeroIntroSection />
                 </div>
-                <div className="flex justify-center relative order-first md:order-last">
+                <div className="flex justify-center relative">
                     <HeroImageSection />
                 </div>
             </div>
