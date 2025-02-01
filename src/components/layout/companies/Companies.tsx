@@ -41,7 +41,7 @@ export default function Companies(): JSX.Element {
     const { t } = useTranslation();
 
     return (
-        <div className={RESPONSIVE_CLASSNAME}>
+        <section className={RESPONSIVE_CLASSNAME}>
             <div className="grid grid-cols-1 xl:grid-cols-[3fr,3.5fr] items-center gap-4">
                 <div className="text-center md:text-start">
                     <DotBackground className="h-20 z-0" />
@@ -59,6 +59,6 @@ export default function Companies(): JSX.Element {
                     <CompaniesGrid items={companyLogoList} className="w-full" />
                 </div>
             </div>
-        </div>
+        </section>
     );
 }

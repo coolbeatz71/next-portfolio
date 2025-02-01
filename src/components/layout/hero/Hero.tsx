@@ -7,9 +7,9 @@ import HeroIntroSection from "./hero-section/Hero.Intro.Section";
 
 export default function Hero(): JSX.Element {
     return (
-        <div
-            className={cn(RESPONSIVE_CLASSNAME, "py-4 sm:py-4 md:py-4 lg:py-8")}
+        <section
             id="hero"
+            className={cn(RESPONSIVE_CLASSNAME, "py-4 sm:py-4 md:py-4 lg:py-8")}
         >
             <Spotlight />
             <div className="grid grid-cols-1 xl:grid-cols-2 items-center py-4 md:py-10 gap-16 md:gap-0">
@@ -20,6 +20,6 @@ export default function Hero(): JSX.Element {
                     <HeroImageSection />
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
