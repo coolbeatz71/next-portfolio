@@ -1,3 +1,5 @@
+import { RESPONSIVE_CLASSNAME } from "@/config/ThemeStyle";
+import { cn } from "@/helpers/mergeClassName";
 import FooterContact from "./Footer.Contact";
 import FooterCopyright from "./Footer.Copyright";
 import FooterMessageForm from "./Footer.Message.Form";
@@ -10,9 +12,9 @@ export default function Footer(): JSX.Element {
             id="contact"
             className="bg-slate-100 dark:bg-slate-700 relative scroll-mt-24"
         >
-            <div className="mx-auto max-w-7xl relative bottom-0">
-                <div className="grid grid-cols-1 xl:grid-cols-2 items-start py-24 gap-12">
-                    <div className="flex flex-col gap-8 border-r border-slate-200 dark:border-slate-600">
+            <div className={cn(RESPONSIVE_CLASSNAME, "relative bottom-0")}>
+                <div className="grid grid-cols-1 xl:grid-cols-2 items-start py-12 lg:py-24 gap-6 md:gap-6 lg:gap-12">
+                    <div className="flex flex-col gap-8 border-b pb-6 md:pb-0 md:border-r border-slate-200 dark:border-slate-600">
                         <FooterContact />
                         <FooterNavigation />
                         <FooterSocialLink />
