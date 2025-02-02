@@ -13,7 +13,7 @@ export default function GradientShineButton({
         <button
             type="button"
             className={cn(
-                "relative inline-flex items-center justify-center px-8 py-4 overflow-hidden font-medium text-indigo-700 transition duration-300 ease-out rounded-lg group",
+                "relative inline-flex items-center justify-center px-8 py-4 overflow-hidden font-medium text-indigo-700 transition duration-300 ease-out rounded-lg group hover:ring-[3px] hover:ring-indigo-300",
                 className
             )}
         >

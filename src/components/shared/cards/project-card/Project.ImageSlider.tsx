@@ -108,19 +108,19 @@ export default function ProjectImageSlider({
                 onClick={togglePlayPause}
                 onMouseMove={handleMouseMove}
                 // TODO: should implement a better height calculation for laptop and desktop
-                className={`relative w-full max-w-6xl h-[280px] transition-all duration-300 ${isZoomed ? "p-0" : "px-4 py-4 pr-0"}`}
+                className={`relative w-full max-w-6xl h-56 md:h-72 transition-all duration-300 ${isZoomed ? "p-0" : "px-4 py-4 pr-0"}`}
             >
                 <div
-                    className={`absolute top-0 left-0 w-full h-full z-0 transition-all duration-300 ${isZoomed ? "rounded-none" : "rounded"}`}
+                    className={`absolute top-0 left-0 w-full h-full z-0 transition-all duration-300 ${isZoomed ? "rounded-none" : "rounded-lg"}`}
                 >
                     <div
-                        className={`absolute z-20 w-full h-full bg-slate-200/[0.7] dark:bg-slate-700/[0.7] backdrop-blur-lg transition-all duration-300 ${isZoomed ? "rounded-none" : "rounded"}`}
+                        className={`absolute z-20 w-full h-full bg-slate-200/[0.7] dark:bg-slate-700/[0.7] backdrop-blur-lg transition-all duration-300 ${isZoomed ? "rounded-none" : "rounded-lg"}`}
                     />
                     <NextImage
                         fill
                         src={images[0].src}
                         alt={images[0].alt}
-                        className={`object-cover transition-all duration-300 ${isZoomed ? "rounded-none" : "rounded"}`}
+                        className={`object-cover transition-all duration-300 ${isZoomed ? "rounded-none" : "rounded-lg"}`}
                         blurDataURL={imagePlaceholder}
                         placeholder="blur"
                         loading="lazy"

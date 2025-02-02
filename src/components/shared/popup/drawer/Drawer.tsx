@@ -5,24 +5,37 @@ import { useLockBodyScroll } from "react-use";
 import { cn } from "@/helpers/mergeClassName";
 import PopupBackdrop from "../Popup.Backdrop";
 import PopupCloseButton from "../Popup.Close.Button";
+import PopupFooter from "../Popup.Footer";
 import PopupHeader from "../Popup.Header";
 
 export interface DrawerProps {
-    title: string;
+    header: ReactNode;
+    footer?: ReactNode;
     isOpen: boolean;
     onToggle: () => void;
     children: ReactNode;
     className?: string;
+    position?: "right" | "left";
 }
 
 export default function Drawer({
-    title,
+    header,
+    footer,
     isOpen,
     onToggle,
     children,
-    className
+    className,
+    position = "right"
 }: DrawerProps): JSX.Element {
     useLockBodyScroll(isOpen);
+
+    const getTranslateValue = (): string => {
+        const toggle = {
+            open: { right: "translate-x-0", left: "-translate-x-0" },
+            closed: { right: "translate-x-full", left: "-translate-x-full" }
+        };
+        return isOpen ? toggle.open[position] : toggle.closed[position];
+    };
 
     return (
         <Fragment>
@@ -30,19 +43,19 @@ export default function Drawer({
 
             <div
                 className={cn(
-                    `fixed top-0 right-0 z-50 w-[50%] h-full bg-light dark:bg-dark shadow-lg
-                transition-transform transform ${
-                    isOpen ? "translate-x-0" : "translate-x-full"
-                }`,
+                    `fixed top-0 ${position}-0 z-50 w-[50%] h-full bg-light dark:bg-dark
+                transition-transform transform ${getTranslateValue()}`,
                     className
                 )}
             >
-                <div className="p-4">
-                    <PopupHeader>{title}</PopupHeader>
+                <div className="p-4 flex flex-col justify-between h-full">
+                    <PopupHeader>{header}</PopupHeader>
 
                     <PopupCloseButton onClick={onToggle} />
 
-                    <div className="py-4">{children}</div>
+                    <div>{children}</div>
+
+                    {footer && <PopupFooter>{footer}</PopupFooter>}
                 </div>
             </div>
         </Fragment>

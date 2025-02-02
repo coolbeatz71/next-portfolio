@@ -39,7 +39,6 @@ const MyApp = ({
             defaultTheme="light"
             themes={["light", "dark"]}
         >
-            <title>Meet | Mutombo Jean-vincent</title>
             <main
                 className={cn(
                     "bg-pattern_light dark:bg-pattern_dark bg-no-repeat bg-fixed bg-cover",

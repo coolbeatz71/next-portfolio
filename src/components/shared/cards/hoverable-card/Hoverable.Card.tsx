@@ -21,14 +21,14 @@ export default function HoverableCard({
     return (
         <div
             key={title}
-            className="relative group block p-2 h-[5rem] w-full"
+            className="relative group block p-3 md:p-2 h-[5rem] w-full"
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
         >
             <AnimatePresence>
                 {hoveredIndex === currentIndex && (
                     <motion.span
-                        className="absolute inset-0 h-full w-full bg-slate-300 dark:bg-slate-700 block rounded-md"
+                        className="absolute inset-0 h-full w-full bg-slate-300 dark:bg-slate-700 block rounded-lg"
                         layoutId="hoverBackground"
                         initial={{ opacity: 0 }}
                         animate={{
@@ -59,7 +59,7 @@ const Card = ({ className }: CardProps): JSX.Element => {
     return (
         <div
             className={cn(
-                "rounded-md h-full w-full p-4 overflow-hidden border border-transparent relative z-20 opacity-70 filter grayscale dark:brightness-900",
+                "rounded-lg h-full w-full p-4 overflow-hidden border border-transparent relative z-20 opacity-70 filter grayscale dark:brightness-900",
                 className
             )}
         />

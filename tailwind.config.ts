@@ -50,12 +50,33 @@ const config: Config = {
         "./src/**/*.{js,ts,jsx,tsx,mdx}"
     ],
     theme: {
+        screens: {
+            sm: "576px",
+            md: "768px",
+            lg: "992px",
+            xl: "1200px",
+            "2xl": "1600px"
+        },
         animation: {
             spin: "spin 1s linear infinite",
             shimmer: "shimmer 2s linear infinite",
-            spotlight: "spotlight 2s ease .75s 1 forwards"
+            spotlight: "spotlight 2s ease .75s 1 forwards",
+            pulse: "pulse 2s infinite"
         },
         keyframes: {
+            pulse: {
+                "0%": {
+                    transform: "scale(0.8)",
+                    boxShadow: "0 0 0 0 rgba(67, 56, 202, 0.5)"
+                },
+                "40%": {
+                    transform: "scale(1)",
+                    boxShadow: "0 0 0 10px rgba(229, 62, 62, 0)"
+                },
+                "50%": {
+                    transform: "scale(0.8)"
+                }
+            },
             spin: {
                 from: {
                     transform: "rotate(0deg)"

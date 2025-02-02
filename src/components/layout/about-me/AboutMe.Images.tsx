@@ -1,6 +1,5 @@
 import { aboutMeImagesList } from "@/config/AboutMe.Images";
 import dynamic from "next/dynamic";
-import { Fragment } from "react";
 
 const DynamicParallaxScroll = dynamic(
     () => import("./../../shared/parallax-scroll/ParallaxScroll"),
@@ -10,9 +9,5 @@ const DynamicParallaxScroll = dynamic(
 );
 
 export default function AboutMeImages(): JSX.Element {
-    return (
-        <Fragment>
-            <DynamicParallaxScroll images={aboutMeImagesList} />
-        </Fragment>
-    );
+    return <DynamicParallaxScroll images={aboutMeImagesList} />;
 }

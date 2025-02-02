@@ -14,7 +14,7 @@ export default function SocialLinks(): JSX.Element {
                 >
                     <ShimmerButton
                         borderRadius="100%"
-                        className={`p-3 text-3xl ${social.hoverColor}`}
+                        className={`p-3 md:p-4 text-3xl ${social.hoverColor}`}
                     >
                         {social.icon}
                     </ShimmerButton>

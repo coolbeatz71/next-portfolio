@@ -18,7 +18,6 @@ function debounce<T extends (...args: unknown[]) => void>(
     };
 }
 
-// TODO: this animation is not working. It should fade in and out.
 export default function Tooltip({ children, text }: TooltipProps): JSX.Element {
     const [position, setPosition] = useState<Position>("top");
     const tooltipRef = useRef<HTMLSpanElement>(null);
@@ -74,7 +73,7 @@ export default function Tooltip({ children, text }: TooltipProps): JSX.Element {
             {children}
             <span
                 ref={tooltipRef}
-                className={`absolute z-50 ${positionClasses[position]} hidden group-hover:block w-max bg-gray-700 bg-opacity-70 text-white text-xs rounded py-1 px-2 transition-opacity duration-500 delay-300 opacity-0 group-hover:opacity-100`}
+                className={`absolute z-50 ${positionClasses[position]} group-hover:inline-block w-max bg-gray-700 bg-opacity-70 text-white text-xs rounded-lg py-1 px-2 transition-opacity duration-500 delay-100 opacity-0 group-hover:opacity-100 backdrop-blur-sm`}
             >
                 {text}
                 <span className={`absolute ${arrowClasses[position]}`} />

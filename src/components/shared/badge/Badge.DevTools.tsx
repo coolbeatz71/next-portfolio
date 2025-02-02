@@ -10,7 +10,7 @@ export default function BadgeDevTools({
     className
 }: BadgeDevToolsProps): JSX.Element {
     return (
-        <GlowingStarsCard className={cn("w-20 h-20", className)}>
+        <GlowingStarsCard className={cn("w-20 h-20 shadow-2xl", className)}>
             <div
                 className={cn(
                     "bg-contain bg-no-repeat bg-center w-12 h-12",

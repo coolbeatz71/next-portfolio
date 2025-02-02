@@ -6,10 +6,10 @@ export function FormHeader(): JSX.Element {
 
     return (
         <Fragment>
-            <h3 className="text-2xl font-bold text-slate-700 dark:text-slate-300">
+            <h3 className="text-center md:text-start w-full text-2xl font-bold text-slate-700 dark:text-slate-300">
                 {t("lets_connect")} ✨
             </h3>
-            <p className="font-medium text-gray-500 dark:text-gray-400">
+            <p className="text-center md:text-start w-full font-medium text-gray-500 dark:text-gray-400">
                 {t("lets_connect_description")}
             </p>
         </Fragment>

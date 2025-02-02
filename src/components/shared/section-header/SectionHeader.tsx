@@ -9,13 +9,13 @@ export default function SectionHeader({
     subtitle
 }: SectionHeaderProps): JSX.Element {
     return (
-        <div className="flex flex-col items-center justify-center pb-12">
+        <div className="flex flex-col items-center justify-center pb-6 md:pb-12">
             <DotBackground className="h-20 z-0" />
-            <div className="text-center lg:px-64 z-10">
-                <h2 className="mb-4 text-2xl font-bold !leading-tight md:text-2xl xl:text-3xl text-slate-700 dark:text-slate-300">
+            <div className="text-center xl:px-64 z-10">
+                <h2 className="mb-4 text-3xl font-bold !leading-relaxed text-slate-700 dark:text-slate-300">
                     {title}
                 </h2>
-                <p className="text-lg font-light text-gray-500 dark:text-gray-400 !leading-8">
+                <p className="text-md md:text-lg text-slate-500 dark:text-slate-400 !leading-relaxed">
                     {subtitle}
                 </p>
             </div>

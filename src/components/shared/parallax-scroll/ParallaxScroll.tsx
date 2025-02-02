@@ -32,10 +32,10 @@ export default function ParallaxScroll({
         restDelta: 0.001
     });
 
-    const translateFirst = useTransform(smoothScroll, [0, 1], [0, -500], {
+    const translateFirst = useTransform(smoothScroll, [0, 1], [0, -600], {
         ease: cubicEase
     });
-    const translateSecond = useTransform(smoothScroll, [0, 1], [0, 500], {
+    const translateSecond = useTransform(smoothScroll, [0, 1], [0, 600], {
         ease: cubicEase
     });
 
@@ -70,9 +70,9 @@ export default function ParallaxScroll({
     const imageHeight = gridHeight / divider;
 
     return (
-        <div className={cn("h-[55rem] w-full", className)}>
-            <div className="grid grid-cols-2 items-start max-w-5xl mx-auto gap-4">
-                <div className="grid gap-4">
+        <div className={cn("w-full", className)}>
+            <div className="grid grid-cols-2 items-start max-w-5xl mx-auto gap-2 md:gap-4">
+                <div className="grid gap-2 md:gap-4">
                     {firstColumn.map((img) => (
                         <motion.div
                             className="relative"
@@ -95,7 +95,7 @@ export default function ParallaxScroll({
                         </motion.div>
                     ))}
                 </div>
-                <div className="grid gap-4">
+                <div className="grid gap-2 md:gap-4">
                     {secondColumn.map((img) => (
                         <motion.div
                             className="relative"

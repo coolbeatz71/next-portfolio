@@ -9,7 +9,7 @@ import PopupCloseButton from "../Popup.Close.Button";
 import PopupHeader from "../Popup.Header";
 
 export interface ModalProps {
-    title: string;
+    header: ReactNode;
     isOpen: boolean;
     onToggle: () => void;
     children: ReactNode;
@@ -17,7 +17,7 @@ export interface ModalProps {
 }
 
 export default function Modal({
-    title,
+    header,
     isOpen,
     onToggle,
     children,
@@ -33,7 +33,7 @@ export default function Modal({
 
             <div
                 className={cn(
-                    "fixed z-50 w-[90%] max-w-xl bg-white dark:bg-gray-800 rounded-lg shadow-lg transition-all duration-500 ease-out transform",
+                    "fixed z-50 w-[96%] md:w-[90%] max-w-xl bg-white dark:bg-gray-800 rounded-lg shadow-lg transition-all duration-500 ease-out transform",
                     className
                 )}
                 style={{
@@ -43,7 +43,7 @@ export default function Modal({
                 }}
             >
                 <div className="p-4">
-                    <PopupHeader>{title}</PopupHeader>
+                    <PopupHeader>{header}</PopupHeader>
 
                     <PopupCloseButton onClick={onToggle} />
 

@@ -1,10 +1,11 @@
 import { useWindowScroll } from "react-use";
 
 import NavigationMenu from "@/components/layout/navigation/Navigation.Menu";
+import LanguageDropDown from "@/components/shared/dropdown/Language.Dropdown";
 import HamburgerMenuButton from "@/components/shared/hamburger-menu/HamburgerMenu.Button";
-import LanguageDropDown from "@/components/shared/language-dropdown/LanguageDropDown";
 import Logo from "@/components/shared/logo/Logo";
 import ThemeToggle from "@/components/shared/theme-toggle/ThemeToggle";
+import { RESPONSIVE_CLASSNAME } from "@/config/ThemeStyle";
 import { useEffect, useState } from "react";
 
 export default function Navigation(): JSX.Element {
@@ -17,25 +18,24 @@ export default function Navigation(): JSX.Element {
 
     return (
         <nav
-            id=""
-            className={`sticky top-0 z-20 transition duration-100 ${scrollY > 20 ? "dark:bg-slate-800/70 bg-slate-200/70 backdrop-blur-lg shadow" : ""}`}
+            className={`sticky top-0 z-30 transition duration-100 ${scrollY > 20 ? "dark:bg-slate-800/70 bg-slate-200/70 backdrop-blur-lg shadow" : ""}`}
         >
-            <div className="mx-auto max-w-7xl">
-                <div className="relative flex sm:h-24 h-20  items-center justify-between">
-                    <div className="inset-y-0 left-0 flex items-center sm:hidden">
+            <div className={RESPONSIVE_CLASSNAME}>
+                <div className="relative flex py-3 lg:py-5 items-center justify-between gap-3">
+                    <div className="inset-y-0 left-0 flex items-center lg:hidden">
                         <HamburgerMenuButton />
                     </div>
-                    <div className="flex items-center justify-center sm:items-stretch sm:justify-start w-full">
+                    <div className="flex items-center justify-start w-full">
                         <Logo />
-                        <div className="hidden sm:ml-6 sm:flex justify-center w-full">
+                        <div className="hidden md:ml-6 lg:flex justify-center w-full">
                             <div className="flex space-x-2">
                                 <NavigationMenu />
                             </div>
                         </div>
                     </div>
-                    <div className="inset-y-0 right-0 flex items-center sm:static sm:inset-auto sm:ml-6 sm:pr-0 gap-2">
+                    <div className="inset-y-0 right-0 flex items-center justify-center gap-3">
+                        <LanguageDropDown placement="bottom" />
                         <ThemeToggle />
-                        <LanguageDropDown />
                     </div>
                 </div>
             </div>

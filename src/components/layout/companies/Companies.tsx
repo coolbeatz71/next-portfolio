@@ -1,4 +1,5 @@
 import DotBackground from "@/components/shared/background/Dot.Background";
+import { RESPONSIVE_CLASSNAME } from "@/config/ThemeStyle";
 import { useTranslation } from "react-i18next";
 import CompaniesGrid from "./Companies.Grid";
 
@@ -40,22 +41,24 @@ export default function Companies(): JSX.Element {
     const { t } = useTranslation();
 
     return (
-        <div className="mx-auto max-w-7xl max-h-7xl">
-            <div className="grid grid-cols-1 xl:grid-cols-[3fr,3.5fr] items-center mt-12 py-20 gap-4">
-                <div>
-                    <DotBackground className="h-20" />
-                    <h2 className="mb-4 text-2xl font-bold tracking-tight !leading-tight md:text-2xl xl:text-4xl text-slate-700 dark:text-slate-300">
-                        {t("companies_title")}
-                    </h2>
-                    <p className="text-lg text-gray-500 !leading-8">
-                        {t("companies_subtitle")}
-                    </p>
+        <section className={RESPONSIVE_CLASSNAME}>
+            <div className="grid grid-cols-1 xl:grid-cols-[3fr,3.5fr] items-center gap-4">
+                <div className="text-center md:text-start">
+                    <DotBackground className="h-20 z-0" />
+                    <div className="relative z-10">
+                        <h2 className="mb-4 text-3xl font-bold tracking-tight md:leading-relaxed xl:text-4xl text-slate-700 dark:text-slate-300">
+                            {t("companies_title")}
+                        </h2>
+                        <p className="text-md md:text-lg text-slate-500 dark:text-slate-400 !leading-relaxed">
+                            {t("companies_subtitle")}
+                        </p>
+                    </div>
                 </div>
 
-                <div className="hidden xl:flex relative max-w-3xl z-10">
+                <div className="flex relative max-w-3xl z-10 py-4">
                     <CompaniesGrid items={companyLogoList} className="w-full" />
                 </div>
             </div>
-        </div>
+        </section>
     );
 }

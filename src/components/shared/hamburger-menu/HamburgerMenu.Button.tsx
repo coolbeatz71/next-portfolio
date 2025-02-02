@@ -1,15 +1,26 @@
-import { RiMenu4Fill } from "react-icons/ri";
+import SideMenu from "@/components/layout/side-menu/SideMenu";
+import { Fragment, useState } from "react";
+import { MdOutlineMenu } from "react-icons/md";
 
 export default function HamburgerMenuButton(): JSX.Element {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleDrawer = () => {
+        setIsOpen(!isOpen);
+    };
+
     return (
-        <button
-            type="button"
-            className="relative size-12 text-3xl inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none"
-            aria-controls="mobile-menu"
-            aria-expanded="false"
-            title="Open menu"
-        >
-            <RiMenu4Fill />
-        </button>
+        <Fragment>
+            <button
+                type="button"
+                onClick={toggleDrawer}
+                aria-controls="mobile-menu"
+                className="relative text-2xl size-10 md:size-12 inline-flex items-center justify-center rounded-lg p-2 dark:text-slate-300 text-slate-700 bg-slate-100 dark:bg-slate-900 hover:bg-slate-300 dark:hover:bg-slate-700 focus:outline-none"
+            >
+                <MdOutlineMenu />
+            </button>
+
+            <SideMenu isOpen={isOpen} toggleDrawer={toggleDrawer} />
+        </Fragment>
     );
 }

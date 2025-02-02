@@ -10,7 +10,7 @@ export default function SkillSection({
 }: SkillSectionProps): JSX.Element {
     return (
         <section className="flex justify-center items-center">
-            <div className="flex flex-col w-[50%] py-8">
+            <div className="flex flex-col w-full md:px-32 lg:w-[50%] py-8">
                 {stacks.map((stack) => (
                     <ProgressBar
                         key={stack.title}
