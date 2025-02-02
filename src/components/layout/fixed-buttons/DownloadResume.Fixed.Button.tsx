@@ -49,7 +49,7 @@ export default function DownloadResumeFixedButton() {
 
     return (
         isVisible && (
-            <div className="fixed bottom-4 right-4 z-30">
+            <div className="fixed bottom-14 right-2 lg:bottom-4 lg:right-4 z-30">
                 <div className="relative">
                     <Tooltip text={t("download_resume")}>
                         <GradientShineButton className="p-4 animate-pulse">
