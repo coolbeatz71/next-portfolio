@@ -3,6 +3,7 @@ import Companies from "@/components/layout/companies/Companies";
 import Hero from "@/components/layout/hero/Hero";
 import Navigation from "@/components/layout/navigation/Navigation";
 import Projects from "@/components/layout/projects/Projects";
+import Skills from "@/components/layout/skills/Skills";
 import { Fragment } from "react";
 
 export default function HomeContainer(): JSX.Element {
@@ -21,9 +22,9 @@ export default function HomeContainer(): JSX.Element {
 
             {/* <Experiences /> */}
             <Projects />
-            {/* 
             <Skills />
 
+            {/* 
             <DownloadResumeFixedButton />
 
             <Footer /> */}

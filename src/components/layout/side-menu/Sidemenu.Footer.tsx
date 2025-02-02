@@ -1,4 +1,4 @@
-import LanguageDropDown from "@/components/shared/language-dropdown/LanguageDropDown";
+import LanguageDropDown from "@/components/shared/dropdown/Language.Dropdown";
 import ThemeToggle from "@/components/shared/theme-toggle/ThemeToggle";
 
 export default function SideMenuFooter(): JSX.Element {

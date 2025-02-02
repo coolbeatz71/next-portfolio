@@ -2,6 +2,8 @@ import TabBar from "@/components/layout/tab-bar/TabBar";
 import SectionHeader from "@/components/shared/section-header/SectionHeader";
 import { devStackTabs } from "@/config/DevStack";
 import { mainStackList } from "@/config/DevStack.Main";
+import { RESPONSIVE_CLASSNAME } from "@/config/ThemeStyle";
+import { cn } from "@/helpers/mergeClassName";
 import NextImage from "next/image";
 import { useTranslation } from "react-i18next";
 
@@ -10,18 +12,18 @@ export default function Skills(): JSX.Element {
     return (
         <section
             id="skill"
-            className="mx-auto max-w-7xl max-h-7xl scroll-mt-36"
+            className={cn(RESPONSIVE_CLASSNAME, "scroll-mt-36")}
         >
             <SectionHeader
                 title={t("skills_title")}
                 subtitle={t("skills_subtitle")}
             />
             <div className="relative">
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 lg:px-24 md:px-24">
+                <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 lg:px-24 md:px-24">
                     {mainStackList.map((skill) => (
                         <div
                             key={skill.title}
-                            className="flex flex-col items-center group cursor-pointer p-8"
+                            className="flex flex-col items-center group cursor-pointer p-4 md:p-8"
                         >
                             <div className="relative h-16 w-16 lg:h-24 lg:w-24">
                                 {/* dark image */}
@@ -50,7 +52,7 @@ export default function Skills(): JSX.Element {
                 context="skills"
                 tabs={devStackTabs}
                 containerClassName="py-4"
-                tabBarClassName="min-w-[60%]"
+                tabBarClassName="min-w-full lg:min-w-[60%]"
             />
         </section>
     );

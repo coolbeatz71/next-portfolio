@@ -21,6 +21,7 @@ export default function Projects(): JSX.Element {
                 context="projects"
                 tabs={projectsTabs}
                 containerClassName="py-4"
+                tabBarClassName="min-w-full lg:min-w-[60%]"
             />
         </section>
     );
