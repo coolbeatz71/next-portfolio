@@ -14,7 +14,7 @@ export default function Footer(): JSX.Element {
         >
             <div className={cn(RESPONSIVE_CLASSNAME, "relative bottom-0")}>
                 <div className="grid grid-cols-1 xl:grid-cols-2 items-start py-12 lg:py-24 gap-6 md:gap-6 lg:gap-12">
-                    <div className="flex flex-col gap-8 border-b pb-6 md:pb-0 md:border-r border-slate-200 dark:border-slate-600">
+                    <div className="flex flex-col gap-8 pb-6 md:pb-0 border-b md:border-b-0 md:border-r border-slate-200 dark:border-slate-600">
                         <FooterContact />
                         <FooterNavigation />
                         <FooterSocialLink />

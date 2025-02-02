@@ -10,7 +10,7 @@ export default function FooterContact(): JSX.Element {
             <h3 className="text-center w-full md:text-start text-2xl font-bold text-slate-700 dark:text-slate-300">
                 {t("address")}
             </h3>
-            <span className="text-center w-full md:text-start justify-center md:justify-between text-gray-500 dark:text-gray-400 flex items-center gap-2">
+            <span className="text-center w-full md:w-auto md:text-start justify-center md:justify-between text-gray-500 dark:text-gray-400 flex items-center gap-2">
                 <FaLocationDot />
                 KN 134 Street, Kigali, Rwanda
             </span>
@@ -19,7 +19,7 @@ export default function FooterContact(): JSX.Element {
                 target="_blank"
                 rel="noopener noreferrer"
                 href="mailto:jeanvincent.mutombo@gmail.com"
-                className="hover:font-medium text-center w-full md:text-start"
+                className="hover:font-medium text-center w-full md:w-auto md:text-start"
             >
                 <span className="hover:underline text-gray-500 dark:text-gray-400 hover:text-indigo-700 hover:dark:text-indigo-500 flex justify-center md:justify-between items-center gap-2">
                     <MdEmail />
@@ -29,7 +29,7 @@ export default function FooterContact(): JSX.Element {
             <a
                 href="tel:(+250) 078 071 2761"
                 rel="noopener noreferrer"
-                className="hover:font-medium text-center w-full md:text-"
+                className="hover:font-medium text-center w-full md:w-auto md:text-"
             >
                 <span className="hover:underline text-gray-500 dark:text-gray-400 hover:text-indigo-700 hover:dark:text-indigo-500 flex justify-center md:justify-between items-center gap-2">
                     <FaPhoneSquare />
