@@ -1,5 +1,6 @@
 import AboutMe from "@/components/layout/about-me/AboutMe";
 import Companies from "@/components/layout/companies/Companies";
+import DownloadResumeFixedButton from "@/components/layout/fixed-buttons/DownloadResume.Fixed.Button";
 import Hero from "@/components/layout/hero/Hero";
 import Navigation from "@/components/layout/navigation/Navigation";
 import Projects from "@/components/layout/projects/Projects";
@@ -24,9 +25,9 @@ export default function HomeContainer(): JSX.Element {
             <Projects />
             <Skills />
 
-            {/* 
             <DownloadResumeFixedButton />
 
+            {/* 
             <Footer /> */}
         </Fragment>
     );
