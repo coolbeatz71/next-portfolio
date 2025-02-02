@@ -26,7 +26,7 @@ export default function TabBar({
                 <ul
                     data-tabs="tabs"
                     className={cn(
-                        "relative flex flex-wrap px-1.5 py-1.5 list-none bg-white dark:bg-gray-900 rounded-lg gap-1 min-w-[50%]",
+                        "relative flex flex-wrap px-1.5 py-1.5 list-none bg-white dark:bg-gray-900 rounded-lg gap-1 min-w-full lg:min-w-[50%]",
                         tabBarClassName
                     )}
                 >
@@ -39,7 +39,7 @@ export default function TabBar({
                                 role="tab"
                                 type="button"
                                 onClick={() => setActiveTabIndex(idx)}
-                                className={`py-2 cursor-pointer w-full text-sm font-semibold transition-colors duration-200
+                                className={`py-2 cursor-pointer w-full text-xs md:text-sm font-semibold transition-colors duration-200
                                 ${idx === activeTabIndex ? "text-white" : "text-gray-500 dark:text-gray-400"}`}
                                 style={{
                                     transformStyle: "preserve-3d"

@@ -18,6 +18,10 @@ export interface ProjectCardProps {
     project: ProjectByStack;
 }
 
+function HeaderModal({ title }: { title: string }): JSX.Element {
+    return <h2 className="text-xl font-semibold mb-4">{title}</h2>;
+}
+
 export function ProjectCard({ project, index }: ProjectCardProps) {
     const { t } = useTranslation();
     const [isOpen, setIsOpen] = useState(false);
@@ -40,10 +44,10 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
             {isOpen && (
                 <DynamicModal
                     isOpen={isOpen}
-                    title={project.name}
                     className="max-w-2xl"
                     onToggle={toggleModal}
                     key={`${index}-modal`}
+                    header={<HeaderModal title={project.name} />}
                 >
                     <ProjectModal project={project} />
                 </DynamicModal>
@@ -59,10 +63,11 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                         <div
                             onClick={toggleModal}
                             onKeyDown={toggleModal}
-                            className="md:w-1/2 relative overflow-hidden cursor-pointer"
+                            className="w-full h-56 md:w-1/2 md:h-auto relative overflow-hidden cursor-pointer"
                         >
                             <NextImage
                                 fill
+                                sizes="100%"
                                 quality={55}
                                 placeholder="blur"
                                 alt={project.name}
@@ -91,6 +96,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                                     target="_blank"
                                     href={project.liveLink}
                                     rel="noopener noreferrer"
+                                    className="flex justify-end"
                                 >
                                     <LitUpBorderButton className="w-32 p-[3.5px]">
                                         <div className="flex justify-center items-center text-[10pt] font-medium">

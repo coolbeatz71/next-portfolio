@@ -49,7 +49,7 @@ export default function Companies(): JSX.Element {
                         <h2 className="mb-4 text-3xl font-bold tracking-tight md:leading-relaxed xl:text-4xl text-slate-700 dark:text-slate-300">
                             {t("companies_title")}
                         </h2>
-                        <p className="text-md md:text-lg text-slate-500 dark:text-slate-400 tracking-tight md:leading-relaxed">
+                        <p className="text-md md:text-lg text-slate-500 dark:text-slate-400 !leading-relaxed">
                             {t("companies_subtitle")}
                         </p>
                     </div>

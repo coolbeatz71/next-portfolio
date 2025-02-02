@@ -60,7 +60,7 @@ export default function ProjectModal({
                         height={300}
                         src={project.images[0].src}
                         alt={project.images[0].alt}
-                        className="object-cover rounded-lg w-full h-72"
+                        className="object-cover rounded-lg w-full h-56 md:h-72"
                         loading="lazy"
                         unoptimized
                     />

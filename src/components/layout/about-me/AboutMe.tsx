@@ -8,7 +8,7 @@ export default function AboutMe(): JSX.Element {
     return (
         <section
             id="about"
-            className={cn(RESPONSIVE_CLASSNAME, "py-20 scroll-mt-48")}
+            className={cn(RESPONSIVE_CLASSNAME, "pt-20 scroll-mt-48")}
         >
             <div className="grid grid-cols-1 xl:grid-cols-[3fr,3.5fr] gap-4 md:gap-12">
                 <div className="flex flex-col w-full">
