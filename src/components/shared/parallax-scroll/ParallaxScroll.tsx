@@ -32,10 +32,10 @@ export default function ParallaxScroll({
         restDelta: 0.001
     });
 
-    const translateFirst = useTransform(smoothScroll, [0, 1], [0, -50], {
+    const translateFirst = useTransform(smoothScroll, [0, 1], [0, -600], {
         ease: cubicEase
     });
-    const translateSecond = useTransform(smoothScroll, [0, 1], [0, 50], {
+    const translateSecond = useTransform(smoothScroll, [0, 1], [0, 600], {
         ease: cubicEase
     });
 
