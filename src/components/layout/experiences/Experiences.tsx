@@ -5,7 +5,9 @@ import Drawer from "@/components/shared/popup/drawer/Drawer";
 import SectionHeader from "@/components/shared/section-header/SectionHeader";
 import { Timeline } from "@/components/shared/timeline/Timeline";
 import { TimelineFull } from "@/components/shared/timeline/Timeline.Full";
+import { RESPONSIVE_CLASSNAME } from "@/config/ThemeStyle";
 import { experienceTimeline } from "@/config/WorkExperience";
+import { cn } from "@/helpers/mergeClassName";
 import dynamic from "next/dynamic";
 import { useTranslation } from "react-i18next";
 
@@ -35,9 +37,9 @@ export default function Experiences(): JSX.Element {
     return (
         <section
             id="experience"
-            className="mx-auto max-w-7xl max-h-7xl scroll-mt-36"
+            className={cn(RESPONSIVE_CLASSNAME, "scroll-mt-36")}
         >
-            <div className="pb-10">
+            <div className="pb-4 md:pb-10">
                 <SectionHeader
                     title={t("experience_title")}
                     subtitle={t("experience_subtitle")}
@@ -46,7 +48,7 @@ export default function Experiences(): JSX.Element {
                 <div className="flex justify-center w-full">
                     <DynamicTooltip text={t("view_more_experience")}>
                         <MovingBorderButton
-                            className="py-4 px-10"
+                            className="py-3 md:py-4 px-10"
                             onClick={toggleDrawer}
                         >
                             {t("read_more")}

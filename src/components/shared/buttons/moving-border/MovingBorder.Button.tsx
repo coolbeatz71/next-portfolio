@@ -49,7 +49,7 @@ export function MovingBorderButton({
 
             <div
                 className={cn(
-                    "font-semibold relative bg-slate-900/[0.8] border backdrop-blur-xl items-center justify-center w-full h-full text-sm antialiased transition-colors duration-300 bg-slate-100 dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800  dark:hover:bg-slate-950 hover:bg-white",
+                    "font-semibold relative bg-slate-900/[0.8] border backdrop-blur-xl items-center justify-center w-full h-full text-sm antialiased transition-colors duration-300 bg-slate-100 dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800 dark:hover:bg-slate-950 hover:bg-white",
                     className
                 )}
                 style={{
