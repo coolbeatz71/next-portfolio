@@ -21,7 +21,7 @@ export default function Navigation(): JSX.Element {
             className={`sticky top-0 z-30 transition duration-100 ${scrollY > 20 ? "dark:bg-slate-800/70 bg-slate-200/70 backdrop-blur-lg shadow" : ""}`}
         >
             <div className={RESPONSIVE_CLASSNAME}>
-                <div className="relative flex py-3 lg:py-5 items-center justify-between gap-3">
+                <div className="relative flex py-4 sm:py-4 lg:py-5 items-center justify-between gap-3">
                     <div className="inset-y-0 left-0 flex items-center lg:hidden">
                         <HamburgerMenuButton />
                     </div>

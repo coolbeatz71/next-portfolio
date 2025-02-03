@@ -15,7 +15,7 @@ export default function HamburgerMenuButton(): JSX.Element {
                 type="button"
                 onClick={toggleDrawer}
                 aria-controls="mobile-menu"
-                className="relative text-2xl size-10 md:size-12 inline-flex items-center justify-center rounded-lg p-2 dark:text-slate-300 text-slate-700 bg-slate-100 dark:bg-slate-900 hover:bg-slate-300 dark:hover:bg-slate-700 focus:outline-none"
+                className="relative text-2xl p-2 size-10 sm:size-12 md:size-12 inline-flex items-center justify-center rounded-lg dark:text-slate-300 text-slate-700 bg-slate-100 dark:bg-slate-900 hover:bg-slate-300 dark:hover:bg-slate-700 focus:outline-none"
             >
                 <MdOutlineMenu />
             </button>
