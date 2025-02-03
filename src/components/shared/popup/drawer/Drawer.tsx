@@ -46,7 +46,7 @@ export default function Drawer({
                     className
                 )}
             >
-                <div className="p-4 flex flex-col justify-between h-screen">
+                <div className="p-4 flex flex-col justify-between h-full">
                     <PopupHeader>{header}</PopupHeader>
 
                     <PopupCloseButton onClick={onToggle} />
