@@ -43,7 +43,7 @@ export default function LanguageDropDown({
 
     const getPlacement = (): string => {
         if (placement === "bottom") return "top-12";
-        return "bottom-12";
+        return "bottom-14";
     };
 
     return (
