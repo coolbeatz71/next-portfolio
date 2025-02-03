@@ -1,8 +1,10 @@
-export const EnglishFlagIcon = (
+export const EnglishFlagIcon = (): JSX.Element => (
     <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 60 40"
+        height={40}
+        width={60}
         aria-hidden="true"
+        viewBox="0 0 60 40"
+        xmlns="http://www.w3.org/2000/svg"
     >
         <clipPath id="s">
             <path d="M0,0 v40 h60 v-40 z" />

@@ -1,8 +1,10 @@
-export const FrenchFlagIcon = (
+export const FrenchFlagIcon = (): JSX.Element => (
     <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 55.2 38.4"
+        height={40}
+        width={60}
         aria-hidden="true"
+        viewBox="0 0 60 40"
+        xmlns="http://www.w3.org/2000/svg"
     >
         <g fillRule="evenodd" clipRule="evenodd">
             <path

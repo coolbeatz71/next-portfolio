@@ -8,7 +8,6 @@ import { getLanguage } from "@/helpers/getLanguage";
 import { isServer } from "@/helpers/isServer";
 import locales from "@/locales";
 import { useClickAway } from "react-use";
-
 export interface LanguageDropDownProps {
     placement: "top" | "bottom";
 }
