@@ -1,8 +1,6 @@
 import GradientShineButton from "@/components/shared/buttons/gradient-shine/GradientShine.Button";
-import Tooltip from "@/components/shared/tooltip/Tooltip";
 import { useScroll } from "framer-motion";
 import { useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
 import { FaDownload } from "react-icons/fa";
 
 function throttle(func: (...args: unknown[]) => void, limit: number) {
@@ -28,7 +26,6 @@ function throttle(func: (...args: unknown[]) => void, limit: number) {
 }
 
 export default function DownloadResumeFixedButton() {
-    const { t } = useTranslation();
     const [isVisible, setIsVisible] = useState(false);
     const { scrollY } = useScroll();
 
@@ -51,11 +48,9 @@ export default function DownloadResumeFixedButton() {
         isVisible && (
             <div className="fixed bottom-14 right-2 lg:bottom-4 lg:right-4 z-30">
                 <div className="relative">
-                    <Tooltip text={t("download_resume")}>
-                        <GradientShineButton className="p-4 animate-pulse">
-                            <FaDownload size={20} />
-                        </GradientShineButton>
-                    </Tooltip>
+                    <GradientShineButton className="p-4 animate-pulse">
+                        <FaDownload size={20} />
+                    </GradientShineButton>
                 </div>
             </div>
         )
