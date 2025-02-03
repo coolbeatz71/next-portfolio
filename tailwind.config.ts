@@ -59,7 +59,6 @@ const config: Config = {
         },
         animation: {
             spin: "spin 1s linear infinite",
-            shimmer: "shimmer 2s linear infinite",
             spotlight: "spotlight 2s ease .75s 1 forwards",
             pulse: "pulse 2s infinite"
         },
@@ -83,14 +82,6 @@ const config: Config = {
                 },
                 to: {
                     transform: "rotate(360deg)"
-                }
-            },
-            shimmer: {
-                from: {
-                    backgroundPosition: "0 0"
-                },
-                to: {
-                    backgroundPosition: "-200% 0"
                 }
             },
             spotlight: {
