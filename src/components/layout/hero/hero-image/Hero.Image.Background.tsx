@@ -22,12 +22,12 @@ export function HeroImageBackground({ className }: HeroImageBackgroundProps) {
                         id="gradient"
                         gradientTransform="rotate(45)"
                     >
-                        <stop offset="0%" stopColor="rgba(220, 99, 241, 0.5)" />
-                        <stop offset="40%" stopColor="#4438cac5" />
+                        <stop offset="0%" stopColor="rgba(99, 102, 241, 0.5)" />
                         <stop
-                            offset="100%"
-                            stopColor="rgba(99, 102, 241, 0.5)"
+                            offset="50%"
+                            stopColor="rgba(236, 72, 153, 0.3)"
                         />
+                        <stop offset="100%" stopColor="rgba(99, 102, 241, 1)" />
                     </linearGradient>
                 </defs>
                 <path

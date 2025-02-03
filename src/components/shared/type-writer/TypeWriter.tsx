@@ -10,7 +10,7 @@ export default function TypeWriter({
     className
 }: TypeWriterProps): JSX.Element {
     const typeWriterClassName = `
-        py-4 font-bold animate-cursor overflow-hidden 
+        flex items-center font-bold animate-cursor overflow-hidden 
         whitespace-nowrap transition-[width] duration-200 ease-in mr-auto
     `;
 
@@ -40,10 +40,10 @@ export default function TypeWriter({
     }, [incrementWord]);
 
     return (
-        <div className={className}>
-            <div className={`${typeWriterClassName} ${collapseClassName}`}>
+        <span className={className}>
+            <span className={`${typeWriterClassName} ${collapseClassName}`}>
                 {words[currentWord]}
-            </div>
-        </div>
+            </span>
+        </span>
     );
 }
