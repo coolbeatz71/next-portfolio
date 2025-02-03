@@ -1,3 +1,4 @@
+import Hero from "@/components/layout/hero/Hero";
 import Navigation from "@/components/layout/navigation/Navigation";
 import BackgroundBeams from "@/components/shared/background/Beams.Background";
 import BackgroundGradient from "@/components/shared/background/Gradient.Background";
@@ -16,8 +17,8 @@ export default function HomeContainer(): JSX.Element {
             </Fragment>
 
             <Navigation />
-            {/* 
             <Hero />
+            {/* 
             <Companies />
             <AboutMe />
 
