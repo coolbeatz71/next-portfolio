@@ -39,16 +39,14 @@ export default function Drawer({
 
     return (
         <Fragment>
-            {isOpen && <PopupBackdrop onClick={onToggle} />}
-
-            <div
+            <aside
                 className={cn(
-                    `fixed top-0 ${position}-0 z-50 w-[50%] h-full bg-light dark:bg-dark
-                transition-transform transform ${getTranslateValue()}`,
+                    `fixed top-0 ${position}-0 z-50 w-[50%] h-screen bg-light dark:bg-dark
+                    transition-transform transform ${getTranslateValue()}`,
                     className
                 )}
             >
-                <div className="p-4 flex flex-col justify-between h-full">
+                <div className="p-4 flex flex-col justify-between h-screen">
                     <PopupHeader>{header}</PopupHeader>
 
                     <PopupCloseButton onClick={onToggle} />
@@ -57,7 +55,8 @@ export default function Drawer({
 
                     {footer && <PopupFooter>{footer}</PopupFooter>}
                 </div>
-            </div>
+            </aside>
+            {isOpen && <PopupBackdrop onClick={onToggle} />}
         </Fragment>
     );
 }

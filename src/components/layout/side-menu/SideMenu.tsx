@@ -16,7 +16,7 @@ export default function SideMenu({
         <Drawer
             isOpen={isOpen}
             position="left"
-            className="w-[80%] sm:w-[60%] md:w-[40%]"
+            className="z-50 w-[80%] sm:w-[60%] md:w-[40%]"
             onToggle={toggleDrawer}
             header={<SideMenuHeader />}
             footer={<SideMenuFooter />}

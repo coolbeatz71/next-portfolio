@@ -9,7 +9,7 @@ export default function PopupBackdrop({
             onClick={onClick}
             onKeyDown={onClick}
             pointer-events-none
-            className="fixed top-0 bottom-0 overflow-hidden inset-0 z-40 bg-black bg-opacity-70 backdrop-blur"
+            className="fixed z-40 w-screen h-screen top-0 left-0 right-0 overflow-hidden bg-black bg-opacity-70 backdrop-blur"
         />
     );
 }
