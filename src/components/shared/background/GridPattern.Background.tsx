@@ -13,18 +13,23 @@ export default function GridPatternBackground({
         [Math.floor(Math.random() * 4) + 7, Math.floor(Math.random() * 6) + 1],
         [Math.floor(Math.random() * 4) + 7, Math.floor(Math.random() * 6) + 1],
         [Math.floor(Math.random() * 4) + 7, Math.floor(Math.random() * 6) + 1],
+        [Math.floor(Math.random() * 4) + 7, Math.floor(Math.random() * 6) + 1],
+        [Math.floor(Math.random() * 4) + 7, Math.floor(Math.random() * 6) + 1],
+        [Math.floor(Math.random() * 4) + 7, Math.floor(Math.random() * 6) + 1],
+        [Math.floor(Math.random() * 4) + 7, Math.floor(Math.random() * 6) + 1],
+        [Math.floor(Math.random() * 4) + 7, Math.floor(Math.random() * 6) + 1],
         [Math.floor(Math.random() * 4) + 7, Math.floor(Math.random() * 6) + 1]
     ];
     return (
-        <div className="pointer-events-none absolute left-1/2 top-0  -ml-20 -mt-2 h-full w-full [mask-image:linear-gradient(white,transparent)]">
-            <div className="absolute inset-0 bg-gradient-to-r  [mask-image:radial-gradient(farthest-side_at_top,white,transparent)] dark:from-zinc-900/30 from-zinc-100/30 to-zinc-300/30 dark:to-zinc-900/30 opacity-100">
+        <div className="pointer-events-none absolute left-0 top-0 h-full w-full [mask-image:linear-gradient(white,transparent)]">
+            <div className="absolute inset-0 z-50 bg-gradient-to-r [mask-image:radial-gradient(farthest-side_at_top,white,transparent)] dark:from-zinc-900/30 from-zinc-100/30 to-zinc-300/30 dark:to-zinc-900/30 opacity-100">
                 <GridPattern
+                    x="0"
+                    y={`-${size ?? 20}`}
+                    squares={pattern}
                     width={size ?? 20}
                     height={size ?? 20}
-                    x="-12"
-                    y="4"
-                    squares={pattern}
-                    className="absolute inset-0 h-full w-full  mix-blend-overlay dark:fill-white/10 dark:stroke-white/10 stroke-black/10 fill-black/10"
+                    className="absolute inset-0 h-full w-full mix-blend-overlay fill-white/20 stroke-white/10"
                 />
             </div>
         </div>
@@ -69,25 +74,22 @@ export function GridPattern({
                 strokeWidth={0}
                 fill={`url(#${patternId})`}
             />
-            {squares && (
-                <svg x={x} y={y} className="overflow-visible">
-                    <title>squares</title>
-                    {squares.map(([x, y]: number[], idx) => (
-                        <rect
-                            suppressHydrationWarning
-                            strokeWidth="0"
-                            key={`${x}-${y}-${
-                                // biome-ignore lint/suspicious/noArrayIndexKey: need to use index as key
-                                idx
-                            }`}
-                            width={width + 1}
-                            height={height + 1}
-                            x={x * width}
-                            y={y * height}
-                        />
-                    ))}
-                </svg>
-            )}
+            <svg x={x} y={y} className="overflow-visible" aria-hidden="true">
+                {squares?.map(([x, y]: number[], idx) => (
+                    <rect
+                        suppressHydrationWarning
+                        strokeWidth="0"
+                        key={`${x}-${y}-${
+                            // biome-ignore lint/suspicious/noArrayIndexKey: need to use index as key
+                            idx
+                        }`}
+                        width={width + 1}
+                        height={height + 1}
+                        x={x * width}
+                        y={y * height}
+                    />
+                ))}
+            </svg>
         </svg>
     );
 }
