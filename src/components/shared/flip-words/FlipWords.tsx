@@ -23,10 +23,11 @@ export default function FlipWords({
     }, [currentWord, words]);
 
     useEffect(() => {
-        if (!isAnimating)
+        if (!isAnimating) {
             setTimeout(() => {
                 startAnimation();
             }, duration);
+        }
     }, [isAnimating, duration, startAnimation]);
 
     return (
@@ -53,14 +54,11 @@ export default function FlipWords({
                     opacity: 0,
                     y: -40,
                     x: 40,
-                    filter: "blur(240px)",
                     scale: 2,
+                    filter: "blur(240px)",
                     position: "absolute"
                 }}
-                className={cn(
-                    "z-10 inline-block relative text-center",
-                    className
-                )}
+                className={cn("inline relative text-center", className)}
                 key={currentWord}
             >
                 {currentWord.split(" ").map((word, wordIndex) => (
@@ -73,7 +71,7 @@ export default function FlipWords({
                             delay: wordIndex * 0.3,
                             duration: 0.3
                         }}
-                        className="inline-block whitespace-nowrap"
+                        className="inline whitespace-nowrap"
                     >
                         {word.split("").map((letter, letterIndex) => (
                             <motion.span
@@ -91,12 +89,12 @@ export default function FlipWords({
                                     delay: wordIndex * 0.3 + letterIndex * 0.05,
                                     duration: 0.5
                                 }}
-                                className="inline-block"
+                                className="inline"
                             >
                                 {letter}
                             </motion.span>
                         ))}
-                        <span className="inline-block">&nbsp;</span>
+                        <span className="inline">&nbsp;</span>
                     </motion.span>
                 ))}
             </motion.div>

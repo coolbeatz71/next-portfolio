@@ -19,7 +19,7 @@ export default function HeroIntroSection(): JSX.Element {
                     {t("i_am", { name: "Jean-Vincent" })}
                 </span>
                 <br />
-                <span className="text-4xl sm:text-4xl lg:text-5xl !leading-loose">
+                <div className="text-4xl sm:text-4xl lg:text-5xl !leading-loose">
                     <FlipWords
                         words={[
                             t("software_engineer"),
@@ -28,7 +28,7 @@ export default function HeroIntroSection(): JSX.Element {
                         ]}
                         className="pl-0 text-indigo-700 dark:text-indigo-500 xl:text-5xl"
                     />
-                </span>
+                </div>
             </h1>
             <p className="mb-6 font-semibold lg:mb-8 text-center md:text-start text-sm sm:text-md lg:text-lg text-slate-600 dark:text-slate-400">
                 FullStack - PREN/MEAN - PHP/Laravel - Dart/Flutter
