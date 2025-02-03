@@ -1,19 +1,23 @@
 import Navigation from "@/components/layout/navigation/Navigation";
+import BackgroundBeams from "@/components/shared/background/Beams.Background";
+import BackgroundGradient from "@/components/shared/background/Gradient.Background";
+import GridBackground from "@/components/shared/background/Grid.Background";
 import { Fragment } from "react";
 
 export default function HomeContainer(): JSX.Element {
     return (
         <Fragment>
-            {/* <Fragment>
+            <Fragment>
                 <div className="hidden md:block">
                     <BackgroundBeams />
                 </div>
                 <BackgroundGradient />
                 <GridBackground className="top-0 h-[38rem]" />
-            </Fragment> */}
+            </Fragment>
 
             <Navigation />
-            {/* <Hero />
+            {/* 
+            <Hero />
             <Companies />
             <AboutMe />
 
