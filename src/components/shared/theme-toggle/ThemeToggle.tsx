@@ -18,7 +18,7 @@ export default function ThemeToggle(): JSX.Element {
         <button
             type="button"
             onClick={onToggle}
-            className="group relative text-2xl size-10 sm:size-10 md:size-12 bg-foreground text-background rounded-lg flex justify-center items-center dark:text-indigo-500 text-indigo-700 bg-slate-100 dark:bg-slate-900 hover:bg-slate-300 dark:hover:bg-slate-700"
+            className="group relative text-2xl size-12 sm:size-12 md:size-12 bg-foreground text-background rounded-lg flex justify-center items-center dark:text-indigo-500 text-indigo-700 bg-slate-100 dark:bg-slate-900 hover:bg-slate-300 dark:hover:bg-slate-700"
         >
             {icon}
         </button>
