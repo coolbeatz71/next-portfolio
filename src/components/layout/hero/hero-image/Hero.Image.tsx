@@ -26,7 +26,7 @@ export default function HeroImage(): JSX.Element {
 
     return (
         <div className="relative flex justify-center w-full h-full">
-            <HeroImageBackground className="w-[100%] h-[60%] z-0 opacity-70" />
+            <HeroImageBackground className="w-[100%] h-[60%] z-0 opacity-40" />
 
             <div className="relative w-[20rem] h-[32rem] lg:w-[24rem] lg:h-[36rem] -top-8 z-10">
                 <NextImage
