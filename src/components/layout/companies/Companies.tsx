@@ -43,7 +43,7 @@ export default function Companies(): JSX.Element {
 
     return (
         <section className={RESPONSIVE_CLASSNAME}>
-            <div className="grid grid-cols-1 xl:grid-cols-[3fr,3.5fr] items-center gap-4">
+            <div className="grid grid-cols-1 xl:grid-cols-[3fr,3.5fr] items-center gap-4 xl:gap-8">
                 <div className="text-start">
                     <DotBackground className="h-20 z-0" />
                     <div className="relative z-10">
