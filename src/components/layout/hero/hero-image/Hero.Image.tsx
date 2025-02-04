@@ -28,7 +28,7 @@ export default function HeroImage(): JSX.Element {
         <div className="relative flex justify-center w-full h-full">
             <HeroImageBackground className="w-[100%] h-[60%] z-0 opacity-80" />
 
-            <div className="relative w-[20rem] h-[32rem] lg:w-[24rem] lg:h-[36rem] -top-8 z-10">
+            <div className="relative w-[22rem] h-[32rem] lg:w-[24rem] lg:h-[36rem] -top-8 z-10">
                 <NextImage
                     fill
                     priority

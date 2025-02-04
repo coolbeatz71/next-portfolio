@@ -51,7 +51,7 @@ export default function Drawer({
 
                     <PopupCloseButton onClick={onToggle} />
 
-                    <div>{children}</div>
+                    <div className="flex-grow">{children}</div>
 
                     {footer && <PopupFooter>{footer}</PopupFooter>}
                 </div>
