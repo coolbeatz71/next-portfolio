@@ -1,12 +1,14 @@
+import type { AboutMeImage } from "@/config/AboutMe.Images";
+
 // Fisher-Yates algorithm to shuffle images and get random images
 export function getRandomImages(
-    images: { src: string; alt: string }[],
+    images: AboutMeImage[],
     count: number,
-    prevImages: { src: string; alt: string }[] = []
-): { src: string; alt: string }[] {
+    prevImages: AboutMeImage[] = []
+): AboutMeImage[] {
     const prevAlts = new Set(prevImages.map((img) => img.alt));
     const availableImages = images.filter((img) => !prevAlts.has(img.alt));
-    const result: { src: string; alt: string }[] = [];
+    const result: AboutMeImage[] = [];
 
     for (let i = availableImages.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));

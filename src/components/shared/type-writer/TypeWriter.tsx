@@ -27,10 +27,7 @@ export default function TypeWriter({
     }, [words.length]);
 
     useEffect(() => {
-        const timeoutId = setTimeout(
-            () => setCollapseClassName("w-full"),
-            1000
-        );
+        const timeoutId = setTimeout(() => setCollapseClassName("w-full"), 100);
         const intervalId = setInterval(incrementWord, 5000);
 
         return () => {
