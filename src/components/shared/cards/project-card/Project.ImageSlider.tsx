@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import NextImage from "next/image";
 import { useCallback, useMemo, useState } from "react";
-import { useInterval } from "react-use";
+import { useInterval, useMedia } from "react-use";
 
 import type { Image } from "@/config/Projects";
 
@@ -25,6 +25,12 @@ export default function ProjectImageSlider({
     const [isZoomed, setIsZoomed] = useState(false);
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
     const [isCursorInside, setIsCursorInside] = useState(false);
+
+    const isMobile = useMedia(
+        "(min-width: 380px) and (max-width: 576px)",
+        false
+    );
+    const isXSMobile = useMedia("(max-width: 380px)", false);
 
     const handleNext = useCallback(() => {
         setSliderState((state) => ({
@@ -74,9 +80,9 @@ export default function ProjectImageSlider({
                     (index - currentIndex + imageWithoutPreview.length) %
                     imageWithoutPreview.length;
                 const isActive = position === 0;
-                const baseWidth = 520;
                 const minWidth = 100;
                 const widthReduction = 95;
+                const baseWidth = isMobile ? 320 : isXSMobile ? 240 : 520;
 
                 const width = isActive
                     ? baseWidth
@@ -98,7 +104,7 @@ export default function ProjectImageSlider({
                     opacity: position < 4 ? 1 : 0
                 };
             }),
-        [currentIndex, imageWithoutPreview]
+        [currentIndex, imageWithoutPreview, isMobile, isXSMobile]
     );
 
     return (
@@ -107,7 +113,6 @@ export default function ProjectImageSlider({
                 onKeyDown={togglePlayPause}
                 onClick={togglePlayPause}
                 onMouseMove={handleMouseMove}
-                // TODO: should implement a better height calculation for laptop and desktop
                 className={`relative w-full max-w-6xl h-56 md:h-72 transition-all duration-300 ${isZoomed ? "p-0" : "px-4 py-4 pr-0"}`}
             >
                 <div
