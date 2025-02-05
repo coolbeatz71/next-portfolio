@@ -10,14 +10,6 @@ import { experienceTimeline } from "@/config/WorkExperience";
 import { cn } from "@/helpers/mergeClassName";
 import { useTranslation } from "react-i18next";
 
-function HeaderDrawer(): JSX.Element {
-    const { t } = useTranslation();
-
-    return (
-        <h2 className="text-xl font-semibold mb-4">{t("work_experience")}</h2>
-    );
-}
-
 export default function Experiences(): JSX.Element {
     const { t } = useTranslation();
     const [isOpen, setIsOpen] = useState(false);
@@ -52,12 +44,22 @@ export default function Experiences(): JSX.Element {
 
             <Drawer
                 isOpen={isOpen}
-                header={<HeaderDrawer />}
+                header={
+                    <h2 className="text-xl font-semibold mb-4">
+                        {t("work_experience")}
+                    </h2>
+                }
                 onToggle={toggleDrawer}
+                className="w-[90%] md:w-[80%] lg:w-[40%]"
             >
-                <TimelineFull
-                    data={experienceTimeline(headerClassName, bodyClassName)}
-                />
+                <div className="mt-4">
+                    <TimelineFull
+                        data={experienceTimeline(
+                            headerClassName,
+                            bodyClassName
+                        )}
+                    />
+                </div>
             </Drawer>
         </section>
     );
