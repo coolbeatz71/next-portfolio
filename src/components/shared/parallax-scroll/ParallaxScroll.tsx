@@ -91,6 +91,7 @@ export default function ParallaxScroll({
                                     blurDataURL={img.blurData}
                                     placeholder="blur"
                                     loading="lazy"
+                                    quality={90}
                                 />
                             </div>
                         </motion.div>
@@ -117,6 +118,7 @@ export default function ParallaxScroll({
                                     blurDataURL={img.blurData}
                                     placeholder="blur"
                                     loading="lazy"
+                                    quality={90}
                                 />
                             </div>
                         </motion.div>
