@@ -52,7 +52,7 @@ export default function Skills(): JSX.Element {
                 context="skills"
                 tabs={devStackTabs}
                 containerClassName="py-4"
-                tabBarClassName="min-w-full lg:min-w-[60%]"
+                tabBarClassName="min-w-full lg:min-w-[80%] xl:min-w-[70%] 2xl:min-w-[60%]"
             />
         </section>
     );
