@@ -41,7 +41,7 @@ const MyApp = ({
         >
             <main
                 className={cn(
-                    "bg-pattern_light dark:bg-pattern_dark bg-no-repeat bg-fixed bg-cover",
+                    "bg-pattern_light dark:bg-pattern_dark bg-repeat bg-contain bg-center",
                     font.className
                 )}
             >
