@@ -26,7 +26,7 @@ export default function HeroIntroSection(): JSX.Element {
                         t("frontend_engineer"),
                         t("mobile_engineer")
                     ]}
-                    className="pl-0 !leading-tight font-bold text-indigo-700 dark:text-indigo-500 text-3xl sm:text-4xl lg:text-5xl"
+                    className="pl-0 !leading-tight text-3xl sm:text-4xl lg:text-5xl font-bold text-indigo-700 dark:text-indigo-500"
                 />
             </h1>
 
