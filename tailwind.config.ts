@@ -1,4 +1,5 @@
 import svgToDataUri from "mini-svg-data-uri";
+import CustomScrollbarPlugin from "tailwind-scrollbar";
 import type { Config } from "tailwindcss";
 import { fontFamily } from "tailwindcss/defaultTheme";
 import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
@@ -146,7 +147,14 @@ const config: Config = {
             }
         }
     },
-    plugins: [addVariablesForColors, addBackgroundPatterns]
+    plugins: [
+        addVariablesForColors,
+        addBackgroundPatterns,
+        CustomScrollbarPlugin({
+            nocompatible: true,
+            preferredStrategy: "pseudoelements"
+        })
+    ]
 };
 
 export default config;

@@ -46,7 +46,7 @@ export default function Document() {
                 <link rel="manifest" href="manifest.json" key="manifest" />
             </Head>
 
-            <body className="scrollbar overflow-y-auto overflow-x-hidden">
+            <body className="scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar scrollbar-w-2 scrollbar-thumb-indigo-500 scrollbar-track-slate-300 dark:scrollbar-track-slate-700 overflow-y-auto overflow-x-hidden">
                 <Main />
                 <NextScript />
             </body>
