@@ -1,5 +1,4 @@
 import { getLanguage } from "@/helpers/getLanguage";
-import { cn } from "@/helpers/mergeClassName";
 import type { IUnknownObject } from "@/interfaces/app";
 import locales from "@/locales";
 import dayjs from "dayjs";
@@ -40,10 +39,7 @@ const MyApp = ({
             themes={["light", "dark"]}
         >
             <main
-                className={cn(
-                    "bg-pattern_light dark:bg-pattern_dark bg-repeat bg-[82rem]",
-                    font.className
-                )}
+                className={`bg-pattern_light dark:bg-pattern_dark bg-repeat bg-[82rem] ${font}`}
             >
                 <Component {...pageProps} serverProps={serverProps} />
             </main>
