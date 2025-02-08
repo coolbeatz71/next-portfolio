@@ -50,7 +50,7 @@ export default function Experiences(): JSX.Element {
                     </h2>
                 }
                 onToggle={toggleDrawer}
-                className="w-[90%] md:w-[80%] lg:w-[40%]"
+                className="w-[100%] sm:w-[90%] md:w-[80%] lg:w-[40%]"
             >
                 <div className="mt-4">
                     <TimelineFull

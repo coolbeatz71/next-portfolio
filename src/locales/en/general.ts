@@ -11,7 +11,7 @@ export const general = {
     senior_frontend_engineer: "Senior Frontend Engineer",
     servicenow_developer: "ServiceNow Developer",
     fullstack_engineer: "Full-Stack Engineer",
-    fullstack_engineer_php: "Full-Stack PHP, MEAN Engineer",
+    fullstack_engineer_php: "Full-Stack PHP/MEAN Engineer",
     fullstack_associate_engineer: "Full-Stack Associate Engineer",
     freelance_engineer: "Freelance Engineer",
     lamp_stack_engineer: "LAMP-Stack Engineer",
