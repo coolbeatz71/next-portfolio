@@ -39,7 +39,7 @@ const MyApp = ({
             themes={["light", "dark"]}
         >
             <main
-                className={`bg-pattern_light dark:bg-pattern_dark bg-repeat bg-[82rem] ${font}`}
+                className={`bg-pattern_light dark:bg-pattern_dark bg-repeat bg-[79rem] ${font}`}
             >
                 <Component {...pageProps} serverProps={serverProps} />
             </main>
