@@ -41,7 +41,7 @@ export default function Drawer({
         <Fragment>
             <aside
                 className={cn(
-                    `fixed top-0 ${position}-0 z-50 w-[50%] h-screen bg-light dark:bg-dark
+                    `fixed inset-100 top-0 ${position}-0 z-50 w-[50%] h-screen bg-light dark:bg-dark
                     transition-transform transform ${getTranslateValue()}`,
                     className
                 )}

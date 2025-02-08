@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 import { MovingBorderButton } from "@/components/shared/buttons/moving-border/MovingBorder.Button";
-import Drawer from "@/components/shared/popup/drawer/Drawer";
 import SectionHeader from "@/components/shared/section-header/SectionHeader";
 import { Timeline } from "@/components/shared/timeline/Timeline";
 import { TimelineFull } from "@/components/shared/timeline/Timeline.Full";
@@ -9,6 +8,7 @@ import { RESPONSIVE_CLASSNAME } from "@/config/ThemeStyle";
 import { experienceTimeline } from "@/config/WorkExperience";
 import { cn } from "@/helpers/mergeClassName";
 import { useTranslation } from "react-i18next";
+import AppDrawer from "../../shared/popup/drawer/AppDrawer";
 
 export default function Experiences(): JSX.Element {
     const { t } = useTranslation();
@@ -42,15 +42,14 @@ export default function Experiences(): JSX.Element {
                 </div>
             </div>
 
-            <Drawer
+            <AppDrawer
                 isOpen={isOpen}
+                onToggle={toggleDrawer}
                 header={
-                    <h2 className="text-xl font-semibold mb-4">
+                    <h2 className="text-xl font-semibold">
                         {t("work_experience")}
                     </h2>
                 }
-                onToggle={toggleDrawer}
-                className="w-[100%] sm:w-[90%] md:w-[80%] lg:w-[40%]"
             >
                 <div className="mt-4">
                     <TimelineFull
@@ -60,7 +59,20 @@ export default function Experiences(): JSX.Element {
                         )}
                     />
                 </div>
-            </Drawer>
+            </AppDrawer>
+
+            {/* <Drawer
+                isOpen={isOpen}
+                header={
+                    <h2 className="text-xl font-semibold mb-4">
+                        {t("work_experience")}
+                    </h2>
+                }
+                onToggle={toggleDrawer}
+                className="w-[100%] sm:w-[90%] md:w-[80%] lg:w-[40%]"
+            > */}
+
+            {/* </Drawer> */}
         </section>
     );
 }
