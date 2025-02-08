@@ -1,14 +1,12 @@
-import { Fragment } from "react";
+import { cn } from "@/helpers/mergeClassName";
 import type { ReactNode } from "react";
 import { useLockBodyScroll } from "react-use";
-
-import { cn } from "@/helpers/mergeClassName";
-import PopupBackdrop from "../Popup.Backdrop";
 import PopupCloseButton from "../Popup.Close.Button";
 import PopupFooter from "../Popup.Footer";
 import PopupHeader from "../Popup.Header";
 
 export interface DrawerProps {
+    width?: string;
     header: ReactNode;
     footer?: ReactNode;
     isOpen: boolean;
@@ -18,45 +16,104 @@ export interface DrawerProps {
     position?: "right" | "left";
 }
 
+const getTranslateStyle = (
+    isOpen: boolean,
+    width: string,
+    position: "right" | "left"
+) => ({
+    transform: isOpen
+        ? "translateX(0)"
+        : position === "right"
+          ? `translateX(${width})`
+          : `translateX(-${width})`
+});
+
+const Backdrop = ({ isOpen }: { isOpen: boolean }) => (
+    <div
+        className={cn(
+            "fixed inset-0 bg-black bg-opacity-70 backdrop-blur transition-all",
+            isOpen
+                ? "opacity-100 duration-200 ease-in-out"
+                : "opacity-0 duration-200 ease-in-out hidden"
+        )}
+    />
+);
+
+export interface DrawerContainerProps {
+    children: ReactNode;
+    width: string;
+    position: "right" | "left";
+    isOpen: boolean;
+}
+const DrawerContainer = ({
+    children,
+    width,
+    position,
+    isOpen
+}: DrawerContainerProps) => (
+    <div
+        className="pointer-events-auto relative h-full transition-transform ease-in-out duration-200"
+        style={{ width, ...getTranslateStyle(isOpen, width, position) }}
+        onClick={(e) => e.stopPropagation()}
+        onKeyUp={(e) => e.stopPropagation()}
+    >
+        <div className="flex flex-col h-full overflow-y-scroll bg-light dark:bg-dark shadow-xl px-4">
+            {children}
+        </div>
+    </div>
+);
+
 export default function Drawer({
     header,
     footer,
     isOpen,
     onToggle,
     children,
-    className,
+    width = "50vw",
     position = "right"
-}: DrawerProps): JSX.Element {
+}: DrawerProps) {
     useLockBodyScroll(isOpen);
 
-    const getTranslateValue = (): string => {
-        const toggle = {
-            open: { right: "translate-x-0", left: "-translate-x-0" },
-            closed: { right: "translate-x-full", left: "-translate-x-full" }
-        };
-        return isOpen ? toggle.open[position] : toggle.closed[position];
-    };
-
     return (
-        <Fragment>
-            <aside
+        <div
+            aria-modal="true"
+            id={`dialog-${position}`}
+            className="relative z-50"
+            aria-labelledby="drawer"
+        >
+            <Backdrop isOpen={isOpen} />
+            <div
                 className={cn(
-                    `fixed inset-100 top-0 ${position}-0 z-50 w-[50%] h-screen bg-light dark:bg-dark
-                    transition-transform transform ${getTranslateValue()}`,
-                    className
+                    "fixed inset-0 overflow-hidden z-50",
+                    isOpen ? "visible" : "invisible"
                 )}
             >
-                <div className="p-4 flex flex-col justify-between h-full">
-                    <PopupHeader>{header}</PopupHeader>
-
-                    <PopupCloseButton onClick={onToggle} />
-
-                    <div className="flex-grow">{children}</div>
-
-                    {footer && <PopupFooter>{footer}</PopupFooter>}
+                <div
+                    className="absolute inset-0 overflow-hidden"
+                    onClick={onToggle}
+                    onKeyUp={onToggle}
+                >
+                    <div
+                        className={cn(
+                            "pointer-events-none fixed flex",
+                            position === "right"
+                                ? "inset-y-0 right-0"
+                                : "inset-y-0 left-0"
+                        )}
+                    >
+                        <DrawerContainer
+                            width={width}
+                            isOpen={isOpen}
+                            position={position}
+                        >
+                            <PopupHeader>{header}</PopupHeader>
+                            <PopupCloseButton onClick={onToggle} />
+                            <div className="flex-grow z-40">{children}</div>
+                            {footer && <PopupFooter>{footer}</PopupFooter>}
+                        </DrawerContainer>
+                    </div>
                 </div>
-            </aside>
-            {isOpen && <PopupBackdrop onClick={onToggle} />}
-        </Fragment>
+            </div>
+        </div>
     );
 }

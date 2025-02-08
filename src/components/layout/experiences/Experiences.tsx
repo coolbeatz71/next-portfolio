@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import { MovingBorderButton } from "@/components/shared/buttons/moving-border/MovingBorder.Button";
+import Drawer from "@/components/shared/popup/drawer/Drawer";
 import SectionHeader from "@/components/shared/section-header/SectionHeader";
 import { Timeline } from "@/components/shared/timeline/Timeline";
 import { TimelineFull } from "@/components/shared/timeline/Timeline.Full";
@@ -8,7 +9,6 @@ import { RESPONSIVE_CLASSNAME } from "@/config/ThemeStyle";
 import { experienceTimeline } from "@/config/WorkExperience";
 import { cn } from "@/helpers/mergeClassName";
 import { useTranslation } from "react-i18next";
-import AppDrawer from "../../shared/popup/drawer/AppDrawer";
 
 export default function Experiences(): JSX.Element {
     const { t } = useTranslation();
@@ -18,6 +18,7 @@ export default function Experiences(): JSX.Element {
     const headerClassName = "mt-4 !text-sm mb-0";
 
     const toggleDrawer = () => {
+        console.log("calkled", isOpen);
         setIsOpen(!isOpen);
     };
 
@@ -42,7 +43,7 @@ export default function Experiences(): JSX.Element {
                 </div>
             </div>
 
-            <AppDrawer
+            <Drawer
                 isOpen={isOpen}
                 onToggle={toggleDrawer}
                 header={
@@ -59,20 +60,7 @@ export default function Experiences(): JSX.Element {
                         )}
                     />
                 </div>
-            </AppDrawer>
-
-            {/* <Drawer
-                isOpen={isOpen}
-                header={
-                    <h2 className="text-xl font-semibold mb-4">
-                        {t("work_experience")}
-                    </h2>
-                }
-                onToggle={toggleDrawer}
-                className="w-[100%] sm:w-[90%] md:w-[80%] lg:w-[40%]"
-            > */}
-
-            {/* </Drawer> */}
+            </Drawer>
         </section>
     );
 }
