@@ -18,7 +18,7 @@ export default function ProjectSection({ projects }: ProjectSectionProps) {
         visible: {
             y: 0,
             opacity: 1,
-            transition: { duration: 0.5, ease: "backInOut" }
+            transition: { duration: 0.45, ease: "backInOut" }
         }
     };
 
