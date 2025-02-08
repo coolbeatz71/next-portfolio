@@ -23,7 +23,7 @@ export default function Badge({
     return (
         <div
             className={cn(
-                "relative backdrop-blur-sm bg-indigo-500/60 dark:bg-indigo-700/60 p-3.5 md:p-4 rounded-lg overflow-hidden z-10 shadow-xl flex justify-around items-center",
+                "relative backdrop-blur-sm bg-indigo-500/60 dark:bg-indigo-700/60 p-3 sm:p-3.5 md:p-4 rounded-lg overflow-hidden z-10 shadow-xl flex justify-around items-center",
                 className
             )}
         >
