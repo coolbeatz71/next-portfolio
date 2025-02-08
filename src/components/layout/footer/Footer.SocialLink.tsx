@@ -6,12 +6,12 @@ export default function FooterSocialLink(): JSX.Element {
     const { t } = useTranslation();
 
     return (
-        <div className="flex flex-col justify-center md:justify-start items-start gap-2">
-            <h3 className="text-center w-full md:text-start text-2xl font-bold text-slate-700 dark:text-slate-300">
+        <div className="flex flex-col  items-start gap-2">
+            <h3 className="w-full text-2xl font-bold text-slate-700 dark:text-slate-300">
                 {t("follow_me")}
             </h3>
 
-            <div className="flex text-center justify-center w-full px-12 sm:px-0 sm:w-72 gap-2">
+            <div className="flex w-full gap-2">
                 {socialLinksList.map((social) => (
                     <NextLink
                         href={social.href}

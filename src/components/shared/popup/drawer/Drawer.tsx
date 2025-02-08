@@ -39,12 +39,10 @@ export default function Drawer({
 
     return (
         <Fragment>
-            {isOpen && <PopupBackdrop onClick={onToggle} />}
-
-            <div
+            <aside
                 className={cn(
-                    `fixed top-0 ${position}-0 z-50 w-[50%] h-full bg-light dark:bg-dark
-                transition-transform transform ${getTranslateValue()}`,
+                    `fixed top-0 ${position}-0 z-50 w-[50%] h-screen bg-light dark:bg-dark
+                    transition-transform transform ${getTranslateValue()}`,
                     className
                 )}
             >
@@ -53,11 +51,12 @@ export default function Drawer({
 
                     <PopupCloseButton onClick={onToggle} />
 
-                    <div>{children}</div>
+                    <div className="flex-grow">{children}</div>
 
                     {footer && <PopupFooter>{footer}</PopupFooter>}
                 </div>
-            </div>
+            </aside>
+            {isOpen && <PopupBackdrop onClick={onToggle} />}
         </Fragment>
     );
 }

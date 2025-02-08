@@ -13,9 +13,12 @@ export function HeroImageBackground({ className }: HeroImageBackgroundProps) {
             )}
         >
             <svg
+                width={720}
+                height={520}
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="4 1 12 9"
+                className="min-w-[10rem] min-h-[10rem]"
             >
                 <defs>
                     <linearGradient
@@ -25,12 +28,9 @@ export function HeroImageBackground({ className }: HeroImageBackgroundProps) {
                         <stop offset="0%" stopColor="rgba(99, 102, 241, 0.5)" />
                         <stop
                             offset="50%"
-                            stopColor="rgba(236, 72, 153, 0.5)"
+                            stopColor="rgba(236, 72, 153, 0.3)"
                         />
-                        <stop
-                            offset="100%"
-                            stopColor="rgba(99, 102, 241, 0.5)"
-                        />
+                        <stop offset="100%" stopColor="rgba(99, 102, 241, 1)" />
                     </linearGradient>
                 </defs>
                 <path

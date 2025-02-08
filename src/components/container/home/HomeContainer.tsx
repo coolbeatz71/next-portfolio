@@ -10,13 +10,16 @@ import Skills from "@/components/layout/skills/Skills";
 import BackgroundBeams from "@/components/shared/background/Beams.Background";
 import BackgroundGradient from "@/components/shared/background/Gradient.Background";
 import GridBackground from "@/components/shared/background/Grid.Background";
+
 import { Fragment } from "react";
 
 export default function HomeContainer(): JSX.Element {
     return (
         <Fragment>
             <Fragment>
-                <BackgroundBeams />
+                <div className="hidden md:block">
+                    <BackgroundBeams />
+                </div>
                 <BackgroundGradient />
                 <GridBackground className="top-0 h-[38rem]" />
             </Fragment>
@@ -25,7 +28,6 @@ export default function HomeContainer(): JSX.Element {
             <Hero />
             <Companies />
             <AboutMe />
-
             <Experiences />
             <Projects />
             <Skills />

@@ -20,7 +20,7 @@ export default function HeroBadges(): JSX.Element {
                     />
                 ))}
             </div>
-            <div className="grid grid-cols-2 w-[10rem] h-[12rem] place-items-center gap-2 md:gap-4">
+            <div className="grid grid-cols-2 h-[12rem] place-items-center gap-2 md:gap-4">
                 {devToolsLogoList.map((badge) => (
                     <div
                         key={badge.iconName}

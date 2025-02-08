@@ -8,20 +8,7 @@ import { TimelineFull } from "@/components/shared/timeline/Timeline.Full";
 import { RESPONSIVE_CLASSNAME } from "@/config/ThemeStyle";
 import { experienceTimeline } from "@/config/WorkExperience";
 import { cn } from "@/helpers/mergeClassName";
-import dynamic from "next/dynamic";
 import { useTranslation } from "react-i18next";
-
-const DynamicTooltip = dynamic(() => import("./../../shared/tooltip/Tooltip"), {
-    ssr: false
-});
-
-function HeaderDrawer(): JSX.Element {
-    const { t } = useTranslation();
-
-    return (
-        <h2 className="text-xl font-semibold mb-4">{t("work_experience")}</h2>
-    );
-}
 
 export default function Experiences(): JSX.Element {
     const { t } = useTranslation();
@@ -46,25 +33,33 @@ export default function Experiences(): JSX.Element {
                 />
                 <Timeline data={experienceTimeline().slice(0, 5)} />
                 <div className="flex justify-center w-full">
-                    <DynamicTooltip text={t("view_more_experience")}>
-                        <MovingBorderButton
-                            className="py-3 md:py-4 px-10"
-                            onClick={toggleDrawer}
-                        >
-                            {t("read_more")}
-                        </MovingBorderButton>
-                    </DynamicTooltip>
+                    <MovingBorderButton
+                        className="py-3 md:py-4 px-10"
+                        onClick={toggleDrawer}
+                    >
+                        {t("read_more")}
+                    </MovingBorderButton>
                 </div>
             </div>
 
             <Drawer
                 isOpen={isOpen}
-                header={<HeaderDrawer />}
+                header={
+                    <h2 className="text-xl font-semibold mb-4">
+                        {t("work_experience")}
+                    </h2>
+                }
                 onToggle={toggleDrawer}
+                className="w-[90%] md:w-[80%] lg:w-[40%]"
             >
-                <TimelineFull
-                    data={experienceTimeline(headerClassName, bodyClassName)}
-                />
+                <div className="mt-4">
+                    <TimelineFull
+                        data={experienceTimeline(
+                            headerClassName,
+                            bodyClassName
+                        )}
+                    />
+                </div>
             </Drawer>
         </section>
     );

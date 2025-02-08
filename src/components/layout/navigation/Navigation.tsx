@@ -18,10 +18,10 @@ export default function Navigation(): JSX.Element {
 
     return (
         <nav
-            className={`sticky top-0 z-30 transition duration-100 ${scrollY > 20 ? "dark:bg-slate-800/70 bg-slate-200/70 backdrop-blur-lg shadow" : ""}`}
+            className={`sticky top-0 z-40 transition duration-100 ${scrollY > 20 ? "dark:bg-slate-800/70 bg-slate-200/70 backdrop-blur-md shadow" : ""}`}
         >
             <div className={RESPONSIVE_CLASSNAME}>
-                <div className="relative flex py-3 lg:py-5 items-center justify-between gap-3">
+                <div className="relative flex py-4 sm:py-4 lg:py-5 items-center justify-between gap-2">
                     <div className="inset-y-0 left-0 flex items-center lg:hidden">
                         <HamburgerMenuButton />
                     </div>
@@ -33,7 +33,7 @@ export default function Navigation(): JSX.Element {
                             </div>
                         </div>
                     </div>
-                    <div className="inset-y-0 right-0 flex items-center justify-center gap-3">
+                    <div className="inset-y-0 right-0 flex items-center justify-center gap-2">
                         <LanguageDropDown placement="bottom" />
                         <ThemeToggle />
                     </div>

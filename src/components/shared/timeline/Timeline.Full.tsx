@@ -8,7 +8,7 @@ export const TimelineFull = ({ data }: { data: TimelineEntry[] }) => {
             <div className="relative overflow-y-scroll max-h-[calc(100vh-theme(space.24))] pr-4">
                 {data.map((item) => (
                     <div key={item.id} className="flex justify-start mb-6">
-                        <div className="relative w-full border border-gray-300 rounded-lg bg-slate-100 dark:bg-slate-700 dark:border-gray-600 p-4 pb-6">
+                        <div className="relative w-full border rounded-lg bg-slate-300 border-gray-200 dark:bg-slate-700 dark:border-gray-600 p-4 pb-6">
                             <div className="absolute top-0 bottom-0 w-[70%] opacity-50">
                                 <GridPatternBackground size={20} />
                             </div>

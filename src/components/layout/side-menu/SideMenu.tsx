@@ -1,7 +1,8 @@
+import NavigationMenu from "@/components/layout/navigation/Navigation.Menu";
+import Logo from "@/components/shared/logo/Logo";
 import Drawer from "@/components/shared/popup/drawer/Drawer";
-import NavigationMenu from "../navigation/Navigation.Menu";
-import SideMenuHeader from "./SideMenu.Header";
-import SideMenuFooter from "./Sidemenu.Footer";
+
+import SideMenuProfile from "./Sidemenu.Profile";
 
 export interface SideMenuProps {
     isOpen: boolean;
@@ -16,13 +17,22 @@ export default function SideMenu({
         <Drawer
             isOpen={isOpen}
             position="left"
-            className="w-[90%] sm:w-[60%] md:w-[40%]"
             onToggle={toggleDrawer}
-            header={<SideMenuHeader />}
-            footer={<SideMenuFooter />}
+            className="z-50 w-[80%] sm:w-[60%] md:w-[40%]"
+            header={
+                <div className="flex items-center justify-between mb-4 w-[90%]">
+                    <Logo />
+                </div>
+            }
         >
             <div className="flex flex-col items-start gap-1">
-                <NavigationMenu onClick={toggleDrawer} className="w-full p-3" />
+                <SideMenuProfile />
+                <div className="flex flex-col py-4 w-full">
+                    <NavigationMenu
+                        onClick={toggleDrawer}
+                        className="w-full p-3"
+                    />
+                </div>
             </div>
         </Drawer>
     );

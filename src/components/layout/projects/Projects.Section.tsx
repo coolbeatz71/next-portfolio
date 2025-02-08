@@ -18,7 +18,7 @@ export default function ProjectSection({ projects }: ProjectSectionProps) {
         visible: {
             y: 0,
             opacity: 1,
-            transition: { duration: 0.5, ease: "backInOut" }
+            transition: { duration: 0.45, ease: "backInOut" }
         }
     };
 
@@ -30,7 +30,7 @@ export default function ProjectSection({ projects }: ProjectSectionProps) {
                 variants={variants}
                 className="py-8"
             >
-                <div className="grid md:grid-cols-2 gap-4">
+                <div className="grid lg:grid-cols-2 gap-4">
                     {projects.map((project, index) => (
                         <ProjectCard
                             index={index}

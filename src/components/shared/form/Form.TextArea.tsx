@@ -28,7 +28,7 @@ export function FormTextArea({
         <div className="relative">
             <textarea
                 rows={rows}
-                placeholder=""
+                placeholder=" "
                 {...register(name)}
                 className={cn(
                     `${isError ? "border-pink-400 focus:ring-pink-300 dark:focus:ring-indigo-800 dark:focus:border-indigo-500" : "border-slate-200 dark:border-slate-500 focus:border-indigo-700 focus:ring-indigo-300 dark:focus:ring-indigo-800 dark:focus:border-indigo-500"} peer block border rounded-lg px-4 pb-2 pt-6 w-full resize-none focus:outline-none focus:ring-4 bg-white dark:bg-slate-600`,
