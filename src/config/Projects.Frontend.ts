@@ -63,7 +63,7 @@ export const projectsFrontend: ProjectByStack[] = [
             "Typescript",
             "CoreUI",
             "AWS lambda",
-            "GraphQL/Apollo",
+            "GraphQL",
             "Hasura"
         ],
         images: [
