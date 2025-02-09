@@ -22,7 +22,7 @@ export default function AboutMeDescription(): JSX.Element {
             <h2 className="text-start mb-4 text-3xl font-bold tracking-tight md:leading-relaxed text-slate-700 dark:text-slate-300">
                 {t("aboutme_title")}
             </h2>
-            <p className="text-start text-slate-500 dark:text-slate-400 tracking-tight md:leading-relaxed text-md md:text-lg">
+            <p className="text-md sm:text-lg md:text-xl lg:text-xl text-start text-slate-500 dark:text-slate-400 tracking-tight md:leading-relaxed">
                 {t("aboutme_subtitle")}
             </p>
             <hr className="h-px my-4 md:my-8 border-0 bg-slate-500/[0.2] dark:bg-slate-400/[0.2]" />

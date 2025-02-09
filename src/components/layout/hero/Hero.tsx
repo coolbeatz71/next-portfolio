@@ -16,7 +16,7 @@ export default function Hero(): JSX.Element {
                 <div className="flex flex-col items-start p-0 md:py-8 xl:py-16 gap-4">
                     <HeroIntroSection />
                 </div>
-                <div className="flex justify-center relative">
+                <div className="flex relative justify-end md:justify-end">
                     <HeroImageSection />
                 </div>
             </div>

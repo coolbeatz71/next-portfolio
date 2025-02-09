@@ -16,7 +16,7 @@ export const footer = {
         invalid_email: "{{label}} a un format invalide"
     },
     toast: {
-        success: "Votre message a été envoyé avec succès! 🎉",
+        success: "Message envoyé avec succès! 🎉",
         error: "Échec de l'envoi du message. Veuillez réessayer plus tard! 😞"
     }
 };
