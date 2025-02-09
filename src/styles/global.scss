@@ -15,24 +15,10 @@
         text-wrap: balance;
     }
 
-    
-    @layer utilities {
-        .scrollbar::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        .scrollbar::-webkit-scrollbar-track {
-            border-radius: 5px;
-            background: #edf7f410;
-        }
-
-        .scrollbar::-webkit-scrollbar-thumb {
-            background: #6365f1c5;
-            border-radius: 5px;
-        }
-
-        .scrollbar::-webkit-scrollbar-thumb:hover {
-            background: #4438cac5;
+    .overflow-y-scroll-touch {
+        overflow-y: scroll;
+        @supports (-webkit-overflow-scrolling: touch) {
+            -webkit-overflow-scrolling: touch;
         }
     }
 }

@@ -12,6 +12,7 @@ export default function HamburgerMenuButton(): JSX.Element {
     return (
         <Fragment>
             <button
+                title="open menu"
                 type="button"
                 onClick={toggleDrawer}
                 aria-controls="mobile-menu"

@@ -19,7 +19,7 @@ export interface ProjectCardProps {
 }
 
 function HeaderModal({ title }: { title: string }): JSX.Element {
-    return <h2 className="text-xl font-semibold mb-4">{title}</h2>;
+    return <h2 className="text-xl font-semibold">{title}</h2>;
 }
 
 export function ProjectCard({ project, index }: ProjectCardProps) {

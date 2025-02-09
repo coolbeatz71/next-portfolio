@@ -42,7 +42,7 @@ export default function Modal({
                     transform: "translate(-50%, -50%)"
                 }}
             >
-                <div className="p-4">
+                <div className="px-4 pb-4">
                     <PopupHeader>{header}</PopupHeader>
 
                     <PopupCloseButton onClick={onToggle} />
