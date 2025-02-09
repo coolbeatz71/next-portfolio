@@ -5,14 +5,11 @@ import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 import { ThemeProvider } from "next-themes";
 import type { AppProps } from "next/app";
-import { Montserrat } from "next/font/google";
 import { useMemo } from "react";
 
 import "@/styles/global.scss";
 
 type AppPropsWithError = AppProps & { err: unknown } & IUnknownObject;
-
-const font = Montserrat({ subsets: ["latin"], preload: true });
 
 const MyApp = ({
     Component,
@@ -38,9 +35,7 @@ const MyApp = ({
             defaultTheme="light"
             themes={["light", "dark"]}
         >
-            <main
-                className={`bg-pattern_light dark:bg-pattern_dark bg-repeat bg-[79rem] ${font}`}
-            >
+            <main className="bg-pattern_light dark:bg-pattern_dark bg-repeat bg-[79rem]">
                 <Component {...pageProps} serverProps={serverProps} />
             </main>
         </ThemeProvider>

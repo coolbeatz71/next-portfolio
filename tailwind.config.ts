@@ -1,7 +1,6 @@
 import svgToDataUri from "mini-svg-data-uri";
 import CustomScrollbarPlugin from "tailwind-scrollbar";
 import type { Config } from "tailwindcss";
-import { fontFamily } from "tailwindcss/defaultTheme";
 import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
 import type { PluginAPI } from "tailwindcss/types/config";
 
@@ -95,9 +94,6 @@ const config: Config = {
                     transform: "translate(-50%,-40%) scale(1)"
                 }
             }
-        },
-        fontFamily: {
-            sans: ['"Montserrat"', ...fontFamily.sans]
         },
         extend: {
             brightness: {
