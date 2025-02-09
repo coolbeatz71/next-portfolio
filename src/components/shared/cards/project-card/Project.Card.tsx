@@ -58,8 +58,8 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                 animate="visible"
                 variants={variants}
             >
-                <div className="bg-white dark:bg-gray-900 rounded-lg overflow-hidden transition-all duration-300 group-hover:shadow-xl">
-                    <div className="flex flex-col md:flex-row">
+                <div className="lg:min-h-72 bg-white dark:bg-gray-900 rounded-lg overflow-hidden transition-all duration-300 group-hover:shadow-xl">
+                    <div className="flex flex-col md:flex-row lg:min-h-72">
                         <div
                             onClick={toggleModal}
                             onKeyDown={toggleModal}

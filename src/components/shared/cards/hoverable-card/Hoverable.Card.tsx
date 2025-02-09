@@ -21,7 +21,7 @@ export default function HoverableCard({
     return (
         <div
             key={title}
-            className="relative group block p-3 md:p-2 h-[5rem] w-full border border-slate-300 dark:border-slate-700 rounded-lg"
+            className="relative group block p-3 md:p-2 lg:p-3.5 h-[5rem] w-full border border-slate-300 dark:border-slate-700 rounded-lg"
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
         >

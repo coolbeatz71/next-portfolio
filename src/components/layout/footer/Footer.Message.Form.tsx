@@ -90,11 +90,11 @@ export default function FooterMessageForm(): JSX.Element {
             </FormProvider>
             <Toaster
                 toastOptions={{
-                    duration: 3000,
-                    removeDelay: 3000,
+                    duration: 5000,
+                    removeDelay: 5000,
                     position: "bottom-center",
                     success: {
-                        style: getToastStyle("#0f766e")
+                        style: getToastStyle("#0e824e")
                     },
                     error: {
                         style: getToastStyle("#be185d")

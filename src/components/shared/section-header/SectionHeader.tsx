@@ -15,7 +15,7 @@ export default function SectionHeader({
                 <h2 className="mb-4 text-3xl font-bold !leading-relaxed text-slate-700 dark:text-slate-300">
                     {title}
                 </h2>
-                <p className="text-md md:text-lg text-slate-500 dark:text-slate-400 !leading-relaxed">
+                <p className="text-md sm:text-lg md:text-xl lg:text-xl text-slate-500 dark:text-slate-400 !leading-relaxed">
                     {subtitle}
                 </p>
             </div>
