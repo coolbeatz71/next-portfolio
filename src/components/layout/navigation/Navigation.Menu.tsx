@@ -14,50 +14,49 @@ export default function NavigationMenu({
     className
 }: NavigationMenuProps): JSX.Element {
     const { t } = useTranslation();
-    const [currentItem, setCurrentItem] = useState(
+    const [activeLink, setActiveLink] = useState(
         () => window.location.hash || ""
     );
 
     useEffect(() => {
-        const updateCurrentItem = () => {
+        const updateActiveLink = () => {
             const scrollPosition = window.scrollY;
             let activeSection = "";
 
-            if (scrollPosition === 0) {
-                activeSection = ""; // Set to "introduction" when at the top
-            } else {
+            if (scrollPosition === 0) activeSection = "";
+            else {
                 for (const { href } of navigationList) {
                     if (!href.startsWith("#")) continue;
 
                     const section = document.querySelector(href);
                     if (section) {
                         const { top } = section.getBoundingClientRect();
-                        if (top <= 100) activeSection = href; // Adjust threshold as needed
+                        if (top <= 100) activeSection = href;
                     }
                 }
             }
 
-            if (activeSection !== currentItem) {
-                setCurrentItem(activeSection);
+            if (activeSection !== activeLink) {
+                setActiveLink(activeSection);
                 history.replaceState(null, "", activeSection || "/");
             }
         };
 
-        window.addEventListener("scroll", updateCurrentItem);
-        window.addEventListener("hashchange", updateCurrentItem);
+        window.addEventListener("scroll", updateActiveLink);
+        window.addEventListener("hashchange", updateActiveLink);
 
-        updateCurrentItem(); // Initial check
+        updateActiveLink();
 
         return () => {
-            window.removeEventListener("scroll", updateCurrentItem);
-            window.removeEventListener("hashchange", updateCurrentItem);
+            window.removeEventListener("scroll", updateActiveLink);
+            window.removeEventListener("hashchange", updateActiveLink);
         };
-    }, [currentItem]);
+    }, [activeLink]);
 
     return (
         <Fragment>
             {navigationList.map((item) => {
-                const isCurrent = currentItem === item.href;
+                const isCurrent = activeLink === item.href;
 
                 return (
                     <NextLink
@@ -73,7 +72,7 @@ export default function NavigationMenu({
                         )}
                         aria-current={isCurrent ? "page" : undefined}
                         onClick={() => {
-                            setCurrentItem(item.href);
+                            setActiveLink(item.href);
                             onClick?.();
                         }}
                         suppressHydrationWarning
