@@ -18,7 +18,6 @@ export default function Experiences(): JSX.Element {
     const headerClassName = "mt-4 !text-sm mb-0";
 
     const toggleDrawer = () => {
-        console.log("calkled", isOpen);
         setIsOpen(!isOpen);
     };
 
