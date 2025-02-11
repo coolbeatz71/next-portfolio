@@ -79,7 +79,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                         </div>
                         <div className="md:w-1/2 p-4 flex flex-col justify-between cursor-pointer">
                             <div onClick={toggleModal} onKeyDown={toggleModal}>
-                                <h3 className="cursor-text text-xl font-semibold mb-2 text-slate-700 dark:text-slate-300 transition-colors duration-300">
+                                <h3 className="cursor-text text-lg font-semibold mb-2 text-slate-700 dark:text-slate-300 transition-colors duration-300">
                                     {project.name}
                                 </h3>
                                 <p className="cursor-text text-gray-500 dark:text-gray-400 mb-4 line-clamp-4 text-[10pt]">
