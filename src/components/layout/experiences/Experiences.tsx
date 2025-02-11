@@ -5,20 +5,41 @@ import Drawer from "@/components/shared/popup/drawer/Drawer";
 import SectionHeader from "@/components/shared/section-header/SectionHeader";
 import { Timeline } from "@/components/shared/timeline/Timeline";
 import { TimelineFull } from "@/components/shared/timeline/Timeline.Full";
-import { RESPONSIVE_CLASSNAME } from "@/config/ThemeStyle";
+import {
+    DESKTOP_DEVICE,
+    LAPTOP_DEVICE,
+    MOBILE_DEVICE,
+    RESPONSIVE_CLASSNAME,
+    TABLET_DEVICE,
+    XS_MOBILE_DEVICE
+} from "@/config/ThemeStyle";
 import { experienceTimeline } from "@/config/WorkExperience";
 import { cn } from "@/helpers/mergeClassName";
 import { useTranslation } from "react-i18next";
+import { useMedia } from "react-use";
 
 export default function Experiences(): JSX.Element {
     const { t } = useTranslation();
     const [isOpen, setIsOpen] = useState(false);
+
+    const isXSMobile = useMedia(XS_MOBILE_DEVICE, false);
+    const isMobile = useMedia(MOBILE_DEVICE, false);
+    const isTablet = useMedia(TABLET_DEVICE, false);
+    const isLaptop = useMedia(LAPTOP_DEVICE, false);
+    const isDesktop = useMedia(DESKTOP_DEVICE, false);
 
     const bodyClassName = "text-sm mt-4";
     const headerClassName = "mt-4 text-[9.5pt] xl:text-[10pt] mb-0";
 
     const toggleDrawer = () => {
         setIsOpen(!isOpen);
+    };
+
+    const getWidth = (): string => {
+        if (isMobile || isXSMobile) return "100vw";
+        if (isTablet || isLaptop) return "70vw";
+        if (isDesktop) return "60vw";
+        return "50vw";
     };
 
     return (
@@ -44,6 +65,7 @@ export default function Experiences(): JSX.Element {
 
             <Drawer
                 isOpen={isOpen}
+                width={getWidth()}
                 onToggle={toggleDrawer}
                 header={
                     <h2 className="text-xl font-semibold">
