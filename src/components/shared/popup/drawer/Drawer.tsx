@@ -106,7 +106,9 @@ export default function Drawer({
                             isOpen={isOpen}
                             position={position}
                         >
-                            <PopupHeader>{header}</PopupHeader>
+                            <PopupHeader className="py-4 sticky top-0 bg-light dark:bg-dark">
+                                {header}
+                            </PopupHeader>
                             <PopupCloseButton onClick={onToggle} />
                             <div className="flex-grow z-40">{children}</div>
                             {footer && <PopupFooter>{footer}</PopupFooter>}

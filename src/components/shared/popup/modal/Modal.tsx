@@ -43,7 +43,7 @@ export default function Modal({
                 }}
             >
                 <div className="px-4 pb-4">
-                    <PopupHeader>{header}</PopupHeader>
+                    <PopupHeader className="py-4">{header}</PopupHeader>
 
                     <PopupCloseButton onClick={onToggle} />
 

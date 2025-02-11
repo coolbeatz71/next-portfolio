@@ -14,8 +14,8 @@ export default function Experiences(): JSX.Element {
     const { t } = useTranslation();
     const [isOpen, setIsOpen] = useState(false);
 
-    const bodyClassName = "!text-sm mt-4";
-    const headerClassName = "mt-4 !text-sm mb-0";
+    const bodyClassName = "text-sm mt-4";
+    const headerClassName = "mt-4 text-[9.5pt] xl:text-[10pt] mb-0";
 
     const toggleDrawer = () => {
         setIsOpen(!isOpen);
