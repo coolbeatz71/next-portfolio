@@ -20,15 +20,14 @@ export function ScrollReveal({
     };
 
     return (
-        <div
-            ref={ref}
-            className={`transition-all duration-300 ease-in-out ${
-                isVisible
-                    ? "opacity-100 transform-none"
-                    : `opacity-0 ${directionClasses[direction]}`
-            }`}
-        >
-            {children}
+        <div ref={ref} className="relative overflow-hidden">
+            <div
+                className={`transition-all duration-500 ease-in-out will-change-transform
+                    ${isVisible ? "opacity-100 transform-none" : `opacity-0 ${directionClasses[direction]}`}
+                `}
+            >
+                {children}
+            </div>
         </div>
     );
 }

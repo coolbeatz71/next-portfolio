@@ -12,7 +12,9 @@ export function useScrollReveal(): UseScrollRevealType {
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
-                setIsVisible(entry.isIntersecting);
+                if (entry.isIntersecting !== isVisible) {
+                    setIsVisible(entry.isIntersecting);
+                }
             },
             {
                 threshold: 0.1
@@ -24,7 +26,7 @@ export function useScrollReveal(): UseScrollRevealType {
         return () => {
             if (ref.current) observer.unobserve(ref.current);
         };
-    }, []);
+    }, [isVisible]);
 
     return { ref, isVisible };
 }
