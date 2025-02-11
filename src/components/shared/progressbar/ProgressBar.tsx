@@ -37,7 +37,7 @@ export default function ProgressBar({
                 </span>
             </div>
 
-            <div className="w-full bg-indigo-300/20 h-6 mb-6 mt-1.5 rounded-lg">
+            <div className="w-full bg-indigo-300/20 h-6 mb-4 mt-1.5 rounded-lg">
                 <motion.div
                     className="bg-indigo-700 dark:bg-indigo-500 h-6 rounded-lg"
                     initial={{ width: 0 }}
