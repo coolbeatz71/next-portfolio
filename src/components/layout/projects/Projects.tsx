@@ -13,7 +13,10 @@ export default function Projects(): JSX.Element {
         <ScrollReveal direction="left">
             <section
                 id="contribution"
-                className={cn(RESPONSIVE_CLASSNAME, "py-12 scroll-mt-28")}
+                className={cn(
+                    RESPONSIVE_CLASSNAME,
+                    "py-12 xl:py-32 scroll-mt-10"
+                )}
             >
                 <SectionHeader
                     title={t("contribution_title")}

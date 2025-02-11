@@ -24,9 +24,9 @@ export default function Experiences(): JSX.Element {
     return (
         <section
             id="experience"
-            className={cn(RESPONSIVE_CLASSNAME, "scroll-mt-36")}
+            className={cn(RESPONSIVE_CLASSNAME, "py-12 xl:py-32 scroll-mt-10")}
         >
-            <div className="pb-4 md:pb-10">
+            <div>
                 <SectionHeader
                     title={t("experience_title")}
                     subtitle={t("experience_subtitle")}

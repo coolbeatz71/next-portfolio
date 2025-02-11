@@ -14,7 +14,10 @@ export default function Skills(): JSX.Element {
         <ScrollReveal direction="right">
             <section
                 id="skill"
-                className={cn(RESPONSIVE_CLASSNAME, "scroll-mt-36")}
+                className={cn(
+                    RESPONSIVE_CLASSNAME,
+                    "py-12 xl:py-32 scroll-mt-10"
+                )}
             >
                 <SectionHeader
                     title={t("skills_title")}
