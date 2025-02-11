@@ -49,10 +49,10 @@ export default function Companies(): JSX.Element {
                     <div className="text-start">
                         <DotBackground className="h-20 z-0" />
                         <div className="relative z-10">
-                            <h2 className="mb-4 text-3xl md:text-4xl font-bold tracking-tight md:leading-relaxed text-slate-700 dark:text-slate-300">
+                            <h2 className="mb-4 text-3xl md:text-4xl font-bold tracking-tight md:leading-relaxed text-stone-700 dark:text-stone-300">
                                 {t("companies_title")}
                             </h2>
-                            <p className="text-md sm:text-lg md:text-xl lg:text-xl text-slate-500 dark:text-slate-400 !leading-relaxed">
+                            <p className="text-md sm:text-lg md:text-xl lg:text-xl text-stone-500 dark:text-stone-400 !leading-relaxed">
                                 {t("companies_subtitle")}
                             </p>
                         </div>

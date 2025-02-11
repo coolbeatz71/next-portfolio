@@ -64,7 +64,7 @@ export default function ParallaxScroll({
         [selectedImages, divider]
     );
 
-    const gridHeight = 880;
+    const gridHeight = 250;
     const imageHeight = gridHeight / divider;
 
     return (
