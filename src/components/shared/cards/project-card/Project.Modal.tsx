@@ -13,21 +13,6 @@ export interface ProjectModalProps {
     project: ProjectByStack;
 }
 
-interface SectionProps {
-    title: string;
-    children: ReactNode;
-}
-const Section = ({ title, children }: SectionProps): JSX.Element => (
-    <div className="py-2">
-        <h3 className="block text-md md:text-lg font-bold text-neutral-600 dark:text-neutral-300 !leading-loose">
-            {title}
-        </h3>
-        <p className="text-sm text-neutral-600 dark:text-neutral-400">
-            {children}
-        </p>
-    </div>
-);
-
 interface LinkProps {
     href?: string;
     isVisible: boolean;
@@ -69,8 +54,16 @@ export default function ProjectModal({
                 )}
             </div>
 
-            <Section title="Role">{t(project.role)}</Section>
-            <Section title="Description">{t(project.description)}</Section>
+            <div className="flex flex-col gap-4 mt-4">
+                <p className="text-sm text-neutral-600 dark:text-neutral-400">
+                    {t(project.description)}
+                </p>
+
+                <p className="text-sm text-neutral-600 dark:text-neutral-400">
+                    <span className="font-semibold">Role: </span>
+                    {t(project.role)}
+                </p>
+            </div>
 
             <div
                 className={`flex flex-wrap gap-1 pt-4 ${hasLinks ? "pb-8" : ""}`}
