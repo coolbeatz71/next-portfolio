@@ -24,7 +24,7 @@ export const experience = {
         implemented_metrics:
             "Mis en place des métriques quotidiennes d'utilisation et de performance avec OpenTelemetry, intégré à Datadog pour la surveillance, générant une amélioration de performance de 25%.",
         authored_unit_tests:
-            "Créé une base de tests unitaires réutilisables, augmentant l'efficacité du contrôle qualité de plus de 30% et identifiant les bugs et problèmes d'accessibilité web.",
+            "Créé une base de tests unitaires réutilisables, augmentant l'efficacité du contrôle qualité de plus de 30% en identifiant les bugs et problèmes d'accessibilité web.",
         engaged_with_architects:
             "Collaboré étroitement avec l'architecte logiciel et les ingénieurs backend pour superviser les API et optimiser le flux de travail logiciel avec Scrum, entraînant une réduction de 25% du temps de livraison et une amélioration du taux de réussite.",
         implemented_servicenow:
