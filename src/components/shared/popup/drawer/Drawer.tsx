@@ -84,7 +84,7 @@ export default function Drawer({
             <Backdrop isOpen={isOpen} />
             <div
                 className={cn(
-                    "fixed inset-0 overflow-hidden z-50",
+                    "fixed inset-0 overflow-hidden",
                     isOpen ? "visible" : "invisible"
                 )}
             >
@@ -94,8 +94,10 @@ export default function Drawer({
                     onKeyUp={onToggle}
                 >
                     <div
+                        onTouchMove={(e) => e.stopPropagation()}
                         className={cn(
                             "pointer-events-none fixed flex",
+                            "",
                             position === "right"
                                 ? "inset-y-0 right-0"
                                 : "inset-y-0 left-0"
