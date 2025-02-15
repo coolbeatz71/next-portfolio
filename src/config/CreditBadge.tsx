@@ -4,7 +4,7 @@ export const creditBadgeList = [
     {
         icon: <FcBriefcase />,
         className: "",
-        count: 7,
+        count: 8,
         text: "years_of_experience"
     },
     {

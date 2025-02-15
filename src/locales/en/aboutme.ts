@@ -5,7 +5,7 @@ export const aboutme = {
         "I'm also passionate about open-source work, contributing to projects that advance modern development.",
     about_myself: "A little bit about myself",
     about_myself_content: `{{name}} is an Accomplished Senior Software Engineer
-    with 7+ years of hands-on experience spanning both
+    with 8+ years of hands-on experience spanning both
     frontend and backend development. Proficient in`,
     about_myself_content_2: "with advanced expertise in",
     about_myself_content_3: `for mobile development. A dedicated problem-solver and

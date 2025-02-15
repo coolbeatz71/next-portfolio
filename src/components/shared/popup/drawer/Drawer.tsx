@@ -84,7 +84,7 @@ export default function Drawer({
             <Backdrop isOpen={isOpen} />
             <div
                 className={cn(
-                    "fixed inset-0 overflow-hidden z-50",
+                    "fixed inset-0 overflow-hidden",
                     isOpen ? "visible" : "invisible"
                 )}
             >
@@ -94,8 +94,10 @@ export default function Drawer({
                     onKeyUp={onToggle}
                 >
                     <div
+                        onTouchMove={(e) => e.stopPropagation()}
                         className={cn(
                             "pointer-events-none fixed flex",
+                            "",
                             position === "right"
                                 ? "inset-y-0 right-0"
                                 : "inset-y-0 left-0"
@@ -106,7 +108,9 @@ export default function Drawer({
                             isOpen={isOpen}
                             position={position}
                         >
-                            <PopupHeader>{header}</PopupHeader>
+                            <PopupHeader className="py-4 sticky top-0 bg-light dark:bg-dark">
+                                {header}
+                            </PopupHeader>
                             <PopupCloseButton onClick={onToggle} />
                             <div className="flex-grow z-40">{children}</div>
                             {footer && <PopupFooter>{footer}</PopupFooter>}

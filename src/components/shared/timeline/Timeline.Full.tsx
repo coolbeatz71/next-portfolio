@@ -7,15 +7,15 @@ export const TimelineFull = ({ data }: { data: TimelineEntry[] }) => {
         <div className="mx-auto">
             <div className="relative">
                 {data.map((item) => (
-                    <div key={item.id} className="flex justify-start mb-6">
-                        <div className="relative w-full border rounded-lg bg-slate-300 border-gray-200 dark:bg-slate-700 dark:border-gray-600 p-3 md:p-4 pb-6">
+                    <div key={item.id} className="flex justify-start mb-4">
+                        <div className="relative w-full border rounded-lg bg-slate-300 border-gray-200 dark:bg-slate-700 dark:border-gray-600 p-3 md:p-4 !pb-6">
                             <div className="absolute top-0 bottom-0 w-[70%] opacity-50">
                                 <GridPatternBackground size={20} />
                             </div>
                             <h3 className="block text-sm md:text-lg font-bold text-neutral-600 dark:text-neutral-300 !leading-loose">
                                 <div className="flex justify-between items-center">
                                     {item.title}
-                                    <p className="flex items-center gap-1 text-xs md:text-sm font-medium text-neutral-400 dark:text-neutral-500">
+                                    <p className="flex items-center gap-1 text-xs font-medium text-neutral-400 dark:text-neutral-500">
                                         <FcGlobe /> {item.location}
                                     </p>
                                 </div>

@@ -4,6 +4,7 @@ import { useCallback, useMemo, useState } from "react";
 import { useInterval, useMedia } from "react-use";
 
 import type { Image } from "@/config/Projects";
+import { MOBILE_DEVICE, XS_MOBILE_DEVICE } from "@/config/ThemeStyle";
 
 export interface ProjectImageSliderProps {
     images: Image[];
@@ -26,11 +27,8 @@ export default function ProjectImageSlider({
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
     const [isCursorInside, setIsCursorInside] = useState(false);
 
-    const isMobile = useMedia(
-        "(min-width: 380px) and (max-width: 576px)",
-        false
-    );
-    const isXSMobile = useMedia("(max-width: 380px)", false);
+    const isMobile = useMedia(MOBILE_DEVICE, false);
+    const isXSMobile = useMedia(XS_MOBILE_DEVICE, false);
 
     const handleNext = useCallback(() => {
         setSliderState((state) => ({

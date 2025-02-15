@@ -1,8 +1,9 @@
+import type { ReactNode } from "react";
 import { useTranslation } from "react-i18next";
 
 interface LinkProps {
     href: string;
-    children: React.ReactNode;
+    children: ReactNode;
 }
 
 const Link = ({ href, children }: LinkProps) => (

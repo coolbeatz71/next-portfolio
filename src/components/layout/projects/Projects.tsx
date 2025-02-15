@@ -1,4 +1,5 @@
 import TabBar from "@/components/layout/tab-bar/TabBar";
+import { ScrollReveal } from "@/components/shared/scroll-reveal/ScrollReveal";
 import SectionHeader from "@/components/shared/section-header/SectionHeader";
 import { projectsTabs } from "@/config/Projects";
 import { RESPONSIVE_CLASSNAME } from "@/config/ThemeStyle";
@@ -9,20 +10,25 @@ export default function Projects(): JSX.Element {
     const { t } = useTranslation();
 
     return (
-        <section
-            id="contribution"
-            className={cn(RESPONSIVE_CLASSNAME, "py-12 scroll-mt-28")}
-        >
-            <SectionHeader
-                title={t("contribution_title")}
-                subtitle={t("contribution_subtitle")}
-            />
-            <TabBar
-                context="projects"
-                tabs={projectsTabs}
-                containerClassName="py-4"
-                tabBarClassName="min-w-full lg:min-w-[60%]"
-            />
-        </section>
+        <ScrollReveal direction="left">
+            <section
+                id="contribution"
+                className={cn(
+                    RESPONSIVE_CLASSNAME,
+                    "py-12 xl:py-32 scroll-mt-10"
+                )}
+            >
+                <SectionHeader
+                    title={t("contribution_title")}
+                    subtitle={t("contribution_subtitle")}
+                />
+                <TabBar
+                    context="projects"
+                    tabs={projectsTabs}
+                    containerClassName="py-4"
+                    tabBarClassName="min-w-full lg:min-w-[60%]"
+                />
+            </section>
+        </ScrollReveal>
     );
 }

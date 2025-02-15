@@ -64,7 +64,7 @@ export default function ParallaxScroll({
         [selectedImages, divider]
     );
 
-    const gridHeight = 880;
+    const gridHeight = 250;
     const imageHeight = gridHeight / divider;
 
     return (
@@ -85,7 +85,7 @@ export default function ParallaxScroll({
                                 <NextImage
                                     src={img.src}
                                     alt={img.alt}
-                                    width={300}
+                                    width={360}
                                     height={imageHeight}
                                     className="h-full object-cover object-left-top rounded-lg"
                                     blurDataURL={img.blurData}
@@ -112,7 +112,7 @@ export default function ParallaxScroll({
                                 <NextImage
                                     src={img.src}
                                     alt={img.alt}
-                                    width={300}
+                                    width={360}
                                     height={imageHeight}
                                     className="h-full object-cover object-left-top rounded-lg"
                                     blurDataURL={img.blurData}
