@@ -1,6 +1,8 @@
+import { CUSTOM_SCROLLBAR } from "@/config/ThemeStyle";
 import { cn } from "@/helpers/mergeClassName";
 import type { ReactNode } from "react";
 import { useLockBodyScroll } from "react-use";
+
 import PopupCloseButton from "../Popup.Close.Button";
 import PopupFooter from "../Popup.Footer";
 import PopupHeader from "../Popup.Header";
@@ -57,7 +59,12 @@ const DrawerContainer = ({
         onClick={(e) => e.stopPropagation()}
         onKeyUp={(e) => e.stopPropagation()}
     >
-        <div className="flex flex-col h-full overflow-y-scroll bg-light dark:bg-dark shadow-xl px-4">
+        <div
+            className={cn(
+                CUSTOM_SCROLLBAR,
+                "flex flex-col h-full overflow-y-scroll bg-light dark:bg-dark shadow-xl px-4"
+            )}
+        >
             {children}
         </div>
     </div>
@@ -78,7 +85,7 @@ export default function Drawer({
         <div
             aria-modal="true"
             id={`dialog-${position}`}
-            className="relative z-50"
+            className="relative z-50 "
             aria-labelledby="drawer"
         >
             <Backdrop isOpen={isOpen} />
@@ -97,7 +104,6 @@ export default function Drawer({
                         onTouchMove={(e) => e.stopPropagation()}
                         className={cn(
                             "pointer-events-none fixed flex",
-                            "",
                             position === "right"
                                 ? "inset-y-0 right-0"
                                 : "inset-y-0 left-0"

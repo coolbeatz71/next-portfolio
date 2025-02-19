@@ -1,5 +1,8 @@
 import { Head, Html, Main, NextScript } from "next/document";
 
+import { CUSTOM_SCROLLBAR } from "@/config/ThemeStyle";
+import { cn } from "@/helpers/mergeClassName";
+
 export default function Document() {
     return (
         <Html lang="en">
@@ -46,7 +49,12 @@ export default function Document() {
                 <link rel="manifest" href="manifest.json" key="manifest" />
             </Head>
 
-            <body className="scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar scrollbar-w-2 scrollbar-thumb-indigo-500 scrollbar-track-slate-300 dark:scrollbar-track-slate-700 overflow-y-auto overflow-x-hidden">
+            <body
+                className={cn(
+                    CUSTOM_SCROLLBAR,
+                    "overflow-y-auto overflow-x-hidden"
+                )}
+            >
                 <Main />
                 <NextScript />
             </body>

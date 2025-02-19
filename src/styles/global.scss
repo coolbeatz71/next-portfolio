@@ -88,11 +88,4 @@
     .text-balance {
         text-wrap: balance;
     }
-
-    .overflow-y-scroll-touch {
-        overflow-y: scroll;
-        @supports (-webkit-overflow-scrolling: touch) {
-            -webkit-overflow-scrolling: touch;
-        }
-    }
 }
