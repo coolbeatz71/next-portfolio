@@ -1,5 +1,4 @@
 import { getLanguage } from "@/helpers/getLanguage";
-import type { IUnknownObject } from "@/interfaces/app";
 import locales from "@/locales";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
@@ -9,7 +8,7 @@ import { useMemo } from "react";
 
 import "@/styles/global.scss";
 
-type AppPropsWithError = AppProps & { err: unknown } & IUnknownObject;
+type AppPropsWithError = AppProps & { err: unknown } & Record<string, unknown>;
 
 const MyApp = ({
     Component,

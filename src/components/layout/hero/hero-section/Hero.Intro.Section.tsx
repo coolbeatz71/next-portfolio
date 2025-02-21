@@ -4,6 +4,7 @@ import { Breadcrumb } from "@/components/shared/breadcrumb/Breadcrumb";
 import GradientShineButton from "@/components/shared/buttons/gradient-shine/GradientShine.Button";
 import SocialLinks from "@/components/shared/social-links/SocialLinks";
 import TypeWriter from "@/components/shared/type-writer/TypeWriter";
+import { RESUME_LINK } from "@/config/Resume";
 import { useTranslation } from "react-i18next";
 
 export default function HeroIntroSection(): JSX.Element {
@@ -32,7 +33,16 @@ export default function HeroIntroSection(): JSX.Element {
 
             <Breadcrumb labels={techStackSummary} />
 
-            <GradientShineButton>{t("download_resume")}</GradientShineButton>
+            <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href={RESUME_LINK}
+                title="Download Resume"
+            >
+                <GradientShineButton>
+                    {t("download_resume")}
+                </GradientShineButton>
+            </a>
         </Fragment>
     );
 }

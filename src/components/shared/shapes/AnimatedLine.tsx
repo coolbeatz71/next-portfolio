@@ -1,4 +1,4 @@
-import type { AnimatedLineProps } from "@/interfaces/shapes";
+import type { AnimatedLineProps } from "@/config/Animation";
 import { motion } from "framer-motion";
 
 export function AnimatedLine({
