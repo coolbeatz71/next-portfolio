@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { LuChevronsUpDown } from "react-icons/lu";
 import { useClickAway } from "react-use";
+import { NavigationDropdownMenu } from "./Navigation.Dropdown.Menu";
 
 export interface NavigationDropdownProps {
     tabs: Tabs[];
@@ -22,11 +23,14 @@ export default function NavigationDropdown({
     const { t } = useTranslation();
     const [isOpen, setIsOpen] = useState(false);
 
-    useClickAway(ref, () => {
-        setIsOpen(false);
-    });
+    useClickAway(ref, () => setIsOpen(false));
 
     const toggleDropdown = () => setIsOpen(!isOpen);
+
+    const handleMenuSelect = (index: number) => {
+        setActiveTabIndex(index);
+        toggleDropdown();
+    };
 
     return (
         <div
@@ -48,31 +52,11 @@ export default function NavigationDropdown({
             </div>
 
             {isOpen && (
-                <div
-                    id="dropdown"
-                    className="w-full z-10 origin-top-right absolute top-12 left-0 right-0 px-2 mt-1 rounded-lg shadow-xl bg-white dark:bg-slate-600"
-                >
-                    <div className="py-2" aria-labelledby="dropdown-menu">
-                        {tabs.map((tab, idx) => {
-                            const isActiveTab = idx === activeTabIndex;
-
-                            return (
-                                <button
-                                    type="button"
-                                    key={tab.title}
-                                    role="menuitem"
-                                    onClick={() => {
-                                        setActiveTabIndex(idx);
-                                        toggleDropdown();
-                                    }}
-                                    className={`rounded-lg flex items-center my-1.5 px-3 py-2 text-sm font-medium ${isActiveTab ? "text-white bg-indigo-700 dark:bg-indigo-500" : "text-gray-700 dark:text-gray-200 hover:bg-slate-200 dark:hover:bg-slate-700"} w-full text-left`}
-                                >
-                                    {t(tab.title)}
-                                </button>
-                            );
-                        })}
-                    </div>
-                </div>
+                <NavigationDropdownMenu
+                    tabs={tabs}
+                    onSelect={handleMenuSelect}
+                    activeTabIndex={activeTabIndex}
+                />
             )}
         </div>
     );
