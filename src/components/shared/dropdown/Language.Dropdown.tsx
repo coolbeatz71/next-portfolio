@@ -27,7 +27,7 @@ function LanguageDropdownMenu({
         <div
             id="dropdown"
             className={`z-10 origin-top-right absolute ${getDropdownPlacement(placement)} 
-                        left-0 right-0 px-1 mt-1 w-40 rounded-lg shadow-xl bg-white dark:bg-slate-600`}
+                        left-0 right-0 px-1 mt-1 w-[9.5rem] rounded-lg shadow-xl bg-white dark:bg-slate-600`}
         >
             <div className="py-1" aria-labelledby="dropdown-menu">
                 {languageList.map((lang) => (
