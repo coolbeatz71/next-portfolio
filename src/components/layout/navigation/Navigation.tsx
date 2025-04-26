@@ -1,7 +1,7 @@
 import { useWindowScroll } from "react-use";
 
 import NavigationMenu from "@/components/layout/navigation/Navigation.Menu";
-import LanguageDropDown from "@/components/shared/dropdown/Language.Dropdown";
+import LanguageDropDown from "@/components/shared/dropdown/language/Language.Dropdown";
 import HamburgerMenuButton from "@/components/shared/hamburger-menu/HamburgerMenu.Button";
 import Logo from "@/components/shared/logo/Logo";
 import ThemeToggle from "@/components/shared/theme-toggle/ThemeToggle";
