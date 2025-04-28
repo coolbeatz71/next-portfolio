@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import numeral from "numeral";
 import type { ReactNode } from "react";
 import CountUp from "react-countup";
@@ -7,23 +8,30 @@ import { cn } from "@/helpers/mergeClassName";
 
 export interface BadgeProps {
     icon: ReactNode;
-    className?: string;
-    endCountNumber: number;
-    endCountText?: string;
     badgeText: string;
+    className?: string;
+    endCountText?: string;
+    endCountNumber: number;
 }
 
 export default function Badge({
     icon,
+    badgeText,
     className,
-    endCountNumber,
     endCountText,
-    badgeText
+    endCountNumber
 }: BadgeProps): JSX.Element {
     return (
-        <div
+        <motion.div
+            initial="initial"
+            whileHover="hover"
+            variants={{
+                initial: { scale: 1 },
+                hover: { scale: 1.1 }
+            }}
             className={cn(
-                "relative backdrop-blur-sm bg-indigo-500/60 dark:bg-indigo-700/60 p-3 sm:p-3.5 md:p-4 rounded-lg overflow-hidden z-10 shadow-xl flex justify-around items-center",
+                `cursor-pointer relative backdrop-blur-sm bg-indigo-500/60 dark:bg-indigo-700/60 p-3
+                sm:p-3.5 md:p-4 rounded-lg overflow-hidden z-10 shadow-xl flex justify-around items-center`,
                 className
             )}
         >
@@ -32,9 +40,9 @@ export default function Badge({
             <div className="flex items-center gap-x-2">
                 <div className="text-3xl leading-none font-bold text-amber-500">
                     <CountUp
-                        end={endCountNumber}
                         delay={1}
                         duration={2}
+                        end={endCountNumber}
                         formattingFn={(value: number) =>
                             `${numeral(Number(value)).format("0.[00]a")}+`
                         }
@@ -45,6 +53,6 @@ export default function Badge({
                     {badgeText}
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 }

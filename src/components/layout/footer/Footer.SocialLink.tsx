@@ -20,7 +20,10 @@ export default function FooterSocialLink(): JSX.Element {
                     >
                         <button
                             type="button"
-                            className={`text-slate-500 dark:text-slate-400 hover:bg-slate-200 hover:dark:bg-slate-600 ${social.hoverColor} focus:outline-none font-medium rounded-lg text-3xl text-center items-center p-[0.685rem]`}
+                            className={`
+                                text-slate-500 dark:text-slate-400 hover:bg-slate-200 hover:dark:bg-slate-600 ${social.hoverColor}
+                                focus:outline-none font-medium rounded-lg text-3xl text-center items-center p-[0.685rem] duration-300
+                            `}
                         >
                             {social.icon}
                         </button>
