@@ -9,7 +9,7 @@ export default function DotBackground({
     return (
         <div
             className={cn(
-                "absolute left-0 right-0 w-full dark:bg-dot-white/[0.1] bg-dot-black/[0.1] flex items-center justify-center",
+                "absolute left-0 right-0 w-full dark:bg-dot-white/[0.05] bg-dot-black/[0.05] flex items-center justify-center",
                 className
             )}
         >
