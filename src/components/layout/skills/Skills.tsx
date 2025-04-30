@@ -30,7 +30,12 @@ export default function Skills(): JSX.Element {
                                 key={skill.title}
                                 className="flex flex-col items-center group cursor-pointer p-4 md:p-8"
                             >
-                                <div className="relative h-16 w-16 lg:h-24 lg:w-24">
+                                <div
+                                    className={`
+                                        relative h-16 w-16 lg:h-24 lg:w-24 transform 
+                                        transition-transform duration-500 ease-out hover:scale-90
+                                    `}
+                                >
                                     {/* dark image */}
                                     <NextImage
                                         fill
