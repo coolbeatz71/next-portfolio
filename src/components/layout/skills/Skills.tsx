@@ -10,8 +10,12 @@ import { useTranslation } from "react-i18next";
 
 export default function Skills(): JSX.Element {
     const { t } = useTranslation();
+    const imgClassName = `object-contain transition-all duration-200 ease-in-out 
+        filter grayscale opacity-70 group-hover:filter-none group-hover:opacity-100
+    `;
+
     return (
-        <ScrollReveal direction="right">
+        <ScrollReveal className="delay-300">
             <section
                 id="skill"
                 className={cn(
@@ -41,14 +45,14 @@ export default function Skills(): JSX.Element {
                                         fill
                                         alt={skill.title}
                                         src={skill.darkImage}
-                                        className="object-contain transition-all duration-200 ease-in-out filter grayscale opacity-70 group-hover:filter-none group-hover:opacity-100 hidden dark:block"
+                                        className={`${imgClassName} hidden dark:block`}
                                     />
                                     {/* light image */}
                                     <NextImage
                                         fill
                                         alt={skill.title}
                                         src={skill.lightImage}
-                                        className="object-contain transition-all duration-200 ease-in-out filter grayscale opacity-70 group-hover:filter-none group-hover:opacity-100 block dark:hidden"
+                                        className={`${imgClassName} block dark:hidden`}
                                     />
                                 </div>
                                 <span className="text-sm text-center font-medium text-black/50 dark:text-white/50">

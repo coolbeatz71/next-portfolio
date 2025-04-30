@@ -43,7 +43,7 @@ export default function Companies(): JSX.Element {
     const { t } = useTranslation();
 
     return (
-        <ScrollReveal direction="right">
+        <ScrollReveal direction="right" className="delay-300">
             <section className={RESPONSIVE_CLASSNAME}>
                 <div className="grid grid-cols-1 lg:grid-cols-[2.5fr,3fr] xl:grid-cols-[3fr,3.5fr] items-center gap-4 md:gap-12 lg:gap-8 xl:gap-12">
                     <div className="text-start">
