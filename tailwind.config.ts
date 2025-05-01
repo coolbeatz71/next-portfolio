@@ -58,9 +58,10 @@ const config: Config = {
             "2xl": "1600px"
         },
         animation: {
+            pulse: "pulse 2s infinite",
             spin: "spin 1s linear infinite",
             spotlight: "spotlight 2s ease .75s 1 forwards",
-            pulse: "pulse 2s infinite"
+            bounce: "bounce .75s ease-in-out"
         },
         keyframes: {
             pulse: {
@@ -74,6 +75,20 @@ const config: Config = {
                 },
                 "50%": {
                     transform: "scale(0.8)"
+                }
+            },
+            bounce: {
+                "0%, 100%": {
+                    transform: "translateY(0)"
+                },
+                "25%": {
+                    transform: "translateY(-2px)"
+                },
+                "50%": {
+                    transform: "translateY(5px)"
+                },
+                "75%": {
+                    transform: "translateY(-2px)"
                 }
             },
             spin: {

@@ -13,7 +13,7 @@ export default function SocialLinks(): JSX.Element {
                     key={social.platform}
                 >
                     <OutlineButton
-                        className={`p-3 md:p-4 text-3xl ${social.hoverColor}`}
+                        className={`p-3 md:p-4 text-3xl ${social.hoverColor} duration-300`}
                     >
                         {social.icon}
                     </OutlineButton>
