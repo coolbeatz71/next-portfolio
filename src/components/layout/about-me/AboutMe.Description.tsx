@@ -33,12 +33,12 @@ export default function AboutMeDescription(): JSX.Element {
             <p className={`text-start ${textStyle} mb-4`}>
                 {t("about_myself_content", { name: "Jean-Vincent" })}
                 <Highlight>JavaScript</Highlight>,
-                <Highlight>HTML/CSS</Highlight>, {t("about_myself_content_2")}
+                <Highlight>HTML/CSS</Highlight>,<Highlight>PHP</Highlight>,
+                <Highlight>C#</Highlight>, {t("about_myself_content_2")}
                 <Highlight>ReactJS</Highlight>,<Highlight>NodeJS</Highlight>,
                 <Highlight>Typescript</Highlight>,<Highlight>Angular</Highlight>
-                ,<Highlight>C#/.NET</Highlight>,
-                <Highlight>PHP/Laravel</Highlight>, {t("and")}{" "}
-                <Highlight>Dart/Flutter </Highlight>
+                ,<Highlight>Laravel</Highlight>,<Highlight>.NET</Highlight>,{" "}
+                {t("and")} <Highlight>Dart/Flutter </Highlight>
                 {t("about_myself_content_3")}
             </p>
 
