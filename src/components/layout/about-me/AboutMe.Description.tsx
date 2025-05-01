@@ -36,7 +36,8 @@ export default function AboutMeDescription(): JSX.Element {
                 <Highlight>HTML/CSS</Highlight>, {t("about_myself_content_2")}
                 <Highlight>ReactJS</Highlight>,<Highlight>NodeJS</Highlight>,
                 <Highlight>Typescript</Highlight>,<Highlight>Angular</Highlight>
-                ,<Highlight>PHP</Highlight>, {t("and")}{" "}
+                ,<Highlight>C#/.NET</Highlight>,
+                <Highlight>PHP/Laravel</Highlight>, {t("and")}{" "}
                 <Highlight>Dart/Flutter </Highlight>
                 {t("about_myself_content_3")}
             </p>

@@ -7,7 +7,7 @@ import { cn } from "@/helpers/mergeClassName";
 
 export default function AboutMe(): JSX.Element {
     return (
-        <ScrollReveal direction="left">
+        <ScrollReveal direction="left" className="delay-300">
             <section
                 id="about"
                 className={cn(

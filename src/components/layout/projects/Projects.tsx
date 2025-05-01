@@ -10,7 +10,7 @@ export default function Projects(): JSX.Element {
     const { t } = useTranslation();
 
     return (
-        <ScrollReveal direction="left">
+        <ScrollReveal direction="right" className="delay-300">
             <section
                 id="contribution"
                 className={cn(

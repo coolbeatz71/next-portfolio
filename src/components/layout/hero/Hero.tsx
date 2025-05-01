@@ -8,7 +8,7 @@ import HeroIntroSection from "./hero-section/Hero.Intro.Section";
 
 export default function Hero(): JSX.Element {
     return (
-        <ScrollReveal>
+        <ScrollReveal className="delay-0">
             <section
                 id="hero"
                 className={cn(
