@@ -1,8 +1,8 @@
-import NavigationDropdown from "@/components/shared/dropdown/Navigation.Dropdown";
+import NavigationDropdown from "@/components/shared/dropdown/navigation/Navigation.Dropdown";
 import type { Tabs } from "@/config/Projects";
 import { cn } from "@/helpers/mergeClassName";
 import { useState } from "react";
-import NavigationTabBar from "./Navigation.TabBar";
+import NavigationTabBar from "./TabBar.Navigation";
 
 interface TabBarProps {
     tabs: Tabs[];

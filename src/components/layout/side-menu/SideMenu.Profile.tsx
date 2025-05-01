@@ -1,5 +1,5 @@
 import GridPatternBackground from "@/components/shared/background/GridPattern.Background";
-import LanguageDropDown from "@/components/shared/dropdown/Language.Dropdown";
+import LanguageDropDown from "@/components/shared/dropdown/language/Language.Dropdown";
 import ThemeToggle from "@/components/shared/theme-toggle/ThemeToggle";
 
 import NextImage from "next/image";
