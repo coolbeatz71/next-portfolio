@@ -1,20 +1,17 @@
-import { cn } from "@/helpers/mergeClassName";
+import { AbstractBackground } from "./Abstract.Background";
 
 export interface GridBackgroundProps {
     className?: string;
 }
 
 export default function GridBackground({
-    className = "h-[50rem]"
+    className
 }: GridBackgroundProps): JSX.Element {
     return (
-        <div
-            className={cn(
-                "absolute z-0 left-0 right-0 w-full dark:bg-grid-white/[0.010] bg-grid-black/[0.025] flex items-center justify-center",
-                className
-            )}
-        >
-            <div className="absolute pointer-events-none inset-0 flex items-center justify-center [mask-image:radial-gradient(ellipse_at_center,transparent_10%,black)]" />
-        </div>
+        <AbstractBackground
+            className={className}
+            backgroundClass="dark:bg-grid-white/[0.010] bg-grid-black/[0.025] z-0"
+            maskImage="radial-gradient(ellipse_at_center,transparent_10%,black)"
+        />
     );
 }
