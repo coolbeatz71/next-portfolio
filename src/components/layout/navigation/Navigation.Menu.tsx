@@ -11,7 +11,7 @@ export interface NavigationMenuProps {
     onClick?: () => void;
 }
 
-export default function NavigationMenu({
+export function NavigationMenu({
     onClick,
     className
 }: NavigationMenuProps): JSX.Element {

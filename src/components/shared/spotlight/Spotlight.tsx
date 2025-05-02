@@ -1,14 +1,11 @@
 import { cn } from "@/helpers/mergeClassName";
 
-type SpotlightProps = {
-    className?: string;
+export interface SpotlightProps {
     fill?: string;
-};
+    className?: string;
+}
 
-export default function Spotlight({
-    className,
-    fill
-}: SpotlightProps): JSX.Element {
+export function Spotlight({ fill, className }: SpotlightProps): JSX.Element {
     return (
         <svg
             className={cn(

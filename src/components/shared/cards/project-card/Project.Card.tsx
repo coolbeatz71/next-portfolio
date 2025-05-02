@@ -1,5 +1,5 @@
-import BadgeSpan from "@/components/shared/badge/Badge.Span";
-import LitUpBorderButton from "@/components/shared/buttons/litup-border/LitUpBorder.Button";
+import { BadgeSpan } from "@/components/shared/badge/Badge.Span";
+import { LitUpBorderButton } from "@/components/shared/buttons/litup-border/LitUpBorder.Button";
 import type { ProjectByStack } from "@/config/Projects";
 import { type Variants, motion } from "framer-motion";
 import dynamic from "next/dynamic";
@@ -7,11 +7,18 @@ import NextImage from "next/image";
 import { Fragment, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
-import ProjectModal from "./Project.Modal";
+import { ProjectModal } from "./Project.Modal";
 
-const DynamicModal = dynamic(() => import("../../popup/modal/Modal"), {
-    ssr: false
-});
+const DynamicModal = dynamic(
+    async () => {
+        const mod = await import(
+            /* webpackChunkName: "Modal" */
+            "../../popup/modal/Modal"
+        );
+        return mod.Modal;
+    },
+    { ssr: false }
+);
 
 export interface ProjectCardProps {
     index: number;

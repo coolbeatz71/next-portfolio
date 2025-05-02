@@ -3,9 +3,7 @@ import { GiCheckMark } from "react-icons/gi";
 export interface ExperienceItemProps {
     children: ReactNode;
 }
-export default function ExperienceItem({
-    children
-}: ExperienceItemProps): JSX.Element {
+export function ExperienceItem({ children }: ExperienceItemProps): JSX.Element {
     return (
         <span className="flex flex-row space-x-2 my-2">
             <GiCheckMark

@@ -3,11 +3,11 @@ import { Fragment } from "react";
 import type { ReactNode } from "react";
 import { FaArrowUpRightFromSquare, FaCodeBranch } from "react-icons/fa6";
 
-import BadgeSpan from "@/components/shared/badge/Badge.Span";
-import LitUpBorderButton from "@/components/shared/buttons/litup-border/LitUpBorder.Button";
+import { BadgeSpan } from "@/components/shared/badge/Badge.Span";
+import { LitUpBorderButton } from "@/components/shared/buttons/litup-border/LitUpBorder.Button";
 import type { ProjectByStack } from "@/config/Projects";
 import { useTranslation } from "react-i18next";
-import ProjectImageSlider from "./Project.ImageSlider";
+import { ProjectImageSlider } from "./Project.ImageSlider";
 
 export interface ProjectModalProps {
     project: ProjectByStack;
@@ -27,9 +27,7 @@ const Link = ({ href, isVisible, children }: LinkProps): JSX.Element =>
         <div className="hidden" />
     );
 
-export default function ProjectModal({
-    project
-}: ProjectModalProps): JSX.Element {
+export function ProjectModal({ project }: ProjectModalProps): JSX.Element {
     const { t } = useTranslation();
     const hasLinks = project.hasLiveLink || project.hasSourceCode;
 

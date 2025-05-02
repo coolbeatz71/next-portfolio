@@ -1,11 +1,11 @@
 import { ScrollReveal } from "@/components/shared/scroll-reveal/ScrollReveal";
-import AboutMeDescription from "./AboutMe.Description";
-import AboutMeImages from "./AboutMe.Images";
+import { AboutMeDescription } from "./AboutMe.Description";
+import { AboutMeImages } from "./AboutMe.Images";
 
 import { RESPONSIVE_CLASSNAME } from "@/config/ThemeStyle";
 import { cn } from "@/helpers/mergeClassName";
 
-export default function AboutMe(): JSX.Element {
+export function AboutMe(): JSX.Element {
     return (
         <ScrollReveal direction="left" className="delay-300">
             <section

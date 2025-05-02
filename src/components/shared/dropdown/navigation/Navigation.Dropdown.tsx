@@ -13,7 +13,7 @@ export interface NavigationDropdownProps {
     setActiveTabIndex: (index: number) => void;
 }
 
-export default function NavigationDropdown({
+export function NavigationDropdown({
     tabs,
     className,
     activeTabIndex,

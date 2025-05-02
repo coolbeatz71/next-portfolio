@@ -4,7 +4,7 @@ export interface GridBackgroundProps {
     className?: string;
 }
 
-export default function GridBackground({
+export function GridBackground({
     className
 }: GridBackgroundProps): JSX.Element {
     return (

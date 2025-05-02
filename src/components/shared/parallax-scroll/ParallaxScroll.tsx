@@ -16,7 +16,7 @@ export interface ParallaxScrollProps {
     images: AboutMeImage[];
 }
 
-export default function ParallaxScroll({
+export function ParallaxScroll({
     images,
     className
 }: ParallaxScrollProps): JSX.Element {
@@ -80,8 +80,16 @@ export default function ParallaxScroll({
                             transition={{ duration: 1 }}
                             style={{ y: translateFirst }}
                         >
-                            <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-indigo-400 to-indigo-900 transform scale-[0.75] rounded-full blur-2xl" />
-                            <div className="h-[14rem] md:h-[20rem] lg:h-[16rem] 2xl:h-[22rem] relative shadow-xl bg-indigo-500/[0.2] border border-gray-800/[0.1] p-1 overflow-hidden rounded-lg flex flex-col justify-end items-start">
+                            <div
+                                className={`absolute inset-0 h-full w-full bg-gradient-to-r
+                                from-indigo-400 to-indigo-900 transform scale-[0.75] rounded-full blur-2xl`}
+                            />
+                            <div
+                                className={`h-[14rem] md:h-[20rem] lg:h-[16rem] 2xl:h-[22rem] 
+                                    relative shadow-xl bg-indigo-500/[0.2] border border-gray-800/[0.1]
+                                    p-1 overflow-hidden rounded-lg flex flex-col justify-end items-start
+                                `}
+                            >
                                 <NextImage
                                     src={img.src}
                                     alt={img.alt}
@@ -107,8 +115,16 @@ export default function ParallaxScroll({
                             transition={{ duration: 1 }}
                             style={{ y: translateSecond }}
                         >
-                            <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-indigo-400 to-indigo-900 transform scale-[0.75] rounded-full blur-2xl" />
-                            <div className="h-[14rem] md:h-[20rem] lg:h-[16rem] 2xl:h-[22rem] relative shadow-xl bg-indigo-500/[0.2] border border-gray-800/[0.1] p-1 overflow-hidden rounded-lg flex flex-col justify-end items-start">
+                            <div
+                                className={`absolute inset-0 h-full w-full bg-gradient-to-r
+                                    from-indigo-400 to-indigo-900 transform scale-[0.75] rounded-full blur-2xl`}
+                            />
+                            <div
+                                className={`h-[14rem] md:h-[20rem] lg:h-[16rem] 2xl:h-[22rem]
+                                    relative shadow-xl bg-indigo-500/[0.2] border border-gray-800/[0.1]
+                                    p-1 overflow-hidden rounded-lg flex flex-col justify-end items-start
+                                `}
+                            >
                                 <NextImage
                                     src={img.src}
                                     alt={img.alt}

@@ -3,7 +3,7 @@ import NextLink from "next/link";
 import { useTranslation } from "react-i18next";
 import { CiLink } from "react-icons/ci";
 
-export default function FooterNavigation(): JSX.Element {
+export function FooterNavigation(): JSX.Element {
     const { t } = useTranslation();
 
     return (

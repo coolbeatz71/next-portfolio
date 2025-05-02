@@ -1,10 +1,10 @@
-import Badge from "@/components/shared/badge/Badge";
-import BadgeDevTools from "@/components/shared/badge/Badge.DevTools";
+import { Badge } from "@/components/shared/badge/Badge";
+import { BadgeDevTools } from "@/components/shared/badge/Badge.DevTools";
 import { creditBadgeList } from "@/config/CreditBadge";
 import { devToolsLogoList } from "@/config/DevTools";
 import { useTranslation } from "react-i18next";
 
-export default function HeroBadges(): JSX.Element {
+export function HeroBadges(): JSX.Element {
     const { t } = useTranslation();
 
     return (

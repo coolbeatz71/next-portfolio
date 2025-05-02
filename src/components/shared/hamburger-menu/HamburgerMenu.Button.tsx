@@ -1,8 +1,8 @@
-import SideMenu from "@/components/layout/side-menu/SideMenu";
+import { SideMenu } from "@/components/layout/side-menu/SideMenu";
 import { Fragment, useState } from "react";
 import { MdOutlineMenu } from "react-icons/md";
 
-export default function HamburgerMenuButton(): JSX.Element {
+export function HamburgerMenuButton(): JSX.Element {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleDrawer = () => {

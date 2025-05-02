@@ -1,6 +1,6 @@
 import type { TimelineEntry } from "@/config/WorkExperience";
 import { FcGlobe } from "react-icons/fc";
-import GridPatternBackground from "../background/GridPattern.Background";
+import { GridPatternBackground } from "../background/GridPattern.Background";
 
 export const TimelineFull = ({ data }: { data: TimelineEntry[] }) => {
     return (

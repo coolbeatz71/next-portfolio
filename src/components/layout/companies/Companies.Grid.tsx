@@ -1,4 +1,4 @@
-import HoverableCard from "@/components/shared/cards/hoverable-card/Hoverable.Card";
+import { HoverableCard } from "@/components/shared/cards/hoverable-card/Hoverable.Card";
 import { cn } from "@/helpers/mergeClassName";
 import { useState } from "react";
 
@@ -9,7 +9,7 @@ export interface CompaniesGridProps {
     }[];
     className?: string;
 }
-export default function CompaniesGrid({
+export function CompaniesGrid({
     items,
     className
 }: CompaniesGridProps): JSX.Element {

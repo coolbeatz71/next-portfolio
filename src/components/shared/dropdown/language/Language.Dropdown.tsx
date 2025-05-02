@@ -14,7 +14,7 @@ export interface LanguageDropDownProps {
     placement: "top" | "bottom";
 }
 
-export default function LanguageDropDown({ placement }: LanguageDropDownProps) {
+export function LanguageDropDown({ placement }: LanguageDropDownProps) {
     const ref = useRef<HTMLDivElement>(null);
     const { i18n } = useTranslation();
     const [isOpen, setIsOpen] = useState(false);

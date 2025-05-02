@@ -1,10 +1,10 @@
-import DotBackground from "@/components/shared/background/Dot.Background";
+import { DotBackground } from "@/components/shared/background/Dot.Background";
 
 export interface SectionHeaderProps {
     title: string;
     subtitle: string;
 }
-export default function SectionHeader({
+export function SectionHeader({
     title,
     subtitle
 }: SectionHeaderProps): JSX.Element {

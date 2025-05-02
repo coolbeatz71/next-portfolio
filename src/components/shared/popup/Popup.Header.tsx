@@ -6,7 +6,7 @@ export interface PopupHeaderProps {
     className?: string;
 }
 
-export default function PopupHeader({
+export function PopupHeader({
     children,
     className
 }: PopupHeaderProps): JSX.Element {

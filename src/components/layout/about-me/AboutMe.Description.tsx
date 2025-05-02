@@ -14,7 +14,7 @@ function Highlight({ children }: HighlightProps): JSX.Element {
     );
 }
 
-export default function AboutMeDescription(): JSX.Element {
+export function AboutMeDescription(): JSX.Element {
     const { t } = useTranslation();
     const textStyle = "text-neutral-500 dark:text-neutral-400 !leading-loose";
     return (

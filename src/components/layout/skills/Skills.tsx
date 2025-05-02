@@ -1,6 +1,6 @@
-import TabBar from "@/components/layout/tab-bar/TabBar";
+import { TabBar } from "@/components/layout/tab-bar/TabBar";
 import { ScrollReveal } from "@/components/shared/scroll-reveal/ScrollReveal";
-import SectionHeader from "@/components/shared/section-header/SectionHeader";
+import { SectionHeader } from "@/components/shared/section-header/SectionHeader";
 import { devStackTabs } from "@/config/DevStack";
 import { mainStackList } from "@/config/DevStack.Main";
 import { RESPONSIVE_CLASSNAME } from "@/config/ThemeStyle";
@@ -8,7 +8,7 @@ import { cn } from "@/helpers/mergeClassName";
 import NextImage from "next/image";
 import { useTranslation } from "react-i18next";
 
-export default function Skills(): JSX.Element {
+export function Skills(): JSX.Element {
     const { t } = useTranslation();
     const imgClassName = `object-contain transition-all duration-200 ease-in-out 
         filter grayscale opacity-70 group-hover:filter-none group-hover:opacity-100

@@ -1,11 +1,11 @@
-import GradientShineButton from "@/components/shared/buttons/gradient-shine/GradientShine.Button";
+import { GradientShineButton } from "@/components/shared/buttons/gradient-shine/GradientShine.Button";
 import { RESUME_LINK } from "@/config/Resume";
 import { throttle } from "@/helpers/throttle";
 import { useScroll } from "framer-motion";
 import { useEffect, useState } from "react";
 import { FaDownload } from "react-icons/fa";
 
-export default function DownloadResumeFixedButton() {
+export function DownloadResumeFixedButton() {
     const [isVisible, setIsVisible] = useState(false);
     const { scrollY } = useScroll();
 

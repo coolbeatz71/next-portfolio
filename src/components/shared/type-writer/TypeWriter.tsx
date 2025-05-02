@@ -5,10 +5,7 @@ export interface TypeWriterProps {
     className?: string;
 }
 
-export default function TypeWriter({
-    words,
-    className
-}: TypeWriterProps): JSX.Element {
+export function TypeWriter({ words, className }: TypeWriterProps): JSX.Element {
     const typeWriterClassName = `
         flex items-center font-bold animate-cursor overflow-hidden 
         whitespace-nowrap transition-[width] duration-200 ease-in mr-auto
@@ -27,8 +24,8 @@ export default function TypeWriter({
     }, [words.length]);
 
     useEffect(() => {
-        const timeoutId = setTimeout(() => setCollapseClassName("w-full"), 100);
         const intervalId = setInterval(incrementWord, 5000);
+        const timeoutId = setTimeout(() => setCollapseClassName("w-full"), 100);
 
         return () => {
             clearTimeout(timeoutId);

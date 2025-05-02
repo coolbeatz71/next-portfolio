@@ -1,8 +1,8 @@
-import DotBackground from "@/components/shared/background/Dot.Background";
+import { DotBackground } from "@/components/shared/background/Dot.Background";
 import { ScrollReveal } from "@/components/shared/scroll-reveal/ScrollReveal";
 import { RESPONSIVE_CLASSNAME } from "@/config/ThemeStyle";
 import { useTranslation } from "react-i18next";
-import CompaniesGrid from "./Companies.Grid";
+import { CompaniesGrid } from "./Companies.Grid";
 
 export const companyLogoList = [
     {
@@ -39,7 +39,7 @@ export const companyLogoList = [
     }
 ];
 
-export default function Companies(): JSX.Element {
+export function Companies(): JSX.Element {
     const { t } = useTranslation();
 
     return (

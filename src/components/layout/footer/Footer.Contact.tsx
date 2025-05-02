@@ -3,7 +3,7 @@ import { FaPhoneSquare } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 
-export default function FooterContact(): JSX.Element {
+export function FooterContact(): JSX.Element {
     const { t } = useTranslation();
     return (
         <div className="flex flex-col items-start gap-2">

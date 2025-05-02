@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 
-import ProjectSection from "@/components/layout/projects/Projects.Section";
+import { ProjectSection } from "@/components/layout/projects/Projects.Section";
 
 import { projectsFrontend } from "@/config/Projects.Frontend";
 import { projectsFullStack } from "@/config/Projects.FullStack";

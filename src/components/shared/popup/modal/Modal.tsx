@@ -4,9 +4,9 @@ import { createPortal } from "react-dom";
 import { useLockBodyScroll } from "react-use";
 
 import { cn } from "@/helpers/mergeClassName";
-import PopupBackdrop from "../Popup.Backdrop";
-import PopupCloseButton from "../Popup.Close.Button";
-import PopupHeader from "../Popup.Header";
+import { PopupBackdrop } from "../Popup.Backdrop";
+import { PopupCloseButton } from "../Popup.Close.Button";
+import { PopupHeader } from "../Popup.Header";
 
 export interface ModalProps {
     header: ReactNode;
@@ -16,7 +16,7 @@ export interface ModalProps {
     className?: string;
 }
 
-export default function Modal({
+export function Modal({
     header,
     isOpen,
     onToggle,

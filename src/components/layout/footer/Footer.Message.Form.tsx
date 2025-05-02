@@ -33,7 +33,7 @@ export interface MessageFormData {
     message: string;
 }
 
-export default function FooterMessageForm(): JSX.Element {
+export function FooterMessageForm(): JSX.Element {
     const { t } = useTranslation();
     const formRef = useRef<HTMLFormElement>(null);
     const [isLoading, setIsLoading] = useState(false);

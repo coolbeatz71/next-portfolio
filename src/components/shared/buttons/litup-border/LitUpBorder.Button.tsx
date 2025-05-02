@@ -5,7 +5,7 @@ export interface LitUpBorderButtonProps {
     children: ReactNode;
     className?: string;
 }
-export default function LitUpBorderButton({
+export function LitUpBorderButton({
     children,
     className
 }: LitUpBorderButtonProps): JSX.Element {
