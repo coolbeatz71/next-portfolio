@@ -1,30 +1,9 @@
 import GradientShineButton from "@/components/shared/buttons/gradient-shine/GradientShine.Button";
 import { RESUME_LINK } from "@/config/Resume";
+import { throttle } from "@/helpers/throttle";
 import { useScroll } from "framer-motion";
 import { useEffect, useState } from "react";
 import { FaDownload } from "react-icons/fa";
-
-function throttle(func: (...args: unknown[]) => void, limit: number) {
-    let lastFunc: NodeJS.Timeout;
-    let lastRan: number;
-    return (...args: unknown[]) => {
-        if (!lastRan) {
-            func(...args);
-            lastRan = Date.now();
-        } else {
-            clearTimeout(lastFunc);
-            lastFunc = setTimeout(
-                () => {
-                    if (Date.now() - lastRan >= limit) {
-                        func(...args);
-                        lastRan = Date.now();
-                    }
-                },
-                limit - (Date.now() - lastRan)
-            );
-        }
-    };
-}
 
 export default function DownloadResumeFixedButton() {
     const [isVisible, setIsVisible] = useState(false);

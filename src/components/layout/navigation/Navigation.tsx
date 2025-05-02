@@ -12,13 +12,18 @@ export default function Navigation(): JSX.Element {
     const { y } = useWindowScroll();
     const [scrollY, setScrollY] = useState(0);
 
+    const scrollBackdrop =
+        scrollY > 20
+            ? "dark:bg-slate-800/70 bg-slate-200/70 backdrop-blur-md shadow"
+            : "";
+
     useEffect(() => {
         setScrollY(y);
     }, [y]);
 
     return (
         <nav
-            className={`sticky top-0 z-40 transition duration-100 ${scrollY > 20 ? "dark:bg-slate-800/70 bg-slate-200/70 backdrop-blur-md shadow" : ""}`}
+            className={`sticky top-0 z-40 transition duration-100 ${scrollBackdrop}`}
         >
             <div className={RESPONSIVE_CLASSNAME}>
                 <div className="relative flex py-4 sm:py-4 lg:py-5 items-center justify-between gap-2">
