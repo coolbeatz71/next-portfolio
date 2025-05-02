@@ -86,6 +86,10 @@
 
 @layer utilities {
     .text-balance {
-        text-wrap: balance;
+        overflow-wrap: break-word;
+        
+        @supports (text-wrap: balance) {
+            text-wrap: balance;
+        }
     }
 }
