@@ -21,11 +21,11 @@ export function ProjectCardImage({
         >
             <Image
                 fill
+                alt={alt}
+                src={src}
                 sizes="100%"
                 quality={55}
                 placeholder="blur"
-                alt={alt}
-                src={src}
                 blurDataURL={blurDataURL}
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
             />

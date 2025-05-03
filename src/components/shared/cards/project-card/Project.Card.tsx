@@ -2,7 +2,7 @@ import type { ProjectByStack } from "@/config/Projects";
 import { type Variants, motion } from "framer-motion";
 import dynamic from "next/dynamic";
 
-import { useState } from "react";
+import { memo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { ProjectCardImage } from "./Project.Card.Image";
 import { ProjectModal } from "./Project.Modal";
@@ -31,7 +31,7 @@ const animationVariants: Variants = {
     })
 };
 
-export function ProjectCard({ project, index }: ProjectCardProps) {
+function ProjectCardComponent({ project, index }: ProjectCardProps) {
     const { t } = useTranslation();
     const [isOpen, setIsOpen] = useState(false);
 
@@ -81,3 +81,5 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         </>
     );
 }
+
+export const ProjectCard = memo(ProjectCardComponent);

@@ -1,5 +1,5 @@
 import { AnimatePresence } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { memo, useEffect, useRef, useState } from "react";
 import { Glow } from "./GlowingStar.Glow";
 import { Star } from "./GlowingStars.Star";
 
@@ -9,7 +9,7 @@ export interface IllustrationProps {
     mouseEnter: boolean;
 }
 
-export function Illustration({
+function IllustrationComponent({
     mouseEnter,
     stars = 16,
     columns = 4
@@ -68,3 +68,5 @@ export function Illustration({
         </div>
     );
 }
+
+export const Illustration = memo(IllustrationComponent);

@@ -1,4 +1,5 @@
 import { cn } from "@/helpers/mergeClassName";
+import { memo } from "react";
 import { DotBackground } from "../background/Dot.Background";
 
 export interface SectionHeaderProps {
@@ -7,7 +8,7 @@ export interface SectionHeaderProps {
     className?: string;
 }
 
-export function SectionHeader({
+function SectionHeaderComponent({
     title,
     subtitle,
     className
@@ -31,3 +32,5 @@ export function SectionHeader({
         </div>
     );
 }
+
+export const SectionHeader = memo(SectionHeaderComponent);

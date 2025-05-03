@@ -24,6 +24,7 @@ export function ProgressBar({
                     <NextImage
                         fill
                         alt={title}
+                        quality={1}
                         src={darkImage}
                         className="object-contain hidden dark:block"
                     />
@@ -31,6 +32,7 @@ export function ProgressBar({
                     <NextImage
                         fill
                         alt={title}
+                        quality={1}
                         src={lightImage}
                         className="object-contain block dark:hidden"
                     />
@@ -41,8 +43,8 @@ export function ProgressBar({
                 <motion.div
                     className="bg-indigo-700 dark:bg-indigo-500 h-6 rounded-lg"
                     initial={{ width: 0 }}
-                    animate={{ width: inView ? `${progress}%` : 0 }}
                     transition={{ duration: 0.5 }}
+                    animate={{ width: inView ? `${progress}%` : 0 }}
                 />
             </div>
         </section>

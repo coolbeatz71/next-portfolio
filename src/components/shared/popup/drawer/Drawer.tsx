@@ -1,11 +1,11 @@
-import { CUSTOM_SCROLLBAR } from "@/config/ThemeStyle";
 import { cn } from "@/helpers/mergeClassName";
-import type { ReactNode } from "react";
+import { type ReactNode, memo } from "react";
 import { useLockBodyScroll } from "react-use";
 
 import { PopupCloseButton } from "../Popup.Close.Button";
 import { PopupFooter } from "../Popup.Footer";
 import { PopupHeader } from "../Popup.Header";
+import { DrawerContainer } from "./Drawer.Container";
 
 export interface DrawerProps {
     width?: string;
@@ -18,19 +18,7 @@ export interface DrawerProps {
     position?: "right" | "left";
 }
 
-const getTranslateStyle = (
-    isOpen: boolean,
-    width: string,
-    position: "right" | "left"
-) => ({
-    transform: isOpen
-        ? "translateX(0)"
-        : position === "right"
-          ? `translateX(${width})`
-          : `translateX(-${width})`
-});
-
-const Backdrop = ({ isOpen }: { isOpen: boolean }) => (
+const Backdrop = memo(({ isOpen }: { isOpen: boolean }) => (
     <div
         className={cn(
             "fixed inset-0 bg-black bg-opacity-70 backdrop-blur transition-all",
@@ -39,36 +27,7 @@ const Backdrop = ({ isOpen }: { isOpen: boolean }) => (
                 : "opacity-0 duration-200 ease-in-out hidden"
         )}
     />
-);
-
-export interface DrawerContainerProps {
-    children: ReactNode;
-    width: string;
-    position: "right" | "left";
-    isOpen: boolean;
-}
-const DrawerContainer = ({
-    children,
-    width,
-    position,
-    isOpen
-}: DrawerContainerProps) => (
-    <div
-        className="pointer-events-auto relative h-full transition-transform ease-in-out duration-200"
-        style={{ width, ...getTranslateStyle(isOpen, width, position) }}
-        onClick={(e) => e.stopPropagation()}
-        onKeyUp={(e) => e.stopPropagation()}
-    >
-        <div
-            className={cn(
-                CUSTOM_SCROLLBAR,
-                "flex flex-col h-full overflow-y-scroll bg-light dark:bg-dark shadow-xl px-4"
-            )}
-        >
-            {children}
-        </div>
-    </div>
-);
+));
 
 export function Drawer({
     header,

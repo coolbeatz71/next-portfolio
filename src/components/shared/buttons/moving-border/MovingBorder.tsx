@@ -5,23 +5,24 @@ import {
     useMotionValue,
     useTransform
 } from "framer-motion";
-import { Fragment, type SVGProps, useRef } from "react";
+import { Fragment, type SVGProps, memo, useRef } from "react";
 
-interface MovingBorder extends SVGProps<SVGSVGElement> {
+interface MovingBorderProps extends SVGProps<SVGSVGElement> {
     children: React.ReactNode;
     duration?: number;
     rx?: string;
     ry?: string;
 }
-export const MovingBorder = ({
+
+function MovingBorderComponent({
     children,
     duration = 2000,
     rx,
     ry,
     ...otherProps
-}: MovingBorder) => {
-    const pathRef = useRef<SVGRectElement>(null);
+}: MovingBorderProps): JSX.Element {
     const progress = useMotionValue<number>(0);
+    const pathRef = useRef<SVGRectElement>(null);
 
     useAnimationFrame((time) => {
         const length = pathRef.current?.getTotalLength();
@@ -45,34 +46,36 @@ export const MovingBorder = ({
     return (
         <Fragment>
             <svg
-                xmlns="http://www.w3.org/2000/svg"
-                preserveAspectRatio="none"
-                className="absolute h-full w-full"
                 width="100%"
                 height="100%"
+                preserveAspectRatio="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="absolute h-full w-full"
                 {...otherProps}
             >
                 <title>button</title>
                 <rect
+                    rx={rx}
+                    ry={ry}
                     fill="none"
                     width="100%"
                     height="100%"
-                    rx={rx}
-                    ry={ry}
                     ref={pathRef}
                 />
             </svg>
             <motion.div
                 style={{
-                    position: "absolute",
                     top: 0,
                     left: 0,
-                    display: "inline-block",
-                    transform
+                    transform,
+                    position: "absolute",
+                    display: "inline-block"
                 }}
             >
                 {children}
             </motion.div>
         </Fragment>
     );
-};
+}
+
+export const MovingBorder = memo(MovingBorderComponent);

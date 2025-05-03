@@ -12,10 +12,10 @@ export function SkillSection({ stacks }: SkillSectionProps): JSX.Element {
                 {stacks.map((stack) => (
                     <ProgressBar
                         key={stack.title}
-                        progress={stack.progress}
                         title={stack.title}
-                        lightImage={stack.lightImage}
+                        progress={stack.progress}
                         darkImage={stack.darkImage}
+                        lightImage={stack.lightImage}
                     />
                 ))}
             </div>

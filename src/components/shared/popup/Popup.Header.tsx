@@ -1,12 +1,12 @@
 import { cn } from "@/helpers/mergeClassName";
-import type { ReactNode } from "react";
+import { type ReactNode, memo } from "react";
 
 export interface PopupHeaderProps {
-    children: ReactNode;
     className?: string;
+    children: ReactNode;
 }
 
-export function PopupHeader({
+function PopupHeaderComponent({
     children,
     className
 }: PopupHeaderProps): JSX.Element {
@@ -21,3 +21,5 @@ export function PopupHeader({
         </div>
     );
 }
+
+export const PopupHeader = memo(PopupHeaderComponent);
