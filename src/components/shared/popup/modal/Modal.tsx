@@ -9,11 +9,11 @@ import { PopupCloseButton } from "../Popup.Close.Button";
 import { PopupHeader } from "../Popup.Header";
 
 export interface ModalProps {
-    header: ReactNode;
     isOpen: boolean;
-    onToggle: () => void;
-    children: ReactNode;
+    header: ReactNode;
     className?: string;
+    children: ReactNode;
+    onToggle: () => void;
 }
 
 export function Modal({
