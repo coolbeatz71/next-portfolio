@@ -1,14 +1,14 @@
-import { FcBriefcase, FcGlobe } from "react-icons/fc";
+import { IconBriefcase, IconGlobe } from "./Icon";
 
 export const creditBadgeList = [
     {
-        icon: <FcBriefcase />,
+        icon: <IconBriefcase />,
         className: "",
         count: 8,
         text: "years_of_experience"
     },
     {
-        icon: <FcGlobe />,
+        icon: <IconGlobe />,
         className: "left-10",
         count: 25,
         text: "live_projects"

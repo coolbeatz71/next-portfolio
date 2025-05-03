@@ -1,6 +1,6 @@
 import { SideMenu } from "@/components/layout/side-menu/SideMenu";
+import { IconMenu } from "@/config/Icon";
 import { Fragment, useState } from "react";
-import { MdOutlineMenu } from "react-icons/md";
 
 export function HamburgerMenuButton(): JSX.Element {
     const [isOpen, setIsOpen] = useState(false);
@@ -22,7 +22,7 @@ export function HamburgerMenuButton(): JSX.Element {
                     hover:bg-slate-300 dark:hover:bg-slate-700 focus:outline-none
                 `}
             >
-                <MdOutlineMenu />
+                <IconMenu />
             </button>
 
             <SideMenu isOpen={isOpen} toggleDrawer={toggleDrawer} />

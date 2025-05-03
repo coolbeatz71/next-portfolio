@@ -1,9 +1,9 @@
 import { GradientShineButton } from "@/components/shared/buttons/gradient-shine/GradientShine.Button";
+import { IconDownload } from "@/config/Icon";
 import { RESUME_LINK } from "@/config/Resume";
 import { throttle } from "@/helpers/throttle";
 import { useScroll } from "framer-motion";
 import { useEffect, useState } from "react";
-import { FaDownload } from "react-icons/fa";
 
 export function DownloadResumeFixedButton() {
     const [isVisible, setIsVisible] = useState(false);
@@ -35,7 +35,7 @@ export function DownloadResumeFixedButton() {
                         title="Download Resume"
                     >
                         <GradientShineButton className="p-4 animate-pulse">
-                            <FaDownload size={20} />
+                            <IconDownload size={20} />
                         </GradientShineButton>
                     </a>
                 </div>

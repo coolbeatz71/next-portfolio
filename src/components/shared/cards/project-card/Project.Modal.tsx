@@ -1,7 +1,7 @@
+import { IconArrowUpRight, IconCodeBranch } from "@/config/Icon";
 import NextImage from "next/image";
 import { Fragment } from "react";
 import type { ReactNode } from "react";
-import { FaArrowUpRightFromSquare, FaCodeBranch } from "react-icons/fa6";
 
 import { BadgeSpan } from "@/components/shared/badge/Badge.Span";
 import { LitUpBorderButton } from "@/components/shared/buttons/litup-border/LitUpBorder.Button";
@@ -83,7 +83,7 @@ export function ProjectModal({ project }: ProjectModalProps): JSX.Element {
                                 className="py-2 text-sm font-medium text-gray-500 focus:outline-none rounded-lg hover:text-slate-900 dark:text-gray-400 dark:hover:text-white"
                             >
                                 <div className="flex justify-center items-center text-sm font-medium">
-                                    <FaCodeBranch className="mr-1 h-3 w-3" />
+                                    <IconCodeBranch className="mr-1 h-3 w-3" />
                                     {t("source_code")}
                                 </div>
                             </button>
@@ -95,7 +95,7 @@ export function ProjectModal({ project }: ProjectModalProps): JSX.Element {
                         >
                             <LitUpBorderButton className="w-32 p-[3.5px]">
                                 <div className="flex justify-center items-center text-[10pt] font-medium">
-                                    <FaArrowUpRightFromSquare className="mr-2 h-3 w-3" />
+                                    <IconArrowUpRight className="mr-2 h-3 w-3" />
                                     {t("open")}
                                 </div>
                             </LitUpBorderButton>

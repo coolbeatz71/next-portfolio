@@ -1,5 +1,5 @@
+import { IconGlobe } from "@/config/Icon";
 import type { TimelineEntry } from "@/config/WorkExperience";
-import { FcGlobe } from "react-icons/fc";
 import { GridPatternBackground } from "../background/GridPattern.Background";
 
 export const TimelineFull = ({ data }: { data: TimelineEntry[] }) => {
@@ -17,7 +17,7 @@ export const TimelineFull = ({ data }: { data: TimelineEntry[] }) => {
                                     <div className="flex justify-between items-center">
                                         {item.title}
                                         <p className="flex items-center gap-1 text-xs font-medium text-neutral-400 dark:text-neutral-500">
-                                            <FcGlobe /> {item.location}
+                                            <IconGlobe /> {item.location}
                                         </p>
                                     </div>
                                     <p className="flex !text-sm !font-normal text-neutral-600 dark:text-neutral-300">

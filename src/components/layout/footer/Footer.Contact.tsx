@@ -1,7 +1,5 @@
+import { IconEmail, IconLocation, IconPhone } from "@/config/Icon";
 import { useTranslation } from "react-i18next";
-import { FaPhoneSquare } from "react-icons/fa";
-import { FaLocationDot } from "react-icons/fa6";
-import { MdEmail } from "react-icons/md";
 
 export function FooterContact(): JSX.Element {
     const { t } = useTranslation();
@@ -11,7 +9,7 @@ export function FooterContact(): JSX.Element {
                 {t("address")}
             </h3>
             <span className="w-full md:w-auto justify-start text-gray-500 dark:text-gray-400 flex items-center gap-2">
-                <FaLocationDot />
+                <IconLocation />
                 KN 134 Street, Kigali, Rwanda
             </span>
 
@@ -22,7 +20,7 @@ export function FooterContact(): JSX.Element {
                 className="hover:font-medium w-full md:w-auto "
             >
                 <span className="hover:underline text-gray-500 dark:text-gray-400 hover:text-indigo-700 hover:dark:text-indigo-500 flex justify-start items-center gap-2">
-                    <MdEmail />
+                    <IconEmail />
                     jeanvincent.mutombo@gmail.com
                 </span>
             </a>
@@ -32,7 +30,7 @@ export function FooterContact(): JSX.Element {
                 className="hover:font-medium w-full md:w-auto"
             >
                 <span className="hover:underline text-gray-500 dark:text-gray-400 hover:text-indigo-700 hover:dark:text-indigo-500 flex justify-start items-center gap-2">
-                    <FaPhoneSquare />
+                    <IconPhone />
                     (+250) 78 071 2761
                 </span>
             </a>

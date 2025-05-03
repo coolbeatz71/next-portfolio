@@ -1,7 +1,7 @@
+import { IconChevronUpDown } from "@/config/Icon";
 import dayjs from "dayjs";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { LuChevronsUpDown } from "react-icons/lu";
 import { useClickAway } from "react-use";
 
 import { USER_LANG, languageList } from "@/config/Language";
@@ -67,7 +67,7 @@ export function LanguageDropDown({ placement }: LanguageDropDownProps) {
                 <span className="text-sm font-semibold">
                     {currentLanguage.code.toUpperCase()}
                 </span>
-                <LuChevronsUpDown
+                <IconChevronUpDown
                     className="-mr-1 ml-2 h-4 w-4"
                     aria-hidden="true"
                 />

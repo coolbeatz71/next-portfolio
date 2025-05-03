@@ -1,8 +1,8 @@
+import { IconChevronUpDown } from "@/config/Icon";
 import type { Tabs } from "@/config/Projects";
 import { cn } from "@/helpers/mergeClassName";
 import { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { LuChevronsUpDown } from "react-icons/lu";
 import { useClickAway } from "react-use";
 import { NavigationDropdownMenu } from "./Navigation.Dropdown.Menu";
 
@@ -44,7 +44,7 @@ export function NavigationDropdown({
                     onClick={toggleDropdown}
                 >
                     <span>{t(tabs[activeTabIndex].title)}</span>
-                    <LuChevronsUpDown
+                    <IconChevronUpDown
                         className="-mr-1 ml-2 h-4 w-4"
                         aria-hidden="true"
                     />

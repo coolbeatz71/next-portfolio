@@ -1,7 +1,7 @@
 import { BadgeSpan } from "@/components/shared/badge/Badge.Span";
 import { LitUpBorderButton } from "@/components/shared/buttons/litup-border/LitUpBorder.Button";
+import { IconArrowUpRight } from "@/config/Icon";
 import type { ProjectByStack } from "@/config/Projects";
-import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 
 export interface ProjectContentProps {
     label: string;
@@ -40,7 +40,7 @@ export function ProjectCardContent({
                 >
                     <LitUpBorderButton className="w-32 p-[3.5px]">
                         <div className="flex justify-center items-center text-[10pt] font-medium">
-                            <FaArrowUpRightFromSquare className="mr-2 h-3 w-3" />
+                            <IconArrowUpRight className="mr-2 h-3 w-3" />
                             {label}
                         </div>
                     </LitUpBorderButton>
