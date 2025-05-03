@@ -3,9 +3,9 @@ import { cn } from "@/helpers/mergeClassName";
 import type { ReactNode } from "react";
 import { useLockBodyScroll } from "react-use";
 
-import PopupCloseButton from "../Popup.Close.Button";
-import PopupFooter from "../Popup.Footer";
-import PopupHeader from "../Popup.Header";
+import { PopupCloseButton } from "../Popup.Close.Button";
+import { PopupFooter } from "../Popup.Footer";
+import { PopupHeader } from "../Popup.Header";
 
 export interface DrawerProps {
     width?: string;
@@ -70,7 +70,7 @@ const DrawerContainer = ({
     </div>
 );
 
-export default function Drawer({
+export function Drawer({
     header,
     footer,
     isOpen,

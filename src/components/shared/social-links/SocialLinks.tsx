@@ -1,9 +1,9 @@
-import OutlineButton from "@/components/shared/buttons/outline/Outline.Button";
+import { OutlineButton } from "@/components/shared/buttons/outline/Outline.Button";
 import { socialLinksList } from "@/config/SocialLink";
 import NextLink from "next/link";
 import { Fragment } from "react";
 
-export default function SocialLinks(): JSX.Element {
+export function SocialLinks(): JSX.Element {
     return (
         <Fragment>
             {socialLinksList.slice(0, 3).map((social) => (

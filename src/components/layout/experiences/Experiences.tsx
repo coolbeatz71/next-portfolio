@@ -1,8 +1,8 @@
 import { useState } from "react";
 
 import { MovingBorderButton } from "@/components/shared/buttons/moving-border/MovingBorder.Button";
-import Drawer from "@/components/shared/popup/drawer/Drawer";
-import SectionHeader from "@/components/shared/section-header/SectionHeader";
+import { Drawer } from "@/components/shared/popup/drawer/Drawer";
+import { SectionHeader } from "@/components/shared/section-header/SectionHeader";
 import { Timeline } from "@/components/shared/timeline/Timeline";
 import { TimelineFull } from "@/components/shared/timeline/Timeline.Full";
 import {
@@ -18,7 +18,7 @@ import { cn } from "@/helpers/mergeClassName";
 import { useTranslation } from "react-i18next";
 import { useMedia } from "react-use";
 
-export default function Experiences(): JSX.Element {
+export function Experiences(): JSX.Element {
     const { t } = useTranslation();
     const [isOpen, setIsOpen] = useState(false);
 
@@ -47,20 +47,20 @@ export default function Experiences(): JSX.Element {
             id="experience"
             className={cn(RESPONSIVE_CLASSNAME, "py-12 xl:py-32 scroll-mt-10")}
         >
-            <div>
-                <SectionHeader
-                    title={t("experience_title")}
-                    subtitle={t("experience_subtitle")}
-                />
-                <Timeline data={experienceTimeline().slice(0, 5)} />
-                <div className="flex justify-center w-full">
-                    <MovingBorderButton
-                        className="py-3 md:py-4 px-10"
-                        onClick={toggleDrawer}
-                    >
-                        {t("read_more")}
-                    </MovingBorderButton>
-                </div>
+            <SectionHeader
+                title={t("experience_title")}
+                subtitle={t("experience_subtitle")}
+            />
+
+            <Timeline data={experienceTimeline().slice(0, 5)} />
+
+            <div className="flex justify-center w-full">
+                <MovingBorderButton
+                    className="py-3 md:py-4 px-10"
+                    onClick={toggleDrawer}
+                >
+                    {t("read_more")}
+                </MovingBorderButton>
             </div>
 
             <Drawer

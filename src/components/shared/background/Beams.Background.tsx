@@ -23,7 +23,7 @@ const gradients = paths.map(() => ({
     y2End: `${93 + Math.random() * 8}%`
 }));
 
-function BackgroundBeams(): JSX.Element {
+function BackgroundBeam(): JSX.Element {
     return (
         <div className="absolute z-0 h-full w-full inset-0 [mask-size:40px] [mask-repeat:no-repeat] flex items-center justify-center">
             <svg
@@ -100,4 +100,4 @@ function BackgroundBeams(): JSX.Element {
     );
 }
 
-export default memo(BackgroundBeams);
+export const BackgroundBeams = memo(BackgroundBeam);

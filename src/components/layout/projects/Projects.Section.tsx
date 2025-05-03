@@ -7,7 +7,7 @@ import type { ProjectByStack } from "@/config/Projects";
 export interface ProjectSectionProps {
     projects: ProjectByStack[];
 }
-export default function ProjectSection({ projects }: ProjectSectionProps) {
+export function ProjectSection({ projects }: ProjectSectionProps) {
     const { ref, inView } = useInView({
         triggerOnce: false,
         threshold: 0.1

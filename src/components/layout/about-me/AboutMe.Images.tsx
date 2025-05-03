@@ -1,13 +1,17 @@
 import { aboutMeImagesList } from "@/config/AboutMe.Images";
 import dynamic from "next/dynamic";
 
-const DynamicParallaxScroll = dynamic(
-    () => import("./../../shared/parallax-scroll/ParallaxScroll"),
-    {
-        ssr: false
-    }
+export const DynamicParallaxScroll = dynamic(
+    async () => {
+        const mod = await import(
+            /* webpackChunkName: "ParallaxScroll" */
+            "./../../shared/parallax-scroll/ParallaxScroll"
+        );
+        return mod.ParallaxScroll;
+    },
+    { ssr: false }
 );
 
-export default function AboutMeImages(): JSX.Element {
+export function AboutMeImages(): JSX.Element {
     return <DynamicParallaxScroll images={aboutMeImagesList} />;
 }

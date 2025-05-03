@@ -10,7 +10,7 @@ interface OutlineButton extends HTMLAttributes<HTMLButtonElement> {
     duration?: number;
     className?: string;
 }
-export default function OutlineButton({
+export function OutlineButton({
     borderRadius = "1rem",
     children,
     as: Component = "button",

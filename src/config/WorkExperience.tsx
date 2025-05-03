@@ -1,4 +1,4 @@
-import ExperienceItem from "@/components/layout/experiences/Experiences.Item";
+import { ExperienceItem } from "@/components/layout/experiences/Experiences.Item";
 import { cn } from "@/helpers/mergeClassName";
 import type { ReactNode } from "react";
 import { useTranslation } from "react-i18next";

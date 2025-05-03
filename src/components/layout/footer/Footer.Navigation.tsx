@@ -1,9 +1,9 @@
+import { IconLink } from "@/config/Icon";
 import { navigationList } from "@/config/Navigation";
 import NextLink from "next/link";
 import { useTranslation } from "react-i18next";
-import { CiLink } from "react-icons/ci";
 
-export default function FooterNavigation(): JSX.Element {
+export function FooterNavigation(): JSX.Element {
     const { t } = useTranslation();
 
     return (
@@ -20,7 +20,7 @@ export default function FooterNavigation(): JSX.Element {
                         className="text-gray-500 dark:text-gray-400 hover:text-indigo-700 hover:dark:text-indigo-500 hover:underline font-medium"
                     >
                         <span className="flex flex-row justify-start">
-                            <CiLink
+                            <IconLink
                                 className="mt-1 mr-2 flex-shrink-0"
                                 size={16}
                             />

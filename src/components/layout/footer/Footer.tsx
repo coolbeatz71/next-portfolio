@@ -1,13 +1,13 @@
 import { ScrollReveal } from "@/components/shared/scroll-reveal/ScrollReveal";
 import { RESPONSIVE_CLASSNAME } from "@/config/ThemeStyle";
 import { cn } from "@/helpers/mergeClassName";
-import FooterContact from "./Footer.Contact";
-import FooterCopyright from "./Footer.Copyright";
-import FooterMessageForm from "./Footer.Message.Form";
-import FooterNavigation from "./Footer.Navigation";
-import FooterSocialLink from "./Footer.SocialLink";
+import { FooterContact } from "./Footer.Contact";
+import { FooterCopyright } from "./Footer.Copyright";
+import { FooterMessageForm } from "./Footer.Message.Form";
+import { FooterNavigation } from "./Footer.Navigation";
+import { FooterSocialLink } from "./Footer.SocialLink";
 
-export default function Footer(): JSX.Element {
+export function Footer(): JSX.Element {
     return (
         <footer
             id="contact"

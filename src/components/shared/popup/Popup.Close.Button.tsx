@@ -1,10 +1,10 @@
-import { IoMdCloseCircle } from "react-icons/io";
+import { IconClose } from "@/config/Icon";
 
 export interface PopupCloseButtonProps {
     onClick: () => void;
 }
 
-export default function PopupCloseButton({
+export function PopupCloseButton({
     onClick
 }: PopupCloseButtonProps): JSX.Element {
     return (
@@ -14,7 +14,7 @@ export default function PopupCloseButton({
             onClick={onClick}
             className="absolute top-5 right-4 text-gray-500 hover:text-red-500 transition-colors z-50"
         >
-            <IoMdCloseCircle size={24} />
+            <IconClose size={24} />
         </button>
     );
 }

@@ -1,6 +1,6 @@
 import NextLink from "next/link";
 
-export default function Logo(): JSX.Element {
+export function Logo(): JSX.Element {
     return (
         <NextLink href="">
             <div className="flex flex-shrink-0 items-center cursor-pointer">

@@ -11,7 +11,7 @@ export interface ProjectImageSliderProps {
     imagePlaceholder: string;
 }
 
-export default function ProjectImageSlider({
+export function ProjectImageSlider({
     images,
     imagePlaceholder
 }: ProjectImageSliderProps): JSX.Element {

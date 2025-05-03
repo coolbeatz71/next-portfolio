@@ -3,10 +3,10 @@ import type { ReactNode } from "react";
 import { useLockBodyScroll } from "react-use";
 
 import { cn } from "@/helpers/mergeClassName";
-import PopupBackdrop from "../Popup.Backdrop";
-import PopupCloseButton from "../Popup.Close.Button";
-import PopupFooter from "../Popup.Footer";
-import PopupHeader from "../Popup.Header";
+import { PopupBackdrop } from "../Popup.Backdrop";
+import { PopupCloseButton } from "../Popup.Close.Button";
+import { PopupFooter } from "../Popup.Footer";
+import { PopupHeader } from "../Popup.Header";
 
 export interface SideMenuDrawerProps {
     header: ReactNode;
@@ -18,7 +18,7 @@ export interface SideMenuDrawerProps {
     position?: "right" | "left";
 }
 
-export default function SideMenuDrawer({
+export function SideMenuDrawer({
     header,
     footer,
     isOpen,

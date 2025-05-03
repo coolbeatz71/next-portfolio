@@ -3,7 +3,7 @@ import numeral from "numeral";
 import type { ReactNode } from "react";
 import CountUp from "react-countup";
 
-import GridPatternBackground from "@/components/shared/background/GridPattern.Background";
+import { GridPatternBackground } from "@/components/shared/background/GridPattern.Background";
 import { cn } from "@/helpers/mergeClassName";
 
 export interface BadgeProps {
@@ -14,7 +14,7 @@ export interface BadgeProps {
     endCountNumber: number;
 }
 
-export default function Badge({
+export function Badge({
     icon,
     badgeText,
     className,

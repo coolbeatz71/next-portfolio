@@ -1,17 +1,14 @@
-import NavigationMenu from "@/components/layout/navigation/Navigation.Menu";
-import Logo from "@/components/shared/logo/Logo";
-import SideMenuDrawer from "@/components/shared/popup/drawer/SideMenu.Drawer";
-import SideMenuProfile from "./SideMenu.Profile";
+import { NavigationMenu } from "@/components/layout/navigation/Navigation.Menu";
+import { Logo } from "@/components/shared/logo/Logo";
+import { SideMenuDrawer } from "@/components/shared/popup/drawer/SideMenu.Drawer";
+import { SideMenuProfile } from "./SideMenu.Profile";
 
 export interface SideMenuProps {
     isOpen: boolean;
     toggleDrawer: () => void;
 }
 
-export default function SideMenu({
-    isOpen,
-    toggleDrawer
-}: SideMenuProps): JSX.Element {
+export function SideMenu({ isOpen, toggleDrawer }: SideMenuProps): JSX.Element {
     return (
         <SideMenuDrawer
             isOpen={isOpen}

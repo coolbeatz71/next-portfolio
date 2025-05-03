@@ -1,4 +1,4 @@
-import { IoMdArrowDropright } from "react-icons/io";
+import { IconArrowRight } from "@/config/Icon";
 
 export interface BreadcrumbProps {
     labels: string[];
@@ -12,7 +12,7 @@ export function Breadcrumb({ labels }: BreadcrumbProps): JSX.Element {
                     <li key={label}>
                         <div className="flex items-center">
                             {i > 0 && (
-                                <IoMdArrowDropright className="rtl:rotate-180 text-xl text-slate-300 dark:text-slate-600 mr-1" />
+                                <IconArrowRight className="rtl:rotate-180 text-xl text-slate-300 dark:text-slate-600 mr-1" />
                             )}
                             <span className="text-sm font-medium text-slate-500 dark:text-slate-400">
                                 {label}

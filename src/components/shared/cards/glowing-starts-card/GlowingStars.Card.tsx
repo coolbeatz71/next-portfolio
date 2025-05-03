@@ -6,7 +6,7 @@ export interface GlowingStarsCardProps {
     className?: string;
     children?: ReactNode;
 }
-export default function GlowingStarsCard({
+export function GlowingStarsCard({
     className,
     children
 }: GlowingStarsCardProps): JSX.Element {

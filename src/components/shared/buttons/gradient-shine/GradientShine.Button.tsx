@@ -5,7 +5,7 @@ export interface GradientShineButtonProps {
     children: ReactNode;
     className?: string;
 }
-export default function GradientShineButton({
+export function GradientShineButton({
     children,
     className
 }: GradientShineButtonProps): JSX.Element {

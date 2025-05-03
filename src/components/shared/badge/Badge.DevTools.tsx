@@ -1,4 +1,4 @@
-import GlowingStarsCard from "@/components/shared/cards/glowing-starts-card/GlowingStars.Card";
+import { GlowingStarsCard } from "@/components/shared/cards/glowing-starts-card/GlowingStars.Card";
 import { cn } from "@/helpers/mergeClassName";
 
 export interface BadgeDevToolsProps {
@@ -6,7 +6,7 @@ export interface BadgeDevToolsProps {
     className?: string;
 }
 
-export default function BadgeDevTools({
+export function BadgeDevTools({
     iconName,
     className
 }: BadgeDevToolsProps): JSX.Element {
