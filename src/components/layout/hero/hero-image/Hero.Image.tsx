@@ -4,7 +4,7 @@ import { useAnimation } from "@/hooks/UseAnimation";
 import NextImage from "next/image";
 import { HeroImageBackground } from "./Hero.Image.Background";
 
-export default function HeroImage(): JSX.Element {
+export function HeroImage(): JSX.Element {
     const { floatAnimation, transition } = useAnimation();
 
     const lines = [

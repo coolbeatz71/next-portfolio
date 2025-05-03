@@ -1,34 +1,38 @@
-import { FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
-import { FaMedium } from "react-icons/fa6";
-import { RiInstagramFill } from "react-icons/ri";
+import {
+    IconGithub,
+    IconInstagram,
+    IconLinkedIn,
+    IconMedium,
+    IconYoutube
+} from "./Icon";
 
 export const socialLinksList = [
     {
-        icon: <FaGithub />,
+        icon: <IconGithub />,
         platform: "github",
         href: "https://github.com/coolbeatz71/",
         hoverColor: "hover:text-github hover:dark:text-github_dark"
     },
     {
-        icon: <FaLinkedin />,
+        icon: <IconLinkedIn />,
         platform: "linkedin",
         href: "https://www.linkedin.com/in/mutombo-jv/",
         hoverColor: "hover:text-linkedin"
     },
     {
-        icon: <FaMedium />,
+        icon: <IconMedium />,
         platform: "medium",
         href: "https://medium.com/@sigmacool",
         hoverColor: "hover:text-medium hover:dark:text-medium_dark"
     },
     {
-        icon: <FaYoutube />,
+        icon: <IconYoutube />,
         platform: "youtube",
         href: "https://www.youtube.com/@sigmacoolbeatz?sub_confirmation=1",
         hoverColor: "hover:text-youtube"
     },
     {
-        icon: <RiInstagramFill />,
+        icon: <IconInstagram />,
         platform: "instagram",
         href: "https://www.instagram.com/glodymutomboriy/",
         hoverColor: "hover:text-instagram"

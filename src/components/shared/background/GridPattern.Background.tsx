@@ -5,7 +5,7 @@ export interface GridPatternBackgroundProps {
     size?: number;
 }
 
-export default function GridPatternBackground({
+export function GridPatternBackground({
     size
 }: GridPatternBackgroundProps): JSX.Element {
     const pattern: Array<[number, number]> = [

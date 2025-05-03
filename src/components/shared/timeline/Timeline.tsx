@@ -1,7 +1,7 @@
+import { IconGlobe } from "@/config/Icon";
 import type { TimelineEntry } from "@/config/WorkExperience";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import { FcGlobe } from "react-icons/fc";
 
 export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
     const ref = useRef<HTMLDivElement>(null);
@@ -41,7 +41,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                                     {item.subtitle}
                                 </p>
                                 <p className="flex items-center gap-1 !text-sm font-medium text-neutral-400 dark:text-neutral-500">
-                                    <FcGlobe /> {item.location}
+                                    <IconGlobe /> {item.location}
                                 </p>
                             </h3>
                         </div>
@@ -56,7 +56,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                                     {item.subtitle}
                                 </p>
                                 <p className="flex items-center gap-1 !text-sm font-medium text-neutral-400 dark:text-neutral-500">
-                                    <FcGlobe /> {item.location}
+                                    <IconGlobe /> {item.location}
                                 </p>
                             </div>
 

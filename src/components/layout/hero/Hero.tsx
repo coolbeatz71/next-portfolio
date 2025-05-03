@@ -1,12 +1,12 @@
 import { ScrollReveal } from "@/components/shared/scroll-reveal/ScrollReveal";
-import Spotlight from "@/components/shared/spotlight/Spotlight";
+import { Spotlight } from "@/components/shared/spotlight/Spotlight";
 import { RESPONSIVE_CLASSNAME } from "@/config/ThemeStyle";
 import { cn } from "@/helpers/mergeClassName";
 
-import HeroImageSection from "./hero-section/Hero.Image.Section";
-import HeroIntroSection from "./hero-section/Hero.Intro.Section";
+import { HeroImageSection } from "./hero-section/Hero.Image.Section";
+import { HeroIntroSection } from "./hero-section/Hero.Intro.Section";
 
-export default function Hero(): JSX.Element {
+export function Hero(): JSX.Element {
     return (
         <ScrollReveal className="delay-0">
             <section

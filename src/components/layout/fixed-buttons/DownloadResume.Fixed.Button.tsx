@@ -1,32 +1,11 @@
-import GradientShineButton from "@/components/shared/buttons/gradient-shine/GradientShine.Button";
+import { GradientShineButton } from "@/components/shared/buttons/gradient-shine/GradientShine.Button";
+import { IconDownload } from "@/config/Icon";
 import { RESUME_LINK } from "@/config/Resume";
+import { throttle } from "@/helpers/throttle";
 import { useScroll } from "framer-motion";
 import { useEffect, useState } from "react";
-import { FaDownload } from "react-icons/fa";
 
-function throttle(func: (...args: unknown[]) => void, limit: number) {
-    let lastFunc: NodeJS.Timeout;
-    let lastRan: number;
-    return (...args: unknown[]) => {
-        if (!lastRan) {
-            func(...args);
-            lastRan = Date.now();
-        } else {
-            clearTimeout(lastFunc);
-            lastFunc = setTimeout(
-                () => {
-                    if (Date.now() - lastRan >= limit) {
-                        func(...args);
-                        lastRan = Date.now();
-                    }
-                },
-                limit - (Date.now() - lastRan)
-            );
-        }
-    };
-}
-
-export default function DownloadResumeFixedButton() {
+export function DownloadResumeFixedButton() {
     const [isVisible, setIsVisible] = useState(false);
     const { scrollY } = useScroll();
 
@@ -56,7 +35,7 @@ export default function DownloadResumeFixedButton() {
                         title="Download Resume"
                     >
                         <GradientShineButton className="p-4 animate-pulse">
-                            <FaDownload size={20} />
+                            <IconDownload size={20} />
                         </GradientShineButton>
                     </a>
                 </div>

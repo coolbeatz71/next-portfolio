@@ -10,7 +10,7 @@ export interface HoverableCardProps {
     onMouseLeave: () => void;
 }
 
-export default function HoverableCard({
+export function HoverableCard({
     icon,
     title,
     currentIndex,

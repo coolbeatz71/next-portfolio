@@ -1,15 +1,17 @@
 import { navigationList } from "@/config/Navigation";
+import { getActiveSection } from "@/helpers/getActiveSection";
 import { cn } from "@/helpers/mergeClassName";
+import { throttle } from "@/helpers/throttle";
 import NextLink from "next/link";
 import { Fragment, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 export interface NavigationMenuProps {
-    onClick?: () => void;
     className?: string;
+    onClick?: () => void;
 }
 
-export default function NavigationMenu({
+export function NavigationMenu({
     onClick,
     className
 }: NavigationMenuProps): JSX.Element {
@@ -19,65 +21,50 @@ export default function NavigationMenu({
     );
 
     useEffect(() => {
-        const updateActiveLink = () => {
-            const scrollPosition = window.scrollY;
-            let activeSection = "";
-
-            if (scrollPosition === 0) activeSection = "";
-            else {
-                for (const { href } of navigationList) {
-                    if (!href.startsWith("#")) continue;
-
-                    const section = document.querySelector(href);
-                    if (section) {
-                        const { top } = section.getBoundingClientRect();
-                        if (top <= 100) activeSection = href;
-                    }
-                }
+        const handleNavigation = throttle(() => {
+            const current = getActiveSection();
+            if (current !== activeLink) {
+                setActiveLink(current);
+                history.replaceState(null, "", current || "/");
             }
+        }, 100);
 
-            if (activeSection !== activeLink) {
-                setActiveLink(activeSection);
-                history.replaceState(null, "", activeSection || "/");
-            }
-        };
+        window.addEventListener("scroll", handleNavigation);
+        window.addEventListener("hashchange", handleNavigation);
 
-        window.addEventListener("scroll", updateActiveLink);
-        window.addEventListener("hashchange", updateActiveLink);
-
-        updateActiveLink();
+        handleNavigation();
 
         return () => {
-            window.removeEventListener("scroll", updateActiveLink);
-            window.removeEventListener("hashchange", updateActiveLink);
+            window.removeEventListener("scroll", handleNavigation);
+            window.removeEventListener("hashchange", handleNavigation);
         };
     }, [activeLink]);
 
     return (
         <Fragment>
-            {navigationList.map((item) => {
-                const isCurrent = activeLink === item.href;
+            {navigationList.map(({ label, href }) => {
+                const isCurrent = activeLink === href;
+                const linkClasses = cn(
+                    "rounded-lg px-3 py-2 text-sm font-medium transition-colors duration-300",
+                    isCurrent
+                        ? "dark:bg-slate-900 bg-slate-700 text-white"
+                        : "dark:text-slate-300 text-slate-700 hover:bg-slate-300 dark:hover:bg-slate-700",
+                    className
+                );
 
                 return (
                     <NextLink
-                        key={item.label}
-                        href={item.href}
-                        className={cn(
-                            `rounded-lg px-3 py-2 text-sm font-medium transition-colors duration-300 ${
-                                isCurrent
-                                    ? "dark:bg-slate-900 bg-slate-700 text-white"
-                                    : "dark:text-slate-300 text-slate-700 hover:bg-slate-300 dark:hover:bg-slate-700"
-                            }`,
-                            className
-                        )}
+                        key={label}
+                        href={href}
+                        className={linkClasses}
                         aria-current={isCurrent ? "page" : undefined}
                         onClick={() => {
-                            setActiveLink(item.href);
+                            setActiveLink(href);
                             onClick?.();
                         }}
                         suppressHydrationWarning
                     >
-                        {t(item.label)}
+                        {t(label)}
                     </NextLink>
                 );
             })}

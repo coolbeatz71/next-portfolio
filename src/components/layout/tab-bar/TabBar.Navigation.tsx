@@ -9,7 +9,7 @@ export interface NavigationTabBarProps {
     context: "skills" | "projects";
     setActiveTabIndex: (index: number) => void;
 }
-export default function NavigationTabBar({
+export function NavigationTabBar({
     tabs,
     context,
     className,

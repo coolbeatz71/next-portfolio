@@ -2,7 +2,7 @@ import { socialLinksList } from "@/config/SocialLink";
 import NextLink from "next/link";
 import { useTranslation } from "react-i18next";
 
-export default function FooterSocialLink(): JSX.Element {
+export function FooterSocialLink(): JSX.Element {
     const { t } = useTranslation();
 
     return (

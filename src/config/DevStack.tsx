@@ -1,4 +1,4 @@
-import SkillSection from "@/components/layout/skills/Skills.Section";
+import { SkillSection } from "@/components/layout/skills/Skills.Section";
 import type { Tabs } from "@/config/Projects";
 
 import { devStackBackend } from "@/config/DevStack.Backend";
