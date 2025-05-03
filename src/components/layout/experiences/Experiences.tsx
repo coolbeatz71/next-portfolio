@@ -47,20 +47,20 @@ export function Experiences(): JSX.Element {
             id="experience"
             className={cn(RESPONSIVE_CLASSNAME, "py-12 xl:py-32 scroll-mt-10")}
         >
-            <div>
-                <SectionHeader
-                    title={t("experience_title")}
-                    subtitle={t("experience_subtitle")}
-                />
-                <Timeline data={experienceTimeline().slice(0, 5)} />
-                <div className="flex justify-center w-full">
-                    <MovingBorderButton
-                        className="py-3 md:py-4 px-10"
-                        onClick={toggleDrawer}
-                    >
-                        {t("read_more")}
-                    </MovingBorderButton>
-                </div>
+            <SectionHeader
+                title={t("experience_title")}
+                subtitle={t("experience_subtitle")}
+            />
+
+            <Timeline data={experienceTimeline().slice(0, 5)} />
+
+            <div className="flex justify-center w-full">
+                <MovingBorderButton
+                    className="py-3 md:py-4 px-10"
+                    onClick={toggleDrawer}
+                >
+                    {t("read_more")}
+                </MovingBorderButton>
             </div>
 
             <Drawer
