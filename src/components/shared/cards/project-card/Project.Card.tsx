@@ -65,12 +65,12 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                 animate="visible"
                 variants={variants}
             >
-                <div className="lg:min-h-72 bg-white dark:bg-gray-900 rounded-lg overflow-hidden transition-all duration-300 group-hover:shadow-xl">
-                    <div className="flex flex-col md:flex-row lg:min-h-72">
+                <div className="md:min-h-64 lg:min-h-72 bg-white dark:bg-gray-900 rounded-lg overflow-hidden transition-all duration-300 group-hover:shadow-xl">
+                    <div className="flex flex-col md:flex-row md:min-h-64 lg:min-h-72">
                         <div
                             onClick={toggleModal}
                             onKeyDown={toggleModal}
-                            className="w-full h-56 md:w-1/2 md:h-auto relative overflow-hidden cursor-pointer"
+                            className="w-full md:w-1/2 h-56 md:h-auto relative overflow-hidden cursor-pointer"
                         >
                             <NextImage
                                 fill
@@ -80,9 +80,9 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                                 alt={project.name}
                                 src={project.images[0].src}
                                 blurDataURL={project.blurURL}
-                                className="object-cover transition-all duration-300 group-hover:scale-110"
+                                className="object-cover transition-all duration-500 group-hover:scale-110"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/50 dark:from-white/50 to-transparent, opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent, opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                         </div>
                         <div className="md:w-1/2 p-4 flex flex-col justify-between cursor-pointer">
                             <div onClick={toggleModal} onKeyDown={toggleModal}>
