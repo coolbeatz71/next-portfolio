@@ -41,13 +41,13 @@ export function ProjectModal({ project }: ProjectModalProps): JSX.Element {
                     />
                 ) : (
                     <NextImage
+                        unoptimized
                         width={300}
                         height={300}
+                        loading="lazy"
                         src={project.images[0].src}
                         alt={project.images[0].alt}
                         className="object-cover rounded-lg w-full h-56 md:h-72"
-                        loading="lazy"
-                        unoptimized
                     />
                 )}
             </div>

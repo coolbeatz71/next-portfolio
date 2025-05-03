@@ -22,11 +22,11 @@ export function SideMenuProfile(): JSX.Element {
                     height={12}
                     alt="avatar"
                     unoptimized
-                    src="/hero/avatar.jpg"
-                    className="w-12 h-12 rounded-lg shadow"
-                    blurDataURL={avatarPlaceholder}
-                    placeholder="blur"
                     loading="lazy"
+                    src="/hero/avatar.jpg"
+                    blurDataURL={avatarPlaceholder}
+                    className="w-12 h-12 rounded-lg shadow"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
 
                 <div className="w-full flex flex-col items-start justify-start gap-0">

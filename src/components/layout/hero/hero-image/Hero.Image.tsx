@@ -29,7 +29,13 @@ export function HeroImage(): JSX.Element {
             <HeroImageBackground className="w-[100%] h-[60%] z-0 opacity-80" />
 
             <div className="relative w-[22rem] h-[32rem] lg:w-[24rem] lg:h-[36rem] -top-8 z-10">
-                <NextImage fill priority alt="profile" src="/hero/me.png" />
+                <NextImage
+                    fill
+                    priority
+                    alt="profile"
+                    src="/hero/me.png"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
             </div>
 
             <AnimatedShape

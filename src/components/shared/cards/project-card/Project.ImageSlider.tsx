@@ -121,12 +121,13 @@ export function ProjectImageSlider({
                     />
                     <NextImage
                         fill
+                        loading="lazy"
+                        placeholder="blur"
                         src={images[0].src}
                         alt={images[0].alt}
-                        className={`object-cover transition-all duration-300 ${isZoomed ? "rounded-none" : "rounded-lg"}`}
                         blurDataURL={imagePlaceholder}
-                        placeholder="blur"
-                        loading="lazy"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        className={`object-cover transition-all duration-300 ${isZoomed ? "rounded-none" : "rounded-lg"}`}
                     />
                 </div>
                 <div className="image-slider-container w-full h-full relative overflow-hidden">
@@ -174,8 +175,9 @@ export function ProjectImageSlider({
                                             fill
                                             src={img.src}
                                             alt={img.alt}
-                                            className="object-contain"
                                             priority={isCurrent}
+                                            className="object-contain"
+                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                         />
                                     </div>
                                 </motion.div>
