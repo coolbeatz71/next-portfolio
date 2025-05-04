@@ -1,0 +1,221 @@
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@plugin "tailwind-scrollbar";
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("/fonts/Montserrat-Thin.woff2") format("woff2"),
+        url("/fonts/Montserrat-Thin.ttf") format("truetype");
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("/fonts/Montserrat-ExtraLight.woff2") format("woff2"),
+        url("/fonts/Montserrat-ExtraLight.ttf") format("truetype");
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("/fonts/Montserrat-Light.woff2") format("woff2"),
+        url("/fonts/Montserrat-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("/fonts/Montserrat-Regular.woff2") format("woff2"),
+        url("/fonts/Montserrat-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("/fonts/Montserrat-Medium.woff2") format("woff2"),
+        url("/fonts/Montserrat-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("/fonts/Montserrat-SemiBold.woff2") format("woff2"),
+        url("/fonts/Montserrat-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("/fonts/Montserrat-Bold.woff2") format("woff2"),
+        url("/fonts/Montserrat-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("/fonts/Montserrat-ExtraBold.woff2") format("woff2"),
+        url("/fonts/Montserrat-ExtraBold.ttf") format("truetype");
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("/fonts/Montserrat-Black.woff2") format("woff2"),
+        url("/fonts/Montserrat-Black.ttf") format("truetype");
+    font-weight: 900;
+    font-style: normal;
+}
+
+@theme {
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --breakpoint-2xl: 1600px;
+
+    --color-medium: #000000;
+    --color-medium_dark: #ffc21e;
+    --color-github: #000000;
+    --color-github_dark: #ffffff;
+    --color-linkedin: #0077b5;
+    --color-youtube: #cd201f;
+    --color-instagram: #c7507c;
+    --color-light: rgb(226 232 240);
+    --color-dark: rgb(30 41 59);
+
+    --brightness-25: 0.25;
+    --brightness-900: 9;
+
+    --background-image-pattern_dark: url("/background/bg-pattern-dark.svg");
+    --background-image-pattern_light: url("/background/bg-pattern-light.svg");
+    --background-image-icon_react: url("/dev-tools/react.svg");
+    --background-image-icon_vue: url("/dev-tools/vue.svg");
+    --background-image-icon_node: url("/dev-tools/node.svg");
+    --background-image-icon_angular: url("/dev-tools/angular.svg");
+    --background-image-icon_flutter: url("/dev-tools/flutter.svg");
+    --background-image-icon_laravel: url("/dev-tools/laravel.svg");
+    --background-image-logo_andela_light: url("/company-logo/andela_light.png");
+    --background-image-logo_ezyagric: url("/company-logo/ezyagric.png");
+    --background-image-logo_exuus_light: url("/company-logo/exuus_light.png");
+    --background-image-logo_codeofafrica_light: url("/company-logo/codeofafrica_light.png");
+    --background-image-logo_alfatier_light: url("/company-logo/alfatier_light.png");
+    --background-image-logo_reconstruction_light: url("/company-logo/reconstruction_light.png");
+    --background-image-logo_theroom_light: url("/company-logo/theroom_light.png");
+    --background-image-logo_bestseller_light: url("/company-logo/bestseller_light.png");
+    --background-image-logo_andela_dark: url("/company-logo/andela_dark.png");
+    --background-image-logo_exuus_dark: url("/company-logo/exuus_dark.png");
+    --background-image-logo_codeofafrica_dark: url("/company-logo/codeofafrica_dark.png");
+    --background-image-logo_alfatier_dark: url("/company-logo/alfatier_dark.png");
+    --background-image-logo_reconstruction_dark: url("/company-logo/reconstruction_dark.png");
+    --background-image-logo_theroom_dark: url("/company-logo/theroom_dark.png");
+    --background-image-logo_bestseller_dark: url("/company-logo/bestseller_dark.png");
+
+    --animate-pulse: pulse 2s infinite;
+    --animate-spin: spin 1s linear infinite;
+    --animate-spotlight: spotlight 2s ease 0.75s 1 forwards;
+    --animate-bounce: bounce 0.75s ease-in-out;
+
+    @keyframes pulse {
+        0% {
+            transform: scale(0.8);
+            box-shadow: 0 0 0 0 rgba(67, 56, 202, 0.5);
+        }
+        40% {
+            transform: scale(1);
+            box-shadow: 0 0 0 10px rgba(229, 62, 62, 0);
+        }
+        50% {
+            transform: scale(0.8);
+        }
+    }
+
+    @keyframes bounce {
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+        25% {
+            transform: translateY(-2px);
+        }
+        50% {
+            transform: translateY(5px);
+        }
+        75% {
+            transform: translateY(-2px);
+        }
+    }
+
+    @keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes spotlight {
+        0% {
+            opacity: 0;
+            transform: translate(-72%, -62%) scale(0.5);
+        }
+        100% {
+            opacity: 0.3;
+            transform: translate(-50%, -40%) scale(1);
+        }
+    }
+}
+
+@layer base {
+    :root {
+        --color-black: #000;
+        --color-white: #fff;
+    }
+}
+
+@utility bg-grid-* {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='--value'%3E%3Cpath d='M0 .5H31.5V32'/%3E%3C/svg%3E");
+}
+
+@layer base {
+    html,
+    body {
+        font-family: "Montserrat", sans-serif;
+        scroll-behavior: smooth;
+        @apply bg-light dark:bg-dark;
+    }
+}
+
+@layer utilities {
+    .text-balance {
+        overflow-wrap: break-word;
+    }
+
+    @supports (text-wrap: balance) {
+        .text-balance {
+            text-wrap: balance;
+        }
+    }
+
+    .bg-grid {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(148 163 184 / 0.3)'%3E%3Cpath d='M0 .5H31.5V32'/%3E%3C/svg%3E");
+    }
+
+    .bg-grid-small {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='8' height='8' fill='none' stroke='rgb(148 163 184 / 0.3)'%3E%3Cpath d='M0 .5H31.5V32'/%3E%3C/svg%3E");
+    }
+
+    .bg-dot {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none'%3E%3Ccircle fill='rgb(148 163 184 / 0.3)' id='pattern-circle' cx='10' cy='10' r='1.6257413380501518'%3E%3C/circle%3E%3C/svg%3E");
+    }
+}
