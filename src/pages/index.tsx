@@ -1,15 +1,15 @@
 import { HomeContainer } from "@/components/container/home/HomeContainer";
 import Head from "next/head";
-import { Fragment, useEffect, useState } from "react";
+import { Fragment, useEffect } from "react";
 
-export default function IndexPage(): JSX.Element {
+export default function IndexPage(): {
     const [isClient, setIsClient] = useState(false);
 
-    useEffect(() => {
-        setIsClient(true);
-    }, []);
+useEffect(() => {
+    setIsClient(true);
+}, []);
 
-    return (
+return (
         <Fragment>
             <Head>
                 <title>Meet | Mutombo Jean-vincent</title>
