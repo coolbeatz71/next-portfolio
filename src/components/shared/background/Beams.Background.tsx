@@ -23,9 +23,9 @@ const gradients = paths.map(() => ({
     y2End: `${93 + Math.random() * 8}%`
 }));
 
-function BackgroundBeam(): JSX.Element {
+function BackgroundBeam() {
     return (
-        <div className="absolute z-0 h-full w-full inset-0 [mask-size:40px] [mask-repeat:no-repeat] flex items-center justify-center">
+        <div className="absolute z-0 h-full w-full inset-0 mask-size-[40px] mask-no-repeat flex items-center justify-center">
             <svg
                 aria-hidden="true"
                 className="z-0 h-full w-full pointer-events-none absolute"
