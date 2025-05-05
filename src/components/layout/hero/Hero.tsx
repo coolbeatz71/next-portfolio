@@ -6,7 +6,7 @@ import { cn } from "@/helpers/mergeClassName";
 import { HeroImageSection } from "./hero-section/Hero.Image.Section";
 import { HeroIntroSection } from "./hero-section/Hero.Intro.Section";
 
-export function Hero() {
+export function Hero(): JSX.Element {
     return (
         <ScrollReveal className="delay-0">
             <section
