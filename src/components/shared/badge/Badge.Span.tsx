@@ -4,7 +4,7 @@ export interface BadgeSpanProps {
     text: string;
 }
 
-function BadgeSpanComponent({ text }: BadgeSpanProps): JSX.Element {
+function BadgeSpanComponent({ text }: BadgeSpanProps) {
     return (
         <span
             className={`cursor-pointer bg-indigo-100 text-indigo-800 dark:bg-gray-700
