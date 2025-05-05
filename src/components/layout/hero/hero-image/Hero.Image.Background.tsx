@@ -18,7 +18,7 @@ export function HeroImageBackground({ className }: HeroImageBackgroundProps) {
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="4 1 12 9"
-                className="min-w-[10rem] min-h-[10rem]"
+                className="min-w-40 min-h-40"
             >
                 <defs>
                     <linearGradient
