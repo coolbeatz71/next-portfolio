@@ -8,7 +8,7 @@ import { ThemeToggle } from "@/components/shared/theme-toggle/ThemeToggle";
 import { RESPONSIVE_CLASSNAME } from "@/config/ThemeStyle";
 import { useEffect, useState } from "react";
 
-export function Navigation(): JSX.Element {
+export function Navigation() {
     const { y } = useWindowScroll();
     const [scrollY, setScrollY] = useState(0);
 
