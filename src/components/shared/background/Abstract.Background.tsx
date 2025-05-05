@@ -10,7 +10,7 @@ export interface AbstractBackgroundProps {
 function AbstractBackgroundComponent({
     maskImage,
     backgroundClass,
-    className = "h-[50rem]"
+    className = "h-200"
 }: AbstractBackgroundProps) {
     return (
         <div
