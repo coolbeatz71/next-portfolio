@@ -5,9 +5,7 @@ export interface DotBackgroundProps {
     className?: string;
 }
 
-function DotBackgroundComponent({
-    className
-}: DotBackgroundProps): JSX.Element {
+function DotBackgroundComponent({ className }: DotBackgroundProps) {
     return (
         <AbstractBackground
             className={className}
