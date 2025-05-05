@@ -11,10 +11,7 @@ export interface NavigationMenuProps {
     onClick?: () => void;
 }
 
-function NavigationMenuComponent({
-    onClick,
-    className
-}: NavigationMenuProps): JSX.Element {
+function NavigationMenuComponent({ onClick, className }: NavigationMenuProps) {
     const { t } = useTranslation();
     const [activeLink, setActiveLink] = useState(
         () => window.location.hash || ""
