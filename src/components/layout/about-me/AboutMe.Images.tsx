@@ -12,6 +12,6 @@ export const DynamicParallaxScroll = dynamic(
     { ssr: false }
 );
 
-export function AboutMeImages(): JSX.Element {
+export function AboutMeImages() {
     return <DynamicParallaxScroll images={aboutMeImagesList} />;
 }
