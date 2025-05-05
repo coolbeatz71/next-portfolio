@@ -5,7 +5,7 @@ import { AboutMeImages } from "./AboutMe.Images";
 import { RESPONSIVE_CLASSNAME } from "@/config/ThemeStyle";
 import { cn } from "@/helpers/mergeClassName";
 
-export function AboutMe(): JSX.Element {
+export function AboutMe() {
     return (
         <ScrollReveal direction="left" className="delay-300">
             <section
