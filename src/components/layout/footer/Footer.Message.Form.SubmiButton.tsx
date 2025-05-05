@@ -5,9 +5,7 @@ interface FormSubmitButtonProps {
     isLoading: boolean;
 }
 
-export function FormSubmitButton({
-    isLoading
-}: FormSubmitButtonProps): JSX.Element {
+export function FormSubmitButton({ isLoading }: FormSubmitButtonProps) {
     const { t } = useTranslation();
 
     return (
