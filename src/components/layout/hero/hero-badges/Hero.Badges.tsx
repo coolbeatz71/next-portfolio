@@ -4,7 +4,7 @@ import { creditBadgeList } from "@/config/CreditBadge";
 import { devToolsLogoList } from "@/config/DevTools";
 import { useTranslation } from "react-i18next";
 
-export function HeroBadges(): JSX.Element {
+export function HeroBadges() {
     const { t } = useTranslation();
 
     return (
@@ -20,7 +20,7 @@ export function HeroBadges(): JSX.Element {
                     />
                 ))}
             </div>
-            <div className="grid grid-cols-2 h-[12rem] place-items-center gap-2 md:gap-4">
+            <div className="grid grid-cols-2 h-48 place-items-center gap-2 md:gap-4">
                 {devToolsLogoList.map((badge) => (
                     <div
                         key={badge.iconName}
