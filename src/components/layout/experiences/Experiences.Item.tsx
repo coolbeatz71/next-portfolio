@@ -4,9 +4,7 @@ export interface ExperienceItemProps {
     children: ReactNode;
 }
 
-function ExperienceItemComponent({
-    children
-}: ExperienceItemProps): JSX.Element {
+function ExperienceItemComponent({ children }: ExperienceItemProps) {
     return (
         <span className="flex flex-row space-x-2 my-2">
             <IconCheckMark
