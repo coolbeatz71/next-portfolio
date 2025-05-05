@@ -1,7 +1,7 @@
 import { IconEmail, IconLocation, IconPhone } from "@/config/Icon";
 import { useTranslation } from "react-i18next";
 
-export function FooterContact(): JSX.Element {
+export function FooterContact() {
     const { t } = useTranslation();
     return (
         <div className="flex flex-col items-start gap-2">
