@@ -5,7 +5,7 @@ import { RESPONSIVE_CLASSNAME } from "@/config/ThemeStyle";
 import { useTranslation } from "react-i18next";
 import { CompaniesGrid } from "./Companies.Grid";
 
-export function Companies(): JSX.Element {
+export function Companies() {
     const { t } = useTranslation();
 
     return (
