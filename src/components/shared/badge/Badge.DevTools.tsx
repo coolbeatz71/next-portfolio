@@ -6,10 +6,7 @@ export interface BadgeDevToolsProps {
     className?: string;
 }
 
-export function BadgeDevTools({
-    iconName,
-    className
-}: BadgeDevToolsProps): JSX.Element {
+export function BadgeDevTools({ iconName, className }: BadgeDevToolsProps) {
     return (
         <GlowingStarsCard
             className={cn(
