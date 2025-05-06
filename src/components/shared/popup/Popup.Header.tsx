@@ -6,14 +6,11 @@ export interface PopupHeaderProps {
     children: ReactNode;
 }
 
-function PopupHeaderComponent({
-    children,
-    className
-}: PopupHeaderProps): JSX.Element {
+function PopupHeaderComponent({ children, className }: PopupHeaderProps) {
     return (
         <div
             className={cn(
-                "sticky z-50 border border-t-0 border-x-0 border-b-1 border-slate-300 dark:border-slate-700",
+                "sticky z-50 border border-t-0 border-x-0 border-b border-slate-300 dark:border-slate-700",
                 className
             )}
         >
