@@ -61,7 +61,7 @@ function LanguageDropDownComponent({ placement }: LanguageDropDownProps) {
                 `}
                 onClick={toggleDropdown}
             >
-                <span className="mr-2 h-5 w-5 flex items-center justify-center flex-shrink-0">
+                <span className="mr-2 h-5 w-5 flex items-center justify-center shrink-0">
                     {currentLanguage.flag}
                 </span>
                 <span className="text-sm font-semibold">
