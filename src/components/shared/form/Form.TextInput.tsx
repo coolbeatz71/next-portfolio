@@ -8,6 +8,6 @@ export interface FormTextInputProps {
     className?: string;
 }
 
-export function FormTextInput(props: FormTextInputProps): JSX.Element {
+export function FormTextInput(props: FormTextInputProps) {
     return <FormField as="input" {...props} />;
 }
