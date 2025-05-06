@@ -26,7 +26,7 @@ function DrawerContainerComponent({
     width,
     position,
     isOpen
-}: DrawerContainerProps): JSX.Element {
+}: DrawerContainerProps) {
     return (
         <div
             onClick={(e) => e.stopPropagation()}
