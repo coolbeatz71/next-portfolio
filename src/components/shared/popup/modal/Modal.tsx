@@ -22,7 +22,7 @@ export function Modal({
     onToggle,
     children,
     className
-}: ModalProps): JSX.Element {
+}: ModalProps) {
     useLockBodyScroll(isOpen);
 
     if (!isOpen) return <></>;
