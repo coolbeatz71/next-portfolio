@@ -19,7 +19,7 @@ export function OutlineButton({
     duration,
     className,
     ...otherProps
-}: OutlineButton): JSX.Element {
+}: OutlineButton) {
     return (
         <Component
             type="button"
@@ -27,7 +27,7 @@ export function OutlineButton({
                 borderRadius: borderRadius
             }}
             className={cn(
-                "cursor-pointer inline-flex animate-Outline items-center justify-center border-4 border-slate-300 dark:border-slate-700  px-6 font-medium dark:text-slate-300 text-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-400/[0.5]",
+                "cursor-pointer inline-flex animate-Outline items-center justify-center border-4 border-slate-300 dark:border-slate-700  px-6 font-medium dark:text-slate-300 text-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-400/50",
                 className
             )}
             {...otherProps}
