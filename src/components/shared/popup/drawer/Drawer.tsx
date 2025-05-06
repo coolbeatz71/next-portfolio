@@ -77,7 +77,7 @@ export function Drawer({
                                 {header}
                             </PopupHeader>
                             <PopupCloseButton onClick={onToggle} />
-                            <div className="flex-grow z-40">{children}</div>
+                            <div className="grow z-40">{children}</div>
                             {footer && <PopupFooter>{footer}</PopupFooter>}
                         </DrawerContainer>
                     </div>
