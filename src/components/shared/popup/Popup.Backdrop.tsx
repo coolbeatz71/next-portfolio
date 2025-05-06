@@ -4,7 +4,7 @@ export interface PopupBackdropProps {
     onClick: () => void;
 }
 
-function PopupBackdropComponent({ onClick }: PopupBackdropProps): JSX.Element {
+function PopupBackdropComponent({ onClick }: PopupBackdropProps) {
     return (
         <div
             onClick={onClick}
