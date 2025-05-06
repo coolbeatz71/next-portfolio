@@ -4,7 +4,7 @@ export interface BreadcrumbProps {
     labels: string[];
 }
 
-export function Breadcrumb({ labels }: BreadcrumbProps): JSX.Element {
+export function Breadcrumb({ labels }: BreadcrumbProps) {
     return (
         <div className="flex pb-6" aria-label="breadcrumb">
             <ol className="inline-flex items-center space-x-1 rtl:space-x-reverse">
