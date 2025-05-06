@@ -14,7 +14,7 @@ export interface ProjectImageSliderProps {
 export function ProjectImageSlider({
     images,
     imagePlaceholder
-}: ProjectImageSliderProps): JSX.Element {
+}: ProjectImageSliderProps) {
     const imageWithoutPreview = images.slice(1);
 
     const [sliderState, setSliderState] = useState({
@@ -117,7 +117,7 @@ export function ProjectImageSlider({
                     className={`absolute top-0 left-0 w-full h-full z-0 transition-all duration-300 ${isZoomed ? "rounded-none" : "rounded-lg"}`}
                 >
                     <div
-                        className={`absolute z-20 w-full h-full bg-slate-200/[0.7] dark:bg-slate-700/[0.7] backdrop-blur-lg transition-all duration-300 ${isZoomed ? "rounded-none" : "rounded-lg"}`}
+                        className={`absolute z-20 w-full h-full bg-slate-200/70 dark:bg-slate-700/70 backdrop-blur-lg transition-all duration-300 ${isZoomed ? "rounded-none" : "rounded-lg"}`}
                     />
                     <NextImage
                         fill
