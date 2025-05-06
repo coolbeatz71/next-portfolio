@@ -1,4 +1,4 @@
-export function SpinnerIcon(): JSX.Element {
+export function SpinnerIcon() {
     return (
         <svg
             aria-hidden="true"
