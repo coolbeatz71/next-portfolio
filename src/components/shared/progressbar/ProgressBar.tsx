@@ -9,7 +9,7 @@ export function ProgressBar({
     lightImage,
     darkImage,
     progress
-}: SkillsByStack): JSX.Element {
+}: SkillsByStack) {
     const { ref, inView } = useInView({
         triggerOnce: false,
         threshold: 0.1
