@@ -9,7 +9,7 @@ export interface LitUpBorderButtonProps {
 function LitUpBorderButtonComponent({
     children,
     className
-}: LitUpBorderButtonProps): JSX.Element {
+}: LitUpBorderButtonProps) {
     return (
         <button type="button" className={cn("p-1 relative", className)}>
             <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-800 rounded-lg" />
