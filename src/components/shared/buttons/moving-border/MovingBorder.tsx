@@ -20,7 +20,7 @@ function MovingBorderComponent({
     rx,
     ry,
     ...otherProps
-}: MovingBorderProps): JSX.Element {
+}: MovingBorderProps) {
     const progress = useMotionValue<number>(0);
     const pathRef = useRef<SVGRectElement>(null);
 
