@@ -27,7 +27,7 @@ export function FormField({
     className,
     as = "input",
     ...rest
-}: FormFieldProps): JSX.Element {
+}: FormFieldProps) {
     const { t } = useTranslation();
     const {
         register,
