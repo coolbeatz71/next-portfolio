@@ -5,7 +5,7 @@ export interface GlowProps {
     delay: number;
 }
 
-function GlowComponent({ delay }: GlowProps): JSX.Element {
+function GlowComponent({ delay }: GlowProps) {
     return (
         <motion.div
             initial={{
