@@ -10,10 +10,7 @@ export interface ParallaxScrollProps {
     images: AboutMeImage[];
 }
 
-export function ParallaxScroll({
-    images,
-    className
-}: ParallaxScrollProps): JSX.Element {
+export function ParallaxScroll({ images, className }: ParallaxScrollProps) {
     const { scrollYProgress } = useScroll();
     const cubicEase = cubicBezier(0.5, 0, 0.2, 1);
 
