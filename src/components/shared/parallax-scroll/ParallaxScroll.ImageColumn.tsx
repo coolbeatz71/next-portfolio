@@ -17,7 +17,7 @@ function ImageColumnComponent({
     columnKey,
     imageHeight
 }: ImageColumnProps) {
-    const gradientOverlayClassName = `absolute inset-0 h-full w-full bg-gradient-to-r from-indigo-400 
+    const gradientOverlayClassName = `absolute inset-0 h-full w-full bg-linear-to-r from-indigo-400 
         to-indigo-900 transform scale-[0.75] rounded-full blur-2xl`;
 
     const imageContainerClassName = cn(
