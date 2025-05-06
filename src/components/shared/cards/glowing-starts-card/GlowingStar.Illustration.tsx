@@ -13,7 +13,7 @@ function IllustrationComponent({
     mouseEnter,
     stars = 16,
     columns = 4
-}: IllustrationProps): JSX.Element {
+}: IllustrationProps) {
     const [glowingStars, setGlowingStars] = useState<number[]>([]);
 
     const highlightedStars = useRef<number[]>([]);
