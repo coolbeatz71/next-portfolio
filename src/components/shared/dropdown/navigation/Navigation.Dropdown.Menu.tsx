@@ -11,7 +11,7 @@ export function NavigationDropdownMenu({
     tabs,
     onSelect,
     activeTabIndex
-}: NavigationDropdownMenuProps): JSX.Element {
+}: NavigationDropdownMenuProps) {
     const { t } = useTranslation();
 
     return (
