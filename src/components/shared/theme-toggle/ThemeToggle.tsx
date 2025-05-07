@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
 import { useCallback } from "react";
 
-export function ThemeToggle(): JSX.Element {
+export function ThemeToggle() {
     const { theme, setTheme } = useTheme();
 
     const raysVariants = {
