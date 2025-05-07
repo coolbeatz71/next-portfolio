@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 @import "./fonts.css";
+@import "./animations.css";
 @import "./bg-patterns.css";
 
 @variant dark (&:where(.dark, .dark *));
@@ -53,61 +54,6 @@
     --background-image-logo_reconstruction_dark: url("/company-logo/reconstruction_dark.png");
     --background-image-logo_theroom_dark: url("/company-logo/theroom_dark.png");
     --background-image-logo_bestseller_dark: url("/company-logo/bestseller_dark.png");
-
-    --animate-pulse: pulse 2s infinite;
-    --animate-spin: spin 1s linear infinite;
-    --animate-bounce: bounce 0.75s ease-in-out;
-    --animate-spotlight: spotlight 2s ease 0.75s 1 forwards;
-
-    @keyframes pulse {
-        0% {
-            transform: scale(0.8);
-            box-shadow: 0 0 0 0 rgba(67, 56, 202, 0.5);
-        }
-        40% {
-            transform: scale(1);
-            box-shadow: 0 0 0 10px rgba(229, 62, 62, 0);
-        }
-        50% {
-            transform: scale(0.8);
-        }
-    }
-
-    @keyframes bounce {
-        0%,
-        100% {
-            transform: translateY(0);
-        }
-        25% {
-            transform: translateY(-2px);
-        }
-        50% {
-            transform: translateY(5px);
-        }
-        75% {
-            transform: translateY(-2px);
-        }
-    }
-
-    @keyframes spin {
-        from {
-            transform: rotate(0deg);
-        }
-        to {
-            transform: rotate(360deg);
-        }
-    }
-
-    @keyframes spotlight {
-        0% {
-            opacity: 0;
-            transform: translate(-72%, -62%) scale(0.5);
-        }
-        100% {
-            opacity: 0.3;
-            transform: translate(-50%, -40%) scale(1);
-        }
-    }
 }
 
 @layer base {
