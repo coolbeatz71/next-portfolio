@@ -13,7 +13,7 @@ import { GridBackground } from "@/components/shared/background/Grid.Background";
 
 import { Fragment } from "react";
 
-export function HomeContainer(): JSX.Element {
+export function HomeContainer() {
     return (
         <Fragment>
             <Fragment>
@@ -21,7 +21,7 @@ export function HomeContainer(): JSX.Element {
                     <BackgroundBeams />
                 </div>
                 <BackgroundGradient />
-                <GridBackground className="top-0 h-[38rem]" />
+                <GridBackground className="top-0 h-152" />
             </Fragment>
 
             <Navigation />
