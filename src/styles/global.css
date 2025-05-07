@@ -63,6 +63,11 @@
         scroll-behavior: smooth;
         @apply bg-light dark:bg-dark;
     }
+
+    button,
+    [role="button"] {
+        cursor: pointer;
+    }
 }
 
 @layer utilities {
