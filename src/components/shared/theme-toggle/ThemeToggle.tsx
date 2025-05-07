@@ -1,11 +1,11 @@
-import { motion } from "framer-motion";
+import { type Variants, motion } from "framer-motion";
 import { useTheme } from "next-themes";
 import { useCallback } from "react";
 
 export function ThemeToggle() {
     const { theme, setTheme } = useTheme();
 
-    const raysVariants = {
+    const raysVariants: Variants = {
         hidden: {
             strokeOpacity: 0,
             transition: {
@@ -21,7 +21,7 @@ export function ThemeToggle() {
         }
     };
 
-    const rayVariant = {
+    const rayVariant: Variants = {
         hidden: {
             pathLength: 0,
             opacity: 0,
@@ -41,7 +41,7 @@ export function ThemeToggle() {
         }
     };
 
-    const shineVariant = {
+    const shineVariant: Variants = {
         hidden: {
             opacity: 0,
             scale: 2,
@@ -55,7 +55,7 @@ export function ThemeToggle() {
             filter: ["blur(2px)", "blur(2px)", "blur(0px)"],
             transition: {
                 duration: 0.75,
-                ease: "linear"
+                ease: "linear" as const
             }
         }
     };
