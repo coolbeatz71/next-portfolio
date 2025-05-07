@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { type Transition, motion } from "framer-motion";
 import { memo } from "react";
 
 const paths = [
@@ -13,15 +13,17 @@ const paths = [
     "M-100 -509C-100 -509 -32 -104 432 23C896 150 964 555 964 555"
 ];
 
-const gradients = paths.map(() => ({
-    transition: {
-        duration: Math.random() * 10 + 10,
-        ease: "easeInOut",
-        repeat: Number.POSITIVE_INFINITY,
-        delay: Math.random() * 5
-    },
-    y2End: `${93 + Math.random() * 8}%`
-}));
+const gradients: { transition: Transition; y2End: string }[] = paths.map(
+    () => ({
+        transition: {
+            duration: Math.random() * 10 + 10,
+            ease: "easeInOut" as const,
+            repeat: Number.POSITIVE_INFINITY,
+            delay: Math.random() * 5
+        },
+        y2End: `${93 + Math.random() * 8}%`
+    })
+);
 
 function BackgroundBeam() {
     return (
