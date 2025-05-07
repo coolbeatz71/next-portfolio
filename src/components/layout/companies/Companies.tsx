@@ -13,7 +13,7 @@ export function Companies() {
             <section className={RESPONSIVE_CLASSNAME}>
                 <div
                     className={`
-                        grid grid-cols-1 lg:grid-cols-[2.5fr,3fr] xl:grid-cols-[3fr,3.5fr]
+                        grid grid-cols-1 lg:grid-cols-[2.5fr_3fr] xl:grid-cols-[3fr_3.5fr]
                         items-center gap-4 md:gap-12 lg:gap-8 xl:gap-12
                     `}
                 >
