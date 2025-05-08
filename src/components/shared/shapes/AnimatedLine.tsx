@@ -1,5 +1,5 @@
+import { motion } from "motion/react";
 import type { AnimatedLineProps } from "@/config/Animation";
-import { motion } from "framer-motion";
 
 export function AnimatedLine({
     className,
