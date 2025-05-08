@@ -1,5 +1,5 @@
-import { cn } from "@/helpers/mergeClassName";
 import { type ReactNode, useState } from "react";
+import { cn } from "@/helpers/mergeClassName";
 import { Illustration } from "./GlowingStar.Illustration";
 
 export interface GlowingStarsCardProps {
