@@ -1,8 +1,8 @@
-import type { AboutMeImage } from "@/config/AboutMe.Images";
-import { cn } from "@/helpers/mergeClassName";
-import { type MotionValue, motion } from "framer-motion";
+import { type MotionValue, motion } from "motion/react";
 import NextImage from "next/image";
 import { memo } from "react";
+import type { AboutMeImage } from "@/config/AboutMe.Images";
+import { cn } from "@/helpers/mergeClassName";
 
 export interface ImageColumnProps {
     columnKey: string;
