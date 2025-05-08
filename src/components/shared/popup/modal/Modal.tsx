@@ -1,5 +1,5 @@
-import { Fragment } from "react";
 import type { ReactNode } from "react";
+import { Fragment } from "react";
 import { createPortal } from "react-dom";
 import { useLockBodyScroll } from "react-use";
 
