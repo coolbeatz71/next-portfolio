@@ -1,7 +1,7 @@
-import { OutlineButton } from "@/components/shared/buttons/outline/Outline.Button";
-import { socialLinksList } from "@/config/SocialLink";
 import NextLink from "next/link";
 import { Fragment } from "react";
+import { OutlineButton } from "@/components/shared/buttons/outline/Outline.Button";
+import { socialLinksList } from "@/config/SocialLink";
 
 export function SocialLinks() {
     return (
