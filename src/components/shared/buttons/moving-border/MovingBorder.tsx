@@ -4,8 +4,8 @@ import {
     useMotionTemplate,
     useMotionValue,
     useTransform
-} from "framer-motion";
-import { Fragment, type SVGProps, memo, useRef } from "react";
+} from "motion/react";
+import { Fragment, memo, type SVGProps, useRef } from "react";
 
 interface MovingBorderProps extends SVGProps<SVGSVGElement> {
     children: React.ReactNode;
