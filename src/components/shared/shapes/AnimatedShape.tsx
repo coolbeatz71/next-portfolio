@@ -1,5 +1,5 @@
+import { motion } from "motion/react";
 import type { AnimatedShapeProps } from "@/config/Animation";
-import { motion } from "framer-motion";
 
 export function AnimatedShape({
     className,
