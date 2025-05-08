@@ -1,5 +1,17 @@
 {
-    "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+    "$schema": "https://biomejs.dev/schemas/2.4.2/schema.json",
+    "css": {
+        "parser": {
+            "tailwindDirectives": true
+        },
+        "linter": {
+            "enabled": false
+        },
+        "formatter": {
+            "enabled": false
+        }
+    },
+
     "formatter": {
         "enabled": true,
         "formatWithErrors": true,
@@ -9,8 +21,12 @@
         "lineWidth": 80,
         "attributePosition": "auto"
     },
-    "organizeImports": {
-        "enabled": true
+    "assist": {
+        "actions": {
+            "source": {
+                "organizeImports": "on"
+            }
+        }
     },
     "linter": {
         "enabled": true,
@@ -26,11 +42,11 @@
                 "noUnusedLabels": "error"
             }
         },
-        "ignore": [
-            "**/node_modules/",
-            "**/.next/",
-            "**/*.config.js",
-            "**/.yarn"
+        "includes": [
+            "!**/node_modules/",
+            "!**/.next/",
+            "!**/*.config.js",
+            "!**/.yarn"
         ]
     },
     "javascript": {
