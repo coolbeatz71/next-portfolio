@@ -1,5 +1,5 @@
-import type { Tabs } from "@/config/Projects";
 import { useTranslation } from "react-i18next";
+import type { Tabs } from "@/config/Projects";
 
 export interface NavigationDropdownMenuProps {
     tabs: Tabs[];
