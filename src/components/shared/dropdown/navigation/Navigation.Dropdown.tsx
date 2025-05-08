@@ -1,9 +1,9 @@
-import { IconChevronUpDown } from "@/config/Icon";
-import type { Tabs } from "@/config/Projects";
-import { cn } from "@/helpers/mergeClassName";
 import { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useClickAway } from "react-use";
+import { IconChevronUpDown } from "@/config/Icon";
+import type { Tabs } from "@/config/Projects";
+import { cn } from "@/helpers/mergeClassName";
 import { NavigationDropdownMenu } from "./Navigation.Dropdown.Menu";
 
 export interface NavigationDropdownProps {
