@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import numeral from "numeral";
 import type { ReactNode } from "react";
 import CountUp from "react-countup";
