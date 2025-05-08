@@ -1,6 +1,6 @@
-import { cn } from "@/helpers/mergeClassName";
-import { type ReactNode, memo } from "react";
+import { memo, type ReactNode } from "react";
 import { useLockBodyScroll } from "react-use";
+import { cn } from "@/helpers/mergeClassName";
 
 import { PopupCloseButton } from "../Popup.Close.Button";
 import { PopupFooter } from "../Popup.Footer";
