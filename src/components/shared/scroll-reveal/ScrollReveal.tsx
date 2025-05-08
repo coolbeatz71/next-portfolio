@@ -1,6 +1,6 @@
+import type { ReactNode } from "react";
 import { cn } from "@/helpers/mergeClassName";
 import { useScrollReveal } from "@/hooks/UseScrollReveal";
-import type { ReactNode } from "react";
 
 export interface ScrollRevealProps {
     children: ReactNode;
