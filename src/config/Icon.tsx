@@ -1,6 +1,3 @@
-import { EnglishFlagIcon } from "@/components/shared/icon/EnglishFlag.icon";
-import { FrenchFlagIcon } from "@/components/shared/icon/FrenchFlag.Icon";
-import { SpinnerIcon } from "@/components/shared/icon/Spinner.Icon";
 import { CiLink } from "react-icons/ci";
 import {
     FaDownload,
@@ -21,6 +18,9 @@ import { IoMdArrowDropright, IoMdCloseCircle } from "react-icons/io";
 import { LuChevronsUpDown } from "react-icons/lu";
 import { MdEmail, MdOutlineMenu } from "react-icons/md";
 import { RiInstagramFill } from "react-icons/ri";
+import { EnglishFlagIcon } from "@/components/shared/icon/EnglishFlag.icon";
+import { FrenchFlagIcon } from "@/components/shared/icon/FrenchFlag.Icon";
+import { SpinnerIcon } from "@/components/shared/icon/Spinner.Icon";
 
 export const IconDownload = FaDownload;
 export const IconGithub = FaGithub;
