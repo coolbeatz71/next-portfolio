@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { AboutMe } from "@/components/layout/about-me/AboutMe";
 import { Companies } from "@/components/layout/companies/Companies";
 import { Experiences } from "@/components/layout/experiences/Experiences";
@@ -10,8 +11,6 @@ import { Skills } from "@/components/layout/skills/Skills";
 import { BackgroundBeams } from "@/components/shared/background/Beams.Background";
 import { BackgroundGradient } from "@/components/shared/background/Gradient.Background";
 import { GridBackground } from "@/components/shared/background/Grid.Background";
-
-import { Fragment } from "react";
 
 export function HomeContainer() {
     return (
