@@ -1,5 +1,5 @@
-import { aboutMeImagesList } from "@/config/AboutMe.Images";
 import dynamic from "next/dynamic";
+import { aboutMeImagesList } from "@/config/AboutMe.Images";
 
 export const DynamicParallaxScroll = dynamic(
     async () => {
