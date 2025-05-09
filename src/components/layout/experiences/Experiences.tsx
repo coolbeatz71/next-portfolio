@@ -1,5 +1,6 @@
 import { useState } from "react";
-
+import { useTranslation } from "react-i18next";
+import { useMedia } from "react-use";
 import { MovingBorderButton } from "@/components/shared/buttons/moving-border/MovingBorder.Button";
 import { Drawer } from "@/components/shared/popup/drawer/Drawer";
 import { SectionHeader } from "@/components/shared/section-header/SectionHeader";
@@ -15,8 +16,6 @@ import {
 } from "@/config/ThemeStyle";
 import { experienceTimeline } from "@/config/WorkExperience";
 import { cn } from "@/helpers/mergeClassName";
-import { useTranslation } from "react-i18next";
-import { useMedia } from "react-use";
 
 export function Experiences() {
     const { t } = useTranslation();
