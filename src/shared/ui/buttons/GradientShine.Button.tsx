@@ -5,6 +5,21 @@ export interface GradientShineButtonProps {
     className?: string;
     children: ReactNode;
 }
+/**
+ * Gradient shine button component.
+ *
+ * @component
+ *
+ * @description
+ * Renders a button with an indigo-to-blue gradient background and an animated
+ * pink shine effect that rotates on hover.
+ *
+ * @param {GradientShineButtonProps} props - Component props
+ * @param {ReactNode} props.children - Button label content
+ * @param {string} [props.className] - Additional class names for the button
+ *
+ * @returns The gradient shine button element
+ */
 export function GradientShineButton({
     children,
     className
