@@ -5,6 +5,20 @@ export interface GridPatternBackgroundProps {
     size?: number;
 }
 
+/**
+ * Grid pattern background component.
+ *
+ * @component
+ *
+ * @description
+ * Renders a randomized SVG grid pattern overlay with a radial gradient mask.
+ * Randomly highlights 10 grid squares on each render.
+ *
+ * @param {GridPatternBackgroundProps} props - Component props
+ * @param {number} [props.size] - Grid cell size in pixels; defaults to 20
+ *
+ * @returns The grid pattern background element
+ */
 function GridPatternBackgroundComponent({ size }: GridPatternBackgroundProps) {
     const pattern: Array<[number, number]> = Array.from(
         { length: 10 },
