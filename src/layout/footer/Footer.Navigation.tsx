@@ -3,6 +3,17 @@ import { useTranslation } from "react-i18next";
 import { IconLink } from "@/shared/config/icons";
 import { navigationList } from "@/shared/config/navigation";
 
+/**
+ * Footer navigation links component.
+ *
+ * @component
+ *
+ * @description
+ * Renders the site navigation links inside the footer, each prefixed with a link icon
+ * and styled with hover underline and color transitions.
+ *
+ * @returns The footer navigation element
+ */
 export function FooterNavigation() {
     const { t } = useTranslation();
 

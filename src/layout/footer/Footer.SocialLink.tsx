@@ -2,6 +2,17 @@ import NextLink from "next/link";
 import { useTranslation } from "react-i18next";
 import { socialLinksList } from "@/shared/config/social-links";
 
+/**
+ * Footer social links component.
+ *
+ * @component
+ *
+ * @description
+ * Renders a row of social platform icon buttons that open the corresponding profile
+ * pages in a new tab.
+ *
+ * @returns The footer social links element
+ */
 export function FooterSocialLink() {
     const { t } = useTranslation();
 

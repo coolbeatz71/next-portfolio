@@ -1,6 +1,17 @@
 import { useTranslation } from "react-i18next";
 import { IconEmail, IconLocation, IconPhone } from "@/shared/config/icons";
 
+/**
+ * Footer contact info component.
+ *
+ * @component
+ *
+ * @description
+ * Displays the physical address, email, and phone number with clickable links
+ * for the email and phone entries.
+ *
+ * @returns The footer contact info element
+ */
 export function FooterContact() {
     const { t } = useTranslation();
     return (

@@ -26,12 +26,29 @@ const getToastStyle = (background: string) => ({
     borderRadius: "0.35rem"
 });
 
+/**
+ * @interface MessageFormData
+ * @property {string} name - Sender's full name
+ * @property {string} email - Sender's email address
+ * @property {string} message - Message body
+ */
 export interface MessageFormData {
     name: string;
     email: string;
     message: string;
 }
 
+/**
+ * Footer contact message form component.
+ *
+ * @component
+ *
+ * @description
+ * Renders a contact form with name, email, and message fields validated via yup.
+ * On submit it sends the form via EmailJS and shows success or error toast notifications.
+ *
+ * @returns The footer message form element
+ */
 export function FooterMessageForm() {
     const { t } = useTranslation();
     const formRef = useRef<HTMLFormElement>(null);

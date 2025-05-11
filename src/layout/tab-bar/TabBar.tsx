@@ -4,6 +4,13 @@ import { cn } from "@/shared/lib/cn";
 import { NavigationDropdown } from "@/shared/ui/dropdown/navigation/Navigation.Dropdown";
 import { NavigationTabBar } from "./TabBar.Navigation";
 
+/**
+ * @interface TabBarProps
+ * @property {Tabs[]} tabs - Tab definitions including title, context, and content
+ * @property {string} [tabBarClassName] - Additional class names for the desktop tab bar
+ * @property {string} [containerClassName] - Additional class names for the outer container
+ * @property {"skills" | "projects"} context - Used as the motion layoutId namespace
+ */
 interface TabBarProps {
     tabs: Tabs[];
     tabBarClassName?: string;
@@ -11,6 +18,23 @@ interface TabBarProps {
     context: "skills" | "projects";
 }
 
+/**
+ * Tab bar widget.
+ *
+ * @component
+ *
+ * @description
+ * Renders a tabbed navigation control that switches between section content panels.
+ * On mobile it displays a dropdown selector; on desktop it shows an animated tab bar.
+ *
+ * @param {TabBarProps} props - Component props
+ * @param {Tabs[]} props.tabs - Tab definitions including title, context, and content
+ * @param {"skills" | "projects"} props.context - Motion layoutId namespace for the active indicator
+ * @param {string} [props.tabBarClassName] - Additional class names for the desktop tab bar
+ * @param {string} [props.containerClassName] - Additional class names for the outer container
+ *
+ * @returns The tab bar element
+ */
 export function TabBar({
     tabs,
     context,

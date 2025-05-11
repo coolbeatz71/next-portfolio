@@ -1,12 +1,23 @@
 import { useEffect, useState } from "react";
 import { useWindowScroll } from "react-use";
+import { NavigationMenu } from "@/layout/navigation/Navigation.Menu";
 import { RESPONSIVE_CLASSNAME } from "@/shared/config/style";
 import { LanguageDropDown } from "@/shared/ui/dropdown/language/Language.Dropdown";
 import { HamburgerMenuButton } from "@/shared/ui/hamburger-menu/HamburgerMenu.Button";
 import { Logo } from "@/shared/ui/logo/Logo";
 import { ThemeToggle } from "@/shared/ui/theme-toggle/ThemeToggle";
-import { NavigationMenu } from "@/widgets/navigation/Navigation.Menu";
 
+/**
+ * Top navigation bar widget.
+ *
+ * @component
+ *
+ * @description
+ * Renders the sticky top navigation bar with logo, navigation menu, language switcher,
+ * and theme toggle. Applies a frosted glass backdrop when the user scrolls past 20px.
+ *
+ * @returns The navigation bar element
+ */
 export function Navigation() {
     const { y } = useWindowScroll();
     const [scrollY, setScrollY] = useState(0);

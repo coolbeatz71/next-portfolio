@@ -1,13 +1,33 @@
+import { NavigationMenu } from "@/layout/navigation/Navigation.Menu";
 import { Logo } from "@/shared/ui/logo/Logo";
 import { SideMenuDrawer } from "@/shared/ui/popup/drawer/SideMenu.Drawer";
-import { NavigationMenu } from "@/widgets/navigation/Navigation.Menu";
 import { SideMenuProfile } from "./SideMenu.Profile";
 
+/**
+ * @interface SideMenuProps
+ * @property {boolean} isOpen - Whether the side menu drawer is open
+ * @property {() => void} toggleDrawer - Callback to toggle the drawer open/closed
+ */
 export interface SideMenuProps {
     isOpen: boolean;
     toggleDrawer: () => void;
 }
 
+/**
+ * Side menu widget.
+ *
+ * @component
+ *
+ * @description
+ * Renders a slide-in drawer from the left containing the site logo, user profile
+ * block, and full navigation menu for mobile and tablet viewports.
+ *
+ * @param {SideMenuProps} props - Component props
+ * @param {boolean} props.isOpen - Whether the side menu drawer is open
+ * @param {() => void} props.toggleDrawer - Callback to toggle the drawer open/closed
+ *
+ * @returns The side menu drawer element
+ */
 export function SideMenu({ isOpen, toggleDrawer }: SideMenuProps) {
     return (
         <SideMenuDrawer

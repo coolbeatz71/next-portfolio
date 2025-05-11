@@ -7,6 +7,18 @@ import { FooterMessageForm } from "./Footer.Message.Form";
 import { FooterNavigation } from "./Footer.Navigation";
 import { FooterSocialLink } from "./Footer.SocialLink";
 
+/**
+ * Footer widget.
+ *
+ * @component
+ *
+ * @description
+ * Renders the full-width site footer with a two-column layout: contact info, navigation
+ * links, and social links on the left; a message form on the right. Includes a copyright
+ * bar at the bottom, wrapped in a scroll reveal animation.
+ *
+ * @returns The footer element
+ */
 export function Footer() {
     return (
         <footer

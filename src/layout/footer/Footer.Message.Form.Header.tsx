@@ -1,6 +1,17 @@
 import { Fragment } from "react";
 import { useTranslation } from "react-i18next";
 
+/**
+ * Message form header component.
+ *
+ * @component
+ *
+ * @description
+ * Renders the heading and subtitle for the footer contact form, inviting
+ * visitors to get in touch.
+ *
+ * @returns The message form header element
+ */
 export function FormHeader() {
     const { t } = useTranslation();
 

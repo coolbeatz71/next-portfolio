@@ -6,11 +6,32 @@ import { cn } from "@/shared/lib/cn";
 import { getActiveSection } from "@/shared/lib/getActiveSection";
 import { throttle } from "@/shared/lib/throttle";
 
+/**
+ * @interface NavigationMenuProps
+ * @property {string} [className] - Additional class names for each nav link
+ * @property {() => void} [onClick] - Callback fired when a nav link is clicked
+ */
 export interface NavigationMenuProps {
     className?: string;
     onClick?: () => void;
 }
 
+/**
+ * Navigation menu component.
+ *
+ * @component
+ *
+ * @description
+ * Renders a list of navigation links that highlight the active section based on scroll
+ * position. Tracks the viewport via throttled scroll and hashchange events and updates
+ * the URL hash accordingly.
+ *
+ * @param {NavigationMenuProps} props - Component props
+ * @param {string} [props.className] - Additional class names for each nav link
+ * @param {() => void} [props.onClick] - Callback fired when a nav link is clicked
+ *
+ * @returns The navigation menu element
+ */
 function NavigationMenuComponent({ onClick, className }: NavigationMenuProps) {
     const { t } = useTranslation();
     const [activeLink, setActiveLink] = useState(

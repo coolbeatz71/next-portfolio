@@ -5,14 +5,26 @@ import { Experiences } from "@/features/experience/ui/Experiences";
 import { Hero } from "@/features/hero/ui/Hero";
 import { Projects } from "@/features/projects/ui/Projects";
 import { Skills } from "@/features/skills/ui/Skills";
+import { Footer } from "@/layout/footer/Footer";
+import { Navigation } from "@/layout/navigation/Navigation";
 import { BackgroundBeams } from "@/shared/ui/background/Beams.Background";
 import { BackgroundGradient } from "@/shared/ui/background/Gradient.Background";
 import { GridBackground } from "@/shared/ui/background/Grid.Background";
 import { DownloadResumeFixedButton } from "@/shared/ui/buttons/DownloadResume.Fixed.Button";
-import { Footer } from "@/widgets/footer/Footer";
-import { Navigation } from "@/widgets/navigation/Navigation";
 
-export function HomeContainer() {
+/**
+ * Main page container component.
+ *
+ * @component
+ *
+ * @description
+ * Composes the full portfolio page by assembling all feature sections and widgets
+ * in order: background layers, navigation, hero, companies, about, experience,
+ * projects, skills, a fixed resume download button, and the footer.
+ *
+ * @returns The main page container element
+ */
+export function MainContainer() {
     return (
         <Fragment>
             <Fragment>

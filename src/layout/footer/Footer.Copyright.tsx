@@ -17,6 +17,17 @@ const Link = ({ href, children }: LinkProps) => (
     </a>
 );
 
+/**
+ * Footer copyright bar component.
+ *
+ * @component
+ *
+ * @description
+ * Renders the copyright line with the current year, owner name, and links to
+ * Tailwind CSS and Aceternity UI.
+ *
+ * @returns The footer copyright element
+ */
 export function FooterCopyright() {
     const { t } = useTranslation();
     return (
