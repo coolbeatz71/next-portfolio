@@ -36,6 +36,22 @@ const animationVariants: Variants = {
     })
 };
 
+/**
+ * Project card component.
+ *
+ * @component
+ *
+ * @description
+ * Displays a project entry with a thumbnail image and content summary.
+ * Animates in on mount with a staggered delay based on its index.
+ * Opens a detail modal when the image or action button is clicked.
+ *
+ * @param {ProjectCardProps} props - Component props
+ * @param {number} props.index - Card position in the list, used for staggered animation
+ * @param {ProjectByStack} props.project - Project data to display
+ *
+ * @returns The project card element
+ */
 function ProjectCardComponent({ project, index }: ProjectCardProps) {
     const { t } = useTranslation();
     const [isOpen, setIsOpen] = useState(false);
