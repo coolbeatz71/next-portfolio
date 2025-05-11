@@ -11,6 +11,23 @@ export interface ImageColumnProps {
     translate: MotionValue<number>;
 }
 
+/**
+ * Parallax scroll image column component.
+ *
+ * @component
+ *
+ * @description
+ * Renders a vertical stack of images that translate along the Y-axis
+ * based on a motion value, creating a parallax effect when paired with scroll.
+ *
+ * @param {ImageColumnProps} props - Component props
+ * @param {AboutMeImage[]} props.images - Images to display in this column
+ * @param {MotionValue<number>} props.translate - Motion value controlling vertical translation
+ * @param {string} props.columnKey - Unique key prefix used for React list keys
+ * @param {number} props.imageHeight - Target display height of each image in pixels
+ *
+ * @returns The animated image column element
+ */
 function ImageColumnComponent({
     images,
     translate,
