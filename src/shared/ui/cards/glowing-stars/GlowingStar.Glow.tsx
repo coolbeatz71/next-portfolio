@@ -5,6 +5,20 @@ export interface GlowProps {
     delay: number;
 }
 
+/**
+ * Glow dot component.
+ *
+ * @component
+ *
+ * @description
+ * Renders a small blurred cyan dot with a pink shadow that fades in and out,
+ * used to simulate a glowing effect on individual stars.
+ *
+ * @param {GlowProps} props - Component props
+ * @param {number} props.delay - Animation delay in seconds before the glow appears
+ *
+ * @returns The glow dot element
+ */
 function GlowComponent({ delay }: GlowProps) {
     return (
         <motion.div
