@@ -26,6 +26,21 @@ const Link = ({ href, isVisible, children }: LinkProps) =>
         <div className="hidden" />
     );
 
+/**
+ * Project modal content component.
+ *
+ * @component
+ *
+ * @description
+ * Renders the full detail view of a project inside a modal.
+ * Displays an image slider or a single preview image, description, role, tech stack badges,
+ * and optional source code or live link buttons.
+ *
+ * @param {ProjectModalProps} props - Component props
+ * @param {ProjectByStack} props.project - Project data to render in the modal
+ *
+ * @returns The project modal content element
+ */
 export function ProjectModal({ project }: ProjectModalProps) {
     const { t } = useTranslation();
     const hasLinks = project.hasLiveLink || project.hasSourceCode;
