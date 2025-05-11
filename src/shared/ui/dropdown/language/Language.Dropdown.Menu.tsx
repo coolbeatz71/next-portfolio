@@ -5,6 +5,21 @@ export interface LanguageDropdownMenuProps {
     updateLanguage: (lang: string) => void;
 }
 
+/**
+ * Language dropdown menu component.
+ *
+ * @component
+ *
+ * @description
+ * Renders the list of selectable language options inside the language dropdown.
+ * Each item shows a flag icon and the language name.
+ *
+ * @param {LanguageDropdownMenuProps} props - Component props
+ * @param {"top" | "bottom"} props.placement - Controls whether the menu opens above or below the trigger
+ * @param {(lang: string) => void} props.updateLanguage - Callback fired with the selected language code
+ *
+ * @returns The language dropdown menu element
+ */
 export function LanguageDropdownMenu({
     placement,
     updateLanguage
