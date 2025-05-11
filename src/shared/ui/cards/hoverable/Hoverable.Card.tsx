@@ -5,6 +5,21 @@ export interface HoverableCardProps {
     title: string;
 }
 
+/**
+ * Hoverable card component.
+ *
+ * @component
+ *
+ * @description
+ * Renders a bordered card displaying a background-image icon.
+ * The icon is desaturated by default and becomes full color on hover.
+ *
+ * @param {HoverableCardProps} props - Component props
+ * @param {string} props.icon - CSS background-image class for the icon
+ * @param {string} props.title - Accessible title for the card
+ *
+ * @returns The hoverable card element
+ */
 export function HoverableCard({ icon }: HoverableCardProps) {
     return (
         <div className="relative group block p-3 md:p-2 lg:p-3.5 h-20 w-full border border-slate-300 dark:border-slate-700 rounded-lg cursor-pointer">
