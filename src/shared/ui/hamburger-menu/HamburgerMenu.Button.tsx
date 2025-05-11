@@ -1,7 +1,17 @@
 import { Fragment, useState } from "react";
+import { SideMenu } from "@/layout/side-menu/SideMenu";
 import { IconMenu } from "@/shared/config/icons";
-import { SideMenu } from "@/widgets/side-menu/SideMenu";
 
+/**
+ * Hamburger menu button component.
+ *
+ * @component
+ *
+ * @description
+ * Renders a toggle button that opens and closes the mobile side menu drawer.
+ *
+ * @returns The hamburger menu button and side menu drawer
+ */
 export function HamburgerMenuButton() {
     const [isOpen, setIsOpen] = useState(false);
 
