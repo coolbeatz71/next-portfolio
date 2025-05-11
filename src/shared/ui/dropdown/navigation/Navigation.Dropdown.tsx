@@ -13,6 +13,24 @@ export interface NavigationDropdownProps {
     setActiveTabIndex: (index: number) => void;
 }
 
+/**
+ * Navigation dropdown component.
+ *
+ * @component
+ *
+ * @description
+ * Renders a tab selector as a dropdown button, used on mobile to switch between content sections.
+ * Displays the currently active tab and opens a menu on click.
+ * Closes automatically when clicking outside.
+ *
+ * @param {NavigationDropdownProps} props - Component props
+ * @param {Tabs[]} props.tabs - List of tab options to display in the dropdown
+ * @param {number} props.activeTabIndex - Index of the currently selected tab
+ * @param {(index: number) => void} props.setActiveTabIndex - Callback to update the active tab
+ * @param {string} [props.className] - Additional class names for the container
+ *
+ * @returns The navigation dropdown element
+ */
 export function NavigationDropdown({
     tabs,
     className,
