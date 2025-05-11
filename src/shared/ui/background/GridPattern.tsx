@@ -8,6 +8,23 @@ interface GridPatternProps extends SVGProps<SVGSVGElement> {
     squares?: Array<[number, number]>;
 }
 
+/**
+ * Grid pattern SVG component.
+ *
+ * @component
+ *
+ * @description
+ * Renders an SVG tiled grid pattern with optional highlighted squares at specific grid coordinates.
+ *
+ * @param {GridPatternProps} props - Component props
+ * @param {number} props.width - Width of each grid cell in pixels
+ * @param {number} props.height - Height of each grid cell in pixels
+ * @param {string | number} props.x - X offset of the pattern origin
+ * @param {string | number} props.y - Y offset of the pattern origin
+ * @param {Array<[number, number]>} [props.squares] - Grid coordinates of highlighted squares
+ *
+ * @returns The SVG grid pattern element
+ */
 export function GridPattern({
     width,
     height,
