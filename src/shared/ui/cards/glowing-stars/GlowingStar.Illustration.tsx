@@ -9,6 +9,22 @@ export interface IllustrationProps {
     mouseEnter: boolean;
 }
 
+/**
+ * Glowing stars illustration component.
+ *
+ * @component
+ *
+ * @description
+ * Renders a grid of stars that randomly glow on an interval.
+ * When the mouse enters the parent card, all stars glow simultaneously.
+ *
+ * @param {IllustrationProps} props - Component props
+ * @param {boolean} props.mouseEnter - Whether the parent card is hovered
+ * @param {number} [props.stars] - Total number of stars in the grid; defaults to 16
+ * @param {number} [props.columns] - Number of grid columns; defaults to 4
+ *
+ * @returns The glowing stars illustration element
+ */
 function IllustrationComponent({
     mouseEnter,
     stars = 16,
