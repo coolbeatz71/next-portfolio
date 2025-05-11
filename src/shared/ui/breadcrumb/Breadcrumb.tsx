@@ -4,6 +4,19 @@ export interface BreadcrumbProps {
     labels: string[];
 }
 
+/**
+ * Breadcrumb navigation component.
+ *
+ * @component
+ *
+ * @description
+ * Renders an ordered list of breadcrumb labels separated by arrow icons.
+ *
+ * @param {BreadcrumbProps} props - Component props
+ * @param {string[]} props.labels - Ordered list of breadcrumb label strings
+ *
+ * @returns The breadcrumb navigation element
+ */
 export function Breadcrumb({ labels }: BreadcrumbProps) {
     return (
         <div className="flex pb-6" aria-label="breadcrumb">
