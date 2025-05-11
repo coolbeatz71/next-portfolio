@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { Fragment, useEffect, useState } from "react";
-import { HomeContainer } from "@/components/container/home/HomeContainer";
+import { HomeContainer } from "@/widgets/home-page/HomePage";
 
 export default function IndexPage() {
     const [isClient, setIsClient] = useState(false);

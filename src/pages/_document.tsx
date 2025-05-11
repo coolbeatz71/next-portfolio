@@ -1,7 +1,6 @@
 import { Head, Html, Main, NextScript } from "next/document";
-
-import { CUSTOM_SCROLLBAR } from "@/config/ThemeStyle";
-import { cn } from "@/helpers/mergeClassName";
+import { CUSTOM_SCROLLBAR } from "@/shared/config/style";
+import { cn } from "@/shared/lib/cn";
 
 export default function Document() {
     return (
