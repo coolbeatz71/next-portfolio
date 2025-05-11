@@ -6,6 +6,21 @@ export interface GlowingStarsCardProps {
     className?: string;
     children?: ReactNode;
 }
+/**
+ * Glowing stars card component.
+ *
+ * @component
+ *
+ * @description
+ * A card container that reveals an animated glowing stars illustration on mouse hover.
+ * Adapts its gradient background to light and dark mode.
+ *
+ * @param {GlowingStarsCardProps} props - Component props
+ * @param {ReactNode} [props.children] - Content rendered above the stars illustration
+ * @param {string} [props.className] - Additional class names for the card container
+ *
+ * @returns The glowing stars card element
+ */
 export function GlowingStarsCard({
     className,
     children
