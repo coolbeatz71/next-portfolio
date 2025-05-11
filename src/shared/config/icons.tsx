@@ -22,6 +22,14 @@ import { EnglishFlagIcon } from "@/shared/ui/icon/EnglishFlag.icon";
 import { FrenchFlagIcon } from "@/shared/ui/icon/FrenchFlag.Icon";
 import { SpinnerIcon } from "@/shared/ui/icon/Spinner.Icon";
 
+/**
+ * Centralized icon re-exports.
+ *
+ * @description
+ * Re-exports all third-party react-icons and custom SVG icon components under
+ * consistent `Icon*` names. Import icons from this module rather than directly
+ * from react-icons to keep icon sources easy to swap.
+ */
 export const IconDownload = FaDownload;
 export const IconGithub = FaGithub;
 export const IconLinkedIn = FaLinkedin;
