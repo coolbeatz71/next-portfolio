@@ -1,4 +1,17 @@
-export const devToolsLogoList = [
+/**
+ * @interface IDevToolLogo
+ * @property {string} className - Tailwind classes for the logo card element
+ * @property {string} containerClassName - Tailwind grid placement classes for the container
+ * @property {string} iconName - Tailwind background-image class for the technology icon
+ */
+export interface IDevToolLogo {
+    className: string;
+    containerClassName: string;
+    iconName: string;
+}
+
+/** Dev tool logos rendered in the hero badge grid. */
+export const devToolsLogoList: IDevToolLogo[] = [
     {
         className: "w-16 h-16 lg:w-20 lg:h-20",
         containerClassName: "col-start-2 row-start-1",
