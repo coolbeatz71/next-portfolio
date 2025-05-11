@@ -10,6 +10,22 @@ export interface ParallaxScrollProps {
     images: AboutMeImage[];
 }
 
+/**
+ * Parallax scroll component.
+ *
+ * @component
+ *
+ * @description
+ * Displays a two-column image grid where each column scrolls at different speeds
+ * based on the page scroll position. Images are randomly selected every 5 seconds
+ * without repeating the previous set.
+ *
+ * @param {ParallaxScrollProps} props - Component props
+ * @param {AboutMeImage[]} props.images - Full list of images to randomly pick from
+ * @param {string} [props.className] - Additional class names for the outer container
+ *
+ * @returns The parallax scroll image grid element
+ */
 export function ParallaxScroll({ images, className }: ParallaxScrollProps) {
     const { scrollYProgress } = useScroll();
     const cubicEase = cubicBezier(0.5, 0, 0.2, 1);
