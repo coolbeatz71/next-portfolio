@@ -1,6 +1,14 @@
 import type { AboutMeImage } from "@/features/about/data/about.images";
 
-// Fisher-Yates algorithm to shuffle images and get random images
+/**
+ * Returns a random selection of images, avoiding repetition from the previous set.
+ * Uses the Fisher-Yates shuffle algorithm on images not shown in the previous batch.
+ *
+ * @param images - The full list of available images to pick from
+ * @param count - How many images to return
+ * @param prevImages - Images shown in the previous render, to avoid repeating them
+ * @returns An array of `count` randomly selected images
+ */
 export function getRandomImages(
     images: AboutMeImage[],
     count: number,
