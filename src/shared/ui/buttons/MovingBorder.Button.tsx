@@ -12,6 +12,26 @@ interface MovingBorderButton extends HTMLAttributes<HTMLButtonElement> {
     containerClassName?: string;
 }
 
+/**
+ * Moving border button component.
+ *
+ * @component
+ *
+ * @description
+ * Renders a button with an animated indigo gradient that travels around the border.
+ * Supports rendering as any HTML element via the `as` prop.
+ *
+ * @param {MovingBorderButton} props - Component props
+ * @param {ReactNode} props.children - Button label content
+ * @param {ElementType} [props.as] - HTML element to render as; defaults to "button"
+ * @param {string} [props.borderRadius] - Border radius applied to the container; defaults to "0.65rem"
+ * @param {number} [props.duration] - Duration of the border animation in milliseconds
+ * @param {string} [props.className] - Additional class names for the inner content area
+ * @param {string} [props.containerClassName] - Additional class names for the outer container
+ * @param {string} [props.borderClassName] - Additional class names for the moving border element
+ *
+ * @returns The moving border button element
+ */
 export function MovingBorderButton({
     borderRadius = "0.65rem",
     children,
