@@ -21,6 +21,23 @@ type FormFieldProps = {
     | ({ as: "textarea" } & TextareaHTMLAttributes<HTMLTextAreaElement>)
 );
 
+/**
+ * Form field component.
+ *
+ * @component
+ *
+ * @description
+ * A floating-label form field that renders either an input or a textarea.
+ * Integrates with react-hook-form via FormContext and shows inline validation errors.
+ *
+ * @param {FormFieldProps} props - Component props
+ * @param {string} props.name - Field name used for registration and error lookup
+ * @param {string} props.label - Floating label text shown above the field
+ * @param {"input" | "textarea"} [props.as] - Element type to render; defaults to "input"
+ * @param {string} [props.className] - Additional class names for the input or textarea element
+ *
+ * @returns The form field element with label and optional error message
+ */
 export function FormField({
     name,
     label,
