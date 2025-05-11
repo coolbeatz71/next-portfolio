@@ -25,6 +25,17 @@ const gradients: { transition: Transition; y2End: string }[] = paths.map(
     })
 );
 
+/**
+ * Background beams component.
+ *
+ * @component
+ *
+ * @description
+ * Renders animated SVG beam paths with color-shifting linear gradients.
+ * Each beam animates independently with a randomized duration and delay.
+ *
+ * @returns The animated beams background element
+ */
 function BackgroundBeam() {
     return (
         <div className="absolute z-0 h-full w-full inset-0 mask-size-[40px] mask-no-repeat flex items-center justify-center">
