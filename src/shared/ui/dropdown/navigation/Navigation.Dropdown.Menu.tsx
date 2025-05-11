@@ -7,6 +7,22 @@ export interface NavigationDropdownMenuProps {
     onSelect: (index: number) => void;
 }
 
+/**
+ * Navigation dropdown menu component.
+ *
+ * @component
+ *
+ * @description
+ * Renders the list of tab options inside the navigation dropdown.
+ * Highlights the currently active tab and calls the parent handler on selection.
+ *
+ * @param {NavigationDropdownMenuProps} props - Component props
+ * @param {Tabs[]} props.tabs - List of tab options to render
+ * @param {number} props.activeTabIndex - Index of the currently selected tab
+ * @param {(index: number) => void} props.onSelect - Callback fired with the selected tab index
+ *
+ * @returns The navigation dropdown menu element
+ */
 export function NavigationDropdownMenu({
     tabs,
     onSelect,
