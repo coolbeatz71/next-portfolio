@@ -8,6 +8,22 @@ export interface ScrollRevealProps {
     direction?: "up" | "down" | "left" | "right";
 }
 
+/**
+ * Scroll reveal component.
+ *
+ * @component
+ *
+ * @description
+ * Wraps children in a visibility-triggered reveal animation.
+ * The content fades and slides in from the specified direction when it enters the viewport.
+ *
+ * @param {ScrollRevealProps} props - Component props
+ * @param {ReactNode} props.children - Content to animate on scroll
+ * @param {"up" | "down" | "left" | "right"} [props.direction] - Slide-in direction; defaults to "up"
+ * @param {string} [props.className] - Additional class names for the inner content wrapper
+ *
+ * @returns The scroll reveal wrapper element
+ */
 export function ScrollReveal({
     children,
     className,
