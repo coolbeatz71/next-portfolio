@@ -14,6 +14,21 @@ export interface LanguageDropDownProps {
     placement: "top" | "bottom";
 }
 
+/**
+ * Language dropdown component.
+ *
+ * @component
+ *
+ * @description
+ * Renders a toggle button that opens a language selection menu.
+ * Syncs the selected language with i18next, dayjs, and localStorage on change.
+ * Closes automatically when clicking outside.
+ *
+ * @param {LanguageDropDownProps} props - Component props
+ * @param {"top" | "bottom"} props.placement - Direction the dropdown menu opens
+ *
+ * @returns The language dropdown element
+ */
 function LanguageDropDownComponent({ placement }: LanguageDropDownProps) {
     const ref = useRef<HTMLDivElement>(null);
     const { i18n } = useTranslation();
