@@ -6,6 +6,21 @@ export interface LitUpBorderButtonProps {
     children: ReactNode;
 }
 
+/**
+ * Lit-up border button component.
+ *
+ * @component
+ *
+ * @description
+ * Renders a button with a glowing indigo-to-purple gradient border.
+ * The inner content transitions to transparent on hover, revealing the gradient background.
+ *
+ * @param {LitUpBorderButtonProps} props - Component props
+ * @param {ReactNode} props.children - Button label content
+ * @param {string} [props.className] - Additional class names for the outer wrapper
+ *
+ * @returns The lit-up border button element
+ */
 function LitUpBorderButtonComponent({
     children,
     className
