@@ -11,6 +11,22 @@ export interface ProjectImageSliderProps {
     imagePlaceholder: string;
 }
 
+/**
+ * Project image slider component.
+ *
+ * @component
+ *
+ * @description
+ * Renders an animated image carousel for a project's screenshots.
+ * Supports auto-play with a 5-second interval, pause on hover, zoom on click,
+ * and staggered card layout with responsive sizing.
+ *
+ * @param {ProjectImageSliderProps} props - Component props
+ * @param {Image[]} props.images - List of project images; the first is used as the blurred background
+ * @param {string} props.imagePlaceholder - Base64 blur placeholder for the background image
+ *
+ * @returns The project image slider element
+ */
 export function ProjectImageSlider({
     images,
     imagePlaceholder
