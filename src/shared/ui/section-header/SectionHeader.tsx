@@ -8,6 +8,21 @@ export interface SectionHeaderProps {
     className?: string;
 }
 
+/**
+ * Section header component.
+ *
+ * @component
+ *
+ * @description
+ * Renders a centered section heading with a title, subtitle, and a dot background decoration.
+ *
+ * @param {SectionHeaderProps} props - Component props
+ * @param {string} props.title - Main heading text displayed as an h2
+ * @param {string} props.subtitle - Supporting description rendered below the title
+ * @param {string} [props.className] - Additional class names for the text container
+ *
+ * @returns The section header element
+ */
 function SectionHeaderComponent({
     title,
     subtitle,
