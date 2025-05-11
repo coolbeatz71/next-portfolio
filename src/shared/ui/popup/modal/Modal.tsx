@@ -16,6 +16,24 @@ export interface ModalProps {
     onToggle: () => void;
 }
 
+/**
+ * Modal component.
+ *
+ * @component
+ *
+ * @description
+ * Renders a centered dialog portal over the page content with a blurred backdrop.
+ * Locks body scroll while open. Returns null when `isOpen` is false.
+ *
+ * @param {ModalProps} props - Component props
+ * @param {ReactNode} props.header - Content rendered in the sticky modal header
+ * @param {ReactNode} props.children - Content rendered inside the modal body
+ * @param {boolean} props.isOpen - Whether the modal is currently visible
+ * @param {() => void} props.onToggle - Handler to open or close the modal
+ * @param {string} [props.className] - Additional class names for the modal panel
+ *
+ * @returns The modal portal element, or null when closed
+ */
 export function Modal({
     header,
     isOpen,
