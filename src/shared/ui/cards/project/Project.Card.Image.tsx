@@ -7,6 +7,24 @@ export interface ProjectImageProps {
     onClick: () => void;
 }
 
+/**
+ * Project card image component.
+ *
+ * @component
+ *
+ * @description
+ * Renders the thumbnail image of a project card.
+ * Shows a dark gradient overlay on hover and scales the image slightly.
+ * Clicking the image triggers the parent modal.
+ *
+ * @param {ProjectImageProps} props - Component props
+ * @param {string} props.src - Image source URL
+ * @param {string} props.alt - Accessible alt text for the image
+ * @param {string} props.blurDataURL - Base64 blur placeholder shown while the image loads
+ * @param {() => void} props.onClick - Handler called when the image is clicked
+ *
+ * @returns The project card image element
+ */
 export function ProjectCardImage({
     src,
     alt,
