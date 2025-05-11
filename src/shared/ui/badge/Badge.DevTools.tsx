@@ -6,6 +6,21 @@ export interface BadgeDevToolsProps {
     className?: string;
 }
 
+/**
+ * Dev tools badge component.
+ *
+ * @component
+ *
+ * @description
+ * Displays a tool or technology icon inside a glowing stars card.
+ * The icon bounces on hover as a visual cue.
+ *
+ * @param {BadgeDevToolsProps} props - Component props
+ * @param {string} props.iconName - CSS background-image class for the icon
+ * @param {string} [props.className] - Additional class names for the card container
+ *
+ * @returns The dev tools badge element
+ */
 export function BadgeDevTools({ iconName, className }: BadgeDevToolsProps) {
     return (
         <GlowingStarsCard
