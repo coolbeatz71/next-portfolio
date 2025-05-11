@@ -7,6 +7,21 @@ export interface StarProps {
     delay: number;
 }
 
+/**
+ * Individual star component.
+ *
+ * @component
+ *
+ * @description
+ * Renders a single animated star dot that scales and changes color when glowing.
+ * The glow color adapts to the current light or dark theme.
+ *
+ * @param {StarProps} props - Component props
+ * @param {boolean} props.isGlowing - Whether the star is currently in its glowing state
+ * @param {number} props.delay - Animation delay in seconds
+ *
+ * @returns The star dot element
+ */
 function StarComponent({ delay, isGlowing }: StarProps) {
     const { resolvedTheme } = useTheme();
 
