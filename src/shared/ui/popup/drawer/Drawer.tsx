@@ -29,6 +29,28 @@ const Backdrop = memo(({ isOpen }: { isOpen: boolean }) => (
     />
 ));
 
+/**
+ * Drawer component.
+ *
+ * @component
+ *
+ * @description
+ * Renders a slide-in panel from the left or right edge of the screen.
+ * Locks body scroll while open and shows a blurred backdrop.
+ * Includes a sticky header, close button, scrollable content area, and optional footer.
+ *
+ * @param {DrawerProps} props - Component props
+ * @param {ReactNode} props.header - Content rendered in the sticky header
+ * @param {ReactNode} props.children - Main content inside the drawer
+ * @param {boolean} props.isOpen - Whether the drawer is currently open
+ * @param {() => void} props.onToggle - Handler to open or close the drawer
+ * @param {ReactNode} [props.footer] - Optional content rendered in the footer
+ * @param {string} [props.width] - CSS width of the drawer panel; defaults to "50vw"
+ * @param {"right" | "left"} [props.position] - Side the drawer slides in from; defaults to "right"
+ * @param {string} [props.className] - Additional class names for the outer container
+ *
+ * @returns The drawer panel element
+ */
 export function Drawer({
     header,
     footer,
