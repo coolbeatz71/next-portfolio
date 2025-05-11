@@ -10,6 +10,26 @@ interface OutlineButton extends HTMLAttributes<HTMLButtonElement> {
     duration?: number;
     className?: string;
 }
+/**
+ * Outline button component.
+ *
+ * @component
+ *
+ * @description
+ * Renders a button with an animated slate border that adapts to light and dark mode.
+ * Supports rendering as any HTML element via the `as` prop.
+ *
+ * @param {OutlineButton} props - Component props
+ * @param {ReactNode} props.children - Button label content
+ * @param {ElementType} [props.as] - HTML element to render as; defaults to "button"
+ * @param {string} [props.borderRadius] - Border radius of the button; defaults to "1rem"
+ * @param {string} [props.className] - Additional class names for the button
+ * @param {string} [props.containerClassName] - Additional class names for the outer container
+ * @param {string} [props.borderClassName] - Additional class names for the border element
+ * @param {number} [props.duration] - Animation duration in milliseconds
+ *
+ * @returns The outline button element
+ */
 export function OutlineButton({
     borderRadius = "1rem",
     children,
