@@ -4,6 +4,12 @@ import { FrenchFlagIcon } from "@/shared/ui/icon/FrenchFlag.Icon";
 
 export const USER_LANG = "lang";
 
+/**
+ * @interface ILanguage
+ * @property {string} code - BCP 47 language code (e.g. `"en"`, `"fr"`)
+ * @property {string} name - Human-readable language name
+ * @property {ReactNode} flag - Flag icon element for the language
+ */
 export interface ILanguage {
     code: string;
     name: string;
