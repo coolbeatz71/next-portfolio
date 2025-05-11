@@ -4,6 +4,20 @@ export interface GridBackgroundProps {
     className?: string;
 }
 
+/**
+ * Grid background component.
+ *
+ * @component
+ *
+ * @description
+ * Renders a grid-pattern background that adapts to light and dark mode,
+ * with a radial gradient mask that fades toward the edges.
+ *
+ * @param {GridBackgroundProps} props - Component props
+ * @param {string} [props.className] - Additional class names for the container
+ *
+ * @returns The grid-pattern background element
+ */
 export function GridBackground({ className }: GridBackgroundProps) {
     return (
         <AbstractBackground
