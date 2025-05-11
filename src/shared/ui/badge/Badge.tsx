@@ -13,6 +13,24 @@ export interface BadgeProps {
     endCountNumber: number;
 }
 
+/**
+ * Animated stat badge component.
+ *
+ * @component
+ *
+ * @description
+ * Displays a count-up number, an icon, and a label inside a hoverable badge card.
+ * Scales up slightly on hover and uses a grid pattern overlay for decoration.
+ *
+ * @param {BadgeProps} props - Component props
+ * @param {ReactNode} props.icon - Icon element displayed on the left
+ * @param {string} props.badgeText - Label text shown next to the count
+ * @param {number} props.endCountNumber - The final number for the count-up animation
+ * @param {string} [props.endCountText] - Optional text appended after the count (e.g. "k")
+ * @param {string} [props.className] - Additional class names for the container
+ *
+ * @returns The stat badge element
+ */
 export function Badge({
     icon,
     badgeText,
