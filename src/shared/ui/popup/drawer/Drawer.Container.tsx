@@ -21,6 +21,24 @@ const getTranslateStyle = (
           : `translateX(-${width})`
 });
 
+/**
+ * Drawer container component.
+ *
+ * @component
+ *
+ * @description
+ * Renders the sliding panel container for the drawer.
+ * Applies a CSS translate transform to animate the panel in or out
+ * depending on the `isOpen` state and the configured `position`.
+ *
+ * @param {DrawerContainerProps} props - Component props
+ * @param {ReactNode} props.children - Content rendered inside the drawer panel
+ * @param {string} props.width - CSS width of the panel (e.g. "50vw")
+ * @param {boolean} props.isOpen - Whether the drawer is currently open
+ * @param {"right" | "left"} props.position - Side the panel slides in from
+ *
+ * @returns The drawer container element
+ */
 function DrawerContainerComponent({
     children,
     width,
