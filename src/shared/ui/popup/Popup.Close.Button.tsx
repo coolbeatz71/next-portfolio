@@ -4,6 +4,20 @@ export interface PopupCloseButtonProps {
     onClick: () => void;
 }
 
+/**
+ * Popup close button component.
+ *
+ * @component
+ *
+ * @description
+ * Renders an icon button positioned at the top-right of a popup to dismiss it.
+ * The icon turns red on hover.
+ *
+ * @param {PopupCloseButtonProps} props - Component props
+ * @param {() => void} props.onClick - Handler called when the close button is clicked
+ *
+ * @returns The close button element
+ */
 export function PopupCloseButton({ onClick }: PopupCloseButtonProps) {
     return (
         <button
