@@ -18,6 +18,27 @@ export interface SideMenuDrawerProps {
     position?: "right" | "left";
 }
 
+/**
+ * Side menu drawer component.
+ *
+ * @component
+ *
+ * @description
+ * Renders a full-height slide-in panel from the left or right edge of the screen.
+ * Used specifically for the mobile navigation side menu.
+ * Locks body scroll while open and renders a backdrop overlay.
+ *
+ * @param {SideMenuDrawerProps} props - Component props
+ * @param {ReactNode} props.header - Content rendered in the sticky header
+ * @param {ReactNode} props.children - Main content inside the drawer
+ * @param {boolean} props.isOpen - Whether the drawer is currently open
+ * @param {() => void} props.onToggle - Handler to open or close the drawer
+ * @param {ReactNode} [props.footer] - Optional content rendered in the footer
+ * @param {"right" | "left"} [props.position] - Side the drawer slides in from; defaults to "right"
+ * @param {string} [props.className] - Additional class names for the aside element
+ *
+ * @returns The side menu drawer element
+ */
 export function SideMenuDrawer({
     header,
     footer,
