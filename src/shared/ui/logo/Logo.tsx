@@ -1,5 +1,15 @@
 import NextLink from "next/link";
 
+/**
+ * Logo component.
+ *
+ * @component
+ *
+ * @description
+ * Renders the site logo as a styled text link ("MJV.") that navigates to the home page.
+ *
+ * @returns The logo link element
+ */
 export function Logo() {
     return (
         <NextLink href="">
