@@ -4,6 +4,19 @@ export interface BadgeSpanProps {
     text: string;
 }
 
+/**
+ * Badge span component.
+ *
+ * @component
+ *
+ * @description
+ * Renders a small inline badge with an indigo border, used to display tech stack labels or tags.
+ *
+ * @param {BadgeSpanProps} props - Component props
+ * @param {string} props.text - The label text to display inside the badge
+ *
+ * @returns The badge span element
+ */
 function BadgeSpanComponent({ text }: BadgeSpanProps) {
     return (
         <span
