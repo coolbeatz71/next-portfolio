@@ -1,3 +1,14 @@
+/**
+ * Returns a throttled version of a function that executes
+ * at most once per `limit` milliseconds.
+ *
+ * @param func - The function to throttle
+ * @param limit - Minimum time in milliseconds between invocations
+ * @returns A throttled wrapper function
+ *
+ * @example
+ * window.addEventListener("scroll", throttle(handleScroll, 200))
+ */
 export function throttle(func: (...args: unknown[]) => void, limit: number) {
     let lastFunc: NodeJS.Timeout;
     let lastRan: number;
