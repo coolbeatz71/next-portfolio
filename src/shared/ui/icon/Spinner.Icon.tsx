@@ -1,3 +1,13 @@
+/**
+ * Spinner icon component.
+ *
+ * @component
+ *
+ * @description
+ * Renders an animated circular SVG spinner, typically used to indicate a loading state.
+ *
+ * @returns The spinner icon SVG element
+ */
 export function SpinnerIcon() {
     return (
         <svg
