@@ -9,6 +9,23 @@ export interface ProjectContentProps {
     project: ProjectByStack;
     translatedDescription: string;
 }
+/**
+ * Project card content component.
+ *
+ * @component
+ *
+ * @description
+ * Renders the text side of a project card, including the name, description,
+ * tech stack badges, and an optional live link button.
+ *
+ * @param {ProjectContentProps} props - Component props
+ * @param {string} props.label - Text label for the live link button
+ * @param {ProjectByStack} props.project - Project data containing name, stack, and links
+ * @param {() => void} props.onClick - Handler called when the card content area is clicked
+ * @param {string} props.translatedDescription - Pre-translated description string
+ *
+ * @returns The project card content element
+ */
 export function ProjectCardContent({
     label,
     project,
