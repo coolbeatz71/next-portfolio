@@ -1,3 +1,8 @@
+/**
+ * @interface INavigationItem
+ * @property {string} label - i18n key for the link label
+ * @property {string} href - Hash or path the link points to
+ */
 export interface INavigationItem {
     label: string;
     href: string;
