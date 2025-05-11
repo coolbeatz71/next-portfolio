@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@import "./fonts.css";
+@import "./animations.css";
+@import "./bg-patterns.css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@plugin 'tailwind-scrollbar' {
+    nocompatible: true;
+    preferredStrategy: "pseudoelements";
+}
+
+@theme {
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --breakpoint-2xl: 1600px;
+
+    --color-medium: #000000;
+    --color-medium_dark: #ffc21e;
+    --color-github: #000000;
+    --color-github_dark: #ffffff;
+    --color-linkedin: #0077b5;
+    --color-youtube: #cd201f;
+    --color-instagram: #c7507c;
+    --color-light: rgb(226 232 240);
+    --color-dark: rgb(30 41 59);
+
+    --brightness-25: 0.25;
+    --brightness-900: 9;
+
+    --background-image-pattern_dark: url("/background/bg-pattern-dark.svg");
+    --background-image-pattern_light: url("/background/bg-pattern-light.svg");
+    --background-image-icon_react: url("/dev-tools/react.svg");
+    --background-image-icon_vue: url("/dev-tools/vue.svg");
+    --background-image-icon_node: url("/dev-tools/node.svg");
+    --background-image-icon_angular: url("/dev-tools/angular.svg");
+    --background-image-icon_flutter: url("/dev-tools/flutter.svg");
+    --background-image-icon_laravel: url("/dev-tools/laravel.svg");
+    --background-image-logo_andela_light: url("/company-logo/andela_light.png");
+    --background-image-logo_ezyagric: url("/company-logo/ezyagric.png");
+    --background-image-logo_exuus_light: url("/company-logo/exuus_light.png");
+    --background-image-logo_codeofafrica_light: url("/company-logo/codeofafrica_light.png");
+    --background-image-logo_alfatier_light: url("/company-logo/alfatier_light.png");
+    --background-image-logo_reconstruction_light: url("/company-logo/reconstruction_light.png");
+    --background-image-logo_theroom_light: url("/company-logo/theroom_light.png");
+    --background-image-logo_bestseller_light: url("/company-logo/bestseller_light.png");
+    --background-image-logo_andela_dark: url("/company-logo/andela_dark.png");
+    --background-image-logo_exuus_dark: url("/company-logo/exuus_dark.png");
+    --background-image-logo_codeofafrica_dark: url("/company-logo/codeofafrica_dark.png");
+    --background-image-logo_alfatier_dark: url("/company-logo/alfatier_dark.png");
+    --background-image-logo_reconstruction_dark: url("/company-logo/reconstruction_dark.png");
+    --background-image-logo_theroom_dark: url("/company-logo/theroom_dark.png");
+    --background-image-logo_bestseller_dark: url("/company-logo/bestseller_dark.png");
+}
+
+@layer base {
+    html,
+    body {
+        font-family: "Montserrat", sans-serif;
+        scroll-behavior: smooth;
+        @apply bg-light dark:bg-dark;
+    }
+
+    button,
+    [role="button"] {
+        cursor: pointer;
+    }
+}
+
+@layer utilities {
+    .text-balance {
+        overflow-wrap: break-word;
+    }
+
+    @supports (text-wrap: balance) {
+        .text-balance {
+            text-wrap: balance;
+        }
+    }
+}
