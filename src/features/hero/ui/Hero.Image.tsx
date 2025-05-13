@@ -4,6 +4,17 @@ import { AnimatedLine } from "@/shared/ui/shapes/AnimatedLine";
 import { AnimatedShape } from "@/shared/ui/shapes/AnimatedShape";
 import { HeroImageBackground } from "./Hero.Image.Background";
 
+/**
+ * Hero image component.
+ *
+ * @component
+ *
+ * @description
+ * Renders the hero profile photo with animated decorative shapes and SVG lines layered around it.
+ * Includes a floating amber circle and two morphing curved lines.
+ *
+ * @returns The hero image element with animated decorations
+ */
 export function HeroImage() {
     const { floatAnimation, transition } = useAnimation();
 
