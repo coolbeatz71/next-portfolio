@@ -5,6 +5,18 @@ import { ScrollReveal } from "@/shared/ui/scroll-reveal/ScrollReveal";
 import { SectionHeader } from "@/shared/ui/section-header/SectionHeader";
 import { CompaniesGrid } from "./Companies.Grid";
 
+/**
+ * Companies section component.
+ *
+ * @component
+ *
+ * @description
+ * Renders the companies/clients section with a two-column layout: a section header
+ * on the left and a hoverable company logo grid on the right, wrapped in a right-direction
+ * scroll reveal animation.
+ *
+ * @returns The companies section element
+ */
 export function Companies() {
     const { t } = useTranslation();
 
