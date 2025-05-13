@@ -1,5 +1,6 @@
 import type { SkillsByStack } from "@/features/skills/data/skills.tabs";
 
+/** Frontend framework and UI library proficiency levels */
 export const devStackFrontend: SkillsByStack[] = [
     {
         title: "NextJS",
