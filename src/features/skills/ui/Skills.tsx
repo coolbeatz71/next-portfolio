@@ -2,12 +2,24 @@ import NextImage from "next/image";
 import { useTranslation } from "react-i18next";
 import { mainStackList } from "@/features/skills/data/skills.main";
 import { devStackTabs } from "@/features/skills/data/skills.tabs";
+import { TabBar } from "@/layout/tab-bar/TabBar";
 import { RESPONSIVE_CLASSNAME } from "@/shared/config/style";
 import { cn } from "@/shared/lib/cn";
 import { ScrollReveal } from "@/shared/ui/scroll-reveal/ScrollReveal";
 import { SectionHeader } from "@/shared/ui/section-header/SectionHeader";
-import { TabBar } from "@/widgets/tab-bar/TabBar";
 
+/**
+ * Skills section component.
+ *
+ * @component
+ *
+ * @description
+ * Renders the skills section featuring a grid of main stack technology icons
+ * and a tabbed view for browsing skills by stack category, wrapped in a scroll
+ * reveal animation.
+ *
+ * @returns The skills section element
+ */
 export function Skills() {
     const { t } = useTranslation();
     const imgClassName = `object-contain transition-all duration-200 ease-in-out 
