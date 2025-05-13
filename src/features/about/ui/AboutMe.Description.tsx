@@ -14,6 +14,17 @@ function Highlight({ children }: HighlightProps) {
     );
 }
 
+/**
+ * About me description component.
+ *
+ * @component
+ *
+ * @description
+ * Renders the personal bio text for the about section, including
+ * a title, subtitle, and multiple paragraphs with highlighted technology names.
+ *
+ * @returns The about me description element
+ */
 export function AboutMeDescription() {
     const { t } = useTranslation();
     const textStyle = "text-neutral-500 dark:text-neutral-400 leading-loose!";
