@@ -4,6 +4,17 @@ import { ScrollReveal } from "@/shared/ui/scroll-reveal/ScrollReveal";
 import { AboutMeDescription } from "./AboutMe.Description";
 import { AboutMeImages } from "./AboutMe.Images";
 
+/**
+ * About me section component.
+ *
+ * @component
+ *
+ * @description
+ * Renders the about section with a rotating photo grid on the left
+ * and a personal description on the right, wrapped in a left-direction scroll reveal.
+ *
+ * @returns The about me section element
+ */
 export function AboutMe() {
     return (
         <ScrollReveal direction="left" className="delay-300">
