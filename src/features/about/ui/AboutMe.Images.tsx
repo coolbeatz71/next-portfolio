@@ -12,6 +12,17 @@ export const DynamicParallaxScroll = dynamic(
     { ssr: false }
 );
 
+/**
+ * About me images component.
+ *
+ * @component
+ *
+ * @description
+ * Renders the parallax scrolling photo grid for the about section.
+ * The ParallaxScroll component is loaded client-side only to avoid SSR issues.
+ *
+ * @returns The about me parallax image grid element
+ */
 export function AboutMeImages() {
     return <DynamicParallaxScroll images={aboutMeImagesList} />;
 }
