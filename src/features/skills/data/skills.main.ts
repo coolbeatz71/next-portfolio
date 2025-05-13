@@ -1,9 +1,16 @@
+/**
+ * @interface MainStackList
+ * @property {string} title - Display name of the technology
+ * @property {string} lightImage - Path to the logo used in light mode
+ * @property {string} darkImage - Path to the logo used in dark mode
+ */
 export interface MainStackList {
     title: string;
     lightImage: string;
     darkImage: string;
 }
 
+/** Core technologies used most frequently across projects */
 export const mainStackList: MainStackList[] = [
     {
         title: "Typescript",
