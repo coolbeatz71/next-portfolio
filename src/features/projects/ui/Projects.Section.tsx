@@ -3,9 +3,28 @@ import { useInView } from "react-intersection-observer";
 import type { ProjectByStack } from "@/features/projects/data/projects.tabs";
 import { ProjectCard } from "@/shared/ui/cards/project/Project.Card";
 
+/**
+ * @interface ProjectSectionProps
+ * @property {ProjectByStack[]} projects - List of projects grouped by tech stack to display
+ */
 export interface ProjectSectionProps {
     projects: ProjectByStack[];
 }
+
+/**
+ * Project section grid component.
+ *
+ * @component
+ *
+ * @description
+ * Renders a responsive grid of project cards with an entrance animation triggered
+ * when the section scrolls into view.
+ *
+ * @param {ProjectSectionProps} props - Component props
+ * @param {ProjectByStack[]} props.projects - List of projects to display in the grid
+ *
+ * @returns The project section grid element
+ */
 export function ProjectSection({ projects }: ProjectSectionProps) {
     const { ref, inView } = useInView({
         triggerOnce: false,
