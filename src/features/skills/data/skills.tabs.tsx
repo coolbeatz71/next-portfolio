@@ -7,6 +7,13 @@ import { devStackLanguages } from "@/features/skills/data/skills.language";
 import { devStackOthers } from "@/features/skills/data/skills.other";
 import { SkillSection } from "@/features/skills/ui/Skills.Section";
 
+/**
+ * @interface SkillsByStack
+ * @property {number} progress - Proficiency level from 0 to 100
+ * @property {string} title - Display name of the technology
+ * @property {string} lightImage - Path to the logo used in light mode
+ * @property {string} darkImage - Path to the logo used in dark mode
+ */
 export interface SkillsByStack {
     progress: number;
     title: string;
@@ -14,6 +21,7 @@ export interface SkillsByStack {
     darkImage: string;
 }
 
+/** Dev stack skills grouped by category, used to populate the tab panels */
 export const devStackTabs: Tabs[] = [
     {
         title: "skills.language",
