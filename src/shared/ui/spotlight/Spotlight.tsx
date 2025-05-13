@@ -5,6 +5,21 @@ export interface SpotlightProps {
     className?: string;
 }
 
+/**
+ * Spotlight component.
+ *
+ * @component
+ *
+ * @description
+ * Renders a large blurred SVG ellipse that creates a dramatic spotlight lighting effect.
+ * Plays an entrance animation on mount and stays pointer-events-none.
+ *
+ * @param {SpotlightProps} props - Component props
+ * @param {string} [props.fill] - Fill color for the ellipse; defaults to "#ca38b7"
+ * @param {string} [props.className] - Additional class names for sizing and positioning
+ *
+ * @returns The spotlight SVG element
+ */
 export function Spotlight({ fill, className }: SpotlightProps) {
     return (
         <svg
