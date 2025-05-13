@@ -5,6 +5,21 @@ export interface TypeWriterProps {
     className?: string;
 }
 
+/**
+ * Typewriter component.
+ *
+ * @component
+ *
+ * @description
+ * Cycles through a list of words with a collapse and expand animation every 5 seconds,
+ * simulating a typewriter effect using CSS width transitions.
+ *
+ * @param {TypeWriterProps} props - Component props
+ * @param {string[]} props.words - List of words to cycle through
+ * @param {string} [props.className] - Additional class names for the outer span
+ *
+ * @returns The typewriter animation element
+ */
 export function TypeWriter({ words, className }: TypeWriterProps) {
     const typeWriterClassName = `
         flex items-center font-bold animate-cursor overflow-hidden 
