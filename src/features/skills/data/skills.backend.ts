@@ -1,5 +1,6 @@
 import type { SkillsByStack } from "@/features/skills/data/skills.tabs";
 
+/** Backend framework proficiency levels */
 export const devStackBackend: SkillsByStack[] = [
     {
         title: "ExpressJS",
