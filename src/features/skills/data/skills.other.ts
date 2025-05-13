@@ -1,5 +1,6 @@
 import type { SkillsByStack } from "@/features/skills/data/skills.tabs";
 
+/** Other technologies and tools of interest beyond core stacks */
 export const devStackOthers: SkillsByStack[] = [
     {
         title: "CircleCI",
