@@ -3,6 +3,11 @@ import { useState } from "react";
 import { cn } from "@/shared/lib/cn";
 import { HoverableCard } from "@/shared/ui/cards/hoverable/Hoverable.Card";
 
+/**
+ * @interface CompaniesGridProps
+ * @property {{ title: string; icon: string }[]} items - List of company entries with name and logo URL
+ * @property {string} [className] - Additional class names for the grid container
+ */
 export interface CompaniesGridProps {
     items: {
         title: string;
@@ -10,6 +15,23 @@ export interface CompaniesGridProps {
     }[];
     className?: string;
 }
+
+/**
+ * Companies logo grid component.
+ *
+ * @component
+ *
+ * @description
+ * Renders a responsive grid of company logos as hoverable cards. Each card shows
+ * an animated background highlight on hover using a shared layoutId for smooth
+ * cross-card transitions.
+ *
+ * @param {CompaniesGridProps} props - Component props
+ * @param {{ title: string; icon: string }[]} props.items - Company logo entries to display
+ * @param {string} [props.className] - Additional class names for the grid container
+ *
+ * @returns The companies logo grid element
+ */
 export function CompaniesGrid({ items, className }: CompaniesGridProps) {
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
