@@ -6,6 +6,17 @@ import { GradientShineButton } from "@/shared/ui/buttons/GradientShine.Button";
 import { SocialLinks } from "@/shared/ui/social-links/SocialLinks";
 import { TypeWriter } from "@/shared/ui/type-writer/TypeWriter";
 
+/**
+ * Hero intro section component.
+ *
+ * @component
+ *
+ * @description
+ * Renders the left side of the hero section with social links, animated role title,
+ * tech stack breadcrumb, and a resume download button.
+ *
+ * @returns The hero intro section element
+ */
 export function HeroIntroSection() {
     const { t } = useTranslation();
 
