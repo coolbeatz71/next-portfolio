@@ -3,6 +3,20 @@ import { useEffect, useRef, useState } from "react";
 import type { TimelineEntry } from "@/features/experience/data/experience.data";
 import { IconGlobe } from "@/shared/config/icons";
 
+/**
+ * Timeline component.
+ *
+ * @component
+ *
+ * @description
+ * Renders a vertical timeline of experience entries with sticky left-side labels
+ * and a scroll-driven animated progress line that grows as the user scrolls down.
+ *
+ * @param {{ data: TimelineEntry[] }} props - Component props
+ * @param {TimelineEntry[]} props.data - Ordered list of timeline entries to display
+ *
+ * @returns The timeline element
+ */
 export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
     const ref = useRef<HTMLDivElement>(null);
     const containerRef = useRef<HTMLDivElement>(null);
