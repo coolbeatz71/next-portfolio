@@ -6,6 +6,17 @@ import { Spotlight } from "@/shared/ui/spotlight/Spotlight";
 import { HeroImageSection } from "./Hero.Image.Section";
 import { HeroIntroSection } from "./Hero.Intro.Section";
 
+/**
+ * Hero section component.
+ *
+ * @component
+ *
+ * @description
+ * Renders the full hero section with an intro text area on the left
+ * and an animated profile image on the right, wrapped in a scroll reveal animation.
+ *
+ * @returns The hero section element
+ */
 export function Hero() {
     return (
         <ScrollReveal className="delay-0">
