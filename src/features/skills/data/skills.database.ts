@@ -1,5 +1,6 @@
 import type { SkillsByStack } from "@/features/skills/data/skills.tabs";
 
+/** Database technology proficiency levels */
 export const devStackDatabase: SkillsByStack[] = [
     {
         title: "PostgreSQL",
