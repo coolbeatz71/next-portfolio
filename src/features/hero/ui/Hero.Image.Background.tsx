@@ -4,6 +4,20 @@ interface HeroImageBackgroundProps {
     className?: string;
 }
 
+/**
+ * Hero image background component.
+ *
+ * @component
+ *
+ * @description
+ * Renders a decorative SVG shape with an indigo-to-pink gradient fill
+ * positioned behind the hero profile photo.
+ *
+ * @param {HeroImageBackgroundProps} props - Component props
+ * @param {string} [props.className] - Additional class names for the container
+ *
+ * @returns The hero image background SVG element
+ */
 export function HeroImageBackground({ className }: HeroImageBackgroundProps) {
     return (
         <div
