@@ -1,10 +1,28 @@
 import type { SkillsByStack } from "@/features/skills/data/skills.tabs";
 import { ProgressBar } from "@/shared/ui/progressbar/ProgressBar";
 
+/**
+ * @interface SkillSectionProps
+ * @property {SkillsByStack[]} stacks - List of skill entries with progress and images to display
+ */
 export interface SkillSectionProps {
     stacks: SkillsByStack[];
 }
 
+/**
+ * Skill stack section component.
+ *
+ * @component
+ *
+ * @description
+ * Renders a centered list of progress bars for a given set of tech stack skills,
+ * each showing the skill name, proficiency level, and technology logo.
+ *
+ * @param {SkillSectionProps} props - Component props
+ * @param {SkillsByStack[]} props.stacks - Skill entries to render as progress bars
+ *
+ * @returns The skill stack section element
+ */
 export function SkillSection({ stacks }: SkillSectionProps) {
     return (
         <section className="flex justify-center items-center">
