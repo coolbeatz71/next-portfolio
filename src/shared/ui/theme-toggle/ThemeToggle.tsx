@@ -2,6 +2,17 @@ import { motion, type Variants } from "motion/react";
 import { useTheme } from "next-themes";
 import { useCallback } from "react";
 
+/**
+ * Theme toggle component.
+ *
+ * @component
+ *
+ * @description
+ * Renders an animated icon button that switches between light and dark mode.
+ * The icon morphs between a sun (light) and a moon (dark) with animated rays and shine effects.
+ *
+ * @returns The theme toggle button element
+ */
 export function ThemeToggle() {
     const { theme, setTheme } = useTheme();
 
