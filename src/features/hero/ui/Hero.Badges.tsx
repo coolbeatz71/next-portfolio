@@ -4,6 +4,17 @@ import { devToolsLogoList } from "@/shared/config/dev-tools";
 import { Badge } from "@/shared/ui/badge/Badge";
 import { BadgeDevTools } from "@/shared/ui/badge/Badge.DevTools";
 
+/**
+ * Hero badges component.
+ *
+ * @component
+ *
+ * @description
+ * Renders the floating overlay on the hero image, showing stat badges on the left
+ * and dev tool icon badges in a 2-column grid on the right.
+ *
+ * @returns The hero badges overlay element
+ */
 export function HeroBadges() {
     const { t } = useTranslation();
 
