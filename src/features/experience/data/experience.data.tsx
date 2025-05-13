@@ -3,6 +3,15 @@ import { useTranslation } from "react-i18next";
 import { ExperienceItem } from "@/features/experience/ui/Experiences.Item";
 import { cn } from "@/shared/lib/cn";
 
+/**
+ * @interface TimelineEntry
+ * @property {string} id - Unique identifier for the timeline entry
+ * @property {string} title - Job title held at the company
+ * @property {string} [href] - Optional URL linking to the company website
+ * @property {string} location - City and country where the role was based
+ * @property {string} subtitle - Company name and employment date range
+ * @property {ReactNode} content - Rendered description of responsibilities and achievements
+ */
 export interface TimelineEntry {
     id: string;
     title: string;
@@ -12,6 +21,16 @@ export interface TimelineEntry {
     content: ReactNode;
 }
 
+/**
+ * Returns the full list of work experience timeline entries.
+ *
+ * @description Builds each entry's JSX content using i18next translations and
+ * optional CSS class overrides for the header and body sections.
+ *
+ * @param [headerClassName] - Additional Tailwind classes for the role description header
+ * @param [bodyClassName] - Additional Tailwind classes for the bullet-point list body
+ * @returns Array of timeline entries describing the professional work history
+ */
 export const experienceTimeline: (
     headerClassName?: string,
     bodyClassName?: string
