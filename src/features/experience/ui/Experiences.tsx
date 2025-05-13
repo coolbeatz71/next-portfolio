@@ -17,6 +17,17 @@ import { SectionHeader } from "@/shared/ui/section-header/SectionHeader";
 import { Timeline } from "@/shared/ui/timeline/Timeline";
 import { TimelineFull } from "@/shared/ui/timeline/Timeline.Full";
 
+/**
+ * Experiences section component.
+ *
+ * @component
+ *
+ * @description
+ * Renders the work experience section with a scroll-driven timeline showing the 5 most recent entries.
+ * A "Read More" button opens a responsive drawer with the full timeline.
+ *
+ * @returns The experiences section element
+ */
 export function Experiences() {
     const { t } = useTranslation();
     const [isOpen, setIsOpen] = useState(false);
