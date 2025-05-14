@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import { useEffect, useRef, useState } from "react";
-import type { TimelineEntry } from "@/features/experience/data/experience.data";
+import type { ITimelineEntry } from "@/features/experience/data/experience.data";
 import { IconGlobe } from "@/shared/config/icons";
 
 /**
@@ -12,12 +12,12 @@ import { IconGlobe } from "@/shared/config/icons";
  * Renders a vertical timeline of experience entries with sticky left-side labels
  * and a scroll-driven animated progress line that grows as the user scrolls down.
  *
- * @param {{ data: TimelineEntry[] }} props - Component props
- * @param {TimelineEntry[]} props.data - Ordered list of timeline entries to display
+ * @param {{ data: ITimelineEntry[] }} props - Component props
+ * @param {ITimelineEntry[]} props.data - Ordered list of timeline entries to display
  *
  * @returns The timeline element
  */
-export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
+export const Timeline = ({ data }: { data: ITimelineEntry[] }) => {
     const ref = useRef<HTMLDivElement>(null);
     const containerRef = useRef<HTMLDivElement>(null);
     const [height, setHeight] = useState(0);
