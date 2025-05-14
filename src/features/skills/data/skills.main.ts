@@ -4,14 +4,13 @@
  * @property {string} lightImage - Path to the logo used in light mode
  * @property {string} darkImage - Path to the logo used in dark mode
  */
-export interface MainStackList {
+export interface IMainStackList {
     title: string;
     lightImage: string;
     darkImage: string;
 }
 
-/** Core technologies used most frequently across projects */
-export const mainStackList: MainStackList[] = [
+export const mainStackList: IMainStackList[] = [
     {
         title: "Typescript",
         lightImage: "/dev-tools/typescript.svg",
