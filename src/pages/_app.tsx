@@ -6,6 +6,17 @@ import "@/app/styles/global.css";
 
 type AppPropsWithError = AppProps & { err: unknown } & Record<string, unknown>;
 
+/**
+ * Custom Next.js App component.
+ *
+ * @description
+ * Wraps every page with the ThemeProvider and I18nProvider, and applies the
+ * repeating background pattern via the `<main>` element.
+ *
+ * @param {AppPropsWithError} props - Next.js app props extended with error and server props
+ *
+ * @returns The application shell with providers applied
+ */
 const MyApp = ({ Component, pageProps, serverProps }: AppPropsWithError) => {
     return (
         <ThemeProvider>

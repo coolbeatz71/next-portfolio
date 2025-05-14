@@ -1,7 +1,17 @@
 import Head from "next/head";
 import { Fragment, useEffect, useState } from "react";
-import { HomeContainer } from "@/widgets/home-page/HomePage";
+import { MainContainer } from "@/layout/main";
 
+/**
+ * Home page.
+ *
+ * @description
+ * Entry point for the portfolio. Defers rendering of the main content to the
+ * client side (`isClient` flag) to avoid SSR hydration mismatches, then mounts
+ * the `MainContainer` which composes all sections and widgets.
+ *
+ * @returns The home page element
+ */
 export default function IndexPage() {
     const [isClient, setIsClient] = useState(false);
 
@@ -19,7 +29,7 @@ export default function IndexPage() {
                 />
             </Head>
 
-            {isClient && <HomeContainer />}
+            {isClient && <MainContainer />}
         </Fragment>
     );
 }
