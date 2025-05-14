@@ -1,13 +1,13 @@
 import { type MotionValue, motion } from "motion/react";
 import NextImage from "next/image";
 import { memo } from "react";
-import type { AboutMeImage } from "@/features/about/data/about.images";
+import type { IAboutMeImage } from "@/features/about/data/about.images";
 import { cn } from "@/shared/lib/cn";
 
 export interface ImageColumnProps {
     columnKey: string;
     imageHeight: number;
-    images: AboutMeImage[];
+    images: IAboutMeImage[];
     translate: MotionValue<number>;
 }
 
@@ -21,7 +21,7 @@ export interface ImageColumnProps {
  * based on a motion value, creating a parallax effect when paired with scroll.
  *
  * @param {ImageColumnProps} props - Component props
- * @param {AboutMeImage[]} props.images - Images to display in this column
+ * @param {IAboutMeImage[]} props.images - Images to display in this column
  * @param {MotionValue<number>} props.translate - Motion value controlling vertical translation
  * @param {string} props.columnKey - Unique key prefix used for React list keys
  * @param {number} props.imageHeight - Target display height of each image in pixels
