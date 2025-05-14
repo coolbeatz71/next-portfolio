@@ -2,7 +2,7 @@ import { motion, type Variants } from "motion/react";
 import dynamic from "next/dynamic";
 import { memo, useState } from "react";
 import { useTranslation } from "react-i18next";
-import type { ProjectByStack } from "@/features/projects/data/projects.tabs";
+import type { IProjectByStack } from "@/features/projects/data/projects.tabs";
 import { ProjectCardContent } from "./Project.Card.Content";
 import { ProjectCardImage } from "./Project.Card.Image";
 import { ProjectModal } from "./Project.Modal";
@@ -20,7 +20,7 @@ export const DynamicModal = dynamic(
 
 export interface ProjectCardProps {
     index: number;
-    project: ProjectByStack;
+    project: IProjectByStack;
 }
 
 const animationVariants: Variants = {
@@ -48,7 +48,7 @@ const animationVariants: Variants = {
  *
  * @param {ProjectCardProps} props - Component props
  * @param {number} props.index - Card position in the list, used for staggered animation
- * @param {ProjectByStack} props.project - Project data to display
+ * @param {IProjectByStack} props.project - Project data to display
  *
  * @returns The project card element
  */
