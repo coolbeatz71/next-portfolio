@@ -1,13 +1,13 @@
 import { cubicBezier, useScroll, useSpring, useTransform } from "motion/react";
 import { useEffect, useMemo, useState } from "react";
-import type { AboutMeImage } from "@/features/about/data/about.images";
+import type { IAboutMeImage } from "@/features/about/data/about.images";
 import { cn } from "@/shared/lib/cn";
 import { getRandomImages } from "@/shared/lib/getRandomImages";
 import { ImageColumn } from "./ParallaxScroll.ImageColumn";
 
 export interface ParallaxScrollProps {
     className?: string;
-    images: AboutMeImage[];
+    images: IAboutMeImage[];
 }
 
 /**
@@ -21,7 +21,7 @@ export interface ParallaxScrollProps {
  * without repeating the previous set.
  *
  * @param {ParallaxScrollProps} props - Component props
- * @param {AboutMeImage[]} props.images - Full list of images to randomly pick from
+ * @param {IAboutMeImage[]} props.images - Full list of images to randomly pick from
  * @param {string} [props.className] - Additional class names for the outer container
  *
  * @returns The parallax scroll image grid element
