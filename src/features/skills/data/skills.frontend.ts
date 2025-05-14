@@ -1,7 +1,6 @@
-import type { SkillsByStack } from "@/features/skills/data/skills.tabs";
+import type { ISkillsByStack } from "@/features/skills/data/skills.tabs";
 
-/** Frontend framework and UI library proficiency levels */
-export const devStackFrontend: SkillsByStack[] = [
+export const devStackFrontend: ISkillsByStack[] = [
     {
         title: "NextJS",
         lightImage: "/dev-tools/nextjs_light.svg",
