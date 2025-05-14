@@ -1,14 +1,14 @@
 import { motion, type Variants } from "motion/react";
 import { useInView } from "react-intersection-observer";
-import type { ProjectByStack } from "@/features/projects/data/projects.tabs";
+import type { IProjectByStack } from "@/features/projects/data/projects.tabs";
 import { ProjectCard } from "@/shared/ui/cards/project/Project.Card";
 
 /**
  * @interface ProjectSectionProps
- * @property {ProjectByStack[]} projects - List of projects grouped by tech stack to display
+ * @property {IProjectByStack[]} projects - List of projects grouped by tech stack to display
  */
 export interface ProjectSectionProps {
-    projects: ProjectByStack[];
+    projects: IProjectByStack[];
 }
 
 /**
@@ -21,7 +21,7 @@ export interface ProjectSectionProps {
  * when the section scrolls into view.
  *
  * @param {ProjectSectionProps} props - Component props
- * @param {ProjectByStack[]} props.projects - List of projects to display in the grid
+ * @param {IProjectByStack[]} props.projects - List of projects to display in the grid
  *
  * @returns The project section grid element
  */
