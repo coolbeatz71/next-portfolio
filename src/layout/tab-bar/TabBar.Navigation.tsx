@@ -1,17 +1,17 @@
 import { motion } from "motion/react";
 import { useTranslation } from "react-i18next";
-import type { Tabs } from "@/features/projects/data/projects.tabs";
+import type { ITabs } from "@/features/projects/data/projects.tabs";
 
 /**
  * @interface NavigationTabBarProps
- * @property {Tabs[]} tabs - Tab definitions to render as buttons
+ * @property {ITabs[]} tabs - Tab definitions to render as buttons
  * @property {number} activeTabIndex - Index of the currently active tab
  * @property {string} [className] - Additional class names for the tab list
  * @property {"skills" | "projects"} context - Motion layoutId namespace for the active indicator
  * @property {(index: number) => void} setActiveTabIndex - Callback to change the active tab
  */
 export interface NavigationTabBarProps {
-    tabs: Tabs[];
+    tabs: ITabs[];
     activeTabIndex: number;
     className?: string;
     context: "skills" | "projects";
@@ -28,7 +28,7 @@ export interface NavigationTabBarProps {
  * that slides between tabs using a Motion layoutId. Hidden on mobile — shown on `md` and above.
  *
  * @param {NavigationTabBarProps} props - Component props
- * @param {Tabs[]} props.tabs - Tab definitions to render as buttons
+ * @param {ITabs[]} props.tabs - Tab definitions to render as buttons
  * @param {number} props.activeTabIndex - Index of the currently active tab
  * @param {"skills" | "projects"} props.context - Motion layoutId namespace for the active indicator
  * @param {string} [props.className] - Additional class names for the tab list
