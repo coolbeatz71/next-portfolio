@@ -1,6 +1,6 @@
-import type { ProjectByStack } from "@/features/projects/data/projects.tabs";
+import type { IProjectByStack } from "@/features/projects/data/projects.tabs";
 
-export const projectsMobile: ProjectByStack[] = [
+export const projectsMobile: IProjectByStack[] = [
     {
         name: "Film Fan",
         role: "flutter_engineer",
