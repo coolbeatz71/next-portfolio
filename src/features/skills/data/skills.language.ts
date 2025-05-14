@@ -1,7 +1,6 @@
-import type { SkillsByStack } from "@/features/skills/data/skills.tabs";
+import type { ISkillsByStack } from "@/features/skills/data/skills.tabs";
 
-/** Programming language proficiency levels */
-export const devStackLanguages: SkillsByStack[] = [
+export const devStackLanguages: ISkillsByStack[] = [
     {
         title: "JavaScript",
         lightImage: "/dev-tools/javascript.svg",
