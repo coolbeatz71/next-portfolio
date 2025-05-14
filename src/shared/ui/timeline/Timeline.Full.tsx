@@ -1,4 +1,4 @@
-import type { TimelineEntry } from "@/features/experience/data/experience.data";
+import type { ITimelineEntry } from "@/features/experience/data/experience.data";
 import { IconGlobe } from "@/shared/config/icons";
 import { GridPatternBackground } from "../background/GridPattern.Background";
 
@@ -12,12 +12,12 @@ import { GridPatternBackground } from "../background/GridPattern.Background";
  * Each entry is displayed as a bordered card with a grid pattern background decoration.
  * Used in compact view contexts such as the side menu.
  *
- * @param {{ data: TimelineEntry[] }} props - Component props
- * @param {TimelineEntry[]} props.data - Ordered list of timeline entries to display
+ * @param {{ data: ITimelineEntry[] }} props - Component props
+ * @param {ITimelineEntry[]} props.data - Ordered list of timeline entries to display
  *
  * @returns The full timeline list element
  */
-export const TimelineFull = ({ data }: { data: TimelineEntry[] }) => {
+export const TimelineFull = ({ data }: { data: ITimelineEntry[] }) => {
     return (
         <div className="mx-auto">
             <div className="relative">
