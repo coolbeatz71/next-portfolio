@@ -1,12 +1,12 @@
-import type { SkillsByStack } from "@/features/skills/data/skills.tabs";
+import type { ISkillsByStack } from "@/features/skills/data/skills.tabs";
 import { ProgressBar } from "@/shared/ui/progressbar/ProgressBar";
 
 /**
  * @interface SkillSectionProps
- * @property {SkillsByStack[]} stacks - List of skill entries with progress and images to display
+ * @property {ISkillsByStack[]} stacks - List of skill entries with progress and images to display
  */
 export interface SkillSectionProps {
-    stacks: SkillsByStack[];
+    stacks: ISkillsByStack[];
 }
 
 /**
@@ -19,7 +19,7 @@ export interface SkillSectionProps {
  * each showing the skill name, proficiency level, and technology logo.
  *
  * @param {SkillSectionProps} props - Component props
- * @param {SkillsByStack[]} props.stacks - Skill entries to render as progress bars
+ * @param {ISkillsByStack[]} props.stacks - Skill entries to render as progress bars
  *
  * @returns The skill stack section element
  */
