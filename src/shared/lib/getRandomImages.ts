@@ -1,4 +1,4 @@
-import type { AboutMeImage } from "@/features/about/data/about.images";
+import type { IAboutMeImage } from "@/features/about/data/about.images";
 
 /**
  * Returns a random selection of images, avoiding repetition from the previous set.
@@ -10,13 +10,13 @@ import type { AboutMeImage } from "@/features/about/data/about.images";
  * @returns An array of `count` randomly selected images
  */
 export function getRandomImages(
-    images: AboutMeImage[],
+    images: IAboutMeImage[],
     count: number,
-    prevImages: AboutMeImage[] = []
-): AboutMeImage[] {
+    prevImages: IAboutMeImage[] = []
+): IAboutMeImage[] {
     const prevAlts = new Set(prevImages.map((img) => img.alt));
     const availableImages = images.filter((img) => !prevAlts.has(img.alt));
-    const result: AboutMeImage[] = [];
+    const result: IAboutMeImage[] = [];
 
     for (let i = availableImages.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
