@@ -1,8 +1,8 @@
 import { useTranslation } from "react-i18next";
-import type { Tabs } from "@/features/projects/data/projects.tabs";
+import type { ITabs } from "@/features/projects/data/projects.tabs";
 
 export interface NavigationDropdownMenuProps {
-    tabs: Tabs[];
+    tabs: ITabs[];
     activeTabIndex: number;
     onSelect: (index: number) => void;
 }
@@ -17,7 +17,7 @@ export interface NavigationDropdownMenuProps {
  * Highlights the currently active tab and calls the parent handler on selection.
  *
  * @param {NavigationDropdownMenuProps} props - Component props
- * @param {Tabs[]} props.tabs - List of tab options to render
+ * @param {ITabs[]} props.tabs - List of tab options to render
  * @param {number} props.activeTabIndex - Index of the currently selected tab
  * @param {(index: number) => void} props.onSelect - Callback fired with the selected tab index
  *
