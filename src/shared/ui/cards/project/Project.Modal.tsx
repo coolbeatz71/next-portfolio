@@ -2,14 +2,14 @@ import NextImage from "next/image";
 import type { ReactNode } from "react";
 import { Fragment } from "react";
 import { useTranslation } from "react-i18next";
-import type { ProjectByStack } from "@/features/projects/data/projects.tabs";
+import type { IProjectByStack } from "@/features/projects/data/projects.tabs";
 import { IconArrowUpRight, IconCodeBranch } from "@/shared/config/icons";
 import { BadgeSpan } from "@/shared/ui/badge/Badge.Span";
 import { LitUpBorderButton } from "@/shared/ui/buttons/LitUpBorder.Button";
 import { ProjectImageSlider } from "./Project.ImageSlider";
 
 export interface ProjectModalProps {
-    project: ProjectByStack;
+    project: IProjectByStack;
 }
 
 interface LinkProps {
@@ -17,6 +17,7 @@ interface LinkProps {
     isVisible: boolean;
     children: ReactNode;
 }
+
 const Link = ({ href, isVisible, children }: LinkProps) =>
     isVisible ? (
         <a target="_blank" rel="noopener noreferrer" href={href || ""}>
@@ -37,7 +38,7 @@ const Link = ({ href, isVisible, children }: LinkProps) =>
  * and optional source code or live link buttons.
  *
  * @param {ProjectModalProps} props - Component props
- * @param {ProjectByStack} props.project - Project data to render in the modal
+ * @param {IProjectByStack} props.project - Project data to render in the modal
  *
  * @returns The project modal content element
  */
