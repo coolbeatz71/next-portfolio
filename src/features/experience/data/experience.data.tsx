@@ -4,7 +4,7 @@ import { ExperienceItem } from "@/features/experience/ui/Experiences.Item";
 import { cn } from "@/shared/lib/cn";
 
 /**
- * @interface TimelineEntry
+ * @interface ITimelineEntry
  * @property {string} id - Unique identifier for the timeline entry
  * @property {string} title - Job title held at the company
  * @property {string} [href] - Optional URL linking to the company website
@@ -12,7 +12,7 @@ import { cn } from "@/shared/lib/cn";
  * @property {string} subtitle - Company name and employment date range
  * @property {ReactNode} content - Rendered description of responsibilities and achievements
  */
-export interface TimelineEntry {
+export interface ITimelineEntry {
     id: string;
     title: string;
     href?: string;
@@ -34,7 +34,7 @@ export interface TimelineEntry {
 export const experienceTimeline: (
     headerClassName?: string,
     bodyClassName?: string
-) => TimelineEntry[] = (headerClassName, bodyClassName) => {
+) => ITimelineEntry[] = (headerClassName, bodyClassName) => {
     const { t } = useTranslation();
     const _headerClassName = cn(
         "text-neutral-500 dark:text-neutral-400 italic text-[10pt] md:text-sm !mb-4 leading-relaxed! !md:leading-loose",
