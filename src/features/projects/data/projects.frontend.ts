@@ -1,6 +1,6 @@
-import type { ProjectByStack } from "@/features/projects/data/projects.tabs";
+import type { IProjectByStack } from "@/features/projects/data/projects.tabs";
 
-export const projectsFrontend: ProjectByStack[] = [
+export const projectsFrontend: IProjectByStack[] = [
     {
         name: "SavePlus",
         role: "frontend_engineer",
