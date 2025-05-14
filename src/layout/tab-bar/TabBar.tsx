@@ -1,18 +1,18 @@
 import { useState } from "react";
-import type { Tabs } from "@/features/projects/data/projects.tabs";
+import type { ITabs } from "@/features/projects/data/projects.tabs";
 import { cn } from "@/shared/lib/cn";
 import { NavigationDropdown } from "@/shared/ui/dropdown/navigation/Navigation.Dropdown";
 import { NavigationTabBar } from "./TabBar.Navigation";
 
 /**
  * @interface TabBarProps
- * @property {Tabs[]} tabs - Tab definitions including title, context, and content
+ * @property {ITabs[]} tabs - Tab definitions including title, context, and content
  * @property {string} [tabBarClassName] - Additional class names for the desktop tab bar
  * @property {string} [containerClassName] - Additional class names for the outer container
  * @property {"skills" | "projects"} context - Used as the motion layoutId namespace
  */
 interface TabBarProps {
-    tabs: Tabs[];
+    tabs: ITabs[];
     tabBarClassName?: string;
     containerClassName?: string;
     context: "skills" | "projects";
@@ -28,7 +28,7 @@ interface TabBarProps {
  * On mobile it displays a dropdown selector; on desktop it shows an animated tab bar.
  *
  * @param {TabBarProps} props - Component props
- * @param {Tabs[]} props.tabs - Tab definitions including title, context, and content
+ * @param {ITabs[]} props.tabs - Tab definitions including title, context, and content
  * @param {"skills" | "projects"} props.context - Motion layoutId namespace for the active indicator
  * @param {string} [props.tabBarClassName] - Additional class names for the desktop tab bar
  * @param {string} [props.containerClassName] - Additional class names for the outer container
