@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import NextImage from "next/image";
 import { useInView } from "react-intersection-observer";
-import type { SkillsByStack } from "@/features/skills/data/skills.tabs";
+import type { ISkillsByStack } from "@/features/skills/data/skills.tabs";
 import { BadgeSpan } from "@/shared/ui/badge/Badge.Span";
 
 /**
@@ -13,7 +13,7 @@ import { BadgeSpan } from "@/shared/ui/badge/Badge.Span";
  * Displays a skill item with its title, icon, and an animated progress bar.
  * The bar animates to the target percentage when the element enters the viewport.
  *
- * @param {SkillsByStack} props - Component props (uses the SkillsByStack shape)
+ * @param {ISkillsByStack} props - Component props (uses the ISkillsByStack shape)
  * @param {string} props.title - Skill name displayed as a badge label
  * @param {string} props.lightImage - Icon image URL used in light mode
  * @param {string} props.darkImage - Icon image URL used in dark mode
@@ -26,7 +26,7 @@ export function ProgressBar({
     lightImage,
     darkImage,
     progress
-}: SkillsByStack) {
+}: ISkillsByStack) {
     const { ref, inView } = useInView({
         triggerOnce: false,
         threshold: 0.1
