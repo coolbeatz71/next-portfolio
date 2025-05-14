@@ -1,4 +1,4 @@
-import type { ProjectByStack } from "@/features/projects/data/projects.tabs";
+import type { IProjectByStack } from "@/features/projects/data/projects.tabs";
 import { IconArrowUpRight } from "@/shared/config/icons";
 import { BadgeSpan } from "@/shared/ui/badge/Badge.Span";
 import { LitUpBorderButton } from "@/shared/ui/buttons/LitUpBorder.Button";
@@ -6,7 +6,7 @@ import { LitUpBorderButton } from "@/shared/ui/buttons/LitUpBorder.Button";
 export interface ProjectContentProps {
     label: string;
     onClick: () => void;
-    project: ProjectByStack;
+    project: IProjectByStack;
     translatedDescription: string;
 }
 /**
@@ -20,7 +20,7 @@ export interface ProjectContentProps {
  *
  * @param {ProjectContentProps} props - Component props
  * @param {string} props.label - Text label for the live link button
- * @param {ProjectByStack} props.project - Project data containing name, stack, and links
+ * @param {IProjectByStack} props.project - Project data containing name, stack, and links
  * @param {() => void} props.onClick - Handler called when the card content area is clicked
  * @param {string} props.translatedDescription - Pre-translated description string
  *
