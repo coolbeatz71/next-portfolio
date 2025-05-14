@@ -3,11 +3,11 @@ import NextImage from "next/image";
 import { useCallback, useMemo, useState } from "react";
 import { useInterval, useMedia } from "react-use";
 
-import type { Image } from "@/features/projects/data/projects.tabs";
+import type { IImage } from "@/features/projects/data/projects.tabs";
 import { MOBILE_DEVICE, XS_MOBILE_DEVICE } from "@/shared/config/style";
 
 export interface ProjectImageSliderProps {
-    images: Image[];
+    images: IImage[];
     imagePlaceholder: string;
 }
 
