@@ -1,7 +1,6 @@
-import type { SkillsByStack } from "@/features/skills/data/skills.tabs";
+import type { ISkillsByStack } from "@/features/skills/data/skills.tabs";
 
-/** Database technology proficiency levels */
-export const devStackDatabase: SkillsByStack[] = [
+export const devStackDatabase: ISkillsByStack[] = [
     {
         title: "PostgreSQL",
         lightImage: "/dev-tools/postgresql.svg",
