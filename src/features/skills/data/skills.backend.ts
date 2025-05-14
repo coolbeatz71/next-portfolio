@@ -1,7 +1,6 @@
-import type { SkillsByStack } from "@/features/skills/data/skills.tabs";
+import type { ISkillsByStack } from "@/features/skills/data/skills.tabs";
 
-/** Backend framework proficiency levels */
-export const devStackBackend: SkillsByStack[] = [
+export const devStackBackend: ISkillsByStack[] = [
     {
         title: "ExpressJS",
         lightImage: "/dev-tools/expressjs_light.svg",
