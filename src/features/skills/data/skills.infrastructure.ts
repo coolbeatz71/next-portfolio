@@ -1,7 +1,6 @@
-import type { SkillsByStack } from "@/features/skills/data/skills.tabs";
+import type { ISkillsByStack } from "@/features/skills/data/skills.tabs";
 
-/** Infrastructure and cloud platform proficiency levels */
-export const devStackInfrastructure: SkillsByStack[] = [
+export const devStackInfrastructure: ISkillsByStack[] = [
     {
         title: "Docker",
         lightImage: "/dev-tools/docker.svg",
