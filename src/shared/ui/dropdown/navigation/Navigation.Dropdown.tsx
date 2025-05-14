@@ -1,13 +1,13 @@
 import { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useClickAway } from "react-use";
-import type { Tabs } from "@/features/projects/data/projects.tabs";
+import type { ITabs } from "@/features/projects/data/projects.tabs";
 import { IconChevronUpDown } from "@/shared/config/icons";
 import { cn } from "@/shared/lib/cn";
 import { NavigationDropdownMenu } from "./Navigation.Dropdown.Menu";
 
 export interface NavigationDropdownProps {
-    tabs: Tabs[];
+    tabs: ITabs[];
     className?: string;
     activeTabIndex: number;
     setActiveTabIndex: (index: number) => void;
@@ -24,7 +24,7 @@ export interface NavigationDropdownProps {
  * Closes automatically when clicking outside.
  *
  * @param {NavigationDropdownProps} props - Component props
- * @param {Tabs[]} props.tabs - List of tab options to display in the dropdown
+ * @param {ITabs[]} props.tabs - List of tab options to display in the dropdown
  * @param {number} props.activeTabIndex - Index of the currently selected tab
  * @param {(index: number) => void} props.setActiveTabIndex - Callback to update the active tab
  * @param {string} [props.className] - Additional class names for the container
