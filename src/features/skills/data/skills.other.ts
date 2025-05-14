@@ -1,7 +1,6 @@
-import type { SkillsByStack } from "@/features/skills/data/skills.tabs";
+import type { ISkillsByStack } from "@/features/skills/data/skills.tabs";
 
-/** Other technologies and tools of interest beyond core stacks */
-export const devStackOthers: SkillsByStack[] = [
+export const devStackOthers: ISkillsByStack[] = [
     {
         title: "CircleCI",
         lightImage: "/dev-tools/circleci_light.svg",
