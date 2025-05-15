@@ -1,8 +1,5 @@
 import { IconArrowRight } from "@/shared/config/icons";
-
-export interface BreadcrumbProps {
-    labels: string[];
-}
+import type { BreadcrumbProps } from "./types";
 
 /**
  * Breadcrumb navigation component.
