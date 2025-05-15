@@ -1,8 +1,5 @@
 import { cn } from "@/shared/lib/cn";
-
-interface HeroImageBackgroundProps {
-    className?: string;
-}
+import type { HeroImageBackgroundProps } from "./types";
 
 /**
  * Hero image background component.
