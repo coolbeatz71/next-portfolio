@@ -5,20 +5,7 @@ import {
     IconMedium,
     IconYoutube
 } from "@/shared/config/icons";
-
-/**
- * @interface ISocialLink
- * @property {React.ReactNode} icon - Icon element representing the platform
- * @property {string} platform - Platform identifier (e.g. `"github"`, `"linkedin"`)
- * @property {string} href - URL of the profile page
- * @property {string} hoverColor - Tailwind hover color class for the icon button
- */
-export interface ISocialLink {
-    icon: React.ReactNode;
-    platform: string;
-    href: string;
-    hoverColor: string;
-}
+import type { ISocialLink } from "./types";
 
 export const socialLinksList: ISocialLink[] = [
     {
