@@ -1,4 +1,4 @@
-import type { IProjectByStack } from "@/features/projects/data/projects.tabs";
+import { IProjectByStack } from "./types";
 
 export const projectsOpenSource: IProjectByStack[] = [
     {
