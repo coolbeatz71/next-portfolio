@@ -1,11 +1,5 @@
 import type { MotionProps, Transition } from "motion/react";
-
-export interface IUseAnimation {
-    floatAnimation: MotionProps["animate"];
-    rotateAnimation: MotionProps["animate"];
-    pulseAnimation: MotionProps["animate"];
-    transition: Transition;
-}
+import type { IUseAnimation } from "./types";
 
 /**
  * Custom hook for reusable motion animation presets.
