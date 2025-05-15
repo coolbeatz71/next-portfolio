@@ -1,9 +1,6 @@
 import { memo } from "react";
 import { AbstractBackground } from "./Abstract.Background";
-
-export interface DotBackgroundProps {
-    className?: string;
-}
+import type { DotBackgroundProps } from "./types";
 
 /**
  * Dot background component.
