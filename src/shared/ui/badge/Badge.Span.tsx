@@ -1,8 +1,5 @@
 import { memo } from "react";
-
-export interface BadgeSpanProps {
-    text: string;
-}
+import type { BadgeSpanProps } from "./types";
 
 /**
  * Badge span component.
