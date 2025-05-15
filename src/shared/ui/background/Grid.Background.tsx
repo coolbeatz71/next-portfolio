@@ -1,8 +1,5 @@
 import { AbstractBackground } from "./Abstract.Background";
-
-export interface GridBackgroundProps {
-    className?: string;
-}
+import type { GridBackgroundProps } from "./types";
 
 /**
  * Grid background component.
