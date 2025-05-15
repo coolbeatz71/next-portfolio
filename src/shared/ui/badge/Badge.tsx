@@ -1,17 +1,9 @@
 import { motion } from "motion/react";
 import numeral from "numeral";
-import type { ReactNode } from "react";
 import CountUp from "react-countup";
 import { cn } from "@/shared/lib/cn";
 import { GridPatternBackground } from "@/shared/ui/background/GridPattern.Background";
-
-export interface BadgeProps {
-    icon: ReactNode;
-    badgeText: string;
-    className?: string;
-    endCountText?: string;
-    endCountNumber: number;
-}
+import type { BadgeProps } from "./types";
 
 /**
  * Animated stat badge component.
