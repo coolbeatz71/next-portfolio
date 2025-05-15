@@ -1,10 +1,6 @@
 import { cn } from "@/shared/lib/cn";
 import { GlowingStarsCard } from "@/shared/ui/cards/glowing-stars/GlowingStars.Card";
-
-export interface BadgeDevToolsProps {
-    iconName: string;
-    className?: string;
-}
+import type { BadgeDevToolsProps } from "./types";
 
 /**
  * Dev tools badge component.
