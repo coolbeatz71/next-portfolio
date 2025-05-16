@@ -1,11 +1,12 @@
 import { motion, type Variants } from "motion/react";
 import dynamic from "next/dynamic";
-import { memo, useState } from "react";
+import { memo } from "react";
 import { useTranslation } from "react-i18next";
-import type { IProjectByStack } from "@/features/projects/data/projects.tabs";
+import { useProjectCardModal } from "./hooks/useProjectCardModal";
 import { ProjectCardContent } from "./Project.Card.Content";
 import { ProjectCardImage } from "./Project.Card.Image";
 import { ProjectModal } from "./Project.Modal";
+import type { ProjectCardProps } from "./types";
 
 export const DynamicModal = dynamic(
     async () => {
@@ -17,11 +18,6 @@ export const DynamicModal = dynamic(
     },
     { ssr: false }
 );
-
-export interface ProjectCardProps {
-    index: number;
-    project: IProjectByStack;
-}
 
 const animationVariants: Variants = {
     hidden: { opacity: 0, y: 50 },
@@ -54,11 +50,7 @@ const animationVariants: Variants = {
  */
 function ProjectCardComponent({ project, index }: ProjectCardProps) {
     const { t } = useTranslation();
-    const [isOpen, setIsOpen] = useState(false);
-
-    const toggleModal = () => {
-        setIsOpen((prev) => !prev);
-    };
+    const { isOpen, toggleModal } = useProjectCardModal();
 
     return (
         <>
