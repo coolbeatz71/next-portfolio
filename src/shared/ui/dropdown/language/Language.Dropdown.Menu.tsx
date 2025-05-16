@@ -1,9 +1,5 @@
 import { languageList } from "@/shared/config/languages";
-
-export interface LanguageDropdownMenuProps {
-    placement: "top" | "bottom";
-    updateLanguage: (lang: string) => void;
-}
+import type { LanguageDropdownMenuProps } from "./types";
 
 /**
  * Language dropdown menu component.
