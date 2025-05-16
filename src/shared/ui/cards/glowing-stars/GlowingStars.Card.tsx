@@ -1,11 +1,7 @@
-import { type ReactNode, useState } from "react";
+import { useState } from "react";
 import { cn } from "@/shared/lib/cn";
 import { Illustration } from "./GlowingStar.Illustration";
-
-export interface GlowingStarsCardProps {
-    className?: string;
-    children?: ReactNode;
-}
+import type { GlowingStarsCardProps } from "./types";
 /**
  * Glowing stars card component.
  *
