@@ -1,16 +1,6 @@
-import type { ElementType, HTMLAttributes } from "react";
 import { cn } from "@/shared/lib/cn";
 import { MovingBorder } from "@/shared/ui/buttons/MovingBorder";
-
-interface MovingBorderButton extends HTMLAttributes<HTMLButtonElement> {
-    as?: ElementType;
-    duration?: number;
-    className?: string;
-    borderRadius?: string;
-    borderClassName?: string;
-    children: React.ReactNode;
-    containerClassName?: string;
-}
+import type { MovingBorderButton } from "./types";
 
 /**
  * Moving border button component.
