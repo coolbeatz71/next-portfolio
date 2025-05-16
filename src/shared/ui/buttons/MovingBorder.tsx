@@ -5,14 +5,8 @@ import {
     useMotionValue,
     useTransform
 } from "motion/react";
-import { Fragment, memo, type SVGProps, useRef } from "react";
-
-interface MovingBorderProps extends SVGProps<SVGSVGElement> {
-    rx?: string;
-    ry?: string;
-    duration?: number;
-    children: React.ReactNode;
-}
+import { Fragment, memo, useRef } from "react";
+import type { MovingBorderProps } from "./types";
 
 /**
  * Moving border primitive component.
