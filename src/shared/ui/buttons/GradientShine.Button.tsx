@@ -1,10 +1,5 @@
-import type { ReactNode } from "react";
 import { cn } from "@/shared/lib/cn";
-
-export interface GradientShineButtonProps {
-    className?: string;
-    children: ReactNode;
-}
+import type { GradientShineButtonProps } from "./types";
 /**
  * Gradient shine button component.
  *
