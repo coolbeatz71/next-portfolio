@@ -1,9 +1,5 @@
 import { cn } from "@/shared/lib/cn";
-
-export interface HoverableCardProps {
-    icon: string;
-    title: string;
-}
+import type { HoverableCardProps } from "./types";
 
 /**
  * Hoverable card component.
