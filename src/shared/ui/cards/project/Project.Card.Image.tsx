@@ -1,11 +1,5 @@
 import Image from "next/image";
-
-export interface ProjectImageProps {
-    src: string;
-    alt: string;
-    blurDataURL: string;
-    onClick: () => void;
-}
+import type { ProjectImageProps } from "./types";
 
 /**
  * Project card image component.
