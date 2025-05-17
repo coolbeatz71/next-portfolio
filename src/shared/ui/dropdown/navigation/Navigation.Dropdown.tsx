@@ -1,17 +1,10 @@
 import { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useClickAway } from "react-use";
-import type { ITabs } from "@/features/projects/data/projects.tabs";
 import { IconChevronUpDown } from "@/shared/config/icons";
 import { cn } from "@/shared/lib/cn";
 import { NavigationDropdownMenu } from "./Navigation.Dropdown.Menu";
-
-export interface NavigationDropdownProps {
-    tabs: ITabs[];
-    className?: string;
-    activeTabIndex: number;
-    setActiveTabIndex: (index: number) => void;
-}
+import type { NavigationDropdownProps } from "./types";
 
 /**
  * Navigation dropdown component.
