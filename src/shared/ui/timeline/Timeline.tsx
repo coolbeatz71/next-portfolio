@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import { useEffect, useRef, useState } from "react";
-import type { ITimelineEntry } from "@/features/experience/data/experience.data";
+import { ITimelineEntry } from "@/features/experience/data/types";
 import { IconGlobe } from "@/shared/config/icons";
 
 /**
