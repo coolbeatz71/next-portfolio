@@ -1,15 +1,8 @@
-import { type MotionValue, motion } from "motion/react";
+import { motion } from "motion/react";
 import NextImage from "next/image";
 import { memo } from "react";
-import type { IAboutMeImage } from "@/features/about/data/about.images";
 import { cn } from "@/shared/lib/cn";
-
-export interface ImageColumnProps {
-    columnKey: string;
-    imageHeight: number;
-    images: IAboutMeImage[];
-    translate: MotionValue<number>;
-}
+import type { ImageColumnProps } from "./types";
 
 /**
  * Parallax scroll image column component.
