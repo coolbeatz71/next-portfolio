@@ -1,5 +1,5 @@
+import { AnimatedLineProps } from "@shared/config/types";
 import { motion } from "motion/react";
-import type { AnimatedLineProps } from "@/shared/config/animation";
 
 /**
  * Animated line component.
