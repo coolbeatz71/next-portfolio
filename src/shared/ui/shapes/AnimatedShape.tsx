@@ -1,5 +1,5 @@
+import { AnimatedShapeProps } from "@shared/config/types";
 import { motion } from "motion/react";
-import type { AnimatedShapeProps } from "@/shared/config/animation";
 
 /**
  * Animated shape component.
