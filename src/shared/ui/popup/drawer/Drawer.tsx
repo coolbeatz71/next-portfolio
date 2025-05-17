@@ -1,33 +1,11 @@
-import { memo, type ReactNode } from "react";
 import { useLockBodyScroll } from "react-use";
 import { cn } from "@/shared/lib/cn";
-
 import { PopupCloseButton } from "../Popup.Close.Button";
 import { PopupFooter } from "../Popup.Footer";
 import { PopupHeader } from "../Popup.Header";
+import { DrawerBackdrop } from "./Drawer.Backdrop";
 import { DrawerContainer } from "./Drawer.Container";
-
-export interface DrawerProps {
-    width?: string;
-    header: ReactNode;
-    footer?: ReactNode;
-    isOpen: boolean;
-    onToggle: () => void;
-    children: ReactNode;
-    className?: string;
-    position?: "right" | "left";
-}
-
-const Backdrop = memo(({ isOpen }: { isOpen: boolean }) => (
-    <div
-        className={cn(
-            "fixed inset-0 bg-black bg-opacity-70 backdrop-blur-xl transition-all",
-            isOpen
-                ? "opacity-100 duration-200 ease-in-out"
-                : "opacity-0 duration-200 ease-in-out hidden"
-        )}
-    />
-));
+import type { DrawerProps } from "./types";
 
 /**
  * Drawer component.
@@ -69,7 +47,7 @@ export function Drawer({
             className="relative z-50 "
             aria-labelledby="drawer"
         >
-            <Backdrop isOpen={isOpen} />
+            <DrawerBackdrop isOpen={isOpen} />
             <div
                 className={cn(
                     "fixed inset-0 overflow-hidden",
