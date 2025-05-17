@@ -1,3 +1,14 @@
+/**
+ * French flag icon component.
+ *
+ * @component
+ *
+ * @description
+ * Renders an inline SVG of the French flag (tricolore),
+ * used to represent the French language option in the language switcher.
+ *
+ * @returns The French flag SVG element
+ */
 export const FrenchFlagIcon = () => (
     <svg
         height={40}
