@@ -1,13 +1,5 @@
 import { ThemeProvider as NextThemeProvider } from "next-themes";
-import type { ReactNode } from "react";
-
-/**
- * @interface ThemeProviderProps
- * @property {ReactNode} children - Child elements to render inside the provider
- */
-interface ThemeProviderProps {
-    children: ReactNode;
-}
+import type { ThemeProviderProps } from "./types";
 
 /**
  * Theme provider component.
