@@ -1,13 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { SpinnerIcon } from "@/shared/ui/icon/Spinner.Icon";
-
-/**
- * @interface FormSubmitButtonProps
- * @property {boolean} isLoading - Whether the form submission is in progress
- */
-interface FormSubmitButtonProps {
-    isLoading: boolean;
-}
+import type { FooterMessageFormSubmitButtonProps } from "./types";
 
 /**
  * Message form submit button component.
@@ -18,12 +11,14 @@ interface FormSubmitButtonProps {
  * Renders the submit button for the contact form. Shows a spinner and disables
  * the button while the form submission is in progress.
  *
- * @param {FormSubmitButtonProps} props - Component props
+ * @param {FooterMessageFormSubmitButtonProps} props - Component props
  * @param {boolean} props.isLoading - Whether the form submission is in progress
  *
  * @returns The form submit button element
  */
-export function FormSubmitButton({ isLoading }: FormSubmitButtonProps) {
+export function FooterMessageFormSubmitButton({
+    isLoading
+}: FooterMessageFormSubmitButtonProps) {
     const { t } = useTranslation();
 
     return (
