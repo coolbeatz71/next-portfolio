@@ -5,16 +5,7 @@ import { navigationList } from "@/shared/config/navigation";
 import { cn } from "@/shared/lib/cn";
 import { getActiveSection } from "@/shared/lib/getActiveSection";
 import { throttle } from "@/shared/lib/throttle";
-
-/**
- * @interface NavigationMenuProps
- * @property {string} [className] - Additional class names for each nav link
- * @property {() => void} [onClick] - Callback fired when a nav link is clicked
- */
-export interface NavigationMenuProps {
-    className?: string;
-    onClick?: () => void;
-}
+import type { NavigationMenuProps } from "./types";
 
 /**
  * Navigation menu component.
