@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useWindowScroll } from "react-use";
 import { NavigationMenu } from "@/layout/navigation/Navigation.Menu";
 import { RESPONSIVE_CLASSNAME } from "@/shared/config/style";
-import { LanguageDropDown } from "@/shared/ui/dropdown/language/Language.Dropdown";
+import { LanguageDropdown } from "@/shared/ui/dropdown/language/Language.Dropdown";
 import { HamburgerMenuButton } from "@/shared/ui/hamburger-menu/HamburgerMenu.Button";
 import { Logo } from "@/shared/ui/logo/Logo";
 import { ThemeToggle } from "@/shared/ui/theme-toggle/ThemeToggle";
@@ -49,7 +49,7 @@ export function Navigation() {
                         </div>
                     </div>
                     <div className="inset-y-0 right-0 flex items-center justify-center gap-2">
-                        <LanguageDropDown placement="bottom" />
+                        <LanguageDropdown placement="bottom" />
                         <ThemeToggle />
                     </div>
                 </div>
