@@ -12,7 +12,7 @@ import { useTranslation } from "react-i18next";
  *
  * @returns The message form header element
  */
-export function FormHeader() {
+export function FooterMessageFormHeader() {
     const { t } = useTranslation();
 
     return (
