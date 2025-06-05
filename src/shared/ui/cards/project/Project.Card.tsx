@@ -77,8 +77,8 @@ function ProjectCardComponent({ project, index }: ProjectCardProps) {
                 variants={animationVariants}
             >
                 <div
-                    className={`md:min-h-64 lg:min-h-72 bg-white dark:bg-gray-900 rounded-lg 
-                        overflow-hidden transition-shadow duration-300 group-hover:shadow-xl
+                    className={`md:min-h-64 lg:min-h-72 bg-surface-elevated rounded-lg
+                        overflow-hidden transition-shadow duration-moderate group-hover:shadow-xl
                     `}
                 >
                     <div className="flex flex-col md:flex-row md:min-h-64 lg:min-h-72">
