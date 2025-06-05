@@ -19,11 +19,11 @@ export const experienceTimeline: (
 ) => ITimelineEntry[] = (headerClassName, bodyClassName) => {
     const { t } = useTranslation();
     const _headerClassName = cn(
-        "text-neutral-500 dark:text-neutral-400 italic text-[10pt] md:text-sm !mb-4 leading-relaxed! !md:leading-loose",
+        "italic text-body-sm md:text-sm !mb-4 leading-relaxed! !md:leading-loose text-text-experience-header",
         headerClassName
     );
     const _bodyClassName = cn(
-        "list-disc space-y-2 pl-4 md:pl-5 text-[11.5pt] md:text-md leading-relaxed font-medium text-slate-500 dark:text-slate-300",
+        "list-disc space-y-2 pl-4 md:pl-5 text-[11.5pt] md:text-md leading-relaxed font-medium text-text-experience-body",
         bodyClassName
     );
 
