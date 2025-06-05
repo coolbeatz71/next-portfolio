@@ -35,7 +35,7 @@ function GlowComponent({ delay }: GlowProps) {
             }}
             className={`
                 absolute translate-x-1/5 z-10 size-px rounded-full
-                bg-cyan-300 dark:bg-cyan-500 blur-[1px] shadow-md shadow-pink-500
+                bg-glow-star blur-[1px] shadow-md shadow-glow-shadow
             `}
         />
     );
