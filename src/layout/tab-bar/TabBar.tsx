@@ -44,7 +44,7 @@ export function TabBar({
                     activeTabIndex={activeTabIndex}
                     setActiveTabIndex={setActiveTabIndex}
                     className={cn(
-                        "relative hidden md:flex flex-wrap px-1.5 py-1.5 list-none bg-white dark:bg-gray-900 rounded-lg gap-1",
+                        "relative hidden md:flex flex-wrap px-1.5 py-1.5 list-none bg-surface-tab rounded-lg gap-1",
                         tabBarClassName
                     )}
                 />
