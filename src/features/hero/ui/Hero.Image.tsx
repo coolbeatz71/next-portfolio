@@ -22,14 +22,14 @@ export function HeroImage() {
         {
             label: "line1",
             className:
-                "absolute bottom-1/4 -left-6 w-32 h-32 z-20 text-green-300/70",
+                "absolute bottom-1/4 -left-6 w-32 h-32 z-20 text-deco-green",
             animate: { rotate: [50, 50, 12] },
             pathD: "M10,50 Q30,40 50,50 T120,50"
         },
         {
             label: "line2",
             className:
-                "absolute bottom-12 right-5 w-32 h-25 z-10 text-amber-500/30",
+                "absolute bottom-12 right-5 w-32 h-25 z-10 text-accent-30",
             animate: { rotate: [0, -20, 0] },
             pathD: "M10,50 Q30,40 50,50 T120,50"
         }
@@ -50,7 +50,7 @@ export function HeroImage() {
             </div>
 
             <AnimatedShape
-                className="absolute top-0 left-0 w-24 h-24 lg:w-32 lg:h-32 rounded-full bg-linear-to-r from-amber-500/80 to-orange-500/50"
+                className="absolute top-0 left-0 w-24 h-24 lg:w-32 lg:h-32 rounded-full bg-linear-to-r from-accent-from to-accent-to"
                 animate={floatAnimation}
                 transition={transition}
             />
