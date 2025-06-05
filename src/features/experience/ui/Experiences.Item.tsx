@@ -21,7 +21,7 @@ function ExperienceItemComponent({ children }: ExperienceItemProps) {
         <span className="flex flex-row space-x-2 my-2">
             <IconCheckMark
                 size={10}
-                className="text-indigo-500 mt-2 shrink-0 text-xs"
+                className="text-primary-subtle mt-2 shrink-0 text-xs"
             />
             <span>{children}</span>
         </span>
