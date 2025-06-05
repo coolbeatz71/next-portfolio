@@ -21,7 +21,7 @@ export function BadgeDevTools({ iconName, className }: BadgeDevToolsProps) {
     return (
         <GlowingStarsCard
             className={cn(
-                "cursor-pointer w-20 h-20 shadow-2xl transform transition-transform duration-200 hover:scale-105 group",
+                "cursor-pointer w-20 h-20 shadow-2xl transform transition-transform duration-base hover:scale-105 group",
                 className
             )}
         >
