@@ -23,10 +23,10 @@ function LitUpBorderButtonComponent({
 }: LitUpBorderButtonProps) {
     return (
         <button type="button" className={cn("p-1 relative", className)}>
-            <div className="absolute inset-0 bg-linear-to-r from-indigo-500 to-purple-800 rounded-lg" />
+            <div className="absolute inset-0 bg-linear-to-r from-border-gradient-start to-border-gradient-end rounded-lg" />
             <div
-                className={`w-full py-1 md:py-1.5 bg-slate-100 dark:bg-slate-800 rounded relative 
-                    group transition duration-100 text-slate-700 dark:text-slate-200 hover:text-white hover:bg-transparent
+                className={`w-full py-1 md:py-1.5 bg-surface-raised rounded relative
+                    group transition duration-fast text-text-primary hover:text-text-on-primary hover:bg-transparent
                 `}
             >
                 {children}
