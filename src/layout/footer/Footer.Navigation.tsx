@@ -19,7 +19,7 @@ export function FooterNavigation() {
 
     return (
         <div className="flex flex-col gap-2">
-            <h3 className="w-full text-2xl font-bold text-slate-700 dark:text-slate-300">
+            <h3 className="w-full text-2xl font-bold text-text-primary">
                 {t("navigation")}
             </h3>
 
@@ -28,7 +28,7 @@ export function FooterNavigation() {
                     <NextLink
                         href={item.href}
                         key={item.label}
-                        className="text-gray-500 dark:text-gray-400 hover:text-indigo-700 hover:dark:text-indigo-500 hover:underline font-medium"
+                        className="text-text-contact hover:text-primary-on-accent hover:text-primary-on-accent hover:underline font-medium"
                     >
                         <span className="flex flex-row justify-start">
                             <IconLink
