@@ -35,7 +35,7 @@ export function ThemeToggle() {
             type="button"
             onClick={onToggle}
             title="Toggle Theme"
-            className="group relative size-12 sm:size-12 md:size-12 bg-foreground text-background rounded-lg flex justify-center items-center text-amber-500 bg-slate-100 dark:bg-slate-900 hover:bg-slate-300 dark:hover:bg-slate-700"
+            className="group relative size-12 sm:size-12 md:size-12 rounded-lg flex justify-center items-center text-sun bg-surface-raised hover:bg-surface-hover"
         >
             <motion.svg
                 width={25}
@@ -52,7 +52,7 @@ export function ThemeToggle() {
                     d={moonPath}
                     initial="hidden"
                     variants={shineVariant}
-                    className={"absolute top-0 left-0 stroke-indigo-500 "}
+                    className={"absolute top-0 left-0 stroke-primary-subtle"}
                     animate={theme === "dark" ? "visible" : "hidden"}
                 />
 
@@ -60,7 +60,7 @@ export function ThemeToggle() {
                     initial="hidden"
                     variants={raysVariants}
                     animate={theme === "light" ? "visible" : "hidden"}
-                    className="stroke-6 stroke-yellow-400"
+                    className="stroke-6 stroke-sun"
                     style={{ strokeLinecap: "round" }}
                 >
                     {sunRayPaths.map((d) => (
