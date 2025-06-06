@@ -42,7 +42,7 @@ export function Modal({
 
             <div
                 className={cn(
-                    "fixed z-50 w-[96%] md:w-[90%] max-w-xl bg-light dark:bg-dark rounded-lg shadow-lg transition-all duration-500 ease-out transform",
+                    "fixed z-50 w-[96%] md:w-[90%] max-w-xl bg-background rounded-lg shadow-lg transition-all duration-slow ease-out transform",
                     className
                 )}
                 style={{
