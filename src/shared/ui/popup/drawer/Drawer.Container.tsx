@@ -44,12 +44,12 @@ function DrawerContainerComponent({
             onClick={(e) => e.stopPropagation()}
             onKeyUp={(e) => e.stopPropagation()}
             style={{ width, ...getTranslateStyle(isOpen, width, position) }}
-            className="pointer-events-auto relative h-full transition-transform ease-in-out duration-200"
+            className="pointer-events-auto relative h-full transition-transform ease-in-out duration-base"
         >
             <div
                 className={cn(
                     CUSTOM_SCROLLBAR,
-                    "flex flex-col h-full overflow-y-scroll bg-light dark:bg-dark shadow-xl px-4"
+                    "flex flex-col h-full overflow-y-scroll bg-background shadow-xl px-4"
                 )}
             >
                 {children}
