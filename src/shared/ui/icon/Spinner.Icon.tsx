@@ -13,7 +13,7 @@ export function SpinnerIcon() {
     return (
         <svg
             aria-hidden="true"
-            className="inline w-4 h-4 me-2 text-white animate-spin"
+            className="inline w-4 h-4 me-2 text-text-on-primary animate-spin"
             viewBox="0 0 100 100"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
