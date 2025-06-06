@@ -37,7 +37,7 @@ export function ScrollReveal({
             <div
                 className={cn(
                     className,
-                    `transition-all duration-500 ease-in-out will-change-transform
+                    `transition-all duration-slow ease-in-out will-change-transform
                     ${isVisible ? "opacity-100 transform-none" : `opacity-0 ${directionClasses[direction]}`}
                     `
                 )}
