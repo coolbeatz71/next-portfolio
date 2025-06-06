@@ -27,7 +27,7 @@ export function LanguageDropdownMenu({
             id="dropdown"
             className={`
                 z-10 origin-top-right absolute ${dropdownPlacement} 
-                left-0 right-0 px-1 mt-1 w-38 rounded-lg shadow-xl bg-white dark:bg-slate-600
+                left-0 right-0 px-1 mt-1 w-38 rounded-lg shadow-xl bg-surface-dropdown
             `}
         >
             <div className="py-1" aria-labelledby="dropdown-menu">
@@ -37,8 +37,8 @@ export function LanguageDropdownMenu({
                         role="menuitem"
                         key={lang.code}
                         onClick={() => updateLanguage(lang.code)}
-                        className={`rounded-lg flex items-center px-3 py-2 text-sm text-gray-700
-                            dark:text-gray-200 hover:bg-slate-200 dark:hover:bg-slate-700 w-full text-left
+                        className={`rounded-lg flex items-center px-3 py-2 text-sm text-text-contact
+                            hover:bg-surface-hover w-full text-left
                         `}
                     >
                         <span className="mr-2 h-5 w-5 flex items-center justify-center shrink-0">
