@@ -18,7 +18,7 @@ export function FooterSocialLink() {
 
     return (
         <div className="flex flex-col  items-start gap-2">
-            <h3 className="w-full text-2xl font-bold text-text-primary">
+            <h3 className="w-full text-2xl font-bold text-typography-primary">
                 {t("follow_me")}
             </h3>
 
@@ -32,7 +32,7 @@ export function FooterSocialLink() {
                         <button
                             type="button"
                             className={`
-                                text-text-contact hover:bg-surface-hover ${social.hoverColor}
+                                text-typography-contact hover:bg-surface-hover ${social.hoverColor}
                                 focus:outline-none font-medium rounded-lg text-3xl text-center items-center p-[0.685rem] duration-moderate
                             `}
                         >
