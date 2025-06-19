@@ -42,8 +42,8 @@ export function NavigationDropdownMenu({
                             className={`rounded-lg flex items-center my-1.5 px-3 py-2 text-sm font-medium 
                                 ${
                                     isActiveTab
-                                        ? "text-text-on-primary bg-primary-fill"
-                                        : "text-text-contact hover:bg-surface-hover"
+                                        ? "text-typography-on-primary bg-primary-fill"
+                                        : "text-typography-contact hover:bg-surface-hover"
                                 } w-full text-left
                             `}
                         >
