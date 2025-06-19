@@ -30,7 +30,7 @@ export function FooterContact() {
                 href="mailto:jeanvincent.mutombo@gmail.com"
                 className="hover:font-medium w-full md:w-auto "
             >
-                <span className="hover:underline text-typography-contact hover:text-primary-on-accent hover:text-primary-on-accent flex justify-start items-center gap-2">
+                <span className="hover:underline text-typography-contact hover:text-primary-on-accent flex justify-start items-center gap-2">
                     <IconEmail />
                     jeanvincent.mutombo@gmail.com
                 </span>
@@ -40,7 +40,7 @@ export function FooterContact() {
                 rel="noopener noreferrer"
                 className="hover:font-medium w-full md:w-auto"
             >
-                <span className="hover:underline text-typography-contact hover:text-primary-on-accent hover:text-primary-on-accent flex justify-start items-center gap-2">
+                <span className="hover:underline text-typography-contact hover:text-primary-on-accent flex justify-start items-center gap-2">
                     <IconPhone />
                     (+250) 78 071 2761
                 </span>
