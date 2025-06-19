@@ -24,7 +24,7 @@ export function Breadcrumb({ labels }: BreadcrumbProps) {
                             {i > 0 && (
                                 <IconArrowRight className="rtl:rotate-180 text-xl text-border-strong mr-1" />
                             )}
-                            <span className="text-sm font-medium text-text-contact">
+                            <span className="text-sm font-medium text-typography-contact">
                                 {label}
                             </span>
                         </div>
