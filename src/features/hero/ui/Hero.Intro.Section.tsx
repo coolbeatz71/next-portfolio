@@ -27,7 +27,7 @@ export function HeroIntroSection() {
             <div className="flex flex-row gap-2 z-10">
                 <SocialLinks />
             </div>
-            <h1 className="py-4 max-w-xl text-text-primary text-start">
+            <h1 className="py-4 max-w-xl text-typography-primary text-start">
                 <span className="text-2xl sm:text-2xl lg:text-4xl font-medium">
                     {t("i_am", { name: "Jean-Vincent" })}
                 </span>
