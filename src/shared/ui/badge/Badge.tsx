@@ -58,7 +58,7 @@ export function Badge({
                     />
                     {endCountText}
                 </div>
-                <div className="max-w-25 leading-none text-body-sm font-medium text-text-badge">
+                <div className="max-w-25 leading-none text-body-sm font-medium text-typography-badge">
                     {badgeText}
                 </div>
             </div>
