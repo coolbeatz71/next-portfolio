@@ -20,7 +20,7 @@ function PopupHeaderComponent({ children, className }: PopupHeaderProps) {
     return (
         <div
             className={cn(
-                "sticky z-50 border border-t-0 border-x-0 border-b border-border-strong",
+                "sticky z-50 border border-t-0 border-x-0 border-b border-outline-strong",
                 className
             )}
         >
