@@ -28,7 +28,7 @@ export function HamburgerMenuButton() {
                 aria-controls="mobile-menu"
                 className={`relative text-2xl p-2 size-10 sm:size-12 md:size-12
                     inline-flex items-center justify-center rounded-lg
-                    text-text-nav bg-surface-raised
+                    text-typography-nav bg-surface-raised
                     hover:bg-surface-hover focus:outline-none
                 `}
             >
