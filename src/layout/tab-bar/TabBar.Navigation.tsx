@@ -43,7 +43,7 @@ export function TabBarNavigation({
                             type="button"
                             onClick={() => setActiveTabIndex(idx)}
                             className={`py-2 cursor-pointer w-full text-xs md:text-sm font-semibold transition-colors duration-base
-                    ${isActiveTab ? "text-text-on-primary" : "text-text-contact"}`}
+                    ${isActiveTab ? "text-typography-on-primary" : "text-typography-contact"}`}
                             style={{
                                 transformStyle: "preserve-3d"
                             }}
