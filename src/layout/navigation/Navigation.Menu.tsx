@@ -56,8 +56,8 @@ function NavigationMenuComponent({ onClick, className }: NavigationMenuProps) {
                 const linkClasses = cn(
                     "rounded-lg px-3 py-2 text-sm font-medium transition-colors duration-moderate",
                     isCurrent
-                        ? "bg-primary-fill text-text-on-primary"
-                        : "text-text-nav hover:bg-surface-hover",
+                        ? "bg-primary-fill text-typography-on-primary"
+                        : "text-typography-nav hover:bg-surface-hover",
                     className
                 );
 
