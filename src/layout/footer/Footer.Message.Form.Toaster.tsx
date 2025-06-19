@@ -1,5 +1,5 @@
 import { Toaster } from "react-hot-toast";
-import { toastOptions } from "./hooks/useFooterMessageForm";
+import { toastOptions } from "./hooks/useSendEmail";
 
 /**
  * Footer message form toaster component.
