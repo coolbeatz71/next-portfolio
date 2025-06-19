@@ -37,7 +37,7 @@ export function LanguageDropdownMenu({
                         role="menuitem"
                         key={lang.code}
                         onClick={() => updateLanguage(lang.code)}
-                        className={`rounded-lg flex items-center px-3 py-2 text-sm text-text-contact
+                        className={`rounded-lg flex items-center px-3 py-2 text-sm text-typography-contact
                             hover:bg-surface-hover w-full text-left
                         `}
                     >
