@@ -51,7 +51,7 @@ export function NavigationDropdown({
             <div className="w-full">
                 <button
                     type="button"
-                    className="w-full rounded-lg text-sm font-medium flex items-center justify-between p-3.5 text-text-on-primary hover:text-text-nav hover:text-text-on-primary bg-primary-fill hover:bg-surface-hover hover:ring-3"
+                    className="w-full rounded-lg text-sm font-medium flex items-center justify-between p-3.5 text-typography-on-primary hover:text-typography-nav hover:text-typography-on-primary bg-primary-fill hover:bg-surface-hover hover:ring-3"
                     onClick={toggleDropdown}
                 >
                     <span>{t(tabs[activeTabIndex].title)}</span>
