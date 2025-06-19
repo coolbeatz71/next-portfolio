@@ -47,29 +47,29 @@ export const Timeline = ({ data }: { data: ITimelineEntry[] }) => {
                     >
                         <div className="sticky flex flex-col md:flex-row z-10 items-center top-40 self-start max-w-md lg:max-w-lg md:w-1/12 lg:w-4/5 xl:w-full">
                             <div className="absolute md:top-0 lg:top-2 md:w-8 md:h-8 rounded-full bg-surface-timeline hidden md:flex items-center justify-center">
-                                <div className="w-2 h-2 md:h-4 md:w-4 rounded-full bg-background border border-border-timeline p-1 md:p-2" />
+                                <div className="w-2 h-2 md:h-4 md:w-4 rounded-full bg-background border border-outline-timeline p-1 md:p-2" />
                             </div>
-                            <h3 className="hidden lg:block text-xl md:pl-20 md:text-2xl font-bold text-text-timeline leading-loose!">
+                            <h3 className="hidden lg:block text-xl md:pl-20 md:text-2xl font-bold text-typography-timeline leading-loose!">
                                 {item.title}
-                                <p className="flex text-sm! font-normal! text-text-timeline">
+                                <p className="flex text-sm! font-normal! text-typography-timeline">
                                     {item.subtitle}
                                 </p>
-                                <p className="flex items-center gap-1 text-sm! font-medium text-text-timeline-meta">
+                                <p className="flex items-center gap-1 text-sm! font-medium text-typography-timeline-meta">
                                     <IconGlobe /> {item.location}
                                 </p>
                             </h3>
                         </div>
 
                         <div className="relative pl-5 pr-0 md:pl-4 w-full">
-                            <h3 className="lg:hidden block text-xl md:text-2xl mb-4 text-left font-bold text-text-timeline">
+                            <h3 className="lg:hidden block text-xl md:text-2xl mb-4 text-left font-bold text-typography-timeline">
                                 {item.title}
                             </h3>
 
                             <div className="pb-4 flex flex-col lg:hidden">
-                                <p className="flex text-sm! font-normal! text-text-timeline">
+                                <p className="flex text-sm! font-normal! text-typography-timeline">
                                     {item.subtitle}
                                 </p>
-                                <p className="flex items-center gap-1 text-sm! font-medium text-text-timeline-meta">
+                                <p className="flex items-center gap-1 text-sm! font-medium text-typography-timeline-meta">
                                     <IconGlobe /> {item.location}
                                 </p>
                             </div>
