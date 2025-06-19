@@ -22,10 +22,10 @@ export function SideMenuProfile() {
         <div
             className={`
                 w-full py-4 flex flex-col items-start justify-center 
-                border border-t-0 border-x-0 border-b border-border-strong
+                border border-t-0 border-x-0 border-b border-outline-strong
             `}
         >
-            <div className="border border-border-strong relative flex items-center justify-between w-full gap-2 rounded-lg p-2">
+            <div className="border border-outline-strong relative flex items-center justify-between w-full gap-2 rounded-lg p-2">
                 <GridPatternBackground size={20} />
                 <NextImage
                     width={12}
@@ -50,7 +50,7 @@ export function SideMenuProfile() {
                             href="mailto:jeanvincent.mutombo@gmail.com"
                             className="hover:font-medium text-center w-full md:w-auto md:text-start"
                         >
-                            <span className="hover:underline text-text-contact flex justify-between">
+                            <span className="hover:underline text-typography-contact flex justify-between">
                                 jeanvincent.mutombo@gmail.com
                             </span>
                         </a>
