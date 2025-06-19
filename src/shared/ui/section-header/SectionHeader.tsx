@@ -32,10 +32,10 @@ function SectionHeaderComponent({
                     className
                 )}
             >
-                <h2 className="mb-4 text-3xl xl:text-4xl font-bold leading-relaxed! text-text-heading">
+                <h2 className="mb-4 text-3xl xl:text-4xl font-bold leading-relaxed! text-typography-heading">
                     {title}
                 </h2>
-                <p className="text-md sm:text-lg md:text-xl lg:text-xl text-text-muted leading-relaxed! font-semibold">
+                <p className="text-md sm:text-lg md:text-xl lg:text-xl text-typography-muted leading-relaxed! font-semibold">
                     {subtitle}
                 </p>
             </div>
