@@ -45,21 +45,21 @@
     --color-blob-a: var(--color-pink-500);
     --color-blob-b: var(--color-sky-500);
 
-    --color-text-primary: var(--color-slate-700);
-    --color-text-heading: var(--color-black);
-    --color-text-muted: var(--color-neutral-500);
-    --color-text-subtle: var(--color-neutral-700);
-    --color-text-contact: var(--color-gray-500);
-    --color-text-copyright: var(--color-gray-600);
-    --color-text-nav: var(--color-slate-700);
-    --color-text-on-primary: var(--color-white);
-    --color-text-inverse: var(--color-black);
-    --color-text-badge: var(--color-slate-300);
-    --color-text-dimmed: oklch(from var(--color-black) l c h / 0.5);
-    --color-text-timeline: var(--color-neutral-600);
-    --color-text-timeline-meta: var(--color-neutral-400);
-    --color-text-experience-header: var(--color-neutral-500);
-    --color-text-experience-body: var(--color-slate-600);
+    --color-typography-primary: var(--color-slate-700);
+    --color-typography-heading: var(--color-black);
+    --color-typography-muted: var(--color-neutral-500);
+    --color-typography-subtle: var(--color-neutral-700);
+    --color-typography-contact: var(--color-gray-500);
+    --color-typography-copyright: var(--color-gray-600);
+    --color-typography-nav: var(--color-slate-700);
+    --color-typography-on-primary: var(--color-white);
+    --color-typography-inverse: var(--color-black);
+    --color-typography-badge: var(--color-slate-300);
+    --color-typography-dimmed: oklch(from var(--color-black) l c h / 0.5);
+    --color-typography-timeline: var(--color-neutral-600);
+    --color-typography-timeline-meta: var(--color-neutral-400);
+    --color-typography-experience-header: var(--color-neutral-500);
+    --color-typography-experience-body: var(--color-slate-600);
 
     --color-primary: var(--color-indigo-700);
     --color-primary-subtle: var(--color-indigo-500);
@@ -97,17 +97,17 @@
     --color-timeline-mid: var(--color-indigo-400);
     --color-timeline-track: oklch(from var(--color-slate-400) l c h / 0.3);
 
-    --color-border: var(--color-slate-200);
-    --color-border-strong: var(--color-slate-300);
-    --color-border-input: var(--color-slate-200);
-    --color-border-dark: var(--color-slate-600);
-    --color-border-darker: var(--color-slate-700);
-    --color-border-neutral: var(--color-neutral-300);
-    --color-border-timeline: var(--color-gray-200);
+    --color-outline: var(--color-slate-200);
+    --color-outline-strong: var(--color-slate-300);
+    --color-outline-input: var(--color-slate-200);
+    --color-outline-dark: var(--color-slate-600);
+    --color-outline-darker: var(--color-slate-700);
+    --color-outline-neutral: var(--color-neutral-300);
+    --color-outline-timeline: var(--color-gray-200);
 
-    --color-ring-primary: var(--color-indigo-300);
-    --color-ring-surface: oklch(from var(--color-slate-400) l c h / 0.5);
-    --color-ring-error: var(--color-pink-300);
+    --color-focus-primary: var(--color-indigo-300);
+    --color-focus-surface: oklch(from var(--color-slate-400) l c h / 0.5);
+    --color-focus-error: var(--color-pink-300);
 
     --color-error: var(--color-pink-400);
     --color-error-text: var(--color-pink-500);
@@ -125,10 +125,10 @@
 
     --color-slider-overlay: oklch(from var(--color-slate-200) l c h / 0.7);
 
-    --text-badge: 0.625rem;           
-    --text-meta: 0.6667rem;               
-    --text-caption: 0.7917rem;        
-    --text-body-sm: 0.8333rem;
+    --text-badge: 7.5pt;
+    --text-meta: 8pt;
+    --text-caption: 9.5pt;
+    --text-body-sm: 10pt;
 
     --duration-fast: 100ms;
     --duration-base: 200ms;
@@ -178,26 +178,26 @@
     --color-surface-input: var(--color-slate-600);
     --color-surface-tab: var(--color-gray-900);
     --color-surface-dropdown: var(--color-slate-600);
-    --color-surface-hover: var(--color-slate-700);
-    --color-surface-hover-alt: var(--color-gray-700);
+    --color-surface-hover: var(--color-slate-600);
+    --color-surface-hover-alt: var(--color-gray-600);
     --color-surface-deeper: var(--color-slate-950);
     --color-surface-timeline: var(--color-slate-700);
-    --color-surface-timeline-full: var(--color-slate-700);
+    --color-surface-timeline-full: var(--color-slate-800);
 
-    --color-text-primary: var(--color-slate-200);
-    --color-text-heading: var(--color-white);
-    --color-text-muted: var(--color-neutral-400);
-    --color-text-subtle: var(--color-neutral-300);
-    --color-text-contact: var(--color-gray-400);
-    --color-text-copyright: var(--color-gray-300);
-    --color-text-nav: var(--color-slate-300);
-    --color-text-on-primary: var(--color-white);
-    --color-text-inverse: var(--color-white);
-    --color-text-dimmed: oklch(from var(--color-white) l c h / 0.5);
-    --color-text-timeline: var(--color-neutral-300);
-    --color-text-timeline-meta: var(--color-neutral-500);
-    --color-text-experience-header: var(--color-neutral-400);
-    --color-text-experience-body: var(--color-slate-300);
+    --color-typography-primary: var(--color-slate-200);
+    --color-typography-heading: var(--color-white);
+    --color-typography-muted: var(--color-neutral-400);
+    --color-typography-subtle: var(--color-neutral-300);
+    --color-typography-contact: var(--color-gray-400);
+    --color-typography-copyright: var(--color-gray-300);
+    --color-typography-nav: var(--color-slate-300);
+    --color-typography-on-primary: var(--color-white);
+    --color-typography-inverse: var(--color-white);
+    --color-typography-dimmed: oklch(from var(--color-white) l c h / 0.5);
+    --color-typography-timeline: var(--color-neutral-300);
+    --color-typography-timeline-meta: var(--color-neutral-500);
+    --color-typography-experience-header: var(--color-neutral-400);
+    --color-typography-experience-body: var(--color-slate-300);
 
     --color-primary-on-accent: var(--color-indigo-500);
     --color-primary-overlay: oklch(from var(--color-indigo-700) l c h / 0.6);
@@ -210,13 +210,13 @@
     --color-timeline-mid: var(--color-indigo-500);
     --color-timeline-track: oklch(from var(--color-slate-600) l c h / 0.3);
 
-    --color-border: var(--color-slate-700);
-    --color-border-strong: var(--color-slate-600);
-    --color-border-input: var(--color-slate-500);
-    --color-border-neutral: var(--color-neutral-700);
-    --color-border-timeline: var(--color-gray-600);
+    --color-outline: var(--color-slate-700);
+    --color-outline-strong: var(--color-slate-600);
+    --color-outline-input: var(--color-slate-500);
+    --color-outline-neutral: var(--color-neutral-700);
+    --color-outline-timeline: var(--color-gray-600);
 
-    --color-ring-primary: var(--color-indigo-800);
+    --color-focus-primary: var(--color-indigo-800);
 
     --color-card-gradient-start: var(--color-neutral-700);
     --color-card-gradient-mid: var(--color-neutral-800);
@@ -248,4 +248,28 @@
             text-wrap: balance;
         }
     }
+}
+
+@utility duration-fast {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: var(--duration-fast);
+}
+
+@utility duration-base {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: var(--duration-base);
+}
+
+@utility duration-moderate {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: var(--duration-moderate);
+}
+
+@utility duration-slow {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: var(--duration-slow);
 }
