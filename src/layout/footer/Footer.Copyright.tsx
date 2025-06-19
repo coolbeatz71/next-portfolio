@@ -27,10 +27,10 @@ export function FooterCopyright() {
     const { t } = useTranslation();
     return (
         <p className="text-sm text-center">
-            <span className="font-semibold text-text-copyright">
+            <span className="font-semibold text-typography-copyright">
                 &copy; {new Date().getFullYear()} Mutombo Jean-Vincent |
             </span>{" "}
-            <span className="font-light text-text-contact">
+            <span className="font-light text-typography-contact">
                 {" "}
                 {t("designed_with")} <span className="text-love">❤️</span>{" "}
                 {t("and")}{" "}
