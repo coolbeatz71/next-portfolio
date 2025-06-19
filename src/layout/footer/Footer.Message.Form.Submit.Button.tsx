@@ -27,8 +27,8 @@ export function FooterMessageFormSubmitButton({
             disabled={isLoading}
             className={`
                 disabled:cursor-not-allowed disabled:bg-surface-hover w-full md:w-44
-                focus:outline-none text-text-on-primary bg-primary-fill hover:bg-primary-deep focus:ring-4
-                focus:ring-ring-primary font-medium rounded-lg
+                focus:outline-none text-typography-on-primary bg-primary-fill hover:bg-primary-deep focus:ring-4
+                focus:ring-focus-primary font-medium rounded-lg
                 text-sm p-3 lg:p-4
             `}
         >
