@@ -44,7 +44,7 @@ export function CompaniesGrid({ items, className }: CompaniesGridProps) {
                                 }}
                                 exit={{
                                     opacity: 0,
-                                    transition: { duration: 0.15, delay: 0.15 }
+                                    transition: { duration: 0.15, delay: 0.5 }
                                 }}
                             />
                         )}
