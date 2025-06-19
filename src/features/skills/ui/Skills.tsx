@@ -67,7 +67,7 @@ export function Skills() {
                                         className={`${imgClassName} block dark:hidden`}
                                     />
                                 </div>
-                                <span className="text-sm text-center font-medium text-text-dimmed">
+                                <span className="text-sm text-center font-medium text-typography-dimmed">
                                     {skill.title}
                                 </span>
                             </div>
