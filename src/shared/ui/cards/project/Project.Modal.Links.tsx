@@ -35,7 +35,7 @@ export function ProjectModalLinks({ project }: ProjectModalLinksProps) {
     if (!hasLinks) return null;
 
     return (
-        <div className="border border-b-0 border-x-0 border-t border-border-strong">
+        <div className="border border-b-0 border-x-0 border-t border-outline-strong">
             <div className="flex justify-end gap-4 items-center pt-4">
                 <Link
                     href={project.sourceCodeLink}
@@ -43,7 +43,7 @@ export function ProjectModalLinks({ project }: ProjectModalLinksProps) {
                 >
                     <button
                         type="button"
-                        className="py-2 text-sm font-medium text-text-contact focus:outline-none rounded-lg hover:text-text-inverse dark:hover:text-text-on-primary"
+                        className="py-2 text-sm font-medium text-typography-contact focus:outline-none rounded-lg hover:text-typography-inverse dark:hover:text-typography-on-primary"
                     >
                         <div className="flex justify-center items-center text-sm font-medium">
                             <IconCodeBranch className="mr-1 h-3 w-3" />
