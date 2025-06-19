@@ -23,19 +23,19 @@ export const TimelineFull = ({ data }: { data: ITimelineEntry[] }) => {
             <div className="relative">
                 {data.map((item) => (
                     <div key={item.id} className="flex justify-start mb-4">
-                        <div className="relative w-full border rounded-lg bg-surface-timeline border-border-timeline p-3 md:p-4 pb-6!">
+                        <div className="relative w-full border rounded-lg bg-surface-timeline border-outline-timeline p-3 md:p-4 pb-6!">
                             <div className="absolute top-0 bottom-0 w-[70%] opacity-50 z-10">
                                 <GridPatternBackground size={20} />
                             </div>
                             <div className="relative z-50">
-                                <h3 className="block text-sm md:text-lg font-bold text-text-timeline leading-loose!">
+                                <h3 className="block text-sm md:text-lg font-bold text-typography-timeline leading-loose!">
                                     <div className="flex justify-between items-center">
                                         {item.title}
-                                        <p className="flex items-center gap-1 text-xs font-medium text-text-timeline-meta">
+                                        <p className="flex items-center gap-1 text-xs font-medium text-typography-timeline-meta">
                                             <IconGlobe /> {item.location}
                                         </p>
                                     </div>
-                                    <p className="flex text-sm! font-normal! text-text-timeline">
+                                    <p className="flex text-sm! font-normal! text-typography-timeline">
                                         {item.subtitle}
                                     </p>
                                 </h3>
