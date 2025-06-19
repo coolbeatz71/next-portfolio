@@ -17,10 +17,10 @@ export function FooterMessageFormHeader() {
 
     return (
         <Fragment>
-            <h3 className="w-full text-2xl font-bold text-text-primary">
+            <h3 className="w-full text-2xl font-bold text-typography-primary">
                 {t("lets_connect")} ✨
             </h3>
-            <p className="w-full font-medium text-text-contact">
+            <p className="w-full font-medium text-typography-contact">
                 {t("lets_connect_description")}
             </p>
         </Fragment>
