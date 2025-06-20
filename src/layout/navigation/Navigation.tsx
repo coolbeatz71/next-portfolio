@@ -30,11 +30,9 @@ export function Navigation() {
     }, [y]);
 
     return (
-        <nav
-            className={`sticky top-0 z-40 transition duration-fast ${scrollBackdrop}`}
-        >
+        <nav className={`sticky top-0 z-40 duration-fast ${scrollBackdrop}`}>
             <div className={RESPONSIVE_CLASSNAME}>
-                <div className="relative flex py-4 sm:py-4 lg:py-5 items-center justify-between gap-2">
+                <div className="relative flex py-4 lg:py-5 items-center justify-between gap-2">
                     <div className="inset-y-0 left-0 flex items-center lg:hidden">
                         <HamburgerMenuButton />
                     </div>
