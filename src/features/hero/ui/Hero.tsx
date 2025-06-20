@@ -22,17 +22,14 @@ export function Hero() {
         <ScrollReveal className="delay-0">
             <section
                 id="hero"
-                className={cn(
-                    RESPONSIVE_CLASSNAME,
-                    "py-4 sm:py-4 md:py-4 lg:py-8"
-                )}
+                className={cn(RESPONSIVE_CLASSNAME, "py-4 lg:py-8")}
             >
                 <Spotlight />
                 <div className="grid grid-cols-1 xl:grid-cols-2 py-4 md:py-10 2xl:py-32 gap-16 md:gap-0">
                     <div className="flex flex-col items-start p-0 md:py-8 xl:py-16 gap-4">
                         <HeroIntroSection />
                     </div>
-                    <div className="flex relative justify-end md:justify-end">
+                    <div className="flex relative justify-end">
                         <HeroImageSection />
                     </div>
                 </div>
