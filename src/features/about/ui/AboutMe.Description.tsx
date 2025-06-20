@@ -31,11 +31,11 @@ export function AboutMeDescription() {
             <h2 className="text-start mb-4 text-3xl font-bold tracking-tight md:leading-relaxed text-typography-heading">
                 {t("aboutme_title")}
             </h2>
-            <p className="text-md sm:text-lg md:text-xl lg:text-xl text-start text-typography-muted tracking-tight md:leading-relaxed">
+            <p className="text-md sm:text-lg md:text-xl text-start text-typography-muted tracking-tight md:leading-relaxed">
                 {t("aboutme_subtitle")}
             </p>
             <hr className="h-px my-4 md:my-8 border-0 bg-surface-track" />
-            <h2 className="text-start mb-4 text-xl md:text-xl xl:text-2xl font-bold leading-tight! text-typography-primary">
+            <h2 className="text-start mb-4 text-xl xl:text-2xl font-bold leading-tight! text-typography-primary">
                 {t("about_myself")}
             </h2>
 
