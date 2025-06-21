@@ -49,7 +49,7 @@ export function Skills() {
                                 <div
                                     className={`
                                         relative h-16 w-16 lg:h-24 lg:w-24 transform 
-                                        transition-transform duration-slow ease-out hover:scale-90
+                                        transition-transform ease-out hover:scale-90
                                     `}
                                 >
                                     {/* dark image */}
