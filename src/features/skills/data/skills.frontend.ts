@@ -29,6 +29,6 @@ export const devStackFrontend: ISkillsByStack[] = [
         title: "Flutter",
         lightImage: "/dev-tools/flutter.svg",
         darkImage: "/dev-tools/flutter.svg",
-        progress: 70
+        progress: 85
     }
 ];
