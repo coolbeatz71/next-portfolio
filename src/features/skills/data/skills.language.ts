@@ -29,6 +29,6 @@ export const devStackLanguages: ISkillsByStack[] = [
         title: "C#",
         lightImage: "/dev-tools/csharp.svg",
         darkImage: "/dev-tools/csharp.svg",
-        progress: 30
+        progress: 70
     }
 ];
