@@ -41,8 +41,11 @@ export function Modal({
             {isOpen && <PopupBackdrop onClick={onToggle} />}
 
             <div
+                role="dialog"
+                aria-modal="true"
+                aria-label="modal"
                 className={cn(
-                    "fixed z-50 w-[96%] md:w-[90%] max-w-xl bg-background rounded-lg shadow-lg transition-all duration-slow ease-out transform",
+                    "fixed z-50 w-[96%] md:w-[90%] max-w-xl bg-background rounded-lg shadow-lg duration-slow ease-out transform",
                     className
                 )}
                 style={{
