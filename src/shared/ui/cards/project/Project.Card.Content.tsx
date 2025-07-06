@@ -28,7 +28,7 @@ export function ProjectCardContent({
     return (
         <div className="md:w-1/2 p-4 flex flex-col justify-between">
             <div onClick={onClick} onKeyDown={onClick}>
-                <h3 className="cursor-text text-lg font-semibold mb-2 text-typography-primary transition-colors duration-base">
+                <h3 className="cursor-text text-lg font-semibold mb-2 text-typography-primary duration-base">
                     {project.name}
                 </h3>
                 <p className="cursor-text text-typography-muted mb-4 line-clamp-4 text-body-sm">
