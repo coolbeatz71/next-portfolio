@@ -27,8 +27,10 @@ function ImageColumnComponent({
     columnKey,
     imageHeight
 }: ImageColumnProps) {
-    const gradientOverlayClassName = `absolute inset-0 h-full w-full bg-linear-to-r from-parallax-gradient-start
-        to-parallax-gradient-end transform scale-[0.75] rounded-full blur-2xl`;
+    const gradientOverlayClassName = `
+    absolute inset-0 h-full w-full bg-linear-to-r 
+    from-parallax-gradient-start to-parallax-gradient-end 
+    transform scale-[0.75] rounded-full blur-2xl`;
 
     const imageContainerClassName = cn(
         "h-[14rem] md:h-[20rem] lg:h-[16rem] 2xl:h-[22rem]",
@@ -52,7 +54,7 @@ function ImageColumnComponent({
                     <div className={gradientOverlayClassName} />
                     <div className={imageContainerClassName}>
                         <NextImage
-                            width={360}
+                            width={480}
                             src={img.src}
                             alt={img.alt}
                             loading="lazy"
@@ -60,6 +62,7 @@ function ImageColumnComponent({
                             height={imageHeight}
                             className={imageClassName}
                             blurDataURL={img.blurData}
+                            sizes="(max-width: 640px) 45vw, (max-width: 1024px) 40vw, 360px"
                         />
                     </div>
                 </motion.div>
