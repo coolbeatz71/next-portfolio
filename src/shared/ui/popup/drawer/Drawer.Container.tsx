@@ -44,7 +44,7 @@ function DrawerContainerComponent({
             onClick={(e) => e.stopPropagation()}
             onKeyUp={(e) => e.stopPropagation()}
             style={{ width, ...getTranslateStyle(isOpen, width, position) }}
-            className="pointer-events-auto relative h-full transition-transform ease-in-out duration-base"
+            className="pointer-events-auto relative h-full ease-in-out duration-base"
         >
             <div
                 className={cn(
