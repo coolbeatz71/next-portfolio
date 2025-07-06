@@ -30,7 +30,7 @@ export function LanguageDropdownMenu({
                 left-0 right-0 px-1 mt-1 w-38 rounded-lg shadow-xl bg-surface-dropdown
             `}
         >
-            <div className="py-1" aria-labelledby="dropdown-menu">
+            <div role="menu" className="py-1" aria-label="Select language">
                 {languageList.map((lang) => (
                     <button
                         type="button"
