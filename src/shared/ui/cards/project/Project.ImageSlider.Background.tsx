@@ -29,10 +29,10 @@ export function ProjectImageSliderBackground({
 
     return (
         <div
-            className={`absolute top-0 left-0 w-full h-full z-0 transition-all duration-moderate ${roundedClass}`}
+            className={`absolute top-0 left-0 w-full h-full z-0 duration-moderate ${roundedClass}`}
         >
             <div
-                className={`absolute z-20 w-full h-full bg-slider-overlay backdrop-blur-lg transition-all duration-moderate ${roundedClass}`}
+                className={`absolute z-20 w-full h-full bg-slider-overlay backdrop-blur-lg transition-all ${roundedClass}`}
             />
             <NextImage
                 fill
@@ -41,8 +41,8 @@ export function ProjectImageSliderBackground({
                 src={src}
                 alt={alt}
                 blurDataURL={imagePlaceholder}
+                className={`object-cover transition-all ${roundedClass}`}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                className={`object-cover transition-all duration-moderate ${roundedClass}`}
             />
         </div>
     );
