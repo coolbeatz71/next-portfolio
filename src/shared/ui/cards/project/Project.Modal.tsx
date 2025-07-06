@@ -1,11 +1,18 @@
+import dynamic from "next/dynamic";
 import NextImage from "next/image";
 import { Fragment } from "react";
 import { useTranslation } from "react-i18next";
 import { BadgeSpan } from "@/shared/ui/badge/Badge.Span";
-import { ProjectImageSlider } from "./Project.ImageSlider";
 import { ProjectModalLinks } from "./Project.Modal.Links";
-
 import type { ProjectModalProps } from "./types";
+
+const ProjectImageSlider = dynamic(async () => {
+    const mod = await import(
+        /* webpackChunkName: "ProjectImageSlider" */
+        "./Project.ImageSlider"
+    );
+    return mod.ProjectImageSlider;
+});
 
 /**
  * Project modal content component.
@@ -42,6 +49,7 @@ export function ProjectModal({ project }: ProjectModalProps) {
                         loading="lazy"
                         src={project.images[0].src}
                         alt={project.images[0].alt}
+                        sizes="(max-width: 768px) 100vw, 300px"
                         className="object-cover rounded-lg w-full h-56 md:h-72"
                     />
                 )}
