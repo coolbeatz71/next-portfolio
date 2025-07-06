@@ -18,7 +18,7 @@ function BadgeSpanComponent({ text }: BadgeSpanProps) {
     return (
         <span
             className={`cursor-pointer bg-primary-faint text-primary-text border border-primary-border text-badge font-semibold
-                px-2.5 py-0.5 rounded-lg transition-colors duration-fast
+                px-2.5 py-0.5 rounded-lg duration-fast
             `}
         >
             {text}
