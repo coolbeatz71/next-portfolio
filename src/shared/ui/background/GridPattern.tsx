@@ -19,8 +19,8 @@ import type { GridPatternProps } from "./types";
  * @returns The SVG grid pattern element
  */
 export function GridPattern({
-    width,
-    height,
+    width = 20,
+    height = 20,
     x,
     y,
     squares,
