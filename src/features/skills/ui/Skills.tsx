@@ -57,6 +57,7 @@ export function Skills() {
                                         fill
                                         alt={skill.title}
                                         src={skill.darkImage}
+                                        sizes="(min-width: 1024px) 96px, 64px"
                                         className={`${imgClassName} hidden dark:block`}
                                     />
                                     {/* light image */}
@@ -64,6 +65,7 @@ export function Skills() {
                                         fill
                                         alt={skill.title}
                                         src={skill.lightImage}
+                                        sizes="(min-width: 1024px) 96px, 64px"
                                         className={`${imgClassName} block dark:hidden`}
                                     />
                                 </div>
