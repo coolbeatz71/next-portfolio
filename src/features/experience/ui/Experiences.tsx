@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useMedia } from "react-use";
@@ -12,10 +13,24 @@ import {
 } from "@/shared/config/style";
 import { cn } from "@/shared/lib/cn";
 import { MovingBorderButton } from "@/shared/ui/buttons/MovingBorder.Button";
-import { Drawer } from "@/shared/ui/popup/drawer/Drawer";
 import { SectionHeader } from "@/shared/ui/section-header/SectionHeader";
 import { Timeline } from "@/shared/ui/timeline/Timeline";
-import { TimelineFull } from "@/shared/ui/timeline/Timeline.Full";
+
+const Drawer = dynamic(async () => {
+    const mod = await import(
+        /* webpackChunkName: "Drawer" */
+        "@/shared/ui/popup/drawer/Drawer"
+    );
+    return mod.Drawer;
+});
+
+const TimelineFull = dynamic(async () => {
+    const mod = await import(
+        /* webpackChunkName: "TimelineFull" */
+        "@/shared/ui/timeline/Timeline.Full"
+    );
+    return mod.TimelineFull;
+});
 
 /**
  * Experiences section component.
