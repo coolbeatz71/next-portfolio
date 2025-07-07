@@ -117,7 +117,7 @@
     --color-card-gradient-mid: var(--color-neutral-300);
 
     --color-blob-pink: var(--color-pink-500);
-    --color-blob-sky: var(--color-sky-500);
+    --color-blob-violet: var(--color-violet-600);
 
     --color-parallax-overlay: oklch(from var(--primitive-brand-500) l c h / 0.2);
     --color-parallax-border: oklch(from var(--primitive-neutral-800) l c h / 0.1);
