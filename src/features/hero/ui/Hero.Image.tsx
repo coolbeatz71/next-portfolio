@@ -27,7 +27,7 @@ export function HeroImage() {
                     fill
                     priority
                     alt="profile"
-                    src="/hero/me.png"
+                    src="/hero/me.webp"
                     sizes="(max-width: 768px) 90vw, (max-width: 1024px) 45vw, 384px"
                 />
             </div>
