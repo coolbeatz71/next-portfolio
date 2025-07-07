@@ -30,19 +30,21 @@ export function TabBarNavigation({
     const { t } = useTranslation();
 
     return (
-        <ul data-tabs="tabs" className={className}>
+        <ul role="tablist" data-tabs="tabs" className={className}>
             {tabs.map((tab, idx) => {
                 const isActiveTab = idx === activeTabIndex;
                 return (
                     <li
                         key={tab.context}
+                        role="presentation"
                         className="z-10 flex-auto text-center"
                     >
                         <button
                             role="tab"
                             type="button"
+                            aria-selected={isActiveTab}
                             onClick={() => setActiveTabIndex(idx)}
-                            className={`py-2 cursor-pointer w-full text-xs md:text-sm font-semibold transition-colors duration-base
+                            className={`py-2 cursor-pointer w-full text-xs md:text-sm font-semibold duration-base
                     ${isActiveTab ? "text-typography-on-primary" : "text-typography-contact"}`}
                             style={{
                                 transformStyle: "preserve-3d"
