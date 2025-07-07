@@ -58,9 +58,8 @@ export function useSendEmail() {
             );
             form.reset();
             toast.success(t("toast.success"));
-        } catch (error) {
+        } catch {
             toast.error(t("toast.error"));
-            console.log("FAILED...", error);
         } finally {
             setIsLoading(false);
         }
