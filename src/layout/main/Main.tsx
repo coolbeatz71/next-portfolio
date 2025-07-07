@@ -1,16 +1,79 @@
+import dynamic from "next/dynamic";
 import { Fragment } from "react";
-import { AboutMe } from "@/features/about/ui/AboutMe";
-import { Companies } from "@/features/companies/ui/Companies";
-import { Experiences } from "@/features/experience/ui/Experiences";
 import { Hero } from "@/features/hero/ui/Hero";
-import { Projects } from "@/features/projects/ui/Projects";
-import { Skills } from "@/features/skills/ui/Skills";
-import { Footer } from "@/layout/footer/Footer";
 import { Navigation } from "@/layout/navigation/Navigation";
-import { BackgroundBeams } from "@/shared/ui/background/Beams.Background";
 import { BackgroundGradient } from "@/shared/ui/background/Gradient.Background";
 import { GridBackground } from "@/shared/ui/background/Grid.Background";
-import { DownloadResumeFixedButton } from "@/shared/ui/buttons/DownloadResume.Fixed.Button";
+
+const BackgroundBeams = dynamic(
+    async () => {
+        const mod = await import(
+            /* webpackChunkName: "BackgroundBeams" */
+            "@/shared/ui/background/Beams.Background"
+        );
+        return mod.BackgroundBeams;
+    },
+    { ssr: false }
+);
+
+const Companies = dynamic(async () => {
+    const mod = await import(
+        /* webpackChunkName: "Companies" */
+        "@/features/companies/ui/Companies"
+    );
+    return mod.Companies;
+});
+
+const AboutMe = dynamic(async () => {
+    const mod = await import(
+        /* webpackChunkName: "AboutMe" */
+        "@/features/about/ui/AboutMe"
+    );
+    return mod.AboutMe;
+});
+
+const Experiences = dynamic(async () => {
+    const mod = await import(
+        /* webpackChunkName: "Experiences" */
+        "@/features/experience/ui/Experiences"
+    );
+    return mod.Experiences;
+});
+
+const Projects = dynamic(async () => {
+    const mod = await import(
+        /* webpackChunkName: "Projects" */
+        "@/features/projects/ui/Projects"
+    );
+    return mod.Projects;
+});
+
+const Skills = dynamic(async () => {
+    const mod = await import(
+        /* webpackChunkName: "Skills" */
+        "@/features/skills/ui/Skills"
+    );
+    return mod.Skills;
+});
+
+const Footer = dynamic(async () => {
+    const mod = await import(
+        /* webpackChunkName: "Footer" */
+        "@/layout/footer/Footer"
+    );
+    return mod.Footer;
+});
+
+const DownloadResumeFixedButton = dynamic(
+    async () => {
+        const mod = await import(
+            /* webpackChunkName: "DownloadResumeFixedButton" */
+            "@/shared/ui/buttons/DownloadResume.Fixed.Button"
+        );
+        return mod.DownloadResumeFixedButton;
+    },
+    { ssr: false }
+);
 
 /**
  * Main page container component.
