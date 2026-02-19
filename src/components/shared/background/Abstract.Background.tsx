@@ -1,5 +1,5 @@
-import { cn } from "@/helpers/mergeClassName";
 import { memo } from "react";
+import { cn } from "@/helpers/mergeClassName";
 
 export interface AbstractBackgroundProps {
     maskImage: string;

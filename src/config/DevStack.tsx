@@ -1,12 +1,11 @@
 import { SkillSection } from "@/components/layout/skills/Skills.Section";
-import type { Tabs } from "@/config/Projects";
-
 import { devStackBackend } from "@/config/DevStack.Backend";
 import { devStackDatabase } from "@/config/DevStack.Database";
 import { devStackFrontend } from "@/config/DevStack.Frontend";
 import { devStackInfrastructure } from "@/config/DevStack.Infrastructure";
 import { devStackLanguages } from "@/config/DevStack.Language";
 import { devStackOthers } from "@/config/DevStack.Other";
+import type { Tabs } from "@/config/Projects";
 
 export interface SkillsByStack {
     progress: number;

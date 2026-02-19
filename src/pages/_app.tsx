@@ -1,10 +1,10 @@
-import { getLanguage } from "@/helpers/getLanguage";
-import locales from "@/locales";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
-import { ThemeProvider } from "next-themes";
 import type { AppProps } from "next/app";
+import { ThemeProvider } from "next-themes";
 import { useMemo } from "react";
+import { getLanguage } from "@/helpers/getLanguage";
+import locales from "@/locales";
 
 import "@/styles/global.css";
 

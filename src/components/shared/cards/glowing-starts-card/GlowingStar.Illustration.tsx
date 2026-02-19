@@ -1,4 +1,4 @@
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence } from "motion/react";
 import { memo, useEffect, useRef, useState } from "react";
 import { Glow } from "./GlowingStar.Glow";
 import { Star } from "./GlowingStars.Star";

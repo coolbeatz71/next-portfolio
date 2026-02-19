@@ -1,8 +1,8 @@
+import { useTranslation } from "react-i18next";
 import { Badge } from "@/components/shared/badge/Badge";
 import { BadgeDevTools } from "@/components/shared/badge/Badge.DevTools";
 import { creditBadgeList } from "@/config/CreditBadge";
 import { devToolsLogoList } from "@/config/DevTools";
-import { useTranslation } from "react-i18next";
 
 export function HeroBadges() {
     const { t } = useTranslation();

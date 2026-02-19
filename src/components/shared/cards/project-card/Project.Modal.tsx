@@ -1,12 +1,12 @@
-import { IconArrowUpRight, IconCodeBranch } from "@/config/Icon";
 import NextImage from "next/image";
-import { Fragment } from "react";
 import type { ReactNode } from "react";
+import { Fragment } from "react";
+import { useTranslation } from "react-i18next";
 
 import { BadgeSpan } from "@/components/shared/badge/Badge.Span";
 import { LitUpBorderButton } from "@/components/shared/buttons/litup-border/LitUpBorder.Button";
+import { IconArrowUpRight, IconCodeBranch } from "@/config/Icon";
 import type { ProjectByStack } from "@/config/Projects";
-import { useTranslation } from "react-i18next";
 import { ProjectImageSlider } from "./Project.ImageSlider";
 
 export interface ProjectModalProps {

@@ -1,4 +1,4 @@
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from "motion/react";
 import NextImage from "next/image";
 import { useCallback, useMemo, useState } from "react";
 import { useInterval, useMedia } from "react-use";

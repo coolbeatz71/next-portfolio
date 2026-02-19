@@ -1,5 +1,5 @@
-import { IconEmail, IconLocation, IconPhone } from "@/config/Icon";
 import { useTranslation } from "react-i18next";
+import { IconEmail, IconLocation, IconPhone } from "@/config/Icon";
 
 export function FooterContact() {
     const { t } = useTranslation();

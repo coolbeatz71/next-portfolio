@@ -1,8 +1,8 @@
+import { useTranslation } from "react-i18next";
 import { ScrollReveal } from "@/components/shared/scroll-reveal/ScrollReveal";
 import { SectionHeader } from "@/components/shared/section-header/SectionHeader";
 import { companyLogoList } from "@/config/Companies";
 import { RESPONSIVE_CLASSNAME } from "@/config/ThemeStyle";
-import { useTranslation } from "react-i18next";
 import { CompaniesGrid } from "./Companies.Grid";
 
 export function Companies() {

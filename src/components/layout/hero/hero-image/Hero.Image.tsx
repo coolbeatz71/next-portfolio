@@ -1,7 +1,7 @@
+import NextImage from "next/image";
 import { AnimatedLine } from "@/components/shared/shapes/AnimatedLine";
 import { AnimatedShape } from "@/components/shared/shapes/AnimatedShape";
 import { useAnimation } from "@/hooks/UseAnimation";
-import NextImage from "next/image";
 import { HeroImageBackground } from "./Hero.Image.Background";
 
 export function HeroImage() {

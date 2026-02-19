@@ -1,5 +1,5 @@
-import { useEffect, useRef, useState } from "react";
 import type { RefObject } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export interface UseScrollRevealType {
     ref: RefObject<HTMLDivElement | null>;

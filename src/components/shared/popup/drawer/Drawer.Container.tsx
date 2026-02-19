@@ -1,6 +1,6 @@
+import { memo, type ReactNode } from "react";
 import { CUSTOM_SCROLLBAR } from "@/config/ThemeStyle";
 import { cn } from "@/helpers/mergeClassName";
-import { type ReactNode, memo } from "react";
 
 export interface DrawerContainerProps {
     width: string;

@@ -1,11 +1,10 @@
 import { Fragment } from "react";
-
+import { useTranslation } from "react-i18next";
 import { Breadcrumb } from "@/components/shared/breadcrumb/Breadcrumb";
 import { GradientShineButton } from "@/components/shared/buttons/gradient-shine/GradientShine.Button";
 import { SocialLinks } from "@/components/shared/social-links/SocialLinks";
 import { TypeWriter } from "@/components/shared/type-writer/TypeWriter";
 import { RESUME_LINK } from "@/config/Resume";
-import { useTranslation } from "react-i18next";
 
 export function HeroIntroSection() {
     const { t } = useTranslation();

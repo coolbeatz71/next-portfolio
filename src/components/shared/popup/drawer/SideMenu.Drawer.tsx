@@ -1,5 +1,5 @@
-import { Fragment } from "react";
 import type { ReactNode } from "react";
+import { Fragment } from "react";
 import { useLockBodyScroll } from "react-use";
 
 import { cn } from "@/helpers/mergeClassName";

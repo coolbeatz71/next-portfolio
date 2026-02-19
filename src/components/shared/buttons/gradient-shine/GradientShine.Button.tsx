@@ -1,5 +1,5 @@
-import { cn } from "@/helpers/mergeClassName";
 import type { ReactNode } from "react";
+import { cn } from "@/helpers/mergeClassName";
 
 export interface GradientShineButtonProps {
     children: ReactNode;

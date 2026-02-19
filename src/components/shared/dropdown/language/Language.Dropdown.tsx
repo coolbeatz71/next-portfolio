@@ -1,10 +1,10 @@
-import { IconChevronUpDown } from "@/config/Icon";
 import dayjs from "dayjs";
 import { memo, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useClickAway } from "react-use";
+import { IconChevronUpDown } from "@/config/Icon";
 
-import { USER_LANG, languageList } from "@/config/Language";
+import { languageList, USER_LANG } from "@/config/Language";
 import { getLanguage } from "@/helpers/getLanguage";
 import { isServer } from "@/helpers/isServer";
 import locales from "@/locales";
