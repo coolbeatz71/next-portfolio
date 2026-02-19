@@ -1,5 +1,5 @@
-import { cn } from "@/helpers/mergeClassName";
 import type { ElementType, HTMLAttributes, ReactNode } from "react";
+import { cn } from "@/helpers/mergeClassName";
 
 interface OutlineButton extends HTMLAttributes<HTMLButtonElement> {
     borderRadius?: string;

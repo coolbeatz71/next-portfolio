@@ -1,8 +1,8 @@
+import { cubicBezier, useScroll, useSpring, useTransform } from "motion/react";
+import { useEffect, useMemo, useState } from "react";
 import type { AboutMeImage } from "@/config/AboutMe.Images";
 import { getRandomImages } from "@/helpers/getRandomImages";
 import { cn } from "@/helpers/mergeClassName";
-import { cubicBezier, useScroll, useSpring, useTransform } from "framer-motion";
-import { useEffect, useMemo, useState } from "react";
 import { ImageColumn } from "./ParallaxScroll.ImageColumn";
 
 export interface ParallaxScrollProps {

@@ -1,5 +1,5 @@
-import { SpinnerIcon } from "@/components/shared/icon/Spinner.Icon";
 import { useTranslation } from "react-i18next";
+import { SpinnerIcon } from "@/components/shared/icon/Spinner.Icon";
 
 interface FormSubmitButtonProps {
     isLoading: boolean;

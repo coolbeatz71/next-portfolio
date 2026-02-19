@@ -1,7 +1,7 @@
-import { cn } from "@/helpers/mergeClassName";
 import type { InputHTMLAttributes, TextareaHTMLAttributes } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
+import { cn } from "@/helpers/mergeClassName";
 import {
     BASE_INPUT_CLASSNAME,
     BASE_LABEL_CLASSNAME,

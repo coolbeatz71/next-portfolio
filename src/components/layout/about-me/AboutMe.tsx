@@ -1,9 +1,8 @@
 import { ScrollReveal } from "@/components/shared/scroll-reveal/ScrollReveal";
-import { AboutMeDescription } from "./AboutMe.Description";
-import { AboutMeImages } from "./AboutMe.Images";
-
 import { RESPONSIVE_CLASSNAME } from "@/config/ThemeStyle";
 import { cn } from "@/helpers/mergeClassName";
+import { AboutMeDescription } from "./AboutMe.Description";
+import { AboutMeImages } from "./AboutMe.Images";
 
 export function AboutMe() {
     return (

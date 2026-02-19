@@ -1,7 +1,7 @@
-import { IconLink } from "@/config/Icon";
-import { navigationList } from "@/config/Navigation";
 import NextLink from "next/link";
 import { useTranslation } from "react-i18next";
+import { IconLink } from "@/config/Icon";
+import { navigationList } from "@/config/Navigation";
 
 export function FooterNavigation() {
     const { t } = useTranslation();

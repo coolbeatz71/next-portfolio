@@ -1,4 +1,4 @@
-import { type Variants, motion } from "framer-motion";
+import { motion, type Variants } from "motion/react";
 import { useTheme } from "next-themes";
 import { useCallback } from "react";
 
@@ -73,8 +73,7 @@ export function ThemeToggle() {
         d: moonPath,
         rotate: -360,
         scale: 1.5,
-        x: -25,
-        y: -25,
+        transformOrigin: "25px 25px",
         stroke: "#5fbdf7",
         fill: "#4640f3",
         fillOpacity: 0.65,
@@ -85,8 +84,10 @@ export function ThemeToggle() {
     const sunAnimation = {
         d: sunPath,
         rotate: 0,
-        stroke: "#fbbf24",
-        fill: "#ffc83e",
+        scale: 1,
+        transformOrigin: "25px 25px",
+        fill: "#ffb700",
+        stroke: "#ffc83e",
         fillOpacity: 0.65,
         strokeOpacity: 1
     };

@@ -1,4 +1,4 @@
-import { type Variants, motion } from "framer-motion";
+import { motion, type Variants } from "motion/react";
 import { useInView } from "react-intersection-observer";
 
 import { ProjectCard } from "@/components/shared/cards/project-card/Project.Card";

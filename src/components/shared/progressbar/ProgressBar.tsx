@@ -1,8 +1,8 @@
-import { BadgeSpan } from "@/components/shared/badge/Badge.Span";
-import type { SkillsByStack } from "@/config/DevStack";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import NextImage from "next/image";
 import { useInView } from "react-intersection-observer";
+import { BadgeSpan } from "@/components/shared/badge/Badge.Span";
+import type { SkillsByStack } from "@/config/DevStack";
 
 export function ProgressBar({
     title,

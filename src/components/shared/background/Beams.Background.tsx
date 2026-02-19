@@ -1,4 +1,4 @@
-import { type Transition, motion } from "framer-motion";
+import { motion, type Transition } from "motion/react";
 import { memo } from "react";
 
 const paths = [

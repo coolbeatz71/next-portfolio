@@ -1,9 +1,8 @@
-import type { ProjectByStack } from "@/config/Projects";
-import { type Variants, motion } from "framer-motion";
+import { motion, type Variants } from "motion/react";
 import dynamic from "next/dynamic";
-
 import { memo, useState } from "react";
 import { useTranslation } from "react-i18next";
+import type { ProjectByStack } from "@/config/Projects";
 import { ProjectCardImage } from "./Project.Card.Image";
 import { ProjectModal } from "./Project.Modal";
 import { ProjectCardContent } from "./project.Card.Content";

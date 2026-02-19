@@ -1,4 +1,4 @@
-import type { MotionProps, Transition } from "framer-motion";
+import type { MotionProps, Transition } from "motion/react";
 
 export const useAnimation = () => {
     const floatAnimation: MotionProps["animate"] = {

@@ -1,5 +1,5 @@
+import { memo, type ReactNode } from "react";
 import { cn } from "@/helpers/mergeClassName";
-import { type ReactNode, memo } from "react";
 
 export interface PopupHeaderProps {
     className?: string;

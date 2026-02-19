@@ -1,9 +1,9 @@
+import { useScroll } from "motion/react";
+import { useEffect, useState } from "react";
 import { GradientShineButton } from "@/components/shared/buttons/gradient-shine/GradientShine.Button";
 import { IconDownload } from "@/config/Icon";
 import { RESUME_LINK } from "@/config/Resume";
 import { throttle } from "@/helpers/throttle";
-import { useScroll } from "framer-motion";
-import { useEffect, useState } from "react";
 
 export function DownloadResumeFixedButton() {
     const [isVisible, setIsVisible] = useState(false);

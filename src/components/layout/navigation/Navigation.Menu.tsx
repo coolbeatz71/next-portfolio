@@ -1,10 +1,10 @@
+import NextLink from "next/link";
+import { Fragment, memo, useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { navigationList } from "@/config/Navigation";
 import { getActiveSection } from "@/helpers/getActiveSection";
 import { cn } from "@/helpers/mergeClassName";
 import { throttle } from "@/helpers/throttle";
-import NextLink from "next/link";
-import { Fragment, memo, useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
 
 export interface NavigationMenuProps {
     className?: string;

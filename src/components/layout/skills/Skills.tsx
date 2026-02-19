@@ -1,3 +1,5 @@
+import NextImage from "next/image";
+import { useTranslation } from "react-i18next";
 import { TabBar } from "@/components/layout/tab-bar/TabBar";
 import { ScrollReveal } from "@/components/shared/scroll-reveal/ScrollReveal";
 import { SectionHeader } from "@/components/shared/section-header/SectionHeader";
@@ -5,8 +7,6 @@ import { devStackTabs } from "@/config/DevStack";
 import { mainStackList } from "@/config/DevStack.Main";
 import { RESPONSIVE_CLASSNAME } from "@/config/ThemeStyle";
 import { cn } from "@/helpers/mergeClassName";
-import NextImage from "next/image";
-import { useTranslation } from "react-i18next";
 
 export function Skills() {
     const { t } = useTranslation();
