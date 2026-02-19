@@ -7,7 +7,7 @@ import { TypeWriter } from "@/components/shared/type-writer/TypeWriter";
 import { RESUME_LINK } from "@/config/Resume";
 import { useTranslation } from "react-i18next";
 
-export function HeroIntroSection(): JSX.Element {
+export function HeroIntroSection() {
     const { t } = useTranslation();
 
     const techStackSummary = ["FullStack/PREN", "PHP/Laravel", "Dart/Flutter"];
@@ -27,7 +27,7 @@ export function HeroIntroSection(): JSX.Element {
                         t("frontend_engineer"),
                         t("mobile_engineer")
                     ]}
-                    className="pl-0 !leading-tight text-3xl sm:text-4xl lg:text-5xl font-bold text-indigo-700 dark:text-indigo-500"
+                    className="pl-0 leading-tight! text-3xl sm:text-4xl lg:text-5xl font-bold text-indigo-700 dark:text-indigo-500"
                 />
             </h1>
 

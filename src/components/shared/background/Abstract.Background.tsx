@@ -1,15 +1,16 @@
 import { cn } from "@/helpers/mergeClassName";
+import { memo } from "react";
 
 export interface AbstractBackgroundProps {
+    maskImage: string;
     className?: string;
     backgroundClass: string;
-    maskImage: string;
 }
 
-export function AbstractBackground({
+function AbstractBackgroundComponent({
     maskImage,
     backgroundClass,
-    className = "h-[50rem]"
+    className = "h-200"
 }: AbstractBackgroundProps) {
     return (
         <div
@@ -28,3 +29,5 @@ export function AbstractBackground({
         </div>
     );
 }
+
+export const AbstractBackground = memo(AbstractBackgroundComponent);

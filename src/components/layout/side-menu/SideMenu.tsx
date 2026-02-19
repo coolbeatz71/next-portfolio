@@ -8,7 +8,7 @@ export interface SideMenuProps {
     toggleDrawer: () => void;
 }
 
-export function SideMenu({ isOpen, toggleDrawer }: SideMenuProps): JSX.Element {
+export function SideMenu({ isOpen, toggleDrawer }: SideMenuProps) {
     return (
         <SideMenuDrawer
             isOpen={isOpen}

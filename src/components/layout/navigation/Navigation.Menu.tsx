@@ -3,7 +3,7 @@ import { getActiveSection } from "@/helpers/getActiveSection";
 import { cn } from "@/helpers/mergeClassName";
 import { throttle } from "@/helpers/throttle";
 import NextLink from "next/link";
-import { Fragment, useEffect, useState } from "react";
+import { Fragment, memo, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 export interface NavigationMenuProps {
@@ -11,10 +11,7 @@ export interface NavigationMenuProps {
     onClick?: () => void;
 }
 
-export function NavigationMenu({
-    onClick,
-    className
-}: NavigationMenuProps): JSX.Element {
+function NavigationMenuComponent({ onClick, className }: NavigationMenuProps) {
     const { t } = useTranslation();
     const [activeLink, setActiveLink] = useState(
         () => window.location.hash || ""
@@ -71,3 +68,5 @@ export function NavigationMenu({
         </Fragment>
     );
 }
+
+export const NavigationMenu = memo(NavigationMenuComponent);

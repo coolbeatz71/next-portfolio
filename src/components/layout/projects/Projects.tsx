@@ -6,7 +6,7 @@ import { RESPONSIVE_CLASSNAME } from "@/config/ThemeStyle";
 import { cn } from "@/helpers/mergeClassName";
 import { useTranslation } from "react-i18next";
 
-export function Projects(): JSX.Element {
+export function Projects() {
     const { t } = useTranslation();
 
     return (

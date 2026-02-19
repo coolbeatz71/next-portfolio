@@ -3,7 +3,7 @@ import { navigationList } from "@/config/Navigation";
 import NextLink from "next/link";
 import { useTranslation } from "react-i18next";
 
-export function FooterNavigation(): JSX.Element {
+export function FooterNavigation() {
     const { t } = useTranslation();
 
     return (
@@ -21,7 +21,7 @@ export function FooterNavigation(): JSX.Element {
                     >
                         <span className="flex flex-row justify-start">
                             <IconLink
-                                className="mt-1 mr-2 flex-shrink-0"
+                                className="mt-1 mr-2 shrink-0"
                                 size={16}
                             />
                             {t(item.label)}

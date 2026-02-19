@@ -7,7 +7,7 @@ import { FooterMessageForm } from "./Footer.Message.Form";
 import { FooterNavigation } from "./Footer.Navigation";
 import { FooterSocialLink } from "./Footer.SocialLink";
 
-export function Footer(): JSX.Element {
+export function Footer() {
     return (
         <footer
             id="contact"

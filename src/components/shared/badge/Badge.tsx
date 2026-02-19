@@ -20,7 +20,7 @@ export function Badge({
     className,
     endCountText,
     endCountNumber
-}: BadgeProps): JSX.Element {
+}: BadgeProps) {
     return (
         <motion.div
             initial="initial"
@@ -49,7 +49,7 @@ export function Badge({
                     />
                     {endCountText}
                 </div>
-                <div className="max-w-[100px] leading-none text-[10pt] font-medium text-slate-300">
+                <div className="max-w-25 leading-none text-[10pt] font-medium text-slate-300">
                     {badgeText}
                 </div>
             </div>

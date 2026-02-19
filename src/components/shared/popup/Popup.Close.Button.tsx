@@ -4,9 +4,7 @@ export interface PopupCloseButtonProps {
     onClick: () => void;
 }
 
-export function PopupCloseButton({
-    onClick
-}: PopupCloseButtonProps): JSX.Element {
+export function PopupCloseButton({ onClick }: PopupCloseButtonProps) {
     return (
         <button
             type="button"

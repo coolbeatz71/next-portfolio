@@ -1,9 +1,11 @@
 import { motion } from "framer-motion";
+import { memo } from "react";
 
 export interface GlowProps {
     delay: number;
 }
-export function Glow({ delay }: GlowProps): JSX.Element {
+
+function GlowComponent({ delay }: GlowProps) {
     return (
         <motion.div
             initial={{
@@ -27,3 +29,5 @@ export function Glow({ delay }: GlowProps): JSX.Element {
         />
     );
 }
+
+export const Glow = memo(GlowComponent);

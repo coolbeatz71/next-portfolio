@@ -18,7 +18,7 @@ export function NavigationDropdown({
     className,
     activeTabIndex,
     setActiveTabIndex
-}: NavigationDropdownProps): JSX.Element {
+}: NavigationDropdownProps) {
     const ref = useRef(null);
     const { t } = useTranslation();
     const [isOpen, setIsOpen] = useState(false);

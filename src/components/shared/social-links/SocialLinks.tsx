@@ -3,7 +3,7 @@ import { socialLinksList } from "@/config/SocialLink";
 import NextLink from "next/link";
 import { Fragment } from "react";
 
-export function SocialLinks(): JSX.Element {
+export function SocialLinks() {
     return (
         <Fragment>
             {socialLinksList.slice(0, 3).map((social) => (

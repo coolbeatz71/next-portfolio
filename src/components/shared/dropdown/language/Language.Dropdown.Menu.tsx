@@ -8,7 +8,7 @@ export interface LanguageDropdownMenuProps {
 export function LanguageDropdownMenu({
     placement,
     updateLanguage
-}: LanguageDropdownMenuProps): JSX.Element {
+}: LanguageDropdownMenuProps) {
     const dropdownPlacement = placement === "bottom" ? "top-12" : "bottom-14";
 
     return (
@@ -16,7 +16,7 @@ export function LanguageDropdownMenu({
             id="dropdown"
             className={`
                 z-10 origin-top-right absolute ${dropdownPlacement} 
-                left-0 right-0 px-1 mt-1 w-[9.5rem] rounded-lg shadow-xl bg-white dark:bg-slate-600
+                left-0 right-0 px-1 mt-1 w-38 rounded-lg shadow-xl bg-white dark:bg-slate-600
             `}
         >
             <div className="py-1" aria-labelledby="dropdown-menu">
@@ -30,7 +30,7 @@ export function LanguageDropdownMenu({
                             dark:text-gray-200 hover:bg-slate-200 dark:hover:bg-slate-700 w-full text-left
                         `}
                     >
-                        <span className="mr-2 h-5 w-5 flex items-center justify-center flex-shrink-0">
+                        <span className="mr-2 h-5 w-5 flex items-center justify-center shrink-0">
                             {lang.flag}
                         </span>
                         {lang.name}

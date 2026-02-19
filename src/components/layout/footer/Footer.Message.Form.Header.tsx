@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import { useTranslation } from "react-i18next";
 
-export function FormHeader(): JSX.Element {
+export function FormHeader() {
     const { t } = useTranslation();
 
     return (

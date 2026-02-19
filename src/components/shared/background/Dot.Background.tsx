@@ -1,14 +1,18 @@
+import { memo } from "react";
 import { AbstractBackground } from "./Abstract.Background";
 
 export interface DotBackgroundProps {
     className?: string;
 }
-export function DotBackground({ className }: DotBackgroundProps): JSX.Element {
+
+function DotBackgroundComponent({ className }: DotBackgroundProps) {
     return (
         <AbstractBackground
             className={className}
-            backgroundClass="dark:bg-dot-white/[0.05] bg-dot-black/[0.05]"
+            backgroundClass="bg-dot-black dark:bg-dot-white"
             maskImage="radial-gradient(ellipse_at_center,transparent_20%,black)"
         />
     );
 }
+
+export const DotBackground = memo(DotBackgroundComponent);

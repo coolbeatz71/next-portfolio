@@ -1,0 +1,26 @@
+@layer base {
+    :root {
+        --color-black: #000;
+        --color-white: #fff;
+    }
+}
+
+@utility bg-grid-black {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgba(0%2C0%2C0%2C0.025)'%3E%3Cpath d='M0 .5H31.5V32'/%3E%3C/svg%3E");
+}
+
+@utility bg-grid-white {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgba(255%2C255%2C255%2C0.010)'%3E%3Cpath d='M0 .5H31.5V32'/%3E%3C/svg%3E");
+}
+
+@utility bg-grid-small {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='8' height='8' fill='none' stroke='rgba(148%2C163%2C184%2C0.3)'%3E%3Cpath d='M0 .5H31.5V32'/%3E%3C/svg%3E");
+}
+
+@utility bg-dot-black {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none'%3E%3Ccircle fill='rgba(0%2C0%2C0%2C0.05)' cx='10' cy='10' r='1.6257413380501518'%3E%3C/circle%3E%3C/svg%3E");
+}
+
+@utility bg-dot-white {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none'%3E%3Ccircle fill='rgba(255%2C255%2C255%2C0.05)' cx='10' cy='10' r='1.6257413380501518'%3E%3C/circle%3E%3C/svg%3E");
+}

@@ -4,7 +4,7 @@ import { useAnimation } from "@/hooks/UseAnimation";
 import NextImage from "next/image";
 import { HeroImageBackground } from "./Hero.Image.Background";
 
-export function HeroImage(): JSX.Element {
+export function HeroImage() {
     const { floatAnimation, transition } = useAnimation();
 
     const lines = [
@@ -26,14 +26,20 @@ export function HeroImage(): JSX.Element {
 
     return (
         <div className="relative flex justify-center w-full h-full">
-            <HeroImageBackground className="w-[100%] h-[60%] z-0 opacity-80" />
+            <HeroImageBackground className="w-full h-[60%] z-0 opacity-80" />
 
-            <div className="relative w-[22rem] h-[32rem] lg:w-[24rem] lg:h-[36rem] -top-8 z-10">
-                <NextImage fill priority alt="profile" src="/hero/me.png" />
+            <div className="relative w-88 h-128 lg:w-[24rem] lg:h-144 -top-8 z-10">
+                <NextImage
+                    fill
+                    priority
+                    alt="profile"
+                    src="/hero/me.png"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
             </div>
 
             <AnimatedShape
-                className="absolute top-0 left-0 w-24 h-24 lg:w-32 lg:h-32 rounded-full bg-gradient-to-r from-amber-500/80 to-orange-500/50"
+                className="absolute top-0 left-0 w-24 h-24 lg:w-32 lg:h-32 rounded-full bg-linear-to-r from-amber-500/80 to-orange-500/50"
                 animate={floatAnimation}
                 transition={transition}
             />
