@@ -9,10 +9,7 @@ export interface CompaniesGridProps {
     }[];
     className?: string;
 }
-export function CompaniesGrid({
-    items,
-    className
-}: CompaniesGridProps): JSX.Element {
+export function CompaniesGrid({ items, className }: CompaniesGridProps) {
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
     return (

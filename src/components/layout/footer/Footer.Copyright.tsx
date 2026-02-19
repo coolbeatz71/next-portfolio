@@ -17,7 +17,7 @@ const Link = ({ href, children }: LinkProps) => (
     </a>
 );
 
-export function FooterCopyright(): JSX.Element {
+export function FooterCopyright() {
     const { t } = useTranslation();
     return (
         <p className="text-sm text-center">

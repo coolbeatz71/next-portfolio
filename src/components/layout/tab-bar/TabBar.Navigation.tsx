@@ -15,7 +15,7 @@ export function NavigationTabBar({
     className,
     activeTabIndex,
     setActiveTabIndex
-}: NavigationTabBarProps): JSX.Element {
+}: NavigationTabBarProps) {
     const { t } = useTranslation();
 
     return (

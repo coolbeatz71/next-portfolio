@@ -18,7 +18,7 @@ export const experienceTimeline: (
 ) => TimelineEntry[] = (headerClassName, bodyClassName) => {
     const { t } = useTranslation();
     const _headerClassName = cn(
-        "text-neutral-500 dark:text-neutral-400 italic text-[10pt] md:text-sm !mb-4 !leading-relaxed !md:leading-loose",
+        "text-neutral-500 dark:text-neutral-400 italic text-[10pt] md:text-sm !mb-4 leading-relaxed! !md:leading-loose",
         headerClassName
     );
     const _bodyClassName = cn(

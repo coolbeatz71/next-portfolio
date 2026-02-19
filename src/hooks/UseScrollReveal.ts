@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import type { RefObject } from "react";
 
 export interface UseScrollRevealType {
-    ref: RefObject<HTMLDivElement>;
+    ref: RefObject<HTMLDivElement | null>;
     isVisible: boolean;
 }
 export function useScrollReveal(): UseScrollRevealType {

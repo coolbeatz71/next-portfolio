@@ -2,14 +2,20 @@ import type { ProjectByStack } from "@/config/Projects";
 import { type Variants, motion } from "framer-motion";
 import dynamic from "next/dynamic";
 
-import { useState } from "react";
+import { memo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { ProjectCardImage } from "./Project.Card.Image";
 import { ProjectModal } from "./Project.Modal";
 import { ProjectCardContent } from "./project.Card.Content";
 
-const DynamicModal = dynamic(
-    () => import("../../popup/modal/Modal").then((mod) => mod.Modal),
+export const DynamicModal = dynamic(
+    async () => {
+        const mod = await import(
+            /* webpackChunkName: "Modal" */
+            "../../popup/modal/Modal"
+        );
+        return mod.Modal;
+    },
     { ssr: false }
 );
 
@@ -21,8 +27,8 @@ export interface ProjectCardProps {
 const animationVariants: Variants = {
     hidden: { opacity: 0, y: 50 },
     visible: (index: number) => ({
-        opacity: 1,
         y: 0,
+        opacity: 1,
         transition: {
             duration: 0.5,
             ease: "easeOut",
@@ -31,11 +37,13 @@ const animationVariants: Variants = {
     })
 };
 
-export function ProjectCard({ project, index }: ProjectCardProps) {
+function ProjectCardComponent({ project, index }: ProjectCardProps) {
     const { t } = useTranslation();
     const [isOpen, setIsOpen] = useState(false);
 
-    const toggleModal = () => setIsOpen((prev) => !prev);
+    const toggleModal = () => {
+        setIsOpen((prev) => !prev);
+    };
 
     return (
         <>
@@ -55,25 +63,29 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
             )}
 
             <motion.div
-                className="group"
                 custom={index}
                 initial="hidden"
                 animate="visible"
+                className="group"
                 variants={animationVariants}
             >
-                <div className="md:min-h-64 lg:min-h-72 bg-white dark:bg-gray-900 rounded-lg overflow-hidden transition-shadow duration-300 group-hover:shadow-xl">
+                <div
+                    className={`md:min-h-64 lg:min-h-72 bg-white dark:bg-gray-900 rounded-lg 
+                        overflow-hidden transition-shadow duration-300 group-hover:shadow-xl
+                    `}
+                >
                     <div className="flex flex-col md:flex-row md:min-h-64 lg:min-h-72">
                         <ProjectCardImage
-                            src={project.images[0].src}
                             alt={project.name}
-                            blurDataURL={project.blurURL}
                             onClick={toggleModal}
+                            src={project.images[0].src}
+                            blurDataURL={project.blurURL}
                         />
                         <ProjectCardContent
+                            label={t("open")}
                             project={project}
                             onClick={toggleModal}
                             translatedDescription={t(project.description)}
-                            label={t("open")}
                         />
                     </div>
                 </div>
@@ -81,3 +93,5 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         </>
     );
 }
+
+export const ProjectCard = memo(ProjectCardComponent);

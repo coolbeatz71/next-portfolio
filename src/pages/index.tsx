@@ -2,7 +2,7 @@ import { HomeContainer } from "@/components/container/home/HomeContainer";
 import Head from "next/head";
 import { Fragment, useEffect, useState } from "react";
 
-export default function IndexPage(): JSX.Element {
+export default function IndexPage() {
     const [isClient, setIsClient] = useState(false);
 
     useEffect(() => {

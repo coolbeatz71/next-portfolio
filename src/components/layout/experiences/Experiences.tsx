@@ -18,7 +18,7 @@ import { cn } from "@/helpers/mergeClassName";
 import { useTranslation } from "react-i18next";
 import { useMedia } from "react-use";
 
-export function Experiences(): JSX.Element {
+export function Experiences() {
     const { t } = useTranslation();
     const [isOpen, setIsOpen] = useState(false);
 

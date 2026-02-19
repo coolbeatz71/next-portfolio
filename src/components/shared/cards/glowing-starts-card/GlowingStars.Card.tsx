@@ -9,7 +9,7 @@ export interface GlowingStarsCardProps {
 export function GlowingStarsCard({
     className,
     children
-}: GlowingStarsCardProps): JSX.Element {
+}: GlowingStarsCardProps) {
     const [mouseEnter, setMouseEnter] = useState(false);
 
     return (
@@ -23,7 +23,7 @@ export function GlowingStarsCard({
             className={cn(
                 `bg-[linear-gradient(110deg,#fff_0.5%,#ddd)]
                 dark:bg-[linear-gradient(110deg,#444_0.5%,#333)] 
-                max-w-[5rem] max-h-[5rem] h-full w-full rounded-lg 
+                max-w-20 max-h-20 h-full w-full rounded-lg 
                 relative flex items-center justify-center`,
                 className
             )}

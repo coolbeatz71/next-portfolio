@@ -6,15 +6,11 @@ import { ThemeProvider } from "next-themes";
 import type { AppProps } from "next/app";
 import { useMemo } from "react";
 
-import "@/styles/global.scss";
+import "@/styles/global.css";
 
 type AppPropsWithError = AppProps & { err: unknown } & Record<string, unknown>;
 
-const MyApp = ({
-    Component,
-    pageProps,
-    serverProps
-}: AppPropsWithError): JSX.Element => {
+const MyApp = ({ Component, pageProps, serverProps }: AppPropsWithError) => {
     const userLang = getLanguage();
 
     useMemo(() => {
@@ -34,7 +30,7 @@ const MyApp = ({
             defaultTheme="light"
             themes={["light", "dark"]}
         >
-            <main className="bg-pattern_light dark:bg-pattern_dark bg-repeat bg-[79rem]">
+            <main className="bg-pattern_light dark:bg-pattern_dark bg-repeat bg-position-[79rem]">
                 <Component {...pageProps} serverProps={serverProps} />
             </main>
         </ThemeProvider>

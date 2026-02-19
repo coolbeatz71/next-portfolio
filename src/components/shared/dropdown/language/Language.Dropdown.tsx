@@ -1,6 +1,6 @@
 import { IconChevronUpDown } from "@/config/Icon";
 import dayjs from "dayjs";
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { memo, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useClickAway } from "react-use";
 
@@ -14,7 +14,7 @@ export interface LanguageDropDownProps {
     placement: "top" | "bottom";
 }
 
-export function LanguageDropDown({ placement }: LanguageDropDownProps) {
+function LanguageDropDownComponent({ placement }: LanguageDropDownProps) {
     const ref = useRef<HTMLDivElement>(null);
     const { i18n } = useTranslation();
     const [isOpen, setIsOpen] = useState(false);
@@ -61,7 +61,7 @@ export function LanguageDropDown({ placement }: LanguageDropDownProps) {
                 `}
                 onClick={toggleDropdown}
             >
-                <span className="mr-2 h-5 w-5 flex items-center justify-center flex-shrink-0">
+                <span className="mr-2 h-5 w-5 flex items-center justify-center shrink-0">
                     {currentLanguage.flag}
                 </span>
                 <span className="text-sm font-semibold">
@@ -82,3 +82,5 @@ export function LanguageDropDown({ placement }: LanguageDropDownProps) {
         </div>
     );
 }
+
+export const LanguageDropDown = memo(LanguageDropDownComponent);

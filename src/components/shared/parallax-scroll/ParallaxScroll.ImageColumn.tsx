@@ -2,6 +2,7 @@ import type { AboutMeImage } from "@/config/AboutMe.Images";
 import { cn } from "@/helpers/mergeClassName";
 import { type MotionValue, motion } from "framer-motion";
 import NextImage from "next/image";
+import { memo } from "react";
 
 export interface ImageColumnProps {
     columnKey: string;
@@ -10,13 +11,13 @@ export interface ImageColumnProps {
     translate: MotionValue<number>;
 }
 
-export function ImageColumn({
+function ImageColumnComponent({
     images,
     translate,
     columnKey,
     imageHeight
 }: ImageColumnProps) {
-    const gradientOverlayClassName = `absolute inset-0 h-full w-full bg-gradient-to-r from-indigo-400 
+    const gradientOverlayClassName = `absolute inset-0 h-full w-full bg-linear-to-r from-indigo-400 
         to-indigo-900 transform scale-[0.75] rounded-full blur-2xl`;
 
     const imageContainerClassName = cn(
@@ -41,15 +42,14 @@ export function ImageColumn({
                     <div className={gradientOverlayClassName} />
                     <div className={imageContainerClassName}>
                         <NextImage
+                            width={360}
                             src={img.src}
                             alt={img.alt}
-                            width={360}
+                            loading="lazy"
+                            placeholder="blur"
                             height={imageHeight}
                             className={imageClassName}
                             blurDataURL={img.blurData}
-                            placeholder="blur"
-                            loading="lazy"
-                            quality={90}
                         />
                     </div>
                 </motion.div>
@@ -57,3 +57,5 @@ export function ImageColumn({
         </div>
     );
 }
+
+export const ImageColumn = memo(ImageColumnComponent);

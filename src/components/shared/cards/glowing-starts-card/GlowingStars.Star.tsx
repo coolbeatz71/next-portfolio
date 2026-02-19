@@ -1,11 +1,13 @@
 import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
+import { memo } from "react";
 
 export interface StarProps {
     isGlowing: boolean;
     delay: number;
 }
-export function Star({ delay, isGlowing }: StarProps): JSX.Element {
+
+function StarComponent({ delay, isGlowing }: StarProps) {
     const { resolvedTheme } = useTheme();
 
     const glowColor = resolvedTheme === "dark" ? "#fff" : "#ddd";
@@ -26,7 +28,9 @@ export function Star({ delay, isGlowing }: StarProps): JSX.Element {
                 ease: "easeInOut",
                 delay: delay
             }}
-            className="size-[1px] rounded-full relative z-20"
+            className="size-px rounded-full relative z-20"
         />
     );
 }
+
+export const Star = memo(StarComponent);

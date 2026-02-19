@@ -18,7 +18,7 @@ interface LinkProps {
     isVisible: boolean;
     children: ReactNode;
 }
-const Link = ({ href, isVisible, children }: LinkProps): JSX.Element =>
+const Link = ({ href, isVisible, children }: LinkProps) =>
     isVisible ? (
         <a target="_blank" rel="noopener noreferrer" href={href || ""}>
             <div>{children}</div>
@@ -27,7 +27,7 @@ const Link = ({ href, isVisible, children }: LinkProps): JSX.Element =>
         <div className="hidden" />
     );
 
-export function ProjectModal({ project }: ProjectModalProps): JSX.Element {
+export function ProjectModal({ project }: ProjectModalProps) {
     const { t } = useTranslation();
     const hasLinks = project.hasLiveLink || project.hasSourceCode;
 
@@ -41,13 +41,13 @@ export function ProjectModal({ project }: ProjectModalProps): JSX.Element {
                     />
                 ) : (
                     <NextImage
+                        unoptimized
                         width={300}
                         height={300}
+                        loading="lazy"
                         src={project.images[0].src}
                         alt={project.images[0].alt}
                         className="object-cover rounded-lg w-full h-56 md:h-72"
-                        loading="lazy"
-                        unoptimized
                     />
                 )}
             </div>
@@ -72,7 +72,7 @@ export function ProjectModal({ project }: ProjectModalProps): JSX.Element {
             </div>
 
             {hasLinks && (
-                <div className="border border-b-0 border-x-0 border-t-1 border-slate-300 dark:border-slate-700">
+                <div className="border border-b-0 border-x-0 border-t border-slate-300 dark:border-slate-700">
                     <div className="flex justify-end gap-4 items-center pt-4">
                         <Link
                             href={project.sourceCodeLink}

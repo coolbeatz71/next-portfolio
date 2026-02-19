@@ -8,7 +8,7 @@ import { cn } from "@/helpers/mergeClassName";
 import NextImage from "next/image";
 import { useTranslation } from "react-i18next";
 
-export function Skills(): JSX.Element {
+export function Skills() {
     const { t } = useTranslation();
     const imgClassName = `object-contain transition-all duration-200 ease-in-out 
         filter grayscale opacity-70 group-hover:filter-none group-hover:opacity-100

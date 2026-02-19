@@ -26,7 +26,7 @@ export function SideMenuDrawer({
     children,
     className,
     position = "right"
-}: SideMenuDrawerProps): JSX.Element {
+}: SideMenuDrawerProps) {
     useLockBodyScroll(isOpen);
 
     const getTranslateValue = (): string => {
@@ -51,7 +51,7 @@ export function SideMenuDrawer({
 
                     <PopupCloseButton onClick={onToggle} />
 
-                    <div className="flex-grow">{children}</div>
+                    <div className="grow">{children}</div>
 
                     {footer && <PopupFooter>{footer}</PopupFooter>}
                 </div>

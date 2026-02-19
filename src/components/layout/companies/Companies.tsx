@@ -5,7 +5,7 @@ import { RESPONSIVE_CLASSNAME } from "@/config/ThemeStyle";
 import { useTranslation } from "react-i18next";
 import { CompaniesGrid } from "./Companies.Grid";
 
-export function Companies(): JSX.Element {
+export function Companies() {
     const { t } = useTranslation();
 
     return (
@@ -13,7 +13,7 @@ export function Companies(): JSX.Element {
             <section className={RESPONSIVE_CLASSNAME}>
                 <div
                     className={`
-                        grid grid-cols-1 lg:grid-cols-[2.5fr,3fr] xl:grid-cols-[3fr,3.5fr]
+                        grid grid-cols-1 lg:grid-cols-[2.5fr_3fr] xl:grid-cols-[3fr_3.5fr]
                         items-center gap-4 md:gap-12 lg:gap-8 xl:gap-12
                     `}
                 >

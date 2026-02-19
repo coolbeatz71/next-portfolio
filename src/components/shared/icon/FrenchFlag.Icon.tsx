@@ -1,4 +1,4 @@
-export const FrenchFlagIcon = (): JSX.Element => (
+export const FrenchFlagIcon = () => (
     <svg
         height={40}
         width={60}

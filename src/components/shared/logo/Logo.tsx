@@ -1,9 +1,9 @@
 import NextLink from "next/link";
 
-export function Logo(): JSX.Element {
+export function Logo() {
     return (
         <NextLink href="">
-            <div className="flex flex-shrink-0 items-center cursor-pointer">
+            <div className="flex shrink-0 items-center cursor-pointer">
                 <h1 className="text-3xl font-bold dark:text-white text-black">
                     MJV
                 </h1>
