@@ -1,0 +1,81 @@
+import { useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
+import { useClickAway } from "react-use";
+import type { ITabs } from "@/features/projects/data/projects.tabs";
+import { IconChevronUpDown } from "@/shared/config/icons";
+import { cn } from "@/shared/lib/cn";
+import { NavigationDropdownMenu } from "./Navigation.Dropdown.Menu";
+
+export interface NavigationDropdownProps {
+    tabs: ITabs[];
+    className?: string;
+    activeTabIndex: number;
+    setActiveTabIndex: (index: number) => void;
+}
+
+/**
+ * Navigation dropdown component.
+ *
+ * @component
+ *
+ * @description
+ * Renders a tab selector as a dropdown button, used on mobile to switch between content sections.
+ * Displays the currently active tab and opens a menu on click.
+ * Closes automatically when clicking outside.
+ *
+ * @param {NavigationDropdownProps} props - Component props
+ * @param {ITabs[]} props.tabs - List of tab options to display in the dropdown
+ * @param {number} props.activeTabIndex - Index of the currently selected tab
+ * @param {(index: number) => void} props.setActiveTabIndex - Callback to update the active tab
+ * @param {string} [props.className] - Additional class names for the container
+ *
+ * @returns The navigation dropdown element
+ */
+export function NavigationDropdown({
+    tabs,
+    className,
+    activeTabIndex,
+    setActiveTabIndex
+}: NavigationDropdownProps) {
+    const ref = useRef(null);
+    const { t } = useTranslation();
+    const [isOpen, setIsOpen] = useState(false);
+
+    useClickAway(ref, () => setIsOpen(false));
+
+    const toggleDropdown = () => setIsOpen(!isOpen);
+
+    const handleMenuSelect = (index: number) => {
+        setActiveTabIndex(index);
+        toggleDropdown();
+    };
+
+    return (
+        <div
+            ref={ref}
+            className={cn(className, "relative flex w-full text-start")}
+        >
+            <div className="w-full">
+                <button
+                    type="button"
+                    className="w-full rounded-lg text-sm font-medium flex items-center justify-between p-3.5 text-white hover:text-slate-700 hover:dark:text-slate-100 bg-indigo-700 dark:bg-indigo-500 hover:bg-slate-300 hover: dark:hover:bg-gray-700 dark:hover:border-gray-600 hover:ring-3 dark:focus:ring-gray-700"
+                    onClick={toggleDropdown}
+                >
+                    <span>{t(tabs[activeTabIndex].title)}</span>
+                    <IconChevronUpDown
+                        className="-mr-1 ml-2 h-4 w-4"
+                        aria-hidden="true"
+                    />
+                </button>
+            </div>
+
+            {isOpen && (
+                <NavigationDropdownMenu
+                    tabs={tabs}
+                    onSelect={handleMenuSelect}
+                    activeTabIndex={activeTabIndex}
+                />
+            )}
+        </div>
+    );
+}

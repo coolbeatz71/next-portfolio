@@ -1,8 +1,17 @@
 import { Head, Html, Main, NextScript } from "next/document";
+import { CUSTOM_SCROLLBAR } from "@/shared/config/style";
+import { cn } from "@/shared/lib/cn";
 
-import { CUSTOM_SCROLLBAR } from "@/config/ThemeStyle";
-import { cn } from "@/helpers/mergeClassName";
-
+/**
+ * Custom Next.js Document component.
+ *
+ * @description
+ * Defines the HTML shell for all pages: sets charset, IE compatibility, SEO
+ * description, iOS PWA meta tags, favicon, manifest, and applies the custom
+ * scrollbar class to the body.
+ *
+ * @returns The HTML document shell
+ */
 export default function Document() {
     return (
         <Html lang="en">
