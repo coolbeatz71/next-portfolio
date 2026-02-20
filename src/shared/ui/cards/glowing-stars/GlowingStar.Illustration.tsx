@@ -2,12 +2,7 @@ import { AnimatePresence } from "motion/react";
 import { memo, useEffect, useRef, useState } from "react";
 import { Glow } from "./GlowingStar.Glow";
 import { Star } from "./GlowingStars.Star";
-
-export interface IllustrationProps {
-    stars?: number;
-    columns?: number;
-    mouseEnter: boolean;
-}
+import type { IllustrationProps } from "./types";
 
 /**
  * Glowing stars illustration component.

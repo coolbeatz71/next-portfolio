@@ -1,8 +1,4 @@
-import type { ReactNode } from "react";
-
-export interface PopupFooterProps {
-    children: ReactNode;
-}
+import type { PopupFooterProps } from "./types";
 
 /**
  * Popup footer component.

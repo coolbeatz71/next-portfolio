@@ -1,13 +1,7 @@
-import { memo, type ReactNode } from "react";
+import { memo } from "react";
 import { CUSTOM_SCROLLBAR } from "@/shared/config/style";
 import { cn } from "@/shared/lib/cn";
-
-export interface DrawerContainerProps {
-    width: string;
-    isOpen: boolean;
-    children: ReactNode;
-    position: "right" | "left";
-}
+import type { DrawerContainerProps } from "./types";
 
 const getTranslateStyle = (
     isOpen: boolean,

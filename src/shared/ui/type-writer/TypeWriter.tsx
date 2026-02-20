@@ -1,9 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
-
-export interface TypeWriterProps {
-    words: string[];
-    className?: string;
-}
+import type { TypeWriterProps } from "./types";
 
 /**
  * Typewriter component.

@@ -1,8 +1,6 @@
-import { memo, type ReactNode } from "react";
+import { memo } from "react";
 import { IconCheckMark } from "@/shared/config/icons";
-export interface ExperienceItemProps {
-    children: ReactNode;
-}
+import type { ExperienceItemProps } from "./types";
 
 /**
  * Experience item component.

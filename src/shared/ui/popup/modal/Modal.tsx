@@ -1,20 +1,11 @@
-import type { ReactNode } from "react";
 import { Fragment } from "react";
 import { createPortal } from "react-dom";
 import { useLockBodyScroll } from "react-use";
-
 import { cn } from "@/shared/lib/cn";
 import { PopupBackdrop } from "../Popup.Backdrop";
 import { PopupCloseButton } from "../Popup.Close.Button";
 import { PopupHeader } from "../Popup.Header";
-
-export interface ModalProps {
-    isOpen: boolean;
-    header: ReactNode;
-    className?: string;
-    children: ReactNode;
-    onToggle: () => void;
-}
+import type { ModalProps } from "./types";
 
 /**
  * Modal component.

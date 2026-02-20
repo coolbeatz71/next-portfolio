@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import NextImage from "next/image";
 import { useInView } from "react-intersection-observer";
-import type { ISkillsByStack } from "@/features/skills/data/skills.tabs";
+import { ISkillsByStack } from "@/features/skills/data/types";
 import { BadgeSpan } from "@/shared/ui/badge/Badge.Span";
 
 /**

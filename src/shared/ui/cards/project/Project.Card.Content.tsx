@@ -1,14 +1,7 @@
-import type { IProjectByStack } from "@/features/projects/data/projects.tabs";
 import { IconArrowUpRight } from "@/shared/config/icons";
 import { BadgeSpan } from "@/shared/ui/badge/Badge.Span";
 import { LitUpBorderButton } from "@/shared/ui/buttons/LitUpBorder.Button";
-
-export interface ProjectContentProps {
-    label: string;
-    onClick: () => void;
-    project: IProjectByStack;
-    translatedDescription: string;
-}
+import type { ProjectContentProps } from "./types";
 /**
  * Project card content component.
  *

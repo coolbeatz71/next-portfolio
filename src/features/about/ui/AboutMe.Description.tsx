@@ -1,9 +1,6 @@
 import { Fragment } from "react";
 import { useTranslation } from "react-i18next";
-
-interface HighlightProps {
-    children: React.ReactNode;
-}
+import type { HighlightProps } from "./types";
 
 function Highlight({ children }: HighlightProps) {
     return (
@@ -28,6 +25,7 @@ function Highlight({ children }: HighlightProps) {
 export function AboutMeDescription() {
     const { t } = useTranslation();
     const textStyle = "text-neutral-500 dark:text-neutral-400 leading-loose!";
+
     return (
         <Fragment>
             <h2 className="text-start mb-4 text-3xl font-bold tracking-tight md:leading-relaxed text-stone-700 dark:text-stone-200">

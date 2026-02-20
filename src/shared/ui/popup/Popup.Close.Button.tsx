@@ -1,8 +1,5 @@
 import { IconClose } from "@/shared/config/icons";
-
-export interface PopupCloseButtonProps {
-    onClick: () => void;
-}
+import type { PopupCloseButtonProps } from "./types";
 
 /**
  * Popup close button component.

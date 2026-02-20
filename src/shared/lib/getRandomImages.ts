@@ -1,4 +1,4 @@
-import type { IAboutMeImage } from "@/features/about/data/about.images";
+import { IAboutMeImage } from "@/features/about/data/types";
 
 /**
  * Returns a random selection of images, avoiding repetition from the previous set.

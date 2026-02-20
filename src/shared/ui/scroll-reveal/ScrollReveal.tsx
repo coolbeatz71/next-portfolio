@@ -1,12 +1,6 @@
-import type { ReactNode } from "react";
 import { useScrollReveal } from "@/shared/hooks/useScrollReveal";
 import { cn } from "@/shared/lib/cn";
-
-export interface ScrollRevealProps {
-    children: ReactNode;
-    className?: string;
-    direction?: "up" | "down" | "left" | "right";
-}
+import type { ScrollRevealProps } from "./types";
 
 /**
  * Scroll reveal component.

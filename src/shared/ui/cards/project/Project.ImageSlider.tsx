@@ -1,15 +1,10 @@
-import { AnimatePresence, motion } from "motion/react";
-import NextImage from "next/image";
+import { AnimatePresence } from "motion/react";
 import { useCallback, useMemo, useState } from "react";
 import { useInterval, useMedia } from "react-use";
-
-import type { IImage } from "@/features/projects/data/projects.tabs";
 import { MOBILE_DEVICE, XS_MOBILE_DEVICE } from "@/shared/config/style";
-
-export interface ProjectImageSliderProps {
-    images: IImage[];
-    imagePlaceholder: string;
-}
+import { ProjectImageSliderBackground } from "./Project.ImageSlider.Background";
+import { ProjectImageSliderSlide } from "./Project.ImageSlider.Slide";
+import type { ProjectImageSliderProps } from "./types";
 
 /**
  * Project image slider component.
@@ -22,7 +17,7 @@ export interface ProjectImageSliderProps {
  * and staggered card layout with responsive sizing.
  *
  * @param {ProjectImageSliderProps} props - Component props
- * @param {Image[]} props.images - List of project images; the first is used as the blurred background
+ * @param {IImage[]} props.images - List of project images; the first is used as the blurred background
  * @param {string} props.imagePlaceholder - Base64 blur placeholder for the background image
  *
  * @returns The project image slider element
@@ -129,74 +124,33 @@ export function ProjectImageSlider({
                 onMouseMove={handleMouseMove}
                 className={`relative w-full max-w-6xl h-56 md:h-72 transition-all duration-300 ${isZoomed ? "p-0" : "px-4 py-4 pr-0"}`}
             >
-                <div
-                    className={`absolute top-0 left-0 w-full h-full z-0 transition-all duration-300 ${isZoomed ? "rounded-none" : "rounded-lg"}`}
-                >
-                    <div
-                        className={`absolute z-20 w-full h-full bg-slate-200/70 dark:bg-slate-700/70 backdrop-blur-lg transition-all duration-300 ${isZoomed ? "rounded-none" : "rounded-lg"}`}
-                    />
-                    <NextImage
-                        fill
-                        loading="lazy"
-                        placeholder="blur"
-                        src={images[0].src}
-                        alt={images[0].alt}
-                        blurDataURL={imagePlaceholder}
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        className={`object-cover transition-all duration-300 ${isZoomed ? "rounded-none" : "rounded-lg"}`}
-                    />
-                </div>
+                <ProjectImageSliderBackground
+                    src={images[0].src}
+                    alt={images[0].alt}
+                    isZoomed={isZoomed}
+                    imagePlaceholder={imagePlaceholder}
+                />
+
                 <div className="image-slider-container w-full h-full relative overflow-hidden">
                     <AnimatePresence initial={false}>
                         {imageWithoutPreview.map((img, index) => {
                             const style = slideStyles[index];
                             if (style.opacity === 0) return null;
 
-                            const isCurrent = index === currentIndex;
-
                             return (
-                                <motion.div
+                                <ProjectImageSliderSlide
                                     key={img.alt}
-                                    initial={false}
-                                    animate={{
-                                        ...style,
-                                        width:
-                                            isCurrent && isZoomed
-                                                ? "100%"
-                                                : style.width,
-                                        height: "100%",
-                                        left:
-                                            isCurrent && isZoomed
-                                                ? 0
-                                                : style.left
-                                    }}
-                                    transition={{
-                                        duration: 0.2,
-                                        ease: "easeInOut"
-                                    }}
-                                    className="absolute top-0 overflow-hidden"
+                                    src={img.src}
+                                    alt={img.alt}
+                                    width={style.width}
+                                    left={style.left}
+                                    zIndex={style.zIndex}
+                                    isZoomed={isZoomed}
+                                    mousePosition={mousePosition}
+                                    isCurrent={index === currentIndex}
                                     onClick={() => handleMouseEnter(index)}
                                     onMouseLeave={handleMouseLeave}
-                                >
-                                    <div
-                                        className={`relative w-full h-full overflow-hidden ${isCurrent ? "cursor-zoom-in" : "cursor-grab"}`}
-                                        style={{
-                                            transform:
-                                                isCurrent && isZoomed
-                                                    ? `scale(1.5) translate(${(0.5 - mousePosition.x) * 100}%, ${(0.5 - mousePosition.y) * 100}%)`
-                                                    : "scale(1) translate(0%, 0%)"
-                                        }}
-                                    >
-                                        <NextImage
-                                            fill
-                                            src={img.src}
-                                            alt={img.alt}
-                                            priority={isCurrent}
-                                            className="object-contain"
-                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                        />
-                                    </div>
-                                </motion.div>
+                                />
                             );
                         })}
                     </AnimatePresence>

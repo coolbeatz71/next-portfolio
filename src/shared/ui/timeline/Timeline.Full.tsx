@@ -1,4 +1,4 @@
-import type { ITimelineEntry } from "@/features/experience/data/experience.data";
+import { ITimelineEntry } from "@/features/experience/data/types";
 import { IconGlobe } from "@/shared/config/icons";
 import { GridPatternBackground } from "../background/GridPattern.Background";
 

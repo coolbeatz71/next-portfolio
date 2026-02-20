@@ -1,15 +1,7 @@
 import { motion, type Variants } from "motion/react";
 import { useInView } from "react-intersection-observer";
-import type { IProjectByStack } from "@/features/projects/data/projects.tabs";
 import { ProjectCard } from "@/shared/ui/cards/project/Project.Card";
-
-/**
- * @interface ProjectSectionProps
- * @property {IProjectByStack[]} projects - List of projects grouped by tech stack to display
- */
-export interface ProjectSectionProps {
-    projects: IProjectByStack[];
-}
+import type { ProjectSectionProps } from "./types";
 
 /**
  * Project section grid component.

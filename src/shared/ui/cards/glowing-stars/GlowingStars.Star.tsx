@@ -1,11 +1,7 @@
 import { motion } from "motion/react";
 import { useTheme } from "next-themes";
 import { memo } from "react";
-
-export interface StarProps {
-    isGlowing: boolean;
-    delay: number;
-}
+import type { StarProps } from "./types";
 
 /**
  * Individual star component.

@@ -1,22 +1,11 @@
-import type { ReactNode } from "react";
 import { Fragment } from "react";
 import { useLockBodyScroll } from "react-use";
-
 import { cn } from "@/shared/lib/cn";
 import { PopupBackdrop } from "../Popup.Backdrop";
 import { PopupCloseButton } from "../Popup.Close.Button";
 import { PopupFooter } from "../Popup.Footer";
 import { PopupHeader } from "../Popup.Header";
-
-export interface SideMenuDrawerProps {
-    header: ReactNode;
-    footer?: ReactNode;
-    isOpen: boolean;
-    onToggle: () => void;
-    children: ReactNode;
-    className?: string;
-    position?: "right" | "left";
-}
+import type { SideMenuDrawerProps } from "./types";
 
 /**
  * Side menu drawer component.

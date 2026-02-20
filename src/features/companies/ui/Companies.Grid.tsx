@@ -2,19 +2,7 @@ import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";
 import { cn } from "@/shared/lib/cn";
 import { HoverableCard } from "@/shared/ui/cards/hoverable/Hoverable.Card";
-
-/**
- * @interface CompaniesGridProps
- * @property {{ title: string; icon: string }[]} items - List of company entries with name and logo URL
- * @property {string} [className] - Additional class names for the grid container
- */
-export interface CompaniesGridProps {
-    items: {
-        title: string;
-        icon: string;
-    }[];
-    className?: string;
-}
+import type { CompaniesGridProps } from "./types";
 
 /**
  * Companies logo grid component.

@@ -1,11 +1,5 @@
 import { useTranslation } from "react-i18next";
-import type { ITabs } from "@/features/projects/data/projects.tabs";
-
-export interface NavigationDropdownMenuProps {
-    tabs: ITabs[];
-    activeTabIndex: number;
-    onSelect: (index: number) => void;
-}
+import type { NavigationDropdownMenuProps } from "./types";
 
 /**
  * Navigation dropdown menu component.

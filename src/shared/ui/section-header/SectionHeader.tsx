@@ -1,12 +1,7 @@
 import { memo } from "react";
 import { cn } from "@/shared/lib/cn";
 import { DotBackground } from "../background/Dot.Background";
-
-export interface SectionHeaderProps {
-    title: string;
-    subtitle: string;
-    className?: string;
-}
+import type { SectionHeaderProps } from "./types";
 
 /**
  * Section header component.

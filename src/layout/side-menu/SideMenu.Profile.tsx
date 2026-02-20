@@ -1,6 +1,6 @@
 import NextImage from "next/image";
 import { GridPatternBackground } from "@/shared/ui/background/GridPattern.Background";
-import { LanguageDropDown } from "@/shared/ui/dropdown/language/Language.Dropdown";
+import { LanguageDropdown } from "@/shared/ui/dropdown/language/Language.Dropdown";
 import { ThemeToggle } from "@/shared/ui/theme-toggle/ThemeToggle";
 
 const avatarPlaceholder =
@@ -58,7 +58,7 @@ export function SideMenuProfile() {
                 </div>
             </div>
             <div className="flex items-center justify-between gap-2 mt-4 w-full">
-                <LanguageDropDown placement="top" />
+                <LanguageDropdown placement="top" />
                 <ThemeToggle />
             </div>
         </div>

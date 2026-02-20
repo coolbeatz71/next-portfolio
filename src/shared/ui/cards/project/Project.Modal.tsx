@@ -1,31 +1,11 @@
 import NextImage from "next/image";
-import type { ReactNode } from "react";
 import { Fragment } from "react";
 import { useTranslation } from "react-i18next";
-import type { IProjectByStack } from "@/features/projects/data/projects.tabs";
-import { IconArrowUpRight, IconCodeBranch } from "@/shared/config/icons";
 import { BadgeSpan } from "@/shared/ui/badge/Badge.Span";
-import { LitUpBorderButton } from "@/shared/ui/buttons/LitUpBorder.Button";
 import { ProjectImageSlider } from "./Project.ImageSlider";
+import { ProjectModalLinks } from "./Project.Modal.Links";
 
-export interface ProjectModalProps {
-    project: IProjectByStack;
-}
-
-interface LinkProps {
-    href?: string;
-    isVisible: boolean;
-    children: ReactNode;
-}
-
-const Link = ({ href, isVisible, children }: LinkProps) =>
-    isVisible ? (
-        <a target="_blank" rel="noopener noreferrer" href={href || ""}>
-            <div>{children}</div>
-        </a>
-    ) : (
-        <div className="hidden" />
-    );
+import type { ProjectModalProps } from "./types";
 
 /**
  * Project modal content component.
@@ -34,8 +14,8 @@ const Link = ({ href, isVisible, children }: LinkProps) =>
  *
  * @description
  * Renders the full detail view of a project inside a modal.
- * Displays an image slider or a single preview image, description, role, tech stack badges,
- * and optional source code or live link buttons.
+ * Displays an image slider or a single preview image, description, role,
+ * tech stack badges, and optional source code or live link buttons.
  *
  * @param {ProjectModalProps} props - Component props
  * @param {IProjectByStack} props.project - Project data to render in the modal
@@ -86,38 +66,7 @@ export function ProjectModal({ project }: ProjectModalProps) {
                 ))}
             </div>
 
-            {hasLinks && (
-                <div className="border border-b-0 border-x-0 border-t border-slate-300 dark:border-slate-700">
-                    <div className="flex justify-end gap-4 items-center pt-4">
-                        <Link
-                            href={project.sourceCodeLink}
-                            isVisible={project.hasSourceCode}
-                        >
-                            <button
-                                type="button"
-                                className="py-2 text-sm font-medium text-gray-500 focus:outline-none rounded-lg hover:text-slate-900 dark:text-gray-400 dark:hover:text-white"
-                            >
-                                <div className="flex justify-center items-center text-sm font-medium">
-                                    <IconCodeBranch className="mr-1 h-3 w-3" />
-                                    {t("source_code")}
-                                </div>
-                            </button>
-                        </Link>
-
-                        <Link
-                            href={project.liveLink}
-                            isVisible={project.hasLiveLink}
-                        >
-                            <LitUpBorderButton className="w-32 p-[3.5px]">
-                                <div className="flex justify-center items-center text-[10pt] font-medium">
-                                    <IconArrowUpRight className="mr-2 h-3 w-3" />
-                                    {t("open")}
-                                </div>
-                            </LitUpBorderButton>
-                        </Link>
-                    </div>
-                </div>
-            )}
+            <ProjectModalLinks project={project} />
         </Fragment>
     );
 }

@@ -1,10 +1,5 @@
-import type { ReactNode } from "react";
 import { useTranslation } from "react-i18next";
-
-interface LinkProps {
-    href: string;
-    children: ReactNode;
-}
+import type { LinkProps } from "./types";
 
 const Link = ({ href, children }: LinkProps) => (
     <a

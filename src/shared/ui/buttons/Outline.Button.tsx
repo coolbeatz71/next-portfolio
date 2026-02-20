@@ -1,15 +1,6 @@
-import type { ElementType, HTMLAttributes, ReactNode } from "react";
 import { cn } from "@/shared/lib/cn";
+import type { OutlineButton } from "./types";
 
-interface OutlineButton extends HTMLAttributes<HTMLButtonElement> {
-    borderRadius?: string;
-    children: ReactNode;
-    as?: ElementType;
-    containerClassName?: string;
-    borderClassName?: string;
-    duration?: number;
-    className?: string;
-}
 /**
  * Outline button component.
  *

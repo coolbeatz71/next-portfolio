@@ -1,10 +1,6 @@
-import { memo, type ReactNode } from "react";
+import { memo } from "react";
 import { cn } from "@/shared/lib/cn";
-
-export interface LitUpBorderButtonProps {
-    className?: string;
-    children: ReactNode;
-}
+import type { LitUpBorderButtonProps } from "./types";
 
 /**
  * Lit-up border button component.

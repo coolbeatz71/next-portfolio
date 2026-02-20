@@ -1,18 +1,8 @@
-import dayjs from "dayjs";
-import { memo, useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { useTranslation } from "react-i18next";
-import { useClickAway } from "react-use";
+import { memo } from "react";
 import { IconChevronUpDown } from "@/shared/config/icons";
-
-import { languageList, USER_LANG } from "@/shared/config/languages";
-import locales from "@/shared/i18n";
-import { getLanguage } from "@/shared/lib/getLanguage";
-import { isServer } from "@/shared/lib/isServer";
+import { useLanguageDropdown } from "./hooks/useLanguageDropdown";
 import { LanguageDropdownMenu } from "./Language.Dropdown.Menu";
-
-export interface LanguageDropDownProps {
-    placement: "top" | "bottom";
-}
+import type { LanguageDropdownProps } from "./types";
 
 /**
  * Language dropdown component.
@@ -24,53 +14,21 @@ export interface LanguageDropDownProps {
  * Syncs the selected language with i18next, dayjs, and localStorage on change.
  * Closes automatically when clicking outside.
  *
- * @param {LanguageDropDownProps} props - Component props
+ * @param {LanguageDropdownProps} props - Component props
  * @param {"top" | "bottom"} props.placement - Direction the dropdown menu opens
  *
  * @returns The language dropdown element
  */
-function LanguageDropDownComponent({ placement }: LanguageDropDownProps) {
-    const ref = useRef<HTMLDivElement>(null);
-    const { i18n } = useTranslation();
-    const [isOpen, setIsOpen] = useState(false);
-
-    useClickAway(ref, () => setIsOpen(false));
-
-    const toggleDropdown = useCallback(() => {
-        setIsOpen((prev) => !prev);
-    }, []);
-
-    useEffect(() => {
-        const savedLanguage = getLanguage();
-        if (savedLanguage && savedLanguage !== i18n.language) {
-            i18n.changeLanguage(savedLanguage);
-        }
-    }, [i18n]);
-
-    const updateLanguage = useCallback(
-        (lang: string) => {
-            if (lang === i18n.language) return;
-            dayjs.locale(lang);
-            locales.changeLanguage(lang);
-            if (!isServer) localStorage.setItem(USER_LANG, lang);
-            setIsOpen(false);
-        },
-        [i18n.language]
-    );
-
-    const currentLanguage = useMemo(
-        () =>
-            languageList.find((lang) => lang.code === i18n.language) ||
-            languageList[0],
-        [i18n.language]
-    );
+function LanguageDropdownComponent({ placement }: LanguageDropdownProps) {
+    const { ref, isOpen, currentLanguage, toggleDropdown, updateLanguage } =
+        useLanguageDropdown();
 
     return (
         <div ref={ref} className="relative inline-block text-left">
             <button
                 type="button"
                 className={`rounded-lg flex items-center justify-center p-3.5 sm:p-2.5 md:p-3.5
-                    text-slate-700 bg-slate-100 dark:bg-slate-900 hover:bg-slate-300 
+                    text-slate-700 bg-slate-100 dark:bg-slate-900 hover:bg-slate-300
                     text-sm dark:text-slate-100 dark:hover:bg-gray-700 dark:hover:border-gray-600
                     dark:focus:ring-gray-700
                 `}
@@ -98,4 +56,4 @@ function LanguageDropDownComponent({ placement }: LanguageDropDownProps) {
     );
 }
 
-export const LanguageDropDown = memo(LanguageDropDownComponent);
+export const LanguageDropdown = memo(LanguageDropdownComponent);

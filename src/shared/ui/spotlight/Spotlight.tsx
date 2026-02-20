@@ -1,9 +1,5 @@
 import { cn } from "@/shared/lib/cn";
-
-export interface SpotlightProps {
-    fill?: string;
-    className?: string;
-}
+import type { SpotlightProps } from "./types";
 
 /**
  * Spotlight component.
