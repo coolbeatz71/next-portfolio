@@ -1,4 +1,4 @@
-import type { ISkillsByStack } from "@/features/skills/data/skills.tabs";
+import { ISkillsByStack } from "./types";
 
 export const devStackFrontend: ISkillsByStack[] = [
     {
@@ -29,6 +29,6 @@ export const devStackFrontend: ISkillsByStack[] = [
         title: "Flutter",
         lightImage: "/dev-tools/flutter.svg",
         darkImage: "/dev-tools/flutter.svg",
-        progress: 70
+        progress: 85
     }
 ];

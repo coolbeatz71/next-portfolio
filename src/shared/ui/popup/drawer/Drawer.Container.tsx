@@ -1,13 +1,7 @@
-import { memo, type ReactNode } from "react";
+import { memo } from "react";
 import { CUSTOM_SCROLLBAR } from "@/shared/config/style";
 import { cn } from "@/shared/lib/cn";
-
-export interface DrawerContainerProps {
-    width: string;
-    isOpen: boolean;
-    children: ReactNode;
-    position: "right" | "left";
-}
+import type { DrawerContainerProps } from "./types";
 
 const getTranslateStyle = (
     isOpen: boolean,
@@ -50,12 +44,12 @@ function DrawerContainerComponent({
             onClick={(e) => e.stopPropagation()}
             onKeyUp={(e) => e.stopPropagation()}
             style={{ width, ...getTranslateStyle(isOpen, width, position) }}
-            className="pointer-events-auto relative h-full transition-transform ease-in-out duration-200"
+            className="pointer-events-auto relative h-full transition-transform ease-in-out duration-base"
         >
             <div
                 className={cn(
                     CUSTOM_SCROLLBAR,
-                    "flex flex-col h-full overflow-y-scroll bg-light dark:bg-dark shadow-xl px-4"
+                    "flex flex-col h-full overflow-y-scroll bg-background shadow-xl px-4"
                 )}
             >
                 {children}

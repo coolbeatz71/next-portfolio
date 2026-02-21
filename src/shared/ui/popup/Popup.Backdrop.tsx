@@ -1,8 +1,5 @@
 import { memo } from "react";
-
-export interface PopupBackdropProps {
-    onClick: () => void;
-}
+import type { PopupBackdropProps } from "./types";
 
 /**
  * Popup backdrop component.

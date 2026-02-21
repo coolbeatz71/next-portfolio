@@ -1,17 +1,9 @@
 import { motion } from "motion/react";
 import numeral from "numeral";
-import type { ReactNode } from "react";
 import CountUp from "react-countup";
 import { cn } from "@/shared/lib/cn";
 import { GridPatternBackground } from "@/shared/ui/background/GridPattern.Background";
-
-export interface BadgeProps {
-    icon: ReactNode;
-    badgeText: string;
-    className?: string;
-    endCountText?: string;
-    endCountNumber: number;
-}
+import type { BadgeProps } from "./types";
 
 /**
  * Animated stat badge component.
@@ -47,7 +39,7 @@ export function Badge({
                 hover: { scale: 1.1 }
             }}
             className={cn(
-                `cursor-pointer relative backdrop-blur-sm bg-indigo-500/60 dark:bg-indigo-700/60 p-3
+                `cursor-pointer relative backdrop-blur-sm bg-primary-overlay p-3
                 sm:p-3.5 md:p-4 rounded-lg overflow-hidden z-10 shadow-xl flex justify-around items-center`,
                 className
             )}
@@ -55,7 +47,7 @@ export function Badge({
             <GridPatternBackground size={20} />
             <div className="text-4xl mr-2">{icon}</div>
             <div className="flex items-center gap-x-2">
-                <div className="text-3xl leading-none font-bold text-amber-500">
+                <div className="text-3xl leading-none font-bold text-accent">
                     <CountUp
                         delay={1}
                         duration={2}
@@ -66,7 +58,7 @@ export function Badge({
                     />
                     {endCountText}
                 </div>
-                <div className="max-w-25 leading-none text-[10pt] font-medium text-slate-300">
+                <div className="max-w-25 leading-none text-body-sm font-medium text-typography-badge">
                     {badgeText}
                 </div>
             </div>

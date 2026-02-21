@@ -1,12 +1,7 @@
 import { memo } from "react";
 import { cn } from "@/shared/lib/cn";
 import { DotBackground } from "../background/Dot.Background";
-
-export interface SectionHeaderProps {
-    title: string;
-    subtitle: string;
-    className?: string;
-}
+import type { SectionHeaderProps } from "./types";
 
 /**
  * Section header component.
@@ -33,14 +28,14 @@ function SectionHeaderComponent({
             <DotBackground className="h-20 z-0" />
             <div
                 className={cn(
-                    "text-start sm:text-start lg:text-center lg:px-32 px-0 z-10",
+                    "text-start lg:text-center lg:px-32 px-0 z-10",
                     className
                 )}
             >
-                <h2 className="mb-4 text-3xl xl:text-4xl font-bold leading-relaxed! text-stone-700 dark:text-stone-200">
+                <h2 className="mb-4 text-3xl xl:text-4xl font-bold leading-relaxed! text-typography-heading">
                     {title}
                 </h2>
-                <p className="text-md sm:text-lg md:text-xl lg:text-xl text-neutral-500 dark:text-neutral-400 leading-relaxed!">
+                <p className="text-md sm:text-lg md:text-xl text-typography-muted leading-relaxed! font-semibold">
                     {subtitle}
                 </p>
             </div>

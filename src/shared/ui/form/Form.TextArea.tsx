@@ -1,11 +1,5 @@
 import { FormField } from "./Form.Field";
-
-export interface FormTextAreaProps {
-    name: string;
-    label: string;
-    rows?: number;
-    className?: string;
-}
+import type { FormTextAreaProps } from "./types";
 
 /**
  * Form textarea component.

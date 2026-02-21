@@ -24,7 +24,7 @@ import { DownloadResumeFixedButton } from "@/shared/ui/buttons/DownloadResume.Fi
  *
  * @returns The main page container element
  */
-export function MainContainer() {
+export function Main() {
     return (
         <Fragment>
             <Fragment>

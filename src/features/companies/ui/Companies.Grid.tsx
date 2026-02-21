@@ -2,19 +2,7 @@ import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";
 import { cn } from "@/shared/lib/cn";
 import { HoverableCard } from "@/shared/ui/cards/hoverable/Hoverable.Card";
-
-/**
- * @interface CompaniesGridProps
- * @property {{ title: string; icon: string }[]} items - List of company entries with name and logo URL
- * @property {string} [className] - Additional class names for the grid container
- */
-export interface CompaniesGridProps {
-    items: {
-        title: string;
-        icon: string;
-    }[];
-    className?: string;
-}
+import type { CompaniesGridProps } from "./types";
 
 /**
  * Companies logo grid component.
@@ -47,7 +35,7 @@ export function CompaniesGrid({ items, className }: CompaniesGridProps) {
                     <AnimatePresence>
                         {hoveredIndex === i && (
                             <motion.span
-                                className="absolute inset-0 block h-full w-full rounded-lg bg-slate-300 dark:bg-slate-700"
+                                className="absolute inset-0 block h-full w-full rounded-lg bg-surface-hover"
                                 layoutId="hoverBackground"
                                 initial={{ opacity: 0 }}
                                 animate={{
@@ -56,7 +44,7 @@ export function CompaniesGrid({ items, className }: CompaniesGridProps) {
                                 }}
                                 exit={{
                                     opacity: 0,
-                                    transition: { duration: 0.15, delay: 0.15 }
+                                    transition: { duration: 0.15, delay: 0.5 }
                                 }}
                             />
                         )}

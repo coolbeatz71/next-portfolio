@@ -1,8 +1,6 @@
-import { memo, type ReactNode } from "react";
+import { memo } from "react";
 import { IconCheckMark } from "@/shared/config/icons";
-export interface ExperienceItemProps {
-    children: ReactNode;
-}
+import type { ExperienceItemProps } from "./types";
 
 /**
  * Experience item component.
@@ -23,7 +21,7 @@ function ExperienceItemComponent({ children }: ExperienceItemProps) {
         <span className="flex flex-row space-x-2 my-2">
             <IconCheckMark
                 size={10}
-                className="text-indigo-500 mt-2 shrink-0 text-xs"
+                className="text-primary-subtle mt-2 shrink-0 text-xs"
             />
             <span>{children}</span>
         </span>

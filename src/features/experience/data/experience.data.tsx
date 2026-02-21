@@ -1,25 +1,7 @@
-import type { ReactNode } from "react";
 import { useTranslation } from "react-i18next";
 import { ExperienceItem } from "@/features/experience/ui/Experiences.Item";
 import { cn } from "@/shared/lib/cn";
-
-/**
- * @interface ITimelineEntry
- * @property {string} id - Unique identifier for the timeline entry
- * @property {string} title - Job title held at the company
- * @property {string} [href] - Optional URL linking to the company website
- * @property {string} location - City and country where the role was based
- * @property {string} subtitle - Company name and employment date range
- * @property {ReactNode} content - Rendered description of responsibilities and achievements
- */
-export interface ITimelineEntry {
-    id: string;
-    title: string;
-    href?: string;
-    location: string;
-    subtitle: string;
-    content: ReactNode;
-}
+import type { ITimelineEntry } from "./types";
 
 /**
  * Returns the full list of work experience timeline entries.
@@ -37,11 +19,11 @@ export const experienceTimeline: (
 ) => ITimelineEntry[] = (headerClassName, bodyClassName) => {
     const { t } = useTranslation();
     const _headerClassName = cn(
-        "text-neutral-500 dark:text-neutral-400 italic text-[10pt] md:text-sm !mb-4 leading-relaxed! !md:leading-loose",
+        "italic !mb-4 leading-relaxed! !md:leading-loose text-body-sm md:text-sm text-typography-experience-header",
         headerClassName
     );
     const _bodyClassName = cn(
-        "list-disc space-y-2 pl-4 md:pl-5 text-[11.5pt] md:text-md leading-relaxed font-medium text-slate-500 dark:text-slate-300",
+        "list-disc space-y-2 pl-4 md:pl-5 text-[11.5pt] md:text-md leading-relaxed font-medium text-typography-experience-body",
         bodyClassName
     );
 

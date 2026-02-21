@@ -1,4 +1,4 @@
-import type { ISkillsByStack } from "@/features/skills/data/skills.tabs";
+import { ISkillsByStack } from "./types";
 
 export const devStackBackend: ISkillsByStack[] = [
     {
@@ -17,7 +17,7 @@ export const devStackBackend: ISkillsByStack[] = [
         title: ".NET",
         lightImage: "/dev-tools/dotnet.svg",
         darkImage: "/dev-tools/dotnet.svg",
-        progress: 50
+        progress: 70
     },
     {
         title: "NestJS",
@@ -29,6 +29,6 @@ export const devStackBackend: ISkillsByStack[] = [
         title: "Actix Web",
         lightImage: "/dev-tools/actix_light.svg",
         darkImage: "/dev-tools/actix_dark.svg",
-        progress: 20
+        progress: 10
     }
 ];

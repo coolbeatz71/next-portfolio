@@ -1,10 +1,6 @@
-import { memo, type ReactNode } from "react";
+import { memo } from "react";
 import { cn } from "@/shared/lib/cn";
-
-export interface PopupHeaderProps {
-    className?: string;
-    children: ReactNode;
-}
+import type { PopupHeaderProps } from "./types";
 
 /**
  * Popup header component.
@@ -24,7 +20,7 @@ function PopupHeaderComponent({ children, className }: PopupHeaderProps) {
     return (
         <div
             className={cn(
-                "sticky z-50 border border-t-0 border-x-0 border-b border-slate-300 dark:border-slate-700",
+                "sticky z-50 border border-t-0 border-x-0 border-b border-outline-strong",
                 className
             )}
         >

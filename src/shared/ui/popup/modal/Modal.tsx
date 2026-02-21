@@ -1,20 +1,11 @@
-import type { ReactNode } from "react";
 import { Fragment } from "react";
 import { createPortal } from "react-dom";
 import { useLockBodyScroll } from "react-use";
-
 import { cn } from "@/shared/lib/cn";
 import { PopupBackdrop } from "../Popup.Backdrop";
 import { PopupCloseButton } from "../Popup.Close.Button";
 import { PopupHeader } from "../Popup.Header";
-
-export interface ModalProps {
-    isOpen: boolean;
-    header: ReactNode;
-    className?: string;
-    children: ReactNode;
-    onToggle: () => void;
-}
+import type { ModalProps } from "./types";
 
 /**
  * Modal component.
@@ -51,7 +42,7 @@ export function Modal({
 
             <div
                 className={cn(
-                    "fixed z-50 w-[96%] md:w-[90%] max-w-xl bg-light dark:bg-dark rounded-lg shadow-lg transition-all duration-500 ease-out transform",
+                    "fixed z-50 w-[96%] md:w-[90%] max-w-xl bg-background rounded-lg shadow-lg transition-all duration-slow ease-out transform",
                     className
                 )}
                 style={{

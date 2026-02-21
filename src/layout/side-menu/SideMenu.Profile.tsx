@@ -1,6 +1,6 @@
 import NextImage from "next/image";
 import { GridPatternBackground } from "@/shared/ui/background/GridPattern.Background";
-import { LanguageDropDown } from "@/shared/ui/dropdown/language/Language.Dropdown";
+import { LanguageDropdown } from "@/shared/ui/dropdown/language/Language.Dropdown";
 import { ThemeToggle } from "@/shared/ui/theme-toggle/ThemeToggle";
 
 const avatarPlaceholder =
@@ -22,10 +22,10 @@ export function SideMenuProfile() {
         <div
             className={`
                 w-full py-4 flex flex-col items-start justify-center 
-                border border-t-0 border-x-0 border-b border-slate-300 dark:border-slate-700
+                border border-t-0 border-x-0 border-b border-outline-strong
             `}
         >
-            <div className="border border-slate-300 dark:border-slate-700 relative flex items-center justify-between w-full gap-2 rounded-lg p-2">
+            <div className="border border-outline-strong relative flex items-center justify-between w-full gap-2 rounded-lg p-2">
                 <GridPatternBackground size={20} />
                 <NextImage
                     width={12}
@@ -43,14 +43,14 @@ export function SideMenuProfile() {
                     <span className="text-sm font-semibold">
                         Mutombo Jean-vincent
                     </span>
-                    <span className="text-[8pt]">
+                    <span className="text-meta">
                         <a
                             target="_blank"
                             rel="noopener noreferrer"
                             href="mailto:jeanvincent.mutombo@gmail.com"
                             className="hover:font-medium text-center w-full md:w-auto md:text-start"
                         >
-                            <span className="hover:underline text-gray-500 dark:text-gray-400 flex justify-between">
+                            <span className="hover:underline text-typography-contact flex justify-between">
                                 jeanvincent.mutombo@gmail.com
                             </span>
                         </a>
@@ -58,7 +58,7 @@ export function SideMenuProfile() {
                 </div>
             </div>
             <div className="flex items-center justify-between gap-2 mt-4 w-full">
-                <LanguageDropDown placement="top" />
+                <LanguageDropdown placement="top" />
                 <ThemeToggle />
             </div>
         </div>

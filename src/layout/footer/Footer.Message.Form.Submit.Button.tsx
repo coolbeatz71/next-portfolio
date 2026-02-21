@@ -1,13 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { SpinnerIcon } from "@/shared/ui/icon/Spinner.Icon";
-
-/**
- * @interface FormSubmitButtonProps
- * @property {boolean} isLoading - Whether the form submission is in progress
- */
-interface FormSubmitButtonProps {
-    isLoading: boolean;
-}
+import type { FooterMessageFormSubmitButtonProps } from "./types";
 
 /**
  * Message form submit button component.
@@ -18,12 +11,14 @@ interface FormSubmitButtonProps {
  * Renders the submit button for the contact form. Shows a spinner and disables
  * the button while the form submission is in progress.
  *
- * @param {FormSubmitButtonProps} props - Component props
+ * @param {FooterMessageFormSubmitButtonProps} props - Component props
  * @param {boolean} props.isLoading - Whether the form submission is in progress
  *
  * @returns The form submit button element
  */
-export function FormSubmitButton({ isLoading }: FormSubmitButtonProps) {
+export function FooterMessageFormSubmitButton({
+    isLoading
+}: FooterMessageFormSubmitButtonProps) {
     const { t } = useTranslation();
 
     return (
@@ -31,10 +26,10 @@ export function FormSubmitButton({ isLoading }: FormSubmitButtonProps) {
             type="submit"
             disabled={isLoading}
             className={`
-                disabled:cursor-not-allowed disabled:bg-gray-400 w-full md:w-44
-                focus:outline-none text-white bg-indigo-700 hover:bg-indigo-800 focus:ring-4
-                focus:ring-indigo-300 dark:focus:ring-indigo-800 font-medium rounded-lg
-                text-sm p-3 lg:p-4 dark:bg-indigo-500 dark:hover:bg-indigo-700
+                disabled:cursor-not-allowed disabled:bg-surface-hover w-full md:w-44
+                focus:outline-none text-typography-on-primary bg-primary-fill hover:bg-primary-deep focus:ring-4
+                focus:ring-focus-primary font-medium rounded-lg
+                text-sm p-3 lg:p-4
             `}
         >
             {isLoading && <SpinnerIcon />}

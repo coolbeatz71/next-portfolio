@@ -55,6 +55,7 @@ export function FormField({
     const errorMessage = String(errors[name]?.message);
 
     const commonProps = {
+        id: name,
         placeholder: " ",
         ...register(name),
         className: cn(

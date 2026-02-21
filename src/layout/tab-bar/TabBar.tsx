@@ -1,22 +1,8 @@
 import { useState } from "react";
-import type { ITabs } from "@/features/projects/data/projects.tabs";
 import { cn } from "@/shared/lib/cn";
 import { NavigationDropdown } from "@/shared/ui/dropdown/navigation/Navigation.Dropdown";
-import { NavigationTabBar } from "./TabBar.Navigation";
-
-/**
- * @interface TabBarProps
- * @property {ITabs[]} tabs - Tab definitions including title, context, and content
- * @property {string} [tabBarClassName] - Additional class names for the desktop tab bar
- * @property {string} [containerClassName] - Additional class names for the outer container
- * @property {"skills" | "projects"} context - Used as the motion layoutId namespace
- */
-interface TabBarProps {
-    tabs: ITabs[];
-    tabBarClassName?: string;
-    containerClassName?: string;
-    context: "skills" | "projects";
-}
+import { TabBarNavigation } from "./TabBar.Navigation";
+import type { TabBarProps } from "./types";
 
 /**
  * Tab bar widget.
@@ -52,13 +38,13 @@ export function TabBar({
                     setActiveTabIndex={setActiveTabIndex}
                     className="inline-block md:hidden"
                 />
-                <NavigationTabBar
+                <TabBarNavigation
                     tabs={tabs}
                     context={context}
                     activeTabIndex={activeTabIndex}
                     setActiveTabIndex={setActiveTabIndex}
                     className={cn(
-                        "relative hidden md:flex flex-wrap px-1.5 py-1.5 list-none bg-white dark:bg-gray-900 rounded-lg gap-1",
+                        "relative hidden md:flex flex-wrap px-1.5 py-1.5 list-none bg-surface-tab rounded-lg gap-1",
                         tabBarClassName
                     )}
                 />

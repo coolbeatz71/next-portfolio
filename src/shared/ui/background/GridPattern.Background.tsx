@@ -1,9 +1,6 @@
 import { memo } from "react";
 import { GridPattern } from "./GridPattern";
-
-export interface GridPatternBackgroundProps {
-    size?: number;
-}
+import type { GridPatternBackgroundProps } from "./types";
 
 /**
  * Grid pattern background component.

@@ -1,11 +1,6 @@
 import { memo } from "react";
 import { cn } from "@/shared/lib/cn";
-
-export interface AbstractBackgroundProps {
-    maskImage: string;
-    className?: string;
-    backgroundClass: string;
-}
+import type { AbstractBackgroundProps } from "./types";
 
 /**
  * Abstract background component.

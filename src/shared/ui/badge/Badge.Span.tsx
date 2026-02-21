@@ -1,8 +1,5 @@
 import { memo } from "react";
-
-export interface BadgeSpanProps {
-    text: string;
-}
+import type { BadgeSpanProps } from "./types";
 
 /**
  * Badge span component.
@@ -20,9 +17,8 @@ export interface BadgeSpanProps {
 function BadgeSpanComponent({ text }: BadgeSpanProps) {
     return (
         <span
-            className={`cursor-pointer bg-indigo-100 text-indigo-800 dark:bg-gray-700
-                dark:text-indigo-400 border border-indigo-400 text-[7.5pt] font-semibold
-                px-2.5 py-0.5 rounded-lg transition-colors duration-100
+            className={`cursor-pointer bg-primary-faint text-primary-text border border-primary-border text-badge font-semibold
+                px-2.5 py-0.5 rounded-lg transition-colors duration-fast
             `}
         >
             {text}

@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import NextImage from "next/image";
 import { useInView } from "react-intersection-observer";
-import type { ISkillsByStack } from "@/features/skills/data/skills.tabs";
+import { ISkillsByStack } from "@/features/skills/data/types";
 import { BadgeSpan } from "@/shared/ui/badge/Badge.Span";
 
 /**
@@ -56,9 +56,9 @@ export function ProgressBar({
                 </span>
             </div>
 
-            <div className="w-full bg-indigo-300/20 h-6 mb-4 mt-1.5 rounded-lg">
+            <div className="w-full bg-surface-track h-6 mb-4 mt-1.5 rounded-lg">
                 <motion.div
-                    className="bg-indigo-700 dark:bg-indigo-500 h-6 rounded-lg"
+                    className="bg-primary-fill h-6 rounded-lg"
                     initial={{ width: 0 }}
                     transition={{ duration: 0.5 }}
                     animate={{ width: inView ? `${progress}%` : 0 }}

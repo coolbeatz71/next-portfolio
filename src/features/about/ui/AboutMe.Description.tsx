@@ -1,13 +1,10 @@
 import { Fragment } from "react";
 import { useTranslation } from "react-i18next";
-
-interface HighlightProps {
-    children: React.ReactNode;
-}
+import type { HighlightProps } from "./types";
 
 function Highlight({ children }: HighlightProps) {
     return (
-        <span className="text-black dark:text-white font-semibold">
+        <span className="text-typography-inverse font-semibold">
             {" "}
             {children}
         </span>
@@ -27,17 +24,18 @@ function Highlight({ children }: HighlightProps) {
  */
 export function AboutMeDescription() {
     const { t } = useTranslation();
-    const textStyle = "text-neutral-500 dark:text-neutral-400 leading-loose!";
+    const textStyle = "text-typography-subtle leading-loose!";
+
     return (
         <Fragment>
-            <h2 className="text-start mb-4 text-3xl font-bold tracking-tight md:leading-relaxed text-stone-700 dark:text-stone-200">
+            <h2 className="text-start mb-4 text-3xl font-bold tracking-tight md:leading-relaxed text-typography-heading">
                 {t("aboutme_title")}
             </h2>
-            <p className="text-md sm:text-lg md:text-xl lg:text-xl text-start text-neutral-500 dark:text-neutral-400 tracking-tight md:leading-relaxed">
+            <p className="text-md sm:text-lg md:text-xl text-start text-typography-muted tracking-tight md:leading-relaxed">
                 {t("aboutme_subtitle")}
             </p>
-            <hr className="h-px my-4 md:my-8 border-0 bg-slate-500/10 dark:bg-slate-400/10" />
-            <h2 className="text-start mb-4 text-xl md:text-xl xl:text-2xl font-bold leading-tight! text-slate-700 dark:text-slate-300">
+            <hr className="h-px my-4 md:my-8 border-0 bg-surface-track" />
+            <h2 className="text-start mb-4 text-xl xl:text-2xl font-bold leading-tight! text-typography-primary">
                 {t("about_myself")}
             </h2>
 

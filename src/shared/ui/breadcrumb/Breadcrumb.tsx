@@ -1,8 +1,5 @@
 import { IconArrowRight } from "@/shared/config/icons";
-
-export interface BreadcrumbProps {
-    labels: string[];
-}
+import type { BreadcrumbProps } from "./types";
 
 /**
  * Breadcrumb navigation component.
@@ -25,9 +22,9 @@ export function Breadcrumb({ labels }: BreadcrumbProps) {
                     <li key={label}>
                         <div className="flex items-center">
                             {i > 0 && (
-                                <IconArrowRight className="rtl:rotate-180 text-xl text-slate-300 dark:text-slate-600 mr-1" />
+                                <IconArrowRight className="rtl:rotate-180 text-xl text-border-strong mr-1" />
                             )}
-                            <span className="text-sm font-medium text-slate-500 dark:text-slate-400">
+                            <span className="text-sm font-medium text-typography-contact">
                                 {label}
                             </span>
                         </div>

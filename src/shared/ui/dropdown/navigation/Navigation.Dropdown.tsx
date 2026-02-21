@@ -1,17 +1,10 @@
 import { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useClickAway } from "react-use";
-import type { ITabs } from "@/features/projects/data/projects.tabs";
 import { IconChevronUpDown } from "@/shared/config/icons";
 import { cn } from "@/shared/lib/cn";
 import { NavigationDropdownMenu } from "./Navigation.Dropdown.Menu";
-
-export interface NavigationDropdownProps {
-    tabs: ITabs[];
-    className?: string;
-    activeTabIndex: number;
-    setActiveTabIndex: (index: number) => void;
-}
+import type { NavigationDropdownProps } from "./types";
 
 /**
  * Navigation dropdown component.
@@ -58,7 +51,7 @@ export function NavigationDropdown({
             <div className="w-full">
                 <button
                     type="button"
-                    className="w-full rounded-lg text-sm font-medium flex items-center justify-between p-3.5 text-white hover:text-slate-700 hover:dark:text-slate-100 bg-indigo-700 dark:bg-indigo-500 hover:bg-slate-300 hover: dark:hover:bg-gray-700 dark:hover:border-gray-600 hover:ring-3 dark:focus:ring-gray-700"
+                    className="w-full rounded-lg text-sm font-medium flex items-center justify-between p-3.5 text-typography-on-primary hover:text-typography-nav bg-primary-fill hover:bg-surface-hover hover:ring-3"
                     onClick={toggleDropdown}
                 >
                     <span>{t(tabs[activeTabIndex].title)}</span>

@@ -1,15 +1,8 @@
-import { type MotionValue, motion } from "motion/react";
+import { motion } from "motion/react";
 import NextImage from "next/image";
 import { memo } from "react";
-import type { IAboutMeImage } from "@/features/about/data/about.images";
 import { cn } from "@/shared/lib/cn";
-
-export interface ImageColumnProps {
-    columnKey: string;
-    imageHeight: number;
-    images: IAboutMeImage[];
-    translate: MotionValue<number>;
-}
+import type { ImageColumnProps } from "./types";
 
 /**
  * Parallax scroll image column component.
@@ -34,12 +27,12 @@ function ImageColumnComponent({
     columnKey,
     imageHeight
 }: ImageColumnProps) {
-    const gradientOverlayClassName = `absolute inset-0 h-full w-full bg-linear-to-r from-indigo-400 
-        to-indigo-900 transform scale-[0.75] rounded-full blur-2xl`;
+    const gradientOverlayClassName = `absolute inset-0 h-full w-full bg-linear-to-r from-parallax-gradient-start
+        to-parallax-gradient-end transform scale-[0.75] rounded-full blur-2xl`;
 
     const imageContainerClassName = cn(
         "h-[14rem] md:h-[20rem] lg:h-[16rem] 2xl:h-[22rem]",
-        "relative shadow-xl bg-indigo-500/[0.2] border border-gray-800/[0.1]",
+        "relative shadow-xl bg-parallax-overlay border border-parallax-border",
         "p-1 overflow-hidden rounded-lg flex flex-col justify-end items-start"
     );
 

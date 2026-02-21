@@ -2,16 +2,7 @@ import { NavigationMenu } from "@/layout/navigation/Navigation.Menu";
 import { Logo } from "@/shared/ui/logo/Logo";
 import { SideMenuDrawer } from "@/shared/ui/popup/drawer/SideMenu.Drawer";
 import { SideMenuProfile } from "./SideMenu.Profile";
-
-/**
- * @interface SideMenuProps
- * @property {boolean} isOpen - Whether the side menu drawer is open
- * @property {() => void} toggleDrawer - Callback to toggle the drawer open/closed
- */
-export interface SideMenuProps {
-    isOpen: boolean;
-    toggleDrawer: () => void;
-}
+import type { SideMenuProps } from "./types";
 
 /**
  * Side menu widget.

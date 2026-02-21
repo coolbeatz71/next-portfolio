@@ -1,15 +1,6 @@
-import type { ElementType, HTMLAttributes, ReactNode } from "react";
 import { cn } from "@/shared/lib/cn";
+import type { OutlineButton } from "./types";
 
-interface OutlineButton extends HTMLAttributes<HTMLButtonElement> {
-    borderRadius?: string;
-    children: ReactNode;
-    as?: ElementType;
-    containerClassName?: string;
-    borderClassName?: string;
-    duration?: number;
-    className?: string;
-}
 /**
  * Outline button component.
  *
@@ -47,7 +38,7 @@ export function OutlineButton({
                 borderRadius: borderRadius
             }}
             className={cn(
-                "inline-flex animate-Outline items-center justify-center border-4 border-slate-300 dark:border-slate-700  px-6 font-medium dark:text-slate-300 text-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-400/50",
+                "inline-flex animate-Outline items-center justify-center border-4 border-surface-hover px-6 font-medium text-typography-nav focus:outline-none focus:ring-2 focus:ring-focus-surface",
                 className
             )}
             {...otherProps}

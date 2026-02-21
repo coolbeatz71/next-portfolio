@@ -1,16 +1,6 @@
-import type { ElementType, HTMLAttributes } from "react";
 import { cn } from "@/shared/lib/cn";
 import { MovingBorder } from "@/shared/ui/buttons/MovingBorder";
-
-interface MovingBorderButton extends HTMLAttributes<HTMLButtonElement> {
-    as?: ElementType;
-    duration?: number;
-    className?: string;
-    borderRadius?: string;
-    borderClassName?: string;
-    children: React.ReactNode;
-    containerClassName?: string;
-}
+import type { MovingBorderButton } from "./types";
 
 /**
  * Moving border button component.
@@ -60,7 +50,7 @@ export function MovingBorderButton({
                 <MovingBorder duration={duration} rx="30%" ry="30%">
                     <div
                         className={cn(
-                            "h-20 w-20 opacity-[0.8] bg-[radial-gradient(var(--indigo-500)_40%,transparent_60%)]",
+                            "h-20 w-20 opacity-[0.8] bg-[radial-gradient(var(--color-primary-glow)_40%,transparent_60%)]",
                             borderClassName
                         )}
                     />
@@ -69,7 +59,7 @@ export function MovingBorderButton({
 
             <div
                 className={cn(
-                    "font-semibold relative bg-white border backdrop-blur-xl items-center justify-center w-full h-full text-sm antialiased transition-colors duration-300 dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-950",
+                    "font-semibold relative bg-surface-elevated border backdrop-blur-xl items-center justify-center w-full h-full text-sm antialiased transition-colors duration-moderate text-typography-inverse border-outline-neutral hover:bg-surface-raised",
                     className
                 )}
                 style={{

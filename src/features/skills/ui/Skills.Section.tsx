@@ -1,13 +1,5 @@
-import type { ISkillsByStack } from "@/features/skills/data/skills.tabs";
 import { ProgressBar } from "@/shared/ui/progressbar/ProgressBar";
-
-/**
- * @interface SkillSectionProps
- * @property {ISkillsByStack[]} stacks - List of skill entries with progress and images to display
- */
-export interface SkillSectionProps {
-    stacks: ISkillsByStack[];
-}
+import type { SkillSectionProps } from "./types";
 
 /**
  * Skill stack section component.

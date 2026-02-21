@@ -1,12 +1,6 @@
-import type { ReactNode } from "react";
 import { useScrollReveal } from "@/shared/hooks/useScrollReveal";
 import { cn } from "@/shared/lib/cn";
-
-export interface ScrollRevealProps {
-    children: ReactNode;
-    className?: string;
-    direction?: "up" | "down" | "left" | "right";
-}
+import type { ScrollRevealProps } from "./types";
 
 /**
  * Scroll reveal component.
@@ -43,7 +37,7 @@ export function ScrollReveal({
             <div
                 className={cn(
                     className,
-                    `transition-all duration-500 ease-in-out will-change-transform
+                    `transition-all duration-slow ease-in-out will-change-transform
                     ${isVisible ? "opacity-100 transform-none" : `opacity-0 ${directionClasses[direction]}`}
                     `
                 )}

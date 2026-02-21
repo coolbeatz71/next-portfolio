@@ -1,14 +1,4 @@
-/**
- * @interface IDevToolLogo
- * @property {string} className - Tailwind classes for the logo card element
- * @property {string} containerClassName - Tailwind grid placement classes for the container
- * @property {string} iconName - Tailwind background-image class for the technology icon
- */
-export interface IDevToolLogo {
-    className: string;
-    containerClassName: string;
-    iconName: string;
-}
+import type { IDevToolLogo } from "./types";
 
 /** Dev tool logos rendered in the hero badge grid. */
 export const devToolsLogoList: IDevToolLogo[] = [

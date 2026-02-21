@@ -1,3 +1,14 @@
+/**
+ * English flag icon component.
+ *
+ * @component
+ *
+ * @description
+ * Renders an inline SVG of the United Kingdom flag (Union Jack),
+ * used to represent the English language option in the language switcher.
+ *
+ * @returns The UK flag SVG element
+ */
 export const EnglishFlagIcon = () => (
     <svg
         height={40}

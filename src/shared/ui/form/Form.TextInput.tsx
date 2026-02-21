@@ -1,12 +1,5 @@
-import type { HTMLInputTypeAttribute } from "react";
 import { FormField } from "./Form.Field";
-
-export interface FormTextInputProps {
-    name: string;
-    label: string;
-    type: HTMLInputTypeAttribute;
-    className?: string;
-}
+import type { FormTextInputProps } from "./types";
 
 /**
  * Form text input component.

@@ -1,15 +1,10 @@
-import type { ReactNode } from "react";
 import { useTranslation } from "react-i18next";
-
-interface LinkProps {
-    href: string;
-    children: ReactNode;
-}
+import type { LinkProps } from "./types";
 
 const Link = ({ href, children }: LinkProps) => (
     <a
         href={href}
-        className="text-indigo-700 hover:underline font-medium"
+        className="text-primary-on-accent hover:underline font-medium"
         target="_blank"
         rel="noopener noreferrer"
     >
@@ -32,12 +27,12 @@ export function FooterCopyright() {
     const { t } = useTranslation();
     return (
         <p className="text-sm text-center">
-            <span className="font-semibold text-gray-600 dark:text-gray-300">
+            <span className="font-semibold text-typography-copyright">
                 &copy; {new Date().getFullYear()} Mutombo Jean-Vincent |
             </span>{" "}
-            <span className="font-light text-gray-500 dark:text-gray-400">
+            <span className="font-light text-typography-contact">
                 {" "}
-                {t("designed_with")} <span className="text-pink-500">❤️</span>{" "}
+                {t("designed_with")} <span className="text-love">❤️</span>{" "}
                 {t("and")}{" "}
                 <Link href="https://tailwindcss.com/">Tailwind CSS</Link>
                 {" & "}

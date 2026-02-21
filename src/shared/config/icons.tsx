@@ -18,7 +18,7 @@ import { IoMdArrowDropright, IoMdCloseCircle } from "react-icons/io";
 import { LuChevronsUpDown } from "react-icons/lu";
 import { MdEmail, MdOutlineMenu } from "react-icons/md";
 import { RiInstagramFill } from "react-icons/ri";
-import { EnglishFlagIcon } from "@/shared/ui/icon/EnglishFlag.icon";
+import { EnglishFlagIcon } from "@/shared/ui/icon/EnglishFlag.Icon";
 import { FrenchFlagIcon } from "@/shared/ui/icon/FrenchFlag.Icon";
 import { SpinnerIcon } from "@/shared/ui/icon/Spinner.Icon";
 

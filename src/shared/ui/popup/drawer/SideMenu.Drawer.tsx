@@ -1,22 +1,11 @@
-import type { ReactNode } from "react";
 import { Fragment } from "react";
 import { useLockBodyScroll } from "react-use";
-
 import { cn } from "@/shared/lib/cn";
 import { PopupBackdrop } from "../Popup.Backdrop";
 import { PopupCloseButton } from "../Popup.Close.Button";
 import { PopupFooter } from "../Popup.Footer";
 import { PopupHeader } from "../Popup.Header";
-
-export interface SideMenuDrawerProps {
-    header: ReactNode;
-    footer?: ReactNode;
-    isOpen: boolean;
-    onToggle: () => void;
-    children: ReactNode;
-    className?: string;
-    position?: "right" | "left";
-}
+import type { SideMenuDrawerProps } from "./types";
 
 /**
  * Side menu drawer component.
@@ -62,7 +51,7 @@ export function SideMenuDrawer({
         <Fragment>
             <aside
                 className={cn(
-                    `fixed inset-100 top-0 ${position}-0 z-50 w-[50%] h-screen bg-light dark:bg-dark
+                    `fixed inset-100 top-0 ${position}-0 z-50 w-[50%] h-screen bg-background
                     transition-transform transform ${getTranslateValue()}`,
                     className
                 )}

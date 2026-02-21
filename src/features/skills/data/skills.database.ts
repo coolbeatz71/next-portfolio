@@ -1,4 +1,4 @@
-import type { ISkillsByStack } from "@/features/skills/data/skills.tabs";
+import { ISkillsByStack } from "./types";
 
 export const devStackDatabase: ISkillsByStack[] = [
     {

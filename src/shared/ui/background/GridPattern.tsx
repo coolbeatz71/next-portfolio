@@ -1,12 +1,5 @@
-import { type SVGProps, useId } from "react";
-
-interface GridPatternProps extends SVGProps<SVGSVGElement> {
-    width: number;
-    height: number;
-    x: string | number;
-    y: string | number;
-    squares?: Array<[number, number]>;
-}
+import { useId } from "react";
+import type { GridPatternProps } from "./types";
 
 /**
  * Grid pattern SVG component.

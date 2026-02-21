@@ -1,11 +1,5 @@
 import Image from "next/image";
-
-export interface ProjectImageProps {
-    src: string;
-    alt: string;
-    blurDataURL: string;
-    onClick: () => void;
-}
+import type { ProjectImageProps } from "./types";
 
 /**
  * Project card image component.
@@ -45,12 +39,12 @@ export function ProjectCardImage({
                 quality={55}
                 placeholder="blur"
                 blurDataURL={blurDataURL}
-                className="object-cover transition-transform duration-500 group-hover:scale-110"
+                className="object-cover transition-transform duration-slow group-hover:scale-110"
             />
             <div
                 className={`
                     absolute inset-0 bg-linear-to-t from-black/50 to-transparent
-                    opacity-0 group-hover:opacity-100 transition-opacity duration-300
+                    opacity-0 group-hover:opacity-100 transition-opacity duration-moderate
                 `}
             />
         </div>

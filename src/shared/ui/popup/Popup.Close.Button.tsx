@@ -1,8 +1,5 @@
 import { IconClose } from "@/shared/config/icons";
-
-export interface PopupCloseButtonProps {
-    onClick: () => void;
-}
+import type { PopupCloseButtonProps } from "./types";
 
 /**
  * Popup close button component.
@@ -24,7 +21,7 @@ export function PopupCloseButton({ onClick }: PopupCloseButtonProps) {
             type="button"
             title="Close"
             onClick={onClick}
-            className="absolute top-5 right-4 text-gray-500 hover:text-red-500 transition-colors z-50"
+            className="absolute top-5 right-4 text-typography-contact hover:text-danger transition-colors z-50"
         >
             <IconClose size={24} />
         </button>
