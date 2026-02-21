@@ -29,7 +29,7 @@ export function NavigationDropdownMenu({
             id="dropdown"
             className="w-full z-10 origin-top-right absolute top-12 left-0 right-0 px-2 mt-1 rounded-lg shadow-xl bg-surface-dropdown"
         >
-            <div className="py-2" aria-labelledby="dropdown-menu">
+            <div role="menu" className="py-2" aria-label="Select section">
                 {tabs.map((tab, idx) => {
                     const isActiveTab = idx === activeTabIndex;
 

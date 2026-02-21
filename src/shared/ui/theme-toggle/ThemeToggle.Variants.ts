@@ -77,8 +77,8 @@ export const moonAnimation = {
     rotate: -360,
     scale: 1.5,
     transformOrigin: "25px 25px",
-    stroke: "#5fbdf7",
-    fill: "#4640f3",
+    stroke: "var(--color-glow-star)",
+    fill: "var(--color-primary-subtle)",
     fillOpacity: 0.65,
     strokeOpacity: 1,
     transition: { delay: 0.1 }
@@ -89,8 +89,8 @@ export const sunAnimation = {
     rotate: 0,
     scale: 1,
     transformOrigin: "25px 25px",
-    fill: "#ffb700",
-    stroke: "#ffc83e",
+    fill: "var(--color-accent)",
+    stroke: "var(--color-sun)",
     fillOpacity: 0.65,
     strokeOpacity: 1
 };

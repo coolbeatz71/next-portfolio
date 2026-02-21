@@ -35,6 +35,11 @@ export function ThemeToggle() {
             type="button"
             onClick={onToggle}
             title="Toggle Theme"
+            aria-label={
+                theme === "dark"
+                    ? "Switch to light mode"
+                    : "Switch to dark mode"
+            }
             className="group relative size-12 sm:size-12 md:size-12 rounded-lg flex justify-center items-center text-sun bg-surface-raised hover:bg-surface-hover"
         >
             <motion.svg
@@ -77,7 +82,7 @@ export function ThemeToggle() {
                     d={sunPath}
                     fill="transparent"
                     transition={{ duration: 0.65, type: "spring" }}
-                    initial={{ fillOpacity: 0, strokeOpacity: 0 }}
+                    initial={{ d: sunPath, fillOpacity: 0, strokeOpacity: 0 }}
                     animate={theme === "dark" ? moonAnimation : sunAnimation}
                 />
             </motion.svg>

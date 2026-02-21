@@ -122,7 +122,7 @@ export function ProjectImageSlider({
                 onKeyDown={togglePlayPause}
                 onClick={togglePlayPause}
                 onMouseMove={handleMouseMove}
-                className={`relative w-full max-w-6xl h-56 md:h-72 transition-all duration-moderate ${isZoomed ? "p-0" : "px-4 py-4 pr-0"}`}
+                className={`relative w-full max-w-6xl h-56 md:h-72 duration-moderate ${isZoomed ? "p-0" : "px-4 py-4 pr-0"}`}
             >
                 <ProjectImageSliderBackground
                     src={images[0].src}

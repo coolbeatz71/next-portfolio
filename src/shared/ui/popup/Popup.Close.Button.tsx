@@ -20,10 +20,11 @@ export function PopupCloseButton({ onClick }: PopupCloseButtonProps) {
         <button
             type="button"
             title="Close"
+            aria-label="Close"
             onClick={onClick}
             className="absolute top-5 right-4 text-typography-contact hover:text-danger transition-colors z-50"
         >
-            <IconClose size={24} />
+            <IconClose size={24} aria-hidden="true" />
         </button>
     );
 }

@@ -1,5 +1,4 @@
-import { AnimatedShapeProps } from "@shared/config/types";
-import { motion } from "motion/react";
+import type { AnimatedShapeProps } from "./types";
 
 /**
  * Animated shape component.
@@ -7,28 +6,13 @@ import { motion } from "motion/react";
  * @component
  *
  * @description
- * A generic motion div wrapper that applies animation and transition props.
- * Used to render decorative animated shapes (circles, blobs, etc.) in the hero section.
+ * A plain div wrapper for decorative animated shapes (circles, blobs, etc.).
+ * Animation is applied via CSS keyframes on the className.
  *
- * @param {AnimatedShapeProps} props - Component props
- * @param {string} [props.className] - Class names for sizing, color, and positioning
- * @param {MotionProps["animate"]} [props.animate] - Motion animate config
- * @param {Transition} [props.transition] - Motion transition config
+ * @param {string} [props.className] - Class names for sizing, color, positioning, and animation
  *
  * @returns The animated shape element
  */
-export function AnimatedShape({
-    className,
-    animate,
-    transition,
-    ...props
-}: AnimatedShapeProps) {
-    return (
-        <motion.div
-            className={className}
-            animate={animate}
-            transition={transition}
-            {...props}
-        />
-    );
+export function AnimatedShape({ className }: AnimatedShapeProps) {
+    return <div className={className} aria-hidden="true" />;
 }

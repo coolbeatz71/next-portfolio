@@ -8,4 +8,4 @@ export const LAPTOP_DEVICE = "(min-width: 768px) and (max-width: 992px)";
 export const DESKTOP_DEVICE = "(min-width: 992px) and (max-width: 1200px)";
 
 export const CUSTOM_SCROLLBAR =
-    "scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar scrollbar-w-2 scrollbar-thumb-indigo-500 scrollbar-track-slate-300 dark:scrollbar-track-slate-700";
+    "scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar scrollbar-w-2 scrollbar-thumb-indigo-500 scrollbar-track-gray-300 dark:scrollbar-track-gray-700";

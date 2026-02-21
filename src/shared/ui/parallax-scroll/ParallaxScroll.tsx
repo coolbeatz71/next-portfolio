@@ -1,7 +1,5 @@
-import { cubicBezier, useScroll, useSpring, useTransform } from "motion/react";
-import { useEffect, useMemo, useState } from "react";
 import { cn } from "@/shared/lib/cn";
-import { getRandomImages } from "@/shared/lib/getRandomImages";
+import { useParallaxScroll } from "./hooks/useParallaxScroll";
 import { ImageColumn } from "./ParallaxScroll.ImageColumn";
 import type { ParallaxScrollProps } from "./types";
 
@@ -22,51 +20,13 @@ import type { ParallaxScrollProps } from "./types";
  * @returns The parallax scroll image grid element
  */
 export function ParallaxScroll({ images, className }: ParallaxScrollProps) {
-    const { scrollYProgress } = useScroll();
-    const cubicEase = cubicBezier(0.5, 0, 0.2, 1);
-
-    const smoothScroll = useSpring(scrollYProgress, {
-        damping: 30,
-        stiffness: 100,
-        restDelta: 0.001
-    });
-
-    const translateFirst = useTransform(smoothScroll, [0, 1], [0, -600], {
-        ease: cubicEase
-    });
-    const translateSecond = useTransform(smoothScroll, [0, 1], [0, 600], {
-        ease: cubicEase
-    });
-
-    const [selectedImages, setSelectedImages] = useState(() =>
-        getRandomImages(images, 5)
-    );
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setSelectedImages((prevImages) =>
-                getRandomImages(images, 5, prevImages)
-            );
-        }, 5000);
-
-        return () => clearInterval(interval);
-    }, [images]);
-
-    const divider = useMemo(
-        () => Math.ceil(selectedImages.length / 2),
-        [selectedImages]
-    );
-    const firstColumn = useMemo(
-        () => selectedImages.slice(0, divider),
-        [selectedImages, divider]
-    );
-    const secondColumn = useMemo(
-        () => selectedImages.slice(divider),
-        [selectedImages, divider]
-    );
-
-    const gridHeight = 250;
-    const imageHeight = gridHeight / divider;
+    const {
+        firstColumn,
+        secondColumn,
+        imageHeight,
+        translateFirst,
+        translateSecond
+    } = useParallaxScroll(images);
 
     return (
         <div className={cn("w-full pt-12", className)}>

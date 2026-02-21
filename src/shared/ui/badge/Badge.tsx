@@ -1,9 +1,11 @@
 import { motion } from "motion/react";
-import numeral from "numeral";
-import CountUp from "react-countup";
+import dynamic from "next/dynamic";
 import { cn } from "@/shared/lib/cn";
+import { formatCount } from "@/shared/lib/formatCount";
 import { GridPatternBackground } from "@/shared/ui/background/GridPattern.Background";
 import type { BadgeProps } from "./types";
+
+const CountUp = dynamic(() => import("react-countup"), { ssr: false });
 
 /**
  * Animated stat badge component.
@@ -52,9 +54,7 @@ export function Badge({
                         delay={1}
                         duration={2}
                         end={endCountNumber}
-                        formattingFn={(value: number) =>
-                            `${numeral(Number(value)).format("0.[00]a")}+`
-                        }
+                        formattingFn={formatCount}
                     />
                     {endCountText}
                 </div>

@@ -78,7 +78,7 @@ function ProjectCardComponent({ project, index }: ProjectCardProps) {
             >
                 <div
                     className={`md:min-h-64 lg:min-h-72 bg-surface-elevated rounded-lg
-                        overflow-hidden transition-shadow duration-moderate group-hover:shadow-xl
+                        overflow-hidden duration-moderate group-hover:shadow-xl
                     `}
                 >
                     <div className="flex flex-col md:flex-row md:min-h-64 lg:min-h-72">

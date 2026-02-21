@@ -1,8 +1,16 @@
+import dynamic from "next/dynamic";
 import { useTranslation } from "react-i18next";
 import { creditBadgeList } from "@/shared/config/credit-badge";
 import { devToolsLogoList } from "@/shared/config/dev-tools";
-import { Badge } from "@/shared/ui/badge/Badge";
 import { BadgeDevTools } from "@/shared/ui/badge/Badge.DevTools";
+
+const Badge = dynamic(async () => {
+    const mod = await import(
+        /* webpackChunkName: "Badge" */
+        "@/shared/ui/badge/Badge"
+    );
+    return mod.Badge;
+});
 
 /**
  * Hero badges component.

@@ -42,10 +42,11 @@ export function Drawer({
 
     return (
         <div
+            role="dialog"
             aria-modal="true"
+            aria-label="drawer"
             id={`dialog-${position}`}
             className="relative z-50 "
-            aria-labelledby="drawer"
         >
             <DrawerBackdrop isOpen={isOpen} />
             <div
