@@ -74,7 +74,7 @@
     --color-primary-border: var(--primitive-brand-400);
     --color-primary-text: var(--primitive-brand-800);
     --color-primary-glow: var(--primitive-brand-500);
-    --color-primary-gradient-start: var(--primitive-neutral-600);
+    --color-primary-gradient-start: oklch(from var(--color-indigo-500) l c h / 0.5);
     --color-primary-gradient-mid: var(--primitive-brand-600);
     --color-primary-gradient-end: var(--primitive-brand-700);
     --color-border-gradient-start: var(--primitive-brand-500);
