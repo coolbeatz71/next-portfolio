@@ -73,7 +73,7 @@ export function Drawer({
                             isOpen={isOpen}
                             position={position}
                         >
-                            <PopupHeader className="py-4 sticky top-0 bg-light dark:bg-dark">
+                            <PopupHeader className="py-4 sticky top-0 bg-background">
                                 {header}
                             </PopupHeader>
                             <PopupCloseButton onClick={onToggle} />

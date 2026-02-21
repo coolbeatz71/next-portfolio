@@ -37,7 +37,7 @@ export const toastOptions = {
  *
  * @returns Form ref, react-hook-form methods, isLoading flag, and onSave handler
  */
-export function useFooterMessageForm() {
+export function useSendEmail() {
     const { t } = useTranslation();
     const formRef = useRef<HTMLFormElement>(null);
     const [isLoading, setIsLoading] = useState(false);

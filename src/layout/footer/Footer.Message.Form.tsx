@@ -5,7 +5,7 @@ import { FormTextInput } from "@/shared/ui/form/Form.TextInput";
 import { FooterMessageFormHeader } from "./Footer.Message.Form.Header";
 import { FooterMessageFormSubmitButton } from "./Footer.Message.Form.Submit.Button";
 import { FooterMessageFormToaster } from "./Footer.Message.Form.Toaster";
-import { useFooterMessageForm } from "./hooks/useFooterMessageForm";
+import { useSendEmail } from "./hooks/useSendEmail";
 
 /**
  * Footer contact message form component.
@@ -20,7 +20,7 @@ import { useFooterMessageForm } from "./hooks/useFooterMessageForm";
  */
 export function FooterMessageForm() {
     const { t } = useTranslation();
-    const { form, formRef, isLoading, onSave } = useFooterMessageForm();
+    const { form, formRef, isLoading, onSave } = useSendEmail();
     const { handleSubmit } = form;
 
     return (

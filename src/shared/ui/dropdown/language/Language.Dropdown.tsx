@@ -28,9 +28,7 @@ function LanguageDropdownComponent({ placement }: LanguageDropdownProps) {
             <button
                 type="button"
                 className={`rounded-lg flex items-center justify-center p-3.5 sm:p-2.5 md:p-3.5
-                    text-slate-700 bg-slate-100 dark:bg-slate-900 hover:bg-slate-300
-                    text-sm dark:text-slate-100 dark:hover:bg-gray-700 dark:hover:border-gray-600
-                    dark:focus:ring-gray-700
+                    text-typography-nav bg-surface-raised hover:bg-surface-hover text-sm
                 `}
                 onClick={toggleDropdown}
             >

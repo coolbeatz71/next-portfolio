@@ -35,7 +35,7 @@ export function ProjectModalLinks({ project }: ProjectModalLinksProps) {
     if (!hasLinks) return null;
 
     return (
-        <div className="border border-b-0 border-x-0 border-t border-slate-300 dark:border-slate-700">
+        <div className="border border-b-0 border-x-0 border-t border-outline-strong">
             <div className="flex justify-end gap-4 items-center pt-4">
                 <Link
                     href={project.sourceCodeLink}
@@ -43,7 +43,7 @@ export function ProjectModalLinks({ project }: ProjectModalLinksProps) {
                 >
                     <button
                         type="button"
-                        className="py-2 text-sm font-medium text-gray-500 focus:outline-none rounded-lg hover:text-slate-900 dark:text-gray-400 dark:hover:text-white"
+                        className="py-2 text-sm font-medium text-typography-contact focus:outline-none rounded-lg hover:text-typography-inverse dark:hover:text-typography-on-primary"
                     >
                         <div className="flex justify-center items-center text-sm font-medium">
                             <IconCodeBranch className="mr-1 h-3 w-3" />
@@ -54,7 +54,7 @@ export function ProjectModalLinks({ project }: ProjectModalLinksProps) {
 
                 <Link href={project.liveLink} isVisible={project.hasLiveLink}>
                     <LitUpBorderButton className="w-32 p-[3.5px]">
-                        <div className="flex justify-center items-center text-[10pt] font-medium">
+                        <div className="flex justify-center items-center text-body-sm font-medium">
                             <IconArrowUpRight className="mr-2 h-3 w-3" />
                             {t("open")}
                         </div>

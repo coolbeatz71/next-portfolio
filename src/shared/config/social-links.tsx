@@ -12,7 +12,7 @@ export const socialLinksList: ISocialLink[] = [
         icon: <IconGithub />,
         platform: "github",
         href: "https://github.com/coolbeatz71/",
-        hoverColor: "hover:text-github hover:dark:text-github_dark"
+        hoverColor: "hover:text-github"
     },
     {
         icon: <IconLinkedIn />,
@@ -24,7 +24,7 @@ export const socialLinksList: ISocialLink[] = [
         icon: <IconMedium />,
         platform: "medium",
         href: "https://medium.com/@sigmacool",
-        hoverColor: "hover:text-medium hover:dark:text-medium_dark"
+        hoverColor: "hover:text-medium"
     },
     {
         icon: <IconYoutube />,

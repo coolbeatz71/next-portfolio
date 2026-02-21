@@ -48,11 +48,11 @@ export function ProjectModal({ project }: ProjectModalProps) {
             </div>
 
             <div className="flex flex-col gap-4 mt-4">
-                <p className="text-sm text-neutral-600 dark:text-neutral-400">
+                <p className="text-sm text-typography-subtle">
                     {t(project.description)}
                 </p>
 
-                <p className="text-sm text-neutral-600 dark:text-neutral-400">
+                <p className="text-sm text-typography-subtle">
                     <span className="font-semibold">Role: </span>
                     {t(project.role)}
                 </p>

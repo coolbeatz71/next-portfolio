@@ -54,10 +54,10 @@ function NavigationMenuComponent({ onClick, className }: NavigationMenuProps) {
             {navigationList.map(({ label, href }) => {
                 const isCurrent = activeLink === href;
                 const linkClasses = cn(
-                    "rounded-lg px-3 py-2 text-sm font-medium transition-colors duration-300",
+                    "rounded-lg px-3 py-2 text-sm font-medium transition-colors duration-moderate",
                     isCurrent
-                        ? "dark:bg-slate-900 bg-slate-700 text-white"
-                        : "dark:text-slate-300 text-slate-700 hover:bg-slate-300 dark:hover:bg-slate-700",
+                        ? "bg-primary-fill text-typography-on-primary"
+                        : "text-typography-nav hover:bg-surface-hover",
                     className
                 );
 

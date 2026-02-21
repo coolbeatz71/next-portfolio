@@ -32,9 +32,8 @@ export function GlowingStarsCard({
                 setMouseEnter(false);
             }}
             className={cn(
-                `bg-[linear-gradient(110deg,#fff_0.5%,#ddd)]
-                dark:bg-[linear-gradient(110deg,#444_0.5%,#333)] 
-                max-w-20 max-h-20 h-full w-full rounded-lg 
+                `bg-[linear-gradient(110deg,var(--color-card-gradient-start)_0.5%,var(--color-card-gradient-mid))]
+                max-w-20 max-h-20 h-full w-full rounded-lg
                 relative flex items-center justify-center`,
                 className
             )}

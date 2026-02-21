@@ -19,7 +19,7 @@ import type { TypeWriterProps } from "./types";
 export function TypeWriter({ words, className }: TypeWriterProps) {
     const typeWriterClassName = `
         flex items-center font-bold animate-cursor overflow-hidden 
-        whitespace-nowrap transition-[width] duration-200 ease-in mr-auto
+        whitespace-nowrap transition-[width] duration-base ease-in mr-auto
     `;
 
     const [currentWord, setCurrentWord] = useState(0);

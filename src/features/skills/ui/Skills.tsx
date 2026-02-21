@@ -22,7 +22,7 @@ import { SectionHeader } from "@/shared/ui/section-header/SectionHeader";
  */
 export function Skills() {
     const { t } = useTranslation();
-    const imgClassName = `object-contain transition-all duration-200 ease-in-out 
+    const imgClassName = `object-contain transition-all duration-base ease-in-out
         filter grayscale opacity-70 group-hover:filter-none group-hover:opacity-100
     `;
 
@@ -49,7 +49,7 @@ export function Skills() {
                                 <div
                                     className={`
                                         relative h-16 w-16 lg:h-24 lg:w-24 transform 
-                                        transition-transform duration-500 ease-out hover:scale-90
+                                        transition-transform duration-slow ease-out hover:scale-90
                                     `}
                                 >
                                     {/* dark image */}
@@ -67,7 +67,7 @@ export function Skills() {
                                         className={`${imgClassName} block dark:hidden`}
                                     />
                                 </div>
-                                <span className="text-sm text-center font-medium text-black/50 dark:text-white/50">
+                                <span className="text-sm text-center font-medium text-typography-dimmed">
                                     {skill.title}
                                 </span>
                             </div>

@@ -35,7 +35,7 @@ export function CompaniesGrid({ items, className }: CompaniesGridProps) {
                     <AnimatePresence>
                         {hoveredIndex === i && (
                             <motion.span
-                                className="absolute inset-0 block h-full w-full rounded-lg bg-slate-300 dark:bg-slate-700"
+                                className="absolute inset-0 block h-full w-full rounded-lg bg-surface-hover"
                                 layoutId="hoverBackground"
                                 initial={{ opacity: 0 }}
                                 animate={{
@@ -44,7 +44,7 @@ export function CompaniesGrid({ items, className }: CompaniesGridProps) {
                                 }}
                                 exit={{
                                     opacity: 0,
-                                    transition: { duration: 0.15, delay: 0.15 }
+                                    transition: { duration: 0.15, delay: 0.5 }
                                 }}
                             />
                         )}

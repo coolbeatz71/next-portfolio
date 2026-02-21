@@ -27,7 +27,7 @@ export function NavigationDropdownMenu({
     return (
         <div
             id="dropdown"
-            className="w-full z-10 origin-top-right absolute top-12 left-0 right-0 px-2 mt-1 rounded-lg shadow-xl bg-white dark:bg-slate-600"
+            className="w-full z-10 origin-top-right absolute top-12 left-0 right-0 px-2 mt-1 rounded-lg shadow-xl bg-surface-dropdown"
         >
             <div className="py-2" aria-labelledby="dropdown-menu">
                 {tabs.map((tab, idx) => {
@@ -42,8 +42,8 @@ export function NavigationDropdownMenu({
                             className={`rounded-lg flex items-center my-1.5 px-3 py-2 text-sm font-medium 
                                 ${
                                     isActiveTab
-                                        ? "text-white bg-indigo-700 dark:bg-indigo-500"
-                                        : "text-gray-700 dark:text-gray-200 hover:bg-slate-200 dark:hover:bg-slate-700"
+                                        ? "text-typography-on-primary bg-primary-fill"
+                                        : "text-typography-contact hover:bg-surface-hover"
                                 } w-full text-left
                             `}
                         >

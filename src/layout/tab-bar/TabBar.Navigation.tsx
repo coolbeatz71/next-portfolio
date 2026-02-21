@@ -42,8 +42,8 @@ export function TabBarNavigation({
                             role="tab"
                             type="button"
                             onClick={() => setActiveTabIndex(idx)}
-                            className={`py-2 cursor-pointer w-full text-xs md:text-sm font-semibold transition-colors duration-200
-                    ${isActiveTab ? "text-white" : "text-gray-500 dark:text-gray-400"}`}
+                            className={`py-2 cursor-pointer w-full text-xs md:text-sm font-semibold transition-colors duration-base
+                    ${isActiveTab ? "text-typography-on-primary" : "text-typography-contact"}`}
                             style={{
                                 transformStyle: "preserve-3d"
                             }}
@@ -51,7 +51,7 @@ export function TabBarNavigation({
                             {t(tab.title)}
                             {isActiveTab && (
                                 <motion.span
-                                    className="bg-indigo-700 dark:bg-indigo-500 shadow-lg rounded-lg absolute inset-0 -z-10"
+                                    className="bg-primary-fill shadow-lg rounded-lg absolute inset-0 -z-10"
                                     layoutId={`${context}-active`}
                                     transition={{
                                         damping: 30,

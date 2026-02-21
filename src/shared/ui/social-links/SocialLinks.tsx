@@ -24,7 +24,7 @@ export function SocialLinks() {
                     key={social.platform}
                 >
                     <OutlineButton
-                        className={`p-3 md:p-4 text-3xl ${social.hoverColor} duration-300`}
+                        className={`p-3 md:p-4 text-3xl ${social.hoverColor} duration-moderate`}
                     >
                         {social.icon}
                     </OutlineButton>
