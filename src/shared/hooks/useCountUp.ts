@@ -18,7 +18,7 @@ export function useCountUp(
     delay: number = 0
 ): number {
     const [value, setValue] = useState(0);
-    const rafRef = useRef<number>(null);
+    const ref = useRef<number>(null);
 
     useEffect(() => {
         const timeout = setTimeout(() => {
@@ -31,15 +31,15 @@ export function useCountUp(
 
                 setValue(Math.round(eased * end));
 
-                if (progress < 1) rafRef.current = requestAnimationFrame(tick);
+                if (progress < 1) ref.current = requestAnimationFrame(tick);
             };
 
-            rafRef.current = requestAnimationFrame(tick);
+            ref.current = requestAnimationFrame(tick);
         }, delay);
 
         return () => {
             clearTimeout(timeout);
-            if (rafRef.current !== null) cancelAnimationFrame(rafRef.current);
+            if (ref.current !== null) cancelAnimationFrame(ref.current);
         };
     }, [end, duration, delay]);
 
