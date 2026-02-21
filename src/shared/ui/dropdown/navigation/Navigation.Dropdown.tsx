@@ -51,6 +51,9 @@ export function NavigationDropdown({
             <div className="w-full">
                 <button
                     type="button"
+                    aria-haspopup="menu"
+                    aria-expanded={isOpen}
+                    aria-label={`Select section, current: ${t(tabs[activeTabIndex].title)}`}
                     className="w-full rounded-lg text-sm font-medium flex items-center justify-between p-3.5 text-typography-on-primary hover:text-typography-nav bg-primary-fill hover:bg-surface-hover hover:ring-3"
                     onClick={toggleDropdown}
                 >

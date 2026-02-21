@@ -22,11 +22,14 @@ export function SocialLinks() {
                     target="_blank"
                     href={social.href}
                     key={social.platform}
+                    rel="noopener noreferrer"
+                    aria-label={`${social.platform} (opens in new tab)`}
                 >
                     <OutlineButton
+                        as="span"
                         className={`p-3 md:p-4 text-3xl ${social.hoverColor} duration-moderate`}
                     >
-                        {social.icon}
+                        <span aria-hidden="true">{social.icon}</span>
                     </OutlineButton>
                 </NextLink>
             ))}

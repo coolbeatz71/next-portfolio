@@ -23,7 +23,7 @@ function BackgroundBeamComponent() {
                 xmlns="http://www.w3.org/2000/svg"
             >
                 {beamPaths.map((path, index) => (
-                    <motion.path
+                    <path
                         key={`path-${
                             // biome-ignore lint/suspicious/noArrayIndexKey: index need to be used as key here
                             index

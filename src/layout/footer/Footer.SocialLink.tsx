@@ -28,16 +28,14 @@ export function FooterSocialLink() {
                         href={social.href}
                         key={social.platform}
                         target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${social.platform} (opens in new tab)`}
+                        className={`
+                            text-typography-contact hover:bg-surface-hover ${social.hoverColor}
+                            focus:outline-none font-medium rounded-lg text-3xl text-center items-center p-[0.685rem] duration-moderate inline-flex
+                        `}
                     >
-                        <button
-                            type="button"
-                            className={`
-                                text-typography-contact hover:bg-surface-hover ${social.hoverColor}
-                                focus:outline-none font-medium rounded-lg text-3xl text-center items-center p-[0.685rem] duration-moderate
-                            `}
-                        >
-                            {social.icon}
-                        </button>
+                        <span aria-hidden="true">{social.icon}</span>
                     </NextLink>
                 ))}
             </div>

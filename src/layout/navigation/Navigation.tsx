@@ -1,11 +1,26 @@
+import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
 import { useWindowScroll } from "react-use";
 import { NavigationMenu } from "@/layout/navigation/Navigation.Menu";
 import { RESPONSIVE_CLASSNAME } from "@/shared/config/style";
-import { LanguageDropdown } from "@/shared/ui/dropdown/language/Language.Dropdown";
 import { HamburgerMenuButton } from "@/shared/ui/hamburger-menu/HamburgerMenu.Button";
 import { Logo } from "@/shared/ui/logo/Logo";
-import { ThemeToggle } from "@/shared/ui/theme-toggle/ThemeToggle";
+
+const ThemeToggle = dynamic(async () => {
+    const mod = await import(
+        /* webpackChunkName: "ThemeToggle" */
+        "@/shared/ui/theme-toggle/ThemeToggle"
+    );
+    return mod.ThemeToggle;
+});
+
+const LanguageDropdown = dynamic(async () => {
+    const mod = await import(
+        /* webpackChunkName: "LanguageDropdown" */
+        "@/shared/ui/dropdown/language/Language.Dropdown"
+    );
+    return mod.LanguageDropdown;
+});
 
 /**
  * Top navigation bar widget.

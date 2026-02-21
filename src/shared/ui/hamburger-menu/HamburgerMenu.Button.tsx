@@ -1,6 +1,14 @@
+import dynamic from "next/dynamic";
 import { Fragment, useState } from "react";
-import { SideMenu } from "@/layout/side-menu/SideMenu";
 import { IconMenu } from "@/shared/config/icons";
+
+const SideMenu = dynamic(async () => {
+    const mod = await import(
+        /* webpackChunkName: "SideMenu" */
+        "@/layout/side-menu/SideMenu"
+    );
+    return mod.SideMenu;
+});
 
 /**
  * Hamburger menu button component.
@@ -26,13 +34,15 @@ export function HamburgerMenuButton() {
                 title="open menu"
                 onClick={toggleDrawer}
                 aria-controls="mobile-menu"
+                aria-expanded={isOpen}
+                aria-label={isOpen ? "Close menu" : "Open menu"}
                 className={`relative text-2xl p-2 size-10 sm:size-12
                     inline-flex items-center justify-center rounded-lg
                     text-typography-nav bg-surface-raised
                     hover:bg-surface-hover focus:outline-none
                 `}
             >
-                <IconMenu />
+                <IconMenu aria-hidden="true" />
             </button>
 
             <SideMenu isOpen={isOpen} toggleDrawer={toggleDrawer} />

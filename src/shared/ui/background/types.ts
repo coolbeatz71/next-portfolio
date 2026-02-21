@@ -9,8 +9,8 @@ import type { SVGProps } from "react";
  * @property {Array<[number, number]>} [squares] - Grid coordinates of highlighted squares
  */
 export interface GridPatternProps extends SVGProps<SVGSVGElement> {
-    width: number;
-    height: number;
+    width?: number;
+    height?: number;
     x: string | number;
     y: string | number;
     squares?: Array<[number, number]>;

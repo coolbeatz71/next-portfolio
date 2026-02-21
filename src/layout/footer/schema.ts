@@ -1,4 +1,4 @@
-import * as yup from "yup";
+import { object, string } from "yup";
 
 /**
  * Footer contact form validation schema.
@@ -8,11 +8,10 @@ import * as yup from "yup";
  * All fields are required; email must be a valid email address.
  * Error message keys are i18n translation keys resolved at runtime.
  */
-export const schema = yup.object().shape({
-    name: yup.string().required("validation.required"),
-    email: yup
-        .string()
+export const schema = object().shape({
+    name: string().required("validation.required"),
+    email: string()
         .email("validation.invalid_email")
         .required("validation.required"),
-    message: yup.string().required("validation.required")
+    message: string().required("validation.required")
 });

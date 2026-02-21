@@ -42,6 +42,7 @@ export function ProgressBar({
                         fill
                         alt={title}
                         quality={1}
+                        sizes="32px"
                         src={darkImage}
                         className="object-contain hidden dark:block"
                     />
@@ -50,6 +51,7 @@ export function ProgressBar({
                         fill
                         alt={title}
                         quality={1}
+                        sizes="32px"
                         src={lightImage}
                         className="object-contain block dark:hidden"
                     />

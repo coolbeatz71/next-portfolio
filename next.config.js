@@ -1,3 +1,12 @@
+import bundleAnalyzer from "@next/bundle-analyzer";
+
+const withBundleAnalyzer = bundleAnalyzer({
+    enabled:
+        process.env.BUNDLE_ANALYZE === "browser" ||
+        process.env.BUNDLE_ANALYZE === "server",
+    openAnalyzer: true
+});
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     reactStrictMode: true,
@@ -8,6 +17,9 @@ const nextConfig = {
     compiler: {
         styledComponents: true
     },
+    images: {
+        formats: ["image/avif", "image/webp"]
+    },
     eslint: {
         ignoreDuringBuilds: true
     },
@@ -16,4 +28,4 @@ const nextConfig = {
     }
 };
 
-export default nextConfig;
+export default withBundleAnalyzer(nextConfig);
