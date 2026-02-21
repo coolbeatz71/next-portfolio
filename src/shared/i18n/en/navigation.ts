@@ -3,5 +3,6 @@ export const navigation = {
     about: "About",
     experience: "Experience",
     contribution: "Contribution",
-    skill: "Skill"
+    skill: "Skill",
+    contact: "Contact"
 };

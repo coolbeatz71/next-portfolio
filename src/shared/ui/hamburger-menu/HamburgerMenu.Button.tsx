@@ -26,7 +26,7 @@ export function HamburgerMenuButton() {
                 title="open menu"
                 onClick={toggleDrawer}
                 aria-controls="mobile-menu"
-                className={`relative text-2xl p-2 size-10 sm:size-12 md:size-12
+                className={`relative text-2xl p-2 size-10 sm:size-12
                     inline-flex items-center justify-center rounded-lg
                     text-typography-nav bg-surface-raised
                     hover:bg-surface-hover focus:outline-none

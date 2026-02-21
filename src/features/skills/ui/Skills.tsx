@@ -40,7 +40,7 @@ export function Skills() {
                     subtitle={t("skills_subtitle")}
                 />
                 <div className="relative">
-                    <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 lg:px-24 md:px-24">
+                    <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 md:px-24">
                         {mainStackList.map((skill) => (
                             <div
                                 key={skill.title}
@@ -49,7 +49,7 @@ export function Skills() {
                                 <div
                                     className={`
                                         relative h-16 w-16 lg:h-24 lg:w-24 transform 
-                                        transition-transform duration-slow ease-out hover:scale-90
+                                        transition-transform ease-out hover:scale-90
                                     `}
                                 >
                                     {/* dark image */}

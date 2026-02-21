@@ -62,10 +62,8 @@ export function Drawer({
                     <div
                         onTouchMove={(e) => e.stopPropagation()}
                         className={cn(
-                            "pointer-events-none fixed flex",
-                            position === "right"
-                                ? "inset-y-0 right-0"
-                                : "inset-y-0 left-0"
+                            "pointer-events-none fixed inset-y-0 flex",
+                            position === "right" ? "right-0" : "left-0"
                         )}
                     >
                         <DrawerContainer

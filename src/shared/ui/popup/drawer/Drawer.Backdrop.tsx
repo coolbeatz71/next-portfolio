@@ -20,10 +20,8 @@ function DrawerBackdropComponent({ isOpen }: DrawerBackdropProps) {
     return (
         <div
             className={cn(
-                "fixed inset-0 bg-black/70 backdrop-blur-xl transition-all",
-                isOpen
-                    ? "opacity-100 duration-base ease-in-out"
-                    : "opacity-0 duration-base ease-in-out hidden"
+                "fixed inset-0 bg-black/70 backdrop-blur-xl duration-base ease-in-out",
+                isOpen ? "opacity-100" : "opacity-0 hidden"
             )}
         />
     );

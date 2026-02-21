@@ -5,13 +5,13 @@ export const creditBadgeList: ICreditBadge[] = [
     {
         icon: <IconBriefcase />,
         className: "",
-        count: 8,
+        count: 10,
         text: "years_of_experience"
     },
     {
         icon: <IconGlobe />,
         className: "left-10",
-        count: 25,
+        count: 30,
         text: "live_projects"
     }
 ];
