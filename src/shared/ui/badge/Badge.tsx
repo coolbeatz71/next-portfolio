@@ -1,11 +1,9 @@
 import { motion } from "motion/react";
-import dynamic from "next/dynamic";
+import { useCountUp } from "@/shared/hooks/useCountUp";
 import { cn } from "@/shared/lib/cn";
 import { formatCount } from "@/shared/lib/formatCount";
 import { GridPatternBackground } from "@/shared/ui/background/GridPattern.Background";
 import type { BadgeProps } from "./types";
-
-const CountUp = dynamic(() => import("react-countup"), { ssr: false });
 
 /**
  * Animated stat badge component.
@@ -32,6 +30,8 @@ export function Badge({
     endCountText,
     endCountNumber
 }: BadgeProps) {
+    const count = useCountUp(endCountNumber, 2000, 1000);
+
     return (
         <motion.div
             initial="initial"
@@ -50,12 +50,7 @@ export function Badge({
             <div className="text-4xl mr-2">{icon}</div>
             <div className="flex items-center gap-x-2">
                 <div className="text-3xl leading-none font-bold text-accent">
-                    <CountUp
-                        delay={1}
-                        duration={2}
-                        end={endCountNumber}
-                        formattingFn={formatCount}
-                    />
+                    {formatCount(count)}
                     {endCountText}
                 </div>
                 <div className="max-w-25 leading-none text-body-sm font-medium text-typography-badge">
