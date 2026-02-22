@@ -1,4 +1,5 @@
-import { motion } from "motion/react";
+import { domAnimation, LazyMotion } from "motion/react";
+import * as m from "motion/react-m";
 import NextImage from "next/image";
 import { useInView } from "react-intersection-observer";
 import { ISkillsByStack } from "@/features/skills/data/types";
@@ -59,12 +60,14 @@ export function ProgressBar({
             </div>
 
             <div className="w-full bg-surface-track h-6 mb-4 mt-1.5 rounded-lg">
-                <motion.div
-                    className="bg-primary-fill h-6 rounded-lg"
-                    initial={{ width: 0 }}
-                    transition={{ duration: 0.5 }}
-                    animate={{ width: inView ? `${progress}%` : 0 }}
-                />
+                <LazyMotion features={domAnimation}>
+                    <m.div
+                        className="bg-primary-fill h-6 rounded-lg"
+                        initial={{ width: 0 }}
+                        transition={{ duration: 0.5 }}
+                        animate={{ width: inView ? `${progress}%` : 0 }}
+                    />
+                </LazyMotion>
             </div>
         </section>
     );

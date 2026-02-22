@@ -1,4 +1,5 @@
-import { motion } from "motion/react";
+import { domAnimation, LazyMotion } from "motion/react";
+import * as m from "motion/react-m";
 import NextImage from "next/image";
 import { memo } from "react";
 import { cn } from "@/shared/lib/cn";
@@ -43,29 +44,31 @@ function ImageColumnComponent({
     return (
         <div className="grid gap-2 md:gap-4">
             {images.map((img) => (
-                <motion.div
-                    className="relative"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    style={{ y: translate }}
-                    transition={{ duration: 1 }}
-                    key={`${columnKey}-${img.alt}`}
-                >
-                    <div className={gradientOverlayClassName} />
-                    <div className={imageContainerClassName}>
-                        <NextImage
-                            width={480}
-                            src={img.src}
-                            alt={img.alt}
-                            loading="lazy"
-                            placeholder="blur"
-                            height={imageHeight}
-                            className={imageClassName}
-                            blurDataURL={img.blurData}
-                            sizes="(max-width: 640px) 45vw, (max-width: 1024px) 40vw, 360px"
-                        />
-                    </div>
-                </motion.div>
+                <LazyMotion features={domAnimation}>
+                    <m.div
+                        className="relative"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        style={{ y: translate }}
+                        transition={{ duration: 1 }}
+                        key={`${columnKey}-${img.alt}`}
+                    >
+                        <div className={gradientOverlayClassName} />
+                        <div className={imageContainerClassName}>
+                            <NextImage
+                                width={480}
+                                src={img.src}
+                                alt={img.alt}
+                                loading="lazy"
+                                placeholder="blur"
+                                height={imageHeight}
+                                className={imageClassName}
+                                blurDataURL={img.blurData}
+                                sizes="(max-width: 640px) 45vw, (max-width: 1024px) 40vw, 360px"
+                            />
+                        </div>
+                    </m.div>
+                </LazyMotion>
             ))}
         </div>
     );

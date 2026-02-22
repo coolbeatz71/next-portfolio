@@ -1,4 +1,5 @@
-import { motion } from "motion/react";
+import { domAnimation, LazyMotion } from "motion/react";
+import * as m from "motion/react-m";
 import { memo } from "react";
 import { beamGradients, beamPaths } from "./Beams.Background.Data";
 
@@ -37,30 +38,37 @@ function BackgroundBeamComponent() {
                 ))}
                 <defs>
                     {beamGradients.map((gradient, index) => (
-                        <motion.linearGradient
-                            id={`linearGradient-${index}`}
-                            key={`gradient-${
-                                // biome-ignore lint/suspicious/noArrayIndexKey: index need to be used as key here
-                                index
-                            }`}
-                            initial={{ x1: "0%", x2: "0%", y1: "0%", y2: "0%" }}
-                            animate={{
-                                x1: ["0%", "100%"],
-                                x2: ["0%", "95%"],
-                                y1: ["0%", "100%"],
-                                y2: ["0%", gradient.y2End]
-                            }}
-                            transition={gradient.transition}
-                        >
-                            <stop stopColor="#18fccb" stopOpacity="0" />
-                            <stop stopColor="#18CCFC" />
-                            <stop offset="32.5%" stopColor="#6344F5" />
-                            <stop
-                                offset="100%"
-                                stopColor="#ff00c8"
-                                stopOpacity="0"
-                            />
-                        </motion.linearGradient>
+                        <LazyMotion features={domAnimation}>
+                            <m.linearGradient
+                                id={`linearGradient-${index}`}
+                                key={`gradient-${
+                                    // biome-ignore lint/suspicious/noArrayIndexKey: index need to be used as key here
+                                    index
+                                }`}
+                                initial={{
+                                    x1: "0%",
+                                    x2: "0%",
+                                    y1: "0%",
+                                    y2: "0%"
+                                }}
+                                animate={{
+                                    x1: ["0%", "100%"],
+                                    x2: ["0%", "95%"],
+                                    y1: ["0%", "100%"],
+                                    y2: ["0%", gradient.y2End]
+                                }}
+                                transition={gradient.transition}
+                            >
+                                <stop stopColor="#18fccb" stopOpacity="0" />
+                                <stop stopColor="#18CCFC" />
+                                <stop offset="32.5%" stopColor="#6344F5" />
+                                <stop
+                                    offset="100%"
+                                    stopColor="#ff00c8"
+                                    stopOpacity="0"
+                                />
+                            </m.linearGradient>
+                        </LazyMotion>
                     ))}
                     <radialGradient
                         id="paint0_radial_242_278"

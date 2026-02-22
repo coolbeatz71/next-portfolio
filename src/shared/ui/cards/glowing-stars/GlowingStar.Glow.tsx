@@ -1,4 +1,5 @@
-import { motion } from "motion/react";
+import { domAnimation, LazyMotion } from "motion/react";
+import * as m from "motion/react-m";
 import { memo } from "react";
 import type { GlowProps } from "./types";
 
@@ -18,26 +19,28 @@ import type { GlowProps } from "./types";
  */
 function GlowComponent({ delay }: GlowProps) {
     return (
-        <motion.div
-            initial={{
-                opacity: 0
-            }}
-            animate={{
-                opacity: 1
-            }}
-            transition={{
-                duration: 2,
-                delay: delay,
-                ease: "easeInOut"
-            }}
-            exit={{
-                opacity: 0
-            }}
-            className={`
+        <LazyMotion features={domAnimation}>
+            <m.div
+                initial={{
+                    opacity: 0
+                }}
+                animate={{
+                    opacity: 1
+                }}
+                transition={{
+                    duration: 2,
+                    delay: delay,
+                    ease: "easeInOut"
+                }}
+                exit={{
+                    opacity: 0
+                }}
+                className={`
                 absolute translate-x-1/5 z-10 size-px rounded-full
                 bg-glow-star blur-[1px] shadow-md shadow-glow-shadow
             `}
-        />
+            />
+        </LazyMotion>
     );
 }
 

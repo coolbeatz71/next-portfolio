@@ -1,4 +1,5 @@
-import { motion, type Variants } from "motion/react";
+import { domAnimation, LazyMotion, type Variants } from "motion/react";
+import * as m from "motion/react-m";
 import dynamic from "next/dynamic";
 import { memo } from "react";
 import { useTranslation } from "react-i18next";
@@ -6,6 +7,7 @@ import { useProjectCardModal } from "./hooks/useProjectCardModal";
 import { ProjectCardContent } from "./Project.Card.Content";
 import { ProjectCardImage } from "./Project.Card.Image";
 import { ProjectModal } from "./Project.Modal";
+
 import type { ProjectCardProps } from "./types";
 
 export const DynamicModal = dynamic(
@@ -69,34 +71,36 @@ function ProjectCardComponent({ project, index }: ProjectCardProps) {
                 </DynamicModal>
             )}
 
-            <motion.div
-                custom={index}
-                initial="hidden"
-                animate="visible"
-                className="group"
-                variants={animationVariants}
-            >
-                <div
-                    className={`md:min-h-64 lg:min-h-72 bg-surface-elevated rounded-lg
+            <LazyMotion features={domAnimation}>
+                <m.div
+                    custom={index}
+                    initial="hidden"
+                    animate="visible"
+                    className="group"
+                    variants={animationVariants}
+                >
+                    <div
+                        className={`md:min-h-64 lg:min-h-72 bg-surface-elevated rounded-lg
                         overflow-hidden duration-moderate group-hover:shadow-xl
                     `}
-                >
-                    <div className="flex flex-col md:flex-row md:min-h-64 lg:min-h-72">
-                        <ProjectCardImage
-                            alt={project.name}
-                            onClick={toggleModal}
-                            src={project.images[0].src}
-                            blurDataURL={project.blurURL}
-                        />
-                        <ProjectCardContent
-                            label={t("open")}
-                            project={project}
-                            onClick={toggleModal}
-                            translatedDescription={t(project.description)}
-                        />
+                    >
+                        <div className="flex flex-col md:flex-row md:min-h-64 lg:min-h-72">
+                            <ProjectCardImage
+                                alt={project.name}
+                                onClick={toggleModal}
+                                src={project.images[0].src}
+                                blurDataURL={project.blurURL}
+                            />
+                            <ProjectCardContent
+                                label={t("open")}
+                                project={project}
+                                onClick={toggleModal}
+                                translatedDescription={t(project.description)}
+                            />
+                        </div>
                     </div>
-                </div>
-            </motion.div>
+                </m.div>
+            </LazyMotion>
         </>
     );
 }
