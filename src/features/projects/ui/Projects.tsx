@@ -23,7 +23,6 @@ export function Projects() {
                     subtitle={t("contribution_subtitle")}
                 />
                 <TabBar
-                    context="projects"
                     tabs={projectsTabs}
                     containerClassName="py-4"
                     tabBarClassName="min-w-full lg:min-w-[60%]"
