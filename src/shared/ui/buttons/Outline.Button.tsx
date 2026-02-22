@@ -38,7 +38,7 @@ export function OutlineButton({
                 borderRadius: borderRadius
             }}
             className={cn(
-                "inline-flex animate-Outline items-center justify-center border-4 border-surface-hover px-6 font-medium text-typography-nav focus:outline-none focus:ring-2 focus:ring-focus-surface",
+                "inline-flex animate-outlined items-center justify-center border-4 border-surface-hover px-6 font-medium text-typography-nav focus:outline-none focus:ring-2 focus:ring-focus-surface",
                 className
             )}
             {...otherProps}
