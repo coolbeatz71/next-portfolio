@@ -23,7 +23,6 @@ import type { TabBarProps } from "./types";
  */
 export function TabBar({
     tabs,
-    context,
     tabBarClassName,
     containerClassName
 }: TabBarProps) {
@@ -38,16 +37,18 @@ export function TabBar({
                     setActiveTabIndex={setActiveTabIndex}
                     className="inline-block md:hidden"
                 />
-                <TabBarNavigation
-                    tabs={tabs}
-                    context={context}
-                    activeTabIndex={activeTabIndex}
-                    setActiveTabIndex={setActiveTabIndex}
+                <div
                     className={cn(
-                        "relative hidden md:flex flex-wrap px-1.5 py-1.5 list-none bg-surface-tab rounded-lg gap-1",
+                        "hidden md:block p-1.5 bg-surface-tab rounded-lg",
                         tabBarClassName
                     )}
-                />
+                >
+                    <TabBarNavigation
+                        tabs={tabs}
+                        activeTabIndex={activeTabIndex}
+                        setActiveTabIndex={setActiveTabIndex}
+                    />
+                </div>
 
                 <div className="w-full">{tabs[activeTabIndex].content}</div>
             </div>
