@@ -31,7 +31,7 @@ function LanguageDropdownComponent({ placement }: LanguageDropdownProps) {
                 aria-expanded={isOpen}
                 aria-label={`Select language, current: ${currentLanguage.code.toUpperCase()}`}
                 className={`rounded-lg flex items-center justify-center p-3.5 sm:p-2.5 md:p-3.5
-                    text-typography-nav bg-surface-raised hover:bg-surface-hover text-sm
+                    text-typography-nav bg-surface-raised hover:bg-surface-hover hover:duration-slow text-sm
                 `}
                 onClick={toggleDropdown}
             >
