@@ -1,9 +1,9 @@
-export const BASE_INPUT_CLASSNAME = `peer block border rounded-lg px-4 pb-2 pt-6 w-full
+export const BASE_INPUT_CLASSNAME = `peer block border border-outlined rounded-lg px-4 pb-2 pt-6 w-full
 resize-none focus:outline-none focus:ring-4 bg-surface-input`;
 
 export const ERROR_INPUT_CLASSNAME = "border-error focus:ring-focus-error";
 
-export const NORMAL_INPUT_CLASSNAME = `border-outline-input focus:border-primary
+export const NORMAL_INPUT_CLASSNAME = `border border-outlined focus:border-primary
 focus:ring-focus-primary`;
 
 export const BASE_LABEL_CLASSNAME = `absolute left-4 top-4 origin-[0] -translate-y-3 scale-75 duration-fast
