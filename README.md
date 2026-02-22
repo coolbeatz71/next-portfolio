@@ -5,7 +5,7 @@ The portfolio of **Mutombo Jean-Vincent**, a Full-Stack Software Engineer with 1
 Fast, polished, and built to last. Every decision here has a reason behind it *(yes, even the ones that needed three attempts to get right 😉)*.
 
 <!-- markdownlint-disable-next-line MD033 -->
-<img src="https://raw.githubusercontent.com/onwidget/.github/main/resources/astrowind/lighthouse-score.png" align="right" alt="Lighthouse Score" width="100" height="358">
+<p align="center"><img src="public/score.png" alt="Lighthouse scores: 98 Performance, 100 Accessibility, 100 Best Practices, 100 SEO" width="480" height="160" /></p>
 
 ---
 
