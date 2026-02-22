@@ -11,16 +11,16 @@
     --primitive-white: var(--color-white);
     --primitive-black: var(--color-black);
 
-    --primitive-neutral-100: var(--color-gray-100);
-    --primitive-neutral-200: var(--color-gray-200);
-    --primitive-neutral-300: var(--color-gray-300);
-    --primitive-neutral-400: var(--color-gray-400);
-    --primitive-neutral-500: var(--color-gray-500);
-    --primitive-neutral-600: var(--color-gray-600);
-    --primitive-neutral-700: var(--color-gray-700);
-    --primitive-neutral-800: var(--color-gray-800);
-    --primitive-neutral-900: var(--color-gray-900);
-    --primitive-neutral-950: var(--color-gray-950);
+    --primitive-neutral-100: var(--color-slate-100);
+    --primitive-neutral-200: var(--color-slate-200);
+    --primitive-neutral-300: var(--color-slate-300);
+    --primitive-neutral-400: var(--color-slate-400);
+    --primitive-neutral-500: var(--color-slate-500);
+    --primitive-neutral-600: var(--color-slate-600);
+    --primitive-neutral-700: var(--color-slate-700);
+    --primitive-neutral-800: var(--color-slate-800);
+    --primitive-neutral-900: var(--color-slate-900);
+    --primitive-neutral-950: var(--color-slate-950);
 
     --primitive-accent: var(--color-amber-500);
     --primitive-danger: var(--color-red-500);

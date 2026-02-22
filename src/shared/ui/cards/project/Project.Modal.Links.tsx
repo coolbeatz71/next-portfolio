@@ -35,7 +35,7 @@ export function ProjectModalLinks({ project }: ProjectModalLinksProps) {
     if (!hasLinks) return null;
 
     return (
-        <div className="border border-b-0 border-x-0 border-t border-outline-strong">
+        <div className="border border-b-0 border-x-0 border-t border-outlined">
             <div className="flex justify-end gap-4 items-center pt-4">
                 <Link
                     href={project.sourceCodeLink}

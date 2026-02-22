@@ -1,10 +1,13 @@
 import {
-    motion,
+    domAnimation,
+    LazyMotion,
     useAnimationFrame,
     useMotionTemplate,
     useMotionValue,
     useTransform
 } from "motion/react";
+import * as m from "motion/react-m";
+
 import { Fragment, memo, useRef } from "react";
 import type { MovingBorderProps } from "./types";
 
@@ -74,17 +77,19 @@ function MovingBorderComponent({
                     ref={pathRef}
                 />
             </svg>
-            <motion.div
-                style={{
-                    top: 0,
-                    left: 0,
-                    transform,
-                    position: "absolute",
-                    display: "inline-block"
-                }}
-            >
-                {children}
-            </motion.div>
+            <LazyMotion features={domAnimation}>
+                <m.div
+                    style={{
+                        top: 0,
+                        left: 0,
+                        transform,
+                        position: "absolute",
+                        display: "inline-block"
+                    }}
+                >
+                    {children}
+                </m.div>
+            </LazyMotion>
         </Fragment>
     );
 }

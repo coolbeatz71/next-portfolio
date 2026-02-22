@@ -1,5 +1,3 @@
-import { AnimatePresence, motion } from "motion/react";
-import { useState } from "react";
 import { cn } from "@/shared/lib/cn";
 import { HoverableCard } from "@/shared/ui/cards/hoverable/Hoverable.Card";
 import type { CompaniesGridProps } from "./types";
@@ -21,34 +19,11 @@ import type { CompaniesGridProps } from "./types";
  * @returns The companies logo grid element
  */
 export function CompaniesGrid({ items, className }: CompaniesGridProps) {
-    const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-
     return (
         <div className={cn("grid grid-cols-2 gap-4 lg:grid-cols-3", className)}>
-            {items.map((item, i) => (
-                <div
-                    key={item.title}
-                    className="relative"
-                    onMouseEnter={() => setHoveredIndex(i)}
-                    onMouseLeave={() => setHoveredIndex(null)}
-                >
-                    <AnimatePresence>
-                        {hoveredIndex === i && (
-                            <motion.span
-                                className="absolute inset-0 block h-full w-full rounded-lg bg-surface-hover"
-                                layoutId="hoverBackground"
-                                initial={{ opacity: 0 }}
-                                animate={{
-                                    opacity: 1,
-                                    transition: { duration: 0.15 }
-                                }}
-                                exit={{
-                                    opacity: 0,
-                                    transition: { duration: 0.15, delay: 0.5 }
-                                }}
-                            />
-                        )}
-                    </AnimatePresence>
+            {items.map((item) => (
+                <div key={item.title} className="group relative">
+                    <span className="absolute inset-0 block h-full w-full rounded-lg bg-surface-hover opacity-0 transition-opacity duration-slow group-hover:opacity-100" />
                     <HoverableCard title={item.title} icon={item.icon} />
                 </div>
             ))}

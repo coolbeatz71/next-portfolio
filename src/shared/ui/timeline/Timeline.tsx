@@ -1,4 +1,10 @@
-import { motion, useScroll, useTransform } from "motion/react";
+import {
+    domAnimation,
+    LazyMotion,
+    useScroll,
+    useTransform
+} from "motion/react";
+import * as m from "motion/react-m";
 import { useEffect, useRef, useState } from "react";
 import { ITimelineEntry } from "@/features/experience/data/types";
 import { IconGlobe } from "@/shared/config/icons";
@@ -47,7 +53,7 @@ export const Timeline = ({ data }: { data: ITimelineEntry[] }) => {
                     >
                         <div className="sticky flex flex-col md:flex-row z-10 items-center top-40 self-start max-w-md lg:max-w-lg md:w-1/12 lg:w-4/5 xl:w-full">
                             <div className="absolute md:top-0 lg:top-2 md:w-8 md:h-8 rounded-full bg-surface-timeline hidden md:flex items-center justify-center">
-                                <div className="w-2 h-2 md:h-4 md:w-4 rounded-full bg-background border border-outline-timeline p-1 md:p-2" />
+                                <div className="w-2 h-2 md:h-4 md:w-4 rounded-full bg-background p-1 md:p-2" />
                             </div>
                             <h3 className="hidden lg:block text-xl md:pl-20 md:text-2xl font-bold text-typography-timeline leading-loose!">
                                 {item.title}
@@ -78,20 +84,22 @@ export const Timeline = ({ data }: { data: ITimelineEntry[] }) => {
                         </div>
                     </div>
                 ))}
-                <div
-                    style={{
-                        height: `${height}px`
-                    }}
-                    className="absolute left-0 md:left-4 top-0 overflow-hidden w-0.5 bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-0% via-timeline-track to-transparent to-99% mask-[linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)]"
-                >
-                    <motion.div
+                <LazyMotion features={domAnimation}>
+                    <div
                         style={{
-                            height: heightTransform,
-                            opacity: opacityTransform
+                            height: `${height}px`
                         }}
-                        className="absolute inset-x-0 top-0 w-0.75 bg-linear-to-t from-timeline-start via-timeline-mid to-transparent from-0% via-10% rounded-full"
-                    />
-                </div>
+                        className="absolute left-0 md:left-4 top-0 overflow-hidden w-0.5 bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-0% via-timeline-track to-transparent to-99% mask-[linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)]"
+                    >
+                        <m.div
+                            style={{
+                                height: heightTransform,
+                                opacity: opacityTransform
+                            }}
+                            className="absolute inset-x-0 top-0 w-0.75 bg-linear-to-t from-timeline-start via-timeline-mid to-transparent from-0% via-10% rounded-full"
+                        />
+                    </div>
+                </LazyMotion>
             </div>
         </div>
     );

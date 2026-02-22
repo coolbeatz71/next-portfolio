@@ -34,7 +34,7 @@ export function AboutMeDescription() {
             <p className="text-md sm:text-lg md:text-xl text-start text-typography-muted tracking-tight md:leading-relaxed">
                 {t("aboutme_subtitle")}
             </p>
-            <hr className="h-px my-4 md:my-8 border-0 bg-outline-strong" />
+            <hr className="h-px my-4 md:my-8 border-0 bg-outlined" />
             <h2 className="text-start mb-4 text-xl xl:text-2xl font-bold leading-tight! text-typography-primary">
                 {t("about_myself")}
             </h2>

@@ -22,10 +22,10 @@ export function SideMenuProfile() {
         <div
             className={`
                 w-full py-4 flex flex-col items-start justify-center 
-                border border-t-0 border-x-0 border-b border-outline-strong
+                border border-t-0 border-x-0 border-b border-outlined
             `}
         >
-            <div className="border border-outline-strong relative flex items-center justify-between w-full gap-2 rounded-lg p-2">
+            <div className="border border-outlined relative flex items-center justify-between w-full gap-2 rounded-lg p-2">
                 <GridPatternBackground size={20} />
                 <NextImage
                     width={12}
