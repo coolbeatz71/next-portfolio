@@ -1,4 +1,5 @@
 import NextLink from "next/link";
+import { memo } from "react";
 import { useTranslation } from "react-i18next";
 import { socialLinksList } from "@/shared/config/social-links";
 
@@ -13,7 +14,7 @@ import { socialLinksList } from "@/shared/config/social-links";
  *
  * @returns The footer social links element
  */
-export function FooterSocialLink() {
+function FooterSocialLinkComponent() {
     const { t } = useTranslation();
 
     return (
@@ -42,3 +43,5 @@ export function FooterSocialLink() {
         </div>
     );
 }
+
+export const FooterSocialLink = memo(FooterSocialLinkComponent);
