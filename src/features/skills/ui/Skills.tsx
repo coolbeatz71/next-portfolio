@@ -20,11 +20,17 @@ import { SectionHeader } from "@/shared/ui/section-header/SectionHeader";
  *
  * @returns The skills section element
  */
+const imgClassName = `object-contain transition-all duration-base ease-in-out
+    filter grayscale opacity-70 group-hover:filter-none group-hover:opacity-100
+`;
+
+const skillIconClassName =
+    "relative h-16 w-16 lg:h-24 lg:w-24 transform transition-transform ease-out hover:scale-90";
+const imgDarkClassName = `${imgClassName} hidden dark:block`;
+const imgLightClassName = `${imgClassName} block dark:hidden`;
+
 export function Skills() {
     const { t } = useTranslation();
-    const imgClassName = `object-contain transition-all duration-base ease-in-out
-        filter grayscale opacity-70 group-hover:filter-none group-hover:opacity-100
-    `;
 
     return (
         <ScrollReveal className="delay-300">
@@ -35,10 +41,12 @@ export function Skills() {
                     "py-12 xl:py-32 scroll-mt-10"
                 )}
             >
-                <SectionHeader
-                    title={t("skills_title")}
-                    subtitle={t("skills_subtitle")}
-                />
+                <div className="pb-6 md:pb-12">
+                    <SectionHeader
+                        title={t("skills_title")}
+                        subtitle={t("skills_subtitle")}
+                    />
+                </div>
                 <div className="relative">
                     <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 md:px-24">
                         {mainStackList.map((skill) => (
@@ -46,19 +54,14 @@ export function Skills() {
                                 key={skill.title}
                                 className="flex flex-col items-center group cursor-pointer p-4 md:p-8"
                             >
-                                <div
-                                    className={`
-                                        relative h-16 w-16 lg:h-24 lg:w-24 transform 
-                                        transition-transform ease-out hover:scale-90
-                                    `}
-                                >
+                                <div className={skillIconClassName}>
                                     {/* dark image */}
                                     <NextImage
                                         fill
                                         alt={skill.title}
                                         src={skill.darkImage}
                                         sizes="(min-width: 1024px) 96px, 64px"
-                                        className={`${imgClassName} hidden dark:block`}
+                                        className={imgDarkClassName}
                                     />
                                     {/* light image */}
                                     <NextImage
@@ -66,7 +69,7 @@ export function Skills() {
                                         alt={skill.title}
                                         src={skill.lightImage}
                                         sizes="(min-width: 1024px) 96px, 64px"
-                                        className={`${imgClassName} block dark:hidden`}
+                                        className={imgLightClassName}
                                     />
                                 </div>
                                 <span className="text-sm text-center font-medium text-typography-dimmed">
