@@ -24,7 +24,7 @@ function SectionHeaderComponent({
     className
 }: SectionHeaderProps) {
     return (
-        <div className="flex flex-col items-center justify-center pb-6 md:pb-12">
+        <div className="flex flex-col items-center justify-center">
             <DotBackground className="h-20 z-0" />
             <div
                 className={cn(
