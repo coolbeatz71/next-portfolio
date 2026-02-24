@@ -1,4 +1,5 @@
 import NextLink from "next/link";
+import { memo } from "react";
 import { useTranslation } from "react-i18next";
 import { IconLink } from "@/shared/config/icons";
 import { navigationList } from "@/shared/config/navigation";
@@ -14,7 +15,7 @@ import { navigationList } from "@/shared/config/navigation";
  *
  * @returns The footer navigation element
  */
-export function FooterNavigation() {
+function FooterNavigationComponent() {
     const { t } = useTranslation();
 
     return (
@@ -43,3 +44,5 @@ export function FooterNavigation() {
         </div>
     );
 }
+
+export const FooterNavigation = memo(FooterNavigationComponent);
