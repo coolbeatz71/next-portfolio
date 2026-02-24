@@ -1,4 +1,5 @@
 import dynamic from "next/dynamic";
+import { memo } from "react";
 import { useTranslation } from "react-i18next";
 import { creditBadgeList } from "@/shared/config/credit-badge";
 import { devToolsLogoList } from "@/shared/config/dev-tools";
@@ -23,7 +24,7 @@ const Badge = dynamic(async () => {
  *
  * @returns The hero badges overlay element
  */
-export function HeroBadges() {
+function HeroBadgesComponent() {
     const { t } = useTranslation();
 
     return (
@@ -55,3 +56,5 @@ export function HeroBadges() {
         </div>
     );
 }
+
+export const HeroBadges = memo(HeroBadgesComponent);
