@@ -1,3 +1,4 @@
+import { useCallback } from "react";
 import { FormProvider } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { FormTextArea } from "@/shared/ui/form/Form.TextArea";
@@ -22,6 +23,7 @@ export function FooterMessageForm() {
     const { t } = useTranslation();
     const { form, formRef, isLoading, onSave } = useSendEmail();
     const { handleSubmit } = form;
+    const onSubmit = useCallback(handleSubmit(onSave), [handleSubmit, onSave]);
 
     return (
         <div className="flex flex-col items-start gap-2">
@@ -29,7 +31,7 @@ export function FooterMessageForm() {
             <FormProvider {...form}>
                 <form
                     ref={formRef}
-                    onSubmit={handleSubmit(onSave)}
+                    onSubmit={onSubmit}
                     className="pt-6 px-1 w-full flex flex-col gap-3"
                 >
                     <FormTextInput type="text" label={t("name")} name="name" />
