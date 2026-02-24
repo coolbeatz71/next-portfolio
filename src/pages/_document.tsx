@@ -1,4 +1,5 @@
 import { Head, Html, Main, NextScript } from "next/document";
+import Script from "next/script";
 import { CUSTOM_SCROLLBAR } from "@/shared/config/style";
 import { cn } from "@/shared/lib/cn";
 
@@ -16,6 +17,11 @@ export default function Document() {
     return (
         <Html lang="en">
             <Head>
+                <Script
+                    src="//unpkg.com/react-scan/dist/auto.global.js"
+                    crossOrigin="anonymous"
+                    strategy="beforeInteractive"
+                />
                 <meta charSet="UTF-8" key="charset" />
                 <meta
                     content="IE=Edge"
