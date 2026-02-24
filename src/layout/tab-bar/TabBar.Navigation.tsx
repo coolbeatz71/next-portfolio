@@ -1,3 +1,5 @@
+import type { MouseEvent } from "react";
+import { memo, useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import type { TabBarNavigationProps } from "./types";
 
@@ -17,22 +19,35 @@ import type { TabBarNavigationProps } from "./types";
  *
  * @returns The desktop tab bar element
  */
-export function TabBarNavigation({
+function TabBarNavigationComponent({
     tabs,
     activeTabIndex,
     setActiveTabIndex
 }: TabBarNavigationProps) {
     const { t } = useTranslation();
 
+    const handleTabClick = useCallback(
+        (e: MouseEvent<HTMLButtonElement>) => {
+            const idx = Number(e.currentTarget.dataset.index);
+            setActiveTabIndex(idx);
+        },
+        [setActiveTabIndex]
+    );
+
+    const indicatorStyle = useMemo(
+        () => ({
+            width: `${100 / tabs.length}%`,
+            transform: `translateX(${activeTabIndex * 100}%)`
+        }),
+        [tabs.length, activeTabIndex]
+    );
+
     return (
         <ul role="tablist" data-tabs="tabs" className="relative flex list-none">
             <span
                 aria-hidden="true"
                 className="bg-primary-fill shadow-lg rounded-lg absolute inset-0 z-0 transition-transform duration-base ease-in-out"
-                style={{
-                    width: `${100 / tabs.length}%`,
-                    transform: `translateX(${activeTabIndex * 100}%)`
-                }}
+                style={indicatorStyle}
             />
             {tabs.map((tab, idx) => {
                 const isActiveTab = idx === activeTabIndex;
@@ -45,8 +60,9 @@ export function TabBarNavigation({
                         <button
                             role="tab"
                             type="button"
+                            data-index={idx}
                             aria-selected={isActiveTab}
-                            onClick={() => setActiveTabIndex(idx)}
+                            onClick={handleTabClick}
                             className={`py-2 cursor-pointer w-full text-center text-xs md:text-sm font-semibold duration-base
                     ${isActiveTab ? "text-typography-on-primary" : "text-typography-contact"}`}
                         >
@@ -58,3 +74,5 @@ export function TabBarNavigation({
         </ul>
     );
 }
+
+export const TabBarNavigation = memo(TabBarNavigationComponent);
