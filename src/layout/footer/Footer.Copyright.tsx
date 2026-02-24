@@ -1,6 +1,8 @@
 import { useTranslation } from "react-i18next";
 import type { LinkProps } from "./types";
 
+const CURRENT_YEAR = new Date().getFullYear();
+
 const Link = ({ href, children }: LinkProps) => (
     <a
         href={href}
@@ -28,7 +30,7 @@ export function FooterCopyright() {
     return (
         <p className="text-sm text-center">
             <span className="font-semibold text-typography-copyright">
-                &copy; {new Date().getFullYear()} Mutombo Jean-Vincent |
+                &copy; {CURRENT_YEAR} Mutombo Jean-Vincent |
             </span>{" "}
             <span className="font-light text-typography-contact">
                 {" "}
