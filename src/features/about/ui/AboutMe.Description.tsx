@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, memo } from "react";
 import { useTranslation } from "react-i18next";
 import type { HighlightProps } from "./types";
 
@@ -22,9 +22,10 @@ function Highlight({ children }: HighlightProps) {
  *
  * @returns The about me description element
  */
-export function AboutMeDescription() {
+const textStyle = "text-typography-subtle leading-loose!";
+
+export const AboutMeDescription = memo(function AboutMeDescription() {
     const { t } = useTranslation();
-    const textStyle = "text-typography-subtle leading-loose!";
 
     return (
         <Fragment>
@@ -60,4 +61,4 @@ export function AboutMeDescription() {
             </p>
         </Fragment>
     );
-}
+});
