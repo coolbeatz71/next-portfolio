@@ -29,7 +29,7 @@ const baseLinkClass =
 function NavigationMenuComponent({ onClick, className }: NavigationMenuProps) {
     const { t } = useTranslation();
     const [activeLink, setActiveLink] = useState(
-        () => window.location.hash || ""
+        () => (typeof window !== "undefined" ? window.location.hash : "") || ""
     );
     const onClickRef = useRef(onClick);
     onClickRef.current = onClick;
