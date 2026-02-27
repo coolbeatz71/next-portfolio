@@ -23,11 +23,7 @@ function HeroIntroSectionComponent() {
     const { t, i18n } = useTranslation();
 
     const typeWriterWords = useMemo(
-        () => [
-            t("software_engineer"),
-            t("frontend_engineer"),
-            t("mobile_engineer")
-        ],
+        () => [t("software_engineer"), t("frontend_engineer"), t("mobile_engineer")],
         [t, i18n.language]
     );
 
@@ -48,15 +44,8 @@ function HeroIntroSectionComponent() {
 
             <Breadcrumb labels={techStackSummary} />
 
-            <a
-                target="_blank"
-                href={RESUME_LINK}
-                title="Download Resume"
-                rel="noopener noreferrer"
-            >
-                <GradientShineButton>
-                    {t("download_resume")}
-                </GradientShineButton>
+            <a target="_blank" href={RESUME_LINK} title="Download Resume" rel="noopener noreferrer">
+                <GradientShineButton>{t("download_resume")}</GradientShineButton>
             </a>
         </Fragment>
     );
