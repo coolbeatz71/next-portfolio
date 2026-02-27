@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 
 /**
  * Project card modal hook.
@@ -12,9 +12,9 @@ import { useState } from "react";
 export function useProjectCardModal() {
     const [isOpen, setIsOpen] = useState(false);
 
-    const toggleModal = () => {
+    const toggleModal = useCallback(() => {
         setIsOpen((prev) => !prev);
-    };
+    }, []);
 
     return { isOpen, toggleModal };
 }
