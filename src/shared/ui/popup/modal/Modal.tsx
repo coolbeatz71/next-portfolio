@@ -40,7 +40,9 @@ export function Modal({
 }: ModalProps) {
     useLockBodyScroll(isOpen);
 
-    if (!isOpen) return <></>;
+    if (!isOpen || typeof document === "undefined") {
+        return <Fragment></Fragment>;
+    }
 
     return createPortal(
         <Fragment>
@@ -58,9 +60,7 @@ export function Modal({
             >
                 <div className="px-4 pb-4">
                     <PopupHeader className="py-4">{header}</PopupHeader>
-
                     <PopupCloseButton onClick={onToggle} />
-
                     <div className="pt-4">{children}</div>
                 </div>
             </div>
