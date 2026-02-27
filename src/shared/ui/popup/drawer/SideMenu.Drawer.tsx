@@ -7,6 +7,16 @@ import { PopupFooter } from "../Popup.Footer";
 import { PopupHeader } from "../Popup.Header";
 import type { SideMenuDrawerProps } from "./types";
 
+const openTranslate: Record<"right" | "left", string> = {
+    right: "translate-x-0",
+    left: "-translate-x-0"
+};
+
+const closedTranslate: Record<"right" | "left", string> = {
+    right: "translate-x-full",
+    left: "-translate-x-full"
+};
+
 /**
  * Side menu drawer component.
  *
@@ -39,20 +49,16 @@ export function SideMenuDrawer({
 }: SideMenuDrawerProps) {
     useLockBodyScroll(isOpen);
 
-    const getTranslateValue = (): string => {
-        const toggle = {
-            open: { right: "translate-x-0", left: "-translate-x-0" },
-            closed: { right: "translate-x-full", left: "-translate-x-full" }
-        };
-        return isOpen ? toggle.open[position] : toggle.closed[position];
-    };
+    const translateValue = isOpen
+        ? openTranslate[position]
+        : closedTranslate[position];
 
     return (
         <Fragment>
             <aside
                 className={cn(
                     `fixed inset-100 top-0 ${position}-0 z-50 w-[50%] h-screen bg-background
-                    transition-transform transform ${getTranslateValue()}`,
+                    transition-transform transform ${translateValue}`,
                     className
                 )}
             >
