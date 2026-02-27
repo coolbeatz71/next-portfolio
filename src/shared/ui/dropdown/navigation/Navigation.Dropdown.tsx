@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useClickAway } from "react-use";
 import { IconChevronUpDown } from "@/shared/config/icons";
@@ -36,12 +36,15 @@ export function NavigationDropdown({
 
     useClickAway(ref, () => setIsOpen(false));
 
-    const toggleDropdown = () => setIsOpen(!isOpen);
+    const toggleDropdown = useCallback(() => setIsOpen((prev) => !prev), []);
 
-    const handleMenuSelect = (index: number) => {
-        setActiveTabIndex(index);
-        toggleDropdown();
-    };
+    const handleMenuSelect = useCallback(
+        (index: number) => {
+            setActiveTabIndex(index);
+            setIsOpen(false);
+        },
+        [setActiveTabIndex]
+    );
 
     return (
         <div
