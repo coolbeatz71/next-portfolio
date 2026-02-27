@@ -38,30 +38,20 @@ export function useExperienceTimeline(
                 subtitle: "BESTSELLER A/S - Nov 2023 - Present",
                 content: (
                     <div>
-                        <p className={_headerClassName}>
-                            {t("companies.bestseller")}
-                        </p>
+                        <p className={_headerClassName}>{t("companies.bestseller")}</p>
                         <div className="gap-4">
                             <ul className={_bodyClassName}>
                                 <ExperienceItem>
-                                    {t(
-                                        "experience_details.developed_maintained"
-                                    )}
+                                    {t("experience_details.developed_maintained")}
                                 </ExperienceItem>
                                 <ExperienceItem>
-                                    {t(
-                                        "experience_details.implemented_metrics"
-                                    )}
+                                    {t("experience_details.implemented_metrics")}
                                 </ExperienceItem>
                                 <ExperienceItem>
-                                    {t(
-                                        "experience_details.authored_unit_tests"
-                                    )}
+                                    {t("experience_details.authored_unit_tests")}
                                 </ExperienceItem>
                                 <ExperienceItem>
-                                    {t(
-                                        "experience_details.engaged_with_architects"
-                                    )}
+                                    {t("experience_details.engaged_with_architects")}
                                 </ExperienceItem>
                             </ul>
                         </div>
@@ -79,22 +69,16 @@ export function useExperienceTimeline(
                         <div className="gap-4">
                             <ul className={_bodyClassName}>
                                 <ExperienceItem>
-                                    {t(
-                                        "experience_details.implemented_servicenow"
-                                    )}
+                                    {t("experience_details.implemented_servicenow")}
                                 </ExperienceItem>
                                 <ExperienceItem>
                                     {t("experience_details.configured_email")}
                                 </ExperienceItem>
                                 <ExperienceItem>
-                                    {t(
-                                        "experience_details.collaborated_departments"
-                                    )}
+                                    {t("experience_details.collaborated_departments")}
                                 </ExperienceItem>
                                 <ExperienceItem>
-                                    {t(
-                                        "experience_details.developed_ui_actions"
-                                    )}
+                                    {t("experience_details.developed_ui_actions")}
                                 </ExperienceItem>
                             </ul>
                         </div>
@@ -109,9 +93,7 @@ export function useExperienceTimeline(
                 subtitle: "CODE OF AFRICA LTD - June 2021 - Aug 2022",
                 content: (
                     <div>
-                        <p className={_headerClassName}>
-                            {t("companies.codeofafrica")}
-                        </p>
+                        <p className={_headerClassName}>{t("companies.codeofafrica")}</p>
                         <div className="gap-4">
                             <ul className={_bodyClassName}>
                                 <ExperienceItem>
@@ -121,9 +103,7 @@ export function useExperienceTimeline(
                                     {t("experience_details.led_frontend_team")}
                                 </ExperienceItem>
                                 <ExperienceItem>
-                                    {t(
-                                        "experience_details.masterminded_evolution"
-                                    )}
+                                    {t("experience_details.masterminded_evolution")}
                                 </ExperienceItem>
                             </ul>
                         </div>
@@ -138,28 +118,20 @@ export function useExperienceTimeline(
                 subtitle: "ALFATIER GmbH - Nov 2021 – Aug 2022",
                 content: (
                     <div>
-                        <p className={_headerClassName}>
-                            {t("companies.alfatier")}
-                        </p>
+                        <p className={_headerClassName}>{t("companies.alfatier")}</p>
                         <div className="gap-4">
                             <ul className={_bodyClassName}>
                                 <ExperienceItem>
                                     {t("experience_details.led_early_stage")}
                                 </ExperienceItem>
                                 <ExperienceItem>
-                                    {t(
-                                        "experience_details.developed_frontend_features"
-                                    )}
+                                    {t("experience_details.developed_frontend_features")}
                                 </ExperienceItem>
                                 <ExperienceItem>
-                                    {t(
-                                        "experience_details.integrated_monitoring"
-                                    )}
+                                    {t("experience_details.integrated_monitoring")}
                                 </ExperienceItem>
                                 <ExperienceItem>
-                                    {t(
-                                        "experience_details.implemented_hubspot"
-                                    )}
+                                    {t("experience_details.implemented_hubspot")}
                                 </ExperienceItem>
                             </ul>
                         </div>
@@ -174,30 +146,20 @@ export function useExperienceTimeline(
                 subtitle: "RECONSTRUCTION - June 2021 – Nov 2021",
                 content: (
                     <div>
-                        <p className={_headerClassName}>
-                            {t("companies.reconstruction")}
-                        </p>
+                        <p className={_headerClassName}>{t("companies.reconstruction")}</p>
                         <div className="gap-4">
                             <ul className={_bodyClassName}>
                                 <ExperienceItem>
-                                    {t(
-                                        "experience_details.integrated_thinkific"
-                                    )}
+                                    {t("experience_details.integrated_thinkific")}
                                 </ExperienceItem>
                                 <ExperienceItem>
-                                    {t(
-                                        "experience_details.maintained_dashboard"
-                                    )}
+                                    {t("experience_details.maintained_dashboard")}
                                 </ExperienceItem>
                                 <ExperienceItem>
-                                    {t(
-                                        "experience_details.improved_performance"
-                                    )}
+                                    {t("experience_details.improved_performance")}
                                 </ExperienceItem>
                                 <ExperienceItem>
-                                    {t(
-                                        "experience_details.introduced_git_workflow"
-                                    )}
+                                    {t("experience_details.introduced_git_workflow")}
                                 </ExperienceItem>
                             </ul>
                         </div>
@@ -212,35 +174,23 @@ export function useExperienceTimeline(
                 subtitle: "EXUUS LTD - May 2020 - June 2021",
                 content: (
                     <div>
-                        <p className={_headerClassName}>
-                            {t("companies.exuus")}
-                        </p>
+                        <p className={_headerClassName}>{t("companies.exuus")}</p>
                         <div className="gap-4">
                             <ul className={_bodyClassName}>
                                 <ExperienceItem>
-                                    {t(
-                                        "experience_details.spearheaded_development"
-                                    )}
+                                    {t("experience_details.spearheaded_development")}
                                 </ExperienceItem>
                                 <ExperienceItem>
-                                    {t(
-                                        "experience_details.participated_code_reviews"
-                                    )}
+                                    {t("experience_details.participated_code_reviews")}
                                 </ExperienceItem>
                                 <ExperienceItem>
-                                    {t(
-                                        "experience_details.implemented_e2e_tests"
-                                    )}
+                                    {t("experience_details.implemented_e2e_tests")}
                                 </ExperienceItem>
                                 <ExperienceItem>
-                                    {t(
-                                        "experience_details.worked_payment_integration"
-                                    )}
+                                    {t("experience_details.worked_payment_integration")}
                                 </ExperienceItem>
                                 <ExperienceItem>
-                                    {t(
-                                        "experience_details.implemented_multi_language"
-                                    )}
+                                    {t("experience_details.implemented_multi_language")}
                                 </ExperienceItem>
                             </ul>
                         </div>
@@ -255,18 +205,14 @@ export function useExperienceTimeline(
                 subtitle: "AKORION LTD - Aug 2019 - Jan 2020",
                 content: (
                     <div>
-                        <p className={_headerClassName}>
-                            {t("companies.akorion")}
-                        </p>
+                        <p className={_headerClassName}>{t("companies.akorion")}</p>
                         <div className="gap-4">
                             <ul className={_bodyClassName}>
                                 <ExperienceItem>
                                     {t("experience_details.used_php_lumen")}
                                 </ExperienceItem>
                                 <ExperienceItem>
-                                    {t(
-                                        "experience_details.implemented_couchbase"
-                                    )}
+                                    {t("experience_details.implemented_couchbase")}
                                 </ExperienceItem>
                                 <ExperienceItem>
                                     {t("experience_details.pioneered_phpunit")}
@@ -287,9 +233,7 @@ export function useExperienceTimeline(
                 subtitle: "ANDELA LTD - Mar 2019 - Apr 2020",
                 content: (
                     <div>
-                        <p className={_headerClassName}>
-                            {t("companies.andela")}
-                        </p>
+                        <p className={_headerClassName}>{t("companies.andela")}</p>
                         <div className="gap-4">
                             <ul className={_bodyClassName}>
                                 <ExperienceItem>
@@ -299,9 +243,7 @@ export function useExperienceTimeline(
                                     {t("experience_details.worked_with_leads")}
                                 </ExperienceItem>
                                 <ExperienceItem>
-                                    {t(
-                                        "experience_details.implemented_backend"
-                                    )}
+                                    {t("experience_details.implemented_backend")}
                                 </ExperienceItem>
                                 <ExperienceItem>
                                     {t("experience_details.integrated_slack")}
@@ -319,9 +261,7 @@ export function useExperienceTimeline(
                 subtitle: "JKSS CONNECT - Sept 2017 - Feb 2019",
                 content: (
                     <div>
-                        <p className={_headerClassName}>
-                            {t("companies.jkss")}
-                        </p>
+                        <p className={_headerClassName}>{t("companies.jkss")}</p>
                         <div className="gap-4">
                             <ul className={_bodyClassName}>
                                 <ExperienceItem>
@@ -330,13 +270,9 @@ export function useExperienceTimeline(
                                 <ExperienceItem>
                                     {t("experience_details.integrated_qr")}
                                 </ExperienceItem>
+                                <ExperienceItem>{t("experience_details.led_agile")}</ExperienceItem>
                                 <ExperienceItem>
-                                    {t("experience_details.led_agile")}
-                                </ExperienceItem>
-                                <ExperienceItem>
-                                    {t(
-                                        "experience_details.deployed_cross_platform"
-                                    )}
+                                    {t("experience_details.deployed_cross_platform")}
                                 </ExperienceItem>
                             </ul>
                         </div>
