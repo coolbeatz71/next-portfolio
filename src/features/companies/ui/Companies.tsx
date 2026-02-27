@@ -39,10 +39,7 @@ export const Companies = memo(function Companies() {
                     </div>
 
                     <div className="flex relative max-w-3xl z-10 py-4">
-                        <CompaniesGrid
-                            items={companyLogoList}
-                            className="w-full"
-                        />
+                        <CompaniesGrid items={companyLogoList} className="w-full" />
                     </div>
                 </div>
             </section>
