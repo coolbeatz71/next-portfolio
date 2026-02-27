@@ -5,7 +5,7 @@ import {
     useTransform
 } from "motion/react";
 import * as m from "motion/react-m";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { ITimelineEntry } from "@/features/experience/data/types";
 import { IconGlobe } from "@/shared/config/icons";
 
@@ -42,6 +42,7 @@ export const Timeline = ({ data }: { data: ITimelineEntry[] }) => {
 
     const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
     const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
+    const trackStyle = useMemo(() => ({ height: `${height}px` }), [height]);
 
     return (
         <div className="mx-auto py-4 md:py-0" ref={containerRef}>
@@ -86,9 +87,7 @@ export const Timeline = ({ data }: { data: ITimelineEntry[] }) => {
                 ))}
                 <LazyMotion features={domAnimation}>
                     <div
-                        style={{
-                            height: `${height}px`
-                        }}
+                        style={trackStyle}
                         className="absolute left-0 md:left-4 top-0 overflow-hidden w-0.5 bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-0% via-timeline-track to-transparent to-99% mask-[linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)]"
                     >
                         <m.div
