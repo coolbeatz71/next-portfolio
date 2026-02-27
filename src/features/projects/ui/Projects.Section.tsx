@@ -26,18 +26,12 @@ export function ProjectSection({ projects }: ProjectSectionProps) {
             <div
                 className={cn(
                     "py-8 transition-all duration-moderate ease-[cubic-bezier(0.36,0.66,0.04,1)]",
-                    isVisible
-                        ? "opacity-100 translate-y-0"
-                        : "opacity-0 translate-y-12"
+                    isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
                 )}
             >
                 <div className="grid lg:grid-cols-2 gap-4">
                     {projects.map((project, index) => (
-                        <ProjectCard
-                            index={index}
-                            key={project.name}
-                            project={project}
-                        />
+                        <ProjectCard index={index} key={project.name} project={project} />
                     ))}
                 </div>
             </div>
