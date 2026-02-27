@@ -1,6 +1,6 @@
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
-import { useEffect, useRef } from "react";
+import { Fragment, useEffect, useRef } from "react";
 import locales from "@/shared/i18n";
 import { getLanguage } from "@/shared/lib/getLanguage";
 import type { I18nProviderProps } from "./types";
@@ -33,5 +33,5 @@ export function I18nProvider({ children }: I18nProviderProps) {
         initLanguage(userLang.current as string);
     }, []);
 
-    return <>{children}</>;
+    return <Fragment>{children}</Fragment>;
 }
