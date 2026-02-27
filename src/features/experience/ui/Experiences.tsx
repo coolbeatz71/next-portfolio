@@ -93,9 +93,7 @@ export function Experiences() {
         });
 
         return () => {
-            queries.forEach(({ mq, handler }) =>
-                mq.removeEventListener("change", handler)
-            );
+            queries.forEach(({ mq, handler }) => mq.removeEventListener("change", handler));
         };
     }, []);
 
@@ -105,19 +103,13 @@ export function Experiences() {
             className={cn(RESPONSIVE_CLASSNAME, "py-12 xl:py-32 scroll-mt-10")}
         >
             <div className="pb-6 md:pb-12">
-                <SectionHeader
-                    title={t("experience_title")}
-                    subtitle={t("experience_subtitle")}
-                />
+                <SectionHeader title={t("experience_title")} subtitle={t("experience_subtitle")} />
             </div>
 
             <Timeline data={previewData} />
 
             <div className="flex justify-center w-full">
-                <MovingBorderButton
-                    className="py-3 md:py-4 px-10"
-                    onClick={toggleDrawer}
-                >
+                <MovingBorderButton className="py-3 md:py-4 px-10" onClick={toggleDrawer}>
                     {t("read_more")}
                 </MovingBorderButton>
             </div>
