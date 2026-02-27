@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { memo, useCallback } from "react";
 import type { ProjectImageProps } from "./types";
 
 /**
@@ -19,16 +20,26 @@ import type { ProjectImageProps } from "./types";
  *
  * @returns The project card image element
  */
-export function ProjectCardImage({
+function ProjectCardImageComponent({
     src,
     alt,
     onClick,
     blurDataURL
 }: ProjectImageProps) {
+    const handleKeyDown = useCallback(
+        (e: React.KeyboardEvent) => {
+            if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                onClick();
+            }
+        },
+        [onClick]
+    );
+
     return (
         <div
             onClick={onClick}
-            onKeyDown={onClick}
+            onKeyDown={handleKeyDown}
             className="w-full md:w-1/2 h-56 md:h-auto relative overflow-hidden cursor-pointer"
         >
             <Image
@@ -50,3 +61,5 @@ export function ProjectCardImage({
         </div>
     );
 }
+
+export const ProjectCardImage = memo(ProjectCardImageComponent);
