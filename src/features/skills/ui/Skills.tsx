@@ -34,18 +34,9 @@ export function Skills() {
 
     return (
         <ScrollReveal className="delay-300">
-            <section
-                id="skill"
-                className={cn(
-                    RESPONSIVE_CLASSNAME,
-                    "py-12 xl:py-32 scroll-mt-10"
-                )}
-            >
+            <section id="skill" className={cn(RESPONSIVE_CLASSNAME, "py-12 xl:py-32 scroll-mt-10")}>
                 <div className="pb-6 md:pb-12">
-                    <SectionHeader
-                        title={t("skills_title")}
-                        subtitle={t("skills_subtitle")}
-                    />
+                    <SectionHeader title={t("skills_title")} subtitle={t("skills_subtitle")} />
                 </div>
                 <div className="relative">
                     <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 md:px-24">
