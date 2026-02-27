@@ -31,14 +31,7 @@ export const projectsMobile: IProjectByStack[] = [
         name: "Click Mart",
         role: "ionic_mobile_engineer",
         description: "projects_description.clickmart",
-        stack: [
-            "Ionic 2",
-            "Angular",
-            "PouchDB",
-            "MongoDB",
-            "Android SDK",
-            "Capacitor"
-        ],
+        stack: ["Ionic 2", "Angular", "PouchDB", "MongoDB", "Android SDK", "Capacitor"],
         images: [
             {
                 alt: "clickmart-preview",
@@ -67,14 +60,7 @@ export const projectsMobile: IProjectByStack[] = [
         name: "Task Manager",
         role: "flutter_engineer",
         description: "projects_description.taskmanager",
-        stack: [
-            "Flutter",
-            "Dart",
-            "Bloc",
-            "Provider",
-            "Firestore",
-            "Firebase Cloud Messaging"
-        ],
+        stack: ["Flutter", "Dart", "Bloc", "Provider", "Firestore", "Firebase Cloud Messaging"],
         images: [
             {
                 alt: "taskmanager-preview",
