@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { memo, useCallback, useState } from "react";
+
 import { cn } from "@/shared/lib/cn";
 import { Illustration } from "./GlowingStar.Illustration";
 import type { GlowingStarsCardProps } from "./types";
+
 /**
  * Glowing stars card component.
  *
@@ -17,20 +19,19 @@ import type { GlowingStarsCardProps } from "./types";
  *
  * @returns The glowing stars card element
  */
-export function GlowingStarsCard({
+function GlowingStarsCardComponent({
     className,
     children
 }: GlowingStarsCardProps) {
     const [mouseEnter, setMouseEnter] = useState(false);
 
+    const handleMouseEnter = useCallback(() => setMouseEnter(true), []);
+    const handleMouseLeave = useCallback(() => setMouseEnter(false), []);
+
     return (
         <div
-            onMouseEnter={() => {
-                setMouseEnter(true);
-            }}
-            onMouseLeave={() => {
-                setMouseEnter(false);
-            }}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
             className={cn(
                 `bg-[linear-gradient(110deg,var(--color-card-gradient-start)_0.5%,var(--color-card-gradient-mid))]
                 max-w-20 max-h-20 h-full w-full rounded-lg
@@ -47,3 +48,5 @@ export function GlowingStarsCard({
         </div>
     );
 }
+
+export const GlowingStarsCard = memo(GlowingStarsCardComponent);
