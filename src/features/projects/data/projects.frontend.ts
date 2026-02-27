@@ -5,14 +5,7 @@ export const projectsFrontend: IProjectByStack[] = [
         name: "SavePlus",
         role: "frontend_engineer",
         description: "projects_description.saveplus",
-        stack: [
-            "ReactJs",
-            "NextJs",
-            "Typescript",
-            "AntDesign",
-            "Redux",
-            "ExpressJs"
-        ],
+        stack: ["ReactJs", "NextJs", "Typescript", "AntDesign", "Redux", "ExpressJs"],
         images: [
             {
                 alt: "saveplus-preview",
@@ -58,14 +51,7 @@ export const projectsFrontend: IProjectByStack[] = [
         name: "Reconstruction",
         role: "frontend_engineer",
         description: "projects_description.reconstruction",
-        stack: [
-            "ReactJs",
-            "Typescript",
-            "CoreUI",
-            "AWS lambda",
-            "GraphQL",
-            "Hasura"
-        ],
+        stack: ["ReactJs", "Typescript", "CoreUI", "AWS lambda", "GraphQL", "Hasura"],
         images: [
             {
                 alt: "reconstruction-preview",
@@ -107,14 +93,7 @@ export const projectsFrontend: IProjectByStack[] = [
         name: "Alfatier",
         role: "senior_frontend_engineer",
         description: "projects_description.alfatier",
-        stack: [
-            "ReactJs",
-            "NextJs",
-            "Typescript",
-            "Material-UI",
-            "Firebase",
-            "Hubspot"
-        ],
+        stack: ["ReactJs", "NextJs", "Typescript", "Material-UI", "Firebase", "Hubspot"],
         images: [
             {
                 alt: "alfatier-preview",
