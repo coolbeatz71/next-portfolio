@@ -1,7 +1,7 @@
 import { domAnimation, LazyMotion, type Variants } from "motion/react";
 import * as m from "motion/react-m";
 import dynamic from "next/dynamic";
-import { memo, useMemo } from "react";
+import { Fragment, memo, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { useProjectCardModal } from "./hooks/useProjectCardModal";
 import { ProjectCardContent } from "./Project.Card.Content";
@@ -60,7 +60,7 @@ function ProjectCardComponent({ project, index }: ProjectCardProps) {
     );
 
     return (
-        <>
+        <Fragment>
             {isOpen && (
                 <DynamicModal
                     isOpen={isOpen}
@@ -102,7 +102,7 @@ function ProjectCardComponent({ project, index }: ProjectCardProps) {
                     </div>
                 </m.div>
             </LazyMotion>
-        </>
+        </Fragment>
     );
 }
 
