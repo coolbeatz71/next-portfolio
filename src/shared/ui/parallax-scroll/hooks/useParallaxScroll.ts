@@ -15,7 +15,7 @@ const ROTATE_INTERVAL_MS = 5000;
  */
 export function useParallaxScroll(images: IAboutMeImage[]) {
     const { scrollYProgress } = useScroll();
-    const cubicEase = cubicBezier(0.5, 0, 0.2, 1);
+    const cubicEase = useMemo(() => cubicBezier(0.5, 0, 0.2, 1), []);
 
     const smoothScroll = useSpring(scrollYProgress, {
         damping: 30,
@@ -59,7 +59,7 @@ export function useParallaxScroll(images: IAboutMeImage[]) {
         [selectedImages, divider]
     );
 
-    const imageHeight = GRID_HEIGHT / divider;
+    const imageHeight = useMemo(() => GRID_HEIGHT / divider, [divider]);
 
     return {
         firstColumn,
