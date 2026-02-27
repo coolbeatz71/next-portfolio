@@ -1,4 +1,4 @@
-import { AnimatePresence } from "motion/react";
+import { AnimatePresence, domAnimation, LazyMotion } from "motion/react";
 import { memo, useEffect, useRef, useState } from "react";
 import { Glow } from "./GlowingStar.Glow";
 import { Star } from "./GlowingStars.Star";
@@ -25,58 +25,67 @@ function IllustrationComponent({
     stars = 16,
     columns = 4
 }: IllustrationProps) {
-    const [glowingStars, setGlowingStars] = useState<number[]>([]);
-
     const highlightedStars = useRef<number[]>([]);
+    const [glowingStars, setGlowingStars] = useState<number[]>([]);
 
     useEffect(() => {
         const interval = setInterval(() => {
             highlightedStars.current = Array.from({ length: 5 }, () =>
                 Math.floor(Math.random() * stars)
             );
-            setGlowingStars([...highlightedStars.current]);
+            setGlowingStars((prev) => {
+                const next = highlightedStars.current;
+                if (
+                    prev.length === next.length &&
+                    prev.every((v, i) => v === next[i])
+                )
+                    return prev;
+                return [...next];
+            });
         }, 3000);
 
         return () => clearInterval(interval);
     }, [stars]);
 
     return (
-        <div
-            className="h-full w-full"
-            style={{
-                display: "grid",
-                gridTemplateColumns: `repeat(${columns}, 1fr)`
-            }}
-        >
-            {[...Array(stars)].map((star, starIdx) => {
-                const isGlowing = glowingStars.includes(starIdx);
-                const delay = (starIdx % 10) * 0.1;
-                const staticDelay = starIdx * 0.01;
+        <LazyMotion features={domAnimation}>
+            <div
+                className="h-full w-full"
+                style={{
+                    display: "grid",
+                    gridTemplateColumns: `repeat(${columns}, 1fr)`
+                }}
+            >
+                {[...Array(stars)].map((star, starIdx) => {
+                    const isGlowing = glowingStars.includes(starIdx);
+                    const delay = (starIdx % 10) * 0.1;
+                    const staticDelay = starIdx * 0.01;
 
-                return (
-                    <div
-                        key={`matrix-col-${star}-${
-                            // biome-ignore lint/suspicious/noArrayIndexKey: need to use index as key
-                            starIdx
-                        }`}
-                        className="relative flex items-center justify-center"
-                    >
-                        <Star
-                            isGlowing={mouseEnter || isGlowing}
-                            delay={mouseEnter ? staticDelay : delay}
-                        />
-                        {mouseEnter && <Glow delay={staticDelay} />}
-                        <AnimatePresence mode="wait">
-                            {isGlowing && (
-                                <Glow
-                                    delay={mouseEnter ? staticDelay : delay}
-                                />
-                            )}
-                        </AnimatePresence>
-                    </div>
-                );
-            })}
-        </div>
+                    return (
+                        <div
+                            key={`matrix-col-${star}-${
+                                // biome-ignore lint/suspicious/noArrayIndexKey: need to use index as key
+                                starIdx
+                            }`}
+                            className="relative flex items-center justify-center"
+                        >
+                            <Star
+                                isGlowing={mouseEnter || isGlowing}
+                                delay={mouseEnter ? staticDelay : delay}
+                            />
+                            {mouseEnter && <Glow delay={staticDelay} />}
+                            <AnimatePresence mode="wait">
+                                {isGlowing && (
+                                    <Glow
+                                        delay={mouseEnter ? staticDelay : delay}
+                                    />
+                                )}
+                            </AnimatePresence>
+                        </div>
+                    );
+                })}
+            </div>
+        </LazyMotion>
     );
 }
 
