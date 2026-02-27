@@ -42,14 +42,8 @@ function HeroBadgesComponent() {
             </div>
             <div className="grid grid-cols-2 h-48 place-items-center gap-2 md:gap-4">
                 {devToolsLogoList.map((badge) => (
-                    <div
-                        key={badge.iconName}
-                        className={badge.containerClassName}
-                    >
-                        <BadgeDevTools
-                            iconName={badge.iconName}
-                            className={badge.className}
-                        />
+                    <div key={badge.iconName} className={badge.containerClassName}>
+                        <BadgeDevTools iconName={badge.iconName} className={badge.className} />
                     </div>
                 ))}
             </div>
