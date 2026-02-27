@@ -1,7 +1,7 @@
 import { domAnimation, LazyMotion, type Variants } from "motion/react";
 import * as m from "motion/react-m";
 import dynamic from "next/dynamic";
-import { memo } from "react";
+import { memo, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { useProjectCardModal } from "./hooks/useProjectCardModal";
 import { ProjectCardContent } from "./Project.Card.Content";
@@ -54,6 +54,11 @@ function ProjectCardComponent({ project, index }: ProjectCardProps) {
     const { t } = useTranslation();
     const { isOpen, toggleModal } = useProjectCardModal();
 
+    const modalHeader = useMemo(
+        () => <h2 className="text-xl font-semibold">{project.name}</h2>,
+        [project]
+    );
+
     return (
         <>
             {isOpen && (
@@ -61,11 +66,7 @@ function ProjectCardComponent({ project, index }: ProjectCardProps) {
                     isOpen={isOpen}
                     className="max-w-2xl"
                     onToggle={toggleModal}
-                    header={
-                        <h2 className="text-xl font-semibold">
-                            {project.name}
-                        </h2>
-                    }
+                    header={modalHeader}
                 >
                     <ProjectModal project={project} />
                 </DynamicModal>
