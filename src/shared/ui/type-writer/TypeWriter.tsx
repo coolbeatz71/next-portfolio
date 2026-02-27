@@ -1,5 +1,10 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import type { TypeWriterProps } from "./types";
+
+const typeWriterClassName = `
+    flex items-center font-bold animate-cursor overflow-hidden
+    whitespace-nowrap transition-[width] duration-base ease-in mr-auto
+`;
 
 /**
  * Typewriter component.
@@ -17,22 +22,24 @@ import type { TypeWriterProps } from "./types";
  * @returns The typewriter animation element
  */
 export function TypeWriter({ words, className }: TypeWriterProps) {
-    const typeWriterClassName = `
-        flex items-center font-bold animate-cursor overflow-hidden 
-        whitespace-nowrap transition-[width] duration-base ease-in mr-auto
-    `;
-
     const [currentWord, setCurrentWord] = useState(0);
     const [collapseClassName, setCollapseClassName] = useState("w-0");
+    const wordTimeoutRef = useRef<ReturnType<typeof setTimeout>>(undefined);
+    const wordsRef = useRef(words);
+
+    useEffect(() => {
+        wordsRef.current = words;
+        setCurrentWord(0);
+    }, [words]);
 
     const incrementWord = useCallback(() => {
         setCollapseClassName("w-0");
 
-        setTimeout(() => {
-            setCurrentWord((prev) => (prev + 1) % words.length);
+        wordTimeoutRef.current = setTimeout(() => {
+            setCurrentWord((prev) => (prev + 1) % wordsRef.current.length);
             setCollapseClassName("w-full");
         }, 200);
-    }, [words.length]);
+    }, []);
 
     useEffect(() => {
         const intervalId = setInterval(incrementWord, 5000);
@@ -40,6 +47,7 @@ export function TypeWriter({ words, className }: TypeWriterProps) {
 
         return () => {
             clearTimeout(timeoutId);
+            clearTimeout(wordTimeoutRef.current);
             clearInterval(intervalId);
         };
     }, [incrementWord]);
