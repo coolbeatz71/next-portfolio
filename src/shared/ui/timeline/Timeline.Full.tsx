@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { ITimelineEntry } from "@/features/experience/data/types";
 import { IconGlobe } from "@/shared/config/icons";
 import { GridPatternBackground } from "../background/GridPattern.Background";
@@ -17,7 +18,7 @@ import { GridPatternBackground } from "../background/GridPattern.Background";
  *
  * @returns The full timeline list element
  */
-export const TimelineFull = ({ data }: { data: ITimelineEntry[] }) => {
+export const TimelineFull = memo(({ data }: { data: ITimelineEntry[] }) => {
     return (
         <div className="mx-auto">
             <div className="relative">
@@ -47,4 +48,4 @@ export const TimelineFull = ({ data }: { data: ITimelineEntry[] }) => {
             </div>
         </div>
     );
-};
+});
