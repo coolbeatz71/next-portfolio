@@ -19,10 +19,7 @@ import type { ExperienceItemProps } from "./types";
 function ExperienceItemComponent({ children }: ExperienceItemProps) {
     return (
         <li className="flex flex-row space-x-2 my-2 list-none">
-            <IconCheckMark
-                size={10}
-                className="text-primary-subtle mt-2 shrink-0 text-xs"
-            />
+            <IconCheckMark size={10} className="text-primary-subtle mt-2 shrink-0 text-xs" />
             <span>{children}</span>
         </li>
     );
