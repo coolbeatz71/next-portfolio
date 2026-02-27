@@ -1,7 +1,9 @@
+import { memo, useCallback } from "react";
 import { IconArrowUpRight } from "@/shared/config/icons";
 import { BadgeSpan } from "@/shared/ui/badge/Badge.Span";
 import { LitUpBorderButton } from "@/shared/ui/buttons/LitUpBorder.Button";
 import type { ProjectContentProps } from "./types";
+
 /**
  * Project card content component.
  *
@@ -19,15 +21,25 @@ import type { ProjectContentProps } from "./types";
  *
  * @returns The project card content element
  */
-export function ProjectCardContent({
+function ProjectCardContentComponent({
     label,
     project,
     onClick,
     translatedDescription
 }: ProjectContentProps) {
+    const handleKeyDown = useCallback(
+        (e: React.KeyboardEvent) => {
+            if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                onClick();
+            }
+        },
+        [onClick]
+    );
+
     return (
         <div className="md:w-1/2 p-4 flex flex-col justify-between">
-            <div onClick={onClick} onKeyDown={onClick}>
+            <div onClick={onClick} onKeyDown={handleKeyDown}>
                 <h3 className="cursor-text text-lg font-semibold mb-2 text-typography-primary duration-base">
                     {project.name}
                 </h3>
@@ -61,3 +73,5 @@ export function ProjectCardContent({
         </div>
     );
 }
+
+export const ProjectCardContent = memo(ProjectCardContentComponent);
