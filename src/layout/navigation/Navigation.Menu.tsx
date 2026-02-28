@@ -7,8 +7,7 @@ import { getActiveSection } from "@/shared/lib/getActiveSection";
 import { throttle } from "@/shared/lib/throttle";
 import type { NavigationMenuProps } from "./types";
 
-const baseLinkClass =
-    "rounded-lg px-3 py-2 text-sm font-medium duration-moderate";
+const baseLinkClass = "rounded-lg px-3 py-2 text-sm font-medium duration-moderate";
 
 /**
  * Navigation menu component.
