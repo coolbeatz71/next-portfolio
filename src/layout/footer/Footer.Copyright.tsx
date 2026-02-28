@@ -34,8 +34,7 @@ export function FooterCopyright() {
             </span>{" "}
             <span className="font-light text-typography-contact">
                 {" "}
-                {t("designed_with")} <span className="text-love">❤️</span>{" "}
-                {t("and")}{" "}
+                {t("designed_with")} <span className="text-love">❤️</span> {t("and")}{" "}
                 <Link href="https://tailwindcss.com/">Tailwind CSS</Link>
                 {" & "}
                 <Link href="https://ui.aceternity.com/">Aceternity UI</Link>.
