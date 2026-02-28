@@ -30,13 +30,7 @@ const badgeVariants = {
  *
  * @returns The stat badge element
  */
-function BadgeComponent({
-    icon,
-    badgeText,
-    className,
-    endCountText,
-    endCountNumber
-}: BadgeProps) {
+function BadgeComponent({ icon, badgeText, className, endCountText, endCountNumber }: BadgeProps) {
     const count = useCountUp(endCountNumber, 2000, 1000);
 
     return (
