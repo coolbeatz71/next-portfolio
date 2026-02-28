@@ -35,7 +35,7 @@ export function useExperienceTimeline(
                 title: t("senior_software_engineer"),
                 location: "Aarhus, Denmark",
                 href: "http://bestseller.com/",
-                subtitle: "BESTSELLER A/S - Nov 2023 - Present",
+                subtitle: "BESTSELLER A/S - Nov 2023 - Feb 2026",
                 content: (
                     <div>
                         <p className={_headerClassName}>{t("companies.bestseller")}</p>
