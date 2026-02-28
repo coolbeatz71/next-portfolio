@@ -47,10 +47,7 @@ export function NavigationDropdown({
     );
 
     return (
-        <div
-            ref={ref}
-            className={cn(className, "relative flex w-full text-start")}
-        >
+        <div ref={ref} className={cn(className, "relative flex w-full text-start")}>
             <div className="w-full">
                 <button
                     type="button"
@@ -61,10 +58,7 @@ export function NavigationDropdown({
                     onClick={toggleDropdown}
                 >
                     <span>{t(tabs[activeTabIndex].title)}</span>
-                    <IconChevronUpDown
-                        className="-mr-1 ml-2 h-4 w-4"
-                        aria-hidden="true"
-                    />
+                    <IconChevronUpDown className="-mr-1 ml-2 h-4 w-4" aria-hidden="true" />
                 </button>
             </div>
 
