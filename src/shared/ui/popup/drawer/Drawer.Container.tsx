@@ -3,11 +3,7 @@ import { CUSTOM_SCROLLBAR } from "@/shared/config/style";
 import { cn } from "@/shared/lib/cn";
 import type { DrawerContainerProps } from "./types";
 
-const getTranslateStyle = (
-    isOpen: boolean,
-    width: string,
-    position: "right" | "left"
-) => ({
+const getTranslateStyle = (isOpen: boolean, width: string, position: "right" | "left") => ({
     transform: isOpen
         ? "translateX(0)"
         : position === "right"
@@ -33,18 +29,10 @@ const getTranslateStyle = (
  *
  * @returns The drawer container element
  */
-function DrawerContainerComponent({
-    children,
-    width,
-    position,
-    isOpen
-}: DrawerContainerProps) {
-    const stopPropagation = useCallback(
-        (e: React.MouseEvent | React.KeyboardEvent) => {
-            e.stopPropagation();
-        },
-        []
-    );
+function DrawerContainerComponent({ children, width, position, isOpen }: DrawerContainerProps) {
+    const stopPropagation = useCallback((e: React.MouseEvent | React.KeyboardEvent) => {
+        e.stopPropagation();
+    }, []);
 
     const drawerStyle = useMemo(
         () => ({ width, ...getTranslateStyle(isOpen, width, position) }),
