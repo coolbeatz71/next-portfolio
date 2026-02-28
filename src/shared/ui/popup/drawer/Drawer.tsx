@@ -49,12 +49,7 @@ export function Drawer({
             className="relative z-50 "
         >
             <DrawerBackdrop isOpen={isOpen} />
-            <div
-                className={cn(
-                    "fixed inset-0 overflow-hidden",
-                    isOpen ? "visible" : "invisible"
-                )}
-            >
+            <div className={cn("fixed inset-0 overflow-hidden", isOpen ? "visible" : "invisible")}>
                 <div
                     className="absolute inset-0 overflow-hidden"
                     onClick={onToggle}
@@ -67,11 +62,7 @@ export function Drawer({
                             position === "right" ? "right-0" : "left-0"
                         )}
                     >
-                        <DrawerContainer
-                            width={width}
-                            isOpen={isOpen}
-                            position={position}
-                        >
+                        <DrawerContainer width={width} isOpen={isOpen} position={position}>
                             <PopupHeader className="py-4 sticky top-0 bg-background">
                                 {header}
                             </PopupHeader>
