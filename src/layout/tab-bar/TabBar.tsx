@@ -21,17 +21,10 @@ import type { TabBarProps } from "./types";
  *
  * @returns The tab bar element
  */
-export function TabBar({
-    tabs,
-    tabBarClassName,
-    containerClassName
-}: TabBarProps) {
+export function TabBar({ tabs, tabBarClassName, containerClassName }: TabBarProps) {
     const [activeTabIndex, setActiveTabIndex] = useState(0);
 
-    const activeContent = useMemo(
-        () => tabs[activeTabIndex].content,
-        [tabs, activeTabIndex]
-    );
+    const activeContent = useMemo(() => tabs[activeTabIndex].content, [tabs, activeTabIndex]);
 
     return (
         <div className={cn("w-full", containerClassName)}>
