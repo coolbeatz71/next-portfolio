@@ -31,13 +31,7 @@ const modalPositionStyle: CSSProperties = {
  *
  * @returns The modal portal element, or null when closed
  */
-export function Modal({
-    header,
-    isOpen,
-    onToggle,
-    children,
-    className
-}: ModalProps) {
+export function Modal({ header, isOpen, onToggle, children, className }: ModalProps) {
     useLockBodyScroll(isOpen);
 
     if (!isOpen || typeof document === "undefined") {
