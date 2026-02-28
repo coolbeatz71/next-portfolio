@@ -41,10 +41,7 @@ export function SideMenu({ isOpen, toggleDrawer }: SideMenuProps) {
             <div className="flex flex-col items-start gap-1">
                 <SideMenuProfile />
                 <div className="flex flex-col py-4 w-full">
-                    <NavigationMenu
-                        onClick={toggleDrawer}
-                        className="w-full p-3"
-                    />
+                    <NavigationMenu onClick={toggleDrawer} className="w-full p-3" />
                 </div>
             </div>
         </SideMenuDrawer>
