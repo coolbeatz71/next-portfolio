@@ -37,10 +37,7 @@ export function ProjectModalLinks({ project }: ProjectModalLinksProps) {
     return (
         <div className="border border-b-0 border-x-0 border-t border-outlined">
             <div className="flex justify-end gap-4 items-center pt-4">
-                <Link
-                    href={project.sourceCodeLink}
-                    isVisible={project.hasSourceCode}
-                >
+                <Link href={project.sourceCodeLink} isVisible={project.hasSourceCode}>
                     <button
                         type="button"
                         className="py-2 text-sm font-medium text-typography-contact focus:outline-none rounded-lg hover:text-typography-inverse dark:hover:text-typography-on-primary"

@@ -13,15 +13,14 @@ export function Projects() {
         <ScrollReveal direction="right" className="delay-300">
             <section
                 id="contribution"
-                className={cn(
-                    RESPONSIVE_CLASSNAME,
-                    "py-12 xl:py-32 scroll-mt-10"
-                )}
+                className={cn(RESPONSIVE_CLASSNAME, "py-12 xl:py-32 scroll-mt-10")}
             >
-                <SectionHeader
-                    title={t("contribution_title")}
-                    subtitle={t("contribution_subtitle")}
-                />
+                <div className="pb-6 md:pb-12">
+                    <SectionHeader
+                        title={t("contribution_title")}
+                        subtitle={t("contribution_subtitle")}
+                    />
+                </div>
                 <TabBar
                     tabs={projectsTabs}
                     containerClassName="py-4"

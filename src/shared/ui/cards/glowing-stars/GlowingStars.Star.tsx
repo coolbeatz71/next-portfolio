@@ -1,4 +1,3 @@
-import { domAnimation, LazyMotion } from "motion/react";
 import * as m from "motion/react-m";
 import { useTheme } from "next-themes";
 import { memo } from "react";
@@ -27,24 +26,22 @@ function StarComponent({ delay, isGlowing }: StarProps) {
     const baseColor = resolvedTheme === "dark" ? "#666" : "#ccc";
 
     return (
-        <LazyMotion features={domAnimation}>
-            <m.div
-                key={delay}
-                initial={{
-                    scale: 1
-                }}
-                animate={{
-                    scale: isGlowing ? [1, 1.2, 2.5, 2.2, 1.5] : 1,
-                    background: isGlowing ? glowColor : baseColor
-                }}
-                transition={{
-                    duration: 2,
-                    ease: "easeInOut",
-                    delay: delay
-                }}
-                className="size-px rounded-full relative z-20"
-            />
-        </LazyMotion>
+        <m.div
+            key={delay}
+            initial={{
+                scale: 1
+            }}
+            animate={{
+                scale: isGlowing ? [1, 1.2, 2.5, 2.2, 1.5] : 1,
+                background: isGlowing ? glowColor : baseColor
+            }}
+            transition={{
+                duration: 2,
+                ease: "easeInOut",
+                delay: delay
+            }}
+            className="size-px rounded-full relative z-20"
+        />
     );
 }
 

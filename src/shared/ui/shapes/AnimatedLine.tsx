@@ -18,12 +18,7 @@ export function AnimatedLine({ className, pathD }: AnimatedLineProps) {
     return (
         <div className={className} aria-hidden="true">
             <svg viewBox="0 0 100 100" className="w-full h-full">
-                <path
-                    d={pathD}
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                />
+                <path d={pathD} fill="none" stroke="currentColor" strokeWidth="2" />
             </svg>
         </div>
     );

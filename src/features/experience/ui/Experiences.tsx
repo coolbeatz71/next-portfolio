@@ -1,8 +1,7 @@
 import dynamic from "next/dynamic";
-import { useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useMedia } from "react-use";
-import { experienceTimeline } from "@/features/experience/data/experience.data";
+import { useExperienceTimeline } from "@/features/experience/data/experience.data";
 import {
     DESKTOP_DEVICE,
     LAPTOP_DEVICE,
@@ -43,68 +42,86 @@ const TimelineFull = dynamic(async () => {
  *
  * @returns The experiences section element
  */
+const bodyClassName = "text-sm mt-4";
+const headerClassName = "mt-4 text-[9.5pt] xl:text-[10pt] mb-0";
+
+function getDrawerWidth(): string {
+    if (window.matchMedia(XS_MOBILE_DEVICE).matches) return "100vw";
+    if (window.matchMedia(MOBILE_DEVICE).matches) return "100vw";
+    if (window.matchMedia(TABLET_DEVICE).matches) return "70vw";
+    if (window.matchMedia(LAPTOP_DEVICE).matches) return "70vw";
+    if (window.matchMedia(DESKTOP_DEVICE).matches) return "60vw";
+    return "50vw";
+}
+
 export function Experiences() {
     const { t } = useTranslation();
     const [isOpen, setIsOpen] = useState(false);
+    const [drawerWidth, setDrawerWidth] = useState<string>("50vw");
 
-    const isXSMobile = useMedia(XS_MOBILE_DEVICE, false);
-    const isMobile = useMedia(MOBILE_DEVICE, false);
-    const isTablet = useMedia(TABLET_DEVICE, false);
-    const isLaptop = useMedia(LAPTOP_DEVICE, false);
-    const isDesktop = useMedia(DESKTOP_DEVICE, false);
+    const rawPreview = useExperienceTimeline();
+    const rawFull = useExperienceTimeline(headerClassName, bodyClassName);
+    const previewData = useMemo(() => rawPreview.slice(0, 5), [rawPreview]);
 
-    const bodyClassName = "text-sm mt-4";
-    const headerClassName = "mt-4 text-[9.5pt] xl:text-[10pt] mb-0";
+    const drawerHeader = useMemo(
+        () => <h2 className="text-xl font-semibold">{t("work_experience")}</h2>,
+        [t]
+    );
 
-    const toggleDrawer = () => {
-        setIsOpen(!isOpen);
-    };
+    const toggleDrawer = useCallback(() => {
+        setIsOpen((prev) => !prev);
+    }, []);
 
-    const getWidth = (): string => {
-        if (isMobile || isXSMobile) return "100vw";
-        if (isTablet || isLaptop) return "70vw";
-        if (isDesktop) return "60vw";
-        return "50vw";
-    };
+    useEffect(() => {
+        setDrawerWidth(getDrawerWidth());
+
+        const queries = [
+            XS_MOBILE_DEVICE,
+            MOBILE_DEVICE,
+            TABLET_DEVICE,
+            LAPTOP_DEVICE,
+            DESKTOP_DEVICE
+        ].map((q) => {
+            const mq = window.matchMedia(q);
+            const handler = () =>
+                setDrawerWidth((prev) => {
+                    const next = getDrawerWidth();
+                    return next !== prev ? next : prev;
+                });
+            mq.addEventListener("change", handler);
+            return { mq, handler };
+        });
+
+        return () => {
+            queries.forEach(({ mq, handler }) => mq.removeEventListener("change", handler));
+        };
+    }, []);
 
     return (
         <section
             id="experience"
             className={cn(RESPONSIVE_CLASSNAME, "py-12 xl:py-32 scroll-mt-10")}
         >
-            <SectionHeader
-                title={t("experience_title")}
-                subtitle={t("experience_subtitle")}
-            />
+            <div className="pb-6 md:pb-12">
+                <SectionHeader title={t("experience_title")} subtitle={t("experience_subtitle")} />
+            </div>
 
-            <Timeline data={experienceTimeline().slice(0, 5)} />
+            <Timeline data={previewData} />
 
             <div className="flex justify-center w-full">
-                <MovingBorderButton
-                    className="py-3 md:py-4 px-10"
-                    onClick={toggleDrawer}
-                >
+                <MovingBorderButton className="py-3 md:py-4 px-10" onClick={toggleDrawer}>
                     {t("read_more")}
                 </MovingBorderButton>
             </div>
 
             <Drawer
                 isOpen={isOpen}
-                width={getWidth()}
+                width={drawerWidth}
                 onToggle={toggleDrawer}
-                header={
-                    <h2 className="text-xl font-semibold">
-                        {t("work_experience")}
-                    </h2>
-                }
+                header={drawerHeader}
             >
                 <div className="mt-4">
-                    <TimelineFull
-                        data={experienceTimeline(
-                            headerClassName,
-                            bodyClassName
-                        )}
-                    />
+                    <TimelineFull data={rawFull} />
                 </div>
             </Drawer>
         </section>

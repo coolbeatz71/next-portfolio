@@ -20,8 +20,7 @@ import type { LanguageDropdownProps } from "./types";
  * @returns The language dropdown element
  */
 function LanguageDropdownComponent({ placement }: LanguageDropdownProps) {
-    const { ref, isOpen, currentLanguage, toggleDropdown, updateLanguage } =
-        useLanguageDropdown();
+    const { ref, isOpen, currentLanguage, toggleDropdown, updateLanguage } = useLanguageDropdown();
 
     return (
         <div ref={ref} className="relative inline-block text-left">
@@ -38,20 +37,12 @@ function LanguageDropdownComponent({ placement }: LanguageDropdownProps) {
                 <span className="mr-2 h-5 w-5 flex items-center justify-center shrink-0">
                     {currentLanguage.flag}
                 </span>
-                <span className="text-sm font-semibold">
-                    {currentLanguage.code.toUpperCase()}
-                </span>
-                <IconChevronUpDown
-                    className="-mr-1 ml-2 h-4 w-4"
-                    aria-hidden="true"
-                />
+                <span className="text-sm font-semibold">{currentLanguage.code.toUpperCase()}</span>
+                <IconChevronUpDown className="-mr-1 ml-2 h-4 w-4" aria-hidden="true" />
             </button>
 
             {isOpen && (
-                <LanguageDropdownMenu
-                    placement={placement}
-                    updateLanguage={updateLanguage}
-                />
+                <LanguageDropdownMenu placement={placement} updateLanguage={updateLanguage} />
             )}
         </div>
     );

@@ -1,4 +1,4 @@
-import { memo } from "react";
+import { memo, useMemo } from "react";
 import { GridPattern } from "./GridPattern";
 import type { GridPatternBackgroundProps } from "./types";
 
@@ -17,13 +17,17 @@ import type { GridPatternBackgroundProps } from "./types";
  * @returns The grid pattern background element
  */
 function GridPatternBackgroundComponent({ size }: GridPatternBackgroundProps) {
-    const pattern: Array<[number, number]> = Array.from(
-        { length: 10 },
+    const pattern = useMemo<Array<[number, number]>>(
         () =>
-            [
-                Math.floor(Math.random() * 4) + 7,
-                Math.floor(Math.random() * 6) + 1
-            ] as [number, number]
+            Array.from(
+                { length: 10 },
+                () =>
+                    [Math.floor(Math.random() * 4) + 7, Math.floor(Math.random() * 6) + 1] as [
+                        number,
+                        number
+                    ]
+            ),
+        []
     );
 
     return (

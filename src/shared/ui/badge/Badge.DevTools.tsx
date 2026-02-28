@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { cn } from "@/shared/lib/cn";
 import { GlowingStarsCard } from "@/shared/ui/cards/glowing-stars/GlowingStars.Card";
 import type { BadgeDevToolsProps } from "./types";
@@ -17,7 +18,7 @@ import type { BadgeDevToolsProps } from "./types";
  *
  * @returns The dev tools badge element
  */
-export function BadgeDevTools({ iconName, className }: BadgeDevToolsProps) {
+function BadgeDevToolsComponent({ iconName, className }: BadgeDevToolsProps) {
     return (
         <GlowingStarsCard
             className={cn(
@@ -34,3 +35,5 @@ export function BadgeDevTools({ iconName, className }: BadgeDevToolsProps) {
         </GlowingStarsCard>
     );
 }
+
+export const BadgeDevTools = memo(BadgeDevToolsComponent);

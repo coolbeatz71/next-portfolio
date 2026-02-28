@@ -1,3 +1,5 @@
+import type { MouseEvent } from "react";
+import { memo, useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import type { NavigationDropdownMenuProps } from "./types";
 
@@ -17,12 +19,20 @@ import type { NavigationDropdownMenuProps } from "./types";
  *
  * @returns The navigation dropdown menu element
  */
-export function NavigationDropdownMenu({
+function NavigationDropdownMenuComponent({
     tabs,
     onSelect,
     activeTabIndex
 }: NavigationDropdownMenuProps) {
     const { t } = useTranslation();
+
+    const handleClick = useCallback(
+        (e: MouseEvent<HTMLButtonElement>) => {
+            const idx = Number(e.currentTarget.dataset.index);
+            onSelect(idx);
+        },
+        [onSelect]
+    );
 
     return (
         <div
@@ -38,8 +48,9 @@ export function NavigationDropdownMenu({
                             type="button"
                             key={tab.title}
                             role="menuitem"
-                            onClick={() => onSelect(idx)}
-                            className={`rounded-lg flex items-center my-1.5 px-3 py-2 text-sm font-medium 
+                            data-index={idx}
+                            onClick={handleClick}
+                            className={`rounded-lg flex items-center my-1.5 px-3 py-2 text-sm font-medium
                                 ${
                                     isActiveTab
                                         ? "text-typography-on-primary bg-primary-fill"
@@ -55,3 +66,5 @@ export function NavigationDropdownMenu({
         </div>
     );
 }
+
+export const NavigationDropdownMenu = memo(NavigationDropdownMenuComponent);

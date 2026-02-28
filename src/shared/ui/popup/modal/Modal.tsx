@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { type CSSProperties, Fragment } from "react";
 import { createPortal } from "react-dom";
 import { useLockBodyScroll } from "react-use";
 import { cn } from "@/shared/lib/cn";
@@ -6,6 +6,12 @@ import { PopupBackdrop } from "../Popup.Backdrop";
 import { PopupCloseButton } from "../Popup.Close.Button";
 import { PopupHeader } from "../Popup.Header";
 import type { ModalProps } from "./types";
+
+const modalPositionStyle: CSSProperties = {
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)"
+};
 
 /**
  * Modal component.
@@ -25,20 +31,16 @@ import type { ModalProps } from "./types";
  *
  * @returns The modal portal element, or null when closed
  */
-export function Modal({
-    header,
-    isOpen,
-    onToggle,
-    children,
-    className
-}: ModalProps) {
+export function Modal({ header, isOpen, onToggle, children, className }: ModalProps) {
     useLockBodyScroll(isOpen);
 
-    if (!isOpen) return <></>;
+    if (!isOpen || typeof document === "undefined") {
+        return <Fragment></Fragment>;
+    }
 
     return createPortal(
         <Fragment>
-            {isOpen && <PopupBackdrop onClick={onToggle} />}
+            <PopupBackdrop onClick={onToggle} />
 
             <div
                 role="dialog"
@@ -48,17 +50,11 @@ export function Modal({
                     "fixed z-50 w-[96%] md:w-[90%] max-w-xl bg-background rounded-lg shadow-lg duration-slow ease-out transform",
                     className
                 )}
-                style={{
-                    top: "50%",
-                    left: "50%",
-                    transform: "translate(-50%, -50%)"
-                }}
+                style={modalPositionStyle}
             >
                 <div className="px-4 pb-4">
                     <PopupHeader className="py-4">{header}</PopupHeader>
-
                     <PopupCloseButton onClick={onToggle} />
-
                     <div className="pt-4">{children}</div>
                 </div>
             </div>

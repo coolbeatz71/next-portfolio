@@ -1,11 +1,13 @@
 import NextLink from "next/link";
-import { Fragment, memo, useEffect, useState } from "react";
+import { Fragment, memo, useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { navigationList } from "@/shared/config/navigation";
 import { cn } from "@/shared/lib/cn";
 import { getActiveSection } from "@/shared/lib/getActiveSection";
 import { throttle } from "@/shared/lib/throttle";
 import type { NavigationMenuProps } from "./types";
+
+const baseLinkClass = "rounded-lg px-3 py-2 text-sm font-medium duration-moderate";
 
 /**
  * Navigation menu component.
@@ -26,8 +28,10 @@ import type { NavigationMenuProps } from "./types";
 function NavigationMenuComponent({ onClick, className }: NavigationMenuProps) {
     const { t } = useTranslation();
     const [activeLink, setActiveLink] = useState(
-        () => window.location.hash || ""
+        () => (typeof window !== "undefined" ? window.location.hash : "") || ""
     );
+    const onClickRef = useRef(onClick);
+    onClickRef.current = onClick;
 
     useEffect(() => {
         const handleNavigation = throttle(() => {
@@ -53,23 +57,21 @@ function NavigationMenuComponent({ onClick, className }: NavigationMenuProps) {
         <Fragment>
             {navigationList.map(({ label, href }) => {
                 const isCurrent = activeLink === href;
-                const linkClasses = cn(
-                    "rounded-lg px-3 py-2 text-sm font-medium duration-moderate",
-                    isCurrent
-                        ? "bg-primary-fill text-typography-on-primary"
-                        : "text-typography-nav hover:bg-surface-hover",
-                    className
-                );
-
                 return (
                     <NextLink
                         key={label}
                         href={href}
-                        className={linkClasses}
+                        className={cn(
+                            baseLinkClass,
+                            isCurrent
+                                ? "bg-primary-fill text-typography-on-primary"
+                                : "text-typography-nav hover:bg-surface-hover",
+                            className
+                        )}
                         aria-current={isCurrent ? "page" : undefined}
                         onClick={() => {
                             setActiveLink(href);
-                            onClick?.();
+                            onClickRef.current?.();
                         }}
                         suppressHydrationWarning
                     >

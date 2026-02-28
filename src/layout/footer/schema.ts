@@ -10,8 +10,6 @@ import { object, string } from "yup";
  */
 export const schema = object().shape({
     name: string().required("validation.required"),
-    email: string()
-        .email("validation.invalid_email")
-        .required("validation.required"),
+    email: string().email("validation.invalid_email").required("validation.required"),
     message: string().required("validation.required")
 });

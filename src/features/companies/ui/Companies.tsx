@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { useTranslation } from "react-i18next";
 import { companyLogoList } from "@/features/companies/data/companies.data";
 import { RESPONSIVE_CLASSNAME } from "@/shared/config/style";
@@ -17,7 +18,7 @@ import { CompaniesGrid } from "./Companies.Grid";
  *
  * @returns The companies section element
  */
-export function Companies() {
+export const Companies = memo(function Companies() {
     const { t } = useTranslation();
 
     return (
@@ -38,13 +39,10 @@ export function Companies() {
                     </div>
 
                     <div className="flex relative max-w-3xl z-10 py-4">
-                        <CompaniesGrid
-                            items={companyLogoList}
-                            className="w-full"
-                        />
+                        <CompaniesGrid items={companyLogoList} className="w-full" />
                     </div>
                 </div>
             </section>
         </ScrollReveal>
     );
-}
+});

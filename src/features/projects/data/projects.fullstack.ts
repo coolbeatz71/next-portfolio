@@ -5,14 +5,7 @@ export const projectsFullStack: IProjectByStack[] = [
         name: "StorM",
         role: "fullstack_engineer",
         description: "projects_description.storm",
-        stack: [
-            "C#",
-            ".NET",
-            "NextJs",
-            "Chakra-UI",
-            "Typesense",
-            "InstantSearchJs"
-        ],
+        stack: ["C#", ".NET", "NextJs", "Chakra-UI", "Typesense", "InstantSearchJs"],
         images: [
             { alt: "storm-preview", src: "/projects/storm/storm_preview.jpg" },
             {
@@ -51,13 +44,7 @@ export const projectsFullStack: IProjectByStack[] = [
         name: "ServiceNow",
         role: "servicenow_developer",
         description: "projects_description.servicenow",
-        stack: [
-            "Business Rules",
-            "Scheduled Job",
-            "Flow Designer",
-            "GlideScript",
-            "SMTP"
-        ],
+        stack: ["Business Rules", "Scheduled Job", "Flow Designer", "GlideScript", "SMTP"],
         images: [
             {
                 alt: "servicenow-preview",
@@ -95,14 +82,7 @@ export const projectsFullStack: IProjectByStack[] = [
         name: "Code of Africa",
         role: "senior_software_engineer",
         description: "projects_description.codeofafrica",
-        stack: [
-            "ExpressJs",
-            "EJS",
-            "Typescript",
-            "Bootstrap",
-            "Nginx",
-            "Modernizr"
-        ],
+        stack: ["ExpressJs", "EJS", "Typescript", "Bootstrap", "Nginx", "Modernizr"],
         images: [
             {
                 alt: "codeofafrica-preview",
@@ -144,14 +124,7 @@ export const projectsFullStack: IProjectByStack[] = [
         name: "EzyAgric",
         role: "fullstack_engineer_php",
         description: "projects_description.ezyagric",
-        stack: [
-            "Angular",
-            "PHP",
-            "Laravel",
-            "CouchBase",
-            "ChartJS",
-            "Eloquent ORM"
-        ],
+        stack: ["Angular", "PHP", "Laravel", "CouchBase", "ChartJS", "Eloquent ORM"],
         images: [
             {
                 alt: "ezyagric-preview",
@@ -197,14 +170,7 @@ export const projectsFullStack: IProjectByStack[] = [
         name: "Motory",
         role: "lamp_stack_engineer",
         description: "projects_description.motory",
-        stack: [
-            "PHP",
-            "Bootstrap",
-            "jQuery",
-            "MySQL",
-            "ElasticSearch",
-            "Doctrine"
-        ],
+        stack: ["PHP", "Bootstrap", "jQuery", "MySQL", "ElasticSearch", "Doctrine"],
         images: [
             {
                 alt: "motory-preview",
@@ -250,14 +216,7 @@ export const projectsFullStack: IProjectByStack[] = [
         name: "Tembea",
         role: "fullstack_pean_engineer",
         description: "projects_description.tembea",
-        stack: [
-            "Angular",
-            "NodeJs",
-            "ExpressJs",
-            "Slack API",
-            "PostgreSQL",
-            "RxJS"
-        ],
+        stack: ["Angular", "NodeJs", "ExpressJs", "Slack API", "PostgreSQL", "RxJS"],
         images: [
             {
                 alt: "tembea-preview",

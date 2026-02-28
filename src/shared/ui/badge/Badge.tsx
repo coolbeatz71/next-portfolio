@@ -1,10 +1,16 @@
 import { domAnimation, LazyMotion } from "motion/react";
 import * as m from "motion/react-m";
+import { memo } from "react";
 import { useCountUp } from "@/shared/hooks/useCountUp";
 import { cn } from "@/shared/lib/cn";
 import { formatCount } from "@/shared/lib/formatCount";
 import { GridPatternBackground } from "@/shared/ui/background/GridPattern.Background";
 import type { BadgeProps } from "./types";
+
+const badgeVariants = {
+    initial: { scale: 1 },
+    hover: { scale: 1.1 }
+};
 
 /**
  * Animated stat badge component.
@@ -24,13 +30,7 @@ import type { BadgeProps } from "./types";
  *
  * @returns The stat badge element
  */
-export function Badge({
-    icon,
-    badgeText,
-    className,
-    endCountText,
-    endCountNumber
-}: BadgeProps) {
+function BadgeComponent({ icon, badgeText, className, endCountText, endCountNumber }: BadgeProps) {
     const count = useCountUp(endCountNumber, 2000, 1000);
 
     return (
@@ -38,10 +38,7 @@ export function Badge({
             <m.div
                 initial="initial"
                 whileHover="hover"
-                variants={{
-                    initial: { scale: 1 },
-                    hover: { scale: 1.1 }
-                }}
+                variants={badgeVariants}
                 className={cn(
                     `cursor-pointer relative backdrop-blur-sm bg-primary-overlay p-3
                 sm:p-3.5 md:p-4 rounded-lg overflow-hidden z-10 shadow-xl flex justify-around items-center`,
@@ -63,3 +60,5 @@ export function Badge({
         </LazyMotion>
     );
 }
+
+export const Badge = memo(BadgeComponent);

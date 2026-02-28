@@ -1,3 +1,5 @@
+import type { MouseEvent } from "react";
+import { memo, useCallback } from "react";
 import { languageList } from "@/shared/config/languages";
 import type { LanguageDropdownMenuProps } from "./types";
 
@@ -16,17 +18,22 @@ import type { LanguageDropdownMenuProps } from "./types";
  *
  * @returns The language dropdown menu element
  */
-export function LanguageDropdownMenu({
-    placement,
-    updateLanguage
-}: LanguageDropdownMenuProps) {
+function LanguageDropdownMenuComponent({ placement, updateLanguage }: LanguageDropdownMenuProps) {
     const dropdownPlacement = placement === "bottom" ? "top-12" : "bottom-14";
+
+    const handleLanguageClick = useCallback(
+        (e: MouseEvent<HTMLButtonElement>) => {
+            const lang = e.currentTarget.dataset.lang as string;
+            updateLanguage(lang);
+        },
+        [updateLanguage]
+    );
 
     return (
         <div
             id="dropdown"
             className={`
-                z-10 origin-top-right absolute ${dropdownPlacement} 
+                z-10 origin-top-right absolute ${dropdownPlacement}
                 left-0 right-0 px-1 mt-1 w-38 rounded-lg shadow-xl bg-surface-dropdown
             `}
         >
@@ -36,7 +43,8 @@ export function LanguageDropdownMenu({
                         type="button"
                         role="menuitem"
                         key={lang.code}
-                        onClick={() => updateLanguage(lang.code)}
+                        data-lang={lang.code}
+                        onClick={handleLanguageClick}
                         className={`rounded-lg flex items-center px-3 py-2 text-sm text-typography-contact
                             hover:bg-surface-hover hover:duration-slow w-full text-left
                         `}
@@ -51,3 +59,5 @@ export function LanguageDropdownMenu({
         </div>
     );
 }
+
+export const LanguageDropdownMenu = memo(LanguageDropdownMenuComponent);

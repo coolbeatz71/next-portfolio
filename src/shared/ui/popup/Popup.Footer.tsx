@@ -14,9 +14,5 @@ import type { PopupFooterProps } from "./types";
  * @returns The popup footer element
  */
 export function PopupFooter({ children }: PopupFooterProps) {
-    return (
-        <div className="border border-b-0 border-x-0 border-t border-outlined">
-            {children}
-        </div>
-    );
+    return <div className="border border-b-0 border-x-0 border-t border-outlined">{children}</div>;
 }

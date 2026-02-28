@@ -20,10 +20,7 @@ export function getRandomImages(
 
     for (let i = availableImages.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
-        [availableImages[i], availableImages[j]] = [
-            availableImages[j],
-            availableImages[i]
-        ];
+        [availableImages[i], availableImages[j]] = [availableImages[j], availableImages[i]];
     }
 
     result.push(...availableImages.slice(0, count));

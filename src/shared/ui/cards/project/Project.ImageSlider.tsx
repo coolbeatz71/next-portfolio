@@ -1,5 +1,6 @@
 import { AnimatePresence } from "motion/react";
-import { useCallback, useMemo, useState } from "react";
+import type { MouseEvent } from "react";
+import { useCallback, useMemo, useRef, useState } from "react";
 import { useInterval, useMedia } from "react-use";
 import { MOBILE_DEVICE, XS_MOBILE_DEVICE } from "@/shared/config/style";
 import { ProjectImageSliderBackground } from "./Project.ImageSlider.Background";
@@ -22,11 +23,8 @@ import type { ProjectImageSliderProps } from "./types";
  *
  * @returns The project image slider element
  */
-export function ProjectImageSlider({
-    images,
-    imagePlaceholder
-}: ProjectImageSliderProps) {
-    const imageWithoutPreview = images.slice(1);
+export function ProjectImageSlider({ images, imagePlaceholder }: ProjectImageSliderProps) {
+    const imageWithoutPreview = useMemo(() => images.slice(1), [images]);
 
     const [sliderState, setSliderState] = useState({
         isPlaying: true,
@@ -35,8 +33,10 @@ export function ProjectImageSlider({
     const { isPlaying, currentIndex } = sliderState;
 
     const [isZoomed, setIsZoomed] = useState(false);
-    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+    const mousePositionRef = useRef({ x: 0, y: 0 });
     const [isCursorInside, setIsCursorInside] = useState(false);
+    const isZoomedRef = useRef(isZoomed);
+    isZoomedRef.current = isZoomed;
 
     const isMobile = useMedia(MOBILE_DEVICE, false);
     const isXSMobile = useMedia(XS_MOBILE_DEVICE, false);
@@ -50,37 +50,47 @@ export function ProjectImageSlider({
 
     useInterval(() => handleNext(), isPlaying && !isCursorInside ? 5000 : null);
 
-    const togglePlayPause = () => {
+    const togglePlayPause = useCallback(() => {
         setSliderState((state) => ({
             ...state,
             isPlaying: !state.isPlaying
         }));
-    };
+    }, []);
 
-    const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-        const parentDiv = e.currentTarget.querySelector(
-            ".image-slider-container"
-        );
+    const handleMouseMove = useCallback((e: MouseEvent<HTMLDivElement>) => {
+        if (!isZoomedRef.current) return;
+
+        const parentDiv = e.currentTarget.querySelector(".image-slider-container");
         if (!parentDiv) return;
 
         const rect = parentDiv.getBoundingClientRect();
         const x = (e.clientX - rect.left) / rect.width;
         const y = (e.clientY - rect.top) / rect.height;
 
-        setMousePosition({ x, y });
-    };
+        mousePositionRef.current = { x, y };
+    }, []);
 
-    const handleMouseEnter = (index: number) => {
-        if (index === currentIndex) {
-            setIsZoomed(true);
-            setIsCursorInside(true);
+    const currentIndexRef = useRef(currentIndex);
+    currentIndexRef.current = currentIndex;
+
+    const clickHandlersRef = useRef<Record<number, () => void>>({});
+
+    const getClickHandler = useCallback((index: number) => {
+        if (!clickHandlersRef.current[index]) {
+            clickHandlersRef.current[index] = () => {
+                if (index === currentIndexRef.current) {
+                    setIsZoomed(true);
+                    setIsCursorInside(true);
+                }
+            };
         }
-    };
+        return clickHandlersRef.current[index];
+    }, []);
 
-    const handleMouseLeave = () => {
+    const handleMouseLeave = useCallback(() => {
         setIsZoomed(false);
         setIsCursorInside(false);
-    };
+    }, []);
 
     const slideStyles = useMemo(
         () =>
@@ -100,9 +110,7 @@ export function ProjectImageSlider({
 
                 if (position > 0) {
                     for (let i = 0; i < position; i++) {
-                        left +=
-                            Math.max(baseWidth - i * widthReduction, minWidth) +
-                            10;
+                        left += Math.max(baseWidth - i * widthReduction, minWidth) + 10;
                     }
                 }
 
@@ -137,6 +145,8 @@ export function ProjectImageSlider({
                             const style = slideStyles[index];
                             if (style.opacity === 0) return null;
 
+                            const isCurrent = index === currentIndex;
+
                             return (
                                 <ProjectImageSliderSlide
                                     key={img.alt}
@@ -145,10 +155,10 @@ export function ProjectImageSlider({
                                     width={style.width}
                                     left={style.left}
                                     zIndex={style.zIndex}
-                                    isZoomed={isZoomed}
-                                    mousePosition={mousePosition}
-                                    isCurrent={index === currentIndex}
-                                    onClick={() => handleMouseEnter(index)}
+                                    isCurrent={isCurrent}
+                                    isZoomed={isCurrent ? isZoomed : false}
+                                    mousePositionRef={mousePositionRef}
+                                    onClick={getClickHandler(index)}
                                     onMouseLeave={handleMouseLeave}
                                 />
                             );

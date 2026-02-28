@@ -1,6 +1,7 @@
+import { memo, useMemo } from "react";
 import { cn } from "@/shared/lib/cn";
 import { MovingBorder } from "@/shared/ui/buttons/MovingBorder";
-import type { MovingBorderButton } from "./types";
+import type { MovingBorderButton as MovingBorderButtonProps } from "./types";
 
 /**
  * Moving border button component.
@@ -22,7 +23,7 @@ import type { MovingBorderButton } from "./types";
  *
  * @returns The moving border button element
  */
-export function MovingBorderButton({
+function MovingBorderButtonComponent({
     borderRadius = "0.65rem",
     children,
     as: Component = "button",
@@ -31,22 +32,20 @@ export function MovingBorderButton({
     duration,
     className,
     ...otherProps
-}: MovingBorderButton) {
+}: MovingBorderButtonProps) {
+    const containerStyle = useMemo(() => ({ borderRadius }), [borderRadius]);
+    const innerStyle = useMemo(
+        () => ({ borderRadius: `calc(${borderRadius} * 0.96)` }),
+        [borderRadius]
+    );
+
     return (
         <Component
-            className={cn(
-                "bg-transparent relative p-px overflow-hidden",
-                containerClassName
-            )}
-            style={{
-                borderRadius: borderRadius
-            }}
+            className={cn("bg-transparent relative p-px overflow-hidden", containerClassName)}
+            style={containerStyle}
             {...otherProps}
         >
-            <div
-                className="absolute inset-0"
-                style={{ borderRadius: `calc(${borderRadius} * 0.96)` }}
-            >
+            <div className="absolute inset-0" style={innerStyle}>
                 <MovingBorder duration={duration} rx="30%" ry="30%">
                     <div
                         className={cn(
@@ -62,12 +61,12 @@ export function MovingBorderButton({
                     "font-semibold relative bg-surface-elevated border backdrop-blur-xl items-center justify-center w-full h-full text-sm antialiased duration-moderate text-typography-inverse border-outlined hover:bg-surface-raised",
                     className
                 )}
-                style={{
-                    borderRadius: `calc(${borderRadius} * 0.96)`
-                }}
+                style={innerStyle}
             >
                 {children}
             </div>
         </Component>
     );
 }
+
+export const MovingBorderButton = memo(MovingBorderButtonComponent);

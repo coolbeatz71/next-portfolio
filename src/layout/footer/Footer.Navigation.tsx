@@ -1,4 +1,5 @@
 import NextLink from "next/link";
+import { memo } from "react";
 import { useTranslation } from "react-i18next";
 import { IconLink } from "@/shared/config/icons";
 import { navigationList } from "@/shared/config/navigation";
@@ -14,14 +15,12 @@ import { navigationList } from "@/shared/config/navigation";
  *
  * @returns The footer navigation element
  */
-export function FooterNavigation() {
+function FooterNavigationComponent() {
     const { t } = useTranslation();
 
     return (
         <div className="flex flex-col gap-2">
-            <h3 className="w-full text-2xl font-bold text-typography-primary">
-                {t("navigation")}
-            </h3>
+            <h3 className="w-full text-2xl font-bold text-typography-primary">{t("navigation")}</h3>
 
             <div className="flex flex-col gap-2">
                 {navigationList.map((item) => (
@@ -31,10 +30,7 @@ export function FooterNavigation() {
                         className="text-typography-contact hover:text-primary-on-accent hover:underline font-medium"
                     >
                         <span className="flex flex-row justify-start">
-                            <IconLink
-                                className="mt-1 mr-2 shrink-0"
-                                size={16}
-                            />
+                            <IconLink className="mt-1 mr-2 shrink-0" size={16} />
                             {t(item.label)}
                         </span>
                     </NextLink>
@@ -43,3 +39,5 @@ export function FooterNavigation() {
         </div>
     );
 }
+
+export const FooterNavigation = memo(FooterNavigationComponent);

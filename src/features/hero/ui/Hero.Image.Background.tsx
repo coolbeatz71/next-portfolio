@@ -17,12 +17,7 @@ import type { HeroImageBackgroundProps } from "./types";
  */
 export function HeroImageBackground({ className }: HeroImageBackgroundProps) {
     return (
-        <div
-            className={cn(
-                "absolute m-auto flex items-center justify-center my-12",
-                className
-            )}
-        >
+        <div className={cn("absolute m-auto flex items-center justify-center my-12", className)}>
             <svg
                 width={720}
                 height={520}
@@ -32,19 +27,9 @@ export function HeroImageBackground({ className }: HeroImageBackgroundProps) {
                 className="min-w-40 min-h-40"
             >
                 <defs>
-                    <linearGradient
-                        id="gradient"
-                        gradientTransform="rotate(45)"
-                    >
-                        <stop
-                            offset="0%"
-                            stopColor="var(--color-primary-overlay)"
-                        />
-                        <stop
-                            offset="50%"
-                            stopColor="var(--color-glow-shadow)"
-                            stopOpacity="0.3"
-                        />
+                    <linearGradient id="gradient" gradientTransform="rotate(45)">
+                        <stop offset="0%" stopColor="var(--color-primary-overlay)" />
+                        <stop offset="50%" stopColor="var(--color-glow-shadow)" stopOpacity="0.3" />
                         <stop offset="100%" stopColor="var(--color-primary)" />
                     </linearGradient>
                 </defs>

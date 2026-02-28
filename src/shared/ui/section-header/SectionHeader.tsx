@@ -18,20 +18,11 @@ import type { SectionHeaderProps } from "./types";
  *
  * @returns The section header element
  */
-function SectionHeaderComponent({
-    title,
-    subtitle,
-    className
-}: SectionHeaderProps) {
+function SectionHeaderComponent({ title, subtitle, className }: SectionHeaderProps) {
     return (
-        <div className="flex flex-col items-center justify-center pb-6 md:pb-12">
+        <div className="flex flex-col items-center justify-center">
             <DotBackground className="h-20 z-0" />
-            <div
-                className={cn(
-                    "text-start lg:text-center lg:px-32 px-0 z-10",
-                    className
-                )}
-            >
+            <div className={cn("text-start lg:text-center lg:px-32 px-0 z-10", className)}>
                 <h2 className="mb-4 text-3xl xl:text-4xl font-bold leading-relaxed! text-typography-heading">
                     {title}
                 </h2>

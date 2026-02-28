@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, memo, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { RESUME_LINK } from "@/shared/config/resume";
 import { Breadcrumb } from "@/shared/ui/breadcrumb/Breadcrumb";
@@ -17,10 +17,15 @@ import { TypeWriter } from "@/shared/ui/type-writer/TypeWriter";
  *
  * @returns The hero intro section element
  */
-export function HeroIntroSection() {
-    const { t } = useTranslation();
+const techStackSummary = ["FullStack/PREN", "PHP/Laravel", "Dart/Flutter"];
 
-    const techStackSummary = ["FullStack/PREN", "PHP/Laravel", "Dart/Flutter"];
+function HeroIntroSectionComponent() {
+    const { t, i18n } = useTranslation();
+
+    const typeWriterWords = useMemo(
+        () => [t("software_engineer"), t("frontend_engineer"), t("mobile_engineer")],
+        [t, i18n.language]
+    );
 
     return (
         <Fragment>
@@ -32,27 +37,18 @@ export function HeroIntroSection() {
                     {t("i_am", { name: "Jean-Vincent" })}
                 </span>
                 <TypeWriter
-                    words={[
-                        t("software_engineer"),
-                        t("frontend_engineer"),
-                        t("mobile_engineer")
-                    ]}
+                    words={typeWriterWords}
                     className="pl-0 leading-tight! text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-on-accent"
                 />
             </h1>
 
             <Breadcrumb labels={techStackSummary} />
 
-            <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href={RESUME_LINK}
-                title="Download Resume"
-            >
-                <GradientShineButton>
-                    {t("download_resume")}
-                </GradientShineButton>
+            <a target="_blank" href={RESUME_LINK} title="Download Resume" rel="noopener noreferrer">
+                <GradientShineButton>{t("download_resume")}</GradientShineButton>
             </a>
         </Fragment>
     );
 }
+
+export const HeroIntroSection = memo(HeroIntroSectionComponent);

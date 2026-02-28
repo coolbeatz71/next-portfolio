@@ -1,4 +1,5 @@
 import NextLink from "next/link";
+import { memo } from "react";
 import { useTranslation } from "react-i18next";
 import { socialLinksList } from "@/shared/config/social-links";
 
@@ -13,14 +14,12 @@ import { socialLinksList } from "@/shared/config/social-links";
  *
  * @returns The footer social links element
  */
-export function FooterSocialLink() {
+function FooterSocialLinkComponent() {
     const { t } = useTranslation();
 
     return (
         <div className="flex flex-col  items-start gap-2">
-            <h3 className="w-full text-2xl font-bold text-typography-primary">
-                {t("follow_me")}
-            </h3>
+            <h3 className="w-full text-2xl font-bold text-typography-primary">{t("follow_me")}</h3>
 
             <div className="flex w-full gap-2">
                 {socialLinksList.map((social) => (
@@ -42,3 +41,5 @@ export function FooterSocialLink() {
         </div>
     );
 }
+
+export const FooterSocialLink = memo(FooterSocialLinkComponent);

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { cn } from "@/shared/lib/cn";
 import { NavigationDropdown } from "@/shared/ui/dropdown/navigation/Navigation.Dropdown";
 import { TabBarNavigation } from "./TabBar.Navigation";
@@ -21,12 +21,10 @@ import type { TabBarProps } from "./types";
  *
  * @returns The tab bar element
  */
-export function TabBar({
-    tabs,
-    tabBarClassName,
-    containerClassName
-}: TabBarProps) {
+export function TabBar({ tabs, tabBarClassName, containerClassName }: TabBarProps) {
     const [activeTabIndex, setActiveTabIndex] = useState(0);
+
+    const activeContent = useMemo(() => tabs[activeTabIndex].content, [tabs, activeTabIndex]);
 
     return (
         <div className={cn("w-full", containerClassName)}>
@@ -50,7 +48,7 @@ export function TabBar({
                     />
                 </div>
 
-                <div className="w-full">{tabs[activeTabIndex].content}</div>
+                <div className="w-full">{activeContent}</div>
             </div>
         </div>
     );

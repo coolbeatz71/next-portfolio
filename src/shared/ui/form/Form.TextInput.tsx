@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { FormField } from "./Form.Field";
 import type { FormTextInputProps } from "./types";
 
@@ -18,6 +19,8 @@ import type { FormTextInputProps } from "./types";
  *
  * @returns The form text input element
  */
-export function FormTextInput(props: FormTextInputProps) {
+function FormTextInputComponent(props: FormTextInputProps) {
     return <FormField as="input" {...props} />;
 }
+
+export const FormTextInput = memo(FormTextInputComponent);

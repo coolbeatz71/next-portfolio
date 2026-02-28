@@ -17,10 +17,7 @@ import type { LitUpBorderButtonProps } from "./types";
  *
  * @returns The lit-up border button element
  */
-function LitUpBorderButtonComponent({
-    children,
-    className
-}: LitUpBorderButtonProps) {
+function LitUpBorderButtonComponent({ children, className }: LitUpBorderButtonProps) {
     return (
         <button type="button" className={cn("p-1 relative", className)}>
             <div className="absolute inset-0 bg-linear-to-r from-border-gradient-start to-border-gradient-end rounded-lg" />

@@ -16,9 +16,7 @@ export function FooterContact() {
     const { t } = useTranslation();
     return (
         <div className="flex flex-col items-start gap-2">
-            <h3 className="w-full text-2xl font-bold text-typography-primary">
-                {t("address")}
-            </h3>
+            <h3 className="w-full text-2xl font-bold text-typography-primary">{t("address")}</h3>
             <span className="w-full md:w-auto justify-start text-typography-contact flex items-center gap-2">
                 <IconLocation />
                 KN 134 Street, Kigali, Rwanda
