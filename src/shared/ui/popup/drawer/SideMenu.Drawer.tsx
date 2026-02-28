@@ -49,9 +49,7 @@ export function SideMenuDrawer({
 }: SideMenuDrawerProps) {
     useLockBodyScroll(isOpen);
 
-    const translateValue = isOpen
-        ? openTranslate[position]
-        : closedTranslate[position];
+    const translateValue = isOpen ? openTranslate[position] : closedTranslate[position];
 
     return (
         <Fragment>
