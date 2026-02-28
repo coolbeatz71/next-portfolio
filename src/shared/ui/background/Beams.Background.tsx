@@ -62,11 +62,7 @@ function BackgroundBeamComponent() {
                                 <stop stopColor="#18fccb" stopOpacity="0" />
                                 <stop stopColor="#18CCFC" />
                                 <stop offset="32.5%" stopColor="#6344F5" />
-                                <stop
-                                    offset="100%"
-                                    stopColor="#ff00c8"
-                                    stopOpacity="0"
-                                />
+                                <stop offset="100%" stopColor="#ff00c8" stopOpacity="0" />
                             </m.linearGradient>
                         ))}
                         <radialGradient
@@ -77,19 +73,9 @@ function BackgroundBeamComponent() {
                             gradientUnits="userSpaceOnUse"
                             gradientTransform="translate(352 34) rotate(90) scale(555 1560.62)"
                         >
-                            <stop
-                                offset="0.0666667"
-                                stopColor="var(--neutral-300)"
-                            />
-                            <stop
-                                offset="0.243243"
-                                stopColor="var(--neutral-300)"
-                            />
-                            <stop
-                                offset="0.43594"
-                                stopColor="white"
-                                stopOpacity="0"
-                            />
+                            <stop offset="0.0666667" stopColor="var(--neutral-300)" />
+                            <stop offset="0.243243" stopColor="var(--neutral-300)" />
+                            <stop offset="0.43594" stopColor="white" stopOpacity="0" />
                         </radialGradient>
                     </defs>
                 </svg>
