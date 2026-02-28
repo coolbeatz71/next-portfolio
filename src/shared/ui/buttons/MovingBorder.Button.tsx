@@ -41,10 +41,7 @@ function MovingBorderButtonComponent({
 
     return (
         <Component
-            className={cn(
-                "bg-transparent relative p-px overflow-hidden",
-                containerClassName
-            )}
+            className={cn("bg-transparent relative p-px overflow-hidden", containerClassName)}
             style={containerStyle}
             {...otherProps}
         >
