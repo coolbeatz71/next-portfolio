@@ -20,12 +20,7 @@ import type { ProjectImageProps } from "./types";
  *
  * @returns The project card image element
  */
-function ProjectCardImageComponent({
-    src,
-    alt,
-    onClick,
-    blurDataURL
-}: ProjectImageProps) {
+function ProjectCardImageComponent({ src, alt, onClick, blurDataURL }: ProjectImageProps) {
     const handleKeyDown = useCallback(
         (e: React.KeyboardEvent) => {
             if (e.key === "Enter" || e.key === " ") {
