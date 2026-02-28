@@ -46,14 +46,8 @@ function MovingBorderComponent({
         }
     });
 
-    const x = useTransform(
-        progress,
-        (val) => pathRef.current?.getPointAtLength(val).x
-    );
-    const y = useTransform(
-        progress,
-        (val) => pathRef.current?.getPointAtLength(val).y
-    );
+    const x = useTransform(progress, (val) => pathRef.current?.getPointAtLength(val).x);
+    const y = useTransform(progress, (val) => pathRef.current?.getPointAtLength(val).y);
 
     const transform = useMotionTemplate`translateX(${x}px) translateY(${y}px) translateX(-50%) translateY(-50%)`;
 
@@ -68,14 +62,7 @@ function MovingBorderComponent({
                 {...otherProps}
             >
                 <title>button</title>
-                <rect
-                    rx={rx}
-                    ry={ry}
-                    fill="none"
-                    width="100%"
-                    height="100%"
-                    ref={pathRef}
-                />
+                <rect rx={rx} ry={ry} fill="none" width="100%" height="100%" ref={pathRef} />
             </svg>
             <LazyMotion features={domAnimation}>
                 <m.div
