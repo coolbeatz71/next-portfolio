@@ -46,9 +46,7 @@ export function useLanguageDropdown() {
     }, []);
 
     const currentLanguage = useMemo(
-        () =>
-            languageList.find((lang) => lang.code === i18n.language) ||
-            languageList[0],
+        () => languageList.find((lang) => lang.code === i18n.language) || languageList[0],
         [i18n.language]
     );
 
