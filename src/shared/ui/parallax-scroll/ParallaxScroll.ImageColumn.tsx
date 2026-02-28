@@ -33,12 +33,7 @@ const imageClassName = "h-full object-cover object-left-top rounded-lg";
  *
  * @returns The animated image column element
  */
-function ImageColumnComponent({
-    images,
-    translate,
-    columnKey,
-    imageHeight
-}: ImageColumnProps) {
+function ImageColumnComponent({ images, translate, columnKey, imageHeight }: ImageColumnProps) {
     return (
         <LazyMotion features={domAnimation}>
             <div className="grid gap-2 md:gap-4">
