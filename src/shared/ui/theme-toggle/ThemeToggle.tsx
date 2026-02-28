@@ -37,11 +37,7 @@ export function ThemeToggle() {
             onClick={onToggle}
             title="Toggle Theme"
             suppressHydrationWarning
-            aria-label={
-                theme === "dark"
-                    ? "Switch to light mode"
-                    : "Switch to dark mode"
-            }
+            aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
             className={`
                 group relative size-12 sm:size-12 md:size-12 
                 rounded-lg flex justify-center items-center text-sun 
@@ -63,9 +59,7 @@ export function ThemeToggle() {
                         d={moonPath}
                         initial="hidden"
                         variants={shineVariant}
-                        className={
-                            "absolute top-0 left-0 stroke-primary-subtle"
-                        }
+                        className={"absolute top-0 left-0 stroke-primary-subtle"}
                         animate={theme === "dark" ? "visible" : "hidden"}
                     />
 
@@ -77,12 +71,7 @@ export function ThemeToggle() {
                         style={{ strokeLinecap: "round" }}
                     >
                         {sunRayPaths.map((d) => (
-                            <m.path
-                                key={d}
-                                d={d}
-                                variants={rayVariant}
-                                className="origin-center"
-                            />
+                            <m.path key={d} d={d} variants={rayVariant} className="origin-center" />
                         ))}
                     </m.g>
 
@@ -95,9 +84,7 @@ export function ThemeToggle() {
                             fillOpacity: 0,
                             strokeOpacity: 0
                         }}
-                        animate={
-                            theme === "dark" ? moonAnimation : sunAnimation
-                        }
+                        animate={theme === "dark" ? moonAnimation : sunAnimation}
                     />
                 </m.svg>
             </LazyMotion>
