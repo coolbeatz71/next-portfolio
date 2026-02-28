@@ -45,7 +45,11 @@ export default function Document() {
 
                 {/* iOS meta tags & icons */}
                 <meta name="mobile-web-app-capable" content="yes" key="mobile-web-app-capable" />
-                <meta name="apple-mobile-web-app-status-bar-style" content="black" key="status-bar-style" />
+                <meta
+                    name="apple-mobile-web-app-status-bar-style"
+                    content="black"
+                    key="status-bar-style"
+                />
                 <meta name="apple-mobile-web-app-title" content="meet" key="mobile-web-app-title" />
                 <link rel="apple-touch-icon" href="icons/Icon-192.png" key="apple-touch-icon" />
                 <link rel="icon" href="favicon.ico" type="image/x-icon" key="favicon" />
