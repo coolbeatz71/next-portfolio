@@ -1,9 +1,4 @@
-import {
-    domAnimation,
-    LazyMotion,
-    useScroll,
-    useTransform
-} from "motion/react";
+import { domAnimation, LazyMotion, useScroll, useTransform } from "motion/react";
 import * as m from "motion/react-m";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { ITimelineEntry } from "@/features/experience/data/types";
@@ -48,10 +43,7 @@ export const Timeline = ({ data }: { data: ITimelineEntry[] }) => {
         <div className="mx-auto py-4 md:py-0" ref={containerRef}>
             <div ref={ref} className="relative">
                 {data.map((item) => (
-                    <div
-                        key={item.id}
-                        className="flex justify-start mb-6 lg:mb-12"
-                    >
+                    <div key={item.id} className="flex justify-start mb-6 lg:mb-12">
                         <div className="sticky flex flex-col md:flex-row z-10 items-center top-40 self-start max-w-md lg:max-w-lg md:w-1/12 lg:w-4/5 xl:w-full">
                             <div className="absolute md:top-0 lg:top-2 md:w-8 md:h-8 rounded-full bg-surface-timeline hidden md:flex items-center justify-center">
                                 <div className="w-2 h-2 md:h-4 md:w-4 rounded-full bg-background p-1 md:p-2" />
