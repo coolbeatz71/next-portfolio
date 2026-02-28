@@ -22,10 +22,10 @@ function GridPatternBackgroundComponent({ size }: GridPatternBackgroundProps) {
             Array.from(
                 { length: 10 },
                 () =>
-                    [
-                        Math.floor(Math.random() * 4) + 7,
-                        Math.floor(Math.random() * 6) + 1
-                    ] as [number, number]
+                    [Math.floor(Math.random() * 4) + 7, Math.floor(Math.random() * 6) + 1] as [
+                        number,
+                        number
+                    ]
             ),
         []
     );
