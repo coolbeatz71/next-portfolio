@@ -19,10 +19,7 @@ import type { GlowingStarsCardProps } from "./types";
  *
  * @returns The glowing stars card element
  */
-function GlowingStarsCardComponent({
-    className,
-    children
-}: GlowingStarsCardProps) {
+function GlowingStarsCardComponent({ className, children }: GlowingStarsCardProps) {
     const [mouseEnter, setMouseEnter] = useState(false);
 
     const handleMouseEnter = useCallback(() => setMouseEnter(true), []);
@@ -42,9 +39,7 @@ function GlowingStarsCardComponent({
             <div className="absolute inset-0 z-0">
                 <Illustration mouseEnter={mouseEnter} />
             </div>
-            <div className="relative z-10 flex justify-center items-center">
-                {children}
-            </div>
+            <div className="relative z-10 flex justify-center items-center">{children}</div>
         </div>
     );
 }
