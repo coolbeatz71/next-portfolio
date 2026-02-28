@@ -49,9 +49,7 @@ export function Navigation() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    const scrollBackdrop = scrolled
-        ? "bg-surface-nav backdrop-blur-md shadow"
-        : "";
+    const scrollBackdrop = scrolled ? "bg-surface-nav backdrop-blur-md shadow" : "";
 
     return (
         <nav className={`sticky top-0 z-40 duration-fast ${scrollBackdrop}`}>
