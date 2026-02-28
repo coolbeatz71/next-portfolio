@@ -15,10 +15,7 @@ import type { GradientShineButtonProps } from "./types";
  *
  * @returns The gradient shine button element
  */
-export function GradientShineButton({
-    children,
-    className
-}: GradientShineButtonProps) {
+export function GradientShineButton({ children, className }: GradientShineButtonProps) {
     return (
         <button
             type="button"

@@ -1,11 +1,6 @@
-import {
-    domAnimation,
-    LazyMotion,
-    useScroll,
-    useTransform
-} from "motion/react";
+import { domAnimation, LazyMotion, useScroll, useTransform } from "motion/react";
 import * as m from "motion/react-m";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { ITimelineEntry } from "@/features/experience/data/types";
 import { IconGlobe } from "@/shared/config/icons";
 
@@ -42,15 +37,13 @@ export const Timeline = ({ data }: { data: ITimelineEntry[] }) => {
 
     const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
     const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
+    const trackStyle = useMemo(() => ({ height: `${height}px` }), [height]);
 
     return (
         <div className="mx-auto py-4 md:py-0" ref={containerRef}>
             <div ref={ref} className="relative">
                 {data.map((item) => (
-                    <div
-                        key={item.id}
-                        className="flex justify-start mb-6 lg:mb-12"
-                    >
+                    <div key={item.id} className="flex justify-start mb-6 lg:mb-12">
                         <div className="sticky flex flex-col md:flex-row z-10 items-center top-40 self-start max-w-md lg:max-w-lg md:w-1/12 lg:w-4/5 xl:w-full">
                             <div className="absolute md:top-0 lg:top-2 md:w-8 md:h-8 rounded-full bg-surface-timeline hidden md:flex items-center justify-center">
                                 <div className="w-2 h-2 md:h-4 md:w-4 rounded-full bg-background p-1 md:p-2" />
@@ -86,9 +79,7 @@ export const Timeline = ({ data }: { data: ITimelineEntry[] }) => {
                 ))}
                 <LazyMotion features={domAnimation}>
                     <div
-                        style={{
-                            height: `${height}px`
-                        }}
+                        style={trackStyle}
                         className="absolute left-0 md:left-4 top-0 overflow-hidden w-0.5 bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-0% via-timeline-track to-transparent to-99% mask-[linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)]"
                     >
                         <m.div

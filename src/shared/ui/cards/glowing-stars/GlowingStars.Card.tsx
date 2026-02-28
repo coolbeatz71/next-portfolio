@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { memo, useCallback, useState } from "react";
+
 import { cn } from "@/shared/lib/cn";
 import { Illustration } from "./GlowingStar.Illustration";
 import type { GlowingStarsCardProps } from "./types";
+
 /**
  * Glowing stars card component.
  *
@@ -17,20 +19,16 @@ import type { GlowingStarsCardProps } from "./types";
  *
  * @returns The glowing stars card element
  */
-export function GlowingStarsCard({
-    className,
-    children
-}: GlowingStarsCardProps) {
+function GlowingStarsCardComponent({ className, children }: GlowingStarsCardProps) {
     const [mouseEnter, setMouseEnter] = useState(false);
+
+    const handleMouseEnter = useCallback(() => setMouseEnter(true), []);
+    const handleMouseLeave = useCallback(() => setMouseEnter(false), []);
 
     return (
         <div
-            onMouseEnter={() => {
-                setMouseEnter(true);
-            }}
-            onMouseLeave={() => {
-                setMouseEnter(false);
-            }}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
             className={cn(
                 `bg-[linear-gradient(110deg,var(--color-card-gradient-start)_0.5%,var(--color-card-gradient-mid))]
                 max-w-20 max-h-20 h-full w-full rounded-lg
@@ -41,9 +39,9 @@ export function GlowingStarsCard({
             <div className="absolute inset-0 z-0">
                 <Illustration mouseEnter={mouseEnter} />
             </div>
-            <div className="relative z-10 flex justify-center items-center">
-                {children}
-            </div>
+            <div className="relative z-10 flex justify-center items-center">{children}</div>
         </div>
     );
 }
+
+export const GlowingStarsCard = memo(GlowingStarsCardComponent);

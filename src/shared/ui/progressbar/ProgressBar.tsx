@@ -1,6 +1,7 @@
 import { domAnimation, LazyMotion } from "motion/react";
 import * as m from "motion/react-m";
 import NextImage from "next/image";
+import { memo } from "react";
 import { useInView } from "react-intersection-observer";
 import { ISkillsByStack } from "@/features/skills/data/types";
 import { BadgeSpan } from "@/shared/ui/badge/Badge.Span";
@@ -22,14 +23,9 @@ import { BadgeSpan } from "@/shared/ui/badge/Badge.Span";
  *
  * @returns The skill progress bar element
  */
-export function ProgressBar({
-    title,
-    lightImage,
-    darkImage,
-    progress
-}: ISkillsByStack) {
+function ProgressBarComponent({ title, lightImage, darkImage, progress }: ISkillsByStack) {
     const { ref, inView } = useInView({
-        triggerOnce: false,
+        triggerOnce: true,
         threshold: 0.1
     });
 
@@ -72,3 +68,5 @@ export function ProgressBar({
         </section>
     );
 }
+
+export const ProgressBar = memo(ProgressBarComponent);

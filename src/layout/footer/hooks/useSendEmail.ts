@@ -1,6 +1,6 @@
 import emailjs from "@emailjs/browser";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { useRef, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import { useTranslation } from "react-i18next";
@@ -47,7 +47,7 @@ export function useSendEmail() {
         resolver: yupResolver(schema)
     });
 
-    const onSave = async () => {
+    const onSave = useCallback(async () => {
         setIsLoading(true);
         try {
             await emailjs.sendForm(
@@ -63,7 +63,7 @@ export function useSendEmail() {
         } finally {
             setIsLoading(false);
         }
-    };
+    }, [t, form]);
 
     return { form, formRef, isLoading, onSave };
 }

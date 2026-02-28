@@ -1,4 +1,5 @@
 import NextLink from "next/link";
+import { memo } from "react";
 
 /**
  * Logo component.
@@ -10,17 +11,15 @@ import NextLink from "next/link";
  *
  * @returns The logo link element
  */
-export function Logo() {
+function LogoComponent() {
     return (
         <NextLink href="">
             <div className="flex shrink-0 items-center cursor-pointer">
-                <h1 className="text-3xl font-bold text-typography-inverse">
-                    MJV
-                </h1>
-                <span className="text-3xl font-bold text-primary-on-accent">
-                    .
-                </span>
+                <h1 className="text-3xl font-bold text-typography-inverse">MJV</h1>
+                <span className="text-3xl font-bold text-primary-on-accent">.</span>
             </div>
         </NextLink>
     );
 }
+
+export const Logo = memo(LogoComponent);

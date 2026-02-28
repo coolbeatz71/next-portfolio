@@ -40,9 +40,7 @@ export function SideMenuProfile() {
                 />
 
                 <div className="w-full flex flex-col items-start justify-start gap-0">
-                    <span className="text-sm font-semibold">
-                        Mutombo Jean-vincent
-                    </span>
+                    <span className="text-sm font-semibold">Mutombo Jean-vincent</span>
                     <span className="text-meta">
                         <a
                             target="_blank"

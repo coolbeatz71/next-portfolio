@@ -1,5 +1,6 @@
+import { memo, useMemo } from "react";
 import { cn } from "@/shared/lib/cn";
-import type { OutlineButton } from "./types";
+import type { OutlineButton as OutlineButtonProps } from "./types";
 
 /**
  * Outline button component.
@@ -21,7 +22,7 @@ import type { OutlineButton } from "./types";
  *
  * @returns The outline button element
  */
-export function OutlineButton({
+function OutlineButtonComponent({
     borderRadius = "1rem",
     children,
     as: Component = "button",
@@ -30,13 +31,13 @@ export function OutlineButton({
     duration,
     className,
     ...otherProps
-}: OutlineButton) {
+}: OutlineButtonProps) {
+    const buttonStyle = useMemo(() => ({ borderRadius }), [borderRadius]);
+
     return (
         <Component
             type="button"
-            style={{
-                borderRadius: borderRadius
-            }}
+            style={buttonStyle}
             className={cn(
                 "inline-flex animate-outlined items-center justify-center border-4 border-surface-hover px-6 font-medium text-typography-nav focus:outline-none focus:ring-2 focus:ring-focus-surface",
                 className
@@ -47,3 +48,5 @@ export function OutlineButton({
         </Component>
     );
 }
+
+export const OutlineButton = memo(OutlineButtonComponent);

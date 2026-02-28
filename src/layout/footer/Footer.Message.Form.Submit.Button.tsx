@@ -16,9 +16,7 @@ import type { FooterMessageFormSubmitButtonProps } from "./types";
  *
  * @returns The form submit button element
  */
-export function FooterMessageFormSubmitButton({
-    isLoading
-}: FooterMessageFormSubmitButtonProps) {
+export function FooterMessageFormSubmitButton({ isLoading }: FooterMessageFormSubmitButtonProps) {
     const { t } = useTranslation();
 
     return (

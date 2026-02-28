@@ -1,3 +1,4 @@
+import type React from "react";
 import type { ReactNode } from "react";
 import { IImage, IProjectByStack } from "@/features/projects/data/types";
 
@@ -100,7 +101,7 @@ export interface ProjectImageSliderBackgroundProps {
  * @property {number} zIndex - Stack order of the slide
  * @property {boolean} isCurrent - Whether this slide is the active one
  * @property {boolean} isZoomed - Whether the slider is currently in zoomed mode
- * @property {{ x: number; y: number }} mousePosition - Cursor position relative to the slide (0–1)
+ * @property {React.RefObject<{ x: number; y: number }>} mousePositionRef - Ref to cursor position relative to the slide (0–1); only read by the active zoomed slide
  * @property {() => void} onClick - Handler called when the slide is clicked
  * @property {() => void} onMouseLeave - Handler called when the cursor leaves the slide
  */
@@ -112,7 +113,7 @@ export interface ProjectImageSliderSlideProps {
     zIndex: number;
     isCurrent: boolean;
     isZoomed: boolean;
-    mousePosition: { x: number; y: number };
+    mousePositionRef: React.RefObject<{ x: number; y: number }>;
     onClick: () => void;
     onMouseLeave: () => void;
 }

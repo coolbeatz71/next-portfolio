@@ -1,5 +1,5 @@
 import dynamic from "next/dynamic";
-import { Fragment, useState } from "react";
+import { Fragment, memo, useCallback, useState } from "react";
 import { IconMenu } from "@/shared/config/icons";
 
 const SideMenu = dynamic(async () => {
@@ -20,12 +20,12 @@ const SideMenu = dynamic(async () => {
  *
  * @returns The hamburger menu button and side menu drawer
  */
-export function HamburgerMenuButton() {
+function HamburgerMenuButtonComponent() {
     const [isOpen, setIsOpen] = useState(false);
 
-    const toggleDrawer = () => {
-        setIsOpen(!isOpen);
-    };
+    const toggleDrawer = useCallback(() => {
+        setIsOpen((prev) => !prev);
+    }, []);
 
     return (
         <Fragment>
@@ -49,3 +49,5 @@ export function HamburgerMenuButton() {
         </Fragment>
     );
 }
+
+export const HamburgerMenuButton = memo(HamburgerMenuButtonComponent);

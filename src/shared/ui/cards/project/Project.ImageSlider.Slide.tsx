@@ -1,6 +1,7 @@
 import { domAnimation, LazyMotion } from "motion/react";
 import * as m from "motion/react-m";
 import NextImage from "next/image";
+import { memo, useEffect, useRef } from "react";
 import type { ProjectImageSliderSlideProps } from "./types";
 
 /**
@@ -17,7 +18,7 @@ import type { ProjectImageSliderSlideProps } from "./types";
  *
  * @returns The animated slide card element
  */
-export function ProjectImageSliderSlide({
+function ProjectImageSliderSlideComponent({
     src,
     alt,
     width,
@@ -25,10 +26,32 @@ export function ProjectImageSliderSlide({
     zIndex,
     isCurrent,
     isZoomed,
-    mousePosition,
+    mousePositionRef,
     onClick,
     onMouseLeave
 }: ProjectImageSliderSlideProps) {
+    const innerRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const el = innerRef.current;
+        if (!el) return;
+
+        if (!isCurrent || !isZoomed) {
+            el.style.transform = "scale(1) translate(0%, 0%)";
+            return;
+        }
+
+        let rafId: number;
+        const update = () => {
+            const { x, y } = mousePositionRef.current;
+            el.style.transform = `scale(1.5) translate(${(0.5 - x) * 100}%, ${(0.5 - y) * 100}%)`;
+            rafId = requestAnimationFrame(update);
+        };
+        rafId = requestAnimationFrame(update);
+
+        return () => cancelAnimationFrame(rafId);
+    }, [isCurrent, isZoomed, mousePositionRef]);
+
     return (
         <LazyMotion features={domAnimation}>
             <m.div
@@ -46,13 +69,8 @@ export function ProjectImageSliderSlide({
                 onMouseLeave={onMouseLeave}
             >
                 <div
+                    ref={innerRef}
                     className={`relative w-full h-full overflow-hidden ${isCurrent ? "cursor-zoom-in" : "cursor-grab"}`}
-                    style={{
-                        transform:
-                            isCurrent && isZoomed
-                                ? `scale(1.5) translate(${(0.5 - mousePosition.x) * 100}%, ${(0.5 - mousePosition.y) * 100}%)`
-                                : "scale(1) translate(0%, 0%)"
-                    }}
                 >
                     <NextImage
                         fill
@@ -67,3 +85,5 @@ export function ProjectImageSliderSlide({
         </LazyMotion>
     );
 }
+
+export const ProjectImageSliderSlide = memo(ProjectImageSliderSlideComponent);

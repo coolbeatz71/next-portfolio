@@ -15,7 +15,7 @@ const ROTATE_INTERVAL_MS = 5000;
  */
 export function useParallaxScroll(images: IAboutMeImage[]) {
     const { scrollYProgress } = useScroll();
-    const cubicEase = cubicBezier(0.5, 0, 0.2, 1);
+    const cubicEase = useMemo(() => cubicBezier(0.5, 0, 0.2, 1), []);
 
     const smoothScroll = useSpring(scrollYProgress, {
         damping: 30,
@@ -36,30 +36,19 @@ export function useParallaxScroll(images: IAboutMeImage[]) {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setSelectedImages((prevImages) =>
-                getRandomImages(images, IMAGE_COUNT, prevImages)
-            );
+            setSelectedImages((prevImages) => getRandomImages(images, IMAGE_COUNT, prevImages));
         }, ROTATE_INTERVAL_MS);
 
         return () => clearInterval(interval);
     }, [images]);
 
-    const divider = useMemo(
-        () => Math.ceil(selectedImages.length / 2),
-        [selectedImages]
-    );
+    const divider = useMemo(() => Math.ceil(selectedImages.length / 2), [selectedImages]);
 
-    const firstColumn = useMemo(
-        () => selectedImages.slice(0, divider),
-        [selectedImages, divider]
-    );
+    const firstColumn = useMemo(() => selectedImages.slice(0, divider), [selectedImages, divider]);
 
-    const secondColumn = useMemo(
-        () => selectedImages.slice(divider),
-        [selectedImages, divider]
-    );
+    const secondColumn = useMemo(() => selectedImages.slice(divider), [selectedImages, divider]);
 
-    const imageHeight = GRID_HEIGHT / divider;
+    const imageHeight = useMemo(() => GRID_HEIGHT / divider, [divider]);
 
     return {
         firstColumn,

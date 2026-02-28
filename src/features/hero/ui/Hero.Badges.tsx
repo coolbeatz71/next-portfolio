@@ -1,4 +1,5 @@
 import dynamic from "next/dynamic";
+import { memo } from "react";
 import { useTranslation } from "react-i18next";
 import { creditBadgeList } from "@/shared/config/credit-badge";
 import { devToolsLogoList } from "@/shared/config/dev-tools";
@@ -23,7 +24,7 @@ const Badge = dynamic(async () => {
  *
  * @returns The hero badges overlay element
  */
-export function HeroBadges() {
+function HeroBadgesComponent() {
     const { t } = useTranslation();
 
     return (
@@ -41,17 +42,13 @@ export function HeroBadges() {
             </div>
             <div className="grid grid-cols-2 h-48 place-items-center gap-2 md:gap-4">
                 {devToolsLogoList.map((badge) => (
-                    <div
-                        key={badge.iconName}
-                        className={badge.containerClassName}
-                    >
-                        <BadgeDevTools
-                            iconName={badge.iconName}
-                            className={badge.className}
-                        />
+                    <div key={badge.iconName} className={badge.containerClassName}>
+                        <BadgeDevTools iconName={badge.iconName} className={badge.className} />
                     </div>
                 ))}
             </div>
         </div>
     );
 }
+
+export const HeroBadges = memo(HeroBadgesComponent);

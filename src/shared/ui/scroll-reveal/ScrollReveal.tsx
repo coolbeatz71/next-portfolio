@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { useScrollReveal } from "@/shared/hooks/useScrollReveal";
 import { cn } from "@/shared/lib/cn";
 import type { ScrollRevealProps } from "./types";
@@ -18,28 +19,26 @@ import type { ScrollRevealProps } from "./types";
  *
  * @returns The scroll reveal wrapper element
  */
-export function ScrollReveal({
-    children,
-    className,
-    direction = "up"
-}: ScrollRevealProps) {
-    const { ref, isVisible } = useScrollReveal();
+const directionClasses: Record<string, string> = {
+    up: "translate-y-20",
+    down: "-translate-y-20",
+    left: "translate-x-20",
+    right: "-translate-x-20"
+};
 
-    const directionClasses = {
-        up: "translate-y-20",
-        down: "-translate-y-20",
-        left: "translate-x-20",
-        right: "-translate-x-20"
-    };
+function ScrollRevealComponent({ children, className, direction = "up" }: ScrollRevealProps) {
+    const { ref, isVisible } = useScrollReveal();
+    const visibilityClass = isVisible
+        ? "opacity-100 transform-none"
+        : `opacity-0 ${directionClasses[direction]}`;
 
     return (
         <div ref={ref} className="relative overflow-hidden">
             <div
                 className={cn(
                     className,
-                    `duration-slow ease-in-out will-change-transform
-                    ${isVisible ? "opacity-100 transform-none" : `opacity-0 ${directionClasses[direction]}`}
-                    `
+                    "duration-slow ease-in-out will-change-transform",
+                    visibilityClass
                 )}
             >
                 {children}
@@ -47,3 +46,5 @@ export function ScrollReveal({
         </div>
     );
 }
+
+export const ScrollReveal = memo(ScrollRevealComponent);

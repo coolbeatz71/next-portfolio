@@ -1,6 +1,5 @@
 import dynamic from "next/dynamic";
-import { useEffect, useState } from "react";
-import { useWindowScroll } from "react-use";
+import { useEffect, useRef, useState } from "react";
 import { NavigationMenu } from "@/layout/navigation/Navigation.Menu";
 import { RESPONSIVE_CLASSNAME } from "@/shared/config/style";
 import { HamburgerMenuButton } from "@/shared/ui/hamburger-menu/HamburgerMenu.Button";
@@ -34,15 +33,23 @@ const LanguageDropdown = dynamic(async () => {
  * @returns The navigation bar element
  */
 export function Navigation() {
-    const { y } = useWindowScroll();
-    const [scrollY, setScrollY] = useState(0);
-
-    const scrollBackdrop =
-        scrollY > 20 ? "bg-surface-nav backdrop-blur-md shadow" : "";
+    const [scrolled, setScrolled] = useState(false);
+    const scrolledRef = useRef(false);
 
     useEffect(() => {
-        setScrollY(y);
-    }, [y]);
+        const handleScroll = () => {
+            const isScrolled = window.scrollY > 20;
+            if (isScrolled !== scrolledRef.current) {
+                scrolledRef.current = isScrolled;
+                setScrolled(isScrolled);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll, { passive: true });
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    const scrollBackdrop = scrolled ? "bg-surface-nav backdrop-blur-md shadow" : "";
 
     return (
         <nav className={`sticky top-0 z-40 duration-fast ${scrollBackdrop}`}>

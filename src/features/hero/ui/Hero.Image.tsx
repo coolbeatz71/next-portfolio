@@ -15,9 +15,9 @@ import { HeroImageBackground } from "./Hero.Image.Background";
  *
  * @returns The hero image element with animated decorations
  */
-export function HeroImage() {
-    const pathD = "M10,50 Q30,40 50,50 T120,50";
+const pathD = "M10,50 Q30,40 50,50 T120,50";
 
+export function HeroImage() {
     return (
         <div className="relative flex justify-center w-full h-full">
             <HeroImageBackground className="w-full h-[60%] z-0 opacity-80" />

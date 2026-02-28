@@ -56,9 +56,7 @@ export function ProjectModal({ project }: ProjectModalProps) {
             </div>
 
             <div className="flex flex-col gap-4 mt-4">
-                <p className="text-sm text-typography-subtle">
-                    {t(project.description)}
-                </p>
+                <p className="text-sm text-typography-subtle">{t(project.description)}</p>
 
                 <p className="text-sm text-typography-subtle">
                     <span className="font-semibold">Role: </span>
@@ -66,9 +64,7 @@ export function ProjectModal({ project }: ProjectModalProps) {
                 </p>
             </div>
 
-            <div
-                className={`flex flex-wrap gap-1 pt-4 ${hasLinks ? "pb-8" : ""}`}
-            >
+            <div className={`flex flex-wrap gap-1 pt-4 ${hasLinks ? "pb-8" : ""}`}>
                 {project.stack.map((tech) => (
                     <BadgeSpan key={tech} text={tech} />
                 ))}

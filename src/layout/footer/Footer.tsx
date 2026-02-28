@@ -21,10 +21,7 @@ import { FooterSocialLink } from "./Footer.SocialLink";
  */
 export function Footer() {
     return (
-        <footer
-            id="contact"
-            className="bg-surface-footer relative scroll-mt-24"
-        >
+        <footer id="contact" className="bg-surface-footer relative scroll-mt-24">
             <div className={cn(RESPONSIVE_CLASSNAME, "relative bottom-0")}>
                 <ScrollReveal className="delay-300">
                     <div className="grid grid-cols-1 lg:grid-cols-2 items-start py-12 lg:py-24 xl:py-26 2xl:py-40 gap-6 lg:gap-12">

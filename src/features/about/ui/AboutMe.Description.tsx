@@ -1,14 +1,9 @@
-import { Fragment } from "react";
+import { Fragment, memo } from "react";
 import { useTranslation } from "react-i18next";
 import type { HighlightProps } from "./types";
 
 function Highlight({ children }: HighlightProps) {
-    return (
-        <span className="text-typography-inverse font-semibold">
-            {" "}
-            {children}
-        </span>
-    );
+    return <span className="text-typography-inverse font-semibold"> {children}</span>;
 }
 
 /**
@@ -22,9 +17,10 @@ function Highlight({ children }: HighlightProps) {
  *
  * @returns The about me description element
  */
-export function AboutMeDescription() {
+const textStyle = "text-typography-subtle leading-loose!";
+
+export const AboutMeDescription = memo(function AboutMeDescription() {
     const { t } = useTranslation();
-    const textStyle = "text-typography-subtle leading-loose!";
 
     return (
         <Fragment>
@@ -41,23 +37,18 @@ export function AboutMeDescription() {
 
             <p className={`text-start ${textStyle} mb-4`}>
                 {t("about_myself_content", { name: "Jean-Vincent" })}
-                <Highlight>JavaScript</Highlight>,
-                <Highlight>HTML/CSS</Highlight>,<Highlight>PHP</Highlight>,
-                <Highlight>C#</Highlight>, {t("about_myself_content_2")}
+                <Highlight>JavaScript</Highlight>,<Highlight>HTML/CSS</Highlight>,
+                <Highlight>PHP</Highlight>,<Highlight>C#</Highlight>, {t("about_myself_content_2")}
                 <Highlight>ReactJS</Highlight>,<Highlight>NodeJS</Highlight>,
-                <Highlight>Typescript</Highlight>,<Highlight>Angular</Highlight>
-                ,<Highlight>Laravel</Highlight>,<Highlight>.NET</Highlight>,{" "}
-                {t("and")} <Highlight>Dart/Flutter </Highlight>
+                <Highlight>Typescript</Highlight>,<Highlight>Angular</Highlight>,
+                <Highlight>Laravel</Highlight>,<Highlight>.NET</Highlight>, {t("and")}{" "}
+                <Highlight>Dart/Flutter </Highlight>
                 {t("about_myself_content_3")}
             </p>
 
-            <p className={`text-start ${textStyle} mb-4`}>
-                {t("about_myself_content_4")}
-            </p>
+            <p className={`text-start ${textStyle} mb-4`}>{t("about_myself_content_4")}</p>
 
-            <p className={`text-start ${textStyle}`}>
-                {t("about_myself_content_5")}
-            </p>
+            <p className={`text-start ${textStyle}`}>{t("about_myself_content_5")}</p>
         </Fragment>
     );
-}
+});

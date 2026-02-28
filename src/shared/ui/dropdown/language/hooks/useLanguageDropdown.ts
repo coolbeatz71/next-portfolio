@@ -17,8 +17,8 @@ import { isServer } from "@/shared/lib/isServer";
  * @returns ref, isOpen, currentLanguage, toggleDropdown, updateLanguage
  */
 export function useLanguageDropdown() {
-    const ref = useRef<HTMLDivElement>(null);
     const { i18n } = useTranslation();
+    const ref = useRef<HTMLDivElement>(null);
     const [isOpen, setIsOpen] = useState(false);
 
     useClickAway(ref, () => setIsOpen(false));
@@ -32,23 +32,21 @@ export function useLanguageDropdown() {
         if (savedLanguage && savedLanguage !== i18n.language) {
             i18n.changeLanguage(savedLanguage);
         }
-    }, [i18n]);
+    }, [i18n.language]);
 
-    const updateLanguage = useCallback(
-        (lang: string) => {
-            if (lang === i18n.language) return;
-            dayjs.locale(lang);
-            locales.changeLanguage(lang);
-            if (!isServer) localStorage.setItem(USER_LANG, lang);
-            setIsOpen(false);
-        },
-        [i18n.language]
-    );
+    const i18nRef = useRef(i18n);
+    i18nRef.current = i18n;
+
+    const updateLanguage = useCallback((lang: string) => {
+        if (lang === i18nRef.current.language) return;
+        dayjs.locale(lang);
+        locales.changeLanguage(lang);
+        if (!isServer) localStorage.setItem(USER_LANG, lang);
+        setIsOpen(false);
+    }, []);
 
     const currentLanguage = useMemo(
-        () =>
-            languageList.find((lang) => lang.code === i18n.language) ||
-            languageList[0],
+        () => languageList.find((lang) => lang.code === i18n.language) || languageList[0],
         [i18n.language]
     );
 

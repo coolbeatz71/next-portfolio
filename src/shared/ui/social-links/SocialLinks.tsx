@@ -1,5 +1,5 @@
 import NextLink from "next/link";
-import { Fragment } from "react";
+import { Fragment, memo } from "react";
 import { socialLinksList } from "@/shared/config/social-links";
 import { OutlineButton } from "@/shared/ui/buttons/Outline.Button";
 
@@ -14,7 +14,7 @@ import { OutlineButton } from "@/shared/ui/buttons/Outline.Button";
  *
  * @returns The social links element
  */
-export function SocialLinks() {
+function SocialLinksComponent() {
     return (
         <Fragment>
             {socialLinksList.slice(0, 3).map((social) => (
@@ -36,3 +36,5 @@ export function SocialLinks() {
         </Fragment>
     );
 }
+
+export const SocialLinks = memo(SocialLinksComponent);

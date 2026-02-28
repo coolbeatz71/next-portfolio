@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { cn } from "@/shared/lib/cn";
 import type { HoverableCardProps } from "./types";
 
@@ -16,7 +17,7 @@ import type { HoverableCardProps } from "./types";
  *
  * @returns The hoverable card element
  */
-export function HoverableCard({ icon }: HoverableCardProps) {
+function HoverableCardComponent({ icon }: HoverableCardProps) {
     return (
         <div className="relative group block p-3 md:p-2 lg:p-3.5 h-20 w-full border border-outlined rounded-lg cursor-pointer">
             <div
@@ -28,3 +29,5 @@ export function HoverableCard({ icon }: HoverableCardProps) {
         </div>
     );
 }
+
+export const HoverableCard = memo(HoverableCardComponent);

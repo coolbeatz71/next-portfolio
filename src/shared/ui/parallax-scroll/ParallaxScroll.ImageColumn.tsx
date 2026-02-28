@@ -5,6 +5,17 @@ import { memo } from "react";
 import { cn } from "@/shared/lib/cn";
 import type { ImageColumnProps } from "./types";
 
+const gradientOverlayClassName =
+    "absolute inset-0 h-full w-full bg-linear-to-r from-parallax-gradient-start to-parallax-gradient-end transform scale-[0.75] rounded-full blur-2xl";
+
+const imageContainerClassName = cn(
+    "h-[14rem] md:h-[20rem] lg:h-[16rem] 2xl:h-[22rem]",
+    "relative shadow-xl bg-parallax-overlay border border-parallax-border",
+    "p-1 overflow-hidden rounded-lg flex flex-col justify-end items-start"
+);
+
+const imageClassName = "h-full object-cover object-left-top rounded-lg";
+
 /**
  * Parallax scroll image column component.
  *
@@ -22,29 +33,11 @@ import type { ImageColumnProps } from "./types";
  *
  * @returns The animated image column element
  */
-function ImageColumnComponent({
-    images,
-    translate,
-    columnKey,
-    imageHeight
-}: ImageColumnProps) {
-    const gradientOverlayClassName = `
-    absolute inset-0 h-full w-full bg-linear-to-r 
-    from-parallax-gradient-start to-parallax-gradient-end 
-    transform scale-[0.75] rounded-full blur-2xl`;
-
-    const imageContainerClassName = cn(
-        "h-[14rem] md:h-[20rem] lg:h-[16rem] 2xl:h-[22rem]",
-        "relative shadow-xl bg-parallax-overlay border border-parallax-border",
-        "p-1 overflow-hidden rounded-lg flex flex-col justify-end items-start"
-    );
-
-    const imageClassName = "h-full object-cover object-left-top rounded-lg";
-
+function ImageColumnComponent({ images, translate, columnKey, imageHeight }: ImageColumnProps) {
     return (
-        <div className="grid gap-2 md:gap-4">
-            {images.map((img) => (
-                <LazyMotion features={domAnimation}>
+        <LazyMotion features={domAnimation}>
+            <div className="grid gap-2 md:gap-4">
+                {images.map((img) => (
                     <m.div
                         className="relative"
                         initial={{ opacity: 0 }}
@@ -68,9 +61,9 @@ function ImageColumnComponent({
                             />
                         </div>
                     </m.div>
-                </LazyMotion>
-            ))}
-        </div>
+                ))}
+            </div>
+        </LazyMotion>
     );
 }
 
