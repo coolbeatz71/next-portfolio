@@ -20,11 +20,7 @@ import type { IllustrationProps } from "./types";
  *
  * @returns The glowing stars illustration element
  */
-function IllustrationComponent({
-    mouseEnter,
-    stars = 16,
-    columns = 4
-}: IllustrationProps) {
+function IllustrationComponent({ mouseEnter, stars = 16, columns = 4 }: IllustrationProps) {
     const highlightedStars = useRef<number[]>([]);
     const [glowingStars, setGlowingStars] = useState<number[]>([]);
 
@@ -35,11 +31,7 @@ function IllustrationComponent({
             );
             setGlowingStars((prev) => {
                 const next = highlightedStars.current;
-                if (
-                    prev.length === next.length &&
-                    prev.every((v, i) => v === next[i])
-                )
-                    return prev;
+                if (prev.length === next.length && prev.every((v, i) => v === next[i])) return prev;
                 return [...next];
             });
         }, 3000);
@@ -75,11 +67,7 @@ function IllustrationComponent({
                             />
                             {mouseEnter && <Glow delay={staticDelay} />}
                             <AnimatePresence mode="wait">
-                                {isGlowing && (
-                                    <Glow
-                                        delay={mouseEnter ? staticDelay : delay}
-                                    />
-                                )}
+                                {isGlowing && <Glow delay={mouseEnter ? staticDelay : delay} />}
                             </AnimatePresence>
                         </div>
                     );
