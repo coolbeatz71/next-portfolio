@@ -20,13 +20,8 @@ import type { ParallaxScrollProps } from "./types";
  * @returns The parallax scroll image grid element
  */
 export function ParallaxScroll({ images, className }: ParallaxScrollProps) {
-    const {
-        firstColumn,
-        secondColumn,
-        imageHeight,
-        translateFirst,
-        translateSecond
-    } = useParallaxScroll(images);
+    const { firstColumn, secondColumn, imageHeight, translateFirst, translateSecond } =
+        useParallaxScroll(images);
 
     return (
         <div className={cn("w-full pt-12", className)}>
