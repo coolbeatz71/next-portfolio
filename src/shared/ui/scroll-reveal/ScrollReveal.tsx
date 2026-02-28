@@ -26,11 +26,7 @@ const directionClasses: Record<string, string> = {
     right: "-translate-x-20"
 };
 
-function ScrollRevealComponent({
-    children,
-    className,
-    direction = "up"
-}: ScrollRevealProps) {
+function ScrollRevealComponent({ children, className, direction = "up" }: ScrollRevealProps) {
     const { ref, isVisible } = useScrollReveal();
     const visibilityClass = isVisible
         ? "opacity-100 transform-none"
