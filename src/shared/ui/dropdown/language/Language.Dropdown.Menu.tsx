@@ -18,10 +18,7 @@ import type { LanguageDropdownMenuProps } from "./types";
  *
  * @returns The language dropdown menu element
  */
-function LanguageDropdownMenuComponent({
-    placement,
-    updateLanguage
-}: LanguageDropdownMenuProps) {
+function LanguageDropdownMenuComponent({ placement, updateLanguage }: LanguageDropdownMenuProps) {
     const dropdownPlacement = placement === "bottom" ? "top-12" : "bottom-14";
 
     const handleLanguageClick = useCallback(
