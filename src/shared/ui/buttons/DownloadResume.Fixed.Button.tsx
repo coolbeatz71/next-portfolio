@@ -14,8 +14,7 @@ export function DownloadResumeFixedButton() {
     useEffect(() => {
         const heroElement = document.getElementById("hero");
         if (heroElement) {
-            heroBottomRef.current =
-                heroElement.offsetTop + heroElement.offsetHeight;
+            heroBottomRef.current = heroElement.offsetTop + heroElement.offsetHeight;
         }
     }, []);
 
