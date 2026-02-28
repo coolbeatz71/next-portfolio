@@ -23,12 +23,7 @@ import { BadgeSpan } from "@/shared/ui/badge/Badge.Span";
  *
  * @returns The skill progress bar element
  */
-function ProgressBarComponent({
-    title,
-    lightImage,
-    darkImage,
-    progress
-}: ISkillsByStack) {
+function ProgressBarComponent({ title, lightImage, darkImage, progress }: ISkillsByStack) {
     const { ref, inView } = useInView({
         triggerOnce: true,
         threshold: 0.1
