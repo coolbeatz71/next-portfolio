@@ -38,13 +38,7 @@ type FormFieldProps = {
  *
  * @returns The form field element with label and optional error message
  */
-export function FormField({
-    name,
-    label,
-    className,
-    as = "input",
-    ...rest
-}: FormFieldProps) {
+export function FormField({ name, label, className, as = "input", ...rest }: FormFieldProps) {
     const { t } = useTranslation();
     const {
         register,
@@ -66,17 +60,12 @@ export function FormField({
         ...rest
     };
 
-    const textAreaProps =
-        commonProps as TextareaHTMLAttributes<HTMLTextAreaElement>;
+    const textAreaProps = commonProps as TextareaHTMLAttributes<HTMLTextAreaElement>;
     const inputProps = commonProps as InputHTMLAttributes<HTMLInputElement>;
 
     return (
         <div className="relative">
-            {as === "textarea" ? (
-                <textarea {...textAreaProps} />
-            ) : (
-                <input {...inputProps} />
-            )}
+            {as === "textarea" ? <textarea {...textAreaProps} /> : <input {...inputProps} />}
             <label
                 htmlFor={name}
                 className={cn(
@@ -87,9 +76,7 @@ export function FormField({
                 {label}
             </label>
             {isError && (
-                <p className={`${ERROR_CLASSNAME} text-sm my-1`}>
-                    {t(errorMessage, { label })}
-                </p>
+                <p className={`${ERROR_CLASSNAME} text-sm my-1`}>{t(errorMessage, { label })}</p>
             )}
         </div>
     );
