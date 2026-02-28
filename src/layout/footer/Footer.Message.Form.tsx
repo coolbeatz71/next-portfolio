@@ -35,11 +35,7 @@ export function FooterMessageForm() {
                     className="pt-6 px-1 w-full flex flex-col gap-3"
                 >
                     <FormTextInput type="text" label={t("name")} name="name" />
-                    <FormTextInput
-                        type="email"
-                        label={t("email")}
-                        name="email"
-                    />
+                    <FormTextInput type="email" label={t("email")} name="email" />
                     <FormTextArea label={t("message")} name="message" />
                     <FooterMessageFormSubmitButton isLoading={isLoading} />
                 </form>
