@@ -23,10 +23,7 @@ import type { ProjectImageSliderProps } from "./types";
  *
  * @returns The project image slider element
  */
-export function ProjectImageSlider({
-    images,
-    imagePlaceholder
-}: ProjectImageSliderProps) {
+export function ProjectImageSlider({ images, imagePlaceholder }: ProjectImageSliderProps) {
     const imageWithoutPreview = useMemo(() => images.slice(1), [images]);
 
     const [sliderState, setSliderState] = useState({
@@ -63,9 +60,7 @@ export function ProjectImageSlider({
     const handleMouseMove = useCallback((e: MouseEvent<HTMLDivElement>) => {
         if (!isZoomedRef.current) return;
 
-        const parentDiv = e.currentTarget.querySelector(
-            ".image-slider-container"
-        );
+        const parentDiv = e.currentTarget.querySelector(".image-slider-container");
         if (!parentDiv) return;
 
         const rect = parentDiv.getBoundingClientRect();
@@ -115,9 +110,7 @@ export function ProjectImageSlider({
 
                 if (position > 0) {
                     for (let i = 0; i < position; i++) {
-                        left +=
-                            Math.max(baseWidth - i * widthReduction, minWidth) +
-                            10;
+                        left += Math.max(baseWidth - i * widthReduction, minWidth) + 10;
                     }
                 }
 
