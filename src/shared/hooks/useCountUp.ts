@@ -12,11 +12,7 @@ import { useEffect, useRef, useState } from "react";
  * @param {number} [delay=0] - Delay before starting in milliseconds
  * @returns {number} The current animated value
  */
-export function useCountUp(
-    end: number,
-    duration: number = 2000,
-    delay: number = 0
-): number {
+export function useCountUp(end: number, duration: number = 2000, delay: number = 0): number {
     const [value, setValue] = useState(0);
     const ref = useRef<number>(null);
 
