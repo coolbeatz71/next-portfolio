@@ -19,9 +19,7 @@ function FooterSocialLinkComponent() {
 
     return (
         <div className="flex flex-col  items-start gap-2">
-            <h3 className="w-full text-2xl font-bold text-typography-primary">
-                {t("follow_me")}
-            </h3>
+            <h3 className="w-full text-2xl font-bold text-typography-primary">{t("follow_me")}</h3>
 
             <div className="flex w-full gap-2">
                 {socialLinksList.map((social) => (
