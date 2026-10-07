@@ -1,4 +1,5 @@
 import { IconClose } from "@/shared/config/icons";
+import { cn } from "@/shared/lib/cn";
 import type { PopupCloseButtonProps } from "./types";
 
 /**
@@ -12,17 +13,21 @@ import type { PopupCloseButtonProps } from "./types";
  *
  * @param {PopupCloseButtonProps} props - Component props
  * @param {() => void} props.onClick - Handler called when the close button is clicked
+ * @param {string} [props.className] - Additional class names, used to align the button with the popup padding
  *
  * @returns The close button element
  */
-export function PopupCloseButton({ onClick }: PopupCloseButtonProps) {
+export function PopupCloseButton({ onClick, className }: PopupCloseButtonProps) {
     return (
         <button
             type="button"
             title="Close"
             aria-label="Close"
             onClick={onClick}
-            className="absolute top-5 right-4 text-typography-contact hover:text-danger transition-colors z-50"
+            className={cn(
+                "absolute top-5 right-4 text-typography-contact hover:text-danger transition-colors z-50",
+                className
+            )}
         >
             <IconClose size={24} aria-hidden="true" />
         </button>
