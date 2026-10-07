@@ -29,7 +29,9 @@ export interface BadgeDevToolsProps {
 /**
  * @interface BadgeSpanProps
  * @property {string} text - The label text to display inside the badge
+ * @property {"primary" | "danger"} [variant] - Colour variant; defaults to "primary"
  */
 export interface BadgeSpanProps {
     text: string;
+    variant?: "primary" | "danger";
 }
