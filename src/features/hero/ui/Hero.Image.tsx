@@ -20,12 +20,13 @@ const pathD = "M10,50 Q30,40 50,50 T120,50";
 export function HeroImage() {
     return (
         <div className="relative flex justify-center w-full h-full">
-            <HeroImageBackground className="w-full h-[60%] z-0 opacity-80" />
+            <HeroImageBackground className="w-full h-[60%] z-0 opacity-10" />
 
             <div className="relative w-88 h-128 lg:w-[24rem] lg:h-144 -top-8 z-10">
                 <NextImage
                     fill
                     priority
+                    unoptimized
                     alt="profile"
                     src="/hero/me.webp"
                     sizes="(max-width: 768px) 90vw, (max-width: 1024px) 45vw, 384px"
