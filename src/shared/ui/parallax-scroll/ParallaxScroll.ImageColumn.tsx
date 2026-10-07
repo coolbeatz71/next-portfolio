@@ -49,6 +49,7 @@ function ImageColumnComponent({ images, translate, columnKey, imageHeight }: Ima
                         <div className={gradientOverlayClassName} />
                         <div className={imageContainerClassName}>
                             <NextImage
+                                unoptimized
                                 width={480}
                                 src={img.src}
                                 alt={img.alt}
