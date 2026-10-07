@@ -18,11 +18,11 @@ import { TwitterCardTags } from "@/shared/ui/seo/TwitterCard.Tags";
  */
 export default function Document() {
     return (
-        <Html lang="en" suppressHydrationWarning>
+        <Html lang="en" suppressHydrationWarning data-scroll-behavior="smooth">
             <Head>
                 {process.env.NODE_ENV === "development" && (
                     <Script
-                        src="//unpkg.com/react-scan/dist/auto.global.js"
+                        src="//unpkg.com/react-scan@0.5.3/dist/auto.global.js"
                         crossOrigin="anonymous"
                         strategy="beforeInteractive"
                     />
