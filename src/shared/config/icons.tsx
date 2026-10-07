@@ -7,7 +7,10 @@ export {
     FaYoutube as IconYoutube
 } from "react-icons/fa";
 export {
+    FaArrowLeftLong as IconArrowLeftLong,
     FaArrowUpRightFromSquare as IconArrowUpRight,
+    FaChevronLeft as IconChevronLeft,
+    FaChevronRight as IconChevronRight,
     FaCodeBranch as IconCodeBranch,
     FaLocationDot as IconLocation,
     FaMedium as IconMedium
