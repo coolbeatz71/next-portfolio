@@ -2,10 +2,107 @@ import { IProjectByStack } from "./types";
 
 export const projectsMobile: IProjectByStack[] = [
     {
+        name: "116 Mobile",
+        role: "flutter_engineer",
+        description: "projects_description.centseizemobile",
+        caseStudy: "projects_case_study.centseizemobile",
+        stack: [
+            "Flutter",
+            "Dart",
+            "Clean Architecture",
+            "Flutter Bloc",
+            "Provider",
+            "GetIt",
+            "Chopper",
+            "Freezed",
+            "FpDart",
+            "Hive",
+            "go_router",
+            "Slang",
+            "Android",
+            "iOS"
+        ],
+        images: [
+            {
+                alt: "centseizemobile-preview",
+                src: "/no_preview.webp"
+            }
+        ],
+        blurURL:
+            "data:image/webp;base64,UklGRiYAAABXRUJQVlA4IBoAAAAwAQCdASoMAAwAA4BaJaQAA3AA/vIBJVqAAA==",
+        sourceCodeLink: "https://github.com/116media/116-mobile",
+        hasLiveLink: false,
+        hasSourceCode: true,
+        hasPreviewImage: false
+    },
+    {
+        name: "SAVE",
+        role: "mobile_engineer",
+        description: "projects_description.save",
+        caseStudy: "projects_case_study.save",
+        stack: [
+            "React Native",
+            "Expo",
+            "TypeScript",
+            "React Query",
+            "Jotai",
+            "React Native Biometrics",
+            "React Native Testing Library",
+            "React Native Clarity",
+            "Fastlane",
+            "Android",
+            "iOS"
+        ],
+        images: [
+            {
+                alt: "save-preview",
+                src: "/projects/saveapp/saveapp_preview.png"
+            },
+            {
+                alt: "save-home",
+                src: "/projects/saveapp/saveapp_home.png"
+            },
+            {
+                alt: "save-group-infos",
+                src: "/projects/saveapp/saveapp_groupinfos.png"
+            },
+            {
+                alt: "save-loans",
+                src: "/projects/saveapp/saveapp_loans.png"
+            },
+            {
+                alt: "save-pay-bill",
+                src: "/projects/saveapp/saveapp_paybill.png"
+            },
+            {
+                alt: "save-dark-mode",
+                src: "/projects/saveapp/saveapp_darkmode.png"
+            }
+        ],
+        blurURL:
+            "data:image/webp;base64,UklGRr4DAABXRUJQVlA4WAoAAAAQAAAAOwAAIQAAQUxQSJ4BAAAFkENtm2k7M1u3su8tbdu2bXaOu5TpbFS2Vdm2q6S0k+pgZtY68/8Ts4oIR27bBhILeOY0cGZ3s38gv+2jYVyJUkSIr6z4U1zj3BmVE9of2HSMBYc6qbw3nj5XlXGLt4Qso39+yOUdj7xvCVCPtu/TGZqDH25guqypH2nUOC7TtpdroKEt5TEVLqk30avTRg92gXrCfH70RCFyrqI2xEGBXU0bEJJ1TeMu6dcFpPd6r3YaoNP7zPWlTsA4OXbNS0hOY+L9dobkXAUyruEYCFhsB/QPBStKUJyaccGTAdacV1s4duWLBgMXovhUsAw7PfOCO4p5rzb973dq5kWFl5ux7KsIg0y1paV2wDo164KSA6J5rvjCvuoNWeQAtI95SytQHJt9yYMD5txn21GIzBsuhHi0+4BOxLllbAGObN88BwVr79Lrazjmr+s3CNhJb/d9BHPivUp0NmOZQw7JjRf5TyjcgFSEXgpkEjNnLpdDfuF5hmJ3+6aZcHe/ug1qwuFSAmAJx623OkGc5MtHMQ6lXFVGCEWtH/m3xsnv/xBWUDgg+gEAADALAJ0BKjwAIgA+3WSpUCilI6KoFVxxEBuJZQDTCT0J/vR+ywW/rbd+8rW6Hu5jTZTDon63qmM202+Tp/2U7UtID6xCfD8MmZUcGrPfycNX8byh0zzLqElRyXRh00+yaL5AAP7pihVkOPE+qTwu84f4Hdog+kvxeBcxO3DoTUHtXG2aK3ZNGVbvXcol5BeoV9Pq/cM1TMCMemxNrYOkfAY8Gg4b2tKENsLCOq2ylehUbTJ5g4QTOWkjTh1yLXyS25Irx4863EZB3f+SGiDyPHYMybnmlWGHmwF4Sx42hyiUMwT1f6Oc/DMklHsJm1v3cqyJ1Vg0zAgKzcmeOJjA0/SYqOxSTkQ7+Reu5my02Zy7uwP78WKgb17A8IyLYU2rsVLSXu7HeLT8vWZuFZqO92/G53oAZBux/XMCtxOPkH+W1UO2jeTYoyX2LYHk/sL5BwHz65WOfc74zYHfvlV6+tTj7HMROdZU+nXGw2KuobXag3v58u6FNl6QZ99m9+FB7EFzDf8KwoZRNihO97WtUIjK5SkQOni456ZwRJ4sEeHAqRQVtQ/Bhk/WzrlG2kz9ykH7LCRTCtA3zw3GClHa2tWKfqrzgiLRBTD9uQU7MmIaSkGFz0sm6gMdYSWByM+NT07SLYTcFp72XnOBCGsy5GRKRsnL7gXQgAAA",
+        liveLink: "https://getsave.io/",
+        hasLiveLink: true,
+        hasSourceCode: false,
+        hasPreviewImage: true
+    },
+    {
         name: "Film Fan",
         role: "flutter_engineer",
         description: "projects_description.filmfan",
-        stack: ["Flutter", "Dart", "SQLite", "Bloc", "Android Studio", "Dio"],
+        caseStudy: "projects_case_study.filmfan",
+        stack: [
+            "Flutter",
+            "Dart",
+            "SQLite",
+            "Bloc",
+            "Android Studio",
+            "Dio",
+            "TMDB API",
+            "Clean Architecture",
+            "GetIt",
+            "CachedNetworkImage"
+        ],
         images: [
             {
                 alt: "filmfan-preview",
@@ -31,7 +128,24 @@ export const projectsMobile: IProjectByStack[] = [
         name: "Click Mart",
         role: "ionic_mobile_engineer",
         description: "projects_description.clickmart",
-        stack: ["Ionic 2", "Angular", "PouchDB", "MongoDB", "Android SDK", "Capacitor"],
+        caseStudy: "projects_case_study.clickmart",
+        stack: [
+            "Ionic 3",
+            "Angular",
+            "PouchDB",
+            "MongoDB",
+            "Android SDK",
+            "Capacitor",
+            "PHP/Laravel",
+            "RxJS",
+            "SQLite",
+            "Adobe XD",
+            "RESTful API",
+            "MVC",
+            "Gradle",
+            "Java",
+            "Android Studio"
+        ],
         images: [
             {
                 alt: "clickmart-preview",
@@ -60,7 +174,19 @@ export const projectsMobile: IProjectByStack[] = [
         name: "Task Manager",
         role: "flutter_engineer",
         description: "projects_description.taskmanager",
-        stack: ["Flutter", "Dart", "Bloc", "Provider", "Firestore", "Firebase Cloud Messaging"],
+        caseStudy: "projects_case_study.taskmanager",
+        stack: [
+            "Flutter",
+            "Dart",
+            "Bloc",
+            "Provider",
+            "Firestore",
+            "Firebase Cloud Messaging",
+            "SQLite",
+            "Secure Storage",
+            "GetIt",
+            "CachedNetworkImage"
+        ],
         images: [
             {
                 alt: "taskmanager-preview",

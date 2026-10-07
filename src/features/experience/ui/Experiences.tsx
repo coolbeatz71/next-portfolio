@@ -15,21 +15,27 @@ import { MovingBorderButton } from "@/shared/ui/buttons/MovingBorder.Button";
 import { SectionHeader } from "@/shared/ui/section-header/SectionHeader";
 import { Timeline } from "@/shared/ui/timeline/Timeline";
 
-const Drawer = dynamic(async () => {
-    const mod = await import(
-        /* webpackChunkName: "Drawer" */
-        "@/shared/ui/popup/drawer/Drawer"
-    );
-    return mod.Drawer;
-});
+const Drawer = dynamic(
+    async () => {
+        const mod = await import(
+            /* webpackChunkName: "Drawer" */
+            "@/shared/ui/popup/drawer/Drawer"
+        );
+        return mod.Drawer;
+    },
+    { ssr: false }
+);
 
-const TimelineFull = dynamic(async () => {
-    const mod = await import(
-        /* webpackChunkName: "TimelineFull" */
-        "@/shared/ui/timeline/Timeline.Full"
-    );
-    return mod.TimelineFull;
-});
+const TimelineFull = dynamic(
+    async () => {
+        const mod = await import(
+            /* webpackChunkName: "TimelineFull" */
+            "@/shared/ui/timeline/Timeline.Full"
+        );
+        return mod.TimelineFull;
+    },
+    { ssr: false }
+);
 
 /**
  * Experiences section component.

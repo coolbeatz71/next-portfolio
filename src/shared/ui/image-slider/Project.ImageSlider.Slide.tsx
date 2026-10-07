@@ -26,6 +26,7 @@ function ProjectImageSliderSlideComponent({
     zIndex,
     isCurrent,
     isZoomed,
+    zoomScale,
     mousePositionRef,
     onClick,
     onMouseLeave
@@ -44,29 +45,29 @@ function ProjectImageSliderSlideComponent({
         let rafId: number;
         const update = () => {
             const { x, y } = mousePositionRef.current;
-            el.style.transform = `scale(1.5) translate(${(0.5 - x) * 100}%, ${(0.5 - y) * 100}%)`;
+            el.style.transform = `scale(${zoomScale}) translate(${(0.5 - x) * 100}%, ${(0.5 - y) * 100}%)`;
             rafId = requestAnimationFrame(update);
         };
         rafId = requestAnimationFrame(update);
 
         return () => cancelAnimationFrame(rafId);
-    }, [isCurrent, isZoomed, mousePositionRef]);
+    }, [isCurrent, isZoomed, zoomScale, mousePositionRef]);
 
     return (
         <LazyMotion features={domAnimation}>
             <m.div
                 key={alt}
                 initial={false}
+                onClick={onClick}
                 animate={{
-                    width: isCurrent && isZoomed ? "100%" : width,
+                    zIndex,
                     height: "100%",
                     left: isCurrent && isZoomed ? 0 : left,
-                    zIndex
+                    width: isCurrent && isZoomed ? "100%" : width
                 }}
+                onMouseLeave={onMouseLeave}
                 transition={{ duration: 0.2, ease: "easeInOut" }}
                 className="absolute top-0 overflow-hidden"
-                onClick={onClick}
-                onMouseLeave={onMouseLeave}
             >
                 <div
                     ref={innerRef}
@@ -76,8 +77,9 @@ function ProjectImageSliderSlideComponent({
                         fill
                         src={src}
                         alt={alt}
+                        unoptimized
                         priority={isCurrent}
-                        className="object-contain"
+                        className="object-contain aspect-5/4"
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                 </div>

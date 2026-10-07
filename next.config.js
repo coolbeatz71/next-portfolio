@@ -1,27 +1,22 @@
 import bundleAnalyzer from "@next/bundle-analyzer";
 
 const withBundleAnalyzer = bundleAnalyzer({
-    enabled:
-        process.env.BUNDLE_ANALYZE === "browser" ||
-        process.env.BUNDLE_ANALYZE === "server",
+    enabled: process.env.BUNDLE_ANALYZE === "browser" || process.env.BUNDLE_ANALYZE === "server",
     openAnalyzer: true
 });
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     reactStrictMode: true,
-    experimental: {
-        esmExternals: false
+    turbopack: {
+        root: import.meta.dirname
     },
-    swcMinify: true,
     compiler: {
         styledComponents: true
     },
     images: {
-        formats: ["image/avif", "image/webp"]
-    },
-    eslint: {
-        ignoreDuringBuilds: true
+        formats: ["image/avif", "image/webp"],
+        qualities: [1, 55, 75, 90]
     },
     typescript: {
         ignoreBuildErrors: true

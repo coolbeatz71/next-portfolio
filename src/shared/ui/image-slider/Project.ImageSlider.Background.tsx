@@ -36,10 +36,10 @@ export function ProjectImageSliderBackground({
             />
             <NextImage
                 fill
-                loading="lazy"
-                placeholder="blur"
                 src={src}
                 alt={alt}
+                loading="lazy"
+                placeholder="blur"
                 blurDataURL={imagePlaceholder}
                 className={`object-cover transition-all ${roundedClass}`}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

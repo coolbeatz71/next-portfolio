@@ -2,10 +2,140 @@ import { IProjectByStack } from "./types";
 
 export const projectsFrontend: IProjectByStack[] = [
     {
+        name: "116 Web",
+        role: "senior_frontend_engineer",
+        description: "projects_description.centseizeweb",
+        caseStudy: "projects_case_study.centseizeweb",
+        stack: [
+            "Next.js",
+            "React",
+            "TypeScript",
+            "Clean Architecture",
+            "TailwindCSS",
+            "Radix UI",
+            "React Query",
+            "Awilix",
+            "Zod",
+            "i18next",
+            "Biome",
+            "Storybook",
+            "React Testing Library",
+            "Playwright"
+        ],
+        images: [
+            {
+                alt: "116-web-preview",
+                src: "/projects/116web/116web_preview.jpg"
+            },
+            {
+                alt: "116-web-home",
+                src: "/projects/116web/116_home.jpg"
+            },
+            {
+                alt: "116-web-news-menu",
+                src: "/projects/116web/116_news_menu.jpg"
+            },
+            {
+                alt: "116-web-article",
+                src: "/projects/116web/116_article.jpg"
+            },
+            {
+                alt: "116-web-explore-videos",
+                src: "/projects/116web/116_explore_videos.jpg"
+            },
+            {
+                alt: "116-web-video-player",
+                src: "/projects/116web/116_video_player.jpg"
+            },
+            {
+                alt: "116-web-reels-episodes",
+                src: "/projects/116web/116_reels_episodes.jpg"
+            },
+            {
+                alt: "116-web-login",
+                src: "/projects/116web/116_login.jpg"
+            }
+        ],
+        blurURL:
+            "data:image/webp;base64,UklGRm4CAABXRUJQVlA4IGICAABwDACdASo8ACQAPt1Yp0yopSOiMBVdURAbiWQAsv+cP6snAcxTRqi55wSvWyWsNeg9oBna6C8lbSEo3SObHDTUBdkoLDehHNu/nwVae8Af4efNh03PthrJ/92eq5orxort7a++0CO7i6HLhQAA/tkjn+x9s80Vu4Zj/XiDr8DQwbL/U3m5yWKiMjwTWU+SMEhpUeq2Qlfr7uMWQevnc9OrrVvxrZwMt7xnJLw0nKI5aNb2qS+Hq9ICTgx0RvBoDsmJh7X5BM6rebZlsF23MHPueDjntuBxwzYbDOleMyBqqM/UYbpOjBKSprEpa4dXDNl1OTIXZDkZQ9h2NQ7bs5xf9auxXNjSz2HK1WcYFqDfn8aEgC3lIRvLrkkcsOBpkXCMDVF6oLC50TcOXFf4vH7ui+HBTUHtv8QO2HowETeMUx0C+Z7fPzdxmGHhHhvrU2IEIRUSUv+C7QiN6UPc/01CMEyFgFWRQPAcU2rd7unQ/IuV9h1BMWrsXFiSJNB3ulvN/2xny8301EJRRGE32GAefxTuXjyj4XsaIA96e/HquMAzWlaUIi8hz4iLlZGaNAzUnTvbsqKOVpCDS1M5okXXl8+iD6D2daDkA4PaZ54lnpjDCvl+KQgy5xLt/BcTRsJFGb6MWMFdPQGh5842UUIH+8F2srf4BiL7k6VjptJBJmUYPiDux3+Ooomwe/LdOAh/bQJtqDqiiwvSnXsV/0t9LUC7ctXQGgvTaEqW5K34Q960UHaj7GnrSBgssRjcCBh343QccUjOva67OpVTY+1i5ihgfPpWMcW7EApNPCZ+yAAA",
+        sourceCodeLink: "https://github.com/116media/116-frontend",
+        hasLiveLink: false,
+        hasSourceCode: true,
+        hasPreviewImage: true
+    },
+    {
+        name: "SAVE Dashboard",
+        role: "senior_frontend_engineer",
+        description: "projects_description.savedashboard",
+        caseStudy: "projects_case_study.savedashboard",
+        stack: [
+            "React",
+            "TypeScript",
+            "Redux",
+            "Feature Sliced Design",
+            "Semantic UI React",
+            "shadcn/ui",
+            "TailwindCSS",
+            "Recharts",
+            "D3.js",
+            "TestCafe Testing Library"
+        ],
+        images: [
+            {
+                alt: "save-dashboard-preview",
+                src: "/projects/savedashboard/savedashboard_preview.jpg"
+            },
+            {
+                alt: "save-dashboard-organization-wallets",
+                src: "/projects/savedashboard/savedashboard_org_wallets.png"
+            },
+            {
+                alt: "save-dashboard-saving-groups",
+                src: "/projects/savedashboard/savedashboard_savinggroups.png"
+            },
+            {
+                alt: "save-dashboard-group-wallet",
+                src: "/projects/savedashboard/savedashboard_group_wallet.png"
+            },
+            {
+                alt: "save-dashboard-user-details",
+                src: "/projects/savedashboard/savedashboard_user_details.png"
+            },
+            {
+                alt: "save-dashboard-micro-loans",
+                src: "/projects/savedashboard/savedashboard_loans.png"
+            }
+        ],
+        blurURL:
+            "data:image/webp;base64,UklGRuQBAABXRUJQVlA4INgBAADwCQCdASo8ACQAPt1eqE8opKOiKrgMARAbiWIAxiV8yJ1czku5EnGGzYYRGDJINsvRWHZnls2cUHntvAJ64dgdBRZIm16oiLDBjN2VjBX85nl31AWZiLCAAP7ZV7ePVTMnyP+WMiD0jjvr7vzvbhYxeLK8Ewb0cio0/VLNYLFGaMDMSxscMOIwDLVy3YsPMFKNhH+mywf9EVZabLEz5Ax+5r/s/7P+YWcZmHTMBjQ+r244OPvsE5eKOYO3Uq8HTjiLyd8eaDpXxqMfWU3a8W+Fr3xw3gP+Byp7sioBJqSEu65G18foqj6aD5rxyW+2pqMGTZM8WIPy6PmR2+HJI642X7xarjGq2lpHa1KPQdcxKCU/cvfRjjubL+wnrkyntlymk1bu6zv1XadW6CMZ2N1kKw91w78A0sqFI3fDc4lP/HzNBlG3jAHweKhWAtX34gJQHFTADKvEbNdxmjXpGnr9sAyURTfjNIUvnVCgXURW1js9QBxGi5P2G2xkm4JDkDMhXGetCtLAnPnqdi+PnPw2jNoPPhTTp60BfhYdiBdzdu4ZzrdcqkrApa3yaFpudz6FwM8cAU3aQTBYcqBrOQobGBXallydEKHI0MfTtWxtCMulpAmvfSAA",
+        hasLiveLink: false,
+        hasSourceCode: false,
+        hasPreviewImage: true
+    },
+    {
         name: "SavePlus",
         role: "frontend_engineer",
         description: "projects_description.saveplus",
-        stack: ["ReactJs", "NextJs", "Typescript", "AntDesign", "Redux", "ExpressJs"],
+        caseStudy: "projects_case_study.saveplus",
+        stack: [
+            "ReactJs",
+            "NextJs",
+            "Typescript",
+            "AntDesign",
+            "Redux",
+            "ExpressJs",
+            "KendoUI-Chart",
+            "SCSS",
+            "i18n",
+            "l10n",
+            "GraphQL",
+            "Styled-Component",
+            "NodeJS",
+            "Redux Toolkit",
+            "Jotai",
+            "Zod",
+            "Cypress"
+        ],
         images: [
             {
                 alt: "saveplus-preview",
@@ -51,7 +181,33 @@ export const projectsFrontend: IProjectByStack[] = [
         name: "Reconstruction",
         role: "frontend_engineer",
         description: "projects_description.reconstruction",
-        stack: ["ReactJs", "Typescript", "CoreUI", "AWS lambda", "GraphQL", "Hasura"],
+        caseStudy: "projects_case_study.reconstruction",
+        stack: [
+            "ReactJs",
+            "Typescript",
+            "CoreUI",
+            "AWS lambda",
+            "GraphQL",
+            "Hasura",
+            "NextJS",
+            "REST",
+            "CSS3",
+            "HTML5",
+            "Storybook",
+            "Cypress",
+            "Jest",
+            "React Testing Library",
+            "CI/CD",
+            "Thinkific API",
+            "Mailchimp",
+            "Serverless",
+            "TanStack Query",
+            "Apollo",
+            "SCSS",
+            ".NET",
+            "C#",
+            "MassTransit"
+        ],
         images: [
             {
                 alt: "reconstruction-preview",
@@ -93,7 +249,25 @@ export const projectsFrontend: IProjectByStack[] = [
         name: "Alfatier",
         role: "senior_frontend_engineer",
         description: "projects_description.alfatier",
-        stack: ["ReactJs", "NextJs", "Typescript", "Material-UI", "Firebase", "Hubspot"],
+        caseStudy: "projects_case_study.alfatier",
+        stack: [
+            "ReactJs",
+            "NextJs",
+            "Typescript",
+            "Material-UI",
+            "Firebase",
+            "Hubspot",
+            "Jest",
+            "Redux Toolkit",
+            "SASS",
+            "Styled-Component",
+            "React Hook Form",
+            "Cypress",
+            "NewRelic",
+            "LogRocket",
+            "Kafka",
+            "Web Components"
+        ],
         images: [
             {
                 alt: "alfatier-preview",
@@ -135,7 +309,18 @@ export const projectsFrontend: IProjectByStack[] = [
         name: "Meet v1",
         role: "flutter_web_engineer",
         description: "projects_description.meet",
-        stack: ["Flutter Web", "Riverpod", "Dart", "Flutter Hooks", "Seo"],
+        caseStudy: "projects_case_study.meet",
+        stack: [
+            "Flutter Web",
+            "Riverpod",
+            "Dart",
+            "Flutter Hooks",
+            "Seo",
+            "GitHub Pages",
+            "responsive_framework",
+            "animated_splash_screen",
+            "flutter_native_splash"
+        ],
         images: [
             {
                 alt: "meet-preview",
@@ -155,7 +340,7 @@ export const projectsFrontend: IProjectByStack[] = [
             },
             {
                 alt: "meet-projects",
-                src: "/projects/meet/meet_projects_description.png"
+                src: "/projects/meet/meet_projects.png"
             },
             {
                 alt: "meet-skills",

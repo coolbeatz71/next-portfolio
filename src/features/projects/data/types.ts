@@ -29,6 +29,7 @@ export interface IImage {
  * @property {string} name - Project display name
  * @property {string} role - Role played in the project (e.g. "Lead Developer")
  * @property {string} description - Short summary of the project
+ * @property {string} caseStudy - Base i18n key of the project case study (context, challenge, ownership, outcome)
  * @property {string[]} stack - List of technologies used
  * @property {IImage[]} images - Screenshots or preview images for the project
  * @property {string} blurURL - Base64 blur placeholder shown while images load
@@ -42,6 +43,7 @@ export interface IProjectByStack {
     name: string;
     role: string;
     description: string;
+    caseStudy: string;
     stack: string[];
     images: IImage[];
     blurURL: string;
