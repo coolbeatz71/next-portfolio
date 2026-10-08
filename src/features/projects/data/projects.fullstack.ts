@@ -2,10 +2,136 @@ import { IProjectByStack } from "./types";
 
 export const projectsFullStack: IProjectByStack[] = [
     {
+        name: "116 API",
+        role: "senior_software_engineer",
+        description: "projects_description.centseizeapi",
+        caseStudy: "projects_case_study.centseizeapi",
+        stack: [
+            ".NET 9",
+            "ASP.NET Core",
+            "Modular Monolith",
+            "CQRS",
+            "Carter",
+            "Entity Framework Core",
+            "PostgreSQL",
+            "Redis",
+            "Quartz",
+            "Cloudinary",
+            "OpenTelemetry",
+            "xUnit",
+            "Testcontainers",
+            "Scrutor",
+            "FluentValidation",
+            "NetArchTest",
+            "Respawn",
+            "OpenAPI",
+            "Docker"
+        ],
+        images: [
+            {
+                alt: "centseizeapi-preview",
+                src: "/no_preview.webp"
+            }
+        ],
+        blurURL:
+            "data:image/webp;base64,UklGRiYAAABXRUJQVlA4IBoAAAAwAQCdASoMAAwAA4BaJaQAA3AA/vIBJVqAAA==",
+        sourceCodeLink: "https://github.com/116media/116-backend",
+        hasLiveLink: false,
+        hasSourceCode: true,
+        hasPreviewImage: false
+    },
+    {
+        name: "116 Dashboard",
+        role: "senior_software_engineer",
+        description: "projects_description.centseizedashboard",
+        caseStudy: "projects_case_study.centseizedashboard",
+        stack: [
+            "React",
+            "TypeScript",
+            "Vite",
+            "Clean Architecture",
+            "Ant Design",
+            "Redux Toolkit",
+            "React Router",
+            "TipTap",
+            "Awilix",
+            "Axios",
+            "Biome",
+            "React Testing Library",
+            "Plyr",
+            "Redux Persist",
+            "antd-img-crop",
+            "OpenAPI"
+        ],
+        images: [
+            {
+                alt: "116-dashboard-preview",
+                src: "/projects/116dashboard/116dashboard_preview.jpg"
+            },
+            {
+                alt: "116-dashboard-categories",
+                src: "/projects/116dashboard/116dashboard_categories.png"
+            },
+            {
+                alt: "116-dashboard-category-modal",
+                src: "/projects/116dashboard/116dashboard_category_modal.png"
+            },
+            {
+                alt: "116-dashboard-article",
+                src: "/projects/116dashboard/116dashboard_article.jpg"
+            },
+            {
+                alt: "116-dashboard-videos",
+                src: "/projects/116dashboard/116dashboard_videos.png"
+            },
+            {
+                alt: "116-dashboard-video-details",
+                src: "/projects/116dashboard/116dashboard_video_details.png"
+            },
+            {
+                alt: "116-dashboard-packages",
+                src: "/projects/116dashboard/116dashboard_packages.png"
+            },
+            {
+                alt: "116-dashboard-login",
+                src: "/projects/116dashboard/116dashboard_login.png"
+            }
+        ],
+        blurURL:
+            "data:image/webp;base64,UklGRqgBAABXRUJQVlA4IJwBAAAQCQCdASo8ACQAPt1msFEopSSipXgKaRAbiWMA0Q9vk2Yd7kd0Rb/4vm4d8GSpy6JyCNLJEhOUyeAzG/lTeoxe7+HxVBUMMBbsGPHJgzHUKAAA/ujsxn6nQtXZHjRwA/9ymCe2Y90rwWIE3Avl9kzJd/BjEf4HEf68tdtpCth74pj+T+G6+wnhrBbFBlL20BIH+511ChthhEkzEfWh9nu05piC0WQAnzK8o1QiYXedLMgWlxQ7XQkWKAAaLbJhdogAQ8TXMd6q3HUXqyijgi3havmF+3j3QsaeGiBg0Ho/VBKQj5HvuOoZTHyO7NWahYneYi94PuVYSAIduDOj0pIV1WCJ99gsDqxx7l0Zpr+6KeQKFTO/OLEgsbXE8MKL1d3HHeXS3eteM2093hudJJKhH3snB+gQHJFRGLVc4UrvcVSBUYTen10SJmr7qGWg+HwYOSG3nY5pyGzKgO3xtPq55be1YS09Swx0Jv5Ex8GwFk94tXoX/V7/OS3uyU+TiPp0gkmSyRNUxjKWHVcH/bF1g2z9yv4kVPilAAAA",
+        sourceCodeLink: "https://github.com/116media/116-dashboard",
+        hasLiveLink: false,
+        hasSourceCode: true,
+        hasPreviewImage: true
+    },
+    {
         name: "StorM",
         role: "fullstack_engineer",
         description: "projects_description.storm",
-        stack: ["C#", ".NET", "NextJs", "Chakra-UI", "Typesense", "InstantSearchJs"],
+        caseStudy: "projects_case_study.storm",
+        stack: [
+            "C#",
+            ".NET",
+            "NextJs",
+            "Chakra-UI",
+            "Typesense",
+            "InstantSearchJs",
+            "FlagSmith",
+            "Typescript",
+            "Blazor",
+            "WASM",
+            "Vitest",
+            "React Testing Library",
+            "BabylonJS",
+            "Docker",
+            "Storybook",
+            "ASP.NET",
+            "EF Core",
+            "Redis",
+            "RabbitMQ",
+            "OpenTelemetry",
+            "Datadog"
+        ],
         images: [
             { alt: "storm-preview", src: "/projects/storm/storm_preview.jpg" },
             {
@@ -44,7 +170,26 @@ export const projectsFullStack: IProjectByStack[] = [
         name: "ServiceNow",
         role: "servicenow_developer",
         description: "projects_description.servicenow",
-        stack: ["Business Rules", "Scheduled Job", "Flow Designer", "GlideScript", "SMTP"],
+        caseStudy: "projects_case_study.servicenow",
+        stack: [
+            "Business Rules",
+            "Scheduled Job",
+            "Flow Designer",
+            "GlideScript",
+            "SMTP",
+            "Service Catalog",
+            "ACLs",
+            "SLAs",
+            "Mobile Agent",
+            "UI Actions",
+            "Client Scripts",
+            "POP3",
+            "REST",
+            "SOAP",
+            "ITIL",
+            "Angular",
+            "Boomi"
+        ],
         images: [
             {
                 alt: "servicenow-preview",
@@ -82,7 +227,27 @@ export const projectsFullStack: IProjectByStack[] = [
         name: "Code of Africa",
         role: "senior_software_engineer",
         description: "projects_description.codeofafrica",
-        stack: ["ExpressJs", "EJS", "Typescript", "Bootstrap", "Nginx", "Modernizr"],
+        caseStudy: "projects_case_study.codeofafrica",
+        stack: [
+            "ExpressJs",
+            "EJS",
+            "Typescript",
+            "Bootstrap",
+            "Nginx",
+            "Modernizr",
+            "ReactJS",
+            "TailwindCSS",
+            "Redux",
+            "Cucumber",
+            "a11y",
+            "i18n",
+            "l10n",
+            "Jest",
+            "TanStack Router",
+            "Kubernetes",
+            "ElasticSearch",
+            "SEO"
+        ],
         images: [
             {
                 alt: "codeofafrica-preview",
@@ -124,7 +289,22 @@ export const projectsFullStack: IProjectByStack[] = [
         name: "EzyAgric",
         role: "fullstack_engineer_php",
         description: "projects_description.ezyagric",
-        stack: ["Angular", "PHP", "Laravel", "CouchBase", "ChartJS", "Eloquent ORM"],
+        caseStudy: "projects_case_study.ezyagric",
+        stack: [
+            "Angular",
+            "PHP",
+            "Laravel",
+            "CouchBase",
+            "ChartJS",
+            "Eloquent ORM",
+            "Lumen",
+            "RxJS",
+            "Canvas",
+            "WebSocket",
+            "Karma",
+            "Jasmine",
+            "PHPUnit"
+        ],
         images: [
             {
                 alt: "ezyagric-preview",
@@ -170,7 +350,8 @@ export const projectsFullStack: IProjectByStack[] = [
         name: "Motory",
         role: "lamp_stack_engineer",
         description: "projects_description.motory",
-        stack: ["PHP", "Bootstrap", "jQuery", "MySQL", "ElasticSearch", "Doctrine"],
+        caseStudy: "projects_case_study.motory",
+        stack: ["PHP", "Bootstrap 3", "jQuery", "MySQL", "ElasticSearch", "Doctrine"],
         images: [
             {
                 alt: "motory-preview",
@@ -216,7 +397,24 @@ export const projectsFullStack: IProjectByStack[] = [
         name: "Tembea",
         role: "fullstack_pean_engineer",
         description: "projects_description.tembea",
-        stack: ["Angular", "NodeJs", "ExpressJs", "Slack API", "PostgreSQL", "RxJS"],
+        caseStudy: "projects_case_study.tembea",
+        stack: [
+            "Angular",
+            "NodeJs",
+            "ExpressJs",
+            "Slack API",
+            "PostgreSQL",
+            "RxJS",
+            "Bootstrap 3",
+            "Mocha-Chai",
+            "Jasmine",
+            "CircleCI",
+            "Jenkins",
+            "TravisCI",
+            "Karma",
+            "Coveralls",
+            "TypeScript"
+        ],
         images: [
             {
                 alt: "tembea-preview",

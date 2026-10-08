@@ -1,6 +1,7 @@
 import type { MouseEvent } from "react";
 import { memo, useCallback } from "react";
 import { useTranslation } from "react-i18next";
+import { formatTabLabel } from "@/shared/lib/formatTabLabel";
 import type { NavigationDropdownMenuProps } from "./types";
 
 /**
@@ -58,7 +59,7 @@ function NavigationDropdownMenuComponent({
                                 } w-full text-left
                             `}
                         >
-                            {t(tab.title)}
+                            {formatTabLabel(t(tab.title), tab.count)}
                         </button>
                     );
                 })}

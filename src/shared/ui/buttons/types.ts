@@ -65,6 +65,20 @@ export interface GradientShineButtonProps {
 }
 
 /**
+ * @interface ActionButtonProps
+ * @property {ReactNode} children - Button label content
+ * @property {"primary" | "outline"} [variant] - Color variant; defaults to "primary"
+ * @property {ElementType} [as] - Element to render as; defaults to "button"
+ * @property {string} [className] - Additional class names
+ */
+export interface ActionButtonProps extends HTMLAttributes<HTMLButtonElement> {
+    children: ReactNode;
+    variant?: "primary" | "outline";
+    as?: ElementType;
+    className?: string;
+}
+
+/**
  * @interface LitUpBorderButtonProps
  * @property {string} [className] - Additional class names for the outer wrapper
  * @property {ReactNode} children - Button label content

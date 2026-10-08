@@ -11,9 +11,11 @@ export interface PopupBackdropProps {
 /**
  * @interface PopupCloseButtonProps
  * @property {() => void} onClick - Handler called when the close button is clicked
+ * @property {string} [className] - Additional class names, used to align the button with the popup padding
  */
 export interface PopupCloseButtonProps {
     onClick: () => void;
+    className?: string;
 }
 
 /**

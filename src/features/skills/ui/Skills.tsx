@@ -1,10 +1,10 @@
 import NextImage from "next/image";
 import { useTranslation } from "react-i18next";
+import { devStackGroups } from "@/features/skills/data/skills.groups";
 import { mainStackList } from "@/features/skills/data/skills.main";
-import { devStackTabs } from "@/features/skills/data/skills.tabs";
-import { TabBar } from "@/layout/tab-bar/TabBar";
 import { RESPONSIVE_CLASSNAME } from "@/shared/config/style";
 import { cn } from "@/shared/lib/cn";
+import { SkillCard } from "@/shared/ui/cards/skills/Skills.Card";
 import { ScrollReveal } from "@/shared/ui/scroll-reveal/ScrollReveal";
 import { SectionHeader } from "@/shared/ui/section-header/SectionHeader";
 
@@ -14,9 +14,8 @@ import { SectionHeader } from "@/shared/ui/section-header/SectionHeader";
  * @component
  *
  * @description
- * Renders the skills section featuring a grid of main stack technology icons
- * and a tabbed view for browsing skills by stack category, wrapped in a scroll
- * reveal animation.
+ * Renders the skills section featuring a grid of main stack technology icons above a
+ * responsive grid of category cards, each listing its tools with proficiency bars.
  *
  * @returns The skills section element
  */
@@ -70,11 +69,11 @@ export function Skills() {
                         ))}
                     </div>
                 </div>
-                <TabBar
-                    tabs={devStackTabs}
-                    containerClassName="py-4"
-                    tabBarClassName="min-w-full lg:min-w-[80%] xl:min-w-[70%] 2xl:min-w-[70%]"
-                />
+                <div className="grid gap-6 pt-8 md:grid-cols-2 xl:grid-cols-3">
+                    {devStackGroups.map((group) => (
+                        <SkillCard key={group.title} title={group.title} stacks={group.stacks} />
+                    ))}
+                </div>
             </section>
         </ScrollReveal>
     );

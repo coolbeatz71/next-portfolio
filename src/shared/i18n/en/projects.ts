@@ -4,6 +4,17 @@ export const projects = {
         "A collection of impactful and innovative projects that highlight my skills, creativity, and passion for solving real-world challenges through technology.",
     source_code: "Source Code",
     projects_description: {
+        centseizeapi:
+            "116 API is the backend behind a hip hop media platform in DR Congo, serving the public site, the editorial dashboard and the mobile app from one OpenAPI contract. It carries the editorial catalogue of articles, video shows and lyrics pages alongside the commerce that funds it, from promotion packages to payment proofs. It is a modular monolith on .NET 9 where module boundaries are checked by architecture tests rather than left to convention.",
+        centseizeweb:
+            "116 Web is the public site of the platform, where fans read the articles, watch the shows and the shorts, and look up lyrics. It runs on Next.js 16 and React 19, in French and English, reading the same OpenAPI contract as every other client. Each feature is a module with its own domain, application, infrastructure and presentation layers, so a screen depends on a use case rather than on an HTTP call.",
+        centseizedashboard:
+            "116 Dashboard is the back office where the newsroom runs the platform: writing articles, publishing shows and shorts, managing artists and lyrics, and handling the commerce around them from packages to payment proofs. It is a React 19 and Vite application built from fourteen modules behind one Ant Design shell. Roles and permissions reach all the way into the interface, so people see the actions they are allowed to take.",
+        centseizemobile:
+            "116 Mobile is the platform in the pocket: the shows, the shorts, the discover feed and the favorites, on Android and iOS. It is a Flutter app following Clean Architecture with BLoC, where every module carries its own domain, application, infrastructure and presentation layers. It caches what a reader has opened and watches the connection, so a drop in signal does not empty the screen.",
+        savedashboard:
+            "The operator side of SAVE, where the Exuus team and partner organisations run what members use on their phones: savings groups, user accounts, loans and microloans, and the wallets NGOs fund. Built in React and TypeScript, it mirrors every mobile feature with the controls an administrator needs behind it.",
+        save: "A savings and lending app for people the banks never reached. SAVE lets groups save together, borrow from one another against a social credit score, send money and settle bills, and it works from a smartphone or from a plain handset over USSD. Built by Exuus, licensed by the National Bank of Rwanda, with deposits insured by Access Bank.",
         storm: "A Digital Asset Management (DAM) system designed to replace Bestseller DAM. It helps to manage images, videos, and 3D assets for all the brands, styles, collections, etc. focusing on speed, stability, and user satisfaction.",
         servicenow:
             "Multiple applications using Flow Designer, Service Catalog, SLAs, ACLs, and Mobile Agent. Configured Email Notifications (SMTP/POP3) for system alerts. Collaborated with stakeholders to translate business needs into functional requirements and created UI Actions, Client Scripts, Business Rules, Scheduled Jobs, and critical reports.",

@@ -77,12 +77,14 @@ export function ThemeToggle() {
 
                     <m.path
                         d={sunPath}
-                        fill="transparent"
+                        fillOpacity={0}
+                        fill="var(--color-accent)"
                         transition={{ duration: 0.65, type: "spring" }}
                         initial={{
                             d: sunPath,
                             fillOpacity: 0,
-                            strokeOpacity: 0
+                            strokeOpacity: 0,
+                            fill: "var(--color-accent)"
                         }}
                         animate={theme === "dark" ? moonAnimation : sunAnimation}
                     />

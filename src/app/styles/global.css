@@ -13,7 +13,7 @@
 }
 
 @theme {
-    --color-background: var(--primitive-neutral-200);
+    --color-background: var(--primitive-neutral-100);
 
     --breakpoint-sm: 576px;
     --breakpoint-md: 768px;
@@ -60,6 +60,7 @@
     --color-typography-timeline-meta: var(--color-neutral-400);
     --color-typography-experience-header: var(--color-neutral-500);
     --color-typography-experience-body: var(--primitive-neutral-600);
+    --color-typography-case-study-body: var(--primitive-neutral-600);
 
     --color-primary: var(--primitive-brand-700);
     --color-primary-subtle: var(--primitive-brand-500);
@@ -140,6 +141,7 @@
     --background-image-icon_angular: url("/dev-tools/angular.svg");
     --background-image-icon_flutter: url("/dev-tools/flutter.svg");
     --background-image-icon_laravel: url("/dev-tools/laravel.svg");
+    --background-image-icon_dotnet: url("/dev-tools/dotnet.svg");
     --background-image-logo_andela_light: url("/company-logo/andela_light.png");
     --background-image-logo_ezyagric: url("/company-logo/ezyagric.png");
     --background-image-logo_exuus_light: url("/company-logo/exuus_light.png");
@@ -148,6 +150,7 @@
     --background-image-logo_reconstruction_light: url("/company-logo/reconstruction_light.png");
     --background-image-logo_theroom_light: url("/company-logo/theroom_light.png");
     --background-image-logo_bestseller_light: url("/company-logo/bestseller_light.png");
+    --background-image-logo_b2tech_light: url("/company-logo/b2tech_light.png");
     --background-image-logo_andela_dark: url("/company-logo/andela_dark.png");
     --background-image-logo_exuus_dark: url("/company-logo/exuus_dark.png");
     --background-image-logo_codeofafrica_dark: url("/company-logo/codeofafrica_dark.png");
@@ -155,6 +158,7 @@
     --background-image-logo_reconstruction_dark: url("/company-logo/reconstruction_dark.png");
     --background-image-logo_theroom_dark: url("/company-logo/theroom_dark.png");
     --background-image-logo_bestseller_dark: url("/company-logo/bestseller_dark.png");
+    --background-image-logo_b2tech_dark: url("/company-logo/b2tech_dark.png");
 }
 
 :root:where(.dark, .dark *),
@@ -191,6 +195,7 @@
     --color-typography-timeline-meta: var(--color-neutral-500);
     --color-typography-experience-header: var(--color-neutral-400);
     --color-typography-experience-body: var(--primitive-neutral-300);
+    --color-typography-case-study-body: var(--primitive-neutral-300);
 
     --color-primary-on-accent: var(--primitive-brand-500);
     --color-primary-overlay: oklch(from var(--primitive-brand-700) l c h / 0.6);

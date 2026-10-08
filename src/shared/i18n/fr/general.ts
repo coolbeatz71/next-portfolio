@@ -1,4 +1,5 @@
 export const general = {
+    no_preview: "Aucun aperçu disponible",
     read_more: "Lire Plus",
     view_more_experience: "Voir Plus d'Expérience",
     light_mode: "Mode Clair",

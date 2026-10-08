@@ -2,6 +2,13 @@ import { useEffect, useRef, useState } from "react";
 import type { IUseScrollRevealType } from "./types";
 
 /**
+ * TEMPORARY: when true, every element reports as visible immediately and the
+ * IntersectionObserver never runs, so a full page screenshot captures everything.
+ * Set back to false to restore the scroll reveal animations.
+ */
+const DISABLE_SCROLL_REVEAL = false;
+
+/**
  * Custom hook to detect when an element enters the viewport.
  *
  * @description
@@ -14,9 +21,11 @@ import type { IUseScrollRevealType } from "./types";
  */
 export function useScrollReveal(): IUseScrollRevealType {
     const ref = useRef<HTMLDivElement>(null);
-    const [isVisible, setIsVisible] = useState(false);
+    const [isVisible, setIsVisible] = useState(DISABLE_SCROLL_REVEAL);
 
     useEffect(() => {
+        if (DISABLE_SCROLL_REVEAL) return;
+
         const observer = new IntersectionObserver(
             ([entry]) => {
                 setIsVisible(entry.isIntersecting);
