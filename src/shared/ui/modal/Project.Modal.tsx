@@ -14,7 +14,7 @@ const SECTION_INDEX = {
     outcome: 4
 } as const;
 
-const BODY_CLASSNAME = "text-body-sm text-typography-muted";
+const BODY_CLASSNAME = "text-body-sm text-typography-case-study-body";
 
 /**
  * Project modal content component.
