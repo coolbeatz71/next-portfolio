@@ -15,4 +15,9 @@ export const ARCHITECTURE_STACK: ReadonlySet<string> = new Set([
  * Maximum number of stack badges a project card renders before the remainder
  * collapses into a counter.
  */
-export const CARD_STACK_LIMIT = 6;
+export const CARD_STACK_LIMIT = 8;
+
+/**
+ * Image path standing in for projects that have no screenshots yet.
+ */
+export const NO_PREVIEW_IMAGE = "/no_preview.webp";

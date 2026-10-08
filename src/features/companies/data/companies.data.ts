@@ -2,6 +2,10 @@ import type { ICompanyLogo } from "./types";
 
 export const companyLogoList: ICompanyLogo[] = [
     {
+        title: "B2Tech",
+        icon: "bg-logo_b2tech_light dark:bg-logo_b2tech_dark"
+    },
+    {
         title: "Bestseller",
         icon: "bg-logo_bestseller_light dark:bg-logo_bestseller_dark"
     },

@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useClickAway } from "react-use";
 import { IconChevronUpDown } from "@/shared/config/icons";
 import { cn } from "@/shared/lib/cn";
+import { formatTabLabel } from "@/shared/lib/formatTabLabel";
 import { NavigationDropdownMenu } from "./Navigation.Dropdown.Menu";
 import type { NavigationDropdownProps } from "./types";
 
@@ -57,7 +58,9 @@ export function NavigationDropdown({
                     className="w-full rounded-lg text-sm font-medium flex items-center justify-between p-3.5 text-typography-on-primary hover:text-typography-nav bg-primary-fill hover:bg-surface-hover hover:ring-3"
                     onClick={toggleDropdown}
                 >
-                    <span>{t(tabs[activeTabIndex].title)}</span>
+                    <span>
+                        {formatTabLabel(t(tabs[activeTabIndex].title), tabs[activeTabIndex].count)}
+                    </span>
                     <IconChevronUpDown className="-mr-1 ml-2 h-4 w-4" aria-hidden="true" />
                 </button>
             </div>

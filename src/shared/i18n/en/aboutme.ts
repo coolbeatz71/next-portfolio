@@ -1,4 +1,13 @@
 export const aboutme = {
+    about_stat_experience: "Experience",
+    about_stat_experience_value: "10 years",
+    about_stat_education: "Education",
+    about_stat_education_value: "Bachelor's, Business IT",
+    about_stat_location: "Based in",
+    about_stat_location_value: "Kigali, Rwanda",
+    about_row_identity: "Who I am",
+    about_row_education: "Education",
+    about_row_outside: "Outside work",
     aboutme_title:
         "I build high-performance web and mobile applications, focusing on scalability and user experience.",
     aboutme_subtitle:

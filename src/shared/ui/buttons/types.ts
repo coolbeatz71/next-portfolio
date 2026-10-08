@@ -67,7 +67,7 @@ export interface GradientShineButtonProps {
 /**
  * @interface ActionButtonProps
  * @property {ReactNode} children - Button label content
- * @property {"primary" | "outline"} [variant] - Colour variant; defaults to "primary"
+ * @property {"primary" | "outline"} [variant] - Color variant; defaults to "primary"
  * @property {ElementType} [as] - Element to render as; defaults to "button"
  * @property {string} [className] - Additional class names
  */

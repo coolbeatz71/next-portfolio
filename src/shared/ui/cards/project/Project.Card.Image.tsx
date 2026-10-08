@@ -1,5 +1,7 @@
 import Image from "next/image";
 import { memo, useCallback } from "react";
+import { NO_PREVIEW_IMAGE } from "@/shared/config/project";
+import { NoPreview } from "@/shared/ui/no-preview/NoPreview";
 import type { ProjectImageProps } from "./types";
 
 /**
@@ -8,9 +10,9 @@ import type { ProjectImageProps } from "./types";
  * @component
  *
  * @description
- * Renders the thumbnail image of a project card.
- * Shows a dark gradient overlay on hover and scales the image slightly.
- * Clicking the image triggers the parent modal.
+ * Renders the cover image at the top of a project card, in a fixed aspect ratio so every
+ * card in a row shares the same media height. Projects without screenshots fall back to
+ * the drawn placeholder instead of a stand in file. Clicking it opens the case study.
  *
  * @param {ProjectImageProps} props - Component props
  * @param {string} props.src - Image source URL
@@ -35,24 +37,22 @@ function ProjectCardImageComponent({ src, alt, onClick, blurDataURL }: ProjectIm
         <div
             onClick={onClick}
             onKeyDown={handleKeyDown}
-            className="w-full md:w-1/2 h-56 md:h-auto relative overflow-hidden cursor-pointer"
+            className="relative w-full aspect-16/10 overflow-hidden rounded-lg cursor-pointer"
         >
-            <Image
-                fill
-                alt={alt}
-                src={src}
-                sizes="100%"
-                quality={55}
-                placeholder="blur"
-                blurDataURL={blurDataURL}
-                className="object-cover duration-slow group-hover:scale-110"
-            />
-            <div
-                className={`
-                    absolute inset-0 bg-linear-to-t from-black/50 to-transparent
-                    opacity-0 group-hover:opacity-100 duration-moderate
-                `}
-            />
+            {src === NO_PREVIEW_IMAGE ? (
+                <NoPreview />
+            ) : (
+                <Image
+                    fill
+                    alt={alt}
+                    src={src}
+                    quality={55}
+                    placeholder="blur"
+                    blurDataURL={blurDataURL}
+                    sizes="(max-width: 992px) 100vw, 50vw"
+                    className="object-cover object-top"
+                />
+            )}
         </div>
     );
 }

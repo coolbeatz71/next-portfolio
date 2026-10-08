@@ -13,7 +13,7 @@
 }
 
 @theme {
-    --color-background: var(--primitive-neutral-200);
+    --color-background: var(--primitive-neutral-100);
 
     --breakpoint-sm: 576px;
     --breakpoint-md: 768px;
@@ -149,6 +149,7 @@
     --background-image-logo_reconstruction_light: url("/company-logo/reconstruction_light.png");
     --background-image-logo_theroom_light: url("/company-logo/theroom_light.png");
     --background-image-logo_bestseller_light: url("/company-logo/bestseller_light.png");
+    --background-image-logo_b2tech_light: url("/company-logo/b2tech_light.png");
     --background-image-logo_andela_dark: url("/company-logo/andela_dark.png");
     --background-image-logo_exuus_dark: url("/company-logo/exuus_dark.png");
     --background-image-logo_codeofafrica_dark: url("/company-logo/codeofafrica_dark.png");
@@ -156,6 +157,7 @@
     --background-image-logo_reconstruction_dark: url("/company-logo/reconstruction_dark.png");
     --background-image-logo_theroom_dark: url("/company-logo/theroom_dark.png");
     --background-image-logo_bestseller_dark: url("/company-logo/bestseller_dark.png");
+    --background-image-logo_b2tech_dark: url("/company-logo/b2tech_dark.png");
 }
 
 :root:where(.dark, .dark *),

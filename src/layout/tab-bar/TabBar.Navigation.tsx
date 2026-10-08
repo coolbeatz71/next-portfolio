@@ -1,6 +1,7 @@
 import type { MouseEvent } from "react";
 import { memo, useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
+import { formatTabLabel } from "@/shared/lib/formatTabLabel";
 import type { TabBarNavigationProps } from "./types";
 
 /**
@@ -66,7 +67,7 @@ function TabBarNavigationComponent({
                             className={`py-2 cursor-pointer w-full text-center text-xs md:text-sm font-semibold duration-base
                     ${isActiveTab ? "text-typography-on-primary" : "text-typography-contact"}`}
                         >
-                            {t(tab.title)}
+                            {formatTabLabel(t(tab.title), tab.count)}
                         </button>
                     </li>
                 );

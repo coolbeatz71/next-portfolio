@@ -73,7 +73,12 @@ export const Timeline = ({ data }: { data: ITimelineEntry[] }) => {
                                 </p>
                             </div>
 
-                            {item.content}
+                            <div
+                                className={`rounded-xl border border-outlined/50 bg-surface-timeline/25
+                                    p-4 md:p-6 hover:shadow-xl`}
+                            >
+                                {item.content}
+                            </div>
                         </div>
                     </div>
                 ))}

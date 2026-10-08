@@ -40,6 +40,16 @@ export interface IDevToolLogo {
 }
 
 /**
+ * @interface ITechStackBadge
+ * @property {string} label - Technology pairing shown on the badge
+ * @property {string} iconName - Tailwind background-image class for the logo
+ */
+export interface ITechStackBadge {
+    label: string;
+    iconName: string;
+}
+
+/**
  * @interface ISocialLink
  * @property {ReactNode} icon - Icon element representing the platform
  * @property {string} platform - Platform identifier (e.g. `"github"`, `"linkedin"`)

@@ -52,23 +52,21 @@ function ProjectCardComponent({ project, index, onOpen }: ProjectCardProps) {
                 variants={animationVariants}
             >
                 <div
-                    className={`h-full md:min-h-64 lg:min-h-72 bg-surface-elevated rounded-lg
-                        overflow-hidden duration-moderate group-hover:shadow-xl
-                    `}
+                    className={`flex h-full flex-col overflow-hidden rounded-xl border p-4
+                        border-outlined/50 bg-surface-elevated/25 duration-moderate
+                        group-hover:shadow-xl`}
                 >
-                    <div className="flex flex-col md:flex-row h-full md:min-h-64 lg:min-h-72">
-                        <ProjectCardImage
-                            alt={project.name}
-                            onClick={handleOpen}
-                            src={project.images[0].src}
-                            blurDataURL={project.blurURL}
-                        />
-                        <ProjectCardContent
-                            project={project}
-                            onClick={handleOpen}
-                            translatedDescription={t(project.description)}
-                        />
-                    </div>
+                    <ProjectCardImage
+                        alt={project.name}
+                        onClick={handleOpen}
+                        src={project.images[0].src}
+                        blurDataURL={project.blurURL}
+                    />
+                    <ProjectCardContent
+                        project={project}
+                        onClick={handleOpen}
+                        translatedDescription={t(project.description)}
+                    />
                 </div>
             </m.div>
         </LazyMotion>

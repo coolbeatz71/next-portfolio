@@ -11,6 +11,7 @@
     --primitive-white: var(--color-white);
     --primitive-black: var(--color-black);
 
+    --primitive-neutral-50: var(--color-gray-50);
     --primitive-neutral-100: var(--color-gray-100);
     --primitive-neutral-200: var(--color-gray-200);
     --primitive-neutral-300: var(--color-gray-300);

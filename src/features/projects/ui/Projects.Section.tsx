@@ -41,7 +41,7 @@ export function ProjectSection({ projects }: ProjectSectionProps) {
                     isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
                 )}
             >
-                <div className="grid lg:grid-cols-2 gap-4">
+                <div className="grid gap-6 lg:grid-cols-2">
                     {projects.map((project, index) => (
                         <ProjectCard
                             index={index}
