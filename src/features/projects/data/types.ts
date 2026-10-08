@@ -5,11 +5,13 @@ import type { ReactNode } from "react";
  * @property {string} title - i18n translation key for the tab label
  * @property {string} context - URL-safe slug used to identify the active tab
  * @property {ReactNode} content - The rendered panel content shown when this tab is selected
+ * @property {number} [count] - Number of entries in the panel, appended to the label
  */
 export interface ITabs {
     title: string;
     context: string;
     content: ReactNode;
+    count?: number;
 }
 
 /**
