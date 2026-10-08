@@ -1,4 +1,5 @@
 export const general = {
+    no_preview: "No preview available",
     read_more: "Read More",
     view_more_experience: "View More Experience",
     light_mode: "Light Mode",
