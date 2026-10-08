@@ -60,6 +60,7 @@
     --color-typography-timeline-meta: var(--color-neutral-400);
     --color-typography-experience-header: var(--color-neutral-500);
     --color-typography-experience-body: var(--primitive-neutral-600);
+    --color-typography-case-study-body: var(--primitive-neutral-600);
 
     --color-primary: var(--primitive-brand-700);
     --color-primary-subtle: var(--primitive-brand-500);
@@ -194,6 +195,7 @@
     --color-typography-timeline-meta: var(--color-neutral-500);
     --color-typography-experience-header: var(--color-neutral-400);
     --color-typography-experience-body: var(--primitive-neutral-300);
+    --color-typography-case-study-body: var(--primitive-neutral-300);
 
     --color-primary-on-accent: var(--primitive-brand-500);
     --color-primary-overlay: oklch(from var(--primitive-brand-700) l c h / 0.6);

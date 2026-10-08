@@ -1,17 +1,22 @@
 # What this does
 
-<!-- One or two plain sentences: what changed and why. -->
+<!--
+One or two short paragraphs, what changed and why. Keep it brief,
+the detail belongs in the bullets below.
+-->
 
 ## Area of the change
 
 <!--
-One heading per part of the site you touched, for example
-"Case study modal", "Project cards", "Dependencies and config".
-A few bullets each. Delete the headings you do not need.
+One "###" heading per part of the site you touched, for example
+"About", "Project cards", "Hero". A few bullets under each, one per
+change. Delete the headings you do not need.
 -->
 
-- [x]
-- [x]
+### Area
+
+-
+-
 
 ## Type of changes
 
