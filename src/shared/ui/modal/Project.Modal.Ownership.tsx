@@ -24,7 +24,7 @@ function ProjectModalOwnershipComponent({ items }: ProjectModalOwnershipProps) {
                         aria-hidden="true"
                         className="mt-1 h-3 w-3 shrink-0 text-primary-text"
                     />
-                    <span className="text-body-sm text-typography-muted">{item}</span>
+                    <span className="text-body-sm text-typography-case-study-body">{item}</span>
                 </li>
             ))}
         </ul>
