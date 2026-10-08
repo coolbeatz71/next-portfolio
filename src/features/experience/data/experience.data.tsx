@@ -1,13 +1,12 @@
 import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
-import { ExperienceItem } from "@/features/experience/ui/Experiences.Item";
-import { cn } from "@/shared/lib/cn";
+import { ExperienceCard } from "@/shared/ui/cards/experience/Experience.Card";
 import type { ITimelineEntry } from "./types";
 
 /**
  * Returns the full list of work experience timeline entries.
  *
- * @description Builds each entry's JSX content using i18next translations and
+ * @description Builds each entry's card content using i18next translations and
  * optional CSS class overrides for the header and body sections.
  *
  * @param [headerClassName] - Additional Tailwind classes for the role description header
@@ -20,16 +19,8 @@ export function useExperienceTimeline(
 ): ITimelineEntry[] {
     const { t } = useTranslation();
 
-    return useMemo(() => {
-        const _headerClassName = cn(
-            "italic !mb-4 leading-relaxed! !md:leading-loose text-body-sm md:text-sm text-typography-experience-header",
-            headerClassName
-        );
-        const _bodyClassName = cn(
-            "list-disc space-y-2 pl-4 md:pl-5 text-[11.5pt] md:text-md leading-relaxed font-medium text-typography-experience-body",
-            bodyClassName
-        );
-        return [
+    return useMemo(
+        () => [
             {
                 id: "senior-software-engineer-1",
                 title: t("senior_software_engineer"),
@@ -37,25 +28,17 @@ export function useExperienceTimeline(
                 href: "http://bestseller.com/",
                 subtitle: "BESTSELLER A/S - Nov 2023 - Feb 2026",
                 content: (
-                    <div>
-                        <p className={_headerClassName}>{t("companies.bestseller")}</p>
-                        <div className="gap-4">
-                            <ul className={_bodyClassName}>
-                                <ExperienceItem>
-                                    {t("experience_details.developed_maintained")}
-                                </ExperienceItem>
-                                <ExperienceItem>
-                                    {t("experience_details.implemented_metrics")}
-                                </ExperienceItem>
-                                <ExperienceItem>
-                                    {t("experience_details.authored_unit_tests")}
-                                </ExperienceItem>
-                                <ExperienceItem>
-                                    {t("experience_details.engaged_with_architects")}
-                                </ExperienceItem>
-                            </ul>
-                        </div>
-                    </div>
+                    <ExperienceCard
+                        summary={t("companies.bestseller")}
+                        bodyClassName={bodyClassName}
+                        headerClassName={headerClassName}
+                        details={[
+                            t("experience_details.developed_maintained"),
+                            t("experience_details.implemented_metrics"),
+                            t("experience_details.authored_unit_tests"),
+                            t("experience_details.engaged_with_architects")
+                        ]}
+                    />
                 )
             },
             {
@@ -65,24 +48,16 @@ export function useExperienceTimeline(
                 href: "http://bestseller.com/",
                 subtitle: "BESTSELLER A/S - Nov 2022 - Dec 2023",
                 content: (
-                    <div>
-                        <div className="gap-4">
-                            <ul className={_bodyClassName}>
-                                <ExperienceItem>
-                                    {t("experience_details.implemented_servicenow")}
-                                </ExperienceItem>
-                                <ExperienceItem>
-                                    {t("experience_details.configured_email")}
-                                </ExperienceItem>
-                                <ExperienceItem>
-                                    {t("experience_details.collaborated_departments")}
-                                </ExperienceItem>
-                                <ExperienceItem>
-                                    {t("experience_details.developed_ui_actions")}
-                                </ExperienceItem>
-                            </ul>
-                        </div>
-                    </div>
+                    <ExperienceCard
+                        bodyClassName={bodyClassName}
+                        headerClassName={headerClassName}
+                        details={[
+                            t("experience_details.implemented_servicenow"),
+                            t("experience_details.configured_email"),
+                            t("experience_details.collaborated_departments"),
+                            t("experience_details.developed_ui_actions")
+                        ]}
+                    />
                 )
             },
             {
@@ -92,22 +67,16 @@ export function useExperienceTimeline(
                 href: "https://codeofafrica.com/EN",
                 subtitle: "CODE OF AFRICA LTD - June 2021 - Aug 2022",
                 content: (
-                    <div>
-                        <p className={_headerClassName}>{t("companies.codeofafrica")}</p>
-                        <div className="gap-4">
-                            <ul className={_bodyClassName}>
-                                <ExperienceItem>
-                                    {t("experience_details.boosted_seo")}
-                                </ExperienceItem>
-                                <ExperienceItem>
-                                    {t("experience_details.led_frontend_team")}
-                                </ExperienceItem>
-                                <ExperienceItem>
-                                    {t("experience_details.masterminded_evolution")}
-                                </ExperienceItem>
-                            </ul>
-                        </div>
-                    </div>
+                    <ExperienceCard
+                        summary={t("companies.codeofafrica")}
+                        bodyClassName={bodyClassName}
+                        headerClassName={headerClassName}
+                        details={[
+                            t("experience_details.boosted_seo"),
+                            t("experience_details.led_frontend_team"),
+                            t("experience_details.masterminded_evolution")
+                        ]}
+                    />
                 )
             },
             {
@@ -117,25 +86,17 @@ export function useExperienceTimeline(
                 location: "Hamburg, Germany",
                 subtitle: "ALFATIER GmbH - Nov 2021 – Aug 2022",
                 content: (
-                    <div>
-                        <p className={_headerClassName}>{t("companies.alfatier")}</p>
-                        <div className="gap-4">
-                            <ul className={_bodyClassName}>
-                                <ExperienceItem>
-                                    {t("experience_details.led_early_stage")}
-                                </ExperienceItem>
-                                <ExperienceItem>
-                                    {t("experience_details.developed_frontend_features")}
-                                </ExperienceItem>
-                                <ExperienceItem>
-                                    {t("experience_details.integrated_monitoring")}
-                                </ExperienceItem>
-                                <ExperienceItem>
-                                    {t("experience_details.implemented_hubspot")}
-                                </ExperienceItem>
-                            </ul>
-                        </div>
-                    </div>
+                    <ExperienceCard
+                        summary={t("companies.alfatier")}
+                        bodyClassName={bodyClassName}
+                        headerClassName={headerClassName}
+                        details={[
+                            t("experience_details.led_early_stage"),
+                            t("experience_details.developed_frontend_features"),
+                            t("experience_details.integrated_monitoring"),
+                            t("experience_details.implemented_hubspot")
+                        ]}
+                    />
                 )
             },
             {
@@ -145,25 +106,17 @@ export function useExperienceTimeline(
                 href: "https://org.reconstruction.us/",
                 subtitle: "RECONSTRUCTION - June 2021 – Nov 2021",
                 content: (
-                    <div>
-                        <p className={_headerClassName}>{t("companies.reconstruction")}</p>
-                        <div className="gap-4">
-                            <ul className={_bodyClassName}>
-                                <ExperienceItem>
-                                    {t("experience_details.integrated_thinkific")}
-                                </ExperienceItem>
-                                <ExperienceItem>
-                                    {t("experience_details.maintained_dashboard")}
-                                </ExperienceItem>
-                                <ExperienceItem>
-                                    {t("experience_details.improved_performance")}
-                                </ExperienceItem>
-                                <ExperienceItem>
-                                    {t("experience_details.introduced_git_workflow")}
-                                </ExperienceItem>
-                            </ul>
-                        </div>
-                    </div>
+                    <ExperienceCard
+                        summary={t("companies.reconstruction")}
+                        bodyClassName={bodyClassName}
+                        headerClassName={headerClassName}
+                        details={[
+                            t("experience_details.integrated_thinkific"),
+                            t("experience_details.maintained_dashboard"),
+                            t("experience_details.improved_performance"),
+                            t("experience_details.introduced_git_workflow")
+                        ]}
+                    />
                 )
             },
             {
@@ -173,28 +126,18 @@ export function useExperienceTimeline(
                 href: "https://exuus.rw/",
                 subtitle: "EXUUS LTD - May 2020 - June 2021",
                 content: (
-                    <div>
-                        <p className={_headerClassName}>{t("companies.exuus")}</p>
-                        <div className="gap-4">
-                            <ul className={_bodyClassName}>
-                                <ExperienceItem>
-                                    {t("experience_details.spearheaded_development")}
-                                </ExperienceItem>
-                                <ExperienceItem>
-                                    {t("experience_details.participated_code_reviews")}
-                                </ExperienceItem>
-                                <ExperienceItem>
-                                    {t("experience_details.implemented_e2e_tests")}
-                                </ExperienceItem>
-                                <ExperienceItem>
-                                    {t("experience_details.worked_payment_integration")}
-                                </ExperienceItem>
-                                <ExperienceItem>
-                                    {t("experience_details.implemented_multi_language")}
-                                </ExperienceItem>
-                            </ul>
-                        </div>
-                    </div>
+                    <ExperienceCard
+                        summary={t("companies.exuus")}
+                        bodyClassName={bodyClassName}
+                        headerClassName={headerClassName}
+                        details={[
+                            t("experience_details.spearheaded_development"),
+                            t("experience_details.participated_code_reviews"),
+                            t("experience_details.implemented_e2e_tests"),
+                            t("experience_details.worked_payment_integration"),
+                            t("experience_details.implemented_multi_language")
+                        ]}
+                    />
                 )
             },
             {
@@ -204,25 +147,17 @@ export function useExperienceTimeline(
                 href: "https://akorion.com/",
                 subtitle: "AKORION LTD - Aug 2019 - Jan 2020",
                 content: (
-                    <div>
-                        <p className={_headerClassName}>{t("companies.akorion")}</p>
-                        <div className="gap-4">
-                            <ul className={_bodyClassName}>
-                                <ExperienceItem>
-                                    {t("experience_details.used_php_lumen")}
-                                </ExperienceItem>
-                                <ExperienceItem>
-                                    {t("experience_details.implemented_couchbase")}
-                                </ExperienceItem>
-                                <ExperienceItem>
-                                    {t("experience_details.pioneered_phpunit")}
-                                </ExperienceItem>
-                                <ExperienceItem>
-                                    {t("experience_details.crafted_interfaces")}
-                                </ExperienceItem>
-                            </ul>
-                        </div>
-                    </div>
+                    <ExperienceCard
+                        summary={t("companies.akorion")}
+                        bodyClassName={bodyClassName}
+                        headerClassName={headerClassName}
+                        details={[
+                            t("experience_details.used_php_lumen"),
+                            t("experience_details.implemented_couchbase"),
+                            t("experience_details.pioneered_phpunit"),
+                            t("experience_details.crafted_interfaces")
+                        ]}
+                    />
                 )
             },
             {
@@ -232,25 +167,17 @@ export function useExperienceTimeline(
                 href: "https://andela.com/",
                 subtitle: "ANDELA LTD - Mar 2019 - Apr 2020",
                 content: (
-                    <div>
-                        <p className={_headerClassName}>{t("companies.andela")}</p>
-                        <div className="gap-4">
-                            <ul className={_bodyClassName}>
-                                <ExperienceItem>
-                                    {t("experience_details.completed_training")}
-                                </ExperienceItem>
-                                <ExperienceItem>
-                                    {t("experience_details.worked_with_leads")}
-                                </ExperienceItem>
-                                <ExperienceItem>
-                                    {t("experience_details.implemented_backend")}
-                                </ExperienceItem>
-                                <ExperienceItem>
-                                    {t("experience_details.integrated_slack")}
-                                </ExperienceItem>
-                            </ul>
-                        </div>
-                    </div>
+                    <ExperienceCard
+                        summary={t("companies.andela")}
+                        bodyClassName={bodyClassName}
+                        headerClassName={headerClassName}
+                        details={[
+                            t("experience_details.completed_training"),
+                            t("experience_details.worked_with_leads"),
+                            t("experience_details.implemented_backend"),
+                            t("experience_details.integrated_slack")
+                        ]}
+                    />
                 )
             },
             {
@@ -260,25 +187,20 @@ export function useExperienceTimeline(
                 href: "https://jkss-connect.com/",
                 subtitle: "JKSS CONNECT - Sept 2017 - Feb 2019",
                 content: (
-                    <div>
-                        <p className={_headerClassName}>{t("companies.jkss")}</p>
-                        <div className="gap-4">
-                            <ul className={_bodyClassName}>
-                                <ExperienceItem>
-                                    {t("experience_details.innovated_sync")}
-                                </ExperienceItem>
-                                <ExperienceItem>
-                                    {t("experience_details.integrated_qr")}
-                                </ExperienceItem>
-                                <ExperienceItem>{t("experience_details.led_agile")}</ExperienceItem>
-                                <ExperienceItem>
-                                    {t("experience_details.deployed_cross_platform")}
-                                </ExperienceItem>
-                            </ul>
-                        </div>
-                    </div>
+                    <ExperienceCard
+                        summary={t("companies.jkss")}
+                        bodyClassName={bodyClassName}
+                        headerClassName={headerClassName}
+                        details={[
+                            t("experience_details.innovated_sync"),
+                            t("experience_details.integrated_qr"),
+                            t("experience_details.led_agile"),
+                            t("experience_details.deployed_cross_platform")
+                        ]}
+                    />
                 )
             }
-        ];
-    }, [t, headerClassName, bodyClassName]);
+        ],
+        [t, headerClassName, bodyClassName]
+    );
 }
