@@ -37,7 +37,7 @@ function ProjectModalOverviewComponent({ project, caseStudy }: ProjectModalOverv
                     <p className={OVERVIEW_LABEL_CLASSNAME}>{caseStudy.category}</p>
                 </div>
 
-                <p className="max-w-prose text-body-sm text-typography-muted">
+                <p className="max-w-prose text-body-sm text-typography-case-study-body">
                     {caseStudy.summary}
                 </p>
             </div>
