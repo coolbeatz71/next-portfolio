@@ -21,11 +21,11 @@ const VARIANT_CLASSNAME = {
  * a button in a link.
  *
  * Classes are concatenated rather than merged through `cn`: tailwind-merge reads the
- * custom text size tokens as colours and would drop them.
+ * custom text size tokens as colors and would drop them.
  *
  * @param {ActionButtonProps} props - Component props
  * @param {ReactNode} props.children - Button label content
- * @param {"primary" | "outline"} [props.variant] - Colour variant; defaults to "primary"
+ * @param {"primary" | "outline"} [props.variant] - Color variant; defaults to "primary"
  * @param {ElementType} [props.as] - Element to render as; defaults to "button"
  * @param {string} [props.className] - Additional class names
  *
