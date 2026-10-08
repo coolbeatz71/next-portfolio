@@ -27,12 +27,12 @@ function ProjectModalChallengeComponent({ constraint, response }: ProjectModalCh
         <div className="flex flex-col gap-8">
             <div className="flex flex-col gap-3 border-l-2 border-outlined pl-6">
                 <p className={LABEL_CLASSNAME}>{t("project_constraint")}</p>
-                <p className="text-body-sm text-typography-muted">{constraint}</p>
+                <p className="text-body-sm text-typography-case-study-body">{constraint}</p>
             </div>
 
             <div className="flex flex-col gap-3 border-l-2 border-primary-border pl-6">
                 <p className={LABEL_CLASSNAME}>{t("project_response")}</p>
-                <p className="text-body-sm text-typography-muted">{response}</p>
+                <p className="text-body-sm text-typography-case-study-body">{response}</p>
             </div>
         </div>
     );
