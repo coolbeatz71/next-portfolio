@@ -1,4 +1,13 @@
 export const aboutme = {
+    about_stat_experience: "Expérience",
+    about_stat_experience_value: "10 ans",
+    about_stat_education: "Formation",
+    about_stat_education_value: "Licence, Gestion Informatique",
+    about_stat_location: "Basé à",
+    about_stat_location_value: "Kigali, Rwanda",
+    about_row_identity: "Qui je suis",
+    about_row_education: "Formation",
+    about_row_outside: "En dehors du travail",
     aboutme_title:
         "Je développe des solutions web et mobiles performantes, axées sur l’évolutivité et une expérience utilisateur.",
     aboutme_subtitle:
