@@ -6,6 +6,7 @@ import { general } from "@/shared/i18n/fr/general";
 import { hero } from "@/shared/i18n/fr/hero";
 import { navigation } from "@/shared/i18n/fr/navigation";
 import { projects } from "@/shared/i18n/fr/projects";
+import { projectsCaseStudy } from "@/shared/i18n/fr/projects.case-study";
 import { skills } from "@/shared/i18n/fr/skills";
 import { tabs } from "@/shared/i18n/fr/tabs";
 
@@ -17,6 +18,7 @@ export default {
     ...aboutme,
     ...experience,
     ...projects,
+    ...projectsCaseStudy,
     ...tabs,
     ...skills,
     ...footer
