@@ -64,7 +64,10 @@ export function Modal({ header, footer, isOpen, onToggle, children, className }:
                 <PopupHeader className="shrink-0 px-4 py-6 md:p-6">{header}</PopupHeader>
                 <PopupCloseButton onClick={onToggle} className="right-4 md:right-8" />
 
-                <div className={cn("grow overflow-y-auto overflow-x-hidden", CUSTOM_SCROLLBAR)}>
+                <div
+                    onTouchMove={(e) => e.stopPropagation()}
+                    className={cn("grow overflow-y-auto overflow-x-hidden", CUSTOM_SCROLLBAR)}
+                >
                     <div className="p-4 md:p-8">{children}</div>
 
                     {footer && (
