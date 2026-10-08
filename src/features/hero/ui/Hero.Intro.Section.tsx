@@ -1,7 +1,8 @@
 import { Fragment, memo, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { RESUME_LINK } from "@/shared/config/resume";
-import { Breadcrumb } from "@/shared/ui/breadcrumb/Breadcrumb";
+import { techStackBadgeList } from "@/shared/config/tech-stack";
+import { BadgeTechStack } from "@/shared/ui/badge/Badge.TechStack";
 import { GradientShineButton } from "@/shared/ui/buttons/GradientShine.Button";
 import { SocialLinks } from "@/shared/ui/social-links/SocialLinks";
 import { TypeWriter } from "@/shared/ui/type-writer/TypeWriter";
@@ -13,12 +14,10 @@ import { TypeWriter } from "@/shared/ui/type-writer/TypeWriter";
  *
  * @description
  * Renders the left side of the hero section with social links, animated role title,
- * tech stack breadcrumb, and a resume download button.
+ * tech stack badges, and a resume download button.
  *
  * @returns The hero intro section element
  */
-const techStackSummary = ["FullStack/PREN", "PHP/Laravel", "Dart/Flutter"];
-
 function HeroIntroSectionComponent() {
     const { t, i18n } = useTranslation();
 
@@ -42,7 +41,11 @@ function HeroIntroSectionComponent() {
                 />
             </h1>
 
-            <Breadcrumb labels={techStackSummary} />
+            <ul className="flex flex-wrap items-center gap-2 pb-6" aria-label="tech stack">
+                {techStackBadgeList.map((tech) => (
+                    <BadgeTechStack key={tech.label} label={tech.label} iconName={tech.iconName} />
+                ))}
+            </ul>
 
             <a target="_blank" href={RESUME_LINK} title="Download Resume" rel="noopener noreferrer">
                 <GradientShineButton>{t("download_resume")}</GradientShineButton>
