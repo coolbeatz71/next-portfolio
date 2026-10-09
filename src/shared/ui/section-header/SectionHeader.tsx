@@ -1,5 +1,6 @@
 import { memo } from "react";
 import { cn } from "@/shared/lib/cn";
+import { Reveal } from "@/shared/ui/scroll-reveal/Reveal";
 import { DotBackground } from "../background/Dot.Background";
 import type { SectionHeaderProps } from "./types";
 
@@ -23,12 +24,16 @@ function SectionHeaderComponent({ title, subtitle, className }: SectionHeaderPro
         <div className="flex flex-col items-center justify-center">
             <DotBackground className="h-20 z-0" />
             <div className={cn("text-start lg:text-center lg:px-32 px-0 z-10", className)}>
-                <h2 className="mb-4 text-3xl xl:text-4xl font-bold leading-relaxed! text-typography-heading">
-                    {title}
-                </h2>
-                <p className="text-md sm:text-lg md:text-xl text-typography-muted leading-relaxed! font-semibold">
-                    {subtitle}
-                </p>
+                <Reveal>
+                    <h2 className="mb-4 text-3xl xl:text-4xl font-bold leading-relaxed! text-typography-heading">
+                        {title}
+                    </h2>
+                </Reveal>
+                <Reveal index={1}>
+                    <p className="text-md sm:text-lg md:text-xl text-typography-muted leading-relaxed! font-semibold">
+                        {subtitle}
+                    </p>
+                </Reveal>
             </div>
         </div>
     );
