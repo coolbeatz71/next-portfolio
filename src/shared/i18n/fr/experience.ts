@@ -1,22 +1,22 @@
 export const experience = {
-    work_experience: "Expérience Professionnelle",
-    experience_title: "Mon Expérience Pro",
+    work_experience: "Expérience professionnelle",
+    experience_title: "Mon expérience pro",
     experience_subtitle:
         "Un aperçu de mon parcours professionnel, mettant en lumière les rôles, projets et réussites qui définissent ma carrière d'ingénieur logiciel.",
     companies: {
         bestseller:
             "BESTSELLER est une entreprise internationale de mode multi-marques composée de plus de 20 marques individuelles. BESTSELLER vend des vêtements et des accessoires pour tous les âges, tous les genres et toutes les occasions.",
         codeofafrica:
-            "CODE OF AFRICA est un hub d'externalisation basé en Allemagne qui connecte les entreprises européennes avec les meilleurs ingénieurs logiciels d'Afrique de l'Est. Leur mission? Créer des emplois, éduquer et changer les perceptions en Europe. C'est la révolution tech made in Africa!",
+            "CODE OF AFRICA est un hub d'externalisation basé en Allemagne qui connecte les entreprises européennes avec les meilleurs ingénieurs logiciels d'Afrique de l'Est. Leur mission ? Créer des emplois, éduquer et changer les perceptions en Europe. C'est la révolution tech made in Africa !",
         alfatier:
-            "Basée à Hambourg, ALFATIER est le maestro de l'optimisation et de la transformation cloud. Leurs revues d'architecture et leur gestion des coûts sont légendaires, assurant efficacité et fiabilité aux entreprises. C'est le secret des géants du numérique!",
+            "Basée à Hambourg, ALFATIER est le maestro de l'optimisation et de la transformation cloud. Leurs revues d'architecture et leur gestion des coûts sont légendaires, assurant efficacité et fiabilité aux entreprises. C'est le secret des géants du numérique !",
         reconstruction:
-            "RECONSTRUCTION est une plateforme éducative révolutionnaire qui réinvente l'enseignement culturel traditionnel. Fini les clichés négatifs sur l'héritage africain! Ici, on célèbre la richesse et les contributions extraordinaires de la communauté afro-descendante. C'est l'école du futur, version panafricaine!",
-        exuus: "Exuus, le champion de la FinTech au Rwanda, propulse les communautés vers l'avenir avec ses solutions d'épargne collective et ses innovations digitales. Ils ne se contentent pas de construire la résilience financière, ils façonnent un futur éco-responsable. C'est la finance verte 2.0!",
+            "RECONSTRUCTION est une plateforme éducative révolutionnaire qui réinvente l'enseignement culturel traditionnel. Fini les clichés négatifs sur l'héritage africain ! Ici, on célèbre la richesse et les contributions extraordinaires de la communauté afro-descendante. C'est l'école du futur, version panafricaine !",
+        exuus: "Exuus, le champion de la FinTech au Rwanda, propulse les communautés vers l'avenir avec ses solutions d'épargne collective et ses innovations digitales. Ils ne se contentent pas de construire la résilience financière, ils façonnent un futur éco-responsable. C'est la finance verte 2.0 !",
         akorion:
-            "AKORION révolutionne l'agriculture avec EzyAgric, une app qui donne aux agriculteurs un accès direct aux financements, aux intrants et aux marchés. Grâce à leurs agents de village et leur technologie de pointe, ils optimisent la chaîne d'approvisionnement pour 60 000 agriculteurs en Ouganda. C'est l'agriculture du futur, version high-tech!",
-        andela: "ANDELA, c'est le creuset où se forgent les leaders tech de demain en Afrique. Avec des partenariats stratégiques, ils propulsent les meilleurs talents africains sur la scène mondiale. Soutenus par des investisseurs de renom comme la Chan Zuckerberg Initiative, ils réécrivent les règles du jeu dans l'industrie tech. C'est la Silicon Valley version africaine!",
-        jkss: "JKSS Connect, c'est l'e-commerce version révolution rurale! Ils créent un pont digital entre les marchés urbains et les acheteurs ruraux équipés de smartphones. Résultat? Un accès direct à une variété incroyable de produits de qualité pour les communautés rurales. C'est l'inclusion économique 2.0, qui transforme les villages en hubs commerciaux connectés!"
+            "AKORION révolutionne l'agriculture avec EzyAgric, une app qui donne aux agriculteurs un accès direct aux financements, aux intrants et aux marchés. Grâce à leurs agents de village et leur technologie de pointe, ils optimisent la chaîne d'approvisionnement pour 60 000 agriculteurs en Ouganda. C'est l'agriculture du futur, version high-tech !",
+        andela: "ANDELA, c'est le creuset où se forgent les leaders tech de demain en Afrique. Avec des partenariats stratégiques, ils propulsent les meilleurs talents africains sur la scène mondiale. Soutenus par des investisseurs de renom comme la Chan Zuckerberg Initiative, ils réécrivent les règles du jeu dans l'industrie tech. C'est la Silicon Valley version africaine !",
+        jkss: "JKSS Connect, c'est l'e-commerce version révolution rurale ! Ils créent un pont digital entre les marchés urbains et les acheteurs ruraux équipés de smartphones. Résultat ? Un accès direct à une variété incroyable de produits de qualité pour les communautés rurales. C'est l'inclusion économique 2.0, qui transforme les villages en hubs commerciaux connectés !"
     },
     experience_details: {
         developed_maintained:
@@ -36,9 +36,9 @@ export const experience = {
         developed_ui_actions:
             "Développé diverses actions UI, politiques, scripts clients, règles métier, e-mails entrants et sortants, scripts clients de catalogue, et créé des tâches planifiées, des rapports critiques et des jauges selon les besoins de l'entreprise.",
         boosted_seo:
-            "Boosté le référencement SEO et les classements Google pour le site phare de Code of Africa, augmentant le trafic organique de 40%, stimulant l'engagement des utilisateurs et la reconnaissance de la marque.",
+            "Amélioré le référencement SEO et les classements Google pour le site phare de Code of Africa, augmentant le trafic organique de 40%, stimulant l'engagement des utilisateurs et la reconnaissance de la marque.",
         led_frontend_team:
-            "Dirigé l'équipe frontend, les guidant vers l'excellence tout en fournissant des retours constructifs, résultant en une amélioration de 30% de la qualité du code. Agi comme mentor pour les développeurs juniors, favorisant une atmosphère collaborative et orientée vers la croissance au sein de l'entreprise.",
+            "Dirigé l'équipe frontend, les guidant vers l'excellence tout en fournissant des retours constructifs, résultant en une amélioration de 30% de la qualité du code. Encadré les développeurs juniors, favorisant une atmosphère collaborative et orientée vers la croissance au sein de l'entreprise.",
         masterminded_evolution:
             "Orchestré l'évolution d'un système white-label de plus de 8 ans, en maintenant et améliorant méticuleusement ses fonctionnalités avec PHP et ElasticSearch, réalisant une augmentation de 20% de l'efficacité du système et de la satisfaction des utilisateurs.",
         led_early_stage:
@@ -54,7 +54,7 @@ export const experience = {
         maintained_dashboard:
             "Maintenu un tableau de bord administratif intuitif pour faciliter la gestion efficace du contenu de la plateforme, des cours, des données utilisateurs et des paramètres du système.",
         improved_performance:
-            "Réalisé une amélioration de 30% des performances et de la maintenabilité de l'application en réarchitecturant avec succès l'ensemble de l'application frontend orientée client, intégrant les principes de Clean Code et de Domain-Driven Design.",
+            "Réalisé une amélioration de 30% des performances et de la maintenabilité de l'application en repensant l'architecture de l'ensemble de l'application frontend orientée client, intégrant les principes de Clean Code et de Domain-Driven Design.",
         introduced_git_workflow:
             "Introduit un workflow Git de fork/rebase, facilitant la collaboration et améliorant l'intégration du code, atténuant les défis du workflow précédent, améliorant ainsi l'efficacité du développement et la livraison du code de 70%.",
         spearheaded_development:
@@ -72,11 +72,11 @@ export const experience = {
         implemented_couchbase:
             "Implémenté des solutions optimisées de stockage de données en utilisant CouchBase, améliorant les performances et la fiabilité de la base de données, facilitant l'accès aux données, augmentant potentiellement la satisfaction des utilisateurs de 35%.",
         pioneered_phpunit:
-            "Pionnier et implémenté une architecture et une base de tests PHPUnit hautement réutilisables, accélérant le processus de test et optimisant les cycles de développement de 45%.",
+            "Conçu et implémenté une architecture et une base de tests PHPUnit hautement réutilisables, accélérant le processus de test et optimisant les cycles de développement de 45%.",
         crafted_interfaces:
             "Conçu des interfaces réactives avec Angular 7, améliorant l'expérience utilisateur. De plus, j'ai collaboré avec les équipes pour innover sur les fonctionnalités, assurant qu'EzyAgric reste à la pointe de la technologie agricole.",
         completed_training:
-            "Complété avec succès le programme de formation en leadership technique dans les six premiers mois et pu acquérir une expérience pratique des meilleures pratiques d'ingénierie et des compétences non techniques.",
+            "Terminé avec succès le programme de formation en leadership technique dans les six premiers mois et pu acquérir une expérience pratique des meilleures pratiques d'ingénierie et des compétences non techniques.",
         worked_with_leads:
             "Travaillé en étroite collaboration avec les chefs d'équipe techniques pour me faire passer de ma zone de développement proximal (ZDP) à Nirvana - où je suis devenu un ingénieur hautement qualifié et recherché.",
         implemented_backend:
@@ -84,7 +84,7 @@ export const experience = {
         integrated_slack:
             "Intégré l'API Slack dans l'application web de Tembea, permettant des mises à jour et des notifications en temps réel. Réduit le temps de réponse de 20% pour la gestion des déplacements et la collecte de données, renforçant l'équipe de voyage.",
         innovated_sync:
-            "Innové des mécanismes de synchronisation de données en temps réel dans l'application mobile Ionic, priorisant la facilité d'utilisation et l'accessibilité, en particulier pour les utilisateurs avec des connexions internet lentes, résultant en une diminution de 50% du temps de chargement des pages tout en améliorant l'expérience de navigation.",
+            "Conçu des mécanismes innovants de synchronisation de données en temps réel dans l'application mobile Ionic, priorisant la facilité d'utilisation et l'accessibilité, en particulier pour les utilisateurs avec des connexions internet lentes, résultant en une diminution de 50% du temps de chargement des pages tout en améliorant l'expérience de navigation.",
         integrated_qr:
             "Intégré un mécanisme de paiement basé sur les codes QR dans l'application, révolutionnant la vitesse et la commodité des transactions pour le personnel de livraison et les clients, résultant en une réduction de 30% du temps de paiement.",
         led_agile:
