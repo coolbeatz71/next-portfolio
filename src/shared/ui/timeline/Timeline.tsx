@@ -3,6 +3,7 @@ import * as m from "motion/react-m";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { ITimelineEntry } from "@/features/experience/data/types";
 import { IconGlobe } from "@/shared/config/icons";
+import { Reveal } from "@/shared/ui/scroll-reveal/Reveal";
 
 /**
  * Timeline component.
@@ -42,40 +43,48 @@ export const Timeline = ({ data }: { data: ITimelineEntry[] }) => {
     return (
         <div className="mx-auto py-4 md:py-0" ref={containerRef}>
             <div ref={ref} className="relative">
-                {data.map((item) => (
+                {data.map((item, index) => (
                     <div key={item.id} className="flex justify-start mb-6 lg:mb-12">
                         <div className="sticky flex flex-col md:flex-row z-10 items-center top-40 self-start max-w-md lg:max-w-lg md:w-1/12 lg:w-4/5 xl:w-full">
                             <div className="absolute md:top-0 lg:top-2 md:w-8 md:h-8 rounded-full bg-surface-timeline hidden md:flex items-center justify-center">
                                 <div className="w-2 h-2 md:h-4 md:w-4 rounded-full bg-background p-1 md:p-2" />
                             </div>
-                            <h3 className="hidden lg:block text-xl md:pl-20 md:text-2xl font-bold text-typography-timeline leading-loose!">
-                                {item.title}
-                                <p className="flex text-sm! font-normal! text-typography-timeline">
-                                    {item.subtitle}
-                                </p>
-                                <p className="flex items-center gap-1 text-sm! font-medium text-typography-timeline-meta">
-                                    <IconGlobe /> {item.location}
-                                </p>
-                            </h3>
+                            <Reveal index={index} className="hidden lg:block md:pl-20">
+                                <h3 className="text-xl md:text-2xl font-bold text-typography-timeline leading-loose!">
+                                    {item.title}
+                                    <p className="flex text-sm! font-normal! text-typography-timeline">
+                                        {item.subtitle}
+                                    </p>
+                                    <p className="flex items-center gap-1 text-sm! font-medium text-typography-timeline-meta">
+                                        <IconGlobe /> {item.location}
+                                    </p>
+                                </h3>
+                            </Reveal>
                         </div>
 
                         <div className="relative pl-5 pr-0 md:pl-4 w-full">
-                            <h3 className="lg:hidden block text-xl md:text-2xl mb-4 text-left font-bold text-typography-timeline">
-                                {item.title}
-                            </h3>
+                            <Reveal index={index} className="lg:hidden block mb-4">
+                                <h3 className="text-xl md:text-2xl text-left font-bold text-typography-timeline">
+                                    {item.title}
+                                </h3>
+                            </Reveal>
 
-                            <div className="pb-4 flex flex-col lg:hidden">
+                            <Reveal index={index} className="pb-4 flex flex-col lg:hidden">
                                 <p className="flex text-sm! font-normal! text-typography-timeline">
                                     {item.subtitle}
                                 </p>
                                 <p className="flex items-center gap-1 text-sm! font-medium text-typography-timeline-meta">
                                     <IconGlobe /> {item.location}
                                 </p>
-                            </div>
+                            </Reveal>
 
-                            <div className="rounded-xl border border-outlined bg-surface-timeline/15 p-4 md:p-6 hover:shadow-xl">
+                            <Reveal
+                                index={index}
+                                className={`rounded-xl border border-outlined bg-surface-timeline/15
+                                    p-4 md:p-6 hover:shadow-xl`}
+                            >
                                 {item.content}
-                            </div>
+                            </Reveal>
                         </div>
                     </div>
                 ))}
