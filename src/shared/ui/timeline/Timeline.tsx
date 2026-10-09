@@ -73,10 +73,7 @@ export const Timeline = ({ data }: { data: ITimelineEntry[] }) => {
                                 </p>
                             </div>
 
-                            <div
-                                className={`rounded-xl border border-outlined/50 bg-surface-timeline/25
-                                    p-4 md:p-6 hover:shadow-xl`}
-                            >
+                            <div className="rounded-xl border border-outlined bg-surface-timeline/15 p-4 md:p-6 hover:shadow-xl">
                                 {item.content}
                             </div>
                         </div>
@@ -85,7 +82,9 @@ export const Timeline = ({ data }: { data: ITimelineEntry[] }) => {
                 <LazyMotion features={domAnimation}>
                     <div
                         style={trackStyle}
-                        className="absolute left-0 md:left-4 top-0 overflow-hidden w-0.5 bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-0% via-timeline-track to-transparent to-99% mask-[linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)]"
+                        className={`absolute left-0 md:left-4 top-0 overflow-hidden w-0.5 bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] 
+                        from-transparent from-0% via-timeline-track to-transparent to-99% mask-[linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)]
+                        `}
                     >
                         <m.div
                             style={{
