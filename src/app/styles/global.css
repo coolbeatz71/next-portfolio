@@ -30,7 +30,7 @@
 
     --color-surface-elevated: var(--primitive-white);
     --color-surface-raised: var(--primitive-neutral-100);
-    --color-surface-footer: var(--primitive-neutral-100);
+    --color-surface-footer: var(--primitive-neutral-50);
     --color-surface-bar: var(--primitive-white);
     --color-surface-nav: oklch(from var(--primitive-neutral-200) l c h / 0.5);
     --color-surface-input: var(--primitive-white);
