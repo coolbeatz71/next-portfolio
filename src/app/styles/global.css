@@ -259,3 +259,21 @@
 @utility duration-slow {
     transition: all var(--duration-slow) cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+/*
+ * Like duration-moderate, but limited to color and background color. The duration-*
+ * utilities transition `all`, which makes a border crossfade whenever the theme flips.
+ * Use this on anything bordered that only needs its fill and text to ease on hover.
+ */
+@utility transition-surface {
+    transition:
+        color var(--duration-moderate) cubic-bezier(0.4, 0, 0.2, 1),
+        background-color var(--duration-moderate) cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* The fast counterpart of transition-surface, for controls that answer immediately. */
+@utility transition-surface-fast {
+    transition:
+        color var(--duration-fast) cubic-bezier(0.4, 0, 0.2, 1),
+        background-color var(--duration-fast) cubic-bezier(0.4, 0, 0.2, 1);
+}
