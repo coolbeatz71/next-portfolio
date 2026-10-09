@@ -2,7 +2,7 @@ export const tabs = {
     projects: {
         fullstack: "Full-Stack",
         frontend: "Front-End",
-        mobile_apps: "App Mobiles",
+        mobile_apps: "Applications mobiles",
         open_source: "Open-Source"
     },
     skills: {
@@ -10,7 +10,7 @@ export const tabs = {
         frontend: "Front-End",
         backend: "Back-End",
         infrastructure: "Infrastructure",
-        database: "Bases de Données",
-        other_interests: "Autres Intérêts"
+        database: "Bases de données",
+        other_interests: "Autres intérêts"
     }
 };
