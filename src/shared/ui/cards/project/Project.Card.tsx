@@ -32,7 +32,7 @@ function ProjectCardComponent({ project, index, onOpen }: ProjectCardProps) {
         <Reveal index={index} className="group h-full">
             <div
                 className={`flex h-full flex-col overflow-hidden rounded-xl border p-4
-                    border-outlined/50 bg-surface-elevated/25 duration-moderate
+                    border-outlined/50 bg-surface-elevated/25 transition-surface
                     group-hover:shadow-xl`}
             >
                 <ProjectCardImage
