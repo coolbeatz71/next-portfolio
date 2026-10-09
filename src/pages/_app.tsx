@@ -1,3 +1,4 @@
+import { MotionConfig } from "motion/react";
 import type { AppProps } from "next/app";
 import { I18nProvider } from "@/app/providers/I18n.Provider";
 import { ThemeProvider } from "@/app/providers/Theme.Provider";
@@ -11,7 +12,8 @@ type AppPropsWithError = AppProps & { err: unknown } & Record<string, unknown>;
  *
  * @description
  * Wraps every page with the ThemeProvider and I18nProvider, and applies the
- * repeating background pattern via the `<main>` element.
+ * repeating background pattern via the `<main>` element. Motion is configured to
+ * follow the reader's reduced motion setting, so every reveal on the site honours it.
  *
  * @param {AppPropsWithError} props - Next.js app props extended with error and server props
  *
@@ -20,11 +22,13 @@ type AppPropsWithError = AppProps & { err: unknown } & Record<string, unknown>;
 const MyApp = ({ Component, pageProps, serverProps }: AppPropsWithError) => {
     return (
         <ThemeProvider>
-            <I18nProvider>
-                <main className="bg-pattern_light dark:bg-pattern_dark bg-repeat bg-position-[79rem]">
-                    <Component {...pageProps} serverProps={serverProps} />
-                </main>
-            </I18nProvider>
+            <MotionConfig reducedMotion="user">
+                <I18nProvider>
+                    <main className="bg-pattern_light dark:bg-pattern_dark bg-repeat bg-position-[79rem]">
+                        <Component {...pageProps} serverProps={serverProps} />
+                    </main>
+                </I18nProvider>
+            </MotionConfig>
         </ThemeProvider>
     );
 };
