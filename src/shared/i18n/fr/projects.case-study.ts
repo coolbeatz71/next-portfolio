@@ -60,7 +60,7 @@ export const projectsCaseStudy = {
                 "La rédaction écrit et publie tout ici, et la partie commerciale passe par le même outil : forfaits de mise en avant, commandes, emplacements publicitaires, preuves de paiement. Un rédacteur qui prépare un article et quelqu'un qui relance une facture finissent au même endroit.",
             challenge_title: "Empêcher quatorze domaines de déborder les uns sur les autres.",
             constraint:
-                "Rédiger un article n'a pas grand chose à voir avec vérifier un paiement, et pourtant les deux vivent dans la même application, sans que l'un ait à traîner le code de l'autre.",
+                "Rédiger un article n'a pas grand-chose à voir avec vérifier un paiement, et pourtant les deux vivent dans la même application, sans que l'un ait à traîner le code de l'autre.",
             response:
                 "Chaque domaine est devenu son propre module sous React 19 et Vite, avec ses quatre couches. Redux Toolkit porte l'état qui traverse vraiment les écrans, et Ant Design fournit la coquille commune.",
             ownership: [
@@ -334,7 +334,7 @@ export const projectsCaseStudy = {
                 "Conception des vues de recommandation et de détail."
             ],
             outcome:
-                "Une application open-source qui transforme la recherche de l'affiche du jour en quelques tapes."
+                "Une application open-source qui transforme la recherche de l'affiche du jour en quelques touches."
         },
         clickmart: {
             category: "Commerce rural",
