@@ -5,7 +5,7 @@ import { mainStackList } from "@/features/skills/data/skills.main";
 import { RESPONSIVE_CLASSNAME } from "@/shared/config/style";
 import { cn } from "@/shared/lib/cn";
 import { SkillCard } from "@/shared/ui/cards/skills/Skills.Card";
-import { ScrollReveal } from "@/shared/ui/scroll-reveal/ScrollReveal";
+import { Reveal } from "@/shared/ui/scroll-reveal/Reveal";
 import { SectionHeader } from "@/shared/ui/section-header/SectionHeader";
 
 /**
@@ -15,7 +15,8 @@ import { SectionHeader } from "@/shared/ui/section-header/SectionHeader";
  *
  * @description
  * Renders the skills section featuring a grid of main stack technology icons above a
- * responsive grid of category cards, each listing its tools with proficiency bars.
+ * responsive grid of category cards, each listing its tools with proficiency bars and
+ * revealing itself as it scrolls into view.
  *
  * @returns The skills section element
  */
@@ -32,49 +33,50 @@ export function Skills() {
     const { t } = useTranslation();
 
     return (
-        <ScrollReveal className="delay-300">
-            <section id="skill" className={cn(RESPONSIVE_CLASSNAME, "py-12 xl:py-32 scroll-mt-10")}>
-                <div className="pb-6 md:pb-12">
-                    <SectionHeader title={t("skills_title")} subtitle={t("skills_subtitle")} />
-                </div>
-                <div className="relative">
-                    <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 md:px-24">
-                        {mainStackList.map((skill) => (
-                            <div
-                                key={skill.title}
-                                className="flex flex-col items-center group cursor-pointer p-4 md:p-8"
-                            >
-                                <div className={skillIconClassName}>
-                                    {/* dark image */}
-                                    <NextImage
-                                        fill
-                                        alt={skill.title}
-                                        src={skill.darkImage}
-                                        sizes="(min-width: 1024px) 96px, 64px"
-                                        className={imgDarkClassName}
-                                    />
-                                    {/* light image */}
-                                    <NextImage
-                                        fill
-                                        alt={skill.title}
-                                        src={skill.lightImage}
-                                        sizes="(min-width: 1024px) 96px, 64px"
-                                        className={imgLightClassName}
-                                    />
-                                </div>
-                                <span className="text-sm text-center font-medium text-typography-dimmed">
-                                    {skill.title}
-                                </span>
+        <section id="skill" className={cn(RESPONSIVE_CLASSNAME, "py-12 xl:py-32 scroll-mt-10")}>
+            <div className="pb-6 md:pb-12">
+                <SectionHeader title={t("skills_title")} subtitle={t("skills_subtitle")} />
+            </div>
+            <div className="relative">
+                <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 md:px-24">
+                    {mainStackList.map((skill, index) => (
+                        <Reveal
+                            index={index}
+                            key={skill.title}
+                            className="flex flex-col items-center group cursor-pointer p-4 md:p-8"
+                        >
+                            <div className={skillIconClassName}>
+                                {/* dark image */}
+                                <NextImage
+                                    fill
+                                    alt={skill.title}
+                                    src={skill.darkImage}
+                                    sizes="(min-width: 1024px) 96px, 64px"
+                                    className={imgDarkClassName}
+                                />
+                                {/* light image */}
+                                <NextImage
+                                    fill
+                                    alt={skill.title}
+                                    src={skill.lightImage}
+                                    sizes="(min-width: 1024px) 96px, 64px"
+                                    className={imgLightClassName}
+                                />
                             </div>
-                        ))}
-                    </div>
-                </div>
-                <div className="grid gap-6 pt-8 md:grid-cols-2 xl:grid-cols-3">
-                    {devStackGroups.map((group) => (
-                        <SkillCard key={group.title} title={group.title} stacks={group.stacks} />
+                            <span className="text-sm text-center font-medium text-typography-dimmed">
+                                {skill.title}
+                            </span>
+                        </Reveal>
                     ))}
                 </div>
-            </section>
-        </ScrollReveal>
+            </div>
+            <div className="grid gap-6 pt-8 md:grid-cols-2 xl:grid-cols-3">
+                {devStackGroups.map((group, index) => (
+                    <Reveal key={group.title} index={index} className="h-full">
+                        <SkillCard title={group.title} stacks={group.stacks} />
+                    </Reveal>
+                ))}
+            </div>
+        </section>
     );
 }
