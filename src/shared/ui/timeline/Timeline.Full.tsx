@@ -24,7 +24,7 @@ export const TimelineFull = memo(({ data }: { data: ITimelineEntry[] }) => {
             <div className="relative">
                 {data.map((item) => (
                     <div key={item.id} className="flex justify-start mb-4">
-                        <div className="relative w-full border rounded-lg bg-surface-timeline border-outlined p-3 md:p-4 pb-6!">
+                        <div className="relative w-full border rounded-lg bg-surface-timeline/50 border-outlined p-3 md:p-4 pb-6!">
                             <div className="absolute top-0 bottom-0 w-[70%] opacity-50 z-10">
                                 <GridPatternBackground size={20} />
                             </div>
