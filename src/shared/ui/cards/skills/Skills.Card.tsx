@@ -24,7 +24,7 @@ function SkillCardComponent({ title, stacks }: SkillCardProps) {
     return (
         <article
             className={`flex h-full flex-col rounded-xl border border-outlined/50
-                bg-surface-elevated/25 p-5 md:p-6`}
+                bg-surface-elevated/50 p-5 md:p-6`}
         >
             <h3 className="text-xl md:text-2xl font-bold text-typography-heading">{t(title)}</h3>
 

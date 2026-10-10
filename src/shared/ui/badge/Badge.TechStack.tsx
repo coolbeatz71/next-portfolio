@@ -2,7 +2,7 @@ import { memo } from "react";
 import type { BadgeTechStackProps } from "./types";
 
 const BADGE_CLASSNAME = `inline-flex items-center gap-1.5 rounded-lg border 
-border-outlined/50 bg-surface-elevated/25 px-2.5 py-1.5 sm:gap-2 sm:px-3`;
+border-outlined bg-surface-elevated/25 px-2.5 py-1.5 sm:gap-2 sm:px-3`;
 
 const LABEL_CLASSNAME = `whitespace-nowrap text-xs sm:text-sm font-bold
     text-typography-primary`;

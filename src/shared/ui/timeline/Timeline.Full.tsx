@@ -1,6 +1,7 @@
 import { memo } from "react";
 import { ITimelineEntry } from "@/features/experience/data/types";
 import { IconGlobe } from "@/shared/config/icons";
+import { Reveal } from "@/shared/ui/scroll-reveal/Reveal";
 import { GridPatternBackground } from "../background/GridPattern.Background";
 
 /**
@@ -22,9 +23,9 @@ export const TimelineFull = memo(({ data }: { data: ITimelineEntry[] }) => {
     return (
         <div className="mx-auto">
             <div className="relative">
-                {data.map((item) => (
-                    <div key={item.id} className="flex justify-start mb-4">
-                        <div className="relative w-full border rounded-lg bg-surface-timeline border-outlined p-3 md:p-4 pb-6!">
+                {data.map((item, index) => (
+                    <Reveal key={item.id} index={index} className="flex justify-start mb-4">
+                        <div className="relative w-full border rounded-lg bg-surface-timeline/50 border-outlined p-3 md:p-4 pb-6!">
                             <div className="absolute top-0 bottom-0 w-[70%] opacity-50 z-10">
                                 <GridPatternBackground size={20} />
                             </div>
@@ -43,7 +44,7 @@ export const TimelineFull = memo(({ data }: { data: ITimelineEntry[] }) => {
                                 {item.content}
                             </div>
                         </div>
-                    </div>
+                    </Reveal>
                 ))}
             </div>
         </div>

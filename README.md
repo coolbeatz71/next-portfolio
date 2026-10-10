@@ -44,7 +44,7 @@ src/
 ├── layout/       # Shell components: nav, footer, side-menus, tab-bar
 └── shared/       # Reusable, domain-agnostic primitives
     ├── config/   # App-wide constants and config
-    ├── hooks/    # useScrollReveal, useAnimation
+    ├── hooks/    # useCountUp
     ├── i18n/     # EN and FR translation files
     ├── lib/      # cn(), throttle, getActiveSection...
     └── ui/       # Design system: buttons, cards, modals, backgrounds...

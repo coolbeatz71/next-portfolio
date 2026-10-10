@@ -27,7 +27,7 @@ function SocialLinksComponent() {
                 >
                     <OutlineButton
                         as="span"
-                        className={`p-3 md:p-4 text-3xl ${social.hoverColor} duration-moderate`}
+                        className={`p-3 md:p-4 text-3xl ${social.hoverColor} transition-surface`}
                     >
                         <span aria-hidden="true">{social.icon}</span>
                     </OutlineButton>

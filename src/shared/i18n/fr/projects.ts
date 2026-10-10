@@ -1,8 +1,8 @@
 export const projects = {
     contribution_title: "Mes contributions",
     contribution_subtitle:
-        "Une compilation de projets stylés et impactants, démontrant mon expertise, mon esprit créatif et ma passion pour la résolution de problèmes grâce à la tech.",
-    source_code: "Code Source",
+        "Une compilation de projets marquants et innovants, démontrant mon expertise, mon esprit créatif et ma passion pour la résolution de problèmes grâce à la tech.",
+    source_code: "Code source",
     projects_description: {
         centseizeapi:
             "116 API est le backend d'une plateforme média dédiée à la culture hip hop en RDC, qui alimente le site public, le back office éditorial et l'application mobile à partir d'un même contrat OpenAPI. Elle porte le catalogue éditorial fait d'articles, d'émissions vidéo et de pages de paroles, ainsi que le commerce qui le finance, des forfaits de mise en avant jusqu'aux preuves de paiement. C'est un monolithe modulaire sous .NET 9 où les frontières entre modules sont vérifiées par des tests d'architecture plutôt que laissées à la convention.",
@@ -20,7 +20,7 @@ export const projects = {
             "Plusieurs applications utilisant Flow Designer, le Catalogue de services, les SLA, les ACL et l'Agent mobile. Configuration des notifications par e-mail (SMTP/POP3) pour les alertes système. Collaboration avec les parties prenantes pour traduire les besoins métier en exigences fonctionnelles et création d'actions d'interface utilisateur, de scripts client, de règles métier, de travaux planifiés et de rapports essentiels.",
         codeofafrica:
             "L'application web de la landing page de l'entreprise, un hub d'externalisation basé en Allemagne, connecte les entreprises européennes aux meilleurs ingénieurs logiciels d'Afrique de l'Est, avec pour priorité la création d'emplois, l'éducation et le changement des perceptions en Europe.",
-        motory: "Un marché digital allemand pour véhicules axé sur la communauté, permettant d’acheter, vendre, accéder à des informations automobiles et participer à des discussions. La plateforme offre une documentation pour les transactions et rassemble les passionnés d’automobile.",
+        motory: "Une place de marché automobile allemande axée sur la communauté, permettant d’acheter, vendre, accéder à des informations automobiles et participer à des discussions. La plateforme offre une documentation pour les transactions et rassemble les passionnés d’automobile.",
         ezyagric:
             "Une plateforme web et mobile à la demande offrant un accès inclusif et basé sur les données aux services de production, de marketing et de finance pour les agriculteurs et les agro-entreprises ougandais, les aidant à cartographier les jardins, à accéder aux intrants, aux services, aux enregistrements et aux marchés qui paient pour la qualité.",
         tembea: "Une plateforme d'Andela qui automatise les demandes de taxis, la gestion des itinéraires et la réconciliation via Slack et une application web, répondant aux besoins des opérations et voyages pour les Andelans en déplacement.",

@@ -58,7 +58,7 @@ function MovingBorderButtonComponent({
 
             <div
                 className={cn(
-                    "font-semibold relative bg-surface-elevated border backdrop-blur-xl items-center justify-center w-full h-full text-sm antialiased duration-moderate text-typography-inverse border-outlined hover:bg-surface-raised",
+                    "font-semibold relative bg-surface-elevated border backdrop-blur-xl items-center justify-center w-full h-full text-sm antialiased transition-surface text-typography-inverse border-outlined hover:bg-surface-raised",
                     className
                 )}
                 style={innerStyle}

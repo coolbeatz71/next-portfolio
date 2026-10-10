@@ -1,4 +1,5 @@
 import { memo } from "react";
+import { Reveal } from "@/shared/ui/scroll-reveal/Reveal";
 import type { AboutMeRowProps } from "./types";
 
 /**
@@ -19,7 +20,7 @@ import type { AboutMeRowProps } from "./types";
  */
 function AboutMeRowComponent({ label, children }: AboutMeRowProps) {
     return (
-        <div className="grid gap-3 py-6 md:grid-cols-4 md:gap-4">
+        <Reveal className="grid gap-3 py-6 md:grid-cols-4 md:gap-4">
             <dt
                 className={`text-meta font-bold uppercase tracking-widest
                     text-typography-muted md:col-span-1 md:self-center`}
@@ -30,7 +31,7 @@ function AboutMeRowComponent({ label, children }: AboutMeRowProps) {
             <dd className="text-md leading-loose text-typography-subtle md:col-span-3">
                 {children}
             </dd>
-        </div>
+        </Reveal>
     );
 }
 
