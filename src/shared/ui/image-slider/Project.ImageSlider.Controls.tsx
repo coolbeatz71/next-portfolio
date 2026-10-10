@@ -8,7 +8,7 @@ import type { ProjectImageSliderControlsProps } from "./types";
 
 const ARROW_RADIUS = "0.5rem";
 
-const ARROW_CLASSNAME = `p-2.5 text-typography-contact hover:text-typography-primary duration-fast
+const ARROW_CLASSNAME = `p-2.5 text-typography-contact hover:text-typography-primary transition-surface-fast
     focus:outline-none focus:ring-0 focus-visible:ring-2 focus-visible:ring-focus-surface`;
 
 const FIRST_SLIDE_POSITION = 1;

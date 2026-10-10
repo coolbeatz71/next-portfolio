@@ -30,8 +30,9 @@ function FooterSocialLinkComponent() {
                         rel="noopener noreferrer"
                         aria-label={`${social.platform} (opens in new tab)`}
                         className={`
-                            text-typography-contact hover:bg-surface-hover ${social.hoverColor}
-                            focus:outline-none font-medium rounded-lg text-3xl text-center items-center p-[0.685rem] duration-moderate inline-flex
+                            text-typography-contact border border-outlined/50 hover:bg-surface-hover ${social.hoverColor}
+                            focus:outline-none font-medium rounded-lg text-3xl text-center items-center p-[0.685rem] inline-flex
+                            transition-surface
                         `}
                     >
                         <span aria-hidden="true">{social.icon}</span>

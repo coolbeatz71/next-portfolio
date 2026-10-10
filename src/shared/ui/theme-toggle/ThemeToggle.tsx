@@ -41,7 +41,7 @@ export function ThemeToggle() {
             className={`
                 group relative size-12 sm:size-12 md:size-12 
                 rounded-lg flex justify-center items-center text-sun 
-                bg-surface-raised hover:bg-surface-hover hover:duration-slow`}
+                bg-surface-elevated hover:bg-surface-hover hover:duration-slow`}
         >
             <LazyMotion features={domAnimation}>
                 <m.svg

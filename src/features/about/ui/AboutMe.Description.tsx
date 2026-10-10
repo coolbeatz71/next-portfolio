@@ -4,7 +4,7 @@ import { AboutMeRow } from "./AboutMe.Row";
 import type { HighlightProps } from "./types";
 
 function Highlight({ children }: HighlightProps) {
-    return <span className="font-bold text-typography-primary">{children}</span>;
+    return <span className="font-bold text-accent">{children}</span>;
 }
 
 /**

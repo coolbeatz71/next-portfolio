@@ -1,6 +1,6 @@
 export const navigation = {
     introduction: "Introduction",
-    about: "À Propos",
+    about: "À propos",
     experience: "Expérience",
     contribution: "Contribution",
     skill: "Compétence",
